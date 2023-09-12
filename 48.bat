@@ -9,7 +9,7 @@ goto :passed
 rem "function that validates input 'number' variable"
 :checkNumber
 if "%number%"=="" (echo the "number" variable isn't defined & goto :exit)
-for /f "tokens=* delims=0" %%a in ("%number%") do (set n=%%a)
+for /f "tokens=* delims=0" %%a in ("%number%") do (set number=%%a)
 if "%number%" == "" (set number=0 & exit /b)
 set /a "isInteger=number*1"
 if NOT %isInteger% == %number% (echo the input number doesn't have number type & goto :exit)
@@ -29,3 +29,7 @@ for /f "tokens=1,2 delims= " %%i in (%path%) do (if %%i geq %number% (echo %%i %
 
 :exit
 pause
+
+
+
+
