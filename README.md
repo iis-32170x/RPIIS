@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F726E1&width=435&lines=BSUIR+(cmd-bash))](https://git.io/typing-svg)
+# BSUIR(cmd-bash)
  Данная лабораторная работа была предназначена для ознакомления с командной строкой операционных систем **Windows** и **Linux**.
  В рамках ЛР 1 необходимо создать исполняемый файл _.bat_ и _.sh_ в соответствии с заданным вариантом.
 
