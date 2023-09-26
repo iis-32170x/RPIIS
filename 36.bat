@@ -18,17 +18,13 @@ goto exit
 set /a count += 1              
 echo %count%   
 set H=%time:~0,2%
-set M=%time:~3,2%               
-echo %H% 
-echo %M%             
+set M=%time:~3,2%                            
 set /a sum1 =%M%+%H% 
-set /a sum2 = %sum1%*%count% 
-echo %sum2% 
+set /a sum2 = %sum1%*%count%  
 
 set base_path=C:\pppp
 
 call :create_folders %sum2% 1 "%base_path%"
-pause
 exit
 
 :create_folders
