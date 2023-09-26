@@ -1,4 +1,4 @@
-   @echo off
+@echo off
 setlocal enabledelayedexpansion
 set /p size="input a size"
 set txtpath=%C:\pppp\mmmd\file1.txt%
