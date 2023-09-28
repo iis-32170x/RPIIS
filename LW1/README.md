@@ -11,7 +11,7 @@
 <br />
 Как выглядит код:
 <br />
-<br />
+
 ```bash
 @echo off
 chcp 65001
@@ -32,7 +32,7 @@ if exist %inputFile% (
 set oddFile=odd_file_bat.txt
 set evenFile=even_file_bat.txt
 
-set "numberLine=1"
+set "numberLine=0"
 
 for /f "usebackq delims=" %%a in ("%inputFile%") do (
   set /a "remainder=numberLine %% 2"
@@ -46,3 +46,10 @@ for /f "usebackq delims=" %%a in ("%inputFile%") do (
 
 pause
 ```
+<br />
+Переменные, которые использовались: <br />
+inputFile - переменная, которая принимает файл, который нужно будет отсортировать и разбить на четные и нечетные строки <br /><br />
+oddFile - переменная, которая принимает файл, который хранит в себе нечетные строки отсортированного файла <br /><br />
+evenFile - переменная, которая принимает файл, который хранит в себе четные строки отсортированного файла <br /><br />
+numberLine - переменная для определения номера подстроки в файле <br /><br />
+remainder - дополнительная переменная, которая хранит в себе остаток от деление переменной numberLine на 2 <br /><br />
