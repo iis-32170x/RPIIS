@@ -19,21 +19,20 @@
 
 ## Алгоритм программы 
 
-1.Установить опцию enabledelayedexpansion.
-2.Определить и инициализировать переменные inputFile, lastNameFile, firstNameFile и middleNameFile.
-3.Создать пустые файлы lastNameFile, firstNameFile и middleNameFile.
-4.Записать строки с ФИО в файл inputFile.
-5.Отсортировать строки в файле inputFile.
-6.Для каждой строки в файле inputFile, выполнить следующие действия:
--Разделить строку на три токена Фамилия, Имя и Отчество.
--Записать каждый токен в соответствующий файл lastNameFile, firstNameFile и middleNameFile.
-
+1. Установить опцию `enabledelayedexpansion`.
+2. Определить и инициализировать переменные `inputFile`, `lastNameFile`, `firstNameFile` и `middleNameFile`.
+3. Создать пустые файлы `lastNameFile`, `firstNameFile` и `middleNameFile`.
+4. Записать строки с ФИО в файл `inputFile`.
+5. Отсортировать строки в файле `inputFile`.
+6. Для каждой строки в файле `inputFile`, выполнить следующие действия:
+   - Разделить строку на три токена: Фамилия, Имя и Отчество.
+   - Записать каждый токен в соответствующий файл `lastNameFile`, `firstNameFile` и `middleNameFile`.
 ### Переменные 
 
--inputFile: Содержит имя файла, в который записываются строки с ФИО.
--lastNameFile: Содержит имя файла, в который записываются фамилии.
--firstNameFile: Содержит имя файла, в который записываются имена.
--middleNameFile: Содержит имя файла, в который записываются отчества.
+- `inputFile`: Содержит имя файла, в который записываются строки с ФИО.
+- `lastNameFile`: Содержит имя файла, в который записываются фамилии.
+- `firstNameFile`: Содержит имя файла, в который записываются имена.
+- `middleNameFile`: Содержит имя файла, в который записываются отчества.
 ## Методы и комманды
 
 ```
@@ -81,12 +80,14 @@ echo %%d>> "%middleNameFile%"
 Запускаем командную строку `(Win + R)`. Для открытия папки с .bat файлом вводим  
 `cd путь_к_файлу`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144939580/dfd0e4e2-5457-435f-b657-15a708374b8c)
+![image](https://github.com/iis-32170x/RPIIS/assets/144937226/3e8c77f4-70bc-4a7e-8656-64a9c4f5f926)
+
 
 Чтобы запустить  .bat файл используем  
  `start название_файла.bat`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/116e83a5-1948-494f-b109-f3ab80687d3b)
+![image](https://github.com/iis-32170x/RPIIS/assets/144937226/3f3d1140-422c-4380-8309-9772d09ba6f0)
+
 
 
 
