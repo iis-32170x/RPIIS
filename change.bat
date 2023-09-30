@@ -1,4 +1,4 @@
-setlocal enabledelayedexpansion :: позволяет использовать переменные внутри цикла 
+setlocal enabledelayedexpansion 
 set "inputFile=input.txt"
 set "lastNameFile=surname_names.txt"
 set "firstNameFile=first_names.txt"
