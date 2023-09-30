@@ -179,6 +179,8 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
  ` ./название_файла.sh`.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/bc089be1-e081-419f-a0d2-a7d749b9a63e)
+
+
 -Далее передаем агрумент `input.txt`
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/da571023-33cb-47da-8aba-33c0efd0b728)
