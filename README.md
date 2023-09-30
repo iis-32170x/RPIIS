@@ -51,8 +51,6 @@ sort "inputFile" /o "inputFile"
 
 - Эта команда сортирует содержимое файла inputFile в порядке возрастания `sort "inputFile" /o "inputFile"`
 
-- Эта команда сортирует содержимое файла inputFile в порядке возрастания `sort "inputFile" /o "inputFile"`
-
 ```
 for /f "delims=" %%a in (%inputFile%) do (
     ...
