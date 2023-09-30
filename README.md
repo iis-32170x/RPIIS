@@ -113,7 +113,7 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 > Для создания файла с расширением .sh будем использовать ([_Gitbush_](https://git-scm.com/downloads).)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/d8656673-a9c1-4a11-aaba-622b6f331eb2)
+![image](https://github.com/iis-32170x/RPIIS/assets/144937226/8d8598ff-494c-4c9a-8547-478406932ded)
 
 ## Последовательность действий алгоритма:
 
