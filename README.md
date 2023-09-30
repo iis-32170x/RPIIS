@@ -91,8 +91,6 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 Чтобы запустить .bat файл используем
 
-Чтобы запустить .bat файл используем
-
 `start название_файла.bat`.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/3f3d1140-422c-4380-8309-9772d09ba6f0)
@@ -105,8 +103,6 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 Запускаем.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/b45d271a-81b2-403c-9cd2-d5acdd646dc8)
-
-Программа работает. Появились новый файлы : first_names.txt, middle_names.txt, surname_names.txt откроем их.
 
 Программа работает. Появились новый файлы : first_names.txt, middle_names.txt, surname_names.txt откроем их.
 
