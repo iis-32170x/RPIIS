@@ -97,7 +97,7 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/b45d271a-81b2-403c-9cd2-d5acdd646dc8)
 
-Программа работает. Появились новый файлы : first_names.txt, middle_names.txt, surname_names.txt откроем их.
+Программа работает. Появились новые файлы : first_names.txt, middle_names.txt, surname_names.txt откроем их.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/4b8a6453-2dbe-4a2e-9ab3-2d467a40a158)
 
@@ -173,7 +173,7 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/bc089be1-e081-419f-a0d2-a7d749b9a63e)
 
--Далее передаем агрумент `input.txt`
+Далее передаем агрумент `input.txt`
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144937226/da571023-33cb-47da-8aba-33c0efd0b728)
 
