@@ -37,7 +37,7 @@ set "variable=value"
 type nul > "filename"
 echo text >> "filename"
 sort "inputFile" /o "inputFile"
-}
+
 ```
 
 - Включение режима отложенного разрешения переменных `setlocal enabledelayedexpansion `.
