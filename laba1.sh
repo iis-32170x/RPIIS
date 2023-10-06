@@ -1,5 +1,4 @@
 #!/bin/bash 
-#trap 'echo "--------# $BASH_COMMAND-------";read' DEBUG
 read -p "Введите путь к папке: " path
 
 if [ ! -d "$path" ]; then  
@@ -13,5 +12,5 @@ fi
 
 find "$path" -type f -size +1M | while read file; do
 	echo $file
-	cp "$file" "$path/files"
+	mv "$file" "$path/files"
 done
