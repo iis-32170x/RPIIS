@@ -8,3 +8,5 @@ echo $[ $RANDOM % 899 + 100 ]>> first.txt
 done
 grep -i "23" first.txt >> second.txt
 sort -r second.txt
+start first.txt
+start second.txt
