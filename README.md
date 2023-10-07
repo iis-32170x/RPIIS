@@ -31,7 +31,11 @@ pause
 
 ## Фотоотчет
 
-![]()
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/1.png)
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/2.png)
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/cmd.png)
 
 ## Реализация на bash
 
