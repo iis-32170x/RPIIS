@@ -55,9 +55,9 @@ start second.txt
 
 ## Фотоотчет
 
-![](//github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/1sh.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/1sh.png)
 
-![](//github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/2sh.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/2sh.png)
 
 ## Как работает
 
