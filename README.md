@@ -29,6 +29,10 @@ start first.txt
 pause
 ```
 
+## Фотоотчет
+
+![]()
+
 ## Реализация на bash
 
 ```
@@ -44,6 +48,10 @@ sort -r second.txt
 start first.txt
 start second.txt
 ```
+
+## Фотоотчет
+
+![]()
 
 ## Как работает
 
