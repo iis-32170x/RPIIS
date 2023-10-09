@@ -11,10 +11,10 @@
 2) **пример выполнения** 
 
 
-   -![задаем число]("C:\Users\user\Pictures\Screenshots\1.png")
+   -![задаем число]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png")
 
 
-   -![вывод процессов в отдельный файл]("C:\Users\user\Pictures\Screenshots\2.png")
+   -![вывод процессов в отдельный файл]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\2.png")
 
 
 
