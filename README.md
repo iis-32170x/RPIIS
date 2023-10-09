@@ -15,7 +15,7 @@
 
 
    -![вывод процессов в отдельный файл]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\2.png")
-что изменилось
+что изменилось/
 
 
 
