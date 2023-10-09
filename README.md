@@ -12,6 +12,8 @@
    -![задаем число]("C:\Users\user\Pictures\Screenshots\1.png")
 
 
+   -![вывод процессов в отдельный файл]("C:\Users\user\Pictures\Screenshots\2.png")
+
 
 
 
