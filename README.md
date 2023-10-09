@@ -13,6 +13,13 @@
 
 <image src="C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png" alt="задаем число">
 
+
+ -![задаем число][1]
+[1]:"C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png"
+
+
+
+
    -![задаем число]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png")
 
 
