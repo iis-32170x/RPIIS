@@ -54,9 +54,11 @@ robocopy "%source_directory%" "%destination_directory%" "%fname%"
 RENAME "%destination_directory%\%fname%" "%new_filename%"
 
 endlocal
-script.sh
-#!/bin/bash
 
+
+script.sh
+
+#!/bin/bash
 sdirectory=$1
 date=$2
 directory=$3
@@ -67,7 +69,6 @@ echo $month
 year=$(echo $date | cut -d '.' -f 3)
 echo $year
 fdate=$year$month$day
-
 for oldfile in "$sdirectory"/*
 do
     if [ -f "$oldfile" ]; then
