@@ -21,11 +21,11 @@
 ## Пример запуска
 Дана следующая папка:
 
-![Изображение папки](test_folder.png)
-![Изображение подпапки](test_subfolder.png)
+![Изображение папки](img/test_folder.png)
+![Изображение подпапки](img/test_subfolder.png)
 
 Запуск команды с путём к этой папке в качестве параметра:
 
-![Изображение команды (bat)](test_command_bat.png)
+![Изображение команды (bat)](img/test_command_bat.png)
 
-![Изображение команды (sh)](test_command_sh.png)
+![Изображение команды (sh)](img/test_command_sh.png)
