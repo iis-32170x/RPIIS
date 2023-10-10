@@ -10,21 +10,13 @@
 
 2) **пример выполнения** 
 
-
+Задаём число:
 <image src="1.png" alt="задаем число">
 
+В отдельный файл выводятся наши отобранные значения
+<image src="2.png" alt="файл">
 
- -![задаем число][1]
-[1]:"C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png"
-
-
-
-
-   -![задаем число]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\1.png")
-
-
-   -![вывод процессов в отдельный файл]("C:\Users\user\Documents\ucheba univer\poiic\git.git\RPIIS\2.png")
-что изменилось/
+ 
 
 
 
