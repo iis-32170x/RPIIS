@@ -29,14 +29,20 @@
 
       cd путь_к_файлу
 
-   ![image](https://github.com/iis-32170x/RPIIS/assets/144806982/fa8207c4-9af6-4a7d-b683-342cf6752413)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/144806982/e9618de5-c7c1-40c0-9a94-181f2d884a6d)
+
 
 
    Для выполнения любого .bat файла, необходимо прописать консольную команду 
    
      start название_файла.bat
 
-   ![image](https://github.com/MaratPereverzev/BSUIR_cmd-bash/assets/82408701/cb7b67b3-7140-423a-b3d9-59dd8b5d723e)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/144806982/6c9be21d-b5df-4c6a-baef-e37c6d1fc52e)
+
 
    Ваш .bat файл успешно запущен!!!!
+   #### Пример выполнения программы
+   Введём путь к папке, если этот путь существует, то в папке создаётся текстовый документ, названный текущей датой, в котором записан путь к папке.  
+![image](https://github.com/iis-32170x/RPIIS/assets/144806982/9dd6d90b-5e9c-4122-a6fa-31628a3bfb5f)
+Если такого пути нет то его предлагают создать
 
