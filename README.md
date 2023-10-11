@@ -9,7 +9,7 @@
 
 # Описание алгоритма и переменных. Пример запуска и выполнения программы.([_.bat_]() файл)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/720790e2-9cf4-4131-8ad7-5cb07a170a23)
+![image](2.png)
 
 ## Алгоритм программы
 
@@ -80,30 +80,30 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 Запускаем командную строку `(Win + R)`. Для открытия папки с .bat файлом вводим  
 `cd путь_к_файлу`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/3e8c77f4-70bc-4a7e-8656-64a9c4f5f926)
+![image](3.png)
 
 Чтобы запустить .bat файл используем
 
 `start название_файла.bat`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/3f3d1140-422c-4380-8309-9772d09ba6f0)
+![image](4.png)
 
 Файл запущен.
 
 ## Пример работы программы:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/6066092a-21b1-4bdb-b038-69ec1506457e)
+![image](5.png)
 Запускаем.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/b45d271a-81b2-403c-9cd2-d5acdd646dc8)
+![image](6.png)
 
 Программа работает. Появились новые файлы : first_names.txt, middle_names.txt, surname_names.txt откроем их.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/4b8a6453-2dbe-4a2e-9ab3-2d467a40a158)
+![image](7.png)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/14e6c67e-45c7-4181-a028-9c9296646a46)
+![image](8.png)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/80286b1d-d377-4405-a3f0-322b59bc9233)
+![image](9.png)
 
 В результате программы было создано три файла, содержащих имя, фамилию, отчество.
 
@@ -113,7 +113,7 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 > Для создания файла с расширением .sh будем использовать ([_Gitbush_](https://git-scm.com/downloads).)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/8d8598ff-494c-4c9a-8547-478406932ded)
+![image](10.png)
 
 ## Последовательность действий алгоритма:
 
@@ -158,30 +158,30 @@ for /f "tokens=1,2,3" %%b in ("%%a") do (
 
 Запускаем.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/27682507-6ec2-4090-959a-ac2ad522ca64)
+![image](11.png)
 
 Открываем директорию `cd путь_к_файлу`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/2590490a-28f4-437a-8d12-1ef4b84f3a4a)
+![image](12.png)
 
 Открываем директорию `cd путь_к_файлу`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/2590490a-28f4-437a-8d12-1ef4b84f3a4a)
+![image](13.png)
 
 Чтобы запустить наш .sh файл используем  
  ` ./название_файла.sh`.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/bc089be1-e081-419f-a0d2-a7d749b9a63e)
+![image](14.png)
 
 Далее передаем агрумент `input.txt`
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/da571023-33cb-47da-8aba-33c0efd0b728)
+![image](15.png)
 
 Файл запущен.
 
 ## Пример работы программы:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144937226/da571023-33cb-47da-8aba-33c0efd0b728)
+![image](16.png)
 
 Запускаем.
 
