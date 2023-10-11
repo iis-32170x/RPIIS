@@ -2,7 +2,7 @@
 21. Создать файл sh и bat, который выполняет следующее: 
 На вход пакетному файлу приходит путь к каталогу, дата (формат DD.MM.YYYY) и второй каталог. Найти файл в указанном каталоге, созданный не позднее указанной даты, скопировать его в другой указанный каталог и добавить в имя файла дату его создания (filename_DD.MM.YYYY.txt).
 5.bat
-``` batch 
+ ```batch 
 @echo off
 setlocal
 
@@ -54,12 +54,13 @@ robocopy "%source_directory%" "%destination_directory%" "%fname%"
 
 RENAME "%destination_directory%\%fname%" "%new_filename%"
 
-endlocal ```
+endlocal```
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/0d888fe9-fd40-44c9-86a6-b39cc97b6287)
 
 script.sh
 
-``` bash #!/bin/bash
+ bash #!/bin/bash
 sdirectory=$1
 date=$2
 directory=$3
@@ -88,8 +89,8 @@ do
            fi
         else "file not found"
     fi
-done ```
-![image](https://github.com/iis-32170x/RPIIS/assets/144935038/0d888fe9-fd40-44c9-86a6-b39cc97b6287)
+done 
+
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144935038/493f71f5-6cb9-4aba-9080-c5bb0532ca5d)
 
