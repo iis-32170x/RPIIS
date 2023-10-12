@@ -4,8 +4,8 @@
 На вход пакетному файлу приходит абсолютный путь к папке (как параметр пакетного файла). Если такой папки нет, то писать “Данной папки нет” и завершить выполнение программы. Если такая папка есть, то в ней и ее подкаталогах посчитать количество файлов с различными расширениями. Вывести в файл report.txt отчет в виде: doc - 15 txt - 10 exe - 1. В отчет писать в порядке убывания*
 ---
 # Реальзация sh-файла:
-### Код чтобы можно было скопировать	&#128526;
-```
+### Код	&#128526;
+```sh
 #!/bin/bash
  folder_path="$1"
 
@@ -16,9 +16,10 @@ echo $folder_path
 find "$folder_path" -type f -name "*temp*" -exec head -n 5 {} \; > /home/ilja/.myskript/result
 ```
 ---
-### Код для красоты:)
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Cambria&pause=1000&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&separator=%3C&lines=%23!%2Fbin%2Fbash+%3C+folder_path%3D%22%241%22%3Cif+%5B+!+-d+%22%24folder_path%22+%5D;+%3Cthen++echo+%22%D0%94%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9+%D0%BF%D0%B0%D0%BF%D0%BA%D0%B8+%D0%BD%D0%B5%D1%82%22+cd%3Cexit+1+%3Cfi%3Cecho+%24folder_path%3Cfind+%22%24folder_path%22+-type+f+-name+%22*temp*%22+-exec+head+-n+5+%7B%7D+%5C;+%3C+%3E+%2Fhome%2Filja%2F.myskript%2Fresult" alt="Typing SVG" /></a>
----
+##Работа с sh-файлом:
+===
+ Запускаем sh-файл и проверяем, есть ли проверка на наличие папки
+ ===
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/972d9653-b743-48eb-8e52-af0f27f24f39)
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/2d70db38-b09e-4a2f-a82f-57319935712c)
