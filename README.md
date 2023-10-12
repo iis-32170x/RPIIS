@@ -28,10 +28,10 @@
 2.**пример выполнения** 
  
 Задаём число:
-<image src="skrinsh.jpg" alt="файл">
+<image src="3.jpg" alt="файл">
 
 В отдельный файл выводятся наши отобранные значения:
-<image src="skrinsh1.jpg" alt="файл">
+<image src="4.jpg" alt="файл">
 
 
 
