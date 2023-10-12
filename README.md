@@ -28,12 +28,12 @@
 2.**пример выполнения** 
  
 Задаём число:
-<image src="3.png" alt="kod">
+<image src="3.png" alt="код">
 
 В отдельный файл выводятся наши отобранные значения:
-<image src="4.png" alt="reshenie">
+<image src="4.png" alt="рез">
 
-5
+
 
 
 
