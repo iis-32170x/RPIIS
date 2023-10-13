@@ -264,7 +264,7 @@ svc	Выводит все сведения о службе для каждого
 
 ---
 
-# <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=cambria&size=35&pause=1000&color=072903&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=CHCP" alt="Typing SVG" /></a>
+# <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=cambria&size=24&pause=1000&color=072903&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=CHCP" alt="Typing SVG" /></a>
 
 **Описание:	&#128105;&#8205;&#129456;**
 
@@ -290,7 +290,8 @@ svc	Выводит все сведения о службе для каждого
     
  ---
 
- <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&size=35&pause=1000&color=F529F1&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=%D0%A1%D0%9F%D0%90%D0%A1%D0%98%D0%91%D0%9E+%D0%97%D0%90+%D0%92%D0%9D%D0%98%D0%9C%D0%90%D0%9D%D0%98%D0%95" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&size=27&pause=1000&color=991796&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=%D0%A1%D0%9F%D0%90%D0%A1%D0%98%D0%91%D0%9E+%D0%97%D0%90+%D0%92%D0%9D%D0%98%D0%9C%D0%90%D0%9D%D0%98%D0%95" alt="Typing SVG" /></a>
 
  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&size=35&pause=1000&color=661E1E&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=%D0%97%D0%B0%D1%81%D0%BB%D1%83%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%B0%D0%BD%D0%B5%D0%BA%D0%B4%D0%BE%D1%82)" alt="Typing SVG" /></a>
+ 
 <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
