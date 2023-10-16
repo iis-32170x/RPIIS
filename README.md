@@ -32,7 +32,7 @@
     Переход к папке - _cd_путь к папке_
     Запуск .bat файла -  "Имя файла"
 
-    ![Снимок экрана (12)](https://github.com/iis-32170x/RPIIS/assets/144945398/9bdceb59-4c0f-479e-b992-d600ceae9df6)
+    ![Снимок экрана (12)](https://github.com/iis-32170x/RPIIS/assets/144945398/9bdceb59-4c0f-479e-b992-d600ceae9df6).
 
 
  
