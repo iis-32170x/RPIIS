@@ -39,3 +39,12 @@ pause
 14. Выводим переменную в файл, название которого - текущая дата.
     
 ## Результат выполнения
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/a1.png)
+___
+![Img2](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/a2.png)
+___
+![Img3](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/a3.png)
+___
+![Img4](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/a4.png)
+___
+
