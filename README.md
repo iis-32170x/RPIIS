@@ -1,3 +1,7 @@
+---
+title: Document Center
+---
+
 #Лабораторная работа №1
 
 ##В рамках ЛР 1 необходимо создать исполняемый файл в соответствии с заданным вариантом, в моём случае - 16.\
@@ -6,7 +10,8 @@
 
 ##Файл .bat
 
-###```Batchfile
+```Batchfile
+
 @echo off
 setlocal enabledelayedexpansion
 
@@ -30,6 +35,7 @@ for /r "%directory%" %%f in (*s*) do (
 
 echo Last lines of files containing 's' saved in %output_file%'
 ```
+
 ##Пример выполнения bat файла:
 
 ###![Содержимое папки, относительный путь к которой приходит на вход пакетному файлу]("D:\study\PiOIvIS\folder.png")
@@ -39,7 +45,7 @@ echo Last lines of files containing 's' saved in %output_file%'
 
 ##Файл .sh
 
-###```Shell
+```Shell
 #!/bin/bash
 echo "Введите относительный путь"
 read rput
