@@ -1,6 +1,7 @@
 # Лосик Ярослав, 321701, Вариант 12
 
 Создать файл sh и bat, который выполняет следующее:
+
 Создает файл first.txt, в него записывает произвольное количество произвольных чисел (три числа на одну строку),
 находит все строки, в которых есть подстрока “23” и записать их в файл second.txt в порядке убывания (по строкам). 
 
@@ -31,11 +32,11 @@ pause
 
 ## Фотоотчет
 
-![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/1.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/photos/1.png)
 
-![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/2.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/photos/2.png)
 
-![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/cmd.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/photos/cmd.png)
 
 ## Реализация на bash
 
@@ -55,9 +56,9 @@ start second.txt
 
 ## Фотоотчет
 
-![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/1sh.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/photos/1sh.png)
 
-![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/2sh.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%9B%D0%BE%D1%81%D0%B8%D0%BA_%D0%AF/photos/2sh.png)
 
 ## Как работает
 
@@ -67,6 +68,11 @@ start second.txt
 - Сортирует числа в порядке убывания
 - Результат сортировки записывается в second.txt
 - Для показа результата открываются first.txt & second.txt
+
+## Переменные
+
+- Использован итератор 'i'
+- Использована переменаая '_rand' для определения количества итераций
 
 ## Вывод
 
