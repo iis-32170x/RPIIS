@@ -3,9 +3,7 @@ chcp 65001 > nul
 
 setlocal enabledelayedexpansion
 
-echo Введите абсолютный путь:
-
-set /p folder=
+set "folder=%1%"
 set smallestSize=99999999
 set smallestFile=
 set filename=
