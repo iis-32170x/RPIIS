@@ -20,3 +20,4 @@ for /r "%directory%" %%f in (*s*) do (
 )
 
 echo Last lines of files containing 's' saved in %output_file%
+
