@@ -15,6 +15,5 @@
 5. завершить работу программы
 
 ## результат выполнения
-![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20124817.png)
-
+![Img2](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20131740.png)
 
