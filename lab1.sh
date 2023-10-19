@@ -8,4 +8,4 @@ else
   echo "Нет процессов, PID которых делится нацело на $divisor."
   sleep 3
 fi
-:set ff=unix
+
