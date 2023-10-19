@@ -28,7 +28,7 @@ pause
 
 ## .sh file 
 
-```bash
+```sh
 
 #!/bin/bash
 if [ -d C:/PiOIvIS ]; then 
