@@ -20,3 +20,7 @@ dir /b/a:-r-h >>result.txt
 echo Dannoi papki net
 )
 pause
+
+## Как работает:
+
+Программа 
