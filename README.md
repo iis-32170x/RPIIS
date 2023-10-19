@@ -7,3 +7,20 @@
 
 ## *алгоритм выполнения bat файла*
 
+setlocal enabledelayedexpansion
+@echo off
+
+set /a number=0
+::cd "%folder%"
+
+
+for /r folder %%i in (*.txt) do (
+echo %%i
+set /a number += 1
+echo !number!
+ren %%i "!number!.txt"
+) 
+
+echo %number%
+echo renamed successfully
+pause
