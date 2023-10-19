@@ -2,4 +2,4 @@
 
 # Условие:
 
-![image]
+![image](Images/Условие.png)
