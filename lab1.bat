@@ -1,14 +1,9 @@
 @chcp 1251
 @echo off
-
 set /p divisor=Введите число, на которое необходимо разделить PID:
-
 tasklist /nh /fo csv > tasks.txt
-
 setlocal enabledelayedexpansion
-
 set /a count=0
-
 for /f "tokens=1,2 delims=," %%a in (tasks.txt) do (
 set /a pid=%%b
 set /a remainder=!pid! %% !divisor!
