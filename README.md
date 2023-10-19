@@ -84,6 +84,8 @@ read -p "Press enter to continue"
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/b1.png)
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Images/b2.png)
 
-# Вывод
+- [X] # Вывод
 
 В ходе выполнения данной лабораторной работы были приобретены навыки базовой работы с командной строкой, написанием скриптов на batch и bash, а так же работой с системой контроля версий git и веб-сервис для хостинга IT-проектов github.
+___
+[Для вопросов и претензий](https://www.youtube.com/watch?v=HEXWRTEbj1I)
