@@ -23,7 +23,18 @@
 3) Число положительное нечетное (mm)
 <hr>
 <h3>Пример запуска и выполнения программы (.sh) </h3>
--
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/images/openshell.png?raw=true"> </image>
+Запускаем скрипт lab.sh как приложение.
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/images/shellvalue1.png?raw=true"> </image>
+1) Число отрицательное (mm-dd-yyyy)
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/images/shellvalue2.png?raw=true"> </image>
+2) Число положительное четное (mm/dd/yyyy)
+<hr> 
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/images/shellvalue3.png?raw=true"> </image>
+3) Число положительное нечетное (mm)
+<hr>
 <h2>Алгоритм и код скрипта: </h2>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/images/batcode.png"> </image>
 <h3>Алгоритм работы(.bat): </h3>
