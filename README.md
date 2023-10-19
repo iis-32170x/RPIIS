@@ -16,4 +16,5 @@
 
 ## результат выполнения
 ![Img2](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20131740.png)
-
+ ## sh файл
+![Img3](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20132709.png)
