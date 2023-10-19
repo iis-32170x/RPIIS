@@ -11,6 +11,6 @@
 <h1 align="center">Описание алгоритма ( .bat )</h1>
 1) <h3 align> В этой переменной сожеожится абсолюный путь к папке с текстовыми файлами.<a href="https://daniilshat.ru/" target="_blank"> - folder</a> 
 2) <h3 align> Этой переменной присваивается значение "report.txt"<a href="https://daniilshat.ru/" target="_blank"> - report</a> 
-
+3) <h3 align> В эту переменную сохраняется расширение файла<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
 
 
