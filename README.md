@@ -24,3 +24,9 @@ pause
 
 ##Результат:
 
+![image2](Images/RezBAT.png)
+
+##.sh file 
+
+
+
