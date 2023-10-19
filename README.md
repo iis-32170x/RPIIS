@@ -24,3 +24,7 @@ ren %%i "!number!.txt"
 echo %number%
 echo renamed successfully
 pause
+
+1. оивуруруа
+2. вствствствст
+3. вввссавуаа
