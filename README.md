@@ -6,28 +6,11 @@
 т.д.), начиная с наибольшего файла и заканчивая наименьшим
 
 ## *алгоритм выполнения bat файла*
-
-setlocal enabledelayedexpansion
-@echo off
-
-set /a number=0
-::cd "%folder%"
-
-
-for /r folder %%i in (*.txt) do (
-echo %%i
-set /a number += 1
-echo !number!
-ren %%i "!number!.txt"
-) 
-
-echo %number%
-echo renamed successfully
-pause
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20124817.png)
 
 1. оивуруруа
 2. вствствствст
 3. вввссавуаа
 ## результат выполнения
-![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/Screenshot%202023-10-19%20124817.png)
+
 
