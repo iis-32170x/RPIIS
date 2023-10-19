@@ -42,7 +42,11 @@ else
 echo "Dannoi papki net"
 fi
 ```
-##Результат:
+##Результат: 
+
+![image3](Images/Результат.png)
+
+![image4](Images/Результат(2).png)
 
 
 
