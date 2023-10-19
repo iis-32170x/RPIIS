@@ -17,7 +17,6 @@ set /a count+=1
 )
 timeout 30
 del tasks.txt
-
 if !count! equ 1 (
 echo процесс не найден. программа закроется через 3 сек
 timeout  3 
