@@ -22,11 +22,11 @@ echo Dannoi papki net
 pause
 ```
 
-##Результат:
+## Результат:
 
 ![image2](Images/RezBAT.png)
 
-##.sh file 
+## .sh file 
 
 ```bash
 
@@ -42,7 +42,7 @@ else
 echo "Dannoi papki net"
 fi
 ```
-##Результат: 
+## Результат: 
 
 ![image3](Images/Результат.png)
 
