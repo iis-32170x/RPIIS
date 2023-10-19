@@ -5,7 +5,7 @@
 ![image](Images/Условие.png)
 
 ## .bat file
-```bash
+```batch
 
 @echo off
 if exist "C:\PiOIvIS" (
