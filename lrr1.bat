@@ -1,7 +1,6 @@
 setlocal enabledelayedexpansion
 if not exist %1 goto error1
 FOR /F %%i IN ('dir %1 /s /a-d /b /os') DO set f=%%i
-echo f= %f%
 call :size %f%
 goto end
 :size
