@@ -1,26 +1,16 @@
 setlocal enabledelayedexpansion
-
 if not exist %1 goto error1
-
-
 FOR /F %%i IN ('dir %1 /s /a-d /b /os') DO set f=%%i
-
 echo f= %f%
 call :size %f%
 goto end
-
-
 :size
-echo ðàçìåð ôàéëà= > result.txt
+echo Ñ€Ð°Ð·Ð¼ÐµÑ€ Ñ„Ð°Ð¹Ð»Ð°= > result.txt
 echo %~z1% >> result.txt
-
 set /a count=0
 set /a countlet=0
 set /a ln=0
-
-
-
-echo êîëè÷åñòâî ñëîâ= >> result.txt
+echo ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»Ð¾Ð²= >> result.txt
 For /F "usebackq delims=" %%i In ("%1") Do (
     FOR %%j IN (%%i) DO (
      set /a count=!count!+1
@@ -32,16 +22,12 @@ For /F "usebackq delims=" %%i In ("%1") Do (
     )
   )
 echo %count% >> result.txt
-
-echo êîëè÷åñòâî áóêâ= >> result.txt
+echo ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð±ÑƒÐºÐ²= >> result.txt
 echo %countlet% >> result.txt
-
-
-echo êîëè÷åñòâî ñòðîê= >> result.txt
+echo ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº= >> result.txt
 find /c /v "" <"%~1" >> result.txt
-
-
 goto end
+
 :error1
 echo Folder do not exist
 goto end
