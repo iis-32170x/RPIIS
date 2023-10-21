@@ -1,3 +1,4 @@
+@chcp 1251
 echo enter directory
 set /p a=
 cd %a%
