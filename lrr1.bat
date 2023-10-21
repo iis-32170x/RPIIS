@@ -14,7 +14,6 @@ For /F "usebackq delims=" %%i In ("%1") Do (
     FOR %%j IN (%%i) DO (
      set /a count=!count!+1
      echo %%j>tempfile.txt
-     echo %%j
      for %%? IN (tempfile.txt) DO (
 	 set /a countlet=!countlet!+%%~z?-2"
 	)
