@@ -46,7 +46,7 @@
 <h3 align>1) В этой переменной содержится абсолюный путь к папке с текстовыми файлами.<a href="https://daniilshat.ru/" target="_blank"> - folder</a> 
 <h3 align>2) Этой переменной присваивается значение "report.txt"<a href="https://daniilshat.ru/" target="_blank"> - report</a> 
 <h3 align>3) В эту переменную сохраняется расширение файла, а также принимает значения ключей массива count<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
- <h1 align="center">Последовательность действий:</h1>
+ <h1 align="center">Последовательность действий:<h1 align="center">
  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(1).png"/>
 <h4 align>1)#!/bin/bash - указывает на то, что используется интерпретатор bash.</h4>
 <h4 align>2)read -p "Введите путь к папке: " folder - выводит на экран сообщение "Введите путь к папке:" и принимает ввод от пользователя, сохраняя его в переменную folder.
@@ -67,3 +67,5 @@ if [ ! -d "$folder" ]; then - проверяет, существует ли па
 <h4 align>12)done | sort -rn > "$report" - заканчивает цикл, сортирует вывод по убыванию количества файлов и сохраняет его в файл report.
 </h4>
 <h4 align>13)echo "Отчет сохранен в файл $report." - выводит на экран сообщение "Отчет сохранен в файл report.txt.".</h4>
+<h1 align="center"># Итог</h1>
+<h3 align>В ходе работы были получены и приобретены навыки работы в командной строке **Windows** и **Linux**.А так же команды для работы в **GitHub**.</h3>
