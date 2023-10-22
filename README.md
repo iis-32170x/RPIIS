@@ -32,7 +32,9 @@
 Запускаем командную строку:
 <img width="889" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/0c10bd5f-42b6-4a19-870d-493002a3727f">
 
- Открытие .bat файла:
-  Запуск .bat файла : "Путь к файлу"
+ 
+Запуск .bat файла : "Путь к файлу"
+<img width="1103" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/8829fcc5-1f38-421b-a201-f94f5ab2719b">
+
 
 
