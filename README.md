@@ -24,5 +24,5 @@
 3) <h3 align>Вводим путь к папке</h3>
   <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/photo_2023-10-19_09-34-09.jpg"/>
 4) <h3 align>Создается report файл с различными расширениями</h3>
-  <img src=""/>
+  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/3.png"/>
 <h1 align="center">Описание алгоритма ( .bat )</h1>
