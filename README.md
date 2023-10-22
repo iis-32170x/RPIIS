@@ -37,4 +37,22 @@
 <img width="1103" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/8829fcc5-1f38-421b-a201-f94f5ab2719b">
 
 
+Ввод относительного пути к папке
+Запись процессов в текстовый файл
+<img width="1127" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/72788176-2dbd-47d0-96df-4caed43e4511">
+
+Программа успешно заканчивает работу, после чего переходим в папку, где хранится .bat файл и замечаем новый файл соответствующий “result” .txt
+
+<img width="1277" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/9e4b668d-afb8-4a73-ab04-28470e16e63a">
+
+Давайте откроем этот файл
+
+<img width="1202" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/2ef3793a-c251-4fa0-a74d-433cd4c64594">
+
+Работа .bat файла окончена.
+
+
+
+
+
 
