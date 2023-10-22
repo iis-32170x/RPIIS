@@ -18,7 +18,7 @@
 <h3 align>3) В эту переменную сохраняется расширение файла, а также принимает значения ключей массива count<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
 <h1 align="center">Пример запуска и выполнения программы ( .sh )</h1>
 1) <h3 align>Создаем папку с файлами с различными расширениями</h3>
-  <img src=""/>
+  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/3.png"/>
 2) <h3 align>Открываем sh файл</h3>
   <img src=""/>
 3) <h3 align>Вводим путь к папке</h3>
