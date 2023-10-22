@@ -18,6 +18,12 @@
 <h3 align>3) В эту переменную сохраняется расширение файла, а также принимает значения ключей массива count<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
   <h1 align="center">Последовательность действий:</h1>
  <img src=" https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(2).png"/>
+
+
+
+
+
+  
 <h1 align="center">Пример запуска и выполнения программы ( .sh )</h1>
 1) <h3 align>Создаем папку с файлами с различными расширениями</h3>
   <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/3.png"/>
@@ -32,4 +38,19 @@
 <h3 align>2) Этой переменной присваивается значение "report.txt"<a href="https://daniilshat.ru/" target="_blank"> - report</a> 
 <h3 align>3) В эту переменную сохраняется расширение файла, а также принимает значения ключей массива count<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
  <h1 align="center">Последовательность действий:</h1>
- <img src=""/>
+ <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(1).png"/>
+<h4 align>1)@echo off - отключает вывод команд в консольный интерфейс.</h4>
+<h4 align>2)chcp 65001 > nul - устанавливает кодировку консоли на UTF-8.</h4>
+<h4 align>3)setlocal enabledelayedexpansion - включает отложенное разрешение переменных.</h4>
+<h4 align>4)set /p "folder=Введите путь к папке: " - запрашивает у пользователя путь к папке и сохраняет его в переменную folder.</h4>
+<h4 align>5)set "report=report.txt" - устанавливает имя файла отчета в переменную report.</h4>
+<h4 align>6)if not exist "%folder%"  - проверяет, существует ли указанная папка.</h4>
+<h4 align>7)echo Данной папки нет! - если папки не существует, выводит сообщение об ошибке.</h4>
+<h4 align>8)exit /b - завершает выполнение скрипта.</h4>
+<h4 align>9)for /r "%folder%" %%f in (*) do ( - проходит рекурсивно по всем файлам в указанной папке и ее подпапках.</h4>
+<h4 align>10)set "ext=%%~xf" - сохраняет расширение текущего файла в переменную ext.</h4>
+<h4 align>11)set /a "count[!ext!]+=1" - увеличивает счетчик файлов с данным расширением в массиве count.</h4>
+<h4 align>12)(for /f "tokens=2,3 delims=[]=" %%a in ('set count[') do ( - проходит по всем элементам массива count и выводит их значения в формате "расширение - количество".</h4>
+<h4 align>13)| sort /r > "%report%" - сортирует отчет по убыванию количества файлов каждого типа и записывает его в файл report.txt.</h4>
+<h4 align>14)endlocal - завершает локальную область видимости переменных.</h4>
+<h4 align>15)pause - останавливает выполнение скрипта до нажатия пользователем любой клавиши.</h4>
