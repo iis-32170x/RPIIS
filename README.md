@@ -115,3 +115,30 @@ test-директория , где будут созданы текстовые 
 ![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-22%20155327.png)
 
 Вывод сообщения "Файлы созданы в каталоге" после завершения скрипта.
+
+## Пример и алгоритм работы :
+     Запуск cmd.
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-21%20145112.png)
+
+     Переход к папке с .sh файлом.
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-21%20145536.png)
+
+     Включение wsl(windiws subsistem for linux)
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-22%20163445.png)
+
+     Запуск файла.Ввод переменных (PATH, MIN_PID, MAX_PID)
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-22%20163628.png)
+
+test_linux-директория , где будут созданы текстовые файлы.
+
+0-минимальный PID(process ID)
+
+500-максимальный PID(process ID)    
+
+Открываем папку test_linux
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-22%20163845.png)
+
+Открываем любой текстовый файл.
+![image](https://github.com/Zubabubal/ads/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202023-10-22%20163944.png)
+
+Содержание файла соответствует поставленной задаче.
