@@ -69,3 +69,4 @@ if [ ! -d "$folder" ]; then - проверяет, существует ли па
 <h4 align>13)echo "Отчет сохранен в файл $report." - выводит на экран сообщение "Отчет сохранен в файл report.txt.".</h4>
 <h1 align="center"># Итог</h1>
 <h3 align>В ходе работы были получены и приобретены навыки работы в командной строке **Windows** и **Linux**.А так же команды для работы в **GitHub**.</h3>
+[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
