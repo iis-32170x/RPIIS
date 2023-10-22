@@ -17,7 +17,7 @@
 <h3 align>2) Этой переменной присваивается значение "report.txt"<a href="https://daniilshat.ru/" target="_blank"> - report</a> 
 <h3 align>3) В эту переменную сохраняется расширение файла, а также принимает значения ключей массива count<a href="https://daniilshat.ru/" target="_blank"> - ext</a> 
   <h1 align="center">Последовательность действий:</h1>
- <img src=" https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/images/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(2).png"/>
+ <img src=""/>
  <h4 align>1)@echo off - отключает вывод команд в консольный интерфейс.</h4>
 <h4 align>2)chcp 65001 > nul - устанавливает кодировку консоли на UTF-8.</h4>
 <h4 align>3)setlocal enabledelayedexpansion - включает отложенное разрешение переменных.</h4>
