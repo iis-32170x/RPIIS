@@ -37,7 +37,7 @@
 <img width="1103" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/8829fcc5-1f38-421b-a201-f94f5ab2719b">
 
 
-Ввод относительного пути к папке
+Ввод относительного пути к папке.
 
 Запись процессов в текстовый файл
 <img width="1127" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/72788176-2dbd-47d0-96df-4caed43e4511">
