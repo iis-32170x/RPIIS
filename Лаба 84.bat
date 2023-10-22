@@ -13,9 +13,5 @@ FOR %%n IN (d:\tempfolder\tempfile.txt) DO ( SET /A strlength=%%~zn - 3 )
 Echo %strlength% >> D:\folder2\%date:~,2%.txt
 copy d:\folder2\%date:~,2%.txt d:\folder3
 ver >> D:\folder3\%date:~,2%.txt
-::ver > d:\tempfolder\tempfile1.txt
-::set bublick=d:\tempfolder\tempfile1.txt
-::For /F "usebackq tokens=* delims=" %%i In ("%bublick%") Do Set versia=%%i
-::Echo %versia% >> D:\folder3\%date:~,2%.txt
 RD /S /Q D:\tempfolder
 pause
