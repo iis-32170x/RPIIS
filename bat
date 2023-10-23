@@ -30,10 +30,4 @@ for /f "tokens=1,2,3" %%A in ('powershell -command "Get-Process -IncludeUserName
   )
 )
 
-del +.txt 
-del At.txt
-del Get-Process.txt
-del that.txt
-
-
 echo Файлы созданы
