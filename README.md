@@ -52,6 +52,8 @@ pause
 
 #### Пример запуска программы
 ![image](https://github.com/iis-32170x/RPIIS/assets/66639629/0a5ebe72-e009-487b-b9f3-11e41e8b88d0)
+![image](https://github.com/iis-32170x/RPIIS/assets/66639629/1695bc14-21a6-4df4-a204-05aa0c11df38)
+
 ## **Код исполняемого bash-файла**
 ```shell
 read -p "Введите путь к папке: " path
@@ -88,5 +90,7 @@ done
 
 ## Пример запуска программы
 ![image](https://github.com/iis-32170x/RPIIS/assets/66639629/f7afef39-09ef-4bf8-b340-9d390b4fcb93)
+![image](https://github.com/iis-32170x/RPIIS/assets/66639629/3ad58f7a-75f2-4402-8d49-3957fd79483e)
+
 
 
