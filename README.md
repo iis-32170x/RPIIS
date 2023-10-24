@@ -168,6 +168,14 @@ done
 * Настройка прав использования файлов с программой (```chmod +x [файл]```)
 * ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/e33d170a-2062-4681-9b3b-158a1a4adcc9)
 * Запуск программы (./[файл])
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/298da6d0-cc05-49d2-b1d7-c7e860525e4a)
+* Создана подпапка
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/1bd00a2d-1861-4684-b0f5-5e4564e64ae6)
+* Скопированный файл
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/c7ebaf4a-cb7f-4152-abae-c4237c0b32a1)
+
+
+
 
 
 
