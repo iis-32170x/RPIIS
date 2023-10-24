@@ -1,14 +1,16 @@
 echo "test"
-set total_memory=0
-for /f "skip=1" %%m in ('tasklist /nh') do (
-    for /f "tokens=5" %%n in ("%%m") do (
-        set /a total_memory+=%%n    )
-)
-set process_count=0
-for /f %%p in ('tasklist /nh ^| find /c /v ""') do (
-    set process_count=%%p)
-echo Total Memory: %total_memory%
-echo Process Count: %process_count%
-pause
-exit
+setlocal enabledelayedexpansion
 
+set "totalMemory=0"
+set "activeProcesses=0"
+
+for /f "skip=3 tokens=2" %%a in ('tasklist /NH') do (
+    set /a "totalMemory+=%%a"
+    set /a "activeProcesses+=1"
+)
+
+echo Суммарный объем памяти: %totalMemory% КБ >> results.txt
+echo Число активных процессов: %activeProcesses% >> results.txt
+echo Вычисления завершены. Результаты записаны в файл results.txt.
+
+exit 
