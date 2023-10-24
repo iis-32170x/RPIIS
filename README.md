@@ -59,7 +59,7 @@ pause
 ```
 		
 Вспомогательный алгоритм findowner.ps1:
-```
+```powershell
 param ($thefile)
 (Get-Acl $thefile).Owner
 ```
