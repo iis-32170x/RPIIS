@@ -108,6 +108,23 @@ setlocal enabledelayedexpansion
 * ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/5bfe5d5b-6e16-41c9-a4dd-00c73178112b)
 # .SH:
 ## Исходные данные
+* Папка с текстовыми файлами:
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/c61f064e-9e24-4009-a432-95b20cddd877)
+* Файл с программой:
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/0f06de49-e5ce-4985-a348-54e66af7be2c)
+* Файл, из которого данные отправляются на основной файл с программой:
+* ![image](https://github.com/iis-32170x/RPIIS/assets/144937887/93071cf6-195e-48c8-910e-158d7d9f1d3d)
+## Переменные 
+* keywords — ключевые слова
+* search_folder_name — подпапка, создаваемая с именем основной папки с добавлением в конце "_search"
+* search_number — минимальное количество ключевых слов, находящиеся в файле, для копирования файла в подпапку
+* number — счетчик для подсчета ключевых слов в файле
+* 
+
+ 
+
+
+
 
 
 
