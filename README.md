@@ -21,7 +21,7 @@
 
 ## Полный код программы
 CMD:
-```
+```batchfile
 @echo off
 rem Кодировка - UTF-8
 chcp 65001 >nul
@@ -66,7 +66,7 @@ param ($thefile)
 
 
 Shell:
-```
+```shell
 #!bin/bash
 
 # Если данной папки не существует:
