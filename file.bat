@@ -4,26 +4,26 @@ if not exist File1.txt type nul>File1.txt
 if not exist File2.txt type nul>File2.txt
 attrib -h File2.txt
 if exist log.txt del log.txt
-set /p f1=Ââåäèòå ïóòü ê ïåðâîìó ôàéëó: 
+set /p f1=Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÑƒÑ‚ÑŒ Ðº Ð¿ÐµÑ€Ð²Ð¾Ð¼Ñƒ Ñ„Ð°Ð¹Ð»Ñƒ: 
 start %f1%
 pause
-set /p f2=Ââåäèòå ïóòü êî âòîðîìó ôàéëó: 
+set /p f2=Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÑƒÑ‚ÑŒ ÐºÐ¾ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¼Ñƒ Ñ„Ð°Ð¹Ð»Ñƒ: 
 start %f2%
 pause
 type nul>log.txt
 fc /c File1.txt File2.txt>>log.txt
 set r=%ERRORLEVEL%
 if %r%==0 (
-    echo Ôàéëû ñîâïàäàþò, èõ ñîäåðæèìîå:
-    echo Ôàéëû ñîâïàëè>>log.txt
-    echo Âûâîäèì ñîäåðæèìîå ïåðâîãî ôàéëà â êîíñîëü>>log.txt
+    echo Ð¤Ð°Ð¹Ð»Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚, Ð¸Ñ… ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ:
+    echo Ð¤Ð°Ð¹Ð»Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð»Ð¸>>log.txt
+    echo Ð’Ñ‹Ð²Ð¾Ð´Ð¸Ð¼ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ Ñ„Ð°Ð¹Ð»Ð° Ð² ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ>>log.txt
     type File1.txt
 ) else (
-    echo Ôàéëû íå ñîâïàëè
-    echo Ôàéëû íå ñîâïàëè>>log.txt
+    echo Ð¤Ð°Ð¹Ð»Ñ‹ Ð½Ðµ ÑÐ¾Ð²Ð¿Ð°Ð»Ð¸
+    echo Ð¤Ð°Ð¹Ð»Ñ‹ Ð½Ðµ ÑÐ¾Ð²Ð¿Ð°Ð»Ð¸>>log.txt
     del File1.txt
-    echo Óäàëÿåì ïåðâûé ôàéë>>log.txt
+    echo Ð£Ð´Ð°Ð»ÑÐµÐ¼ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ñ„Ð°Ð¹Ð»>>log.txt
     attrib +h File2.txt 
-    echo Äåëàåì âòîðîé ôàéë ñêðûòûì>>log.txt
+    echo Ð”ÐµÐ»Ð°ÐµÐ¼ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ„Ð°Ð¹Ð» ÑÐºÑ€Ñ‹Ñ‚Ñ‹Ð¼>>log.txt
 )
 pause
