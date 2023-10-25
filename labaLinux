@@ -1,0 +1,24 @@
+#!/bin/bash
+p="/home/sourust/fileday"
+day=$(date +%d)
+month=$(date +%m)
+min="$(ps aux --sort=+rss | sed -n '2p' | awk '{print $6}')"
+max="$(ps aux --sort=-rss | sed -n '2p' | awk '{print $6}')"
+echo "Минимальный объём занимаемой памяти - $min"
+echo "Максимальный объём занимаемой памяти - $max"
+raznost=$((max-min))
+echo "Разность = $raznost"
+if [[ $((raznost%2)) == 0 ]]
+    then
+        echo "Разность чётная"
+        for ((i=1; i<=$day; i++))
+            do  
+                touch "$p/$i"
+            done
+    else
+        echo "Разность нечётная"
+        for ((i=1; i<=$month; i++))
+            do  
+                wine notepad.exe
+            done
+fi
