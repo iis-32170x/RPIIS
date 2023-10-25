@@ -5,7 +5,32 @@
 <img width="1169" alt="Снимок экрана 2023-10-23 в 22 28 09" src="https://github.com/iis-32170x/RPIIS/assets/105926921/0b013cef-a278-418d-a142-708c35c3cd9a">
 
 ### Описание алгоритма, пример запуска и выполнения программы (.bat файл) :
+
 <img width="1169" alt="Снимок экрана 2023-10-23 в 22 41 07" src="https://github.com/iis-32170x/RPIIS/assets/105926921/0eb716cf-6318-4685-8053-dc8aa8df5e26">
+
+```shell
+@echo off
+setlocal enabledelayedexpansion
+
+if "%~2"=="" (
+    echo Usage: %0 ^<directory_path^> ^<letter^>
+    exit /b 1
+)
+
+set "directory_path=%~1"
+set "letter=%~2"
+
+if not exist "%directory_path%" (
+    echo This folder does not exist
+    exit /b 1
+)
+
+for /r "%directory_path%" %%f in (*.txt) do (
+    findstr /i "\<[a-zA-Z]*%letter%\>" "%%f" >> result.txt
+)
+
+echo Words ending with '%letter%' in '*.txt' files have been saved in 'result.txt'
+```
 
 ### Алгоритм
 
@@ -86,6 +111,27 @@
 
 ## Описание алгоритма, пример запуска и выполнения программы(.sh файл)) :
 <img width="1169" alt="Снимок экрана 2023-10-23 в 22 34 51" src="https://github.com/iis-32170x/RPIIS/assets/105926921/bcb26128-377e-46e3-9d51-85912a855c9d">
+
+```shell
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <directory_path> <letter>"
+    exit 1
+fi
+
+directory_path="$1"
+letter="$2"
+
+if [ ! -d "$directory_path" ]; then
+    echo "This folder does not exist"
+    exit 1
+fi
+
+find "$directory_path" -type f -name "*.txt" -exec grep -i "\<[a-zA-Z]*$letter\>" {} \; > result.txt
+
+echo "Words ending with '$letter' in '*.txt' files have been saved in 'result.txt'"
+```
 
 ### Алгоритм
 * *На вход приходит два аргумента: путь к директории в которой будем выполнять поиск и буква латинского алфавита.*
