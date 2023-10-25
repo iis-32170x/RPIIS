@@ -109,7 +109,7 @@ echo Words ending with '%letter%' in '*.txt' files have been saved in 'result.tx
 8. Если слова не будут найдены сосдасться просто пустой файл **_result.txt_**
 
 
-## Описание алгоритма, пример запуска и выполнения программы([_.sh_](https://github.com/iis-32170x/RPIIS/blob/60ce8b791146fd0012cb455dc90bf0c40125bd15/search.sh) файл)) :
+## Описание алгоритма, пример запуска и выполнения программы([_.sh_](https://github.com/iis-32170x/RPIIS/blob/60ce8b791146fd0012cb455dc90bf0c40125bd15/search.sh) файл) :
 <img width="1169" alt="Снимок экрана 2023-10-23 в 22 34 51" src="https://github.com/iis-32170x/RPIIS/assets/105926921/bcb26128-377e-46e3-9d51-85912a855c9d">
 
 ```shell
