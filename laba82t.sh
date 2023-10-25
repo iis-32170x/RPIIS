@@ -18,9 +18,9 @@ if (( ${m[$counter]} >= ${m[1]} )) && (( ${m[$counter]} >= ${m[2]} )) && (( ${m[
 done
 let "b=$a/2*2"
 			if [ $b == $a ]; then
-				echo "Hello"
-			else
 				echo > /home/mayu/Рабочий\ стол/papka/"$a"
+			else
+				echo "Hello"
 			fi
 rm /home/mayu/Рабочий\ стол/papka/data.txt
 rm /home/mayu/Рабочий\ стол/papka/cifri.txt
