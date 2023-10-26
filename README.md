@@ -56,3 +56,4 @@ pause
 
 ---
 
+![Запуск batника](/images/запускcmd.png)
