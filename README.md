@@ -75,9 +75,11 @@
 ![Alt text](image-6.png)
 ## Результат(bat)
 Рандомные числа:
+
 ![Alt text](image-7.png)
 
 Отсортированные в обратном порядке числа:
+
 ![Alt text](image-8.png)
 
 
