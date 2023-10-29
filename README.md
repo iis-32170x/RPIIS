@@ -2,9 +2,9 @@
 Данная лабораторная работа была предназначена для ознакомления с командной строкой операционных систем Windows и Linux.
 В рамках ЛР 1 необходимо создать исполняемый файл .bat и .sh в соответствии с заданным вариантом.
 ## Условие ЛР 1 (48 вариант)
-![image]((https://github.com/iis-32170x/RPIIS/assets/147256759/3dcef648-96f5-423c-bc44-6a540fc8a10b)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/3dcef648-96f5-423c-bc44-6a540fc8a10b)
 ## Описание алгоритма, пример запуска и выполнения программы ([*.bat*](https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8C_%D0%93/%D0%9B%D0%B0%D0%B1%D0%B0%2084.bat) файл)
-![image]((https://github.com/iis-32170x/RPIIS/assets/147256759/4e750afb-0871-47c0-a9fe-7a799569f58d)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/4e750afb-0871-47c0-a9fe-7a799569f58d)
 
 #### Переменные:
 - *strvar* - хранит значение названия файла
@@ -31,7 +31,7 @@
  11. Удаление временного файла
 #### Пример запуска
    Откроем папку, в которой хранится файл, и запустим его
-   ![image](![image](https://github.com/iis-32170x/RPIIS/assets/147256759/ff5defaa-6101-405d-98b8-c458028dafa7)
+   ![image](https://github.com/iis-32170x/RPIIS/assets/147256759/ff5defaa-6101-405d-98b8-c458028dafa7)
    Ваш .bat файл успешно запущен!!!!
    #### Пример выполнения программы
 ![image](https://github.com/iis-32170x/RPIIS/assets/147256759/d097be5d-2ee8-4097-9e51-2e342a53842e)
