@@ -26,5 +26,7 @@ for /l %%i in (1, 1, 6) do (
 echo Smotrite
 pause
 ```
+![Снимок экрана 2023-10-19 134007](https://github.com/iis-32170x/RPIIS/assets/144949092/6a7dea3c-83bc-4013-90bc-8195af672a98)
+
 
 
