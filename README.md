@@ -5,10 +5,10 @@
 
 ```
 @echo off
-set /p password_length[^1]="Length: "
+set /p password_length```[^1]```="Length: "
 setlocal enabledelayedexpansion
-set password_file[^2]=pwd.txt
-set simvoli[^3]=0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!%%$#^
+set password_file```[^2]```=pwd.txt
+set simvoli```[^3]```=0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!%%$#^
 if exist %password_file% (
     del %password_file%
 )
