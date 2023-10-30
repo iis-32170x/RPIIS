@@ -29,9 +29,39 @@ pause
 ## ___Переменные___
 * password_length-длина пароля,задаваемая пользователем
 * simvoli-набор символов для генерации паролей
-  ## Пример работы программы
+  ### Пример работы программы
 ![Снимок экрана 2023-10-19 134007](https://github.com/iis-32170x/RPIIS/assets/144949092/6a7dea3c-83bc-4013-90bc-8195af672a98)
 ![Снимок экрана 2023-10-19 133856](https://github.com/iis-32170x/RPIIS/assets/144949092/6c5b8e45-6b0b-44db-bcd8-2b7cbbb29310)
+## Реализация на batch:
+```
+#!/bin/bash
+read -p "Length: " password_length
+password_file="pwd.txt"
+simvoli="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!%%$#^"
+
+if [ -f "$password_file" ]; then
+    rm "$password_file"
+fi
+
+for i in {1..6}; do
+    password=""
+    for j in $(seq 1 "$password_length"); do
+        char_index=$((RANDOM % 69))
+        char="${simvoli:char_index:1}"
+        password="$password$char"
+    done
+    echo "$password" >> "$password_file"
+done
+```
+## ___Переменные___
+* password_length-длина пароля,задаваемая пользователем
+* simvoli-набор символов для генерации паролей
+  ### Пример работы программы
+  ![Снимок экрана 2023-10-19 134022](https://github.com/iis-32170x/RPIIS/assets/144949092/8fe9f16b-82eb-4cb0-b46c-a786b7f9af5b)
+  ![Снимок экрана 2023-10-19 133938](https://github.com/iis-32170x/RPIIS/assets/144949092/987b82d0-514f-4d59-975a-358017e9b9db)
+
+
+
 
 
 
