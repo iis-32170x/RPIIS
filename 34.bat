@@ -9,6 +9,12 @@ set /p "max_length=Введите максимальную длину имени
 
 set "output_file=FileList.txt"
 
+if not exist "%directory%" (
+  echo Данной папки нет
+  pause
+  exit /b
+)
+
 cd /d "%directory%"
 
 > "%output_file%" (
