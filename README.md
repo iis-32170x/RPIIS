@@ -48,25 +48,20 @@
 
  Открытие .bat файла:
 
- Переход к каталогу - Название диска:, cd путь к папке.
- Запуск .bat файла - start "имя файла.bat"
- 
- ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/5dcfc86a-5abb-4728-a722-f050b9631a02)
+
 
  Папка до запуска программы:
- 
- ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/6bab0835-c529-4daa-b784-253d03e0fca9)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/a97965bd-4206-4ef4-bedc-492b89aa7091)
 
- Папка после запуска:
- 
- 
- ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/5e4d4901-3537-4f5a-b015-8b6b0522bfd7)
 
- Содержимое файла СЕК_МИН_ЧАС.txt:
+ Содержимое файла 1.txt:
+![image](https://github.com/iis-32170x/RPIIS/assets/48830085/cfe18458-24b5-4810-b0ed-20b0b64ab5e7)
 
- ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/bcbf0a2e-4fb5-4eb1-a9db-3cb7a9129b5b)
+ Содержимое файла 2.txt:
+![image](https://github.com/iis-32170x/RPIIS/assets/48830085/923f9daf-c068-4baf-a7ac-7d86c79f4901)
 
  Bat файл работает исправно.
+![image](https://github.com/iis-32170x/RPIIS/assets/48830085/116a53b9-388b-40e2-9694-0fc4c4735017)
 
  # Описание лагоритма, пример запуска и выполнения программы (.sh)
  
