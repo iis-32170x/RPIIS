@@ -11,7 +11,8 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/7d0592c8-0f6e-45d4-b263-16bb1d2ee418)
 )
 # Описание алгоритма, пример запуска и выполнения программы (.bat)
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/8b1ae3ee-ebb6-419f-9dd1-2eeb5983d8dd)
+![image](https://github.com/iis-32170x/RPIIS/assets/48830085/a78a54e0-72ca-4e19-bfef-1656b30c940b)
+
 ## Алгоритм программы
 1. Отключиаем вывод команд на экран.
 2. Задаем переменную, которая будет являться абсолютным путем к файлу.
