@@ -51,16 +51,20 @@
 
 
  Папка до запуска программы:
+ 
  ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/a97965bd-4206-4ef4-bedc-492b89aa7091)
 
 
  Содержимое файла 1.txt:
+ 
 ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/cfe18458-24b5-4810-b0ed-20b0b64ab5e7)
 
  Содержимое файла 2.txt:
+ 
 ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/923f9daf-c068-4baf-a7ac-7d86c79f4901)
 
  Bat файл работает исправно.
+ 
 ![image](https://github.com/iis-32170x/RPIIS/assets/48830085/116a53b9-388b-40e2-9694-0fc4c4735017)
 
  # Описание лагоритма, пример запуска и выполнения программы (.sh)
