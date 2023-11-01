@@ -121,3 +121,30 @@ Bat файл работает исправно
 ## Пример и алгоритм работы:
 
 Запуск sh файла с существующей папкой sigma:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/bf8a860f-c69f-4132-b34a-b6859ac63362)
+
+Содержимое рабочего стола после нескольких запусков:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/f7578761-54e1-484b-95b3-344b3adc31b9)
+
+Содержимое папки Numbers.txt:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/84f85f45-199e-4a5f-a523-a509dea417c0)
+
+Содержимое папки Envirioment.txt:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/5f1d71f9-cf6f-4ba7-8975-cb56f828a6f8)
+
+Содержимое папки Date.txt:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/de7699f2-eb63-4026-aa69-94fc4733ed63)
+
+
+
+
+
+
+
+
+
