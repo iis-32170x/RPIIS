@@ -41,7 +41,7 @@ if exist "D:\study\batniki\alotoffiles" (
 
 pause 
 
-rem "Определяем переменные в пакетном файле"
+rem "Определяем переменные в пакетном файле:searchDir - папка с файлами, outputFile - текстовый файл с результатом программы"
 set "searchDir=alotoffiles"
 set "outputFile=result.txt"
 
