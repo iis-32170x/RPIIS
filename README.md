@@ -50,4 +50,23 @@
 
 ## Пример и алгоритм работы:
 
+Запуск bat файла с папкой sigma:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/148442454/9cf87e50-b325-4920-8f33-6492514294e1)
+
+Содержимое рабочего стола после нескольких запусков:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/888147a8-8e18-4f98-8b53-f50260ebb120)
+
+Содержимое папки Numbers.txt:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/13f47f6a-8d8c-467c-87c7-435e6a01d9f2)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/ee0457ea-f0c4-46c6-b232-ef7bcab15394)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/0dcf32e4-c300-45b2-b69b-44e917faac9b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/42b0fe8e-5721-4354-a781-6a1e4a437c56)
+
+
