@@ -108,6 +108,7 @@ if [ -z "$1" ];
     exit
 fi
 
+#Определяем переменные в пакетном файле:searchDir - папка с файлами, outputFile - текстовый файл с результатом программы
 searchDir="D:/study/batniki/alotoffiles"
 outputFile="result.txt"
 
