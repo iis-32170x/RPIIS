@@ -3,11 +3,11 @@
 
 ## Условие ЛР1 (67 вариант)
 
-![image](https://github.com/iis-32170x/RPIIS/blob/Батук_Д/Screenshot_424.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/7519e6d1-e521-4cc2-a976-fb84517de373)
 
 # Описание алгоритма, пример запуска и выполнения программы (.bat)
 
-![image](https://github.com/iis-32170x/RPIIS/blob/Батук_Д/Screenshot_425.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/40689611-950f-490f-9df2-4dcda7dd044f)
 
 ## Алгоритм программы
 1. Отключаем вывод команд на экран.
@@ -50,3 +50,4 @@
 
 ## Пример и алгоритм работы:
 
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/9cf87e50-b325-4920-8f33-6492514294e1)
