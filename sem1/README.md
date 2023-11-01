@@ -55,12 +55,16 @@
  ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/9f44d34e-31a9-4944-b426-2a64e1b785bc)
 
  Открытие .bat файла:
+ 
  ![image](https://github.com/iis-32170x/RPIIS/assets/149183642/5e568095-f6d3-4938-80a7-4495466429f3)
 
  Результат:
+ 
  ![image](https://github.com/iis-32170x/RPIIS/assets/149183642/82a17365-f4f4-4f92-917d-fe9cb7a668c2)
+ 
 
  ![image](https://github.com/iis-32170x/RPIIS/assets/149183642/a9e445af-27d4-446b-b84f-a7bb62a082aa)
+ 
 
  ![image](https://github.com/iis-32170x/RPIIS/assets/149183642/3d36fe6b-ab89-49f8-9b1c-b68e2b4fdafc)
 
@@ -70,11 +74,11 @@
 
  # Описание алгоритма, пример запуска и выполнения программы (.sh)
 
-read -p ""  time
-// Получаем текущее время в формате "часы:минуты:секунды"
-current_time=$(date +"%H:%M:%S")
-echo $time
-echo $current_time
+ read -p ""  time
+ // Получаем текущее время в формате "часы:минуты:секунды"
+ current_time=$(date +"%H:%M:%S")
+ echo $time
+ echo $current_time
 
 //Проверяем, если текущее время совпадает с указанным временем для выполнения кода
 if [[ "$current_time" == "$time" ]]; then
