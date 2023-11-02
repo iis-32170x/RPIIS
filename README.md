@@ -46,3 +46,7 @@ pause
 3. Проверка на четность
 4. Создание файла с максимальной цифрой в названии, если цифра оказалось четной, или вывод Неllo в консоль, если нет
 ### Пример запуска
+![image](https://github.com/iis-32170x/RPIIS/assets/147264756/e3e3b12b-c78c-4971-bb5f-f574d5aafaa6)
+![image](https://github.com/iis-32170x/RPIIS/assets/147264756/e6602093-ca91-4933-a335-862d0b9f9700)
+![image](https://github.com/iis-32170x/RPIIS/assets/147264756/570ff8f4-3cc2-43f0-b6ae-1cad8dbabbdf)
+
