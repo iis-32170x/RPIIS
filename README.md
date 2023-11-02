@@ -8,9 +8,17 @@
 Создать файл sh и bat, который выполняет следующее: 
 Найти максимальное количество процессов с одинаковым именем, 
 активных в ОС. Создать файл result.txt, куда записать результат в формате “имя_процесса количество”.
-# BAT:
+# Bat:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/e67bef1e-c04d-49be-b058-6ade37eda543)
 
  # РЕЗУЛЬТАТ В ТЕКСТОВОМ ДОКУМЕНТЕ RESULT:
  ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/bcddcab7-30db-4503-ab83-9dd0528a439f)
+
+# Bash:
+
+![photo_2023-11-03_00-51-41](https://github.com/iis-32170x/RPIIS/assets/149104399/f1c86eec-cf99-4936-a009-49e4edc45520)
+
+# Результат в текстовом документе RESULT:
+
+![photo_2023-11-03_00-51-41 (2)](https://github.com/iis-32170x/RPIIS/assets/149104399/e6105d95-8144-48b4-9941-bfbb50361ab8)
