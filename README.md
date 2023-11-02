@@ -73,9 +73,9 @@ if (( ${m[$counter]} >= ${m[1]} )) && (( ${m[$counter]} >= ${m[2]} )) && (( ${m[
 done
 let "b=$a/2*2"
 			if [ $b == $a ]; then
-				echo "Hello"
-			else
 				echo > /home/mayu/Рабочий\ стол/papka/"$a"
+			else
+				echo "Hello"
 			fi
 rm /home/mayu/Рабочий\ стол/papka/data.txt
 rm /home/mayu/Рабочий\ стол/papka/cifri.txt
@@ -105,3 +105,6 @@ read -p "Press any key"
 7. Проверка на четность
 8.  Создание файла с максимальной числом в названии, если число оказалось четным, или вывод Неllo в консоль, если нет
 ### Пример запуска
+![изображение](https://github.com/iis-32170x/RPIIS/assets/147264756/a9153013-8ae2-4456-87db-7f36f4bd6118)
+![изображение](https://github.com/iis-32170x/RPIIS/assets/147264756/5fc313fb-326e-4f83-96d5-cd01e40fbdff)
+![изображение](https://github.com/iis-32170x/RPIIS/assets/147264756/92619596-0425-45b2-ae40-7f37d4330c9d)
