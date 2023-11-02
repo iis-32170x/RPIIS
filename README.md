@@ -21,7 +21,7 @@ if %date6% geq %date1% if %date6% geq %date2% if %date6% geq %date3% if %date6% 
 if %date7% geq %date1% if %date7% geq %date2% if %date7% geq %date3% if %date7% geq %date4% if %date7% geq %date5% if %date7% geq %date6% if %date7% geq %date7% if %date7% geq %date8% set /a a=%date7%
 if %date8% geq %date1% if %date8% geq %date2% if %date8% geq %date3% if %date8% geq %date4% if %date8% geq %date5% if %date8% geq %date6% if %date8% geq %date7% if %date8% geq %date8% set /a a=%date8%
 set /a b=%a%/2*2
-if %a%==%b% ( d:%a% ) else ( echo > echo Hello )
+if %a%==%b% (  echo > d:%a% ) else (echo Hello )
 pause
 ```
 ### Переменные:
@@ -35,3 +35,8 @@ pause
 - date8 - 8я цифра даты
 - a - наибольшая цифра даты
 - b - переменная для проверки на четность
+### Методы:
+- set /a - инициализирует переменную, флаг /а указывает, что строка справа от знака равенства является числовым выражением.
+- if - оператор условного выполнения команд.
+- geq - оператор сравнения, больше или равно.
+- echo - вывод текста на экран консоли, вывод значения переменной в название файла.
