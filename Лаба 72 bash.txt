@@ -1,0 +1,20 @@
+mkdir C:/Hu
+a=100
+while [ $a -lt 1000 ]
+do
+ps -p $a >> C:/Hu/Homa.txt
+a=$(($a+1))
+done
+cat C:/Hu/Homa.txt | grep "/" | cut -b 74-100 >> C:/Hu/Tava.txt
+c=1
+for b in $(cat C:/Hu/Tava.txt)
+do
+echo "$b" >> C:/Hu/Tao$c.txt
+c=$(($c+1))
+done
+rm C:/Hu/Homa.txt
+rm C:/Hu/Tava.txt
+
+
+
+
