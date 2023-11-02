@@ -9,14 +9,12 @@ void findCombs(std::vector<int>& lst, std::vector<std::vector<int>>& result, int
     int length = lst.size();
 
     if (start == length - 1) {
-        // Базовый случай: достигнут конец списка, добавляем комбинацию в результат
         result.push_back(lst);
     } else {
-        // Рекурсивно генерируем комбинации, меняя местами элементы
         for (int i = start; i < length; ++i) {
             std::swap(lst[start], lst[i]);
             findCombs(lst, result, start + 1);
-            std::swap(lst[start], lst[i]);  // Восстанавливаем исходный порядок элементов
+            std::swap(lst[start], lst[i]);
         }
     }
 }
