@@ -1,0 +1,413 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=17mm, top=17mm, right=17mm, bottom=5mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{titlesec}
+\usepackage[russian]{babel}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
+\setcounter{page}{303}
+\titleformat{\section}{\large\centering\sc}{\thesection. }{0cm}{}[]
+\begin{document}
+\begin{multicols}{2}
+
+\begin{tabbing}
+	\hspace{-0.17cm} localization type into:\textit{ area objects\^\,\ linear (multilinear)}\\ \ \textit{objects\^\ }, and \textit{point objects\^\ } .
+\end{tabbing}
+          At the next stage of developing the ontology of
+\textit{terrain objects}, we will set the subdivision of \textit{terrain
+objects} on orthogonal bases, which corresponds to the
+placement of objects in accordance with thematic layers
+in \textit{geoinformation systems}.
+\ \\
+
+For each \textit{terrain object}, the main semantic characteristics inherent only 
+to it are highlighted. It should be
+particularly noted that metric characteristics do not have
+such a property. According to this classifier, each class
+of \textit{terrain objects} has a unique unambiguous designation.
+The classifier hierarchy has eight classification stages and
+consists \textit{of the class code, subclass code, group code,
+subgroup code, order code, suborder code, species code,
+subspecies code}. Thus, thanks to the coding method,
+generic relations have already been defined, reflecting
+the correlation of various \textit{terrain object classes}, and the
+characteristics of a specific \textit{terrain object class} have also
+been established. Due to the fact that the basic properties
+and relations are set not of specific \textit{physical objects} but of
+their classes, then such information is meta-information in
+relation to specific \textit{terrain objects}, and the totality of this
+meta-information is an ontology of \textit{terrain objects}, which
+in turn is part of the \textit{knowledge base} of the \textit{intelligent
+geoinformation system}.
+\begin{tabbing}
+\hspace{0cm}\textbf{terrain object}\\
+ \(\Rightarrow\) \ \ \ \ \ \   \textit{subdividing*:}\\
+ \ \ \ \ \ \ \ \ \ \ \ \textbf{Typology of terrain objects by localization\^\\ \ \ \ \ \ \ \ \ \ \ \  =  \{ }
+\end{tabbing}
+\begin{adjustwidth}{15mm}{}
+ \begin{itemize}  
+ •  \ \ \ \     point terrain object
+    \begin{itemize}
+        \ \(\Rightarrow\) inclusion*:\\
+        \begin{itemize}
+     \ \ \ \ • well\\
+       \ \ \ \      • light post
+        \end{itemize}
+    \end{itemize}
+    • \ \ \ \ linear terrain object
+    \begin{itemize}
+         \(\Rightarrow\)inclusion*:\\
+        \begin{itemize}
+            \ \ \ \ • bridge
+        \end{itemize}
+    \end{itemize}
+    • \ \ \ \ multilinear terrain object
+    \begin{itemize}
+         \(\Rightarrow\)inclusion*:\\
+        \begin{itemize}
+        \ \ \ \  • river\\
+        \ \ \ \ • road
+        \end{itemize}
+    \end{itemize}
+    • \ \ \ \ area terrain object
+    \begin{itemize}
+         \(\Rightarrow\)inclusion*:\\
+        \begin{itemize}
+           \ \ \ \  • lake\\
+          \ \ \ \  • administrative area
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\ \ \ \ \ \}
+\end{adjustwidth}
+\begin{center}
+ VII. SPECIFICATION OF THE MAP LANGUAGE
+ \end{center}
+\ \ \ The \textit{Map Language} belongs to the family of semantic
+compatible languages – \textit{sc-languages} – and is intended for
+the formal description of \textit{terrain objects} and the relations
+between them in \textit{geoinformation systems}. Therefore, the
+\textbf{Map Language Syntax}, like \textit{syntax} of any other \textit{sclanguage}, is the \textit{Syntax} of the \textit{SC-code}. This approach
+allows:\\
+\ \\ \ \\ \ 
+	\begin{itemize}
+		\item using a minimum of means to interpret the specified
+\textit{terrain objects} on the map;
+
+		\item using the \textit{Question Language for ostis-systems};
+	
+		\item  reducing the search to most of the given \textit{questions}
+to searching for information in the current state of
+the \textit{ostis-system knowledge base}
+	\end{itemize}
+\ \\  
+
+  \textbf{Denotational semantics of the Map Language} includes
+the \textit{Subject domain and the ontology of terrain objects}
+and \textit{their geosemantic elements}.
+\begin{center}
+VIII. AUTOMATION TOOLS FOR THE INTELLIGENT
+GEOINFORMATION SYSTEMS DESIGN
+\end{center}
+The design of intelligent geoinformation systems is
+carried out in stages. At the first stage, the knowledge
+base of the subject domain is formed and for this purpose
+an electronic map (voluntary cartographic information)
+is analyzed and translated into the knowledge base of
+terrain objects with the establishment of geosemantic
+elements for the corresponding territory. At this stage, it
+is determined, firstly, to which class the terrain object
+under study belongs and, further, depending on the type
+of object, the concept of a knowledge base corresponding
+to a specific physical terrain object is formed. Thus, many
+concepts are created that describe specific terrain objects
+for each class of terrain objects. It should be noted that
+it is at this stage of the formation of the knowledge base
+that semantic elements are established. At the second
+stage of designing an intelligent geoinformation system,
+the knowledge base obtained at the first stage is integrated
+with external knowledge bases. At this stage, in addition
+to geographical knowledge, knowledge of related subject
+domains is added, thereby it becomes possible to establish
+interdisciplinary connections. An illustrative example is
+integration with biological classifiers, which in implementation represent an ontology of flora and fauna objects.
+Such integration expands the functional and intelligent
+capabilities of the applied intelligent geoinformation
+system. Note that at this stage, homonymy is removed in
+the names of geographical objects belonging to the classes
+of settlements. For settlements of the Republic of Belarus,
+this is achieved by using the \textit{system of designations of
+administrative-territorial division objects and settlements}
+and semantic comparison of geographical terrain objects
+is carried out according to the following principle:\\
+\begin{itemize}
+  \item the terrain object class is determined;
+  \item the terrain object subclass, species, subspecies, etc.
+is determined in accordance with the classifier of
+terrain objects, i.e. types of terrain objects in the
+ontology;
+  \item the attributes and characteristics that are inherent in
+this terrain object class are determined;
+  \item the values of the characteristics for this object class
+are determined;
+  \item the homonymy of identification is eliminated;
+ \end{itemize}	
+\newpage
+\begin{itemize}
+  \item appropriate connections are established between the
+map object, the concept in the knowledge base with
+the established geosemantic elements;
+  \item spatial relations are established between terrain
+objects assigned to certain classes.
+ \end{itemize}\\
+ 
+\begin{center}
+ CONCLUSION
+ \end{center}\\
+ 
+\ \ \ \ Let us list the main provisions of this article:
+\begin{itemize}
+  \item  the development of geoinformation systems consists
+in their intellectualization, thereby expanding the
+range of applied problems using knowledge about
+terrain objects;
+  \item it is proposed to consider the map as an \textit{information
+construction}, the elements of which are \textit{terrain
+objects}, thereby ensuring the structural and semantic
+interoperability of geoinformation systems due to the
+transition from the map to the semantic description of
+map elements, that is, terrain objects and connections
+(spatial relations) between them;
+  \item  ensuring semantic interoperability is achieved
+through the development of ontologies of subject
+domains, and the establishment of  \textit{geosemantic
+elements} allows setting spatial characteristics of
+terrain objects;
+  \item availability of a particular  \textit{Technology for intelligent
+geoinformation systems design} provides the process
+of designing intelligent geoinformation systems built
+on the principles of ostis-systems.
+ \end{itemize}
+\begin{center}
+ ACKNOWLEDGMENT
+ \end{center}
+\ \ \ \  \ The author would like to thank the research group of
+the Department of Intelligent Information Technologies
+of the Belarusian State University of Informatics and
+Radioelectronics for its help in the work and valuable
+comments.
+\begin{center}
+ REFERENCES
+ \end{center}
+\begin{itemize}
+ \footnotesize{
+  \renewcommand{\labelitemi}{[1]}
+		\item A. Kryuchkov, S. Samodumkin, M. Stepanova, and N. Gulyakina,
+ \textit{Intellektual’nye tekhnologii v geoinformacionnyh sistemah [Intelligent technologies in geoinformation systems]}. BSUIR, 2006, p.
+202 (In Russ.).
+\renewcommand{\labelitemi}{[2]}
+		\item S. Ablameyko, G. Aparin, and A. Kryuchkov,  \textit{Geograficheskie
+informacionnye sistemy. Sozdanie cifrovyh kart [Geographical
+information systems. Creating digital maps]}. Institute of Technical
+Cybernetics of the National Academy of Sciences of Belarus, 2000,
+p. 464 (In Russ.).
+\renewcommand{\labelitemi}{[3]}	
+\item  Ya. Ivakin, “Metody intellektualizacii promyshlennyh
+geoinformacionnyh sistem na osnove ontologij [Methods
+of intellectualization of industrial geoinformation systems based
+on ontologies] ,” Doct. diss.: 05.13.06, Saint-Petersburg, 2009,
+(In Russ.).
+\renewcommand{\labelitemi}{[4]}
+\item M. Belyakova,  \textit{Intellektual’nye geoinformacionnye sistemy dlya
+upravleniya infrastrukturoj transportnyh kompleksov [Intelligent
+geoinformation systems for infrastructure management of transport
+complexes]}. Taganrog : Southern Federal University Press, 2016,
+p. 190 (In Russ.).
+\renewcommand{\labelitemi}{[5]}
+\item A. Gubarevich, O. Morosin, and D. Lande, “Ontologicheskoe
+proektirovanie intellektual’nyh sistem v oblasti istorii [Ontological
+design of intelligent systems in the field of history],”  \textit{Otkrytye
+semanticheskie tekhnologii proektirovaniya intellektual’nyh sistem
+[Open semantic technologies for designing intelligent systems]},
+pp. 245–250, 2017, (In Russ.).
+\renewcommand{\labelitemi}{[6]}
+\item A. Gubarevich, S. Vityaz, and R. Grigyanets, “Struktura baz znanij
+v intellektual’nyh sistemah po istorii [Structure of knowledge
+bases in intelligent systems on history],”  \textit{Otkrytye semanticheskie
+tekhnologii proektirovaniya intellektual’nyh sistem [Open semantic
+technologies for designing intelligent systems]}, pp. 347–350, 2018,
+(In Russ.).
+\renewcommand{\labelitemi}{[7]}
+\item A. Bliskavitsky,  \textit{Konceptual’noe proektirovanie GIS i upravlenie
+geoinformaciej. Tekhnologii integracii, kartograficheskogo
+predstavleniya, veb-poiska i rasprostraneniya geoinformacii
+[Conceptual GIS design and geoinformation management.
+Technologies of integration, cartographic representation, web
+search, and distribution of geoinformation]}. \textbf{LAP LAMBERT}
+Academic Publishing, 2012, p. 484 (In Russ.).
+\renewcommand{\labelitemi}{[8]}
+\item  ——,“Semantika geoprostranstvennyh ob"ektov, funkcional’naya
+grammatika i intellektual’nye GIS [Semantics of geospatial objects,
+functional grammar, and intelligent GIS],” in  \textit{Izvestiya vysshih
+uchebnyh zavedenij. Geologiya i razvedka [News of higher
+educational institutions. Geology and exploration]}, no. 2, 2014,
+pp. 62–69, (In Russ.).
+\renewcommand{\labelitemi}{[9]}
+\item  Y. Hu, “Geospatial semantics,”  \textit{Comprehensive Geographic Information Systems}, pp. 80–94, 2018.
+\renewcommand{\labelitemi}{[10]}
+\item K. Janowicz, S. Simon, T. Pehle, and G. Hart, “Geospatial
+semantics and linked spatiotemporal data — past, present, and
+future,”  \textit{Semantic Web}, vol. 3, pp. 321–332, 10 2012.
+\renewcommand{\labelitemi}{[11]}
+\item S. Samodumkin, “Next-generation intelligent geoinformation
+systems,”  \textit{Otkrytye semanticheskie tekhnologii proektirovaniya intellektual’nykh system [Open semantic technologies for intelligent systems]}, 2022.
+\renewcommand{\labelitemi}{[12]}
+\item  \textit{Cifrovye karty mestnosti informaciya, otobrazhaemaya na
+topograficheskih kartah i planah naselennyh punktov : OKRB
+012-2007 [Digital maps of the area information displayed on
+topographic maps and plans of settlements} : NKRB 012–2007],
+Minsk, 2007, (In Russ.).  
+\end{itemize}\\
+\
+\
+
+\begin{center}
+ \textbf{\Large{Поддержка жизненного цикла
+интеллектуальных геоинформационных
+систем различного назначения }}
+ \end{center}
+ \begin{center}
+\Large{Самодумкин С.А}\\
+
+ \end{center}
+ Работа посвящена частной технологии проектирования интеллектуальных геоинформационных систем,
+построенных по принципам ostis-систем. Структурная и
+семантическая интероперабельность геоинформационных систем, построенных по предлагаемой технологии,
+обеспечивается за счет перехода от карты к семантическому описанию элементов карты.
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Received 01.03.2023 \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ 
+\end{multicols}
+\newpage
+\ \\
+\begin{center}
+\LARGE\textbf{Ensuring Information Security of the OSTIS
+Ecosystem}
+\end{center}\ \\  
+\begin{multicols}{2}
+\raggedright
+\Large
+ \hspace{4cm} Valery Chertkov\\
+ \hspace{2.5cm} \textit{Euphrosyne Polotskaya State}\\
+ \hspace{3cm}  \textit{University of Polotsk}\\
+  \hspace{4cm} Polotsk, Belarus\\
+   \hspace{3.5cm} v.chertkov@psu.by
+\columnbreak
+
+\raggedleft
+\Large
+ Vladimir Zakharau   \ \ \ \ \ \ \ \ \ \ \\ 
+\textit{Belarusian State University of}\\
+ \hspace{-3cm}\textit{Informatics and Radioelectronics}\\
+ \hspace{-4cm}Minsk, Belarus \ \ \ \ \ \ \ \ \ \ \\ 
+ \hspace{-3.5cm}zakharau@bsuir.by \ \ \ \ \ \ \ \ \ \
+\end{multicols}
+\ \\ 
+\begin{multicols}{2}
+
+\textbf{
+  \textit{Abstract}—The development of artificial intelligence systems, associated with the transition to working with
+knowledge bases instead of data, requires the formation of
+new approaches to ensuring information security systems.
+The article is devoted to the review of approaches and
+principles of ensuring security in intelligent systems of
+the new generation. The current state of methods and
+means of ensuring information security in intelligent systems
+is considered and the main goals and directions for
+the development of information security ostis-systems are
+formed. The information security methods presented in the
+article are extremely important when designing the ostissystems security system and analyzing their security level.
+}\\
+
+\textbf{ \textit{Keywords}—information security, new generation intelligent system, Information security threats
+}
+\begin{center}
+ I. INTRODUCTION
+ \end{center}\\
+
+ A wide variety of information security models, the
+growing amount of data that needs to be analyzed to
+detect attacks on information systems, the variability of
+attack methods and the dynamic change in protected
+information systems, the need for a rapid response to
+attacks, the fuzziness of the criteria for detecting attacks
+and the choice of methods and means of responding to
+them, the lack of highly qualified security specialists
+entails the need to use artificial intelligence methods to
+solve security problems.
+\begin{center}
+ II. THE SPECIFICS OF ENSURING INFORMATION
+SECURITY OF INTELLIGENT SYSTEMS OF A NEW
+GENERATION
+ \end{center}
+ 
+ Information security of intelligent systems should be
+considered from two points of view:
+\begin{itemize}[noitemsep]
+    \item application of artificial intelligence in information
+security;
+    \item organization of information security in intelligent
+systems.
+\end{itemize}
+
+\textbf{The use of artificial intelligence in information
+security}
+
+Artificial intelligence is actively used to monitor and
+analyze security vulnerabilities in information transmission networks [1]. The artificial intelligence system allows
+machines to perform tasks more efficiently, such as: 
+\begin{itemize}[noitemsep]
+    \item visual perception, speech recognition, decision making and translation from one language to another;
+    \item invasion detection - artificial intelligence can detect
+network attacks, malware infections and other cyber
+threats;
+systems.
+     \item cyber analytics - artificial intelligence is also used
+to analyze big data in order to identify patterns and
+anomalies in the organization’s cyber security system
+in order to detect not only known, but also unknown
+threats;
+    \item secure software development - artificial intelligence
+can help create more secure software by providing
+real-time feedback to developers.
+
+\end{itemize}
+Artificial intelligence is used not only for protection,
+but also for attack, for example, to emulate acoustic,
+video and other images in order to deceive authentication
+mechanisms and further impersonation, deceive checking
+a person or robot capcha, etc.
+
+Currently, it is possible to define the following classes
+of systems in which artificial intelligence is used [2]:
+\begin{itemize}[noitemsep]
+    \item UEBA (User and Entity Behavior Analytics) —
+a system for analyzing the behavior of subjects
+(users, programs, agents, etc.) in order to detect nonstandard behavior and use them to detect potential
+threats using threat templates (patterns);
+
+    \item IP (Threat Intelligence Platform) — platforms for
+early detection of threats based on the collection
+and analysis of information from indicators of
+compromise and response to them. The use of
+machine learning methods increases the efficiency
+of detecting unknown threats at an early stage;
+
+    \item EDR (Endpoint Detection and Response) — attack
+detection systems for rapid response at the end
+points of a computer network. Can detect malware,
+autom
+\end{itemize}
+\end{multicols}
+\end{document}
