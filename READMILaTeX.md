@@ -4,7 +4,8 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/f16ce96f-d77b-475d-8e74-d814c3bc63f5)
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/890585df-b037-436d-be88-0cef1f6dd6c6)
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/9c808296-9c71-4424-b515-5f6ca6c7553e)
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/1e374de4-ad75-4ec6-9b2d-85b71eb36598)
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/2bb184d7-5613-4cc4-af30-905373c5392b)
+
 
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&size=27&pause=1000&color=991796&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=%D0%A1%D0%9F%D0%90%D0%A1%D0%98%D0%91%D0%9E+%D0%97%D0%90+%D0%92%D0%9D%D0%98%D0%9C%D0%90%D0%9D%D0%98%D0%95" alt="Typing SVG" /></a>
