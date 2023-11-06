@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=17mm, top=17mm, right=17mm, bottom=9mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{mathtools}
+\usepackage{titlesec}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=1.4pt}
+\setcounter{page}{301}
+\date{}
+
+\begin{document}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item creation of \textit{information search systems} for Earth sciences and geoinformatics;
+        \item development of educational systems for training specialists and experts with means of remote access to them.
+    \end{itemize}
+
+    The complete solution of the above problems requires the use of open system standards and the use of ontologies of \textit{terrain objects} as integrating elements of various \textit{subject domains}.
+
+    \begin{center}
+        IV. MAIN COMPONENTS OF FORMAL ONTOLOGIES USED IN GEOINFORMATION SYSTEMS
+    \end{center}
+
+    The main approach to ensuring semantic interoperability is the development of ontologies. The most frequently used ontologies in geoinformatics are usually considered as domain ontologies, which are commonly called geographical ontologies, or geontologies [7], [8]. One of the problems in the development of ontologies is a clear and unambiguous definition of the semantics of primitive terms (atomic elements that cannot be further separated). To solve this problem, the researchers proposed to justify the primitive terms of geontologies on the basis of geographical phenomena [9], [10]. \par In relation to subject domains, an ontology is the formalization of a certain area of knowledge based on a conceptual scheme with a structure containing classes of objects, their relations, and rules that allows for computer analysis. Accordingly, the ontology of the subject domain includes instances, concepts, attributes, and relations. \par The subject domains for which the development of geoinformation systems is appropriate involve the construction of an ontology, which we will call geontology. \\
+
+    \noindent \textit{\textbf{geontology}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+        \item[$\coloneqq$] \textbf{[}ontology of subject domains, the object instances of which includes geosemantic elements\textbf{]}
+        \item[$\coloneqq$] [ontology of subject domains, object instances of which use spatially correlated data about the territory, social and natural phenomena\textbf{]}
+        \item[$\subseteq$] \textit{ontology}
+        \item[$\ni$] \textit{terrain object class}
+        \item[$\ni$] \textit{spatial relation}
+    \end{description}
+
+    \noindent \textit{\textbf{terrain object class}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1mm]
+        \item[$\coloneqq$] \textbf{[}a class of geospatial concepts of natural or artificial origin, natural phenomena having common features (semantic attributes) that are characteristic of a certain terrain object class and describe the internal characteristics of the concept\textbf{]}
+    \end{description}
+    
+    \noindent \textit{\textbf{terrain object}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1mm]
+        \item[$\coloneqq$] \textbf{[}a certain element of the Earth surface of natural or artificial origin, a natural phenomenon that actually exists at the time under consideration within the localization area, for which the location is known or can be established, including the size and position of the boundaries, and signs are set, reflecting the semantic attributes of such an element, characteristic of a certain \textit{terrain object class}, with set \textit{spatial relations} reflecting connections with other \textit{terrain objects}\textbf{]}
+    \end{description}
+
+    A feature of the \textit{geontology} is the use of special elements for the formalization of subject domains that clarify the spatial characteristics of terrain objects, which we will call \textbf{geosemantic elements}. \\
+
+   \noindent \textit{\textbf{terrain object}}
+    \vspace{-0.3cm}
+    \begin{description}[labelwidth=0.5cm, itemsep=-1mm]
+        \item[$\Rightarrow$] \textit{subdiving*}: \\
+        \vspace{-0.3cm}
+        \item[]
+        \begin{description}[leftmargin=*]
+            \begin{itemize}[leftmargin=*]
+                \textbf{\{} \hspace{-2.3mm} $\bullet$ \hspace{4.7mm} coordinate location of the terrain object \\
+                $\bullet$ \hspace{0.5cm} spatial relation \\
+                $\bullet$ \hspace{5mm} spatial relation of the main directions \\
+                $\bullet$ \hspace{0.5cm} dynamics of the state of the terrain object \par
+                \hspace{-3mm} \textbf{\}} \\
+            \end{itemize}
+        \end{description}
+    \end{description}
+    
+    \noindent\textit{\textbf{geocoding}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1mm]
+        \item[$\coloneqq$] \textbf{[}establishing a connection between a \textit{terrain object} and its location\textbf{]}
+        \item[$\subset$] action
+    \end{description}
+
+    \noindent \textit{\textbf{spatial relation}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+    \item[$\coloneqq$] [class of relations that define the semantic properties of a terrain object in relation to other terrain objects]
+        \item[$\Rightarrow$] \textit{subdiving*}: \\
+        \vspace{-0.3cm}
+        \item[]
+        \begin{description}[leftmargin=*]
+            \begin{itemize}[leftmargin=*]
+                \hspace{-3mm} \textbf{\{} \hspace{-2.5mm} $\bullet$ \hspace{4.7mm} topological spatial relation \\
+                $\bullet$ \hspace{0.5cm} spatial ordering relation \\
+                $\bullet$ \hspace{5mm} metric spatial relation \par 
+                \hspace{-3mm} \textbf{\}} \\
+            \end{itemize}
+        \end{description}
+    \end{description}
+
+    \noindent \textit{\textbf{spatial ordering relation}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+        \item[$\Rightarrow$] \textit{subdiving*}: \\
+        \vspace{-0.3cm}
+        \item[]
+        \begin{description}[leftmargin=*]
+            \begin{itemize}[leftmargin=*]
+                \hspace{-3mm} \textbf{\{} \hspace{-2.5mm} $\bullet$ \hspace{4.7mm} relation of location of terrain objects \\
+                $\bullet$ \hspace{0.5cm} relation of the main directions of terrain objects \par
+                \hspace{-3mm} \textbf{\}}
+            \end{itemize}
+        \end{description}
+    \end{description}
+
+    \noindent \textit{\textbf{relation of location of terrain objects}}
+    \vspace{-0.3cm}
+    \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1mm]
+        \item[$\subset$] \textit{oriented relation}
+        \item[$\coloneqq$] \textbf{[}allows determining what position one terrain object occupies in relation to another terrain object\textbf{]}
+        \item[$\supset$] \textit{terrain object is located in front of another terrain object*}
+        \item[$\supset$] \textit{terrain object is located behind another terrain object*}
+        \item[$\supset$] \textit{terrain object is located to the left of another terrain object*}
+        \item[$\supset$] \textit{terrain object is located to the right of another terrain object*}
+        \item[$\supset$] \textit{terrain object is located above another terrain}
+    \end{description}
+\end{multicols}
+\end{document}
