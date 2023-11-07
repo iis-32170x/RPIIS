@@ -126,7 +126,13 @@
 ![MINGW64__c_test_test2_Laba2 06 11 2023 19_05_23](https://github.com/iis-32170x/RPIIS/assets/144374775/61ede266-584d-4798-9cf4-1df03038a504)
 
 30. забрать изменения из репозитория, для которого были созданы удалённые ветки по умолчанию
+
+![MINGW64__c_Users_ilyad 07 11 2023 22_19_53](https://github.com/iis-32170x/RPIIS/assets/144374775/89966ba2-f119-49fb-a8bf-eb224d72d0ad)
+
 31. забрать изменения удалённой ветки из репозитория по умолчанию, основной ветки
+
+![MINGW64__c_Users_ilyad 07 11 2023 22_21_10](https://github.com/iis-32170x/RPIIS/assets/144374775/60e00e36-41e3-4733-88af-29bc7ffc091f)
+
 32. создание копии репозитория
 
 ![MINGW64__c_Users_ilyad 02 11 2023 12_52_47](https://github.com/iis-32170x/RPIIS/assets/144374775/fb2a7528-7c89-4380-a841-ab3086d1cb61)
