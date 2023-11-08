@@ -20,8 +20,9 @@
    - Размер находится в диапазоне, заданном во втором и третьем параметрах;
    - Владелец файла совпадает с указанным в четвёртом параметре.
 
-## Полный код скрипта
-CMD:
+## Подробное описание кода
+### CMD
+Полный код:
 ```batchfile
 @echo off
 chcp 65001 >nul
@@ -54,54 +55,6 @@ param ($thefile)
 (Get-Acl $thefile).Owner
 ```
 
-
-Shell:
-```shell
-#!bin/bash
-
-if ! test -d "$1"
-then
-	echo Данной папки нет
-
-else
-	count=0
-			
-	if test -d $1/**/
-	then
-		for file in $1/*.* $1/**/*.*
-		do
-			let count=count+1
-			
-			fsize=`cat $file | wc -c`
-			fuser=`stat --format '%U' $file`
-					
-			if [[ $fsize -le $3 && $fsize -ge $2 && $4=$fuser ]]
-			then
-				echo $file `basename $file` $fsize
-			fi
-		done
-	
-	else
-		for file in $1/*.*
-		do
-			let count=count+1
-			
-			fsize=`cat $file | wc -c`
-			fuser=`stat --format '%U' $file`
-			
-			if [[ $fsize -le $3 && $fsize -ge $2 && "$4"="$fuser" ]]
-			then
-				echo $file `basename $file` $fsize
-			fi
-		done
-	fi
-			
-	echo Всего файлов прочитано: $count
-fi
-```
-
-## Подробное описание кода
-### CMD
 Используемые переменные:
 - %1, %2, %3, %4 - параметры 1-4 (см. ["Параметры запуска"](https://github.com/iis-32170x/RPIIS/tree/%D0%91%D1%83%D1%80%D0%B0%D0%BA_%D0%91#%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0))
 - %%i - путь к рассматриваемому файлу в цикле (его полное имя)
@@ -183,6 +136,50 @@ pause
 
 
 ### Shell
+Полный код:
+```shell
+#!bin/bash
+
+if ! test -d "$1"
+then
+	echo Данной папки нет
+
+else
+	count=0
+			
+	if test -d $1/**/
+	then
+		for file in $1/*.* $1/**/*.*
+		do
+			let count=count+1
+			
+			fsize=`cat $file | wc -c`
+			fuser=`stat --format '%U' $file`
+					
+			if [[ $fsize -le $3 && $fsize -ge $2 && $4=$fuser ]]
+			then
+				echo $file `basename $file` $fsize
+			fi
+		done
+	
+	else
+		for file in $1/*.*
+		do
+			let count=count+1
+			
+			fsize=`cat $file | wc -c`
+			fuser=`stat --format '%U' $file`
+			
+			if [[ $fsize -le $3 && $fsize -ge $2 && "$4"="$fuser" ]]
+			then
+				echo $file `basename $file` $fsize
+			fi
+		done
+	fi
+			
+	echo Всего файлов прочитано: $count
+fi
+```
 
 Используемые переменные:
 - $1, $2, $3, $4 - параметры 1-4 (см. ["Параметры запуска"](https://github.com/iis-32170x/RPIIS/tree/%D0%91%D1%83%D1%80%D0%B0%D0%BA_%D0%91#%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0))
