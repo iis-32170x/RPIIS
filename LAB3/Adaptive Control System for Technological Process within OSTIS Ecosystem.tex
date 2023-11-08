@@ -1,0 +1,286 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=20mm, top=10mm, right=20mm, bottom=10mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=2pt, parsep=0pt, partopsep=5pt, topsep=0pt}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage[russian]{babel}
+\setcounter{page}{291}
+
+\title{\huge\bfseries Adaptive Control System for Technological \\ Process within OSTIS Ecosystem \\} 
+\author{
+ Valery Taberko and Dzmitry Ivaniuk\\
+ \itshape JSC «Savushkin Product»\\
+ Brest, Belarus\\
+ Email: tab@pda.savushkin.by,\\
+ id@pda.savushkin.by\\ \and
+ Viktor Smorodin and Vladislav Prokhorenko\\
+\itshape Department of Mathematical Problems\\
+\itshape of Control and Informatics\\
+\itshape Francisk Skorina Gomel State University\\
+ Gomel, Belarus\\
+ Email: smorodin@gsu.by, snysc@mail.ru}\\
+\date{}
+
+\begin{document}
+\maketitle  
+\begin{multicols}{2}
+\textbf{\small\textit{Abstract}—In this paper an approach to building a hybrid intellectual computer system for adaptive control of a
+technological production cycle is being proposed in the
+form of an ostis-system solver based on the ontology of
+the "technological production processes with probabilistic
+attributes" domain knowledge. The idea of development and
+implementation of mathematical models of neural network
+regulators for control optimization problems is the basis for
+the system solver. Such an implementation makes it possible
+to integrate the proposed solution with other developed
+solutions as well as the company’s software in order to
+allow building intellectual systems for automated control,
+recommendation systems and decision support systems,
+information support systems for the company’s personnel.} \par
+\small\textbf{\textit{Keywords}—technological production process, adaptive
+control, neural network, reinforcement learning, Industry 4.0, standard}\\
+\begin{center}
+    I. INTRODUCTION \\
+\end{center}
+\par The constant efforts of scientific and technological
+advances in the sphere of optimization of production
+systems operation require the development of up-to-date
+approaches to adaptive control of production processes
+that would include elements of artificial intelligence,
+neural network modeling and development of intellectual
+computer systems of new generation.
+\par In this paper an approach is being proposed for building
+a hybrid intellectual computer system for adaptive control
+of a technological production cycle within the framework
+of OSTIS Ecosystem. The formal description of the
+control object is based on ontologies of the "technological
+production processes with probabilistic attributes" domain
+knowledge and ISA 5.1, ISA-88, ISA-95 standards,
+implemented through the means of OSTIS Technology.
+\par Control adaptation is implemented using the means of
+software-hardware coupling of neural network regulators
+and hardware control system of the technological object
+in real-time.
+\par The idea of the hybrid intellectual system for adaptive
+control is based upon development and implementation
+of mathematical models of neural network regulators for
+solving problems of control optimization, implementation
+of methods and algorithms of synthesis of feedback
+control for technological cycle, depending on changing
+parameters of the control object operation.
+\begin{center}
+    II. TERMS AND DEFINITIONS \\
+\end{center}
+\par The central concepts within the knowledge domain under consideration are technological process (technological
+cycle) and probabilistic technological process [2].
+\begin{itemize}
+    \renewcommand{\labelitemi}{ 1)}
+    \item A technological process (TP) (technological cycle) of production is a sequence of interconnected operations, that is defined by technological documentation, directed at the object of process with purpose of producing the required output. Within ISA-88 standard’s procedural control module TP is defined as a procedure, that produces a batch of product (that may be a final product or intermediate product used in the further stages of production of the final product).
+    \renewcommand{\labelitemi}{2)}
+    \item A technological operation is part of a technological process, that is being run continuously at one workplace on one or more simultaneously processed. or assembled products by one or more operators. Within ISA-88 standard it is defined as operation. that results in substantially altered product properties. Operations can be run by an operator who can start, pause and resume them. At each moment of time only one operation can be active within a machine (unit).
+    \renewcommand{\labelitemi}{3)}
+    \item Microtechnological operation is a finite sequence of elementary operations which constituent the contents of a technological operation, that is run continuously at one workplace. Within ISA-88 standard it is a phase that results in small changes in the properties of a product. Those steps can be run in parallel, in sequence or as a combination of two. Operator can’t directly control the steps (start/pause/resume).
+    \renewcommand{\labelitemi}{4)}
+    \item A Probabilistic technological process is a technological process that has probabilistic parameters of operation; a technological process with a structure. that may change during its operation.
+\end{itemize}
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\begin{itemize}
+    \renewcommand{\labelitemi}{ 5)}
+    \item A Control system is a well-defined set of hardwaresoftware means for control of a technological object, that makes it possible to collect readings of its state and to influence its operation in order to achieve the given goals.
+    \renewcommand{\labelitemi}{6)}
+    \item  Adaptive control is a set of methods and algorithms that allow synthesizing the control feedback connections that can change parameters (control structure) of the neuroregulator based on the control actions and external disturbances.
+    \renewcommand{\labelitemi}{7)}
+    \item Automated control system of a technological process (ACSTP) is a complex of technical and software means that makes it possible for technological units to operate in automated mode based upon the chosen control criteria.\\
+\end{itemize}
+\textbf{technological process}\\
+\(\coloneqq\) \quad [technological cycle] \\
+\(\coloneqq\) \quad [is a sequence of interconnected operations, that is \par\quad defined by technological documentation, directed \par\quad at the object of process with purpose of producing \par\quad the required output] \\
+\(\coloneqq\) \quad [a set of technological operations \(\{TCO_i_j\}\), where \par\quad i, j = \(\overline{1, N,}\) as well as the resources consumed by \par\quad those operations] \\ \\
+\textbf{probabilistic technological process}\\
+\(\coloneqq\) \quad[PTP] \\
+\(\subset\) \quad technological process\\
+\(\coloneqq\) \quad[technological process that has probabilistic \par\quad parameters of operation]\\
+\(\coloneqq\) \quad[a technological process with a structure that may \par\quad
+change during its operation] \\ \\
+\textbf{technological operation}\\
+\(\coloneqq\) \quad[TCO]\\
+\(\subset\) \quad technological process\\
+\(\coloneqq\) \quad[subset of a technological process, that is being \par\quad run continuously at one workplace on one or more \par\quad simultaneously processed or assembled products by \par\quad one or more operators]\\ \\
+\textbf{microtechnological operation}\\
+\(\coloneqq\) \quad[MTCO]\\
+\(\subset\) \quad technological operation\\
+\(\coloneqq\) \quad[finite sequence of elementary operations which \par\quad constituent the contents of a technological \par\quad operation, that is run continuously at one \par\quad workplace]\\ 
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+\begin{center}
+    \small III. PROBLEMS OF ADAPTIVE CONTROL OF PRODUCTION PROCESSES IN THE CONTEXT OF NEW GENERATION COMPUTER SYSTEMS DEVELOPMENT
+\end{center} 
+\par
+Enterprise automation tools must be able to adapt
+to any changes in the production process itself with
+minimal costs and time delays. Such changes may include
+expansion or reduction in production volumes, changes
+in production nomenclature, replacement or changes of
+technological units, alteration of the overall production
+structure, changes of interactions between suppliers and
+consumers, changes of the legal acts and standards, as
+well as other unforeseen circumstances of different nature. \par
+Analysis of the field in the sphere of the modern
+controlled production systems research demonstrates
+that the problem of determining the real-time operation
+parameters of such research objects emerges primarily
+in the cases of complex technical products production
+that requires high manufacturing precision and high labor
+productivity. \par
+In such cases when solving a multicriteria control
+optimization problem high standards need to be applied to
+the algorithms of the operation of the production process,
+minimization of human factor impact on the technological
+production cycle operation quality, prevention of occurrence of technogenic emergencies. Such a case is typical
+for robotic production systems that operate under control
+of the hardware and software controller that administers
+the functioning of the technological cycle control system
+according to the given programs. \par
+At the same time the arising emergency situations due
+to equipment failures, random external control actions,
+including human factor, lead to deviation of the operation
+parameters of the production system from the desired
+values, which leads to the necessity of their correction
+in real-time based on the neuroregulator models that
+operate within the hardware-software coupling means of
+the technological production cycle. \par
+The existing special artificial intelligence models such
+as neural networks have unique properties and can be
+used as universal approximators that have a capability
+to generalize the data against which they were trained.
+Such features make it practical to use such models when
+solving complex problems in the domain of adaptive
+control. \par
+The modern convergence tendencies in the sphere of
+intellectual systems development [1] requires the development of the appropriate software that would feature
+elements of cognitive abilities based on semantically
+compatible technologies of artificial intelligence. This
+sphere also includes the development of computer systems
+that are able to provide intellectualization of the processes
+of making analytical control decisions (which are directly
+related to adapting control processes for complex dynamic
+systems (technological objects) in real-time), building
+semantically compatible knowledge bases in the domain
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\noindent of dynamic systems operation analysis and optimization
+of the operation of complex control systems based upon
+them through open-source intellectual decision support
+systems development.
+\begin{center}
+\small IV. BUILDING A MATHEMATICAL MODEL OF A PRODUCTION SYSTEM IN THE CONTEXT OF INDUSTRY 4.0
+\end{center}
+\par
+Implementation of Industry 4.0 concept at industrial
+enterprises is accompanied by creation of a unified
+ontological model of the production process. This model is
+the core of integrated information service for the company
+[13]. \par
+In order to allow a wide implementation of the artificial
+intelligence technologies for automating the company, all
+corporate knowledge must be transformed into the formal
+language for knowledge representation. Such knowledge
+may be obtained from the existing documentation that
+describes the enterprises’ operation within the framework
+of accepted international standards. \par
+It is necessary to transform each existing standard
+into a knowledge base based on the appropriate set of
+ontologies related to the standard. Such an approach
+allows to significantly automate the processes of standard
+development and its application. \par
+As an example let us consider ISA-88 standard [16]
+(the base standard for prescription production). Even
+though this standard is widely used by American and
+European companies (and is being actively introduced
+in Republic of Belarus) it has a number of flaws that
+are listed below. Authors’ experiences with ISA-88 and
+ISA-95 have demonstrated the following problems related
+to versions of the standard (see [8]):
+\begin{itemize}
+    \renewcommand{\labelitemi}{1)}
+    \item American version of standard – ANSI/ISA-88.00.01-2010 – has been updated and is in its 3rd edition (as of 2010);
+    \renewcommand{\labelitemi}{2)}
+    \item ISA-88.00.02-2001 – includes data structures and guidelines of languages;
+    \renewcommand{\labelitemi}{3)}
+    \item ANSI/ISA-TR88.00.02-2015 – describes an implementation example of ANSI/ISA-88.00.01;
+    \renewcommand{\labelitemi}{4)}
+    \item ISA-88.00.03-2003 – an activity that describes the use of common site recipes with and across companies;
+    \renewcommand{\labelitemi}{5)}
+    \item ISA-TR88.0.03-1996 – shows possible recipe procedure presentation formats;
+\renewcommand{\labelitemi}{6)}
+    \item ANSI/ISA-88.00.04-2006 – structure for the batch production records;
+\renewcommand{\labelitemi}{7)}
+    \item ISA-TR88.95.01-2008 – describes how ISA-88 and ISA-95 can be used together;
+\renewcommand{\labelitemi}{8)}
+    \item At the same time, the European version approved in 1997 – IEC 61512-1 – is based on the older version ISA-88.01-1995;
+\renewcommand{\labelitemi}{9)}
+    \item Russian version of the standard – GOST R IEC 61512-1-2016 – is identical to IEC 61512-1, that is also outdated. Also it raises a number of questions related to the not very successful translation of the original English terms into Russian.
+\end{itemize}
+\par
+Another standard that is often used in the context
+of Industry 4.0 is ISA-95 [17]. ISA-95 is an industry
+standard for describing high level control systems. Its
+main purpose in to simplify the development of such
+systems, abstract from the hardware and provide a single
+interface to interact with ERP and MES layers. It consists
+of the following parts (see [8]):
+\begin{itemize}
+    \renewcommand{\labelitemi}{1)}
+    \item ANSI/ISA-95.00.01-2000, Part 1: «Models and terminology» — it consists of standard terminology and
+object models that can be used to determine what
+information is exchanged;
+    \renewcommand{\labelitemi}{2)}
+    \item ANSI/ISA-95.00.02-2001, Part 2: «Object Model
+Attributes» — it consists of attributes for each object
+defined in Part 1. Objects and attributes can be used
+to exchange information between different systems
+and can also be used as the basis for relational
+databases;
+    \renewcommand{\labelitemi}{3)}
+    \item ANSI/ISA-95.00.03-2005, Part 3: «Models of Manufacturing Operations Management» — it focuses on
+Level 3 (Production/MES) functions and activities;
+    \renewcommand{\labelitemi}{4)}
+    \item ISA-95.00.04 Part 4: «Object models and attributes
+for Manufacturing Operations Management». The
+SP95 committee is yet developing this part of ISA95. This technical specification defines an object
+model that determines the information exchanged
+between MES Activities (defined in Part 3 of ISA95). The model and attributes of Part 4 form the
+basis for the design and implementation of interface
+standards, ensuring a flexible flow of cooperation
+and information exchange between various MES
+activities;
+    \renewcommand{\labelitemi}{5)}
+    \item ISA-95.00.05 Part 5: «Business to manufacturing
+transaction (B2M transactions)». Part 5 of ISA-95
+is still in development. This technical specification
+defines operations among workplace and manufacturing automation structures that may be used along
+with Part 1 and Part 2 item models. Operations join
+and arrange the manufacturing items and activities
+described withinside the preceding a part of the
+standard. Such operations arise in any respect ranges
+withinside the organization, however the attention of
+this technical specification is at the interface among
+the organization and the management system;
+\renewcommand{\labelitemi}{6)}
+    \item ISA-95.00.06 Part 6: «Transactions between Manufacturing Operations»;
+\renewcommand{\labelitemi}{7)}
+    \item ISA-95.00.07 Part 7: «Model of Service Messages»;
+\renewcommand{\labelitemi}{8)}
+    \item ISA-95.00.08 Part 8: «Profiles of Information Exchange».
+\end{itemize} \par
+Models help define boundaries between business and
+control systems. They help answer questions about which
+functions can perform which tasks and what information
+must be exchanged between applications. \par
+The first phase of building a digital twin model requires
+\end{multicols}
+\end{document}
