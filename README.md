@@ -117,7 +117,9 @@ echo "$result" > result.txt
 7. Выводится информация о переменных "data", "word", "letter" и "result".
 8. Результат сохраняется в файл "result.txt".
    # фото исходного файла
-   ![image](https://github.com/iis-32170x/RPIIS/assets/148863144/55d5c6c3-a772-4c2d-a6b6-8ae000e6511d)
+   ![image](https://github.com/iis-32170x/RPIIS/assets/148863144/7706dabf-1f70-4664-a037-2f49169a0922)
   # фото выполнения программы
-  
-   # фото файла в который был записан результат
+  ![image](https://github.com/iis-32170x/RPIIS/assets/148863144/2e858404-ad66-4fc9-8049-721ad1b5a5ce)
+ # фото файла в который был записан результат
+ ![image](https://github.com/iis-32170x/RPIIS/assets/148863144/90478b10-cae4-4393-ac59-a1d4edd6e9ad)
+
