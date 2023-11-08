@@ -99,6 +99,9 @@ type "%output_file%"
 endlocal
 ```
 ## Запуск кода
+![photo5](1.png)
+## Пример работы программы
+![photo6](2.png)
 
 
 
