@@ -7,7 +7,7 @@
 
 ![photo](6.png)
 
-# Реализация кода на bash
+# Реализация кода на [bash]()
 
 ~~~sh
 #!/bin/bash
@@ -27,14 +27,14 @@ find "$directory" -type f -size "-$size"c -exec basename {} \; > "$output_file"
 echo "Файлы размером меньше $size байт:"
 cat "$output_file"
 ~~~
- ### Запуск кода в консоли 
+ ## Запуск кода в консоли 
 ![photo2](4.png)
-### Пример работы программы
+## Пример работы программы
 ![photo3](5.png)
 ---
 ![photo4](7.png)
 
-### Описание строчек кода
+## Описание строчек кода
 
 ```sh
 #!/bin/bash
@@ -72,6 +72,33 @@ cat "$output_file"
 ```
 Строка выводит сообщение **"Файлы размером меньше $size байт:"**. Затем команда `cat` используется для показа содержимого файла `$output_file`.
 
+# Реализация кода в [batch]()
+```bat
+@echo off
+setlocal
+chcp 868
+set "directory=%~1"
+set "size=%~2"
+
+if not exist "%directory%" (
+  echo Данной папки нет
+  exit /b 1
+)
+
+set "output_file=laboratornaya.txt"
+
+for /r "%directory%" %%F in (*) do (
+  if %%~zF LSS %size% (
+    echo %%~nxF >> "%output_file%"
+  )
+)
+
+echo Файлы размером меньше %size% байт:
+type "%output_file%"
+
+endlocal
+```
+## Запуск кода
 
 
 
