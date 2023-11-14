@@ -2,11 +2,11 @@ read -rp "Enter the path to a directory: " directory
 read -p "Enter first positive smaller number: " num1
 read -p "Enter second positive bigger number: " num2
 
-files=$(find "$directory" -type f -size +"$num1"c -size -"$num2"c)
-
 if [[ -e result.txt ]]; then
   rm result.txt
 fi
+
+files=$(find "$directory" -type f -size +"$num1"c -size -"$num2"c)
 
 touch result.txt
 
