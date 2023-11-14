@@ -1,0 +1,296 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=20mm, top= 30 mm, right=20mm, bottom= 30 mm, nohead]{geometry}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage[russian]{babel}
+\setcounter{page}{225} 
+
+\title{\huge\bfseries Examples of Integrating Wolfram Mathematica \\ Tools into OSTIS Applications \\} 
+\author{
+  Valery B. Taranchuk\\
+ Department of Computer Applications \\ and Systems\\
+ Belarusian State University\\
+ Minsk, Republic of Belarus\\
+\itshape taranchuk@bsu.by\\ \and
+ Vladislav A. Savionok \\ 
+\itshape Department of Software\\
+\itshape for Information Technologies\\
+ Belarusian State University \\ 
+ of Informatics and Radioelectronics \\ 
+ Minsk, Republic of Belarus \\ 
+ v.savenok@bsuir.by}\\
+\date{}
+
+\begin{document}
+\maketitle  
+\begin{multicols}{2}
+\textbf{\small\textit{Abstract}—Within the concept of convergence and unification of intelligent computer systems of the new generation,
+technical solutions are discussed, examples of development
+and modernization, integration of Ecosystem OSTIS tools
+with Wolfram Mathematica (WM) computer algebra system (CAS) are provided.}
+\par
+\textbf{\small
+On the example of integration with specialized complex
+of intellectual educational resource for the discipline “Computer Systems and Networks” the possibilities of using WM tools in ostis-system are discussed when solving problems
+related, in particular, to topology of info-communication
+networks. The application of WM tools for visualization of
+network topology, as well as emulation of the search for
+the optimal route for data transmission is shown.
+} \par
+\small\textbf{\textit{Keywords}—technological production process, adaptive
+control, neural network, reinforcement learning, Industry 4.0, standard}\\
+\begin{center}
+    I. INTRODUCTION \\
+\end{center}
+\par Following the assessment of the current state of work
+in the field of Artificial Intelligence (AI), it is possible
+to affirm active local development of various directions
+(non-classical logics, formal ontologies, artificial neural
+networks, machine learning, soft computing, multi-agent
+systems, etc.), however, a comprehensive increase in the
+intelligence of modern intelligent computer systems does
+not occur [1].
+\par The key reasons of methodological problems of current state of Artificial Intelligence, as well as a number of actions required to solve them are outlined in [1].
+What actions are needed to improve the current state?
+First of all, it is necessary to converge and integrate
+all directions of Artificial Intelligence and corresponding
+construction of a general formal theory of intelligent
+computer systems (ICS), the transformation of modern
+variety of frameworks for development of different ICS
+components into a single technology of complex design
+and support of the full life cycle of these systems,
+which guarantees the compatibility of all developed
+components, as well as the compatibility of the ICS
+as independent subjects, interacting between each other.
+Convergence and unification of new generation of intellectual computer systems and their components is
+required.
+\par Convergence and unification of new generation intelligent computer systems and their components is necessary. At the same time, convergent solutions basically
+mean optimized complexes that include everything necessary to solve AI tasks, organized and configured for
+efficient use of information resources, simplification of
+implementation processes, meeting the requirements of
+maximum performance, availability of intelligent interface, simple and understandable for all categories of
+users.
+\par Supporting the outlined concepts, we note that such
+problems can be effectively solved by developing, improving, regularly updating the content of intelligent
+systems by incorporating CAS means. Below are a few
+methodological and technical solutions for integration of
+different types of knowledge, implemented by inclusion
+of Wolfram Mathematica functions in the ostis-system
+of support and maintenance of the teaching process of
+one of the basic disciplines in high school, illustrated by
+examples.
+\begin{center}
+    II. CONCRETIZATION AND VARIANTS FOR
+INTEGRATING THE ECOSYSTEM OSTIS WITH CAS \\
+\end{center}
+\par Integration of the Ecosystem OSTIS with any service
+means the ability to use the functionality of the service to
+change the internal state of the system’s knowledge base.
+Within Ecosystem OSTIS full and partial integration
+levels are acceptable.
+\par According to the Technology, full integration of the
+Ecosystem OSTIS with any service implies the possibility of executing service’s function at platformindependent level using SCP language. That is, the task
+of integration of such a service is reduced to allocation
+of a graph structure processing algorithm and its implementation within a system’s knowledge base. As a result
+of such integration there is no need to use a third-party
+service, in fact, an Ecosystem component is used.
+\par Partial integration means changing the state of the
+system’s knowledge base at the stages of service function
+225 execution. The depth of integration can vary. In some
+cases, a service can refer to the knowledge base to get
+additional information or to record intermediate results.
+In the simplest case, a knowledge base can change
+only once, after a result of the service’s function is
+received. 
+In case of partial integration it is supposed that
+particular ostis-systems are to play the role of system
+integrators of included resources and services of other
+computer systems, as the level of intelligence of ostissystems allows them to specify the computer systems
+being integrated to a sufficient degree of detail and,
+consequently, to “understand” adequately what each of
+them knows and/or can do.
+\par Separately, let us note that following the Technology,
+ostis-systems are capable (and it should be used) to coordinate the activities of a third-party resource and service sufficiently well, to provide a “relevant” search for the
+required component. The systems themselves can also
+perform the role of intelligent help-systems – assistants
+and consultants for efficient operations with functional
+capabilities, when the user interface is implemented with
+non-trivial semantics in the unique tasks of complex
+subject areas. Such help systems can be made intelligent
+intermediaries between the relevant computer systems
+and their users.
+\par The systems themselves can also act as intelligent
+help systems. Their relevance is dictated by the high
+complexity of subject areas and the non-triviality of
+some unique tasks. Such conditions require the design
+of appropriate unique and nontrivial user interfaces with
+additional information support for their use. Such help
+systems can be made intelligent intermediaries between
+the relevant computer systems and their users, and the
+homogeneity of the technologies used ensures seamless
+integration with the existing system.
+\par \textbf{Solving the issues of data format coordination.} A
+tedious problem of functional service integration when
+forming a digital ecosystem of multiple interacting services is the difference in data formats that participants of this Ecosystem work with. Two services, which imply
+data processing from one subject area, are likely to have
+different data formats. The problem of coordinating the
+data format of different services significantly complicates
+the development of the services themselves and leads to
+an increase in time costs. Such issues can be effectively
+solved using CAS import and export functions, such as
+in Wolfram Mathematica, which supports more than 100
+data formats, including graphics, video, and more.
+\par At the current stage of development and usage of
+the Ecosystem OSTIS, one of the priority areas appears to be the integration of the capabilities of computer algebra systems and \underline{intelligent learning systems
+constructed in ostis-application.} The importance of this
+is due to the relevance, the requirements of the intellectualization of educational resources on the one hand,
+and on the other – contents of computer algebra systems,
+which have an undoubted advantage and great opportunities for solving problems relevant to educational systems
+for virtually all natural-science and technical disciplines,
+involving the use of complex mathematical apparatus.
+\par It can be stated that, despite the popularity of topics related to automation and intellectualization of educational
+activities in science disciplines and the development of
+appropriate computer systems, at the moment the market is practically lacking tested \underline{intellectual} educational
+systems capable of \underline{self generating} and solving various
+problems, and verifying the correctness of the solution
+provided by the user. As prototypes, there are some
+systems that consider non-trivial problems, such as geometry [2], [3] and graph theory [4]. But, to be fair,
+it should be noted that there is no intelligence in the
+mentioned systems (in fact, only a specific set of actions
+is implemented, the tasks are not generated in the applications themselves), there is no means of verification of solutions with even minor deviations of the design rules.
+\par One of the variants for interaction between Ecosystem OSTIS and CAS can be approaches similar to the
+integration of artificial neural networks in ostis-systems
+(see [5]).
+\par Developing the aforementioned implementations, the
+following methodological and technical solutions can be
+considered:
+\begin{itemize}
+  \item Black-box integration, when the knowledge base
+of the ostis-system contains the specification of
+the used kernel function of the computer algebra
+system, as well as the specification of the method
+of calling this function (for example, specifying
+through which software interface the interaction
+with this external system is performed). This integration variant is the easiest to implement and
+generally has the advantages listed below. At the
+same time, this variant has a disadvantage that the
+ostis-system does not contain means of analysis
+and explanation of how a certain step of solving
+a problem that is realized by a used CAS function
+was taken.
+\item A tighter integration, in which a particular function
+is still a part of a third-party CAS, when not only the
+result of its performance is loaded to the knowledge
+base of ostisystem, but also all possible specification
+of it, e.g. explanation of the problem solution step,
+indication of particular algorithms and formulas
+which can be involved in the solution, description
+of possible alternative solution variants, evaluation
+of solution efficiency and so on. In this variant of
+integration, the ostis-system gets more opportunities
+of analysis and explanation of the problem solution
+process. (Note that this doesn’t apply specifically to
+CAS Wolfram Mathematica, because it always has
+detailed explanations for all solutions, and allows
+226 for step-by-step execution.)
+\item Full integration, which translates computer algebra functions in use from this system’s internal
+language into the ostis-system. This variant is the
+most labor-intensive and complicated in terms of
+updating the capabilities of computer algebra systems in the corresponding ostis-systems taking into
+account their constant development. At the same
+time this integration variant, in comparison with
+the two previous ones, has an important advantage:
+it ensures platform-independent solution and allows
+using all the advantages of the approaches proposed
+within the OSTIS Technology in solving a concrete
+problem, in particular the possibility of multi-user
+parallel knowledge processing and the possibility to
+optimize a problem solution plan or its fragments
+directly during the solution.
+\end{itemize} \par
+The approach to solving the problems of intellectualization of educational activity, based on the integration of ostis-systems and computer algebra systems, has several
+advantages:
+\begin{itemize}
+    \item When developing ostis-systems, the need to program many functions that have already been implemented and tested in CAS is eliminated. This
+is fundamental because computer algebra systems
+are developed by highly qualified specialists in
+the relevant fields, the implementation of similar
+functions in ostis-systems may require significant
+financial and time expenditures.
+\item A concrete ostis-system using individual functions
+of CAS, due to the approach to the development
+of hybrid problem solvers in OSTIS Technology,
+gets the possibility to self plan the course of problem solving provided that some of its steps are
+implemented by means of the attached functions.
+From the point of view of the approach proposed
+within the framework of OSTIS Technology, each
+function of the computer algebra systems, computer
+mathematics systems (CMS) becomes a method
+for solving problems of some class. This class of
+problems is described in the knowledge base of
+the ostis-system and allows it, when solving a concrete problem, to independently draw a conclusion
+about the expediency of applying one or another
+CAS function. Such integration with ostis-systems
+will make it possible to eliminate a possible disadvantage of individual computer algebra systems
+noted earlier (determined by which CAS are used
+– explained below in the overview of computer
+mathematics systems, conditions of their application
+and access to individual components).
+\end{itemize} \par
+We emphasize that these integration variants are not
+mutually exclusive and can be combined. In addition,
+integration can be deepened step by step taking into
+account the above advantages and disadvantages as well
+as the relevance of using certain functions of computer
+algebra systems in solving specific tasks within the
+Ecosystem OSTIS and corresponding ostis-systems.
+\par In general case, step-by-step integration of CAS with
+the Ecosystem OSTIS implies, as a minimum, description of the specification of the basic functions of the
+selected computer algebra system by means of the
+OSTIS Technology, in other words – development of
+the ontology of external functions. In case of Wolfram
+family systems, the process of developing such ontology
+can be automated due to the presence of the Wolfram
+Language formal language and good documentation of
+system functions.
+\par Summarizing the above, we state: the integration of
+educational systems developed on the basis of OSTIS
+Technology and computer algebra systems will allow
+us to create systems with intelligent properties in a
+shorter time, and with the use of carefully developed
+(mathematically, algorithmically) and repeatedly tested
+tools.
+\begin{center}
+    III. FUNDAMENTALS, TERMINOLOGY. COMPUTER
+MATHEMATICS SYSTEMS, COMPUTER ALGEBRA
+SYSTEMS
+\end{center}
+\par In the mid-twentieth century, at the junction of mathematics and computer science, a fundamental scientific
+trend, computer algebra, the science of efficient algorithms for calculating mathematical objects, emerged and
+intensively developed. Synonyms for the term “computer
+algebra” are: “symbolic calculations”, “analytical calculations”, “analytical transformations”, and sometimes
+“formal calculations”. The field of computer algebra is
+represented by theory, technology, software tools. Applied results include developed algorithms and software
+for solving problems using a computer in which the
+original data and results take the form of mathematical
+expressions, formulas. The basic product of computer algebra became software computer algebra systems (CAS).
+The range of mathematical problems solvable with the
+help of CAS is constantly expanding. Considerable effort
+is devoted to developing algorithms for computing topological invariants of varieties, nodes, algebraic curves,
+cohomology of different mathematical objects, and arithmetic invariants of rings of integers in the fields of
+algebraic numbers. Another direction of modern research
+is quantum algorithms, which sometimes have polynomial complexity, while existing classical algorithms have
+exponential complexity.
+\par Research and development of theoretical foundations
+and technologies for implementing methods and software
+implementations of computer algebra tools continues.
+Terms, definitions, names in descriptions of functions
+and tools of these systems also undergo changes, some
+formulations earlier given in separate manuals, reviews
+of tool capabilities are being not only refined, but also
+
+
+\end{multicols}
+\end{document}
