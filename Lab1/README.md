@@ -14,4 +14,4 @@
 ```
 ## Описание алгоритма. Пример запуска и выполнения программы.(.bat)
 
-![image](Lab1/pictures/bat.png)
+![image](pictures/bat.png)
