@@ -121,11 +121,14 @@ int shortestCycle(vector<vector<int>>& adjList, int n) {
 }
 
 int main() {
-    setlocale(LC_ALL, "ru");
-    ofstream outputFile("obhvat.txt");
-    ifstream inputFile("graph.txt");
-    int n, m;
-    inputFile >> n >> m;
+   setlocale(LC_ALL, "ru");
+string line;
+cout << "Введите файл: ";
+cin >> line;
+ifstream inputFile(line);
+ofstream outputFile("obhvat.txt");
+int n, m;
+inputFile >> n >> m;
 
     vector<vector<int>> adjList(n);
     for (int i = 0; i < m; i++) {
@@ -173,10 +176,14 @@ int main() {
 ```c++
 int main() {
     setlocale(LC_ALL, "ru");
+    string line;
+    cout << "Введите файл: ";
+    cin >> line;
+    ifstream inputFile(line);
     ofstream outputFile("obhvat.txt");
-    ifstream inputFile("graph.txt");
     int n, m;
     inputFile >> n >> m;
+
 
     vector<vector<int>> adjList(n);
     for (int i = 0; i < m; i++) {
