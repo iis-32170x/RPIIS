@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=17mm, top=17mm, right=17mm, bottom=15mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=1.4pt}
+\setcounter{page}{271}
+
+
+\begin{document}
+\begin{multicols}{2}
+The inclusion relation is one of the most frequently used relations in the knowledge base of the ostis-systems, which is satisfied between many classes (including subclasses), so that the inclusion relation between classes can be used to generate objective questions. The set theory expression form of inclusion relation between classes is as follows: $S_i \subseteq C(i\geq1)$, ($S$-subclass, $i$-subclass number, $C$-parent class) [5], [7]. The following shows a semantic fragment in the knowledge base that satisfies the inclusion relation in SCn-code (one of SC-code external display languages) [1]:
+
+\noindent\textbf{\textit{binary tree}}
+  \vspace{-0.3cm}
+    \begin{description}[ labelwidth=0.75cm, itemsep=-1.5mm]
+        \item[$\Leftarrow$] \textit{inclusion*:} \\
+        \vspace{-0.3cm}
+            \item[]
+           \begin{description}[leftmargin=0mm] \textit{directed tree}
+            \end{description}
+    \end{description}
+    \vspace{-0.6cm}
+    \begin{description} [ labelwidth=0.75cm, itemsep=-1.5mm]
+        \item[$\Rightarrow$] \textit{inclusion*:}
+        \begin{itemize}
+        \item \hspace{5mm}\textit{binary sorting tree}
+        \item \hspace{5mm}{brother tree}
+        \item \hspace{5mm}{decision tree}
+        \end{itemize}
+    \end{description}
+    
+    An example of a judgement question generated using
+this semantic fragment is shown below in natural language: $\ll$ Binary tree contains binary sorting tree, brother tree
+and decision tree.$\gg$
+
+$\bigcirc$ True \hspace{5mm} $\bigcirc$ False
+
+Other types of objective questions can be generated
+using this strategy.
+
+Other strategies used to generate objective questions
+include:
+\begin{itemize}
+    \item Test question generation strategy based on elements;
+    \item Test question generation strategy based on identifiers;
+    \item Test question generation strategy based on axioms;
+    \item Test question generation strategy based on relation attributes;
+    \item Test question generation strategy based on image examples.
+\end{itemize}
+
+The process of generating subjective questions is shown
+below:
+\begin{itemize}
+    \item searching the knowledge base for semantic fragments describing subjective questions using logic rules;
+    \item storing the found semantic fragments in the knowledge base of the subsystem
+    \item using manual approaches or automatic approaches (such as natural language interfaces) to describe the definition, proof process or solution process of the corresponding test question according to the knowledge representation rules in SCg-code (SCg-code is a graphical version for the external visual representation of SC-code) or SCL-code (a special sub-language of the SC language intended for formalizing logical formulas) [2].
+\end{itemize}
+
+The proposed approach to generating test questions has
+the following main advantages:
+\begin{itemize}
+    \item within the framework of OSTIS Technology, knowledge is described in a uniform form and structure so that the component developed using the proposed approach to generating test questions can be used in different ostis-systems;
+    \item the semantic models of the test questions are described using SC-code, so that they do not rely on any natural language;
+    \item using the proposed approach, high quality objective and subjective questions can be generated automatically.
+\end{itemize}
+
+\noindent\textit{B. Automatic verification of user answers}
+
+In the ostis-systems, test questions are stored in the knowledge base in the form of semantic graphs, so the most critical step of user answer verification is to calculate the similarity between the semantic graphs of answers, and when the similarity is obtained and combined with the evaluation strategy of the corresponding test questions, the correctness and completeness of user answers can be verified.
+
+Since the knowledge types and knowledge structures used to describe different types of test questions are not the same, answer verification is further divided into: 1. verification of answers to objective questions; 2. verification of answers to subjective questions.
+
+\noindent\textit{C. Verification of answers to objective question}
+
+Semantic graphs of answers to objective questions are described using factual knowledge according to the same knowledge structures, so the similarity between the semantic graphs of answers to different types of objective questions can be calculated using the same approach. Factual knowledge refers to knowledge that does not contain variable types, and this type of knowledge expresses facts. When the user answers to objective questions in natural language are converted into semantic graphs, they are already integrated with the knowledge already in the knowledge base. So the similarity between answers is calculated based on the semantic description structures [19]. The process of calculating the similarity between the semantic graphs of the answers to the objective questions is shown below:
+\begin{itemize}
+    \item decomposing the semantic graphs of the answers into sub-structures according to the structure of the knowledge description;
+    \item using formulas (1), (2), and (3) to calculate the precision, recall and similarity between semantic graphs.
+\end{itemize}
+
+\begin{equation}
+    P_{sc}(u,s) = \frac{| T_{sc}(u)\otimes T_{sc}(s)|}{|T_{sc}(s)|}
+\end{equation}
+\begin{equation}
+ R_{sc}(u,s) = \frac{| T_{sc}(u)\otimes T_{sc}(s)|}{|T_{sc}(s)|}
+\end{equation}
+\begin{equation}
+F_{sc}(u,s) = \frac{ 2 \cdot P_{sc}(u,s) \cdot R_{sc}(u,s)}{P_{sc}(u,s)+R_{sc}(u,s)} 
+\end{equation}
+
+\end{multicols} 
+\end{document}
