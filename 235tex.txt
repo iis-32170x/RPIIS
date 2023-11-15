@@ -1,0 +1,114 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=27mm, right=27mm,bottom=20mm,top=10mm, nohead, nofoot]{geometry}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{multicol}
+\setcounter{page}{235}
+\begin{document}
+\begin{multicols}{2}
+\includegraphics[width=77mm,height=70mm]{images/2023_11_08_10adea076a4655050253g-235.jpg}
+{\tiny Figure 7. Solving the problem of finding the optimal route between
+two network nodes (output in Wolfram Mathematica)}
+
+to node 12, router 1 will choose a new shortcut. The
+solution to find the optimal route between two nodes in
+the changed network configuration is shown in Fig.8.
+\includegraphics[width=77mm,height=70mm]{images/2023_11_08_10adea076a4655050253g-235(1).jpg}
+{\tiny Figure 8. Solving the problem of finding the optimal route between two
+network nodes in updated topology (output in Wolfram Mathematica).}
+
+The results obtained and considered include laborintensive for implementation in programming languages
+graphics problems, as well as mathematically and algorithmically complex problems of the subject area. Presented options of visualization, finding a solution require only a careful study of examples of the help system
+Wolfram Mathematica, certain programming skills, i.e.
+are available to most software engineers. Transferring
+results to other software applications isn’t difficult either,
+because WM provides export options in any standard
+format.
+\begin{center}
+VII.CONCLUSION
+\end{center}
+Programming language, high level of documentation,
+features of step-by-step problem solving and graphical
+visualization of initial data and computational results
+favorably differentiate Mathematica from other CAS.
+These features combined with an intelligent predictive
+interface help subsystem, provide wide range of opportunities for integrating Wolfram Language functions with
+components of Ecosystem OSTIS.
+The presented example of addition of intellectual educational resource built within the ostis-system for discipline “Computer Systems and Networks” illustrates connection of difficult for programming functions of visualization and solution of complex mathematical problem
+of finding the optimal path in the info-communication
+network with a complex topology.
+\begin{center}
+REFERENCES
+\end{center}
+\begin{itemize}
+ \footnotesize{
+  \renewcommand{\labelitemi}{[1]}
+  \item V. Golenkov, N. Guliakina, and D. Shunkevich, Otkrytaja
+tehnologija ontologicheskogo proektirovanija, proizvodstva i jekspluatacii semanticheski sovmestimyh gibridnyh intellektual’nyh
+komp’juternyh sistem [Open technology of ontological design,
+production and operation of semantically compatible hybrid intelligent computer systems], V. Golenkov, Ed. Minsk: Bestprint
+[Bestprint], 2021, P. 690 (In Russ.)
+\renewcommand{\labelitemi}{[2]}
+  \item GeoS — Geometry Problem Solver. Available at: https://
+geometry.allenai.org (accessed 2023, Feb).
+\renewcommand{\labelitemi}{[3]}
+  \item Recognition. Available at: https://mathpix.com/
+handwriting-recognition (accessed 2023, Feb).
+\renewcommand{\labelitemi}{[4]}
+  \item Create Graph online and find shortest path or use other algorithm.
+Available at: https://graphonline.ru/en (accessed 2023, Feb).
+\renewcommand{\labelitemi}{[5]}
+  \item M. Kovalev, A. Kroshchanka, V. Golovko, Convergence and
+integration of artificial neural networks with knowledge bases
+in next-generation intelligent computer systems. Otkrytye semanticheskie tekhnologii proektirovaniya intellektual’nykh system
+[Open semantic technologies for intelligent systems], 2022, pp.
+173-186.
+\renewcommand{\labelitemi}{[6]}
+  \item V. D’yakonov, Entsiklopediya komp’yuternoi algebry [Encyclopedia of Computer Algebra], Moscow, DMK Press, 2009, P. 1264
+(In Russ.)
+\renewcommand{\labelitemi}{[7]}
+  \item  List of computer algebra systems. Available at: \url{http://en.
+wikipedia.org/wiki/List_of_computer_algebra_systems} (accessed
+2023, Mar).
+\renewcommand{\labelitemi}{[8]}
+  \item V. Taranchuk, Osnovnye funktsii sistem komp’yuternoi algebry
+[Basic Functions of Computer Algebra Systems] : posobie dlya
+studentov fak. prikladnoi matematiki i informatiki, Minsk, BSU,
+2013, P. 59. (In Russ.)
+\renewcommand{\labelitemi}{[9]}
+  \item Maxima, Sistema komp’yuternoi algebry [Maxima, Computer
+Algebra System]. Available at: http://maxima.sourceforge.net/ru
+(accessed 2023, Feb) (In Russ.)
+\renewcommand{\labelitemi}{[10]}
+  \item  N. Stakhin, Osnovy raboty s sistemoi analiticheskikh
+(simvol’nykh) vychislenii Maxima [Fundamentals of working
+with the system of analytical (symbolic) calculations Maxima].
+(PO dlya resheniya zadach analiticheskikh (simvol’nykh)
+vychislenii), Moscow, Federal’noe agentstvo po obrazovaniyu,
+2008. 86p. (In Russ.)
+\renewcommand{\labelitemi}{[11]}
+  \item ] AXIOM. The Scientific Computation System. Available at: http:
+//axiom-developer.org (accessed 2023, Feb).
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+\end{multicols}
+\end{document}

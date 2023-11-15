@@ -1,0 +1,94 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=38mm, right=38mm,bottom=10mm,top=10mm, nohead, nofoot]{geometry}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{multicol}
+\setcounter{page}{234}
+\begin{document}
+\begin{multicols}{2}
+\includegraphics[width=62mm, height=22mm]{images/2023_11_08_10adea076a4655050253g-234(1).jpg}
+{\tiny Figure 3. Network topology graph, general information  (output in
+Wolfram Mathematica).}
+
+ no arrows are bidirectional, which is analogous to two opposing edges with the same weight.
+
+\includegraphics[width=64mm, height=70mm]{images/2023_11_08_10adea076a4655050253g-234(3).jpg}
+{\tiny Figure 4. Network topology graph, connections with weights (output
+in Wolfram Mathematica).}
+
+ The example output with specifying the LayeredEmbedding graph format, applying the vertex design option
+is shown in Fig. 5.
+
+\includegraphics[width=64mm, height=22mm]{images/2023_11_08_10adea076a4655050253g-234.jpg}
+
+{\tiny Figure 5. Network topology graph with LayeredEmbedding layout
+(output in Wolfram Mathematica).}
+
+The example output with specifying the LayeredDigraphEmbedding graph format, applying the vertex
+design options is shown in Fig. 6.
+
+
+Let us consider one of the dynamic routing protocols,
+OSPF (Open Shortest Path First), as the example of the
+described network topology. This protocol is interesting
+
+\includegraphics[width=64mm, height=40mm]{images/2023_11_08_10adea076a4655050253g-234(2).jpg}
+{\tiny Figure 6. Network topology graph with LayeredDigraphEmbedding layout (output in Wolfram Mathematica).}
+
+
+because it uses the Dijkstra algorithm to find the shortest
+path [30].
+
+The principle of the protocol is as follows:
+\begin{enumerate}
+\item Once routers are enabled, the protocol searches
+for directly connected neighbors and establishes
+communication with them.
+\item Routers exchange information with each other
+about the networks connected and available to them
+– build a network map (network topology). This
+map is the same on all routers.
+\item Based on this information, the SPF (Shortest Path
+First) algorithm is run, which calculates the best
+route to each network. This process is similar to
+building a tree, with the root being the router itself,
+and the branches being paths to available networks.
+\end{enumerate}
+In the OSPF protocol, convergence occurs rather
+quickly due to the use of the Dijkstra algorithm [31].
+
+ Fig. 7 illustrates the example of solving the problem
+of finding the optimal route between two nodes in a
+network. The following Wolfram Mathematica functions
+were used: GraphDistance, NeighborhoodGraph, Sow,
+DirectedEdge, Placed, Union, and Flatten.
+Consider the following situation: in this initial network
+topology the communications are upgraded. Between
+nodes 2 and 3 a fiber optic is laid, which provides more
+bandwidth and data transfer speed. As a result of the
+replacement, the “cost” of transmitting data over this link
+decreases from 8 conventional units to 3. How will the
+changes affect the solution to the problem at hand: the
+optimal route between nodes 4 and 12 of the network?
+
+When routers are included in the network, they check
+the speed capabilities of all available data channels. In
+our situation, routers 2 and 3 will determine that the
+communication between them has improved qualitatively.
+In accordance with the OSPF protocol, these devices on
+request will transmit this information about the topology
+change to the neighboring router 1. Now, in the future,
+when deciding on a path to transmit data from node 4
+
+\end{multicols}
+\end{document}

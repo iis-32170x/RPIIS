@@ -1,0 +1,130 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+\usepackage{hyperref}
+\urlstyle{same}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=27mm, right=27mm,bottom=20mm,top=10mm, nohead, nofoot]{geometry}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{multicol}
+\setcounter{page}{235}
+\begin{document}
+\begin{multicols}{2}
+
+
+\begin{itemize}
+ \footnotesize{
+  \renewcommand{\labelitemi}{[12]}
+  \item  OpenAxiom:The Open Scientific Computation Platform. Available at: \url{http://open-axiom.sourceforge.net (accessed 2023, Feb)}.
+  \renewcommand{\labelitemi}{[13]}
+  \item FriCAS — an advanced computer algebra system. Available at:
+\url{http://fricas.sourceforge.net (accessed 2023, Feb)}.
+
+  \renewcommand{\labelitemi}{[14]}
+  \item MathWorks. MATLAB. The Language of Technical Computing. Available at: \url{http://www.mathworks.com/products/matlab/ (accessed 2023, Mar)}.
+  \renewcommand{\labelitemi}{[15]}
+  \item V. D’yakonov, MATLAB. Polnyi samouchitel’ [MATLAB. Complete tutorial], Moscow, DMK Press, 2012, P. 768 (In Russ.)
+  \renewcommand{\labelitemi}{[16]}
+  \item MATLAB Versiya — Osobennosti i preimushchestva versii
+MATLAB [MATLAB Version — Features and Benefits of
+MATLAB Version]. Available at: \url{https://ru.education-wiki.com/
+2303364-MATLAB-version} (accessed 2023, Mar). (In Russ.)
+\renewcommand{\labelitemi}{[17]}
+  \item Maplesoft. Books. Available at: \url{http://www.maplesoft.com/books/
+index\.aspx} (accessed 2023, Feb).
+  \renewcommand{\labelitemi}{[18]}
+  \item V. Aladjev, V. Vaganov Modul’noe programmirovanie: Maple vs
+Mathematica, and vice versa [Modular programming: Maple vs
+Mathematica, and vice versa], CA: Palo Alto, Fultus Corp., 2011,
+P. 417 (In Russ.)
+  \renewcommand{\labelitemi}{[19]}
+  \item V. D’yakonov, Maple 10/11/12/13/14 v matematicheskikh
+raschetakh [Maple 10/11/12/13/14 in mathematical calculations],
+Moscow, DMK Press, 2011. 800 p. (In Russ.)
+
+  \renewcommand{\labelitemi}{[20]}
+  \item Maple Product History. Available at: \url{http://www.maplesoft.com/
+products/maple/history}(accessed 2023, Mar).
+
+  \renewcommand{\labelitemi}{[21]}
+  \item V. Alad’ev, Sistemy komp’yuternoi algebry: Maple: Iskusstvo
+programmirovaniya [Computer Algebra Systems: Maple: The Art
+of Programming], Moscow, Laboratoriya Bazovykh Znanii, 2006,
+P. 792 (In Russ.)
+  \renewcommand{\labelitemi}{[22]}
+  \item  Mathematica. Istoriya versii. Available at: \url{http://ru.wikibooks.org/wiki/Mathematica/История_версий}
+(accessed 2023, Mar). (In Russ.)
+  \renewcommand{\labelitemi}{[23]}
+  \item Mathematica Quick Revision History. Available at: \url{http://www.
+wolfram.com/mathematica/quick-revision-history.html} (accessed
+2023, Mar).
+  \renewcommand{\labelitemi}{[24]}
+  \item V. D’yakonov, Mathematica 5/6/7. Polnoe rukovodstvo [Mathematics 5/6/7. Complete Guide], Moscow, DMK Press, 2009,
+P. 624 (In Russ.)
+  \renewcommand{\labelitemi}{[25]}
+  \item ] Stephen Wolfram. Books. Available at: \url{http://www.
+stephenwolfram.com/publications/books} (accessed 2023, Mar).
+  \renewcommand{\labelitemi}{[26]}
+  \item Wolfram Mathematica: Modern Technical Computing. Available
+at: \url{https://www.wolfram.com/mathematica} (accessed 2023, Feb).
+  \renewcommand{\labelitemi}{[27]}
+  \item V. Taranchuk, Intellektual’nye vychisleniya, analiz, vizualizatsiya
+bol’shikh dannykh [Intelligent Computing, Analysis, Visualization Of Big Data]. BIG DATA i analiz vysokogo urovnya [BIG
+DATA and Advanced Analytics], 2019, no. 1, pp. 337–346. (In
+Russ.)
+
+  \renewcommand{\labelitemi}{[28]}
+  \item V. Taranchuk, Integration of computer algebra tools into OSTIS
+applications. Otkrytye semanticheskie tekhnologii proektirovaniya
+intellektual’nykh system [Open semantic technologies for intelligent systems], 2022, pp. 369-374.
+
+  \renewcommand{\labelitemi}{[29]}
+  \item APIFunction — Wolfram Language Documentation. Availabe
+at: \url{https://reference.wolfram.com/language/ref/APIFunction.html}
+(accessed 2023, Mar).
+  \renewcommand{\labelitemi}{[30]}
+  \item OSPF Version 2. Available at: \url{https://www.ietf.org/rfc/rfc2328.txt}
+(accessed 2023, Apr).
+  \renewcommand{\labelitemi}{[31]}
+  \item  T. Roughgarden, Algorithms Illuminated: Graph algorithms and
+data structures. Part 2, New York, Soundlikeyourself Publishing
+LLC, 2018, P. 222
+  
+\end{itemize}
+\begin{center}
+\textbf{Примеры интеграции инструментов
+Wolfram Mathematica в приложения
+OSTIS}
+\end{center}
+\begin{center}
+    Таранчук В. Б., Савёнок В. А.
+\end{center}
+В рамках концепции конвергенции и унификации
+интеллектуальных компьютерных систем нового поколения, обсуждаются технические решения, приведены примеры разработки и модернизации, интеграции
+средств Экосистемы OSTIS с системой компьютерной
+алгебры (СКА) Wolfram Mathematica (WM).
+
+На примере интеграции в специализированном комплексе интеллектуального образовательного ресурса
+по дисциплине “Компьютерные системы и сети” рассмотрены возможности использования инструментов
+WM в ostis-системе при решении задач, связанных,
+в частности, с топологией инфокоммуникационных
+сетей.
+
+Показано применение инструментов WM для визуализации топологии сети, а также эмуляции поиска
+оптимального маршрута передачи данных.
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Received 10.03.2023 \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\ \ \\
+
+
+
+
+
+\end{multicols}
+\end{document}
