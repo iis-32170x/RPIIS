@@ -18,13 +18,16 @@
 
 
 Пример работы bat кода:
+
+
 R + WINDOW
+
+
 [![Screenshot-2023-11-15-170424.png](https://i.postimg.cc/wvpxv0dc/Screenshot-2023-11-15-170424.png)](https://postimg.cc/TytvNj1p)
 
 [![Screenshot-2023-10-11-015612.png](https://i.postimg.cc/wBf8K2jj/Screenshot-2023-10-11-015612.png)](https://postimg.cc/WDkfgMZB)
 
-[![9.png](https://i.postimg.cc/J0yRYg38/9.png)](https://postimg.cc/GTC0HXSg)
-
+[![Screenshot-1.png](https://i.postimg.cc/Hs6bG7Ck/Screenshot-1.png)](https://postimg.cc/qzCNyqRP)
 Пример работы SH кода:
 
 [![Screenshot-2.png](https://i.postimg.cc/gkHGSv8n/Screenshot-2.png)](https://postimg.cc/ppyNy50H)
