@@ -14,7 +14,7 @@
 ```
 ## Описание алгоритма. Пример запуска и выполнения программы.(.bat)
 
-![image](pictures/bat.png)
+![image1](pictures/bat.png)
 
 ### Алгоритм программы
 
@@ -129,8 +129,8 @@ if !number! geq %N% (
 
 Что мы имеем до:
 
-![image](pictures/Dirbef.png)
+![image2](pictures/Dirbef.png)
 
 Что мы имеем после:
 
-![image](pictures/Diraft.png)
+![image3](pictures/Diraft.png)
