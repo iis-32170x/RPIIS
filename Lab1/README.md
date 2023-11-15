@@ -129,8 +129,8 @@ if !number! geq %N% (
 
 Что мы имеем до:
 
-![image](pictures/directory_before.png)
+![image](pictures/Directory_before.png)
 
 Что мы имеем после:
 
-![image](pictures/directory_after.png)
+![image](pictures/Directory_after.png)
