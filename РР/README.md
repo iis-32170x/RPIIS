@@ -80,18 +80,20 @@
 Код, выполняющий наш алгоритм:
 
 ```c++
+
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <queue>
 using namespace std;
 
 int shortestCycle(vector<vector<int>>& adjList, int n) {
-    int minCycle = n + 1; 
+    int minCycle = n + 1;
 
     for (int i = 0; i < n; i++) {
-        vector<bool> visited(n, false); 
-        queue<pair<int, int>> q; 
-        q.push({ i, 0 }); 
+        vector<bool> visited(n, false);
+        queue<pair<int, int>> q;
+        q.push({ i, 0 });
 
         while (!q.empty()) {
             int cur = q.front().first;
@@ -99,8 +101,8 @@ int shortestCycle(vector<vector<int>>& adjList, int n) {
             q.pop();
 
             for (int neighbor : adjList[cur]) {
-                if (neighbor == i) { 
-                    minCycle = min(minCycle, dist + 1); 
+                if (neighbor == i) {
+                    minCycle = min(minCycle, dist + 1);
                 }
                 else if (!visited[neighbor]) {
                     visited[neighbor] = true;
@@ -111,29 +113,27 @@ int shortestCycle(vector<vector<int>>& adjList, int n) {
     }
 
     if (minCycle == n + 1) {
-        return -1; 
+        return -1;
     }
     else {
-        return minCycle; 
+        return minCycle;
     }
 }
 
 int main() {
     setlocale(LC_ALL, "ru");
+    ifstream inputFile("graph.txt");
     int n, m;
-    cout << "Введите количество вершин: ";
-    cin >> n;
-    cout << "Введите количество рёбер: ";
-    cin >> m;
+    inputFile >> n >> m;
 
     vector<vector<int>> adjList(n);
-    cout << "Введите список смежности: " << endl;
     for (int i = 0; i < m; i++) {
         int u, v;
-        cin >> u >> v;
+        inputFile >> u >> v;
         u--, v--;
         adjList[u].push_back(v);
     }
+    inputFile.close();
 
     int cycleLength = shortestCycle(adjList, n);
     if (cycleLength == -1) {
@@ -143,6 +143,72 @@ int main() {
         cout << "Обхват графа: " << cycleLength << endl;
     }
 
+    return 0;
+}
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+int shortestCycle(vector<vector<int>>& adjList, int n) {
+    int minCycle = n + 1;
+
+    for (int i = 0; i < n; i++) {
+        vector<bool> visited(n, false);
+        queue<pair<int, int>> q;
+        q.push({ i, 0 });
+
+        while (!q.empty()) {
+            int cur = q.front().first;
+            int dist = q.front().second;
+            q.pop();
+
+            for (int neighbor : adjList[cur]) {
+                if (neighbor == i) {
+                    minCycle = min(minCycle, dist + 1);
+                }
+                else if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    q.push({ neighbor, dist + 1 });
+                }
+            }
+        }
+    }
+
+    if (minCycle == n + 1) {
+        return -1;
+    }
+    else {
+        return minCycle;
+    }
+}
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    ofstream outputFile("obhvat.txt");
+    ifstream inputFile("graph.txt");
+    int n, m;
+    inputFile >> n >> m;
+
+    vector<vector<int>> adjList(n);
+    for (int i = 0; i < m; i++) {
+        int u, v;
+        inputFile >> u >> v;
+        u--, v--;
+        adjList[u].push_back(v);
+    }
+    inputFile.close();
+
+    int cycleLength = shortestCycle(adjList, n);
+    if (cycleLength == -1) {
+        outputFile << "Обхват графа: бесконечность" << endl;
+    }
+    else {
+        outputFile << "Обхват графа: " << cycleLength << endl;
+    }
+
+    outputFile.close();
     return 0;
 }
 ```
@@ -166,39 +232,39 @@ int main() {
 - `if (minCycle == n + 1){ return -1;} `:Проверка, был ли найден цикл во всем графе. Если нет, возвращаем -1, чтобы обозначить отсутствие цикла.
 - `else { return minCycle; }`: Если же цикл был найден, возвращаем его длину.
 
-После реализации алгоритма остаётся, лишь запросить у пользователя орграф(в виде списка смежности) и вывести обхват орграфа.
+После реализации алгоритма остаётся, лишь запросить у пользователя файл сорграфом (в виде списка смежности) и вывести обхват орграфа в новый файл.
 ```c++
 int main() {
     setlocale(LC_ALL, "ru");
+    ofstream outputFile("obhvat.txt");
+    ifstream inputFile("graph.txt");
     int n, m;
-    cout << "Введите количество вершин: ";
-    cin >> n;
-    cout << "Введите количество рёбер: ";
-    cin >> m;
+    inputFile >> n >> m;
 
     vector<vector<int>> adjList(n);
-    cout << "Введите список смежности: " << endl;
     for (int i = 0; i < m; i++) {
         int u, v;
-        cin >> u >> v;
+        inputFile >> u >> v;
         u--, v--;
         adjList[u].push_back(v);
     }
+    inputFile.close();
 
     int cycleLength = shortestCycle(adjList, n);
     if (cycleLength == -1) {
-        cout << "Обхват графа: бесконечность" << endl;
+        outputFile << "Обхват графа: бесконечность" << endl;
     }
     else {
-        cout << "Обхват графа: " << cycleLength << endl;
+        outputFile << "Обхват графа: " << cycleLength << endl;
     }
 
+    outputFile.close();
     return 0;
 }
 ```
 
 ## Тестирование
-Все тесты производились только через консоль. Скрины правильной работы тестов вы можетет посмотреть [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%A1%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%91/%D0%A0%D0%A0/%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%8B%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
+Все тесты и наглядное изображение графов можетете посмотреть  [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%A1%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%91/%D0%A0%D0%A0/%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%8B%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
 
 ## Вывод
  
