@@ -80,18 +80,17 @@
 Код, выполняющий наш алгоритм:
 
 ```c++
-
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <queue>
 using namespace std;
 
-int shortestCycle(vector<vector<int>>& adjList, int n) {
-    int minCycle = n + 1;
+int shortestCycle(vector<vector<int>>& adjList, int numberofsize) {
+    int minCycle = numberofsize + 1;
 
-    for (int i = 0; i < n; i++) {
-        vector<bool> visited(n, false);
+    for (int i = 0; i < numberofsize; i++) {
+        vector<bool> visited(numberofsize, false);
         queue<pair<int, int>> q;
         q.push({ i, 0 });
 
@@ -112,7 +111,7 @@ int shortestCycle(vector<vector<int>>& adjList, int n) {
         }
     }
 
-    if (minCycle == n + 1) {
+    if (minCycle == numberofsize + 1) {
         return -1;
     }
     else {
@@ -121,25 +120,26 @@ int shortestCycle(vector<vector<int>>& adjList, int n) {
 }
 
 int main() {
-   setlocale(LC_ALL, "ru");
-string line;
-cout << "Введите файл: ";
-cin >> line;
-ifstream inputFile(line);
-ofstream outputFile("obhvat.txt");
-int n, m;
-inputFile >> n >> m;
+    setlocale(LC_ALL, "ru");
+    string line;
+    cout << "Введите файл: ";
+    cin >> line;
+    ifstream inputFile(line);
+    ofstream outputFile("obhvat.txt");
+    int numberof_usl, numberof_rebr;
+    inputFile >> numberof_usl >> numberof_rebr;
 
-    vector<vector<int>> adjList(n);
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        inputFile >> u >> v;
-        u--, v--;
-        adjList[u].push_back(v);
+
+    vector<vector<int>> adjList(numberof_usl);
+    for (int i = 0; i < numberof_rebr; i++) {
+        int usl, s_usl;
+        inputFile >> usl >> s_usl;
+        usl--, s_usl--;
+        adjList[usl].push_back(s_usl);
     }
     inputFile.close();
 
-    int cycleLength = shortestCycle(adjList, n);
+    int cycleLength = shortestCycle(adjList, numberof_usl);
     if (cycleLength == -1) {
         outputFile << "Обхват графа: бесконечность" << endl;
     }
@@ -150,15 +150,14 @@ inputFile >> n >> m;
     outputFile.close();
     return 0;
 }
-}
 ```
 
 ## Разбор кода:
 
-- `#include <vector>` и `#include <queue>`: библиотеки , которые предоставляют возможность использовать векторы и очереди.
-- `int shortestCycle(vector<vector<int>>& adjList, int n)`: Объявление функции shortestCycle, которая принимает ссылку на вектор векторов adjList и целочисленное значение n, обозначающее количество вершин в графе. Функция возвращает целочисленное значение - длину кратчайшего цикла в графе, либо -1, если цикл отсутствует.
-- `for (int i = 0; i < n; i++)` : Цикл, в котором происходит перебор всех вершин графа. Внутри этого цикла будет запущен поиск кратчайшего цикла из каждой вершины:
-  -   `vector<bool> visited(n, false) `: Объявление вектора visited размером n, которая будет использоваться для отслеживания посещенных вершин во время обхода графа.
+- `#include <vector>`, `#include <fstream>` и `#include <queue>`: библиотеки , которые предоставляют возможность использовать векторы, файлы и очереди.
+- `int shortestCycle(vector<vector<int>>& adjList, int numberofsize)`: Объявление функции shortestCycle, которая принимает ссылку на вектор векторов adjList и целочисленное значение n, обозначающее количество вершин в графе. Функция возвращает целочисленное значение - длину кратчайшего цикла в графе, либо -1, если цикл отсутствует.
+- `for (int i = 0; i < numberofsize; i++)` : Цикл, в котором происходит перебор всех вершин графа. Внутри этого цикла будет запущен поиск кратчайшего цикла из каждой вершины:
+  -   `vector<bool> visited(numberofsize, false) `: Объявление вектора visited размером n, которая будет использоваться для отслеживания посещенных вершин во время обхода графа.
   - `queue<pair<int, int>> q`: Объявление очереди q с элементами типа pair<int, int>, где первый элемент - вершина графа, а второй - расстояние от начальной вершины.
   - `q.push({ i, 0 })`: Добавление начальной вершины i в очередь q с расстоянием 0.
   - `while (!q.empty())`: Цикл, который будет выполняться, пока очередь не станет пустой. Здесь происходит обход графа в ширину (BFS) из текущей вершины:
@@ -169,7 +168,7 @@ inputFile >> n >> m;
      -   `if (neighbor == i)` : Проверка, является ли смежная вершина начальной вершиной. Если да, то обновляем значение minCycle, если текущее расстояние до неё меньше, чем сохраненное в minCycle.
      -   `if (neighbor == i)`: Проверка, является ли смежная вершина начальной вершиной. Если да, то обновляем значение `minCycle` с помощью строки `minCycle = min(minCycle, dist + 1)`
      -   `else if (!visited[neighbor])`: Проверка, была ли уже посещена смежная вершина. Если нет, то добавляем её в очередь c помощью строк `visited[neighbor] = true` и `q.push({ neighbor, dist + 1 })`.
-- `if (minCycle == n + 1){ return -1;} `:Проверка, был ли найден цикл во всем графе. Если нет, возвращаем -1, чтобы обозначить отсутствие цикла.
+- `if (minCycle == numberofsize  + 1){ return -1;} `:Проверка, был ли найден цикл во всем графе. Если нет, возвращаем -1, чтобы обозначить отсутствие цикла.
 - `else { return minCycle; }`: Если же цикл был найден, возвращаем его длину.
 
 После реализации алгоритма остаётся, лишь запросить у пользователя файл с орграфом (в виде списка смежности) и вывести обхват орграфа в новый файл.
@@ -181,20 +180,20 @@ int main() {
     cin >> line;
     ifstream inputFile(line);
     ofstream outputFile("obhvat.txt");
-    int n, m;
-    inputFile >> n >> m;
+    int numberof_usl, numberof_rebr;
+    inputFile >> numberof_usl >> numberof_rebr;
 
 
-    vector<vector<int>> adjList(n);
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        inputFile >> u >> v;
-        u--, v--;
-        adjList[u].push_back(v);
+    vector<vector<int>> adjList(numberof_usl);
+    for (int i = 0; i < numberof_rebr; i++) {
+        int usl, s_usl;
+        inputFile >> usl >> s_usl;
+        usl--, s_usl--;
+        adjList[usl].push_back(s_usl);
     }
     inputFile.close();
 
-    int cycleLength = shortestCycle(adjList, n);
+    int cycleLength = shortestCycle(adjList, numberof_usl);
     if (cycleLength == -1) {
         outputFile << "Обхват графа: бесконечность" << endl;
     }
