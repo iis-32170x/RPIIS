@@ -9,10 +9,10 @@
      параметры пакетного файла), имена найденных файлов вывести в файл result.txt.
 Код bat:
 
-https://file.io/8aO1bKkGnTHs
+[![Screenshot-2023-11-15-164932.png](https://i.postimg.cc/KvYVnBGP/Screenshot-2023-11-15-164932.png)](https://postimg.cc/ThZCxyW1)
 
 КОД sh:
 
-https://file.io/6COsAHl3EH9Z
+[![Screenshot-2023-11-15-165538.png](https://i.postimg.cc/3JWSyh19/Screenshot-2023-11-15-165538.png)](https://postimg.cc/qzVXY99C)
 
 
