@@ -91,13 +91,13 @@ int shortestCycle(vector<vector<int>>& adjList, int numberofsize) {
 
     for (int i = 0; i < numberofsize; i++) {
         vector<bool> visited(numberofsize, false);
-        queue<pair<int, int>> q;
-        q.push({ i, 0 });
+        queue<pair<int, int>> uslqueue;
+        uslqueue.push({ i, 0 });
 
-        while (!q.empty()) {
-            int cur = q.front().first;
-            int dist = q.front().second;
-            q.pop();
+        while (!uslqueue.empty()) {
+            int cur = uslqueue.front().first;
+            int dist = uslqueue.front().second;
+            uslqueue.pop();
 
             for (int neighbor : adjList[cur]) {
                 if (neighbor == i) {
@@ -105,7 +105,7 @@ int shortestCycle(vector<vector<int>>& adjList, int numberofsize) {
                 }
                 else if (!visited[neighbor]) {
                     visited[neighbor] = true;
-                    q.push({ neighbor, dist + 1 });
+                    uslqueue.push({ neighbor, dist + 1 });
                 }
             }
         }
