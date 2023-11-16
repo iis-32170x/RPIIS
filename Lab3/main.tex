@@ -1,22 +1,30 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[top=2cm, bottom=1.8cm, left=2.5cm, right=2.5cm, footskip=15mm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm, footskip=15mm]{geometry}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{mathptmx}
 \usepackage{enumitem}
-
+\usepackage{biblatex}
 \usepackage{enumitem}
+\usepackage{romannum}
 
 \graphicspath{{images/}}
 \setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
-\setlist[enumerate]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
 
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
 
 \begin{document}
 {\fontfamily{ptm}\selectfont
 \begin{multicols}{2}
 
+
+\pagenumbering{arabic}
 \setcounter{page}{57}
 
 \begin{itemize}
@@ -88,7 +96,7 @@ account \textit{logical communication channels}.
 
 \begin{center}
     \vspace{+6pt}
-    {\large VI. Conclusion}
+    {\large \Romannum{6}. Conclusion}
 \end{center}
 
 \vspace{-2pt}
@@ -143,6 +151,7 @@ in such memory.
     {\fontfamily{cmtt}\selectfont {\large A}CKNOWLEDGEMENT}
 \end{center}
 
+
 The author would like to thank the research groups of
 the Departments of Intelligent Information Technologies
 of the Belarusian State University of Informatics and
@@ -151,10 +160,12 @@ for their help in the work and valuable comments.
 
 \begin{center}
     {\fontfamily{cmtt}\selectfont {\large R}EFERENCES}
+    \vspace{-30pt}
 \end{center}
 
 {\footnotesize
-\begin{enumerate}[label={[\arabic*]}]
+\renewcommand\refname{}
+\begin{thebibliography}{65}
     \item J. von Neumann, “First draft of a report on the EDVAC,” \textit{IEEE
 Annals of the History of Computing}, vol. 15, no. 4, pp. 27–75,
 1993.
@@ -411,9 +422,8 @@ parallel computer focused on solving artificial intelligence
 problems],” PhD diss.: 05.13.11, Minsk, 2000, 236 p.
 
 
-\end{enumerate}
+\end{thebibliography}
 }
-
 
 \end{multicols}
 }
