@@ -1,5 +1,3 @@
-#!/bin/bash
-
 if [ ! -d "$1" ]; then
   echo "Данной папки нет"
   exit 0
