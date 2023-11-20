@@ -1,0 +1,324 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=17.5mm, top=18mm, right=17.5mm, bottom=18mm]{geometry}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+\usepackage[english,russian]{babel}
+\date{}
+\setcounter{page}{228}
+
+\begin{document}
+\begin{multicols}{2}
+\noindent changed. This is normal for new scientific directions and
+technologies. The reader should not be surprised if in
+other sources they meet different formulations, terms.
+\per 
+A detailed description of the functionality of CАS and
+СMS can be found in [6], the current state, an overview
+of the systems on the market can be clarified in [7], a
+brief outline (basic features) for beginners can be found
+in [8].
+\begin{center} IV. COMPUTER ALGEBRA TOOLS\\
+\end{center}
+\par \textbf{Regarding the classification of СAS.}  A fairly complete list with the functionality of symbolic computation
+systems and the platforms they operate on can be found
+in [7]. Classification attributes of СAS are: functional
+purpose, type of architecture, means of implementation,
+fields of application, integral quality assessments.    \\ 
+\noindent A. \textit{Basic functionality of} СAS
+\par AS allow computer-assisted implementation of analytical and numerical methods for solving problems,
+presenting the results in mathematical notation, providing
+graphic visualization, design of the results, and preparation for publication. Using СAS and a computer, it
+is possible to perform in analytical form the following
+computations:
+\par
+\begin{itemize}
+    \item simplifying expressions or reducing to the standard
+form;
+    \item bstituting symbolic and numeric values into expressions;
+    \item extraction of common factors and divisors;
+    \item exponentiation of products and powers, factorization;
+    \item decomposition into simple fractions;
+    \item finding limits of functions and sequences;
+    \item operations with series;
+    \item differentiation in full and partial derivatives;
+    \item finding undetermined and definite integrals;
+    \item continuity analysis of functions;
+    \item finding extremes of functions and their аsymptotes;
+    \item operations with vectors;
+    \item matrix operations;
+    \item finding solutions to linear and nonlinear equations;
+    \item symbolic solution of optimization problems;
+    \item algebraic solution of differential equations;
+    \item integral transformations;
+    \item direct and inverse fast Fourier transform;
+    \item interpolation, extrapolation and approximation;
+    \item statistical computations;
+    \item machine theorem proving.
+\end{itemize}
+\par 
+If a problem has a accurate analytical solution, the user
+of CAS can get this solution in explicit form (of course,
+we are talking about problems for which the algorithm
+of solution construction is known).
+\begin{itemize}
+    \item  integer arithmetic for large numbers;
+    \item calculation of fundamental constants with arbitrary
+precision;
+    \item support for number theory functions;
+    \item editing mathematical expressions in twodimensional form;
+    \item  graphing of analytically defined functions;
+    \item function graphing using table values;
+    \item plotting function graphs in two or three dimensions;
+    \item animation of the plots of various types;
+    \item use of special-purpose extension packages;
+    \item programming in the built-in language;
+    \item automatic formal verification;
+    \item program synthesis.
+\end{itemize}
+\par СAS in the modern implementation are not only
+applicable for the study of various mathematical and
+scientific and technical problems using built-in and additional functions, but also contain all the components of
+programming languages – de facto are problem-oriented
+high-level programming languages.
+\par \underline{Mathemаtica and Maple are the leaders of СAS} - \\
+B. \textit{ Noncommercial general-purpose}  СAS 
+\par
+A distinctive feature of the current state of IT is that
+commercial software products in many cases can be fully
+or partially replaced by non-commercial software, analogues with open source – free software. This includes
+software products which, with or without modification,
+have no restrictions on use, copying or transferring to
+other users, whether for a fee or for free. The following
+is a reference to software released under the GРL.
+\par  \textbf{Maxima.} Maxima is a free, full-featured computer
+algebra system, a descendant of Mаcsyma, which was
+developed as part of the Artificial Intelligence Project at
+the Massachusetts Institute of Technology from 1968 to
+1982 (development stages and leaders of the development
+teams of the main sections listed in [9]). Experts note
+that Maxima, unlike Mаthematica and Maple, is mainly
+oriented toward applied mathematical calculations. In
+this connection, the system lacks or reduces sections
+related to theoretical methods, such as number theory,
+group theory, algebraic fields, and mathematical logic.
+At the same time, numbers in mathematical expressions
+in the system are assumed to be real by default. This
+allows to get analytical solutions for many computations encountered in applied problems (such as algebraic
+transformations and simplifications, integration, solution
+of differential equations), for which solutions do not
+exist in the complex domain. Maxima itself is a console
+\newpage
+\noindent program; it “draws” all mathematical formulas with
+regular text characters. This has some advantages. For
+example, you can use Maxima itself as a kernel to build
+various graphical special interfaces on top of it. There
+are several examples to date. We can recommend the
+following textbook as a basic introduction to Maxima
+СAS, available in electronic form [10].
+\par 
+\textbf{Axiom.} Axiom is a free computer algebra system [11].
+It consists of an interpreter environment, a compiler, and
+a library describing a strict, mathematically correct type
+hierarchy. Its development was begun in 1971 by a group
+of IBM researchers, led by Richard Dimick Jenks. The
+original name of the system was Scratchpad. Originally
+the project was seen as a research platform for developing new ideas in computational mathematics. It was
+sold to the Numerical Algorithms Group (NAG) in the
+1990s, named Axiom, and became a commercial product,
+but was not a commercial success and was withdrawn
+from the market in October 2001. NAG made Axiom free
+software and opened the source code under a modified
+BSD license. Development of the system continues, with
+releases of new versions [11]. In 2007, Axiom had two
+open-source forks: OpenAxiom and FriCAS.
+\par \underline{OpenAxiom} [12] released version 1.4.2 in April 2013.
+The main changes implemented in this version relate to
+the work of the compiler. The aforementioned system for
+preparing and editing documents with GNU TeXmacs
+mathematical notation can be used as an OpenAxiom interface.
+\par 
+Another branch of Axiom that is being actively developed is \underline{FriCAS}[13], version 1.3.8 (version 22/06/2022)
+is currently in use. FriCAS favourably differs from other
+general-purpose CAS by the developed type hierarchy
+corresponding to real mathematical structures. Axiom
+and the named branches are inferior to Maxima at this
+stage in the pace of development. It is better for beginners
+to focus on Maxima.
+\par
+The above information about Maxima, Axiom CAS is
+specifically given because their codes are open, can be
+used in the Ecosystem OSTIS.
+\noindent C. \textit{Proprietary } CMS, CAS
+\par \textbf{MATLAB programming system } m (short for Matrix
+Laboratory) was developed by The MathWorks, Inc. It is
+one of the oldest, thoroughly developed and time-tested
+systems for automating mathematical calculations, built
+on an extended representation and application of matrix
+operations. Nowadays the system has gone far beyond
+specialized matrix and has become one of the most
+powerful universal integrated CMSs. MATLAB includes
+tools for developing complex programs with an advanced
+graphical interface, is an effective environment for conducting research, creating models, solving natural science
+and engineering problems [14]. The system has become
+de-facto one of the world standards in the field of modern
+mathematical and scientific and technical software. First
+of all, CMS is focused on numerical calculations, with
+matrix algebra being particularly prominent. The effectiveness of the system is primarily due to its orientation
+to work with multidimensional arrays, large and sparse
+matrices with software emulation of parallel calculations
+and simplified tools for setting cycles. Recent versions
+of the system support 64-bit microprocessors and multicore microprocessors such as Intel Core 2 Duo and Quad.
+System functionality is provided by a rich command
+library and its own programming language. MATLAB
+is the largest of all PC-oriented systems due to large
+number of extension packages it comes with. Its file size
+exceeds 3 GB. MATLAB works on most modern operating systems, including Linux, macOS, Solaris (support
+for Solaris is discontinued since R2010b) and Windows.
+There are many publications describing the system and
+its components – in Russian [15] can be noted.
+\par Versions history of MATLAB can be traced in [16].
+Focusing only on notable items in terms of AI, machine
+learning, and data mining for versions after 2012 (code
+R2012* means the 2012 version):
+\begin{itemize}
+    \item  MATLAB 8.2 R2013b – added table data type, Java
+runtime updated to version 7;
+    \item  MATLAB 8.4 R2014b – added improved user toolbar, new functions and packages, such as py (to use
+Python), web page counter, histograms, TCP client,
+and others;
+    \item  MATLAB 8.6 R2015b – new runtime mechanism
+(LXE) and new classes, such as graphs and orgraphs, have been added to handle graphs;
+    \item  MATLAB 9.1 R2016b – official MATLAB engine
+for JAVA, new encoding and decoding functions for
+JSON, new "string" data type added; algorithms for
+handling non-memory data, including algorithms for
+dimensionality reduction, descriptive statistics, kmeans clustering, linear regression, logistic regression and discriminant analysis; Bayesian optimization to automatically adjust machine learning algorithm parameters, component neighborhood analysis
+(NCA) to select machine learning model functions;
+    \item  MATLAB 9.5 R2018b – implemented graph axis
+interaction, which provides efficient data analysis
+with panning, zooming; added functions: removing
+outliers in an array, table or schedule; setting a local
+environment about each element in the input data;
+    \item  MATLAB 9.6 R2019a – Added Functions to specify
+the location of a missing value, detect outliers
+using percentiles; Implemented improvements for
+artificial intelligence and analytics;
+    \item MATLAB 9.7 R2019b – includes updates on artificial intelligence (new features allow users to
+train advanced network architectures using custom
+learning cycles, automatic differentiation, common
+weights, and custom loss functions; users can create
+generative adversarial GANs, Siamese networks,
+\newpage
+variational autocoders, and attention networks; Deep
+Learning Toolbox can also now export to ONNX
+format networks that combine CNN and LSTM
+layers, and networks that include 3D CNN layers);
+
+    \item  MATLAB 9.11 R2021b – added: a set of tools for
+statistics and machine learning (signal and image
+analysis, preprocessing and parameter extraction using wavelet methods and interactive applications for
+artificial intelligence models), k-means clustering in
+real problems;
+    \item  MATLAB 9.13 R2022b includes updates on artificial intelligence, a set of system identification tools
+– create nonlinear state-space models based on deep
+learning using neural ordinary differential equations
+(ODEs); machine learning and deep learning techniques can also represent nonlinear dynamics in
+nonlinear ARX and Hammerstein-Wiener models.
+\end{itemize}
+\par
+ATLAB is a commercial system; there are noncommercial versions of its type that are compatible in
+basic language constructs, but not compatible in library
+functions. For example, Scilab, Maxima, Euler Math
+Toolbox and Octave.
+\par
+MATLAB includes a command interpreter, graphical
+shell, editor-debugger, profiler, compiler, symbolic kernel
+Maple for analytical calculations, mathematical libraries
+and Toolboxes libraries, designed to work with special
+classes of tasks.
+\par 
+\underline{MATLAB language.} MATLAB system is both an operating environment and a programming language. MATLAB language is a high-level interpreted programming
+language. Programs written in MATLAB are of two
+types: functions and scripts. MATLAB programs, both
+console and GUI, can be compiled using MATLAB Compiler component into independent executable applications
+or dynamic libraries. MATLAB Builder programs extend
+the capabilities of MATLAB Compiler and allow you to
+create independent Java, .NET or Excel components.
+\par
+\underline{Basic extension packages.} A feature of MATLAB
+CMS is the ability to create special toolboxes. MathWorks supplies more than 80 toolboxes that are used in
+many areas. In recent releases, the company classifies
+them into three families – MATLAB, SIMULINK and
+Polyspace [14], as well as partner products.
+\par \textbf{Maple. } Mathematica and Maple are the leaders of
+CAS, and they are often compared. This seems counterproductive. Each of the systems named has its own
+characteristics, and they have their own strengths and
+weaknesses; constantly competing with each other, they
+are evolving and improving. Most CAS users have experienced several other systems before choosing their
+primary system. The exchange of opinions, the analysis
+of publications, and presentations at conferences and
+seminars allow us to state that each system has its own
+adherents, and it is useless to convince specialists who
+have been using CAS for quite a long time that a system
+other than the one they prefer is somehow better than the
+others. In most cases, the main factor in using a particular
+CAS is the user’s habit. However, many note that having
+mastered any of the systems, it is easy to work with
+others.
+\par In terms of completeness and interface solutions,
+Mathematica and Maple tools for symbolic and numerical computation are perfect, not the lack of any functions
+or tools, but the skills of the users. It is impossible to give
+a complete overview of the capabilities of Maple, as well
+as Mathematica. It is unlikely that any of the authors of
+even specialized publications with a book focus on a particular class of problems can present all of the tools of the
+named CAS from the spectrum they cover. This material
+can only be regarded as an introduction to the capabilities
+of the system, mentioning classes of problems of interest
+to undergraduates, graduate students, postgraduates, researchers, and programmers. Again, the functionality of
+Mathematica and Maple in almost everything related to
+mathematics, applied mathematics, and computer science
+is not only sufficient, but also redundant. Since the main
+list of features of CAS has already been given above,
+and in Maple they are implemented, here we will note
+what in a number of sources is either omitted or called
+by other terms.
+\par
+There are many books devoted to the Maple system
+around the world, a list of which can be found on
+the developer’s section [17]. Publications in Russian
+can be tracked by [18], [19]. Despite its fundamental
+nature and focus on the most serious mathematical calculations, Maple-class systems are needed by a fairly
+wide category of users: university students and teachers,
+engineers, graduate students, researchers, and even students of mathematics classes of general education and
+special schools. Maple is a typical integrated software
+system [19]–[21].
+\par
+The main Maple document is the Worksheet, which is
+similar to editing in a text editor. Text can be formatted at
+the paragraph level, with different styles, or as symbols.
+The content of the document can be structured into
+sections, sub-sections, etc., all the way down to cells.
+\par
+Like most CAS, the Maple interface combines text and
+command processor functions. Since version 8, Maplets
+have been added to the system to support visuallyoriented dialog.
+\par
+Maple (like Mathematica) integrates three languages:
+communication language, implementation, and programming.
+\par
+The Maple kernel and all of its components improve
+from version to version. Many of the functions built into
+the system, like the kernel functions, can be used without
+any declaration, others need to be declared. There are
+several problem-oriented packages (packages) that cover
+many branches of classical and modern mathematics. The
+total number of functions in Maple, including those built
+
+
+\end{multicols}
+\end{document}
