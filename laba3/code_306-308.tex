@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=17mm, top=17mm, right=17mm, bottom=25mm, nohead]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{mathtools}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=1.4pt}
+\setcounter{page}{306}
+\date{}
+\begin{document}
+\begin{multicols}{2}
+\begin{description}[leftmargin=!, labelwidth=0.7cm, itemsep=-1.5mm]
+tems for detecting attacks at the network level and promptly responding to them. AI uses the accumulated statistics and knowledge base about threats;
+\end{description}
+\begin{itemize}
+    \item SOAR (Security Orchestration and Automated Response) — systems that allow you to identify information security threats and automate incident response. In solutions of this type, unlike SIEM systems, AI helps not only to analyze, but also automatically respond appropriately to identified threats;
+    \item Application Security — systems that allow you to identify threats to the security of application applications, manage the process of monitoring and eliminating such threats;
+    \item Antifraud — platforms detect threats in business processes and fraudulent transactions in real time. AI is used to identify deviations from identified business processes in order to detect intrusions or process vulnerabilities and increase adaptability to changing business process logic and metrics.
+\end {itemize}
+\par
+The paper [3] proposes a method for constructing a neuroimmune system for analyzing information security incidents that combines data collection and storage (compression) modules, an information security event analysis and correlation module, and a network attack detection subsystem based on convolutional neural networks. The use of machine learning technologies in information security creates bottlenecks and system vulnerabilities that can be exploited and has the following disadvantages [4]:
+\begin{itemize}
+    \item  data sets that must be formed from a significant
+number of input samples, which requires a lot of
+time and resources;
+     \item requires a huge amount of resources, including
+memory, data and computing power;
+     \item frequent false positives that disrupt the operation and
+generally reduce the effectiveness of such systems;
+     \item organized attacks based on artificial intelligence
+(semantic viruses).
+\end{itemize}
+\par 
+\textbf{Organization of information security in intelligent
+systems of a new generation}
+\par
+Let’s define the goals of ensuring the information security of new generation systems.
+\par
+From the monograph [5] the objectives of ensuring the information security of traditional intelligent systems are:
+\begin{itemize}
+    \item ensuring the confidentiality of information in accordance with the classification;
+    \item ensuring the integrity of information at all stages of related processes (creation, processing, storage, transfer and destruction) in the provision of public services;
+    \item ensuring timely availability of information in the
+provision of public services;
+    \item ensuring observability aimed at capturing any activity
+of users and processes;
+    \item ensuring the authenticity and impossibility of refusal of transactions and actions performed by participants in the provision of public services;
+     \item accounting for all processes and events related to the input, processing, storage, provision and destruction of data.
+\end{itemize}
+\par Since intelligent systems of the new generation will interact with similar systems while understanding what the request is about, the goals of the provision will look different. The goals of ensuring the information security of new generation intelligent systems are:
+\begin{itemize}
+    \item ensuring the safety of the semantic compatibility of information;
+    \item ensuring the availability of information at different
+levels of the intellectual system;
+    \item minimization of damage from events that pose a
+threat to information security.
+\end{itemize}
+\par Currently, classical approaches and principles have
+been developed to ensure the security of knowledge bases
+(data), communication interfaces (information exchange)
+between the components of intelligent systems, such as
+encryption of transmitted data, filtering of unnecessary
+(redundant) content, and data access control policy.
+\par The information security system should be created on
+the following principles:
+\begin{itemize}
+    \item the principle of equal strength - means ensuring
+the protection of equipment, software and control
+systems from all types of threats;
+    \item the principle of continuity - provides for continuous
+security of information resources of the system for
+the continuous provision of public services;
+    \item the principle of reasonable sufficiency - means the
+application of such measures and means of protection
+that are reasonable, rational and the costs of which
+do not exceed the cost of the consequences of
+information security violations;
+    \item the principle of complexity - to ensure security in
+all the variety of structural elements, threats and
+channels of unauthorized access, all types and forms
+of protection must be applied in full;
+    \item the principle of comprehensive verification - is to
+conduct special studies and inspections, special engineering analysis of equipment, verification studies of
+software. Emergency messages and error parameters
+should be continuously monitored, hardware and
+software equipment should be constantly tested,
+as well as software integrity control, both during
+software loading and during operation;
+    \item the principle of reliability - methods, means and
+forms of protection must reliably block all penetration routes and possible channels of information
+\end{itemize}
+
+\begin{description}[leftmargin=!, labelwidth=0.7cm, itemsep=-1.5mm]
+leakage; for this, duplication of means and security
+measures is allowed;
+\end{description}
+\par
+\vspace{-0.4cm} \begin{itemize}
+    \item the principle of universality - security measures
+should block the path of threats, regardless of the
+place of their possible impact;
+    \item the principle of planning – planning should be carried
+out by developing detailed action plans to ensure
+the information security of all components of the
+system for the provision of public services;
+    \item the principle of centralized management – within
+a certain structure, the organized and functional
+independence of the process of ensuring security in
+the provision of public services should be ensured;
+    \item the principle of purposefulness – it is necessary to
+protect what must be protected in the interests of a
+specific goal;
+    \item the principle of activity - protective measures to
+ensure the safety of the service delivery process
+must be implemented with a sufficient degree of
+persistence;
+    \item the principle of service personnel qualification –
+maintenance of equipment should be carried out
+by employees who are trained not only in the
+operation of equipment, but also in technical issues
+of information security;
+    \item the principle of responsibility - the responsibility
+for ensuring information security must be clearly
+established, transferred to the appropriate personnel
+and approved by all participants as part of the
+information security process.
+\end{itemize}
+ \begin{center} III.  THE PRINCIPLES UNDERLYING THE INFORMATION
+SECURITY OF OSTIS SYSTEMS
+\end{center}
+The OSTIS ecosystem is a collective of interacting:
+\begin{itemize}
+    \item ostis-systems;
+    \item  users of ostis systems (end users and developers);
+    \item other computer systems that are not ostis-systems,
+but are additional information resources or services
+for them.
+\end{itemize}
+\par 
+The core of OSTIS technology includes the following
+components:
+\begin{itemize}
+    \item semantic knowledge base OSTIS, which can describe
+any kind of knowledge, while it can be easily
+supplemented with new types of knowledge;
+    \item OSTIS problem solver based on multi-agent approach. This approach makes it easy to integrate
+and combine any problem solving models;
+    \item ostis-system interface, which is a subsystem with its
+own knowledge base and problem solver.
+\end{itemize}
+\par
+The presented architecture of the OSTIS Ecosystem
+implements:
+    \begin{itemize}
+        \item  all knowledge bases are united into the Global
+Knowledge Base, the quality of which (logicality,
+correctness, integrity) is constantly checked by many
+agents. All problems are described in a single knowledge base, and specialists are involved to
+eliminate them, if necessary;
+    \item each application associated with the OSTIS Ecosystem has access to the latest version of all major
+OSTIS components, components are updated automatically;
+    \item each owner of the OSTIS Ecosystem application can
+share a part of their knowledge for a fee or for free.
+\end{itemize}
+    \par
+It is important to note that information security is
+closely related to the architecture of the built system: a
+well-designed and well-managed system is more difficult
+to hack. Therefore, it is very important to develop an
+information security system at the stage of designing
+the architecture and structure of a future next-generation
+intelligent system.
+    \par 
+The OSTIS Ecosystem is a community where ostis
+systems and users interact, where rules must be established and controlled. Illegal and destabilizing actions by
+all members of the community should not be allowed.
+The user cannot directly interact with other ostis systems,
+but only through a personal agent. This agent stores all
+personal data of the user and access to them should be
+limited.
+    \par 
+In the OSTIS Ecosystem, all agents must be identified.
+It should be noted that the personal user agent in the
+Ecosystem solves the problem of identifying the user
+himself.
+    \par
+    In the considered OSTIS Ecosystem, it is required to
+organize information security at each of the levels of
+interaction: data exchange, data access rights, authentication of Ecosystem clients, data encryption, obtaining
+data from open sources, ensuring the reliability and
+integrity of stored and transmitted data, monitoring the
+violation of communications in knowledge base, tracking
+vulnerabilities in the system.
+\vspace{0.7cm}
+\par
+\noindent \textit{\textbf{threat in ostis-system}}
+ \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+   \item[$\supset$] \textit {threat. breach of confidentiality of information}
+   \hspace{0.5cm} $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+   \par \vspace{-0.1cm} \hspace{1cm} \textbf{[}unauthorized access to read information\textbf{]}
+    \item[$\supset$] \textit {threat. violation of the integrity of information} \\
+   \vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+     \par
+      \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+     \item[ ] \vspace{-0.4cm} \textbf{[}unauthorized or erroneous change, distortion or destruction of information, as well
+as unauthorized impact on technical and
+software information processing tools\textbf{]}
+\end{description}
+ \item[$\supset$] \vspace{-0.2cm} \textit {threat. accessibility violation} \\
+   \vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+   \par 
+   \begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+   \item \vspace{-0.5cm} \textbf{[}blocking access to the system, its individual components, functions or information,
+as well as the impossibility of obtaining
+information in a timely manner (unacceptable delays in obtaining information)\textbf{]}
+\end{description}
+ \item[$\supset$] \vspace{-0.2cm} \textit {threat. violation of semantic compatibility} \\
+   \vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+\end{description}
+\end{multicols}
+\begin{figure}
+    \centering
+    \includegraphics{image/Снимок экрана 2023-11-08 124534.png}
+    \caption{OSTIS Ecosystem Architecture}
+    \label{fig:enter-label}
+\end{figure}
+\begin{multicols}{2}
+\begin{description}[leftmargin=!, labelwidth=1cm, itemsep=-1.5mm]
+
+\begin{description}[leftmargin=!, labelwidth=1.2cm, itemsep=-1.5mm]
+   \item \textbf{[}violation of the generality of concepts and
+in the generality of basic knowledge\textbf{]}
+\end{description}
+ \vspace{-0.2cm} \item[$\supset$] \textit{threat. destruction of knowledge base semantics
+(semantic viruses)}
+
+   \vspace{-0.2cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+   \par
+   \begin{description}[leftmargin=!, labelwidth=0.9cm, itemsep=-1.5mm]
+  \item \vspace{-0.3cm}  \textbf{[}substitution or removal of nodes and links
+between them in the knowledge base\textbf{]}
+\end{description}
+
+
+   \vspace{-0.2cm} \item[$\supset$] \textit {threat. excessive amount of incoming information} \\
+    \vspace{-0.4cm}\item[$\supset$] \textit {threat. breach of non-repudiation} \\
+   \vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+  \begin{description}[leftmargin=!, labelwidth=0.9cm, itemsep=-1.5mm]
+   \item \vspace{-0.4cm}\textbf{[}issuance of unauthorized actions as legal,
+as well as concealment or substitution of
+information about the actions of subjects\textbf{]}
+\end{description}
+    
+\item[$\supset$] \vspace{-0.2cm} \textit {threat. breach of accountability} \\
+\vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+ \begin{description}[leftmargin=!, labelwidth=0.9cm, itemsep=-1.5mm]
+   \item \vspace{-0.4cm}\textbf{[}unauthorized or erroneous change, distortion or destruction of information about
+the performance of actions by the subject\textbf{]}
+\end{description}
+
+\item[$\supset$] \vspace{-0.1cm} \textit {threat. violation of authenticity (authenticity)} \\
+\vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:* 
+\begin{description}[leftmargin=!, labelwidth=0.9cm, itemsep=-1.5mm]
+   \item \vspace{-0.4cm}\textbf{[}performing actions in the system on behalf
+of another person or issuing unreliable
+resources (including data) as genuine\textbf{]}
+\end{description}
+
+\item[$\supset$] \vspace{-0.1cm} \textit {threat. breach of credibility
+} \\
+\vspace{0.1cm} \hspace{-0.23cm}  $\Rightarrow$  \hspace{0.5cm} \textit{explanation}:*
+\begin{description}[leftmargin=!, labelwidth=0.9cm, itemsep=-1.5mm]
+   \item \vspace{-0.4cm}\textbf{[}intentional or unintentional provision and
+use of erroneous (incorrect) or irrelevant
+(at a specific point in time) information, as
+well as the implementation of procedures
+in violation of the regulations (protocol)\textbf{]}
+\end{description}
+\end{description}
+
+\par 
+\vspace{-0.1cm} Let’s present the main directions of ensuring the
+information security of ostis-systems to prevent emerging
+threats:
+
+\begin{itemize}
+   \vspace{0.18cm} \item limitation of information traffic analyzed by the 
+intelligent system;
+    \item policy of differentiation of access to the knowledge
+base;
+    \item connectivity;
+    \item introduction of semantic metrics;
+    \item  semantic compatibility;
+    \item activity.
+\end{itemize}
+\par
+It should be noted that at the design stage of the
+OSTIS technology itself, the basic principles of ensuring
+information security were already laid down as part of
+the design of individual components of the system. So
+already initially, support for semantic compatibility and
+cohesion is provided in ostis systems due to the system’s
+ability to detect malicious processes in the knowledge
+base
+\par
+\textbf{Restriction of information traffic analyzed by the
+intelligent system
+}
+\par
+The exponential growth of the volume of information
+circulating in information flows and resources under the
+conditions of well-defined quantitative restrictions on
+the capabilities of the means of its perception, storage,
+transmission and transformation forms a new class of information security threats characterized by the redundancy
+of the total incoming information traffic of intelligent
+systems.
+\par
+As a result, the overflow of information resources of
+an intelligent system with redundant information can
+provoke the spread of distorted (destructive semantic)
+information. The general methodology for protecting
+intelligent systems from excessive information traffic is
+carried out through the use of axiological filters that
+implement the functions of numerical assessment of the
+value of incoming information, selection of the most
+valuable and screening (filtering) of less valuable (useless
+or harmful) using well-defined criteria.
+
+
+\end{multicols}
+\end{document}
