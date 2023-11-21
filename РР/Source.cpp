@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iostream>
 #include <vector>
 #include <utility>
@@ -65,7 +65,7 @@ int main() {
         cin.clear();
         cout << "Это не число \n";
         cout << "Введите количество вершин \n";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(INT_MAX, '\n');
     }
 
     cout << "Введите количество рёбер: \n";
@@ -77,7 +77,7 @@ int main() {
         cin.clear();
         cout << "Это не число \n";
         cout << "Введите количество рёбер \n";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(INT_MAX, '\n');
     }
     Graph graph(n);
     cout << "Введите список инцидентности(числа от 0 до n-1, где n - количество вершин) и вес рёбер: \n";
