@@ -25,20 +25,17 @@ void primMST(Graph& graph) {
 
     key[0] = 0;
 
-    for (int count = 0; count < graph.V - 1; ++count) {
+    for (int count = 0; count < graph.V; count++) {
         int minKey = INT_MAX;
         int u = -1;
-
         for (int v = 0; v < graph.V; ++v) {
             if (!inMST[v] && key[v] < minKey) {
                 minKey = key[v];
                 u = v;
             }
         }
-
         inMST[u] = true;
-
-        for (const auto& neighbor : graph.adjList[u]) {
+        for (auto & neighbor : graph.adjList[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 
@@ -96,7 +93,7 @@ int main() {
             cin.clear();
             cout << "Некорректный ввод\n";
             cout << "Введите 2 вершины и вес: \n";
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.ignore(INT_MAX, '\n');
         }
         graph.addEdge(v, u, weight);
     }
