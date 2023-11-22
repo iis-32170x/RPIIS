@@ -1,0 +1,333 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+ \setcounter{page}{240}
+\begin{document}
+\begin{multicols*}{2}
+of intelligent computer systems. Interoperability should
+be understood as the interaction of intelligent computer
+systems based on mutual understanding between these
+systems themselves. Achieving the quality of interoperability allows the construction of a multi-agent network
+of interoperable intelligent computer systems for medical
+purposes.
+
+The multi-agent architecture of ostis-systems involves
+the development of communicative aspects of machine
+”thinking”, which can be traced in multi-agent systems
+[7]–[9].
+
+OSTIS Technology makes it possible to effectively
+solve the problems of integrating various medical systems into a single interoperable network. To do this,
+it is necessary and sufficient to create an intelligent
+user interface (IPI) for each individual medical system,
+many of which form a single interoperable network. The
+IPI network will combine (integrate) traditional medical
+information systems (MIS), conventional diagnostic systems (DS), intelligent diagnostic systems (IDS), consulting systems (CS), telemedicine systems (TMS), external
+medical knowledge bases (MBZ) and other computer
+systems for medical purposes.
+
+As part of the OSTIS development strategy, the concept of a personal intellectual assistant (secretary, referent) has been developed.
+
+In line with this concept, the intelligent health FSDmonitoring system will act as a personal intellectual
+consultant on individual health-improving and preventive
+regimes of a healthy lifestyle, on the expediency of
+additional diagnostic studies, on the desired timing of
+treatment to a doctor of a particular specialty. The ostissystems development strategy includes the position of
+developing a set of tools for individual comprehensive
+permanent medical control and health monitoring within
+the framework of a personal intelligent assistant.
+\begin{center}
+    V. CONCLUSION
+\end{center}
+Doctors have understood the need for regular monitoring of the health of an individual and the population
+for a very long time. It is also well understood that
+the possibilities of such control are limited by the set
+of diagnostic technologies used, in which there are no
+positions with a sufficiently high efficiency/cost ratio,
+that is, with high efficiency and low cost. In relation to
+the tasks of health control, effectiveness is determined,
+first of all, from the point of view of the possibilities of
+early diagnosis of diseases.
+
+Today, the system of medical examination can be
+conditionally attributed to the monitoring of an individual’s health, but the frequency of a year or two is too
+high for effective monitoring. The cost of functioning
+of the medical examination system is also high and,
+unfortunately, the diagnostic effectiveness of the existing
+medical examination system is low, which was shown in
+the pilot project of using FSD diagnostics in medical
+examination with subsequent verification of diagnoses
+[10].
+\begin{center}
+   REFERENCES
+\end{center}
+ {\small [1] The medical spectral-dynamic complex. Available at: http://http:
+//www.kmsd.su (accessed 2009, Sep)}\\
+{\small [2] V. V. Golenkov, N. A. Gulyakina Printsipy postroeniya massovoi
+semanticheskoi tekhnologii komponentnogo proektirovaniya intellektual’nykh sistem [Principles of construction of mass semantic technology of component design of intelligent systems]. {\emph {Open
+semantic technologies of design of intelligent systems}} (OSTIS-2011): materials of the International Scientific and Technical
+Conference. Minsk, February 10-12, 2011). Minsk: BSUIR, 2011,
+pp. 21–58. }\\
+{\footnotesize [3] J. Jung, I. Choi, M. Song An integration architecture for knowledge management systems and business process management
+systems. \emph{Computers in Industry}, 2007, Vol. 58, pp. 21–34.}\\
+ {\footnotesize [4] V. V. Golenkov, N. A. Gulyakina Semanticheskaya tekhnologiya
+komponentnogo proektirovaniya sistem, upravlyaemykh
+znaniyami [Semantic technology of component design of
+knowledge-driven systems]. \emph{Open semantic technologies of
+intelligent systems design}, 2015, No. 5, pp. 57–78. }\\
+{\footnotesize [5] B. A. Kobrinskii, A. E. Yankovskaya Convergence of Applied
+Intelligent Systems with Cognitive Component.\emph{ Open Semantic
+Technologies for Intelligent System}. Cham, Communications in
+Computer and Information Science, 2020, vol. 1282, pp. 34–47.}\\
+{\footnotesize [6] B. A. Kobrinsky Argumentatsiya i intuitsiya v estestvennom i
+iskusstvennom intellekte [Argumentation and intuition in natural
+and artificial intelligence]. VI National Conference on Artificial
+Intelligence with international participation KII’98: Proceedings
+of the conference, Pushchino, 1998, Vol. 1, pp. 7–14. }\\
+ {\footnotesize [7] V. B. Tarasov Ot mnogoagentnykh sistem k intellektual’nym organizatsiyam: filosofiya, psikhologiya, informatika [From multiagent systems to intellectual organizations: philosophy, psychology, informatics]. M.,Editorial URSS, 2002, P. 352.
+ }\\
+ {\footnotesize [8] V. I. Gorodetsky Samoorganizatsiya i mnogoagentnye sistemy. I.
+Modeli mnogoagentnoi samoorganizatsii [Self-organization and
+multi-agent systems. I. Models of multi-agent self-organization].
+\emph{News of the Russian Academy of Sciences. Theory and control
+systems}, 2012, No. 2, pp. 92–120. }\\
+{\footnotesize [9] V. I. Gorodetsky Samoorganizatsiya i mnogoagentnye sistemy.
+II. Prilozheniya i tekhnologiya razrabotki [Self-organization and
+multi-agent systems. II. Applications and development technology]. \emph{News of the Russian Academy of Sciences. Theory and
+control systems}, 2012, No. 3, pp. 102–123.}\\
+ {\footnotesize [10] V. N. Rostovtsev, T. I. Terekhovich, A. N. Leaders, I. B.
+Marchenkova Diagnosticheskii skrining v sisteme dispanserizatsii
+[Leaders Diagnostic screening in the system of medical examnation].\emph{ Issues of organization and informatization of healthcare},
+2018, No. 2 (95), pp. 39–46.}
+\begin{center}
+   \textbf{Интеллектуальные системы мониторинга здоровья} % ошибка
+\end{center}
+\begin{center}
+ Ростовцев В. Н.
+\end{center}
+\emph{В работе рассмотрены проблемы современного состояния
+комплексного мониторинга здоровья человека, а также соответствующих диагностических технологий. Предложен подход к интеллектуализации процесса регулярного контроля
+здоровья на основе систем ФСД-диагностики}
+\begin{right}
+  Received 13.03.2023
+\end{right}
+\end{multicols*}
+\newpage
+\begin{center}
+\huge{\textbf{Technology of Neurological Disease Recognition Using Gated Recurrent Unit Neural Network and Internet of Things}}
+\vspace{4mm} %5mm vertical space
+\end{center}
+ \begin{center}
+\large{Uladzimir Vishniakou and Yiwei Xia and Chuyue Yu
+
+\textit{Belarusian State University of Informatics and Radioelectronics}
+
+Minsk, Belarus
+
+Email: vish@bsuir.by, minskxiayiwei@qq.com, ycy18779415340@gmail.com}
+\end{center}
+\begin{multicols*}{2}
+\textbf{\textit{Abstract}—In this paper, authors proposed a neurological
+disease recognition technique using gated recurrent unit
+neural network and supporting Internet of Things (IoT),
+which was checked by taking Alzheimer’s disease (AD)
+and Parkinson’s disease (PD) as examples. In this method
+first pre-emphasized and denoised the voice data, then segmented the voice signals with a sliding fixed window using
+the Hamming window function. Then we were extracted the
+eGeMAPSv02 voice features from the window signal, fed
+the features into the gated recurrent unit neural network
+model for its training, testing and achieve the disease
+diagnosis. The results of the study showed that despite
+the limited generalization ability of the gated recurrent
+unit model, it can still efficiently achieve voice recognition
+detection of a portion of neurological diseases. The model is
+implemented on the basis of the IoT platform for building
+a subsystem of IT diagnostics of patients as part of the
+smart city project. The code is stored in https://github.com/
+HkThinker/Technology-of-neural-disease-recognition. %нужен  абзац
+\textit{Keywords}—gated recurrent unite neural network, Internet of things, voice recognition, neurological disease}
+\begin{center}
+I. INTRODUCTION
+\end{center}
+Neurological disease usually result in structural or
+functional changes in the nervous system, causing patients to suffer from perception, thinking, emotion and
+behavior, and present a significant challenge to the global
+healthcare system. They are a group of diseases that
+affect the nervous system and include a variety of disorders such as neurodegenerative diseases, autoimmune
+diseases, cerebrovascular diseases, and brain injuries. For
+example, PD is a neurodegenerative disease that affects
+motion management and is characterized by symptoms
+such as hand tremors, limb stiffness, slow movements,
+and postural instability. AD is similar and results in
+memory loss, cognitive decline, and abnormal language
+and behavior. They tend to occur in older age groups,
+currently have no complete medical cure, but early diagnosis and prompt treatment can alleviate symptoms and
+slow progression. Traditional diagnosis of neurological
+diseases is usually based on doctors’ clinical experience,
+medical history, physical examination and specific tests,
+which has limitations and requires a lot of labor and
+resources. In recent years, with the rapid development of
+artificial intelligence and IoT technologies, neurological
+disease identification technologies using neural networks
+and supporting IoT are expected to become a new
+breakthrough point.
+The main purpose of this paper is to investigate the
+Gated Recurrent Unit (GRU) neural networks and IoT
+technologies to recognition for neurological diseases. To
+be specific, our research aims to achieve the following
+objectives:
+\begin{enumerate}
+\item To develop a GRU neural network model, which
+was trained through a publicly available database
+to implement the diagnosis and prediction of PD
+and AD.
+\item By using IoT technology, we collected patients’
+voice data and combined these data with the GRU
+neural network model to improve the precision and
+accuracy of diagnosis and prediction of neurological diseases.
+\item To deploy the GRU neural network model to the
+Thingspeak IoT platform.
+\end{enumerate}
+\begin{center}
+II. RELATED WORK
+\end{center}
+\textit{A. Application of IoT in Neurological Disease Diagnosis}
+
+Neurological disease diagnosis systems that are based
+on neural network technology and IoT technology have
+been widely used.
+
+B. Lu [1] built a practical brain MRI-based AD diagnostic classifier using deep learning/transfer learning on
+datasets of unprecedented size and diversity. The purpose
+of Mukherji [2] was to identify non-invasive, inexpensive
+markers and develop neural network models that learn
+the relationship between those markers and the future
+cognitive state. David Payares-Garcia [3] proposed a
+classification technique that incorporates uncertainty and
+spatial information for distinguishing between healthy
+subjects and patients from four distinct neurodegenerative diseases: AD, mild cognitive impairment, PD,
+and Multiple Sclerosis. Abbas Sheikhtaheri [4] aimed
+to identify and classify the IoT technologies used for
+AD dementia as well as the healthcare aspects addressed
+by these technologies and the outcomes of the IoT
+interventions.
+\newpage
+Researchers had identified the feasibility of integrating deep learning, cloud, and IoT, Syed Saba Raoof
+[5] explained a summary of various techniques utilized
+in smart healthcare, i.e., deep learning, cloud-basedIoT applications in smart healthcare, fog computing in
+smart healthcare, and challenges and issues faced by
+smart healthcare and it presents a wider scope as it is
+not intended for a particular application such aspatient
+monitoring, disease detection, and diagnosing and the
+technologies used for developing this smarta systems are
+outlined. Reyazur Rashid Irshad [6] proposed a novel
+healthcare monitoring system that tracks disease processes and forecasts diseases based on the available data
+obtained from patients in distant communities. Rafael
+A Bernardes [7] presented a perspective on integrating
+wearable technology and IoT to support telemonitoring
+and self-management of people living with PD in their
+daily living environment.\\
+B.\textit{ Classification of Voice Features}
+
+Since more than 90 \% of PD patients have varying
+degrees of dysphonia in the early stages of the disease,
+the diagnosis of PD based on voice features has the
+merits of being non-invasive and convenient. Darley [8]
+first used voice to diagnose aphasia in 1969. Saker et al.
+[9] preprocessed the voice data and extracted features,
+then applied SVM and KNN classification algorithms to
+the feature matrix for classification, eventually obtaining
+an average accuracy and a maximum accuracy of 55 \%
+and 85 \%, respectively, which initially confirmed the
+feasibility of voice features to classify PD. To further
+improve the accuracy of model prediction and simplify
+the algorithmic model, scholars have applied different
+feature selection algorithms.
+\begin{center}
+III. METHODOLOGY AND DATASETS
+\end{center}
+A.\textit{ Pre-emphasis and Denoising of Voice Signals}
+
+It is difficult to obtain the high-frequency part of
+the unprocessed voice signal because the power of the
+voice signal will be significantly attenuated after the
+sound gate excitation as well as the influence of mouth
+and nose radiation, combined with the smaller energy
+corresponding to the high frequency while the larger
+energy corresponding to the low frequency in the spectrogram of the voice signal. In order to facilitate the
+spectrum analysis, this paper adopted a first-order FIR
+high-pass digital filter for the pre-emphasis processing
+of the voice signal. The purpose of pre-emphasis is to
+improve the high-frequency part, so that the spectrum of
+the voice signal becomes flat, thus the spectrum can be
+obtained with the same signal-to-noise ratio in the whole
+frequency band.
+
+Voice denoising is an effective part of signal preprocessing, mainly to improve the quality of voice and
+obtain more pure voice signals. The Fig. 1 shows the
+process of voice signal denoising. 
+
+\includegraphics[width=0.5\textwidth]{фото лр3.png} 
+\begin{center}
+Figure 1. Flow chart of voice denoising.
+\end{center}
+%подпись?
+According to the different parts of the noise introduction, voice noise can be divided into background noise
+and transmission noise. In this paper, spectral subtraction
+algorithm was used to denoise the voice. The spectral
+subtraction algorithm is designed based on the principle
+that pure voice is statistically independent of the noise
+signals.\\ 
+\vspace{3mm}
+B.\textit{ Framing and Windowing of Voice Signals}
+
+The Fourier transform commonly used in voice signal
+processing calls for a smooth signal, but the main feature
+of the voice signal is the short-time smoothness, i.e.,
+the stability of the voice signal in 10–30 ms period.
+Therefore, if we want to characterize the voice signal,
+it is necessary to analyze the short-time characteristics
+of the voice signal, the original signal is framed, and
+the frame frequency signal with short-time smoothness
+is derived. In the process of frame splitting, the signal
+tends to produce spectral deficiencies, so a windowing
+process must be performed between frames to keep the
+signal at the truncation without distortion. The windowing function used in this paper is the Hamming window
+function, with window size of 1024, frequency of voice
+signal is 44.1khz, and the overlap rate of window is 50
+\%, hence the voice time of one window is about 23 ms.\\
+\vspace{3mm}
+C.\textit{ Feature Extraction of Voice Signals}
+
+We used an extended version of GeMAPS (Basic
+Affective Parameter Set), eGeMAPSv02 [10], a speech
+feature set. It uses acoustic features and spectral-based
+features to describe the speech signal, with a total of
+88 features. It contains 25 low-level descriptor features,
+namely pitch, jitter, gating frequency, gating bandwidth,
+gloss, loudness, harmonic-to-noise ratio (HNR), Alpha
+ratio, Hammarberg index, spectral slope 0–500 Hz, spectral slope 500–1500 Hz, 3 gating relative energies, 3 relative energies, 3 harmonic differences, 4 Mel–Frequency
+Cepstral Coefficients, 1 spectral flux. 53 other parameters
+are derived from these basic parameters.\\
+\vspace{3mm}
+D.\textit{ 6–layer Gated Recurrent Unit Model}
+
+In the paper, a multi-layer GRU model is constructed
+for voice data recognition. two mechanisms, an update
+gate and a reset gate, are included in the GRU module.
+The internal equation of a single GRU model is :
+\end{multicols*}
+\end{document}
