@@ -18,4 +18,110 @@
 - `Поиск в глубину (Deep First Search, DFS)` — алгоритм обхода графа, который движется от начальной вершины как можно дальше сначала по первому ребру, потом по второму, и так далее.
 - `Обход в ширину (breadth-first search, BFS)` - систематически обходит все вершины графа.
 ## Алгоритм решения.
-![graphteory30](https://github.com/iis-32170x/RPIIS/assets/144334182/edd27e1d-61c7-43b0-ac5e-fc60b18d881f)
+Используя алгоритм Дейкстры, найдем кратчайшее расстояние от одной из вершин графа до всех остальных. 
+
+1. Задается исходная вершина, для которой нужно найти кратчайшие пути до всех остальных вершин графа.
+2. Исходная вершина помечается как посещенная, а расстояние до нее равно 0. Для всех остальных вершин расстояние устанавливается как бесконечность.
+3. Для текущей вершины вычисляются расстояния до всех соседних вершин. Если новое расстояние меньше текущего, то оно обновляется.
+4. После вычисления расстояний для всех соседних вершин текущая вершина помечается как посещенная.
+5. Шаги 3 и 4 повторяются до тех пор, пока все вершины графа не будут посещены.
+6. По окончании алгоритма для каждой вершины будет найдено кратчайшее расстояние от исходной вершины, а также путь до нее.
+
+## Реализация на C++.
+Код выполняющий алгоритм Дейкстры:
+```c++
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#define size 6
+int main()
+{
+    int a[size][size]; 
+    int d[size];
+    int v[size]; 
+    int temp, minindex, min;
+    int begin_index = 0;
+    system("chcp 1251");
+    system("cls");
+    for (int i = 0; i < size; i++)
+    {
+        a[i][i] = 0;
+        for (int j = i + 1; j < size; j++) {
+            printf("Введите расстояние %d - %d: ", i + 1, j + 1);
+            scanf("%d", &temp);
+            a[i][j] = temp;
+            a[j][i] = temp;
+        }
+    }
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+            printf("%5d ", a[i][j]);
+        printf("\n");
+    }
+    for (int i = 0; i < size; i++)
+    {
+        d[i] = 10000;
+        v[i] = 1;
+    }
+    d[begin_index] = 0;
+    do {
+        minindex = 10000;
+        min = 10000;
+        for (int i = 0; i < size; i++)
+        { 
+            if ((v[i] == 1) && (d[i] < min))
+            { 
+                min = d[i];
+                minindex = i;
+            }
+        }
+        if (minindex != 10000)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                if (a[minindex][i] > 0)
+                {
+                    temp = min + a[minindex][i];
+                    if (temp < d[i])
+                    {
+                        d[i] = temp;
+                    }
+                }
+            }
+            v[minindex] = 0;
+        }
+    } while (minindex < 10000);
+    printf("\nКратчайшие расстояния до вершин: \n");
+    for (int i = 0; i < size; i++)
+        printf("%5d ", d[i]);
+
+    int ver[size]; 
+    int end = 4; 
+    ver[0] = end + 1; 
+    int k = 1; 
+    int weight = d[end]; 
+
+    while (end != begin_index) 
+    {
+        for (int i = 0; i < size; i++) 
+            if (a[i][end] != 0)  
+            {
+                int temp = weight - a[i][end]; 
+                if (temp == d[i]) 
+                {                 
+                    weight = temp; 
+                    end = i;       
+                    ver[k] = i + 1; 
+                    k++;
+                }
+            }
+    }
+    printf("\nВывод кратчайшего пути\n");
+    for (int i = k - 1; i >= 0; i--)
+        printf("%3d ", ver[i]);
+    getchar(); getchar();
+    return 0;
+}
+```
+## Разбор кода:
