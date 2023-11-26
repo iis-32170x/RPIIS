@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[top=2cm, bottom=1cm, left=1.8cm, right=1.8cm, footskip=15mm]{geometry}
+\usepackage[top=2cm, bottom=1cm, left=1.15cm, right=1.15cm, footskip=15mm]{geometry}
 \usepackage{multicol}
 \usepackage{titlesec}
 \usepackage{hyperref,lipsum}
@@ -20,45 +20,53 @@ Email: \href{mailto:golen@bsuir.by}{golen@bsuir.by}, \href{mailto:guliakina@bsui
 \begin{document}
 \maketitle
 \begin{multicols}{2}
-\textit{\textbf{Abstract}}—\textbf{The paper considers the main directions, problems, and prospects for the development of next- generation intelligent computer systems and corresponding technologies, with a focus on the current state of work in the field of Artificial Intelligence. It highlights the problems and methodological challenges of the current stage of development, as well as the prerequisites for transitioning to intelligent computer systems of the new generation. The text also provides background and history of OSTIS Technology development, and outlines its features, advantages, and novelty. Additionally, it mentions current projects related to the development of OSTIS Technology in the current stage of work.}
+\textit{\textbf{\ \ \ Abstract}}—\textbf{The paper considers the main directions, problems, and prospects for the development of next- generation intelligent computer systems and corresponding technologies, with a focus on the current state of work in the field of Artificial Intelligence. It highlights the problems and methodological challenges of the current stage of development, as well as the prerequisites for transitioning to intelligent computer systems of the new generation. The text also provides background and history of OSTIS Technology development, and outlines its features, advantages, and novelty. Additionally, it mentions current projects related to the development of OSTIS Technology in the current stage of work.}
 
 \setcounter{page}{15}
-
-\textbf{\textit{Keywords}—Next-generation intelligent computer system, self-learning intelligent computer system, interoperable intelligent computer system, individual subject, collective of subjects, hierarchical subject, social responsibility\textasciicircum , interoperability\textasciicircum , individual activity, collective activity, intelligence of a collective of subjects\textasciicircum , strategic problem of the subject\textasteriskcentered, subproblem\textasteriskcentered, Society, OSTIS Ecosystem .}
+\par
+\textbf{\textit{\ \ \ Keywords}—Next-generation intelligent computer system, self-learning intelligent computer system, interoperable intelligent computer system, individual subject, collective of subjects, hierarchical subject, social responsibility\textasciicircum , interoperability\textasciicircum , individual activity, collective activity, intelligence of a collective of subjects\textasciicircum , strategic problem of the subject\textasteriskcentered, subproblem\textasteriskcentered, Society, OSTIS Ecosystem .}
 
 \begin{center}
 \label{1}\textsc{I.   The feature of the current state of work in the field of Artificial intelligence—is the transition to the next-generation intelligent computer systems.}\\
 \end{center}
-The epicenter of the modern stage of automation of human activity is a low level of automation and high overhead costs
+\ \ \ The epicenter of the modern stage of automation of human activity is a low level of automation and high overhead costs
 \begin{itemize}
     \item for the system integration of various computer systems, in other words, for the creation of complicated hierarchical computer complexes;
     \item \hyperref[1]{for the modernization of computer systems during their operation [1].}
 \end{itemize}
 
 
-Modern computer systems clearly lack the \textit{intelligence} and \textit{autonomy} to automate these aspects of human activity.
+\ \ \ Modern computer systems clearly lack the \textit{intelligence} and \textit{autonomy} to automate these aspects of human activity.
 
 
-The necessity to move from modern \textit{computer systems} (including modern \textit{intelligent computer systems}) to next-
+\ \ \ The necessity to move from modern \textit{computer systems} (including modern \textit{intelligent computer systems}) to next-
 generation \textit{intelligent computer systems} is due to the necessity to move to automate more and more complex types and areas of \textit{human activity} requiring the creation of whole complexes of \textit{intelligent computer systems} that
 can independently \uline{evolve} and \uline{interact} effectively with each other in the \textit{\uline{collective} solution of complex problems.}
 
 
-Computer systems with these abilities are the \textit{new
+\ \ \ Computer systems with these abilities are the \textit{new
 generation computer systems}. Since these \textit{computer systems} cannot but have a high level of \textit{intelligence}, they should also be referred to as \textit{next-generation intelligent computer systems}. A high level of \textit{intelligence} is necessary for next-generation computer systems:
 \begin{itemize}
     \item to adequately assessment their own competence and the competence of their partners; 
     \item to ensure mutual understanding, contractual capacity and coordination (consistency) of their actions with the actions of partners in the course of \textit{collective solution of complex problems} in the conditions of possible occurrence of unpredictable (non-standard) circumstances.
+\end{itemize}
+\ \ \ Obviously, the creation and operation of the next- generation intelligent computer systems requires:
+\begin{itemize}
+    \item to develop a general formal theory of such systems;
+    \item to develop a comprehensive technology for designing and supporting the subsequent stages of the life cycle
+of these systems;;
+    \item to develop a general formal theory of the whole
+variety of types and areas of human activity that it is advisable to automate.
 \end{itemize}
 \textbf{next-generation intelligent computer system}
 
 \large
 \noindent=
 \normalsize
-\hfill{\textit{(self-learning intelligent computer system} $\cap$}
+\hspace{1.5cm}{\textit{(self-learning intelligent computer system} $\cap$}
 
 
-\hyperref[2]{\hfill{\textit{interoperable intelligent computer system}) [2]}}
+\hspace{2cm}\hyperref[2]{{\textit{interoperable intelligent computer system}) [2]}}
 
 
 \noindent\textbf{self-learning intelligent computer system}
@@ -66,10 +74,7 @@ generation computer systems}. Since these \textit{computer systems} cannot but h
 \large
 \noindent:=
 \normalsize
-\begin{flushright}
-\vspace{-1.56\baselineskip}
-[\textit{an intelligent computer system} that has a high\\rate of \uline{self-realized} evolution, which results in\\a significant reduction in the complexity (costs,\\overhead) of its \uline{modernization}]
-\end{flushright}
+ \hspace{1.4cm}[\textit{an intelligent computer system} that has a high\\ \hspace{2cm}rate of \uline{self-realized} evolution, which results in\\ \hspace{2cm}a significant reduction in the complexity (costs,\\ \hspace{2cm}overhead) of its \uline{modernization}]
 \noindent\textbf{self-learning of an intelligent computer system}
 
 \large
@@ -124,26 +129,22 @@ $\Rightarrow$
 \normalsize
 \textit{suggests}\textasteriskcentered:
 \begin{itemize}
-    \item ability to \uline{understand} other systems and
+    \item ability to \uline{understand} other systems and\\
 its users
 \end{itemize}
-    \begin{center}
         \large
         \vspace{-0.5\baselineskip}
-        \hspace{-5cm}$\Rightarrow$
+        \hspace{2cm}$\Rightarrow$
         \normalsize
-        \textit{suggests}\textasteriskcentered:
-        \begin{flushright}
-            semantic compatibility with\\
+         \hspace{0.2cm} \textit{suggests}\textasteriskcentered:
+            \\ \hspace{3cm}semantic compatibility with\\ \hspace{2.85cm}
 interacting systems and users
-        \end{flushright}
         \begin{itemize}
             \item \uline{negotiability}
             \item \uline{ability to coordinate} their actions with the actions of partners
         \end{itemize}
-    \end{center}
 
-Our proposed approach to the construction of the next- generation intelligent computer systems is based on the following principles:
+\ \ \ Our proposed approach to the construction of the next- generation intelligent computer systems is based on the following principles:
 \begin{itemize}
     \item \uline{semantic} representation of knowledge stored in the memory of \textit{next-generation intelligent computer systems};
     \item \uline{ontological} structuring and systematization of knowledge stored in memory;
@@ -159,20 +160,30 @@ an individual intelligent computer system from the outside through different sen
 \noindent\textbf{it should be distinguished}\textasteriskcentered
 
 
+
+\begin{flushright}
+    
+    \begin{itemize}
+        \begin{itemize}
+            \begin{itemize}
+            
+            \item[$\bullet$] \textit{individual next-generation intelligent\\computer system}
+            \item[$\bullet$] \textit{collective next-generation intelligent\\computer system}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{flushright}
+\vspace{-2.12cm}
 \large
 $\ni$
 \normalsize
-\{
-\begin{flushright}
-    \begin{itemize}
-        \item \textit{individual next-generation intelligent computer system}
-        \item \textit{collective next-generation intelligent computer system}
-    \end{itemize}
-    
-\end{flushright}
-\hspace{0.5cm}\}
+\ \ \ \ \ \ \ \ \ \ \ \{
 
 
+\vspace{1.6cm}
+\ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \}
+
+\vspace{0.3cm}
 \noindent\textbf{collective next-generation intelligent computer system}
 
 
@@ -180,7 +191,6 @@ $\ni$
 $\Rightarrow$
 \normalsize
 \textit{subdividing}\textasteriskcentered: \\
-\{
     \begin{center}
     \begin{itemize}
         \item \textit{collective of next-generation individual intelligent computer systems}
@@ -191,12 +201,17 @@ $\Rightarrow$
     \hspace{1.5cm}:=
     \normalsize
     \vspace{-0.5cm}
-    \begin{flushright}
-     [collective of next-generation \\intel- ligent computer systems,\\whose members can be both collective and individual \textit{next-generation\\intelligent computer systems}]   
-    \end{flushright}
-\}
+
+     \hspace{2.95cm}[collective of next-generation intel-\\ \hspace{2.95cm} ligent computer systems,whose\\ \hspace{3cm}members can be both collective\\ \hspace{3cm}and \textit{individual next-generation\\ \hspace{3cm}intelligent computer systems}] 
+
+\vspace{-4.35cm}
+\ \ \ \{
 
 
+\vspace{4.4cm}
+\ \ \ \ \ \}
+
+\vspace{0.3cm}
 \noindent\textbf{individual next-generation intelligent computer system}
 
 
@@ -217,24 +232,22 @@ system cannot be decomposed into subsystems that can be developed absolutely ind
 \large
 :=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [Our proposed Technology for developing and maintaining \textit{next-generation intelligent computer systems}]
-\end{flushright}
+\hspace{0.2cm}
+    [Our proposed Technology for developing and\\
+    \hspace{1cm}maintaining \textit{next-generation intelligent computer\\
+    \hspace{1cm}systems}]
+
 \large
 :=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [Open Semantic Technology\\for Intelligent Systems [3]]
-\end{flushright}
+\hspace{0.2cm}
+    [Open Semantic Technology for Intelligent Sys- \\ \hspace{1cm}tems [3]]
+    \\
 \large
 $\Rightarrow$
 \normalsize
-\begin{center}
-\vspace{-0.64cm}
+\hspace{0.2cm}
     \textit{requirements\textasteriskcentered:}
-\end{center}
 \newpage
 \setcounter{page}{17}
 
@@ -249,26 +262,20 @@ $\Rightarrow$
 \large
 :=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [\textit{intelligent computer system}\\based on OSTIS Technology]
-\end{flushright}
+     \hspace{1.1cm}[\textit{intelligent computer system} based on OSTIS \\ \hspace{1.6cm} Technology]
+
 \noindent\textbf{OSTIS Ecosyste}\\
 \large
 :=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [The main product of \textit{OSTIS Technology}, which\\is a global network of \textit{ostis-systems}]
-\end{flushright}
+     \hspace{1cm}[The main product of \textit{OSTIS Technology}, which\\ \hspace{1.6cm}is a global network of \textit{ostis-systems}]
+
+\normalsize
 \large
 $\in$
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    \textit{hierarchical collective of intelligent\\computer systems of the new generation}
-\end{flushright}
-The main components of \textit{OSTIS Technology} are:\\
+    \hspace{1.2cm}\textit{hierarchical collective of intelligent computer\\ \hspace{1.6cm}systems of the new generation}
+\\ \hspace{1cm}The main components of \textit{OSTIS Technology} are:\\
 \begin{itemize}
     \item \textbf{\textit{OSTIS Standard}}
 \end{itemize}
@@ -276,38 +283,29 @@ The main components of \textit{OSTIS Technology} are:\\
 \large
 \hspace{0.7cm}:=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [The standard of next-generation\\intelligent computer systems\\as well as methods, methods and means\\of supporting their life cycle]
-\end{flushright}
+    \hspace{1.1cm}[The standard of next-generation intelli-\\ \hspace{2.4cm}gent computer systems as well as meth-\\ \hspace{2.4cm}ods, methods and means of supporting\\\hspace{2.4cm}their life cycle]
+    \\
 \large
 \hspace{0.7cm}:=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [\textit{OSTIS Technology Standard}]
-\end{flushright}
+    \hspace{1.1cm}[\textit{OSTIS Technology Standard}]
+
 \begin{itemize}
     \item \textbf{\textit{OSTIS metasystem}}
 \end{itemize}
 \large
 \hspace{0.7cm}:=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [The core of the \textit{ostis-systems} lifecycle support automation system]
-\end{flushright}
+     \hspace{1.1cm}[The core of the \textit{ostis-systems} lifecycle\\\hspace{2.4cm}support automation system]
+
 \begin{itemize}
     \item \textbf{\textit{OSTIS Library}}
 \end{itemize}
 \large
 \hspace{0.7cm}:=
 \normalsize
-\begin{flushright}
-\vspace{-0.64cm}
-    [Distributed library of typical\\(reusable)
+    \hspace{1.1cm}[Distributed library of typical (reusable)\\\hspace{2.3cm}
 components of \textit{ostis-systems}]
-\end{flushright}
 \begin{center}
 \label{2}\textsc{II.   Problems of the current stage of development of the theory and technology of next-generation intelligent computer systems.}
 \end{center}
