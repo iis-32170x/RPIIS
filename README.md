@@ -68,6 +68,7 @@ setlocal EnableDelayedExpansion
 
 В результате программы было создано 10 файлов, как видно на скриншоте в каждом третьем находиться "Hello World".
 
+
 ![5](https://github.com/iis-32170x/RPIIS/assets/149573033/2b7d60d1-4b37-45e7-99c8-c094c48d31ac)
 
 
@@ -79,21 +80,31 @@ setlocal EnableDelayedExpansion
 
 Пишем путь к файлу, количетсво файлов, которые пользователь хочет создать и название папки.
 
+
 ![6](https://github.com/iis-32170x/RPIIS/assets/149573033/9d5f0360-842a-491c-8b11-b0d6f6964cca)
+
 
 Пакетнй файл выполнил свою работу, сомтрим на результат
 
+
 ![7](https://github.com/iis-32170x/RPIIS/assets/149573033/a345f5a0-618d-4e7e-a4a8-67ddfd00b5f8)
+
 
 В ходе работы, мы создали папку "krytou", и в ней появились 10 файлов
 
+
 ![8](https://github.com/iis-32170x/RPIIS/assets/149573033/b73e41f7-bb1c-43e4-861f-7c30db6b0478)
+
+
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/149573033/3d25eaef-882b-4b3b-bed2-8760073eae33)
 
+
 Посмотрим на то, что написано в файлах.
 
+
 ![9](https://github.com/iis-32170x/RPIIS/assets/149573033/177b0339-90fd-4f02-ab53-eed573e4aaa9)
+
 
 Поставленная задача была выполнена.
 
