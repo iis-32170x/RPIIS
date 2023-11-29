@@ -1,1 +1,455 @@
+\documentclass{article}
+\usepackage[left=17mm, top=17mm, right=17mm, bottom=10mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{unicode-math}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
+\setcounter{page}{273}
+\begin{document}
+\begin{multicols}{2}
+\begin{itemize}
+    \item according to the matching relationship of each sc-element between each sc-construction pair with the
+same number in the semantic graph of the standard
+answer and the semantic graph of the user answer,
+the mapping relationships of potential equivalent
+variable sc-nodes pairs between the semantic graphs are established.
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+Fig. 2 shows an example of establishing the mapping
+relationship between semantic graphs in SCg-code.
 
+In Fig. 2, the definition of the partial ordering relation is
+described. A binary relation \textit{R} is called a partial ordering,
+or partial order if and only if it is: reflexive, antisymmetric
+and transitive.
+
+When the mapping relationship between the potential
+equivalent variable sc-node pairs between the semantic
+graphs is established, the similarity between answers
+can be calculated, and the detailed calculation process is
+shown below:
+\begin{itemize}
+    \item decomposing the semantic graphs of the answers
+into substructures according to the structure of the
+knowledge description;
+\item establishing the mapping relationship of potential
+equivalent variable sc-node pairs between the semantic graphs;
+\item using formulas (1), (2) and (3) to calculate the
+precision, recall and similarity between semantic
+graphs.
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+
+If the similarity between semantic graphs is not equal
+1, it is also necessary to determine whether their logical
+formulas are logically equivalent. Because any predicate
+logic formula has a PNF equivalent to it. Therefore,
+based on the approach to convert predicate logic formulas
+into PNF and characteristics of logic formulas in ostissystems, an approach to convert logic formulas into unique
+(deterministic) PNF according to strict restriction rules is
+proposed in this article [23], [24]. The strict restrictions
+mainly include the following:
+\begin{itemize}
+ 
+
+   \item renaming rule is preferred when converting logical
+formulas to PNF;
+   \item  existential quantifier is moved to the front of the
+logical formula in preference;
+   \item the logical formula can usually be expressed in
+the following form: \begin{math}
+(Q_1x_1Q_2x_2...Q_nx_n\end{math}(A\begin{math}\iff \end{math}B)),
+where \begin{math}
+Q_i(i = 1, ...n)\end{math} is a quantifier. A is used to
+describe the definition of a concept at a holistic level,
+and it does not contain any quantifiers. B is used to
+explain the semantic connotation of a definition at
+the detail level, and it is usually a logical formula
+containing quantifiers [8], [24]. Therefore, in order
+to simplify the knowledge processing, it is only
+necessary to convert the logical formula B to PNF;
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+
+The process of converting the semantic graph constructed based on logic formula into PNF descriptions is
+shown below:
+\begin{itemize}
+    \item  if there are multiple sc-structures connected by the
+same conjunctive connective, the sc-constructions
+contained in them are merged into the same scstructure;
+\item eliminating all the implication connectives;
+\item moving all negative connectives to the front of the
+corresponding sc-structure;
+\item using renaming rules so that all bound variables in
+the semantic graphs are not the same;
+\item moving all quantifiers to the front of the logical
+formula;
+\item merging again the sc-structures in the semantic
+graphs that can be merged.
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+
+If the calculated similarity between the semantic graphs
+of PNF representation is not 1, the similarity between the
+semantic graphs calculated for the first time is used as
+the final answer similarity.
+
+Fig. 3 shows an example of converting a semantic
+graph into PNF representation in SCg-code.
+
+In Fig. 3, the definition of the reflexive relation is
+described. In mathematics, a binary relation \textit{R} on a set
+\textit{M} is reflexive if it relates every element of \textit{M} to itself
+
+\textbf{Calculating the similarity between answers to proof
+questions and problem-solving task}
+
+Both proof questions and problem-solving task follow
+a common task-solving process:
+\begin{itemize}
+    \item[1)]  the set (Ω) of conditions consisting of some known
+conditions;
+\item[2)] deriving an intermediate conclusion using some of
+the known conditions in Ω and adding it to Ω. Each
+element in Ω can be regarded as a solving step;
+\item[3)] repeat step 2) until the final result is obtained [25],
+[26].
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+
+This task-solving process is abstracted as a directed
+graph, whose structure is in most cases an inverted tree,
+and is called a reasoning tree (i. e. the reasoning tree of
+the standard answer). The automatic verification process
+of user answers to this type of test questions is the same
+as the traditional manual answer verification process, i.e.,
+verifying whether the current solving step of the user
+answer is a valid conclusion of the partial solving step
+preceding that step. This means whether the solving step
+in the user answer corresponding to the parent node in
+the reasoning tree always is located after the solving steps
+in the user answer corresponding to the child nodes [27].
+
+The semantic graphs of user answers to proof questions
+and problem-solving task in the ostis-systems are linear
+structures consisting of some semantic sub-graphs for
+describing the solving steps and some semantic fragments for describing the logical order and transformation
+processes between the semantic sub-graphs. The semantic
+graph of standard answers to this type of test questions
+is an reasoning tree consisting of a number of search
+templates (which can be abstracted as the nodes in the
+tree). Each search template is constructed using SCL-
+
+\end{multicols}
+\end{document}
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\documentclass{article}
+\usepackage[left=17mm, top=5mm, right=17mm, bottom=10mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
+\setcounter{page}{274}
+\begin{document}
+\begin{center}
+\includegraphics{1}
+
+    
+{\footnotesize Figure 2. An example of establishing the mapping relationship between semantic graphs.}
+\end{center}
+\begin{multicols}{2}
+\includegraphics{2.png}
+{\footnotesize Figure 3. An example of converting a semantic graph into PNF
+representation.
+}
+\begin{spacing}{3} \end{spacing} 
+code in strict accordance with the standard solution steps
+corresponding to the test question. The search template
+is used to search in the knowledge base for all semantic
+fragments corresponding to it [7], [28].
+
+Since the user answers in natural language are converted into semantic graphs they are already integrated
+with the knowledge already available in the knowledge
+base. Therefore, when calculating the similarity between
+the semantic graphs, it is not necessary to consider
+the differences of the concepts at the natural language
+level. For example, Segment AB and Segment BA are
+represented by the same sc-node, they are just two
+identifiers of the sc-node [6], [7]. An approach to calculate
+the similarity between the semantic graphs of answers
+to proof questions and problem-solving task according
+to the reasoning tree of standard answer (semantic graph
+of standard answer) is proposed in this article, and the
+specific calculation process is shown below:
+\begin{spacing}{0.3} \end{spacing} 
+\begin{itemize}
+    \item[1)]  numbering each semantic sub-graph in the semantic
+graph of user answer (the numbering order started
+from 1);
+  \item[2)] each node in the reasoning tree (search template) is
+traversed in turn according to the DFS strategy. At
+the same time, the corresponding semantic sub-graph
+that is included in the semantic graph of the user
+answer are searched in the knowledge base using the
+search template currently being traversed. If such a
+semantic sub-graph exists, then determine whether
+the searched semantic sub-graph number is smaller
+than the semantic sub-graph number corresponding
+to the search template of the current search template
+parent node (except for the root node of the reasoning
+tree), and if so, the searched semantic sub-graph is
+considered correct;
+  \item[3)] repeat step 2) until all search templates in the
+reasoning tree have been traversed and the number of
+correct semantic sub-graphs is counted at the same
+time;
+  \item[4)] using formulas (1), (2) and (3) to calculate the
+precision, recall and similarity between answers.
+\end{itemize}
+\begin{spacing}{1.3} \end{spacing} 
+
+Since this article focused on the entire process from test
+
+\end{multicols}
+\end{document}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\documentclass{article}
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=7mm, nohead, nofoot]{geometry}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\setlist[itemize]{itemsep=0pt, parsep=0pt, partopsep=0pt, topsep=0pt}
+\setcounter{page}{275}
+\begin{document}
+\begin{multicols}{2}
+
+question generation to the automatic scoring of test papers
+and the effective evaluation of subsystems, the basic
+principles of answer verification to subjective questions
+are thus briefly presented. For a detailed understanding of
+the process of constructing semantic models for subjective
+questions and user answer verification to subjective
+questions please refer to the literature [3].
+
+\vspace{0.1cm}
+
+Once the similarity between the answers to the subjective questions is obtained, the correctness and completeness of the user answers can be verified combined with
+the evaluation strategy for the subjective questions. The
+evaluation strategy for subjective questions includes:
+\vspace{0.1cm}
+
+\begin{itemize}
+    \item  if the similarity between the answers is equal to 1,
+the user answer is completely correct;
+\item  if the similarity between the answers is less than 1
+and the precision is equal to 1, the user answer is
+correct but incomplete and the user score is \begin{math} R _{sc} \ast
+M ax_{score}\end{math};
+\item  if the similarity between the answers is greater than
+0 and less than 1, and the precision is less than 1,
+then the user answer is partially correct and the user
+score is \begin{math}Fsc \ast M ax_{score}\end{math};
+\item  if the similarity between the answers is equal to 0,
+the user answer is wrong.
+\end{itemize}
+
+The proposed approach to automatic verification of
+user answers has the following advantages:
+\begin{itemize}
+
+
+    \item verifying the correctness and completeness of user
+answers based on semantics;
+    \item  the logical equivalence between answers can be
+determined;
+    \item  the similarity between any two semantic graphs in
+the knowledge base can be calculated;
+    \item the developed component using the proposed approach can be easily transplanted to other ostissystems.
+\end{itemize}
+\begin{center}
+\vspace{0.1cm}
+
+    IV. KNOWLEDGE BASE OF THE SUBSYSTEM
+\end{center}
+
+The knowledge base of subsystem is used to store
+automatically generated test questions, and it also allows
+to automatically extract a series of test questions and form
+test papers according to user requirements. Therefore, in
+order to improve the efficiency of accessing the knowledge
+base of the subsystem and the efficiency of extracting the
+test questions, an approach to construct the knowledge
+base of the subsystem according to the type of test
+questions and the generation strategy of the test questions
+is proposed in this article.
+
+The basis of the knowledge base of any ostis-system
+(more precisely, the sc-model of the knowledge base)
+is a hierarchical system of subject domains and their
+corresponding ontologies [1], [2], [5]. Let’s consider the
+hierarchy of the knowledge base of subsystem in SCncode:\\
+\textit{\textbf{Section. Subject domain of test questions}}\\
+\begin{description}[ ]
+
+\vspace{-0.65cm}
+
+\item[$\Leftarrow$] \textit{section decomposition*:}
+
+\{ $\bullet$ \hspace{14pt} \textit{Section. Subject domain of subjective
+questions}
+\begin{description}[ labelwidth=1.2cm]
+\vspace{-0.3cm}
+\item[$\Leftarrow$] \textit{section decomposition*: }
+
+\leftskip=0.62cm \textbf{\{} $\bullet$ 
+\hspace{7mm} \textit{Section. Subject domain of
+definition explanation question}
+\vspace{-0.1cm}
+
+\leftskip=1cm $\bullet$ 
+\hspace{7mm} \textit{Section. Subject domain of proof
+question}
+\vspace{-0.1cm}
+
+\leftskip=1cm $\bullet$ 
+\hspace{4mm} \textit{Section. Subject domain of
+problem-solving task}
+
+
+\leftskip=0.7cm \textbf{\}}
+\vspace{-0.1cm}
+
+\end{description}
+\begin{description}[ labelwidth=0.9cm]
+\item[$\bullet$]
+\noindent \leftskip=0.7cm \textit{Section. Subject domain of objective
+questions
+}
+
+\vspace{-0.2cm}
+\leftskip=0.35cm
+\item[$\Leftarrow$] \textit{section decomposition*:}
+
+\end{description}
+\vspace{-0.4cm}
+
+\leftskip=1.4cm \textbf{\{} $\bullet$ 
+\hspace{0.7cm} \textit{Section. Subject domain of
+multiple-choice question
+}
+\vspace{-0.2cm}
+
+\leftskip=1.8cm $\bullet$ 
+\hspace{7mm} \textit{Section. Subject domain of fill in
+the blank question}
+\vspace{-0.2cm}
+
+\leftskip=1.8cm $\bullet$ 
+\hspace{7mm} \textit{Section. Subject domain of
+judgment question}
+
+\vspace{-0.2cm}
+
+\leftskip=1.4cm \textbf{\}}
+\end{description}
+\vspace{-0.2cm}
+
+\leftskip=0.8cm\textbf{\}}
+
+\begin{spacing}{1.3} \end{spacing} 
+Objective types of test questions are decomposed into
+more specific types according to their characteristics and
+corresponding test question generation strategies. Next,
+taking the judgment question as an example let us consider
+its semantic specification in SCn-code:\\
+\begin{spacing}{0.5} \end{spacing} 
+\hspace{-0.5cm}\textbf{\textit{judgment question}}
+
+\begin{description}[ labelwidth=0.75cm]
+
+\vspace{-0.3cm}
+
+\item $\in$ \textit{ maximum class of explored objects':}
+\vspace{-0.25cm}
+\item \hspace{0.35cm} \textit{Subject domain of judgment question}
+\vspace{-0.25cm}
+\item $\Leftarrow$ \textit{subdividing*:}
+\vspace{-0.2cm}
+
+\{ $\bullet$ \hspace{14pt} \textit{judgment question based on relation
+attributes}
+\begin{description}[ labelwidth=1.2cm]
+\vspace{-0.4cm}
+\item \hspace{-1.15cm} $\bullet$ \hspace{14pt} \textit{judgment question based on axioms }
+\vspace{-0.15cm}
+
+\item \hspace{-1.13cm} $\bullet$ \hspace{14pt} \textit{judgment question based on image
+examples }
+\vspace{-0.55cm}
+
+\item \hspace{-1.15cm} $\bullet$ \hspace{14pt} \textit{judgment question based on identifiers
+ }
+ \vspace{-0.15cm}
+\item \hspace{-1.15cm} $\bullet$ \hspace{14pt} \textit{judgment question based on elements }
+\vspace{-0.15cm}
+\item \hspace{-1.45cm} $\Leftarrow$ \hspace{14pt} \textit{subdividing*: }
+\vspace{-0.1cm}
+
+\leftskip=0.4cm \textbf{\{} $\bullet$ 
+\hspace{7mm} \textit{judgment question based on role
+relation}
+\vspace{-0.2cm}
+
+\leftskip=0.7cm $\bullet$ 
+\hspace{7mm} \textit{judgment question based on
+binary relation}
+
+\leftskip=0.5cm \textbf{\}}
+
+\end{description}
+\vspace{-0.5cm}
+
+\begin{description}[ labelwidth=0.9cm]
+\leftskip=0.7cm
+\item[$\bullet$]
+\noindent \hspace{-0.4cm} \textit{multiple-choice question based on classes}
+
+\vspace{-0.1cm}
+\leftskip=0.1cm
+\item[$\Leftarrow$] \textit{subdividing*:}
+
+\end{description}
+\vspace{-0.4cm}
+
+\leftskip=1.4cm \textbf{\{} $\bullet$ 
+\hspace{7mm} \textit{judgment question based on
+subdividing relation}
+\vspace{-0.1cm}
+
+\leftskip=1.7cm $\bullet$ 
+\hspace{7mm} \textit{judgment question based on
+inclusion relation}
+\vspace{-0.1cm}
+
+\leftskip=1.7cm $\bullet$ 
+\hspace{7mm} \textit{judgment question based on strict
+inclusion relation}
+
+\leftskip=1.4cm \textbf{\}}
+\end{description}
+
+
+\end{multicols}
+\end{document}
