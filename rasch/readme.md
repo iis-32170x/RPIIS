@@ -17,7 +17,84 @@
 *Окружение* — множество вершин, смежных с заданной.
 ## Выполнение задания
 ### Реализация на C++
+```
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
 
+using namespace std;
+
+
+int podschet_vershin(ifstream &file)
+{
+	string first_line;
+    if (file.is_open()) {
+        std::getline(file, first_line);
+        file.close();
+    }
+    file.seekg(0);
+    return first_line.length();
+   
+}
+
+vector<vector<bool>> create_graph(ifstream& file, int versh)
+{
+    vector<vector<bool>> graph(versh, vector<bool>(versh, false));
+    char symbol;
+
+    for (int row = 0; row < versh; row++) {
+        for (int col = 0; col < versh; col++) {
+            file.get(symbol);
+            if (symbol == '1') {
+                graph[row][col] = true;
+            }
+        }
+        file.ignore();
+    }
+
+    return graph;
+}
+int okruzhenie(int&curr, int&vershini, vector<vector<bool>> & graph){
+    int k = 0;
+    for (int i = 0; i < vershini; i++) {
+        if (graph[curr][i]) { k += 1; }
+    }
+    return k;
+}
+
+
+
+
+int main()
+{   
+    int curr;
+	string path;
+	//cout << "Введите путь к файлу: ";
+	//cin >> path;
+    ifstream file("C:\\gg.txt");
+
+    int vershini = podschet_vershin(file);
+
+    vector<vector<bool>> graph = create_graph(file, vershini);
+
+    cout << vershini << endl;
+    /*for (int row = 0; row < vershini; row++) {
+        for (int col = 0; col < vershini; col++) {
+            cout << graph[row][col];
+        }
+        cout << endl;
+    }*/
+    char sym;
+    while (file.get(sym)) {
+
+        cout << sym;
+    }
+    cout << "Вершина "; cin >> curr; cout << " смежна с " << okruzhenie << " вершинами";
+
+	return 0;
+}
+```
 
 
 
