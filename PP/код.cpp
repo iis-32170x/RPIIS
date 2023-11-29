@@ -11,23 +11,23 @@ void cicle(vector<vector<int>>& graph, int v, vector<vector<int>>& novigraph) {
 	int pyti{ 1 };
 	pyts[0].push_back(0);
 
-	for (int i{ 0 }; i < v; i++) {
+	for (int shagi{ 0 }; shagi < v; shagi++) {
 		int obchiecopy{ 0 };
 
-		for (int k{ 0 }; k < pyti; k++) {
+		for (int pytik{ 0 }; pytik < pyti; pytik++) {
 			int copy{ -1 };
 			bool vozvrat{ false };
 
-			if (pyts[k][i] != -1) {
-				for (int j : graph[pyts[k][i]]) {
+			if (pyts[pytik][shagi] != -1) {
+				for (int vozmoj : graph[pyts[pytik][shagi]]) {
 					bool mojno_li_idti{ true };
 
-					if (j == 0) {
+					if (vozmoj == 0) {
 						vozvrat = true;
 					}
 
-					for (int x : pyts[k]) {
-						if (j == x) {
+					for (int nashx : pyts[pytik]) {
+						if (vozmoj == nashx) {
 							mojno_li_idti = false;
 						}
 					}
@@ -35,39 +35,39 @@ void cicle(vector<vector<int>>& graph, int v, vector<vector<int>>& novigraph) {
 					if (mojno_li_idti == true) {
 						copy++;
 						if (copy == 0) {
-							pyts[k].push_back(j);
+							pyts[pytik].push_back(vozmoj);
 						}
 						else {
-							pyts.push_back(pyts[k]);
+							pyts.push_back(pyts[pytik]);
 							pyts[pyti - 1 + copy + obchiecopy].erase(pyts[pyti - 1 + copy + obchiecopy].end() - 1);
-							pyts[pyti - 1 + copy + obchiecopy].push_back(j);
+							pyts[pyti - 1 + copy + obchiecopy].push_back(vozmoj);
 						}
 					}
-					if (i == (v - 1) && vozvrat == true && copy == -1) {
+					if (shagi == (v - 1) && vozvrat == true && copy == -1) {
 						copy++;
-						pyts[k].push_back(0);
+						pyts[pytik].push_back(0);
 					}
 				}
 			}
 			else {
-				pyts[k].push_back(-1);
+				pyts[pytik].push_back(-1);
 			}
 
-			if (copy == -1 && i != (v - 1)) {
-				pyts[k].push_back(-1);
+			if (copy == -1 && shagi != (v - 1)) {
+				pyts[pytik].push_back(-1);
 			}
 
-			if (i == (v - 1) && vozvrat == true) {
+			if (shagi == (v - 1) && vozvrat == true) {
 				
-				for (int z{ 1 }; z <= v; z++) {
+				for (int shagz{ 1 }; shagz <= v; shagz++) {
 					bool mojno_li_idti2{ true };
-					for (int c : novigraph[pyts[k][z - 1]]) {
-						if (c == pyts[k][z]) {
+					for (int novic : novigraph[pyts[pytik][shagz - 1]]) {
+						if (novic == pyts[pytik][shagz]) {
 							mojno_li_idti2 = false;
 						}
 					}
 					if (mojno_li_idti2 == true) {
-						novigraph[pyts[k][z-1]].push_back(pyts[k][z]);
+						novigraph[pyts[pytik][shagz-1]].push_back(pyts[pytik][shagz]);
 					}
 				}
 			}
@@ -97,7 +97,7 @@ int main() {
 	vector<vector<int>> graph(versh);
 	vector<vector<int>> novigraph(versh);
 
-	for (int i{ 0 }; i < svaz; i++) {
+	for (int svazi{ 0 }; svazi < svaz; svazi++) {
 		int a, b;
 		inputFile >> a >> b;
 		graph[a].push_back(b);
@@ -107,14 +107,14 @@ int main() {
 	cout << endl;
 	cicle(graph, versh, novigraph);
 
-	int g{ 0 };
-	for (int i{ 0 }; i < versh; i++) {
-		for (int k : novigraph[i]) {
-			outputFile << i << " " << k << endl;
-			g++;
+	int proverca_na_pystotu{ 0 };
+	for (int vershi{ 0 }; vershi < versh; vershi++) {
+		for (int k : novigraph[vershi]) {
+			outputFile << vershi << " " << k << endl;
+			proverca_na_pystotu++;
 		}
 	}
-	if (g == 0) {
+	if (proverca_na_pystotu == 0) {
 		outputFile << "PYSTOE MNOJESTVO";
 	}
 	outputFile.close();
