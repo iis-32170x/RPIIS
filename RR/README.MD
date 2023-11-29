@@ -41,139 +41,77 @@
 
 ```c++
 #include <iostream>
-#include <vector>
 #include <fstream>
-#include <queue>
+#include <vector>
+#include <cstring>
 using namespace std;
 
-class Graph {
-    int V;
-    vector<vector<int>> adj;
+// Хранит список смежности
+vector<int> vec[100001];
 
-public:
-    Graph(int V) : V(V) {
-        adj.resize(V);
-    }
+// Хранит информацию о посещении вершин
+bool vis[100001];
+int cc = 1;
 
-    void addEdge(int u, int v) {
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+// Функция для выполнения обхода в глубину
+// для подсчета количества и размера
+// всех связанных компонентов
+void dfs(int node) {
+    // Отмечаем текущую вершину как посещенную
+    vis[node] = true;
 
-    bool isCyclicUtil(int v, vector<bool>& visited, int parent) {
-        visited[v] = true;
-
-        for (int i = 0; i < adj[v].size(); ++i) {
-            int u = adj[v][i];
-
-            if (!visited[u]) {
-                if (isCyclicUtil(u, visited, v))
-                    return true;
-            }
-            else if (u != parent) {
-                return true;
-            }
+    // Обходим список смежности текущей вершины
+    for (auto x : vec[node]) {
+        // Для каждой непосещенной вершины
+        if (!vis[x]) {
+            cc++;
+            // Рекурсивный вызов DFS
+            dfs(x);
         }
-        return false;
+    }
+}
+
+// Функция для добавления неориентированного
+// ребра в граф
+void addEdge(int u, int v) {
+    vec[u].push_back(v);
+    vec[v].push_back(u);
+}
+
+// Функция для вычисления минимального
+// количества ребер, которые нужно удалить
+void minEdgeRemoved() {
+    int N, M;
+    ifstream inputFile("C:\\Users\\bebra\\Desktop\\test2.txt");
+    inputFile >> N >> M;
+
+    vector<vector<int>> Edges(M, vector<int>(2));;
+    for (int i = 0; i < M; i++) {
+        inputFile >> Edges[i][0] >> Edges[i][1];
+        addEdge(Edges[i][0], Edges[i][1]);
+    }
+    inputFile.close();
+
+    memset(vis, false, sizeof(vis));
+    int k = 0;
+
+    // Перебираем все вершины
+    for (int i = 1; i <= N; i++) {
+        if (!vis[i]) {
+            cc = 1;
+            dfs(i);
+            k++;
+        }
     }
 
-    bool isCyclic() {
-        vector<bool> visited(V, false);
+    // Выводим окончательный результат
+    cout << "Количество ребер: " << M - N + k << endl;
+}
 
-        for (int u = 0; u < V; u++) {
-            if (!visited[u]) {
-                if (isCyclicUtil(u, visited, -1))
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    bool isConnected() {
-        vector<bool> visited(V, false);
-        queue<int> q;
-        q.push(0);
-        visited[0] = true;
-
-        while (!q.empty()) {
-            int u = q.front();
-            q.pop();
-
-            for (int v : adj[u]) {
-                if (!visited[v]) {
-                    visited[v] = true;
-                    q.push(v);
-                }
-            }
-        }
-
-        for (bool v : visited) {
-            if (!v) return false; // Если есть непосещенные вершины, граф несвязный
-        }
-
-        return true;
-    }
-
-    int countVerticesToRemove() {
-        if (!isConnected() || isCyclic()) {
-            int removedVertices = 1; // Начинаем с удаления одной вершины
-
-            for (int u = 0; u < V; u++) {
-                vector<vector<int>> temp = adj;
-
-                for (int v : adj[u]) {
-                    removeEdge(u, v);
-
-                    if (isConnected() && !isCyclic()) {
-                        return removedVertices;
-                    }
-                    else {
-                        adj = temp;
-                    }
-                }
-            }
-        }
-
-        return 0;
-    }
-
-    void removeEdge(int u, int v) {
-        adj[u].erase(remove(adj[u].begin(), adj[u].end(), v), adj[u].end());
-        adj[v].erase(remove(adj[v].begin(), adj[v].end(), u), adj[v].end());
-    }
-    void readGraphFromFile(const string& filename) {
-        ifstream inputFile(filename);
-        if (!inputFile.is_open()) {
-            cout << "Не удалось открыть файл." << endl;
-            return;
-        }
-
-        inputFile >> V; // Считываем количество вершин из файла
-        adj.resize(V);
-
-        int E;
-        inputFile >> E; // Считываем количество рёбер из файла
-        for (int i = 0; i < E; ++i) {
-            int u, v;
-            inputFile >> u >> v;
-            addEdge(u, v);
-        }
-
-        inputFile.close();
-    }
-};
-
+// Основная часть программы
 int main() {
     setlocale(LC_ALL, "RU");
-    Graph graph(0); // Создаем граф с изначальным количеством вершин 0
-
-    string filePath = "C:\\Users\\bebra\\Desktop\\test1.txt"; // Полный путь к файлу
-    graph.readGraphFromFile(filePath);
-
-    int verticesToRemove = graph.countVerticesToRemove();
-    cout << "Минимальное количество вершин для удаления: " << verticesToRemove << endl;
-
-    return 0;
+    minEdgeRemoved();
 }
 ```
 
