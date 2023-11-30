@@ -41,7 +41,8 @@
 
 Исходный граф:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144383538/bf12521b-850b-4052-9898-95e7e92c2c40)
+!![image](https://github.com/iis-32170x/RPIIS/assets/148707516/047bdb7d-8767-448a-bb4a-b65bbce2d861)
+
 
 Теперь представим этот граф в виде списка смежности:
 
