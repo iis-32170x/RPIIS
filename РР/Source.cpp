@@ -18,7 +18,7 @@ public:
 };
 
 void Tree(Graph& graph) {
-    vector<bool> inMST(graph.V, false);
+    vector<bool> inTree(graph.V, false);
     vector<int> key(graph.V, INT_MAX);
     vector<int> parent(graph.V, -1);
 
@@ -28,17 +28,17 @@ void Tree(Graph& graph) {
         int minKey = INT_MAX;
         int u = -1;
         for (int v = 0; v < graph.V; ++v) {
-            if (!inMST[v] && key[v] < minKey) {
+            if (!inTree[v] && key[v] < minKey) {
                 minKey = key[v];
                 u = v;
             }
         }
-        inMST[u] = true;
+        inTree[u] = true;
         for (auto& neighbor : graph.Listsmez[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 
-            if (!inMST[v] && weight < key[v]) {
+            if (!inTree[v] && weight < key[v]) {
                 parent[v] = u;
                 key[v] = weight;
             }
@@ -101,5 +101,4 @@ int main() {
     Tree(graph);
 
     return 0;
-}
 }
