@@ -34,7 +34,7 @@ void primMST(Graph& graph) {
             }
         }
         inMST[u] = true;
-        for (auto & neighbor : graph.adjList[u]) {
+        for (auto& neighbor : graph.adjList[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 
@@ -76,13 +76,14 @@ int main() {
         cin.ignore(INT_MAX, '\n');
     }
     Graph graph(n);
-    cout << "Введите список инцидентности(числа от 0 до n-1, где n - количество вершин) и вес рёбер: \n";
+    cout << "Введите список инцидентности(числа от 0 до n-1, где n - количество вершин): \n";
     for (int i = 0; i < m; i++) {
-        int v, u, weight;
+        int v, u, 
+        const weight = 1;
         while (1) {
-            cin >> v >> u >> weight;
+            cin >> v >> u;
             if (!cin.fail()) {
-                if (v >= n || u >= n || weight < 0) {
+                if (v >= n || u >= n) {
                     cout << "Ошибка ввода\n";
                 }
                 else {
@@ -91,7 +92,7 @@ int main() {
             }
             cin.clear();
             cout << "Некорректный ввод\n";
-            cout << "Введите 2 вершины и вес: \n";
+            cout << "Введите 2 вершины: \n";
             cin.ignore(INT_MAX, '\n');
         }
         graph.addEdge(v, u, weight);
