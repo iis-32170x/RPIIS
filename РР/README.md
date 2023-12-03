@@ -50,7 +50,7 @@
 
 Исходный граф:
 
-![wORDRxQMqQmCbRik](https://github.com/iis-32170x/RPIIS/assets/144374775/efd66376-e6af-434f-9337-404a66756055)
+![srmKzBqxEhGLaErh](https://github.com/iis-32170x/RPIIS/assets/144374775/625b717e-9c2e-4d86-9dff-542c692d1092)
 
 Теперь представим этот граф в виде списка смежности:
 
