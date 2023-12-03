@@ -7,17 +7,17 @@ using namespace std;
 class Graph {
 public:
     int V;
-    vector<vector<pair<int, int>>> adjList;
+    vector<vector<pair<int, int>>> Listsmez;
 
-    Graph(int V) : V(V), adjList(V) {}
+    Graph(int V) : V(V), Listsmez(V) {}
 
-    void addEdge(int u, int v, int weight) {
-        adjList[u].push_back(make_pair(v, weight));
-        adjList[v].push_back(make_pair(u, weight));
+    void addV(int u, int v, int weight) {
+        Listsmez[u].push_back(make_pair(v, weight));
+        Listsmez[v].push_back(make_pair(u, weight));
     }
 };
 
-void primMST(Graph& graph) {
+void Tree(Graph& graph) {
     vector<bool> inMST(graph.V, false);
     vector<int> key(graph.V, INT_MAX);
     vector<int> parent(graph.V, -1);
@@ -34,7 +34,7 @@ void primMST(Graph& graph) {
             }
         }
         inMST[u] = true;
-        for (auto& neighbor : graph.adjList[u]) {
+        for (auto& neighbor : graph.Listsmez[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 
@@ -95,10 +95,11 @@ int main() {
             cout << "Введите 2 вершины: \n";
             cin.ignore(INT_MAX, '\n');
         }
-        graph.addEdge(v, u, weight);
+        graph.addV(v, u, weight);
     }
 
-    primMST(graph);
+    Tree(graph);
 
     return 0;
+}
 }
