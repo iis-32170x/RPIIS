@@ -35,12 +35,9 @@ void Tree(Graph& graph) {
         }
         inTree[u] = true;
         for (auto& neighbor : graph.Listsmez[u]) {
-            int v = neighbor.first;
-            int weight = neighbor.second;
-
-            if (!inTree[v] && weight < key[v]) {
-                parent[v] = u;
-                key[v] = weight;
+            if (!inTree[neighbor.first] && neighbor.second < key[neighbor.first]) {
+                parent[neighbor.first] = u;
+                key[neighbor.first] = neighbor.second;
             }
         }
     }
