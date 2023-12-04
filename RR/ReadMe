@@ -1,1 +1,188 @@
+# Расчетная работа 
 
+## Введение
+
+### Цель
+Изучить основы теории графов, способы представления графов, базовые алгоритмы для работы с графами, 
+### Задание
+5.5(Найти сильные компоненты связности в орграфе)
+
+Реализовать на C++ код, который может найти сильные компоненты связности ориентированного графа.
+
+Граф представляется в виде матрицы смежности.
+
+### Ключевые понятия
+`Граф` - математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
+
+`Ориентированный граф (кратко орграф)` —  граф, рёбрам которого присвоено направление.
+
+Две вершины  A и B называются  `сильно связными` и образуют `сильную компоненту связности`, если существует ориентированный путь из A в B  и одновременно ориентированный путь из  B в A.
+
+
+`Обход в глубину` - один из методов обхода графа. Идея заключается в том, что мы двигаемся от начальной вершины (точки, места) в определенном направлении (по определенному пути) до тех пор, пока не достигнем конца пути или пункта назначения (искомой вершины). Если мы достигли конца пути, но он не является пунктом назначения, то мы возвращаемся назад (к точке разветвления или расхождения путей) и идем по другому маршруту.
+
+
+Графический пример обхода в ширину:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144383538/2684132b-37f0-4310-a2f7-9ed034df4b2a)
+
+## Алгоритм решения
+
+
+
+
+
+
+
+## Реализация на C++
+```c++
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <stack>
+#include<string>
+
+
+void dfs(int vertex, const std::vector<std::vector<int>>& graph, std::vector<bool>& visited, std::stack<int>& stack) {
+    visited[vertex] = true;
+    for (int i = 0; i < graph.size(); ++i) {
+        if (graph[vertex][i] && !visited[i]) {
+            dfs(i, graph, visited, stack);
+        }
+    }
+    stack.push(vertex);
+}
+
+void dfsReverse(int vertex, const std::vector<std::vector<int>>& reversedGraph, std::vector<bool>& visited, std::vector<int>& scc, int sccNumber) {
+    visited[vertex] = true;
+    scc.push_back(vertex);
+    for (int i = 0; i < reversedGraph.size(); ++i) {
+        if (reversedGraph[vertex][i] && !visited[i]) {
+            dfsReverse(i, reversedGraph, visited, scc, sccNumber);
+        }
+    }
+}
+
+std::vector<std::vector<int>> findStronglyConnectedComponents(const std::vector<std::vector<int>>& graph) {
+    int n = graph.size();
+    std::vector<bool> visited(n, false);
+    std::stack<int> stack;
+
+    for (int i = 0; i < n; ++i) {
+        if (!visited[i]) {
+            dfs(i, graph, visited, stack);
+        }
+    }
+
+    std::vector<std::vector<int>> reversedGraph(n, std::vector<int>(n, 0));
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            reversedGraph[i][j] = graph[j][i];
+        }
+    }
+
+    std::fill(visited.begin(), visited.end(), false);
+    std::vector<std::vector<int>> stronglyConnectedComponents;
+
+    while (!stack.empty()) {
+        int vertex = stack.top();
+        stack.pop();
+        if (!visited[vertex]) {
+            std::vector<int> scc;
+            dfsReverse(vertex, reversedGraph, visited, scc, stronglyConnectedComponents.size());
+            stronglyConnectedComponents.push_back(scc);
+        }
+    }
+
+    return stronglyConnectedComponents;
+}
+
+int main() {
+    setlocale(LC_ALL, "RU");
+    std::string filename;
+    std::cout << "Введите имя файла, содержащего матрицу смежности графа: ";
+    std::cin >> filename;
+
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Не удалось открыть файл.\n";
+        return 1;
+    }
+
+    std::vector<std::vector<int>> graph;
+    std::string line;
+    while (getline(file, line)) {
+        std::vector<int> row;
+        for (char c : line) {
+            if (c == '0' || c == '1') {
+                row.push_back(c - '0');
+            }
+        }
+        graph.push_back(row);
+    }
+    
+
+    file.close();
+
+    std::vector<std::vector<int>> stronglyConnectedComponents = findStronglyConnectedComponents(graph);
+
+    if (stronglyConnectedComponents.empty()) {
+        std::cout << "Компоненты сильной связности не найдены\n";
+    }
+    else {
+        for (auto& scc : stronglyConnectedComponents) {
+            std::cout << "Сильная компонента связности: ";
+            for (int i = 0; i < scc.size(); ++i) {
+                std::cout << scc[i] + 1; // Добавляем 1, чтобы вершины были нумерованы с 1, а не с 0
+                if (i < scc.size() - 1) {
+                    std::cout << "-";
+                }
+            }
+            std::cout << std::endl;
+        }
+    }
+
+    return 0;
+}
+
+```
+
+## Разбор кода:
+
+
+
+
+
+
+## Тестирование
+
+
+## Вывод
+ 
+В результате выполнения расчётной работы приобрёл следующие навыки:
+- изучил основы теории графов
+- изучил способы представления графов
+- изучил базовые алгоритмы для работы с графами
+- изучил базовые алгоритмы работы с векторами, стеком и файлами в C++
+
+## Список литературы
+[1] Оре О. Теория графов. – 2-е изд.. – М.: Наука, 1980. – С. 336.
+
+[2] Кормен Т. Х. и др. Часть VI. Алгоритмы для работы с графами // Алгоритмы: построение
+и анализ = Introduction to Algorithms. – 2-е изд.. – М.: Вильямс, 2006. – С. 1296.
+
+[3] Харари, Ф. Теория графов / Ф. Харари / Пер. с англ. и предисл. В.П. Козырева. Под ред.
+Г.П. Гаврилова. Изд. 2-е. – М.: Едиториал УРСС, 2003. – 269 с.
+
+[4] Нечипуренко, М. И. Алгоритмы и программы решения задач на графах и сетях / М.И.
+Нечипуренко, В.К. Попков, С.М. Майнагашев и др. – Новосибирск: Наука. Сиб. отд-ние,
+1990. – 515 с.
+
+[5] Емеличев В. А., Мельников О. И., Сарванов В. И., Тышкевич Р. И. Лекции по теории
+графов. М.: Наука, 1990. 384с. (Изд.2, испр. М.: УРСС, 2009. 392 с.)
+
+[6] Касьянов, В. Н. Графы в программировании: обработка, визуализация и применение / В.
+Н. Касьянов, В. А. Евстигнеева. – СПб. : БХВ-Петербург, 2003.
+
+[7] База знаний по теории графов OSTIS GT [Электронный ресурс] / проект OSTIS, 2012. –
+Режим доступа: http://ostisgraphstheo.sourceforge.net. — Дата доступа : 11.09.2012.
