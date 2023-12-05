@@ -197,7 +197,7 @@ else {
 
 Графическое представление:
 
-![graph1](rasch/TEST/test 1.png)
+![graph1](tests/graph1.png)
 
 
 Матрица смежности:
