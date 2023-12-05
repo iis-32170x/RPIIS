@@ -42,6 +42,68 @@
 
 Так же заведем счетчик, который будет подсчитывать число вершинных связностей. Если мы обошли граф, и у нас остались непосещенные выршины, это значит, что граф состоит из нескольких компонент связности. Число этих компонентов будет равно числу запуска обходов в глубину(исключая те, что были запущены в самом обходе)
 
+## Реализация на С++
+
+```
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <string>
+using namespace std;
+
+void dfs(vector<vector<int>>& graph, int v, vector<int>& visited, int n, int m) {
+	visited[v] = 1;
+	
+	for (int i = 0; i < n; i++) {
+		if (graph[v][i] == 1 || graph[v][i] == -1) {
+			for (int j = 0; j < m; j++) {
+				if ((graph[j][i] == 1 && !visited[j]) || (graph[j][i] == -1 && !visited[j])) {
+					dfs(graph, j, visited, n, m);
+				}
+			}
+		}
+	}
+}
+
+
+int main() {
+
+	string line;
+	cout << "Введите файл: ";
+	cin >> line;
+	ifstream inputFile(line);
+	ofstream outputFile("output.txt");
+	int vertexCount, edgeCount;
+	inputFile >> vertexCount >> edgeCount;
+	
+	vector<vector<int>> graph(vertexCount, vector<int>(vertexCount));
+
+	for (int i = 0; i < edgeCount; i++) {
+		int a, b;
+		inputFile >> a >> b;
+			a--;
+			b--;
+			graph[a][i] = 1;
+			graph[b][i] = -1;
+	}
+	inputFile.close();
+
+	int numConnectedComponents = 0;	
+	vector<int> visited(vertexCount, 0);
+	
+	for (int i = 0; i < vertexCount; i++) {
+		if (!visited[i]) {
+			dfs(graph, i, visited, edgeCount, vertexCount);
+			numConnectedComponents++;
+		}
+	}
+
+	
+	outputFile << "Число компонент связности: " << numConnectedComponents << endl;
+	outputFile.close();
+	return 0;
+}
+```
  ## Вывод
  
 В результате выполнения расчётной работы приобрёл следующие навыки:
