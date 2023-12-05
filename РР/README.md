@@ -73,6 +73,8 @@ int main()
 	}
 	return 0;
 }
+
+
 ## Разбор кода
 - `#include <iostream>` - библиотека для ввода \ вывода
 - `using namespace std` - подключение пространства имен `std`
