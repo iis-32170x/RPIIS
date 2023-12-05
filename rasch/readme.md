@@ -113,7 +113,7 @@ int main()
 -Получаем результат
 
 ## Тестирование
-Все тесты и наглядное изображение графов можетете посмотреть  [здесь]([https://github.com/iis-32170x/RPIIS/tree/%D0%A1%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%91/%D0%A0%D0%A0/%D1%82%D0%B5%D1%81%D1%82%D1%8B](https://github.com/iis-32170x/RPIIS/tree/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%87_%D0%92/rasch/TEST))
+Все тесты и наглядное изображение графов можетете посмотреть  [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%87_%D0%92/rasch/TEST))
 
 # Вывод
  
