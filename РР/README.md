@@ -106,6 +106,82 @@ k=3:
 
 Наименьшее из этих значений - 5. Таким образом, радиус этого графа равен 5.
 
+##Код, выполняющий наш алгоритм:
+
+``` c++
+#include <iostream>
+#include <vector>
+#include <limits>
+
+const int INF = std::numeric_limits<int>::max();
+
+
+int findGraphRadius(const std::vector<std::vector<int>>& graph) {
+    int n = graph.size();
+    std::vector<std::vector<int>> dist(n, std::vector<int>(n));
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if (i == j) {
+                dist[i][j] = 0;
+            }
+            else if (graph[i][j] != 0) {
+                dist[i][j] = graph[i][j];
+            }
+            else {
+                dist[i][j] = INF;
+            }
+        }
+    }
+
+    for (int k = 0; k < n; ++k) {
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (dist[i][k] != INF && dist[k][j] != INF && dist[i][k] + dist[k][j] < dist[i][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+
+    int radius = INF;
+    for (int i = 0; i < n; ++i) {
+        int maxDist = 0;
+        for (int j = 0; j < n; ++j) {
+            if (dist[i][j] > maxDist) {
+                maxDist = dist[i][j];
+            }
+        }
+        if (maxDist < radius) {
+            radius = maxDist;
+        }
+    }
+
+    return radius;
+}
+
+int main() {
+    setlocale(0, "");
+    int n;
+    std::cout << "Введите количество вершин графа: ";
+    std::cin >> n;
+
+    std::vector<std::vector<int>> graph(n, std::vector<int>(n));
+
+    std::cout << "Введите матрицу смежности графа:\n";
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            std::cin >> graph[i][j];
+        }
+    }
+
+    int radius = findGraphRadius(graph);
+    std::cout << "Радиус взвешенного ориентированного графа: " << radius << std::endl;
+
+    return 0;
+}
+```
+
 ## Вывод
  
 В результате выполнения расчётной работы я:
