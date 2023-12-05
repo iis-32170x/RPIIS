@@ -21,6 +21,7 @@
 ## Реализация на С++
 Код, выполняющий приведённый алгоритм:
 C++
+`
 #include <iostream>
 
 using namespace std;
@@ -73,6 +74,7 @@ int main()
 	}
 	return 0;
 }
+`
 ## Разбор кода
 - `#include <iostream>` - библиотека для ввода \ вывода
 - `using namespace std` - подключение пространства имен `std`
