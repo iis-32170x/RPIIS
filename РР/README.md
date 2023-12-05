@@ -104,6 +104,43 @@ int main() {
 	return 0;
 }
 ```
+
+## Разбор кода:
+- `#include <vector>` и `#include <fstream>`: библиотеки , которые предоставляют возможность использовать вектор и файлы. 
+- `void dfs(vector<vector<int>>& graph, int v, vector<int>& visited, int n, int m)` функция поиска в глубину, которая принимает граф, текущую вершину, список посещенных вершин, количество вершин, количество ребер
+- `visited[v] = 1;
+	for (int i = 0; i < n; i++) {
+		if (graph[v][i] == 1 || graph[v][i] == -1) {
+			for (int j = 0; j < m; j++) {
+				if ((graph[j][i] == 1 && !visited[j]) || (graph[j][i] == -1 && !visited[j])) {
+					dfs(graph, j, visited, n, m);` главный алгоритм поиска, описанный [здесь](#алгоритм-решения)
+
+ - `string line;
+	cout << "Введите файл: ";
+	cin >> line;
+	ifstream inputFile(line);
+	ofstream outputFile("output.txt");
+	int vertexCount, edgeCount;
+	inputFile >> vertexCount >> edgeCount;` берём количество вершин и ребер из файла
+
+- `for (int i = 0; i < edgeCount; i++) {
+		int a, b;
+		inputFile >> a >> b;
+			a--;
+			b--;
+			graph[a][i] = 1;
+			graph[b][i] = -1;
+	}
+	inputFile.close(); ` представляем граф в виде матрицы инцидентности
+
+- `for (int i = 0; i < vertexCount; i++) {
+		if (!visited[i]) {
+			dfs(graph, i, visited, edgeCount, vertexCount);
+			numConnectedComponents++;
+		}
+	}` цикл для перебора всех вершин, если остались непосещенные
+- `outputFile << "Число компонент связности: " << numConnectedComponents << endl;` выводим результат в файл output.txt
+
  ## Вывод
  
 В результате выполнения расчётной работы приобрёл следующие навыки:
