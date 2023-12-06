@@ -43,6 +43,8 @@ void minR(int n) {
         }
     }
 }
+
+
 void ReadMatrixFromFile(const string& fileName, int& n, int& m) {
     ifstream matrixFile(fileName);
     if (!matrixFile.is_open()) {
@@ -73,14 +75,17 @@ void ReadMatrixFromFile(const string& fileName, int& n, int& m) {
 
     matrixFile.close();
 }
+
+
+
 int main() {
     setlocale(0, "");
     int choose;
     int amountOfStrings;
     cout << "Для ввода матрицы с клавиатуры нажмите 1, для считывания с файла - не 1" << endl;
     cin >> choose;
-    int n = 0;
-    int m = 0;
+    int n;
+    int m ;
     if (choose == 1) {
 
         cout << "Введите количество вершин:" << endl;
