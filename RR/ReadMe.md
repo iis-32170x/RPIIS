@@ -63,31 +63,37 @@ void dfsReverse(int vertex, const std::vector<std::vector<int>>& reversedGraph, 
     }
 }
 
-std::vector<std::vector<int>> findStronglyConnectedComponents(const std::vector<std::vector<int>>& graph) {
+std::vector<std::vector<int>> findStronglyConnectedComponents(const std::vector<std::vector<int>>& graph)
+{
     int n = graph.size();
     std::vector<bool> visited(n, false);
     std::stack<int> stack;
-
-    for (int i = 0; i < n; ++i) {
-        if (!visited[i]) {
+    for (int i = 0; i < n; ++i) 
+    {
+        if (!visited[i]) 
+        {
             dfs(i, graph, visited, stack);
         }
     }
 
-    std::vector<std::vector<int>> reversedGraph(n, std::vector<int>(n, 0));
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            reversedGraph[i][j] = graph[j][i];
+   std::vector<std::vector<int>> reversedGraph(n, std::vector<int>(n, 0));
+   for (int i = 0; i < n; ++i) 
+   {
+       for (int j = 0; j < n; ++j) 
+        {
+           reversedGraph[i][j] = graph[j][i];
         }
-    }
+   }
 
-    std::fill(visited.begin(), visited.end(), false);
+   std::fill(visited.begin(), visited.end(), false);
     std::vector<std::vector<int>> stronglyConnectedComponents;
 
-    while (!stack.empty()) {
+    while (!stack.empty()) 
+    {
         int vertex = stack.top();
         stack.pop();
-        if (!visited[vertex]) {
+        if (!visited[vertex]) 
+        {
             std::vector<int> scc;
             dfsReverse(vertex, reversedGraph, visited, scc, stronglyConnectedComponents.size());
             stronglyConnectedComponents.push_back(scc);
@@ -124,7 +130,16 @@ int main() {
 
     file.close();
 
-    std::vector<std::vector<int>> stronglyConnectedComponents = findStronglyConnectedComponents(graph);
+    int n = graph.size();
+    std::vector<std::vector<int>> reversedGraph(n, std::vector<int>(n, 0));
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < n; ++j)
+        {
+            reversedGraph[i][j] = graph[j][i];
+        }
+    }
+    std::vector<std::vector<int>> stronglyConnectedComponents = findStronglyConnectedComponents(reversedGraph);
 
     if (stronglyConnectedComponents.empty()) {
         std::cout << "Компоненты сильной связности не найдены\n";
