@@ -116,13 +116,13 @@
 
 
 ### Примеры выполнения
-![Матрица 1](/RRimages/matrix1.png) 
-![Пример 1 с матрицей 1](/RRimages/example1m1.png) 
-![Пример 2 с матрицей 1](/RRimages/example2m1.png) 
-![Матрица 2](/RRimages/matrix2.png) 
-![Пример 1 с матрицей 2](/RRimages/example1m2.png) 
-![Пример 2 с матрицей 2](/RRimages/example2m2.png) 
-![Пример 3 с матрицей 2](/RRimages/example3m2.png) 
+![Матрица 1](/RRI/matrix1.png) 
+![Пример 1 с матрицей 1](/RRI/example1m1.png) 
+![Пример 2 с матрицей 1](/RRI/example2m1.png) 
+![Матрица 2](/RRI/matrix2.png) 
+![Пример 1 с матрицей 2](/RRI/example1m2.png) 
+![Пример 2 с матрицей 2](/RRI/example2m2.png) 
+![Пример 3 с матрицей 2](/RRI/example3m2.png) 
 
 
 ## Вывод
