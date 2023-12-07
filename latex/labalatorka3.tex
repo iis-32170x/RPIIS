@@ -1,0 +1,620 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\setcounter{page}{72} 
+\usepackage[left=25mm, top= 20 mm, right=25mm, bottom= 20 mm, nohead]{geometry}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage[russian]{babel}
+\usepackage{hyperref,lipsum}
+\usepackage[normalem]{ulem}
+\linespread{0.9}
+\begin{document}
+
+\begin{multicols}{2}
+
+Such an sc-memory model can be easily described in
+the \textit{sc-language}, that is, in the sublanguage of the \textit{SCcode}. Such a language allows describing how texts of a
+language are represented inside the memory of the \textit{ostis-platform} in the same language. At the same time, not
+only the unification of representing information processed
+by the \textit{ostis-platform} and information describing the
+\textit{ostis-platform} itself is observed, but also opportunities
+are given for expanding and using the language in
+the process of evolution of the \textit{ostis-platform} and its
+components, including those in the process of evolution
+of \textit{Implementation of ostis-platform sc-memory}.
+\par \ 
+\par
+\noindent\textbf{\textit{SCin-code}} %google
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\itemsep-0.4em 
+\item [:=] [Semantic Code interior]
+    \item [:=] [Language for describing the representation of the
+SC-code inside ostis-platform sc-memory]
+    \item [:=] [Metalanguage for describing the representation
+of sc-constructions in ostis-platform sc-memory]
+    \item [$\Rightarrow$] \textit{frequently used non-primary external identifier of
+the sc-element}*:\par     \vspace{-0.2cm}
+[scin-text]
+     \begin{description}[ labelwidth=0.75cm]
+     \vspace{-0.3cm}
+     \item [$\in$] \textit{common noun}
+    \end{description}
+        \vspace{-0.2cm}
+    \item [$\in$] \textit{abstract language}
+    \item [$\in$] \textit{metalanguage}
+    \item [$\in$] \textit{sc-language}
+    \item [\subset] \textit{SC-code}
+    \item [\supset] \textit{sc-memory}
+\end{description}
+
+\par 
+\noindent\textbf{\textit{should be distinguished*}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\item [$\ni$] \{ $\bullet$ \hspace{14pt} \textit{SC-code}
+\end{description}
+
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[:=] [Universal language of internal
+semantic representation of
+knowledge in memory of ostis-
+systems]\
+\end{description}
+
+
+\begin{description}[ labelwidth=0.75cm]
+\item \hspace{4.2pt} $\bullet$  \ \ \ \ \   \textit{SCin-code}
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+
+\leftskip=2.2cm \item[:=] [Metalanguage for describing the
+representation of the SC-code in ostis-
+platform sc-memory]
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[\subset] \textit{SC-code}
+\end{description} 
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\item \hspace{0.1pt} \} 
+\end{description}
+
+\noindent\textbf{\textit{Software interface of Implementation of ostis platform sc-memory}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\itemsep-0.4em 
+
+\item [$\Leftarrow$] \textit{software interface*:} \par 
+\vspace{-0.15cm}
+\textit{Implementation of ostis-platform sc-memory}
+
+    \item [$\in$] \textit{software interface}
+    
+     \item [$\in$] \textit{reusable ostis-systems component stored as
+source files}
+
+ \item [$\in$] \textit{atomic reusable ostis-systems component}
+ 
+ \item [$\in$] \textit{dependent reusable ostis-systems component}
+
+ \item [$\Rightarrow$] \textit{component dependencies*:} 
+
+ 
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\{•] GLib library of methods and data
+structures
+  \item[\ •] C++ Standard Library of methods and
+data structures
+\item[\}]
+\end{description} 
+
+\columnbreak
+
+\item [$\Rightarrow$] \textit{method representation language used*:}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[•] C
+ \item[•] C++ 
+
+\end{description} 
+
+    \item [\supset] \textit{Software interface for information-forming
+methods of Implementation of ostis-platform
+sc-memory}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[:=] [information-forming methods of Implementation of ostis-platform sc-memory]
+ \item[:=] [subsystem that is part of the implementation of ostis-platform sc-memory, which allows creating, modifying, and deleting constructions of sc-memory]
+ \item[$\Leftarrow$] \textit{software interface*:}\par  \vspace{-0.08cm}
+ \ \textit{Implementation of the} \par \vspace{-0.08cm}
+ \  \textit{information-generating subsystem of}\par \vspace{-0.08cm}
+ \  \textit{Implementation of ostis-platform}\par \vspace{-0.08cm}
+ \  \textit{sc-memory}
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\ \subset]  \ \ \textit{Implementation of ostis-platform}\par
+ \ \ \ \ \ \textit{sc-memory}
+\end{description} 
+
+\end{description} 
+
+  \item [\supset] \textit{Software interface for information-forming
+methods of Implementation of ostis-platform
+sc-memory}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[:=] [information retrieval methods of Implementation of ostis-platform sc-memory]
+ \item[:=] [subsystem that is part of Implementation
+of ostis-platform sc-memory that allows finding constructions in sc-memory]
+ \item[$\Leftarrow$] \textit{software interface*:}\par  \vspace{-0.08cm}
+ \ \textit{Implementation of the information} \par \vspace{-0.08cm}
+ \  \textit{retrieval subsystem of Implementation of }\par \vspace{-0.08cm}
+ \  \textit{ostis-platform sc-memory}\par \vspace{-0.08cm}
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\ \subset]  \ \ \textit{Implementation of ostis-platform}\par
+ \ \ \ \ \ \textit{sc-memory}
+\end{description} 
+
+\end{description}
+
+\noindent\small\textbf{\textit{Implementation of ostis-platform file memory}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\itemsep-0.1em 
+
+\item [$\in$] \textit{file memory implementation based on the}
+\par \vspace{-0.08cm}  \ \textit{prefix tree} 
+\item [$\Leftarrow$]  \textit{software model*:} 
+\par \vspace{-0.08cm}
+ \  \textit{ostis-platform file memory }
+
+\item [$\in$]  \textit{reusable ostis-systems component stored as} 
+\par \vspace{-0.08cm}
+ \  \textit{source files }
+ 
+\item [$\in$] \textit{atomic reusable ostis-systems component}
+
+\item [$\in$] \textit{dependent reusable ostis-systems component}
+
+\item [$\Rightarrow$] \textit{component dependencies*:} 
+
+ 
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\{•] \textit{GLib library of methods and data}
+\par 
+ \ \ \ \textit{structures}
+\item[\}]
+\end{description} 
+
+\item [$\Rightarrow$] \textit{method representation language*:}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[•] C
+\end{description} 
+
+\item [$\Rightarrow$] \textit{internal language*:}
+
+ \begin{description}[ labelwidth=0.75cm] 
+ \vspace{-0.15cm}
+ \item[•] SCfin code
+\end{description} 
+
+\end{description}
+
+\noindent\small\textbf{\textit{Implementation of ostis-platform file memory}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\itemsep-0.1em 
+\item [:=] [Semantic Code file interior]
+
+\columnbreak
+
+\item [:=] [Language for describing the representation of
+information constructions that do not belong
+to the SC-code inside the ostis-platform file
+memory]
+
+\item [:=] [Metalanguage for describing the representation
+of information constructions that do not belong
+to the SC-code inside the ostis-platform file
+memory]
+
+  \item [$\Rightarrow$] \textit{frequently used sc-identifier*:}*:\par
+[sc.fin-text]
+    \begin{description}[ labelwidth=0.75cm]
+     \vspace{-0.1cm}
+     \item [$\in$] \textit{common noun}
+    \end{description}
+        \vspace{-0.2cm}
+    \item [$\in$] \textit{abstract language}
+    \item [$\in$] \textit{metalanguage}
+    \item [$\in$] \textit{sc-language}
+    \item [\subset] \textit{SC-code}
+    \item [\supset] \textit{ostis-platform file memory}
+
+\end{description}
+
+\noindent\textbf{\textit{should be distinguished*}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\item [$\ni$] \{ $\bullet$ \hspace{14pt} \textit{SC-code}
+\end{description}
+
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[:=] [Universal language of internal semantic representation of knowledge in memory of ostis-systems]
+\
+\end{description}
+
+
+\begin{description}[ labelwidth=0.75cm]
+\item \hspace{4.2pt} $\bullet$  \ \ \ \ \   \textit{SCfin-code}
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[:=][Metalanguage for describing the
+representation of external information constructions that do not
+belong to the SC-code in ostisplatform file memory]
+
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2cm \item[\subset] \textit{SC-code}
+\end{description} 
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\item \hspace{0.1pt} \} 
+\end{description}
+
+\noindent\textbf{\textit{should be distinguished*}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\item [$\ni$] \{ $\bullet$ \hspace{14pt} \textit{SC-code}
+\end{description}
+
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[:=] [Metalanguage for describing the
+representation of the SC-code in ostis-platform sc-memory]
+\
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2cm \item[\subset] \textit{SC-code}
+\end{description} 
+
+
+\begin{description}[ labelwidth=0.75cm]
+\item \hspace{4.2pt} $\bullet$  \ \ \ \ \   \textit{SCfin-code}
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2.2cm \item[:=][Metalanguage for describing the
+representation of external information constructions that do not
+belong to the SC-code in ostisplatform file memory]
+
+\end{description}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\leftskip=2cm \item[\subset] \textit{SC-code}
+\end{description} 
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.6cm}
+\item \hspace{0.1pt} \} 
+\end{description}
+
+\noindent\textbf{\textit{Implementation of the subsystem of interaction with
+the external environment using languages of network
+interaction}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\item [$\Rightarrow$] \textit{software system decomposition*:} 
+
+
+ 
+\begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\ \{•] \textit{Implementation of the subsystem of}\par
+ \textit{interaction with the external environment}\par
+\ \textit{using languages of network interaction}\par
+\ \textit{based on the JSON language}
+\item[\ \}]
+\end{description}
+
+\vspace{-0.6cm}
+
+\end{description}
+
+\columnbreak
+
+ \noindent\textbf{\textit{Implementation of the network interaction subsystem
+with sc-memory based on JSON in the ostis-platform}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.3cm}
+\itemsep-0.1em 
+\item [:=] [Subsystem for interacting with sc-memory based
+on the JSON format]
+
+\item [:=] [Network software interface of Implementation of
+ostis-platform sc-memory]
+
+\item [:=] [Our proposed option of implementing the mechanism for accessing the ostis-platform sc-memory
+in a distributed collective of ostis-systems]
+
+    \item [$\in$] \textit{reusable ostis-systems component stored as}\par \vspace{-0.15cm}
+   \ \textit{source files}
+    \item [$\in$] \textit{non-atomic reusable ostis-systems component}
+    \item [$\in$] \textit{dependent reusable ostis-systems component}
+    \item [$\in$] \textit{client-server system}
+
+\item [$\Rightarrow$] \textit{method representation language used*:} 
+
+
+ 
+\begin{description}[ labelwidth=0.75cm]
+\item[\ •] C
+\item[\ •] C++
+\item[\ •] Python
+\item[\ •] TypeScript
+\item[\ •] C#
+\item[\ •] Java
+\end{description}
+
+\item [$\Rightarrow$] \textit{language used*:} 
+
+\begin{description}[ labelwidth=0.75cm]
+\item[\ •] SC-JSON-code
+\end{description}
+
+\item [$\Rightarrow$] \textit{software system decomposition*:} 
+\begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\ \{•] \textit{Implementation of the Server System}\par
+ \ \textit{based on Websocket and JSON, providing}\par
+\ \textit{network access to memory of the}\par
+\ \textit{ostis-platform}
+\item[\ \{ \}]
+
+\item[= \ \ \ \ \{•] \textit{Implementation of the client}\par
+ \ \ \ \ \ \ \  \textit{system in the Python programming}\par
+\ \  \ \ \ \ \ \textit{language}\par
+
+\item[ \ \ \ \ \ \ \ •] \textit{Implementation of the client}\par
+ \ \ \ \ \ \ \  \textit{system in the TypeScript}\par
+\ \  \ \ \ \ \ \textit{programming language}\par
+
+\item[ \ \ \ \ \ \ \ •] \textit{Implementation of the client}\par
+ \ \ \ \ \ \ \  \textit{system in the C programming}\par
+\ \  \ \ \ \ \ \textit{language}\par
+
+\item[ \ \ \ \ \ \ \ •] \textit{Implementation of the client}\par
+ \ \ \ \ \ \ \  \textit{system in the Java programming}\par
+\ \  \ \ \ \ \ \textit{language}\par
+
+\item[ \ \ \ \ \ \ \}]
+\item[\}]
+
+\end{description}
+\par \ \par 
+
+ \noindent\textbf{\textit{SC-JSON-code}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.2cm} 
+ \item [:=] [Semantic JSON-code]
+
+\item [:=] [Semantic JavaScript Object Notation code]
+
+\item [:=] [Metalanguage for describing the representation
+of messages between subsystems of the ostisplatform]
+
+\item [$\Rightarrow$]  \textit{frequently used sc-id*:} \par
+\ \ \ [sc-json-text]
+
+\item [:=] [The language we propose for interaction in a
+distributed collective of ostis-systems]
+ \begin{description}[ labelwidth=0.75cm]
+   \item [$\in$] \textit{common noun}
+   \columnbreak
+\end{description}
+\end{description}
+
+\item [$\in$] \textit{abstract language}
+   \item [\subset] \textit{SC-code}
+   \item [\subset] \textit{JSON}
+\par \ \par
+\end{description}
+
+
+\noindent\textbf{\textit{Implementation of the Server System based on
+Websocket and JSON, providing network access to memory of the ostis-platform}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.2cm} 
+ \item [:=] [Implementation of a Websocket-based
+ system that provides parallel-asynchronous multi-client
+ access to sc-memory of the sc-model interpretation
+platform using the SC-JSON code]
+
+\item [:=] [sc-json-server]
+
+\item [$\Rightarrow$] \textit{frequently used sc-identifier*:}\par
+\ \ [sc-server]
+\item [:=] [sc-server]
+
+\item [$\in$] \textit{reusable ostis-systems component stored as}\par
+\ \ \textit{source files}
+
+\item [$\in$] \textit{atomic reusable ostis-systems component}
+
+\item [$\in$] \textit{dependent reusable ostis-systems component}
+
+\item [$\Rightarrow$] \textit{method representation language used*:}
+\begin{description}[ labelwidth=0.75cm]
+\item [•] C
+\item [•] C++
+\end{description}
+
+\item [$\Rightarrow$] \textit{language used*:}
+
+\begin{description}[ labelwidth=0.75cm]
+\item [•] SC-JSON-code
+\end{description}
+
+\item [$\Rightarrow$] \textit{component address*:}
+
+\ \ \url{[https://github.com/ostis-ai/sc-machine/sctools/sc-server]}
+
+
+\item [$\Rightarrow$] \textit{component dependencies*:
+}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\{•] \textit{Library of software components for}\par
+ \ \ \  \textit{processing json texts}
+\item[\ •] \textit{Library of cross-platform software}\par
+ \ \ \  \textit{components for implementing server}\par
+ \ \ \  \textit{applications based on Websocket}
+ \item[\ •] \textit{Software component for setting up}\par
+ \ \ \  \textit{software components of ostis-systems}
+  \item[\ •] \textit{Implementation of sc-memory}
+\item[\}]
+\end{description} 
+
+\end{description}
+
+\noindent\textbf{\textit{Implementation of the interpreter for sc-models of user interfaces}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.2cm} 
+
+ \item [:=] [Our proposed interpreter for interpreting \par
+ \ \ scmodels of ostis-systems user interfaces]
+
+ \item [$\in$] \textit{reusable ostis-systems component stored as}\par
+\ \textit{source files}
+
+\item [$\in$] \textit{non-atomic reusable ostis-systems component}
+
+ \item [$\in$] \textit{dependent reusable ostis-systems component}
+
+ \item [$\Rightarrow$] \textit{method representation language used*:}
+\begin{description}[ labelwidth=0.75cm]
+\item [•] \textit{JavaScript}
+\item [•] \textit{TypeScript}
+\item [•] \textit{Python}
+\item [•] \textit{HTML}
+\item [•] \textit{CSS}
+\end{description}
+
+\item [$\Rightarrow$] \textit{component address*:}
+
+\ \ url{[https://github.com/ostis-ai/sc-web]}
+\columnbreak
+
+\item [$\Rightarrow$] \textit{component dependencies*:
+}
+
+ \begin{description}[ labelwidth=0.75cm]
+ \vspace{-0.15cm}
+ \item[\{•] \textit{Library of standard interface}\par
+ \hspace{0.2cm }\textit{components in the JavaScript}
+ \textit{programming language}
+\item[\ •] \textit{Library for implementing server}\par
+ \ \ \  \textit{applications in the Python Tornado}\par
+ \ \ \  \textit{programming language}
+ \item[\ •] \textit{Implementation of the client system in}\par
+ \ \ \  \textit{the TypeScript programming language}
+  \item[\ •] \textit{Implementation of the client system in}
+   \ \ \ \ \ \textit{the Python programming language}
+\item[\}]
+\end{description} 
+
+\end{description}
+
+\begin{center}
+\small{VI. PROSPECTS FOR DEVELOPING THE SOFTWARE
+PLATFORM OF OSTIS-SYSTEMS}
+\end{center}
+
+\noindent\textbf{\small{\textit{Software implementation of the ostis-platform
+}}}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.2cm} 
+\item [$\Rightarrow$] \textit{prospects for development*:}
+
+\begin{description}[ labelwidth=0.75cm]
+\vspace{-0.2cm} 
+\item [\ •] Despite the fact that the \textit{Implementation of ostisplatform sc-memory} is functionally complete
+for the development of \textit{semantically compatible
+interoperable ostis-systems} and is \textit{multi-user},
+i.e. it can execute actions of different users in
+parallel, significant restrictions are imposed on
+the \textit{actions} of these users. First of all, these
+restrictions are connected not so much with the
+memory model underlying the implementation
+but with the model of asynchronous access to
+it. The implemented model of asynchronous
+memory access requires blocking access to
+a group of related \textit{sc-elements} and not to a
+particular one of these \textit{sc-elements}. For example,
+to create an \textit{outgoing sc-arc} from a given \textit{sc-element}, it is necessary to lock not only the
+cell in memory in which this sc-element is
+stored but also the initial \textit{incoming} and \textit{outgoing sc-connectors} from the list of incoming
+and outgoing sc-connectors of this sc-element,
+respectively. In the process of parallel operation
+of sc-memory, blunders can often occur: deadlocking of processes performing actions on the
+same sc-elements, resource races on the same
+sc-elements, etc. To eliminate these problems,
+a transition to a new model of asynchronous
+access to sc-memory is required or a transition
+to a new implementation of sc-memory without
+changing the existing programming interface
+for the implementation of sc-memory.
+\item [•] The current \textit{Software implementation of the
+ostis-platform} is \textit{customized} and does not include the \textit{Implementation of the SCP Language
+interpreter} (that is, when the \textit{ostis-platform}
+is running, the SCP \textit{Language interpreter} is
+not used), which hinders the development of
+\textit{platform-independent ostis-systems}. This is in
+no way related to the complexity of developing
+\end{description}
+
+\end{description}
+\end{multicols}
+\end{document}
