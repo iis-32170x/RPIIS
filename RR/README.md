@@ -117,12 +117,12 @@
 
 ### Примеры выполнения
 ![Матрица 1](/RRI/matrix1.png) 
-![Пример 1 с матрицей 1](/RR/example1m1.png) 
-![Пример 2 с матрицей 1](/RR/example2m1.png) 
-![Матрица 2](/RR/matrix2.png) 
-![Пример 1 с матрицей 2](/RR/example1m2.png) 
-![Пример 2 с матрицей 2](/RR/example2m2.png) 
-![Пример 3 с матрицей 2](/RR/example3m2.png) 
+![Пример 1 с матрицей 1](/images/example1m1.png) 
+![Пример 2 с матрицей 1](/images/example2m1.png) 
+![Матрица 2](/images/matrix2.png) 
+![Пример 1 с матрицей 2](/images/example1m2.png) 
+![Пример 2 с матрицей 2](/images/example2m2.png) 
+![Пример 3 с матрицей 2](/images/example3m2.png) 
 
 
 ## Вывод
