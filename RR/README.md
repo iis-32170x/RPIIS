@@ -1,5 +1,4 @@
 # Отчет по расчетной работе по дисциплине ПиОИвИС
--- 
 
 
 ### Цель:
@@ -117,13 +116,13 @@
 
 
 ### Примеры выполнения
-![Матрица 1](/images/matrix1.png) 
-![Пример 1 с матрицей 1](/images/example1m1.png) 
-![Пример 2 с матрицей 1](/images/example2m1.png) 
-![Матрица 2](/images/matrix2.png) 
-![Пример 1 с матрицей 2](/images/example1m2.png) 
-![Пример 2 с матрицей 2](/images/example2m2.png) 
-![Пример 3 с матрицей 2](/images/example3m2.png) 
+![Матрица 1](/RRimages/matrix1.png) 
+![Пример 1 с матрицей 1](/RRimages/example1m1.png) 
+![Пример 2 с матрицей 1](/RRimages/example2m1.png) 
+![Матрица 2](/RRimages/matrix2.png) 
+![Пример 1 с матрицей 2](/RRimages/example1m2.png) 
+![Пример 2 с матрицей 2](/RRimages/example2m2.png) 
+![Пример 3 с матрицей 2](/RRimages/example3m2.png) 
 
 
 ## Вывод
