@@ -116,7 +116,7 @@
 
 
 ### Примеры выполнения
-![Матрица 1](/RRI/matrix1.png) 
+![Матрица 1](/images/matrix1.png) 
 ![Пример 1 с матрицей 1](/images/example1m1.png) 
 ![Пример 2 с матрицей 1](/images/example2m1.png) 
 ![Матрица 2](/images/matrix2.png) 
