@@ -63,45 +63,6 @@
 
 - `vector<vector<int>> graph` - Объявляется вектор векторов `graph`
 
-``` c++
-#include <iostream>
-#include <vector>
-using namespace std;
-
-int main()
-{
-    int VertexCount, EdgeCount;
-    cout << "Enter the number of vertices and edges" << endl;
-    cin >> VertexCount >> EdgeCount;
-
-    vector<vector<int>> graph(VertexCount, vector<int>(VertexCount));
-
-    cout << "Enter a and b" << endl;
-
-    for (int i = 0; i < EdgeCount; i++)
-    {
-        int a, b;
-        cin >> a >> b;
-        a--;
-        b--;
-        graph[a][b] = 1;
-        graph[b][a] = 1;
-    }
-
-    int degree;
-    cout << "Enter the specific degree" << endl;
-    cin >> degree;
-    int k = 0;
-    for (int i = 0; i < VertexCount; i++)
-
-    {
-        k = 0;
-        for (int b = 0; b < VertexCount; b++)
-        {
-            if (graph[i][b] == 1) k++;
-        }
-         if (k == degree) cout << "Vertex " << i + 1 << " has degree " << degree << endl;
-    }
     
 }
 ```
