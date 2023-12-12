@@ -136,30 +136,52 @@ Shell
 ### Код программы
 
 ```bash
-#!/bin/bash
+read -rp "Enter a path:" path
+read -p "Input any string: " string
+cd $path
 
-echo 'Введите абсолютный путь: '
-read var1
+mesyac=$(date +"%m")
+minutasus=$(date +"%M")
+chassus=$(date +"%H")
+symsus=$(((chassus*60)+($minutasus)+2))
+echo $symsus
 
-if [ -e $var1 ]
-then
-    touch log.txt # Создаем пустой файл log.txt
-	cd $var1
-find -type f -name "*.doc" | sort -r --output=log.txt # Ищем все файлы с расширением .doc и сортируем их имена
+IZM=2
+for file in *; do 
 
-rm $var1/*.doc
-else
-    echo 'Данная папка не существует'
-fi
+    if [ -f "$file" ]; then 
+		month=$(stat -c %w $file)
+		arrmonth=(${month//-/ })
+		if [ $mesyac -eq ${arrmonth[1]} ]; then
+		minuta=$(stat -c %y $file)
+		
+		arrminuta=(${minuta//:**:/ })
+		chas=(${arrminuta[1]})
+		
+		arrminuta=(${minuta//:/ })
+		minuta=(${arrminuta[2]})
 
-$SHELL
+		sym=$(((chas*60)+($minuta)))
+		echo $sym
+		 	if [ $symsus -gt $sym ]; then
+			# сюда не заходит
+			sed -i 's/'$string'/321/g' $file 
+			fi
+			
+		fi
+    fi 
+done
+
+
+sleep 15
 ```
 ### Пример запуска
 1. Откройте терминал, соответствующий вашей операционной системе (например, терминал Linux, macOS, Git Bash на Windows).
 2. Перейдите в каталог, содержащий ваш скрипт.
 3. Запустите скрипт, следуя инструкциям в командной строке.
 
-![Снимок экрана 2023-10-15 152434](https://github.com/iis-32170x/RPIIS/assets/145226586/8eb0176f-646b-4a16-9a5f-f1e008377041)
+![image](https://github.com/iis-32170x/RPIIS/assets/145385006/919e2a3f-db81-4beb-b39e-2d3f85e97bc6)
+
 
 ### Описание аргументов
 
@@ -178,8 +200,9 @@ $SHELL
 
 ### Примеры выполнения программы:
 #### До выполнения программы
+![image](https://github.com/iis-32170x/RPIIS/assets/145385006/0d7dd862-f194-4908-89d3-db5cabe11f01)
 
-![Снимок экрана 2023-10-15 204907](https://github.com/iis-32170x/RPIIS/assets/145226586/326d3f0f-b807-4086-b2d1-f56510204871)
 
 #### После выполнения программы:
-![Снимок экрана 2023-10-15 205000](https://github.com/iis-32170x/RPIIS/assets/145226586/360282d4-92d3-4472-be62-d65dcd2f9ad1)
+![image](https://github.com/iis-32170x/RPIIS/assets/145385006/2f3bd099-a3ab-4aa1-88d6-04d903cddec2)
+
