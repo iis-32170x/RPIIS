@@ -11,120 +11,198 @@
 ### Ключевые понятия
 `Граф` - математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
 
-`Ориентированный граф (кратко орграф)` — граф, рёбрам которого присвоено направление.
+`Неориентированный граф` — граф, рёбрам которого не присвоено направление.
 
 `Список смежности` - один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из «соседей» этой вершины.
 
-`Степень вершины графа` - это количество вершин, смежных с данной вершиной.
+`Декартово произведение графов` - Декартовым произведением G₁ и G₂ графов называется граф G(V,E) со множеством вершин V = X x Y, в котором дуга (ребро) из вершины (xᵢ, yⱼ)в вершину (xₖ, yₗ) существует тогда и только тогда, когда существуют дуги (рёбра) (xᵢ, xₖ) ∈ E₁ и (yⱼ, yₗ) ∈ E₂ одновременно.
+
 ## Алгоритм решения
-Получаем из файла количество вершин графа, степень, вершины с которой будем искать и граф в виде списка смежности. Затем перебираем все вершины, смотря, сколько вершин связаны с текущей, выводя в файл список смежности. Также вместе с этим фиксируем номера вершин, которые связаны с числом других вершин, равным степени, вершины с которой ищем. При фиксировании такой вершины записываем её номер в отдельный массив. Затем выводим массив с вершинами, имеющими указанную степень, в файл.
+Получаем из 1-ого файла 1-ый граф в виде списка смежности. Получаем из 2-ого файла 2-ой граф в виде списка смежности. Затем выполняем декартово произведение этих 2-ух графов следующим образом: ![Визуализация](https://github.com/iis-32170x/RPIIS/assets/144227421/e71e3764-f865-43b4-a373-26368af95329) Затем выводим получившийся граф в файл.
 ## Реализация на С++
 Код, выполняющий приведённый алгоритм:
 ```C++
-#include <vector>
-#include <fstream>
+#include<iostream>
+#include<vector>
+#include<fstream>
+#include<string>
 using namespace std;
+
 int main()
 {
-	setlocale(LC_ALL, "Ru");
-	int v;
-	ifstream fin("Data.txt");
-	ofstream fout("Vertices.txt");
-	fin >> v;
-	if (v == 0)
+	string graphpath1, graphpath2, onestr, strbuf;
+	char swit;
+	ifstream filewgr1, filewgr2;
+	int numbuf = 0;
+
+	vector <vector<int>> graph1;
+	vector <vector<int>> graph2;
+        vector<int> vecbuf;
+
+	string fingrpath = "D:\\rr\\result.txt";
+
+	cout << "1st GRAPH FILENAME PATH (including file; e.g. D:\\rr\\graph1.txt): "; cin >> graphpath1; cout << endl;
+	cout << "2nd GRAPH FILENAME PATH (including file; e.g. D:\\rr\\graph2.txt): "; cin >> graphpath2; cout << endl;
+	cout << "CHANGE FINAL GRAPH FILENAME PATH (including file; by default: D:\\rr\\result.txt)? y - yes, n - no" << endl;
+	cin >> swit;
+	if (swit == 'y')
 	{
-		fout << "Graph is empty";
-		fin.close();
-		fout.close();
-		return 0;
+		cout << "CHANGE FINAL GRAPH FILENAME PATH (including file;  e.g. D:\\rr\\result.txt):" << endl;
+		cin >> fingrpath;
 	}
-	int	i, k, n = 0, d, * deg = new int[v], s = 0; 
-	
-	fin >> d;
-	vector<vector<int>> graph(v);
-	for (i = 0; i < v; i++)
+
+
+	filewgr1.open(graphpath1);
+
+	if (!filewgr1.is_open())
 	{
-		n = 0;
-		vector<int> vec(v);
-		do
-		{
-			fin >> k;
-			if (k == 0)
-				break;
-			k = k - 1;
-			vec[n] = k;
-			n++;
-		} while (true);
-		vec.erase(vec.begin()+n, vec.end());
-		graph[i] = vec;
+		cout << "ERROR" << endl;
+		return -1;
 	}
-	fin.close();
-	fout << "The resulting adjacency list: " << endl;
-	for (i = 0; i < v; i++)
-	{
-		fout << i + 1 << ": ";
-		if (graph[i].size() == 0)
-			fout << "There are no edges coming from the vertex";
-		for (k = 0; k < graph[i].size(); k++)
-		{
-			fout << graph[i][k] + 1 << " ";
-		}
-		if (k == d)
-		{
-			deg[s] = i;
-			s++;
-		}
-		fout << endl;
-	}
-	if (s == 0)
-		fout << "There are no vertices with degree " << d;
 	else
 	{
-		fout << "Vertices with degree " << d << ": ";
-		for (i = 0; i < s; i++)
+		cout << "FILE IS OPENED";
+
+		while (getline(filewgr1, onestr))
 		{
-			fout << deg[i] + 1 << " ";
+			for (int i = 1; i <= onestr.length(); i++)
+			{
+				if (onestr[i] != ',' && onestr[i] != ' ')
+				{
+					strbuf = strbuf + onestr[i];
+				}
+				else {
+					try
+					{
+						numbuf = stoi(strbuf);
+						vecbuf.push_back(numbuf);
+					}
+					catch(invalid_argument)
+					{
+					}
+					strbuf.clear();
+				}
+			}
+			numbuf = stoi(strbuf);
+			vecbuf.push_back(numbuf);
+
+			graph1.push_back(vecbuf);
+			vecbuf.clear();
+			strbuf.clear();
+		}
+
+		cout << endl;
+		cout << "First graph:" << endl;
+
+		for (int i = 0; i < graph1.size(); i++)
+		{
+			cout << i << " ";
+			for (int j = 0; j < graph1[i].size(); j++)
+			{
+				cout << graph1[i][j] << " ";
+			}
+			cout << endl;
 		}
 	}
-	fout.close();
-	delete []deg;
+	filewgr1.close();
+
+	cout << endl;
+
+	filewgr2.open(graphpath2);
+
+	if (!filewgr2.is_open())
+	{
+		cout << "ERROR" << endl;
+		return -1;
+	}
+	else
+	{
+		cout << "FILE IS OPENED";
+
+		while (getline(filewgr2, onestr))
+		{
+			for (int i = 1; i <= onestr.length(); i++)
+			{
+				if (onestr[i] != ',' && onestr[i] != ' ')
+				{
+					strbuf = strbuf + onestr[i];
+				}
+				else {
+					try
+					{
+						numbuf = stoi(strbuf);
+						vecbuf.push_back(numbuf);
+					}
+					catch (invalid_argument)
+					{
+					}
+					strbuf.clear();
+				}
+			}
+			numbuf = stoi(strbuf);
+			vecbuf.push_back(numbuf);
+
+			graph2.push_back(vecbuf);
+			vecbuf.clear();
+			strbuf.clear();
+		}
+
+		cout << endl;
+		cout << "Second graph:" << endl;
+
+		for (int i = 0; i < graph2.size(); i++)
+		{
+			cout << i << " ";
+			for (int j = 0; j < graph2[i].size(); j++)
+			{
+				cout << graph2[i][j] << " ";
+			}
+			cout << endl;
+		}
+	}
+	filewgr2.close();
+
+	cout << endl;
+
+    ofstream fingraph;
+	fingraph.open(fingrpath);
+
+
+	for (int i = 0; i < graph1.size(); i++)
+	{
+		for (int j = 0; j < graph2.size(); j++)
+		{
+			fingraph << i << j << " ";
+			for (int k = 0; k < graph2[j].size(); k++)
+			{
+				fingraph << i << graph2[j][k] << " ";
+			}
+
+			for (int l = 0; l < graph1[i].size(); l++)
+			{
+				fingraph << graph1[i][l] << j << " ";
+			}
+			fingraph << endl;
+		}
+
+		fingraph << endl;
+	} 
+
+	fingraph.close();
 }
 ```
 ## Разбор кода
-- `#include <vector>, #include <fstream>` : подключение библиотек, отвечающих за работу с векторами и сторонними файлами.
-- `setlocale(LC_ALL, "Ru")` : обеспечение нормальной работы с русским языком.
-- `int v` : иницивлизация переменной, которая будет хранить количество вершин графа.
-- `ifstream fin("Data.txt"), ofstream fout("Vertices.txt")` : определение команд классов вывода и ввода информации из и в файлы.
-- `fin >> v` : ввод из файла количества вершин графа.
-- `if (v == 0) fout  << "Graph is empty"` : Если введённое количество вершин равно 0, выводим в файл сообщение, что граф пуст.
-- `fin.close() fout.close()` : свидетельства окончания ввода и вывода данных из файлов.
-- `return 0` : Завершение программы.
-- `int i, v = 0, k, n, d, * deg = new int[v], s = 0` : инициализация всех необходимых переменных и массивов.
-- `fin >> d` : ввод из файла количества вершин и степени, вершины с которой будем искать.
-- `vector<vector<int>> graph(v)` : инициализация основного графа в виде вектора векторов.
-- `for (i = 0; i < v; i++)` : запуск цикла, с помощью которого получим граф из файла.
-- `vector<int> vec(v)` : инициализация вектора, который будет содержать вершины, связанные с i-той.
-- `do while (true)` : запуск бесконечного цикла (выход из которого реализован в самом цикле при нужном условии).
-- `fin >> k` : ввод из файла вершины, связанной с i-той.
-- `if (k == 0) break` : условие, реализующее выход из бесконечного цикла, если пользователь введёт 0.
-- `k = k - 1` : уменьшение номера вершины на единицу для учёта счёта цикла с нуля.
-- `vec[n] = k` : присваивание n-ому элементу вектора значения введённой вершины.
-- `n++` : увеличение размера вектора на 1.
-- `vec.erase(vec.begin()+n, vec.end())` : удаление 0, введённого пользователем, который означал окончание ввода вершин, связанных с i-той вершиной.
-- `graph[i] = vec` : Копирование полученного списка вершин (вектора) к i-тому вектору вектора векторов (основного графа).
-- `fin.close()` : свидетельство окончания вывода данных из файла.
-- `fout << "The resulting adjacency list: " << endl, for (i = 0; i < v; i++)` : объявление в конечный файл полученного списка смежности и запуск цикла, реализующего этот вывод (заодно и подсчёт вершин с заданной степенью).
-- `fout << i + 1 << ": "` :  вывод в файл номера i-той вершины (с учётом счёта с 0).
-- `if (graph[i].size() == 0) fout << "There are no edges coming from the vertex"` : условие вывода в файл соответствующего сообщения, если вершина изолированная.
-- `for (k = 0; k < graph[i].size(); k++)` : начало цикла, выводящего в файл вершины, связанные с i-той.
-- `fout << graph[i][k] + 1 << " "` : вывод каждой вершины, связанной с i-той (с учётом счёта с 0).
-- `if (k == d) deg[s] = i, s++` : если количество вершин, связанных с i-той равно степени, вершины с которой ищем, заносим номер этой вершины в массив, содержащий список этих вершин, и увеличение на один переменной s, отслеживающей их количество.
-- `if (s == 0) fout << "There are no vertices with degree " << d` : если предыдущему условию не удовлетворила ни одна вершина, ввести в файл соответствующее сообщение.
-- `else fout << "vertices with degree " << d << ": "` : иначе объявить о начале вывода в файл удовлетворивиших условию вершин.
-- `for (i = 0; i < s; i++)` : запуск цикла, выводящего в файл номера этих вершин.
--	`fout << deg[i] + 1 << " "` : вывод этих вершин (с учётом счёта с 0).
--	`fout.close()` : свидетельство окончания вывода данных в файл.
-- `delete[]deg` : очищение памяти после использования динамического массива.
+1. `#include <vector>, #include <fstream>, #include <string>` : подключение библиотек, отвечающих за работу с векторами и сторонними файлами.
+2. `string graphpath1, graphpath2, onestr, strbuf; char swit; ifstream filewgr1, filewgr2; int numbuf = 0; vector <vector<int>> graph1; vector <vector<int>> graph2; vector<int> vecbuf; string fingrpath = "D:\\rr\\result.txt";` : инициализация переменных.
+     - *string graphpath1, graphpath2* : строки, содержащие путь до текстовых файлов, в которых находятся графы 1 и 2.
+     - *string onestr* : в эту переменную записывается поочерёдно строки из текстового файла для дальнейшей обработки.
+     - *string strbuf* : буферная переменная для перевода чисел из вида string в int.
+     - *char swit* : переключатель для смены пути вывода для файла с результатом.
+     - *ifstream filewgr1, filewgr2* : переменные для чтения информации из .txt файла.
+     - *int numbuf = 0* : буферная переменная для записи чисел, полученных из strbuf.
+     - *vector <vector<int>> graph1; vector <vector<int>> graph2* : двумерные вектора - репрезентация графов.
+     - *vector<int> vecbuf* : буферный вектор для создания двумерных векторов.
+
 ## Тестирование
 Все тесты и наглядные изображения графов, участвующих в них, можно посмотреть [здесь]
 ## Вывод
