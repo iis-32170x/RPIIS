@@ -25,7 +25,7 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/144939580/8736355e-fce6-4cea-8306-8ea0b1c60e59)
 
 
-### Тест:
+### Тест 1:
 Матричный Вид:
 
 <table>
@@ -55,6 +55,58 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/144939580/e7b9a73b-4895-4a49-b985-db1a911875ed)
 
 
+### Тест 2:
+Матричный Вид:
+
+<table>
+      <tr>
+        <td>1</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> 
+      </tr>
+      <tr>
+        <td>1</td> <td>1</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> 
+      </tr>
+      <tr>
+        <td>0</td> <td>1</td> <td>1</td> <td>0</td> <td>0</td> <td>0</td> 
+      </tr>
+      <tr>
+        <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>0</td> <td>0</td>
+      </tr>
+       <tr>
+        <td>0</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>0</td>
+      </tr>
+       <tr>
+        <td>0</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>1</td>
+      </tr>
+      <tr>
+        <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>1</td>
+      </tr>
+      <tr>
+        <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>
+      </tr>
+    </table>
+Количество хорд: 0. 
+
+
+### Тест 3:
+Матричный Вид:
+<table>
+      <tr>
+        <td>1</td> <td>0</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>0</td> 
+      </tr>
+      <tr>
+        <td>1</td> <td>1</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> 
+      </tr>
+      <tr>
+        <td>0</td> <td>1</td> <td>1</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td>
+      </tr>
+      <tr>
+        <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>0</td> <td>0</td> <td>0</td>
+      </tr>
+       <tr>
+        <td>0</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>0</td> <td>1</td>
+      </tr>
+      </table>
+      Количество хорд: 2. 
 
 
 
