@@ -27,9 +27,9 @@ for %%a in (*.txt) do (
    	set TimeStamp=!cDay!.!cMonth!.!cYear! !cHour!:!cMinutes!
     	Echo %%a !TimeStamp! !cMinutes!
 	if %curmon%==!cMonth! (
-		echo 123
+		
 		if %curyear%==!cYear! (
-			echo 111111111
+			
  			set h=1
 			echo !h!
 			pause
