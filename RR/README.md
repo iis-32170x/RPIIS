@@ -27,6 +27,158 @@
 * Для каждой вершины обновляются расстояния до её соседних вершин.
 * Выбирается минимальное из максимальных расстояний от начальной вершины до всех остальных, игнорируя расстояния, равные 0.
 
+## Решение на с++
+```c++
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_map>
+#include <limits>
+
+using namespace std;
+
+typedef pair<int, int> Edge;  // Пара (вершина, вес)
+
+int findRadius(const unordered_map<int, vector<pair<int, int>>>& graph, int start) {
+    unordered_map<int, int> distances;
+    for (const auto& entry : graph) {
+        distances[entry.first] = numeric_limits<int>::max();
+    }
+
+    distances[start] = 0;
+    priority_queue<Edge, vector<Edge>, greater<Edge>> pq;
+    pq.push({0, start});
+
+    while (!pq.empty()) {
+        int currentDistance = pq.top().first;
+        int currentVertex = pq.top().second;
+        pq.pop();
+
+        if (currentDistance > distances[currentVertex]) {
+            continue;
+        }
+
+        for (const auto& neighbor : graph.at(currentVertex)) {
+            int neighborVertex = neighbor.first;
+            int weight = neighbor.second;
+            int distance = currentDistance + weight;
+
+            if (distance < distances[neighborVertex]) {
+                distances[neighborVertex] = distance;
+                pq.push({distance, neighborVertex});
+            }
+        }
+    }
+
+    int radius = numeric_limits<int>::max();
+    for (const auto& entry : distances) {
+        if (entry.second > 0) {
+            radius = min(radius, entry.second);
+        }
+    }
+
+    return radius;
+}
+
+int main() {
+    unordered_map<int, vector<pair<int, int>>> graph0 = {
+        {1, {{2, 3}, {3,5}}},
+        {2, {{3, 4}}},
+        {3, {}},
+    };
+
+    unordered_map<int, vector<pair<int, int>>> graph1 = {
+        {1, {{2, 1}, {3,4}}},
+        {2, {{4, 2}}},
+        {3, {{4,5}}},
+        {4, {}},
+    };
+    unordered_map<int, vector<pair<int, int>>> graph2 = {
+        {1, {{2, 2}}},
+        {2, {{3, 3}}},
+        {3, {{5, 2}, {4, 1}}},
+        {4, {{5, 4}}},
+        {5, {}}
+    };
+    
+    unordered_map<int, vector<pair<int, int>>> graph3 = {
+        {1, {{2, 3}}},
+        {2, {{3, 4}}},
+        {3, {}},
+    };
+    unordered_map<int, vector<pair<int, int>>> graph4 = {
+        {1, {{2, 2}}},
+        {2, {{3, 3}, {4,4}}},
+        {4, {{5,6}}},
+        {5, {}}
+    };
+    
+    int startVertex = 1;
+    
+    cout << "Первый граф:" << endl;
+    cout << "A - (3) - B" << endl;
+    cout << "\\         /" << endl;
+    cout << " (5)    (4)" << endl;
+    cout << "  \\     /" << endl;
+    cout << "     C" << endl;
+    
+    int result = findRadius(graph0, startVertex);
+
+    cout << "Его радиус равен " << result << endl;
+    
+    cout << "___________________________________" << endl;
+    
+    cout << "Второй граф:" << endl;
+    cout << " A - (4) - B" << endl;
+    cout << " |         |" << endl;
+    cout << "(1)       (5)" << endl;
+    cout << " |         |" << endl;
+    cout << " C - (2) - D" << endl;
+    
+    result = findRadius(graph1, startVertex);
+
+    cout << "Его радиус равен " << result << endl;
+    
+    cout << "___________________________________" << endl;
+    
+    cout << "Тритий граф: " << endl;
+    cout << "A - (2) - B - (3) - C - (2) - D" << endl;
+    cout << "                     \\       /" << endl;
+    cout << "                      (2)   (4)" << endl;
+    cout << "                        \\  /" << endl;
+    cout << "                          E" << endl;
+
+    result = findRadius(graph2, startVertex);
+
+    cout << "Его радиус равен " << result << endl;
+    
+    cout << "___________________________________" << endl;
+    
+    cout << "Четвёртый граф:" << endl;
+    cout << "A - (3) - B - (4) - C" << endl;
+    
+    result = findRadius(graph3, startVertex);
+
+    cout << "Его радиус равен " << result << endl;
+    
+    cout << "___________________________________" << endl;
+    
+    cout << "Пятый граф:" << endl;
+    cout << "A - (2) - B - (4) - C - (6) - D" << endl;
+    cout << "           \\" << endl;
+    cout << "             (3)" << endl;
+    cout << "               \\" << endl;
+    cout << "                 E" << endl;
+    
+    result = findRadius(graph4, startVertex);
+
+    cout << "Его радиус равен " << result << endl;
+    
+    cout << "___________________________________" << endl;
+    
+    return 0;
+}
+```
 
 ### Вывод
 
