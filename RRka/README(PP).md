@@ -1,26 +1,49 @@
 ![](https://komarev.com/ghpvc/?username=Kukrynitza)
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=italic&size=24&pause=1000&color=FF10D1&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%A3%D0%A1%D0%9B%D0%9E%D0%92%D0%98%D0%95+%D0%9B%D0%A01(%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82+17))](https://git.io/typing-svg)
-*Создать файл sh и bat, который выполняет следующее: 
-На вход пакетному файлу приходит относительный путь к папке (как параметр пакетного файла). Если такой папки нет, то писать “Данной папки нет” и завершить выполнение программы. Если такая папка есть, то найти в ней и в ее подкаталогах файлы, в названии которых есть подстрока “temp”. Вывести первые пять строк найденных файлов в файл result.txt.*
+# <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=33&pause=1000&color=5B1182&random=false&width=435&lines=%D0%A0%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" alt="Typing SVG" /></a>
+
+## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=27&pause=1000&color=6F149E&random=false&width=435&lines=%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" alt="Typing SVG" /></a>
+
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=9416B5&random=false&width=435&lines=%D0%A6%D0%B5%D0%BB%D1%8C" alt="Typing SVG" /></a> 
+(っ◔◡◔)っ ♥ Изучить основы теории графов, способы представления графов, базовые алгоритмы для работы с графам. ♥
+
 ---
-## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&pause=1000&color=641C6F&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%A0%D0%95%D0%90%D0%9B%D0%98%D0%97%D0%90%D0%A6%D0%98%D0%AF+SH-%D0%A4%D0%90%D0%99%D0%9B%D0%90" alt="Typing SVG" /></a>
-Код	&#128526;
-```sh
-#!/bin/bash
- folder_path="$1"
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=9416B5&random=false&width=435&lines=%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5" alt="Typing SVG" /></a>
+☆🎅 １.❼определить вид графа 
+ сильно-связный граф (ориентированный граф)
+способ задания графа - список смежности (список инцидентности) ♪🍩 
 
-if [ ! -d "$folder_path" ]; then  echo "Данной папки нет" cd
-  exit 1 
-fi
-echo $folder_path
-find "$folder_path" -type f -name "*temp*" -exec head -n 5 {} \; > /home/ilja/.myskript/result
-```
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=italic&size=24&pause=1000&color=733789&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%3A)](https://git.io/typing-svg)
+---
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=9416B5&random=false&width=435&lines=%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5+%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F" alt="Typing SVG" /></a>
+【`Граф`　—　математическая　абстракция　реальной　системы　любой　природы，　объекты　которой　обладают　парными　связями．】
 
-folder_path - путь к папке, в которой будет происходить поиск всех текстовых файлов в названии которых есть подстрока “temp”
+【`﻿Ориентированный　граф`　—　граф，　рёбрам　которого　присвоено　направление．】
 
-Получается одна переменная 	&#129325;<br>
-<br>
+【﻿`Список　смежности`　—　один　из　способов　представления　графа　в　виде　коллекции　списков　вершин．　Каждой　вершине　графа　соответствует　список，　состоящий　из　«соседей»　этой　вершины．】
+
+【﻿`Сильно－связный　граф`　－　граф　в　котором　существует　（ориентированный）　путь　из　любой　вершины　в　любую　другую，　или，　что　эквивалентно，　граф　содержит　ровно　одну　сильно　связную　компоненту．】
+
+---
+###<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=9416B5&random=false&width=435&lines=%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B+%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2+" alt="Typing SVG" /></a>
+
+| 0 | 2 | 3 | 4 |
+| 1 | 1 | 4 | 0 |
+| 2 | 4 | 0 | 1 |
+| 3 | 0 | 3 |   |
+| 4 | 2 |   |   |
+
+
+| 0 | 2 | 3 | 4 |
+| 1 | 1 | 4 | 0 |
+| 2 | 4 | 0 | 1 |
+| 3 | 0 | 3 |   |
+| 4 | 2 |   |   |
+
+
+| 0 | 2 | 3 | 4 |
+| 1 | 1 | 4 | 0 |
+| 2 | 4 | 0 | 1 |
+| 3 | 0 | 3 |   |
+| 4 | 2 |   |   |
 
 **<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&size=24&pause=1000&color=733789&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+%D1%81+sh-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%BC%3A" alt="Typing SVG" /></a>**
 
