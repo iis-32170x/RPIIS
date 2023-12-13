@@ -21,55 +21,41 @@
 【﻿`Список　смежности`　—　один　из　способов　представления　графа　в　виде　коллекции　списков　вершин．　Каждой　вершине　графа　соответствует　список，　состоящий　из　«соседей»　этой　вершины．】
 
 【﻿`Сильно－связный　граф`　－　граф　в　котором　существует　（ориентированный）　путь　из　любой　вершины　в　любую　другую，　или，　что　эквивалентно，　граф　содержит　ровно　одну　сильно　связную　компоненту．】
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/fa71597a-08b6-4276-8940-9c0526e38ba1)
 
 ---
-###<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=9416B5&random=false&width=435&lines=%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B+%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2+" alt="Typing SVG" /></a>
-
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B+%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2+" alt="Typing SVG" /></a>
+**👊🐯  ❶. сильно-связанный граф  🎁🏆**
 | 0 | 2 | 3 | 4 |
+|---|---|---|---|
 | 1 | 1 | 4 | 0 |
 | 2 | 4 | 0 | 1 |
 | 3 | 0 | 3 |   |
 | 4 | 2 |   |   |
 
-
+**🐻  🎀  𝟤.Слабо-связанный граф  🎀  🐻**
 | 0 | 2 | 3 | 4 |
+|---|---|---|---|
 | 1 | 1 | 4 | 0 |
 | 2 | 4 | 0 | 1 |
 | 3 | 0 | 3 |   |
 | 4 | 2 |   |   |
 
-
+**😂☞  ➂. не связанный граф  💔🍫**
 | 0 | 2 | 3 | 4 |
+|---|---|---|---|
 | 1 | 1 | 4 | 0 |
 | 2 | 4 | 0 | 1 |
 | 3 | 0 | 3 |   |
 | 4 | 2 |   |   |
 
-**<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&size=24&pause=1000&color=733789&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+%D1%81+sh-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%BC%3A" alt="Typing SVG" /></a>**
-
-Запускаем sh-файл и проверяем, есть ли проверка на наличие папки &#128564;
- 
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/972d9653-b743-48eb-8e52-af0f27f24f39)
-
-Видим, что записалось в result 	&#128527;
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/485f0748-5013-470f-a2ef-d7368a73fa5f)
-
-Что мы имели изначально(чтобы можно было бы убедиться что всё работает) &#128554;
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/fa9f386c-7a08-462f-a926-e999931139d2)
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/869d2a80-855c-4c7b-9a16-430c30de1afe)
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/55c9a87a-1249-4405-aeaa-535483c62d59)
-
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/b99841ce-905b-4f9c-8f8f-74b70349e9ab)
-
-
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/2d44f3e8-6916-4f8e-bfdd-644da8189616)
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/39be641f-032c-4cb0-957d-367ddff94777)
 ---
+
+
+
+
+
+
 ## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=italic&pause=1000&color=65164B&center=%D0%9B%D0%9E%D0%96%D0%AC&vCenter=%D0%9B%D0%9E%D0%96%D0%AC&multiline=true&repeat=%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9&random=%D0%9B%D0%9E%D0%96%D0%AC&width=435&lines=%D0%A0%D0%95%D0%90%D0%9B%D0%98%D0%97%D0%90%D0%A6%D0%98%D0%AF+BAT-%D0%A4%D0%90%D0%99%D0%9B%D0%90" alt="Typing SVG" /></a>
 
 Код	&#128525;
