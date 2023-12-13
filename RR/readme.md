@@ -175,18 +175,8 @@ int main() {
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/b6aefb70-c5b7-493f-8248-e7c7a18b5138)
 
 Задание графа списком смежности:
-15-11
-1-2
-2 3
-2 11
-10 11
-11 12
-11 15
-4 12
-12 13
-8 14
-7 14
-5 6
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/89dabde1-85eb-47f6-af0c-bba989b3feb0)
+
 Итоговое количество компонент данного графа:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/7a24134c-91ee-4c9b-a918-c342c4ecf592)
@@ -198,15 +188,8 @@ int main() {
 
 Задание графа списком смежности:
 
-10 8
-1 2
-2 3
-2 4
-2 10
-4 7
-7 5
-10 6
-8 9
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/594195a4-8cfa-4f56-a0bf-72af88be3586)
+
 
 Итоговое количество компонент данного графа:
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/609028b7-b762-4881-b098-bb200f8cd997)
@@ -216,12 +199,8 @@ int main() {
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ebacf186-c4d1-48e5-addd-7c4a74ccc602)
 
 Задание графа списком смежности:
-8 5
-1 5
-2 8
-8 3
-8 7
-3 6
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/7297fbb7-00d5-4d8f-bfe0-b65a3e088052)
+
 
 Итоговое количество компонент данного графа:
 
