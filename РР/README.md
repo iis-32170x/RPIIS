@@ -245,9 +245,41 @@ cout << "Радиус графа: " << radius << endl;
 
 ![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph11.png)
 
+Матрица:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph1.png)
+
 Радиус графа: 8
 
 - test 2:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph22.png)
+
+Матрица:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph2.png)
+
+Радиус графа: 5
+
+- test 3:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph33.png)
+
+Матрица:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph3.png)
+
+Радиус графа: 7
+
+- test 4:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph44.png)
+
+Матрица:
+
+![m2](https://github.com/iis-32170x/RPIIS/blob/Свиридо_Е/РР/тесты/graph4.png)
+
+Радиус графа: 5
 
 ## Вывод
  
