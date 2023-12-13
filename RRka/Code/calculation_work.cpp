@@ -65,10 +65,7 @@ public:
     string StronglyСonnectivityСheck() {
         int length = graph.size();
         vector<bool> visit(length, false);
-        for (int i = 0; i < length; i++)
-        {
             dfs(visit, i);
-        }
         for (int i = 0; i < length; i++)
         {
             if (!visit[i])
