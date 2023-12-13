@@ -2,6 +2,7 @@
 #include <vector>
 #include <iomanip>
 #include <fstream> 
+#include <sstream>
 using namespace std;
 
 const int maxKV = 100;
@@ -43,51 +44,10 @@ void minR(int n) {
         }
     }
 }
-
-
-void ReadMatrixFromFile(const string& fileName, int& n, int& m) {
-    ifstream matrixFile(fileName);
-    if (!matrixFile.is_open()) {
-        cout << "Не удалось открыть файл: " << fileName << endl;
-        return;
-    }
-
-    matrixFile >> n;
-    matrixFile >> m;
-
-    for (int i = 0; i < m; i++) {
-        int a, b, weight;
-        matrixFile >> a >> b >> weight;
-        a--;
-        b--;
-
-        if (g[a][b] != 0) {
-            // Если ребро уже существует, добавляем вес к существующему весу ребра
-            g[a][b] += weight;
-            g[b][a] += weight;
-        }
-        else {
-            // Если это новое ребро, устанавливаем его вес
-            g[a][b] = weight;
-            g[b][a] = weight;
-        }
-    }
-
-    matrixFile.close();
-}
-
-
-
 int main() {
-    setlocale(0, "");
-    int choose;
-    int amountOfStrings;
-    cout << "Для ввода матрицы с клавиатуры нажмите 1, для считывания с файла - не 1" << endl;
-    cin >> choose;
     int n;
-    int m ;
-    if (choose == 1) {
-
+    int m;
+    setlocale(0, "");
         cout << "Введите количество вершин:" << endl;
         while (!(cin >> n))//проверка на ввод нечислового значения
         {
@@ -120,18 +80,6 @@ int main() {
             }
 
         }
-    }
-
-    else {
-        ReadMatrixFromFile("matrix.txt", n, m);
-
-    }
-        
-    
-
-
-
-    
     cout << "Матрица смежности:" << endl<< endl;
     cout << setw(4) << " ";
     for (int i = 0; i < n; i++) {
