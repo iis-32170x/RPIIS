@@ -83,8 +83,8 @@
 #include <queue>
 using namespace std;
 
-int connectedComponents(vector<vector<int>>& adj) {
-    int n = adj.size();
+int componenti(vector<vector<int>>& spisok) {
+    int n = spisok.size();
     vector<bool> visited(n, false);
     int count = 0;
 
@@ -98,7 +98,7 @@ int connectedComponents(vector<vector<int>>& adj) {
                 int curr = q.front();
                 q.pop();
 
-                for (int neighbor : adj[curr]) {
+                for (int neighbor : spisok[curr]) {
                     if (!visited[neighbor]) {
                         q.push(neighbor);
                         visited[neighbor] = true;
@@ -120,18 +120,18 @@ int main() {
     int n, m; // Количество вершин и ребер
     inputFile >> n >> m;
 
-    vector<vector<int>> adj(n);
+    vector<vector<int>> spisok(n);
 
     for (int i = 0; i < m; ++i) {
         int u, v; // Смежные вершины u и v
         inputFile >> u >> v;
-        adj[u - 1].push_back(v - 1);
-        adj[v - 1].push_back(u - 1);
+        spisok[u - 1].push_back(v - 1);
+        spisok[v - 1].push_back(u - 1);
     }
 
     inputFile.close();
 
-    int components = connectedComponents(adj);
+    int components = componenti(spisok);
 
     outputFile << "Count of components is: " << components << endl;
 
@@ -146,7 +146,7 @@ int main() {
 ## Разбор кода:
 
 - `#include <vector>`, `#include <fstream>` и `#include <queue>`: библиотеки , которые предоставляют возможность использовать векторы, файлы и очереди.
-- `int connectedComponents(vector<vector<int>>& adj)`: Это объявление функции connectedComponents, которая принимает вектор векторов adj в качестве параметра. "adj" представляет собой список смежности графа.
+- `int componenti(vector<vector<int>>& spisok)`: Это объявление функции componenti, которая принимает вектор векторов adj в качестве параметра. "adj" представляет собой список смежности графа.
 - `int n = adj.size();` : Здесь создается переменная n, которая содержит количество вершин в графе. Она инициализируется значением adj.size(), то есть размером вектора adj, что предполагает, что каждый элемент вектора adj представляет вершину графа и содержит список смежных с ней вершин.
 - `vector<bool> visited(n, false);` : Создается вектор visited типа bool размером n. Вектор visited используется для отслеживания посещенных вершин графа. Изначально все элементы вектора инициализируются значением false, что означает, что ни одна вершина не была посещена.
 - `int count = 0;` : Создается переменная count, которая будет использоваться для подсчета количества компонент связности в графе. Изначально count инициализируется значением 0.
