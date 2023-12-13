@@ -69,11 +69,11 @@ public:
         for (int i = 0; i < length; i++)
         {
             if (!visit[i])
-                return "Граф не связанный";
+                return "Граф не связный";
         }
         if (TransposeTheGraph(length, visit))
-            return "Граф сильно-связанный";
-        else return "Граф связанный";
+            return "Граф сильно-связный";
+        else return "Граф связный";
     }
     bool TransposeTheGraph(int &length, vector<bool> &visit) {
         vector<vector<int>> transosegraph(length);
