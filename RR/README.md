@@ -1,11 +1,11 @@
-# *Расчётная работа*
+![12](https://github.com/iis-32170x/RPIIS/assets/144227421/05f934fc-539b-41d9-8d60-228881b496a4)# *Расчётная работа*
 ## Введение
 ### Цель
 Изучить основы теории графов, способы представления графов, базовые алгоритмы для работы с графами.
 ### Задание
-5.6 Найти вершины с указанной степенью.
+4.1 Найти декартово произведение двух неориентированных графов.
 
-Реализовать на C++ код, который находит вершины графа с указанной степенью.
+Реализовать на C++ код, который находит декартово произведение двух неориентированных графов.
 
 Граф(неориентированный) представляется в виде списка смежности(списка инцидентности).
 ### Ключевые понятия
@@ -172,15 +172,15 @@ int main()
 	{
 		for (int j = 0; j < graph2.size(); j++)
 		{
-			fingraph << i << j << " ";
+			fingraph << "<" << i << "," << j  << ">" << " ";
 			for (int k = 0; k < graph2[j].size(); k++)
 			{
-				fingraph << i << graph2[j][k] << " ";
+				fingraph << "<" << i << "," << graph2[j][k] << ">" << " ";
 			}
 
 			for (int l = 0; l < graph1[i].size(); l++)
 			{
-				fingraph << graph1[i][l] << j << " ";
+				fingraph << "<" << graph1[i][l] << "," << j << ">" << " ";
 			}
 			fingraph << endl;
 		}
@@ -268,25 +268,25 @@ int main()
 17. Выполняем пункт 5 - 16 для 2-ого графа.
 18. `ofstream fingraph; fingraph.open(fingrpath);` : создаём переменную для записи файла с результатом.
 19. ```
-       for (int i = 0; i < graph1.size(); i++)
-       {
-	    for (int j = 0; j < graph2.size(); j++)
-	    {
-		  fingraph << i << j << " ";
-		  for (int k = 0; k < graph2[j].size(); k++)
-		  {
-		  	fingraph << i << graph2[j][k] << " ";
-		  }
+       	for (int i = 0; i < graph1.size(); i++)
+	{
+		for (int j = 0; j < graph2.size(); j++)
+		{
+			fingraph << "<" << i << "," << j  << ">" << " ";
+			for (int k = 0; k < graph2[j].size(); k++)
+			{
+				fingraph << "<" << i << "," << graph2[j][k] << ">" << " ";
+			}
 
-		  for (int l = 0; l < graph1[i].size(); l++)
-		  {
-		  	fingraph << graph1[i][l] << j << " ";
-		  }
-		  fingraph << endl;
-          }
+			for (int l = 0; l < graph1[i].size(); l++)
+			{
+				fingraph << "<" << graph1[i][l] << "," << j << ">" << " ";
+			}
+			fingraph << endl;
+		}
 
-	  fingraph << endl;
-      } 
+		fingraph << endl;
+	} 
      ```
      : Операция декартова произведения:
     - Берем i = 1, где i = 1,n1 (n1 - кол-во вершин 1ого графа)
@@ -298,5 +298,31 @@ int main()
 
 20.`fingraph.close();` : закрываем файл для записи.
 ## Тестирование
-Все графы и их произведения можно посмотреть [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%9A%D0%B0%D1%80%D0%BF_%D0%93/RR/graphs).
+![Graph1](https://github.com/iis-32170x/RPIIS/assets/144227421/9ceee6c9-d269-4010-9233-54cab0983f9a)  
+Graph1  
+
+![Graph2](https://github.com/iis-32170x/RPIIS/assets/144227421/148784fd-ef20-4508-8c8e-bfd0665b6d21)  
+Graph2  
+
+![Graph3](https://github.com/iis-32170x/RPIIS/assets/144227421/fcdce12d-497b-4c36-918a-337ae4c18348)  
+Graph3  
+
+![11](https://github.com/iis-32170x/RPIIS/assets/144227421/24877826-8d5e-445e-8900-a88b36383987)  
+  Cartesian product of 1 and 1  
+
+![12](https://github.com/iis-32170x/RPIIS/assets/144227421/99454bfa-52a8-4d37-90a5-3dcd765bdf5f)  
+  Cartesian product of 1 and 2  
+
+![13](https://github.com/iis-32170x/RPIIS/assets/144227421/16505162-676a-4347-9052-1aae7df68b57)  
+  Cartesian product of 1 and 3  
+
+![23](https://github.com/iis-32170x/RPIIS/assets/144227421/6a7f36f0-7d07-4446-83e3-c4f00036aa14)  
+  Cartesian product of 2 and 3  
+  
 ## Вывод
+В результате выполнения расчётной работы приобрёл следующие навыки:
+
+- изучил основы теории графов
+- изучил способы представления графов
+- изучил базовые алгоритмы для работы с графами
+- изучил базовые алгоритмы работы с векторами, файлами в C++
