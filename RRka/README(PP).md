@@ -14,13 +14,15 @@
 
 ---
 ### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5+%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F" alt="Typing SVG" /></a>
-【`Граф`　—　математическая　абстракция　реальной　системы　любой　природы，　объекты　которой　обладают　парными　связями．】
+:=【`Граф`　—　математическая　абстракция　реальной　системы　любой　природы，　объекты　которой　обладают　парными　связями．】
 
-【`﻿Ориентированный　граф`　—　граф，　рёбрам　которого　присвоено　направление．】
+:=【`﻿Ориентированный　граф`　—　граф，　рёбрам　которого　присвоено　направление．】
 
-【﻿`Список　смежности`　—　один　из　способов　представления　графа　в　виде　коллекции　списков　вершин．　Каждой　вершине　графа　соответствует　список，　состоящий　из　«соседей»　этой　вершины．】
+:=【﻿`Список　смежности`　—　один　из　способов　представления　графа　в　виде　коллекции　списков　вершин．　Каждой　вершине　графа　соответствует　список，　состоящий　из　«соседей»　этой　вершины．】
 
-【﻿`Сильно－связный　граф`　－　граф　в　котором　существует　（ориентированный）　путь　из　любой　вершины　в　любую　другую，　или，　что　эквивалентно，　граф　содержит　ровно　одну　сильно　связную　компоненту．】
+:=【﻿`Сильно－связный　граф`　－　граф　в　котором　существует　（ориентированный）　путь　из　любой　вершины　в　любую　другую，　или，　что　эквивалентно，　граф　содержит　ровно　одну　сильно　связную　компоненту．】
+:=【`﻿Алгоритм　"поиск　в　глубину”　или　“обход　в　глубину”`　—　это　рекурсивный　алгоритм　по　поиску　всех　вершин　графа　или　дерева】
+:= 【﻿`Транспонированный　граф`　－　другой　ориентированный　граф　с　тем　же　набором　вершин　и　с　теми　же　дугами，　но　ориентация　дуг　этого　графа　противоположна】
 
 ---
 ### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=D740F7&random=false&width=435&lines=%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B+%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2+" alt="Typing SVG" /></a>
@@ -59,7 +61,7 @@
 
 ## <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=29&duration=5001&pause=1000&color=7D1CA9&background=37143F16&random=false&width=435&lines=%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC+%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F" alt="Typing SVG" /></a>
 
-### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=24&pause=1000&color=22973C&random=false&width=435&lines=1-%D0%B0%D1%8F+%D1%87%D0%B0%D1%81%D1%82%D1%8C%2C+%D0%B3%D1%80%D0%B0%D1%84" alt="Typing SVG" /></a>
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=29&pause=1000&color=255A26&random=false&width=435&lines=%D0%A7%D0%B0%D1%81%D1%82%D1%8C+1%2C+%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C+%D0%B3%D1%80%D0%B0%D1%84%D0%B0" alt="Typing SVG" /></a>
 ```сpp
 setlocale(LC_ALL, "RU");
 string choise;
@@ -75,7 +77,7 @@ if (choise == "yes")
     NeedsToBeWrittenInSomeoneNotebook(rec);
 ```
 `1.2` Если задаем граф списком смежности с клавиатуры, вводим "yes",
-а после переходим в функцию(NeedsToBeWrittenInSomeoneNotebook), в которой будет происходить запись нового графа 
+а после переходим в функцию `NeedsToBeWrittenInSomeoneNotebook`, в которой будет происходить запись нового графа 
 ```сpp
 void NeedsToBeWrittenInSomeoneNotebook(string rec) {
     ofstream vpis(rec, ios_base::out);
@@ -168,8 +170,117 @@ private:
 }
 ```
 ---
+### <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=29&pause=1000&color=255A26&random=false&width=435&lines=%D0%A7%D0%B0%D1%81%D1%82%D1%8C+2%2C+%D0%B2+%D1%87%D0%B5%D0%BC+%D1%81%D0%B8%D0%BB%D0%B0+%D0%B3%D1%80%D0%B0%D1%84%3F" alt="Typing SVG" /></a>
 
+`2.1` Для проверки, является ли граф сильно связанным, можно использовать алгоритм Косарайю или алгоритм Тарьяна. 
 
+Алгоритм Косарайю:
+  * Выполните обход графа в глубину и запишите порядок обхода вершин.
+  * Транспонируйте граф, т.е. поменяйте направление всех ребер.
+  * Выполните обход графа в глубину, начиная с вершин в порядке, определенном на первом шаге.
+  * Если при втором обходе графа в глубину все вершины достижимы из стартовой вершины, то граф сильно связанный.
+
+Алгоритм Тарьяна:
+  * Выполните обход графа в глубину и запишите порядок обхода вершин.
+  * В каждой вершине запомните значение "времени выхода" (это время, когда обход достиг вершины и начал возвращаться назад).
+  * Выполните обход графа в глубину, начиная с вершин в порядке, определенном на первом шаге, но выбирая следующую вершину только из непосещенных вершин с наибольшим временем выхода.
+  * Если при втором обходе графа в глубину все вершины достижимы из стартовой вершины, то граф сильно связанный.
+
+***В своем решении я воспользуюсь алгоритмом Касарайю***
+
+---
+```сpp
+string StronglyСonnectivityСheck() {
+    int length = graph.size();
+    vector<bool> visit(length, false);
+    dfs(visit, 0);
+    for (int i = 0; i < length; i++)
+    {
+        if (!visit[i])
+            return "Граф не связный";
+    }
+    if (TransposeTheGraph(length, visit))
+        return "Граф сильно-связный";
+    else return "Граф связный";
+}
+```
+`2.2` В методе `string StronglyСonnectivityСheck()` запишем количество вершин в поле `int length` и создадим метод `vector<bool> visit(length, false)` где каждой вершине присвоено значение `false`. Циклом(разметом в колличество строк списка) 
+```сpp
+void dfs(vector<bool>& visit, int current_top) {
+    visit[current_top] = true;
+    for (int neighbour : graph[current_top])
+    {
+        if (!visit[neighbour])
+            dfs(visit, neighbour);
+    }
+}
+```
+`2.3` методом `void dfs(vector<bool>& visit, int current_top)`, где dfs подразумевается как алгоритм "поиск в глубину”. Он работает по следуещему принципу:
+* Заходим в одну из вершин
+* Присваеваем `visit[current_top]` значение `true`, где `current_top` - выбранная вершина 
+* Ищем соседей для вершины, тоесть те вершины к которым можно добрать по ребру от выбранной вершины
+* Если `visit[current_top]` присвоено значение `false`
+* Переходим в соседнюю вершину и она становиться `current_top` и возвращаемся ко второму пункту
+* Если `visit[current_top]` присвоено значение `true`, ищем других соседей и проверяем какое значение `visit[current_top]` у них, где current_top` - вершина
+* Если `visit[current_top]` присвоено значение `true` для всех соседних вершин, всех вершин до которых можно было добраться от начальной вершины   
+```сpp
+for (int i = 0; i < length; i++)
+    {
+        if (!visit[i])
+            return "Граф не связный";
+    }
+```  
+`2.4` Циклом(размером в количество вершин) проходимся по всем значениям `vector<bool> visit(length, false)`, если хотя бы одно из значений равно `false`, объявляем граф не связным.
+```сpp
+bool TransposeTheGraph(int& length, vector<bool>& visit) {
+    vector<vector<int>> transosegraph(length);
+    for (int i = 0; i < length; i++)
+    {
+        for (int neighbour : graph[i])
+        {
+            transosegraph[neighbour].push_back(i);
+        }
+    }
+    fill(visit.begin(), visit.end(), false);
+    dfs(visit, 0);
+    for (int i = 0; i < length; i++)
+    {
+        if (!visit[i])
+            return false;
+    }
+    return true;
+}
+```
+`2.5` Транспонируем граф, присвоив каждой вершине в сторону которой ориентировано ребро, ребро направлено в сторону вершины из которого шло ребро и убрав предыдущие ребра. Тем самым мы получили новый, транспонированный граф.
+Обнулим значение поля `vector<bool> visit(length, false)`, тоесть присвоим всем его элементам значение `false`  и перейдем в метод `void dfs(vector<bool>& visit, int current_top)`.
+После снова циклом(размером в количество вершин) проходимся по всем значениям `vector<bool> visit(length, false)`, если хотя бы одно из значений равно `false`, объявляем граф слабо-связным( что делаем в методе `string StronglyСonnectivityСheck()`).
+```сpp
+string GetInfo() {
+    string zapis1;
+    int tryi = 0;
+    for (auto it = graph.begin(); it != graph.end(); it++)
+    {
+        string zapis2;
+        for (auto i = graph[tryi].begin(); i != graph[tryi].end(); i++)
+        {
+            zapis2 += " " + to_string(*i);
+        }
+        tryi++;
+        zapis1 += to_string(tryi - 1) + " " + zapis2 + '\n';
+    }
+    cout << zapis1;
+    return zapis1;
+}
+```
+`2.6` Запишем список смежности в переменную `string zapis1`, состоящую из переменных `string zapis2`, в ктороные были записаны строки списка смежности. 
+```сpp
+Graph gr;
+gr.SetRecord(rec);
+gr.GetInfo();
+cout << gr.StronglyСonnectivityСheck();
+}
+```
+`2.7` Создадим переменную типа `Graph` (`Graph gr`), передадим классу сслыку и запишем граф в переменную через метод `gr.SetRecord(rec)`, выведем список смежности через метод `gr.GetInfo()`, определим вид графа через метод `gr.StronglyСonnectivityСheck()`
 
 ---
 ---
