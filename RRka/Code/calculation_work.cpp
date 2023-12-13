@@ -121,9 +121,9 @@ public:
         return zapis1;
     }
 };
-void NeedsToBeWrittenInSomeoneNotebook() {
-    ofstream vpis("D:\\labaPi1\\RRwritten.txt", ios_base::out);
-    cout << "Будет записано сюда \nD:\\labaPi1\\RRwritten.txt" << endl << "Чтобы завершить ввод поставьте '.' " << endl;
+void NeedsToBeWrittenInSomeoneNotebook(string rec) {
+    ofstream vpis(rec, ios_base::out);
+    cout << "Будет записано сюда " << rec << endl << "Чтобы завершить ввод поставьте '.' " << endl;
     char str[100];
     cin.getline(str, 100, '.');
     vpis.write(str, strlen(str) + 1);
@@ -134,12 +134,12 @@ int main()
     setlocale(LC_ALL, "RU");
     string choise;
     string rec;
+    cout << "Введите ссылку" << endl;
+    cin >> rec;
     cout << "Будете записывать граф? Если да, напишите " << "yes" << endl;
     cin >> choise;
     if (choise == "yes")
-        NeedsToBeWrittenInSomeoneNotebook();
-    cout << "Введите ссылку" << endl;
-    cin >> rec;
+        NeedsToBeWrittenInSomeoneNotebook(rec);
     Graph gr;
     gr.SetRecord(rec);
     gr.GetInfo();
