@@ -171,6 +171,7 @@ int main() {
 
 ## Тестирование
 Первый граф:
+
 Графическое изображение:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/b6aefb70-c5b7-493f-8248-e7c7a18b5138)
@@ -204,10 +205,12 @@ int main() {
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ebacf186-c4d1-48e5-addd-7c4a74ccc602)
 
 Задание графа списком смежности:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/7297fbb7-00d5-4d8f-bfe0-b65a3e088052)
 
 
 Итоговое количество компонент данного графа:
+
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/84488062-9a55-401c-a268-0ec74f0943ae)
 
