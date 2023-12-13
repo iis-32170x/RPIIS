@@ -300,6 +300,8 @@ if (maxPathLength == numeric_limits<int>::min()) {
 ```cpp
 return 0;
 ```
+## Тестирование
+Все тесты и наглядное изображение графов можетете посмотреть  [здесь](https://github.com/iis-32170x/RPIIS/tree/Батук_Д/RR/tests)
 
 ## Вывод
  
