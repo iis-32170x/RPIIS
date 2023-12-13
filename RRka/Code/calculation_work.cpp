@@ -21,15 +21,15 @@ public:
         while (spacePos != string::npos) {
             string elstr = line.substr(startPos, spacePos - startPos);
             int el = stoi(elstr);
-                startPos = spacePos + 1;
-                spacePos = line.find(' ', startPos);
-                rebra.push_back(el);
+            startPos = spacePos + 1;
+            spacePos = line.find(' ', startPos);
+            rebra.push_back(el);
         }
         string elstr = line.substr(startPos, spacePos - startPos);
         int el = stoi(elstr);
         rebra.push_back(el);
         graph.push_back(rebra);
-       
+
         /*for (auto i = rebra.begin(); i != rebra.end(); i++)
         {
             cout << *i << " ";
@@ -46,8 +46,8 @@ public:
         if (record.is_open()) {
             cout << "OK" << endl;
             while (getline(record, linestr)) {
-                if(count >= 1)
-                line.push_back(linestr);
+                if (count >= 1)
+                    line.push_back(linestr);
                 //cout << line[leng] << endl;
                 leng++;
                 count++;
@@ -65,20 +65,17 @@ public:
     string StronglyСonnectivityСheck() {
         int length = graph.size();
         vector<bool> visit(length, false);
-        for (int i = 0; i < length; i++)
-        {
-            dfs(visit, i);
-        }
+        dfs(visit, 0);
         for (int i = 0; i < length; i++)
         {
             if (!visit[i])
-                return "Граф не связанный";
+                return "Граф не связный";
         }
         if (TransposeTheGraph(length, visit))
-            return "Граф сильно-связанный";
-        else return "Граф связанный";
+            return "Граф сильно-связный";
+        else return "Граф связный";
     }
-    bool TransposeTheGraph(int &length, vector<bool> &visit) {
+    bool TransposeTheGraph(int& length, vector<bool>& visit) {
         vector<vector<int>> transosegraph(length);
         for (int i = 0; i < length; i++)
         {
@@ -110,15 +107,15 @@ public:
     string GetInfo() {
         string zapis1;
         int tryi = 0;
-        for ( auto it = graph.begin(); it != graph.end() ; it++)
+        for (auto it = graph.begin(); it != graph.end(); it++)
         {
             string zapis2;
-            for (auto i= graph[tryi].begin(); i != graph[tryi].end(); i++)
+            for (auto i = graph[tryi].begin(); i != graph[tryi].end(); i++)
             {
                 zapis2 += " " + to_string(*i);
             }
             tryi++;
-            zapis1 += to_string(tryi -1)+ " " + zapis2 + '\n';
+            zapis1 += to_string(tryi - 1) + " " + zapis2 + '\n';
         }
         cout << zapis1;
         return zapis1;
@@ -127,9 +124,9 @@ public:
 void NeedsToBeWrittenInSomeoneNotebook() {
     ofstream vpis("D:\\labaPi1\\RRwritten.txt", ios_base::out);
     cout << "Будет записано сюда \nD:\\labaPi1\\RRwritten.txt" << endl << "Чтобы завершить ввод поставьте '.' " << endl;
-         char str[100];
-         cin.getline(str, 100, '.');
-         vpis.write(str, strlen(str) + 1);
+    char str[100];
+    cin.getline(str, 100, '.');
+    vpis.write(str, strlen(str) + 1);
     vpis.close();
 }
 int main()
@@ -140,7 +137,7 @@ int main()
     cout << "Будете записывать граф? Если да, напишите " << "yes" << endl;
     cin >> choise;
     if (choise == "yes")
-    NeedsToBeWrittenInSomeoneNotebook();
+        NeedsToBeWrittenInSomeoneNotebook();
     cout << "Введите ссылку" << endl;
     cin >> rec;
     Graph gr;
@@ -149,5 +146,5 @@ int main()
     cout << gr.StronglyСonnectivityСheck();
     return 0;
 }
- //D:\\labaPi1\\RR.txt
+//D:\\labaPi1\\RR.txt
 //D:\\labaPi1\\RRwritten.txt
