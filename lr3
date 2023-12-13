@@ -1,0 +1,631 @@
+\documentclass[10pt, twocolumn, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{latexsym}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{romannum}
+\usepackage[unicode, pdftex]{hyperref}
+\usepackage{geometry}
+%%\usepackage[11pt]{extsizes}
+\newlist{level1}{itemize}{3}
+\setlist[level1]{
+  nosep,
+  before={\let\makelabel=\mymakelabel},
+  leftmargin=*,
+  labelwidth=60em,
+  label={\hspace{2em}},
+}
+
+\newcommand{\mymakelabel}[1]{#1\hfill}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=21mm,
+ right=21mm,
+ top=20mm,
+ footskip =30pt
+}
+\setlist{nolistsep}
+\title{LR3}
+
+    
+\author{\huge Tikhon Khodosov}
+\date{nov 2023}
+
+
+\setcounter{page}{99}
+
+
+\begin{document}
+
+%\maketitle 
+%\begin{center}
+ %  {\large 99-101}
+%\end{center}
+
+
+
+%%\clearpage
+
+\noindent \textbf{\textit{set of semantically similar sc-structures'}}
+\vspace{-1pt}
+\begin{itemize}
+\setlength\itemsep{2pt}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{sc-structure of semantic similarity of}
+
+\textit{sc-structures*}
+\item[$\Rightarrow$]\textit{second domain*:}
+
+{set of semantically similar sc-structures}
+\\
+\end{itemize}
+\vspace{5pt}
+\noindent \textbf{\textit{semantic continious similarity of sc-structures}}
+\vspace{-1pt}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A semantic continuous similarity of sc-structures*
+connects an sc-set of sc-structures* with a
+connected sc-structure* sc-relation of semantic
+similarity by slot sc-relations si, sj so that for
+each sc-structure* from sc-set find its element
+and the tuple of this similarity sc-relation, in
+which it enters under the slot sc-relation si, and
+under the slot sc-relation sj there is an element of
+the connected sc-structure*, also for each element
+of the connected sc-structure there is a tuple of
+this sc- a similarity relation in which it enters
+under the slot sc-relation sj, and under the slot screlation si the element of the sc-structure* from
+the sc-set enters.]
+\\
+
+\end{itemize}
+\noindent \textbf{\textit{sc-relation of semantic continuous similarity of sc-structures'}}
+
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{semantic continuous similarity of sc-structures*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{sc-relation of semantic continuous similarity by}
+
+\textit{slot relations*}
+\\
+\end{itemize}
+\noindent \textbf{\textit{semantic continuous similarity of sc-structures*'}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{semantic continuous similarity of sc-structures*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{sc-structure of semantic continuous similarity of}
+
+\textit{sc-structures*}
+\\
+\end{itemize}
+\noindent \textbf{\textit{sc-structure of semantic continuous similarity of
+sc-structures'}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{sc-structure of semantic continuous similarity of}
+\textit{sc-structures*}
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{sc-structure of semantic continuous similarity of}
+
+\textit{sc-structures}
+\textit{}
+\\
+\end{itemize}
+
+
+\noindent \textbf{\textit{set of semantically continuously similar sc-structures'}}
+
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{sc-structure of semantic continuous similarity of}
+
+\textit{sc-structures*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{set of semantically continuously similar}
+
+\textit{sc-structures} \\ \\
+\\
+\end{itemize}
+
+\noindent \textbf{\textit{key query'}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{key query*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{key query}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A key query '
+
+is a search-verify query (from one
+
+known element) that is executed from at least
+
+one element and is not executed from at least
+
+one element.]
+\\
+\end{itemize}
+
+\noindent \textbf{\textit{element of key query '}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{key query*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{element of key query}
+\\
+\end{itemize}
+
+\noindent \textbf{\textit{minimal key query '}}
+
+\begin{itemize}
+
+ \item[\textbf{$\subset$} ] \textit{key query'}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+
+[A minimal key query is a key query that finds
+
+sc-subsets of the element sets found by all other
+
+key queries that have the same domains of known
+
+satisfiability and non-satisfiability elements.] \\
+
+\end{itemize}
+
+\noindent \textbf{\textit{element of minimal key query'}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+
+\textit{minimal key query*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+
+
+
+\textit{element of minimal key query} \\
+
+\\
+
+\end{itemize}
+
+\noindent \textbf{\textit{full semantic neighborhood of an element*}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+
+[A full semantic neighborhood of an element*
+
+
+is all elements found by minimal key queries
+
+from this element (taking into account disjunctive
+
+search and negation of search).]
+
+
+
+
+%%\textit{element of key query}
+
+\end{itemize}
+
+\noindent \textbf{\textit{full semantic neighborhood of an element'}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+
+\textit{full semantic neighborhood of an element*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{full semantic neighborhood of an element}\\
+
+
+\end{itemize}
+
+\noindent \textbf{\textit{element of full semantic neighborhood'}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+
+\textit{full semantic neighborhood of an element*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{element of full semantic neighborhood}\\ 
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{introspective key element'}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[An introspective (basic) key element is an element
+
+of a set (from the class of the smallest such
+
+sets) of elements such that any full semantic\\ \\  \\
+
+\end{itemize}
+
+%%\vspace{5mm} 
+neighborhood of any element is an sc-subset of
+
+the union of their full semantic neighborhoods.] \\
+
+
+
+\noindent \textbf{\textit{topological space}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A topological space is a set with a set (family)
+of (open) subsets defined over it, including the
+set itself and the empty set. For any subset of
+the family, the result of the union belongs to the
+family, and for any finite subset of the family,
+the result of the intersection also belongs to the
+family. The complements of the sets of a family
+to the largest of the sets are called closed sets.]\\
+
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{topological space of connector incidence closure}}
+
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A topological space of connector incidence clo-
+sure on a set of sc-elements is a topological space,
+all closed sets of which contain all sc-elements
+of this set, to which there is a route along
+oriented connectives of the incidence relation
+of connectors.]
+
+\item[$\Rightarrow$]\textit{note*:}
+
+[In the general case, it does not satisfy the
+Tikhonov separability axiom. The pragmatics of
+considering such spaces is determined by the
+operations of removing sc-elements and connec-
+tors with which they are incident. Deleting an sc
+element requires deleting all connectors whose
+closure of any open neighborhood it belongs to.]
+  \\
+
+\end{itemize}
+
+\noindent \textbf{\textit{topological subspace of connector incidence closure '}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of topological spaces of connector
+incidence closure*}
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{topological space of connector incidence closure} \\
+\end{itemize}
+
+\noindent \textbf{\textit{topological superspace of connector incidence closure'}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of topological spaces of connector
+incidence closure*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{topological space of connector incidence closure} \\
+\end{itemize}
+
+
+\noindent \textbf{\textit{topological space of syntactic closure'}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A topological space of syntactic closure on a set
+of sc-elements is a topological space, all closed
+sets of which contain all sc-elements of this set, to
+which there is a route along oriented connectives
+of the incidence relation.]
+
+\item[$\Rightarrow$]\textit{note*:}
+
+[In the general case, it does not satisfy the Kol-
+mogorov separability axiom. Syntactic closure \\ \\ \\
+\end{itemize}
+
+ \noindent can be singled out as the basis of closed sets
+of a topological space, however, due to the
+possibility of drawing arcs from any sc-node to
+any, in the final case (as a result of the process
+of eliminating non-factors), such a space is a
+trivial (antidiscrete) space. The union relation
+of topological spaces of syntactic closure is not
+algebraically closed on the set of topological
+spaces of syntactic closure. For the same reason,
+for any incomplete topological space of syntactic
+closure, one can consider a topological space of
+syntactic closure whose support is a superset of
+the support of the former and which does not
+preserve closed sets. In this sense, the topology
+based on syntactic closure is not stable with
+respect to the processes of knowledge formation
+and its consideration is not pragmatically justified.
+The topology of the complete topological space
+of syntactic closure is antidiscrete (trivial). Thus,
+for a complete topological space of syntactic
+closure, all topological subspaces of syntactic
+closure have antidiscrete (trivial) topology.] \\
+
+
+
+
+\noindent \textbf{\textit{topological space of entitive closure}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[The topological space of an entitive closure on
+the set of sc-elements is a topological space all
+of whose closed sets are entitive closures.]
+
+\item[$\Rightarrow$]\textit{note*:}
+
+[In the general case, it does not satisfy the
+Tikhonov separability axiom. An entitive closure
+can be considered as a support of a topological
+(sub)space of entitive closure. The topological
+space of entitive closure preserves the closed
+sets of any topological spaces of entitive closure
+whose support is a subset of its support and an
+entitive closure. Such spaces form a structure of
+topological subspaces – topological superspaces
+of entitive closure. The topology of spaces in
+this structure is diverse.] \\
+
+\end{itemize}
+
+\noindent \textbf{\textit{topological subspace of entitive closure '}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of topological spaces of entitive
+closure*}
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{topological space of entitive closure} \\
+\end{itemize}
+
+
+
+
+\noindent \textbf{\textit{topological superspace of entitive closure '}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of topological spaces of entitive
+closure*}
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{topological space of entitive}
+
+\textit{closure} \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{topological space of substantial closure}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[The topological space of a substantial closure on
+the set of sc-elements is a topological space all
+of whose closed sets are substantial closures.]
+
+\item[$\Rightarrow$]\textit{note*:}
+
+[In the general case, it does not fit the axiom of
+separability according to Tikhonov. An substantial closure can be considered as a support of
+a topological (sub)space of substantial closure.
+The topological space of a substantial closure
+preserves closed any topological spaces of a
+substantial closure whose support is a subset
+of its support and a substantial closure. Such
+spatial formations of topological subspaces are
+topological superspaces of substantial closure.
+Topology of spaces in this vast area.] \\
+\end{itemize}
+
+
+\noindent \textbf{\textit{topological subspace of substantial closure '}}
+\begin{itemize}
+\item[$\Rightarrow$] \; \textit{first domain*:}
+
+\textit{\;inclusion of topological spaces of substantial}
+
+\textit{\;closure*}
+
+\item[$\Rightarrow$] \; \textit{second domain*:}
+
+\textit{\;topological space of substantial closure} \\
+\end{itemize}
+
+
+
+\noindent \textbf{\textit{topological superspace of substantial closure '}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of topological spaces of substantial}
+
+\textit{closure*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{topological space of substantial closure} \\
+
+
+
+\end{itemize}
+
+\indent There is a possible transition from sc-structures to manifolds and topological spaces by reducing sc-structures
+to graph structures. The issues of reducing sc-structures
+to graph structures and further towards to manifolds and
+topological spaces are considered in detail in [4] (see \ref{fig).
+
+
+\begin{figure}[h]
+
+\centering
+
+\includegraphics[width=0.8\linewidth]{foto.png}
+
+\caption{Transformations for sc-texts, graphs, manifolds and topological spaces.}
+
+\label{fig:mpr}
+
+\end{figure}
+
+
+Types of metric and pseudometric semantic subspaces \\ \\ \\ \\ \\ 
+
+
+\noindent and normalized semantic subspaces can also be represented. Further, we will consider such metric spaces as
+finite subspaces with full-connectively represented scelements, in particular. \\
+
+\noindent \textbf{\textit{metric}}
+
+\begin{itemize}[leftmargin=5em,labelindent=12.5mm,labelsep=6.3mm]
+
+\item[$\Rightarrow$] \hspace{1em} \textit{explanation*:}
+
+[A metric is a function of two arguments that
+takes values on a (linearly) ordered support
+of the group, is non-negative, is equal to the
+neutral element (zero) only when the arguments
+are equal, is symmetric, satisfies the triangle
+inequality.] \\
+
+\end{itemize}
+
+\noindent \textbf{\textit{metric space}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A metric space is a set with a function of two
+arguments defined on it, which is a metric that
+takes values on the ordered support of the group.] \\
+\end{itemize}
+
+\noindent \textbf{\textit{metric finite syntactic space}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A metric finite syntactic space of the SC-code
+is a metric space with a finite support, whose
+elements are designations (sc-elements), and the
+value of the metric can be determined through
+the incidence relations of the elements without
+taking into account their semantic type.] \\
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{metric finite syntactic subspace '}}
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of metric finite syntactic spaces*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{metric finite syntactic space} \\
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{metric finite syntactic superspace '}}
+\begin{itemize}
+
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of metric finite syntactic spaces*}
+
+\item[$\Rightarrow$]\textit{second domain*:}
+
+\textit{metric finite syntactic space} \\
+
+\end{itemize}
+
+
+\noindent \textbf{\textit{metric finite semantic space}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{explanation*:}
+
+[A metric finite semantic space of the SC-code
+is a metric space with a finite support, whose
+elements are designations (sc-elements), and the
+value of the metric cannot be determined through
+the incidence relations of elements without taking
+into account their semantic type.] \\
+\end{itemize}
+
+
+\noindent \textbf{\textit{metric finite semantic subspace '}}
+\begin{itemize}
+\item[$\Rightarrow$]\textit{first domain*:}
+
+\textit{inclusion of metric finite semantic spaces**}
+\end{itemize}
+
+\end{document}
