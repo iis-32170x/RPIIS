@@ -1,11 +1,11 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <queue>
 using namespace std;
 
-int connectedComponents(vector<vector<int>>& adj) {
-    int n = adj.size();
+int componenti(vector<vector<int>>& spisok) {
+    int n = spisok.size();
     vector<bool> visited(n, false);
     int count = 0;
 
@@ -19,10 +19,10 @@ int connectedComponents(vector<vector<int>>& adj) {
                 int curr = q.front();
                 q.pop();
 
-                for (int neighbor : adj[curr]) {
-                    if (!visited[neighbor]) {
-                        q.push(neighbor);
-                        visited[neighbor] = true;
+                for (int sosed : spisok[curr]) {
+                    if (!visited[sosed]) {
+                        q.push(sosed);
+                        visited[sosed] = true;
                     }
                 }
             }
@@ -38,21 +38,21 @@ int main() {
     ifstream inputFile("graph3.txt");
     ofstream outputFile("countcomp.txt");
 
-    int n, m; // Количество вершин и ребер
+    int n, m; // вершины и ребра
     inputFile >> n >> m;
 
-    vector<vector<int>> adj(n);
+    vector<vector<int>> spisok(n);
 
     for (int i = 0; i < m; ++i) {
-        int u, v; // Смежные вершины u и v
+        int u, v; // смежные вершины u и v
         inputFile >> u >> v;
-        adj[u - 1].push_back(v - 1);
-        adj[v - 1].push_back(u - 1);
+        spisok[u - 1].push_back(v - 1);
+        spisok[v - 1].push_back(u - 1);
     }
 
     inputFile.close();
 
-    int components = connectedComponents(adj);
+    int components = componenti(spisok);
 
     outputFile << "Count of components is: " << components << endl;
 
