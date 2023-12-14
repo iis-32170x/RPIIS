@@ -1,0 +1,118 @@
+# *Расчётная работа*
+## Введение
+### Цель
+Изучить основы теории графов, способы представления графов, базовые алгоритмы для работы с графами.
+### Задание
+2.13 Найти обхват графа
+
+Граф представляется в виде списка смежности.
+### Ключевые понятия
+`Граф` - математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
+
+`Ориентированный граф` — Граф, каждому ребру которого присвоено направление.
+
+`Список смежности` - один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из «соседей» этой вершины.
+
+`Обхват графа` - это наименьшее число ребер, которые нужно удалить из графа, чтобы он стал несвязным.
+
+## Алгоритм решения
+Вводим граф в виде списка смежности. Производим поиск в глубину от первой вершины и следующих непроверенных. Выводим в консоль обхват в виде цикла.
+## Реализация на С++
+Код, выполняющий приведённый алгоритм:
+```C++
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+vector<int> getcycle(vector<int>& from, int lastV) { 
+    vector<int> cycle{ lastV };
+    for (int v = from[lastV]; v != lastV; v = from[v])
+        cycle.push_back(v);
+    reverse(cycle.begin(), cycle.end());
+    return cycle;
+}
+void DFS(vector<vector<int>> &graph, int v, vector<int> &visited, vector<int>& from, vector<int> &cycle) { 
+    visited[v] = 1;
+    for (int to : graph[v]) {  
+        if (to == from[v]) {
+            continue;
+        } else
+        if (!visited[to]) {
+            from[to] = v;
+            DFS(graph, to, visited, from, cycle);
+            if (!cycle.empty())
+                return;
+        }
+        else if (visited[to] == 1) {
+            from[to] = v;
+            cycle = getcycle(from, to);
+            return;
+        }
+    }
+    visited[v] = 2;
+}
+int main() {
+    setlocale(LC_ALL, "RU");
+    int V, R;
+    cin >> V >> R; 
+    vector<vector<int>> graph(V);
+    for (int i = 0; i < R; i++) {
+        int a, b;
+        cin >> a >> b;
+        a--;
+        b--;
+        graph[a].push_back(b);
+        graph[b].push_back(a);
+    }
+    vector<int> visited(V);
+    vector<int> cycle;
+    vector<int> from(V, -1);
+    for (int v = 0; cycle.empty() && v < graph.size(); v++)
+        if (!visited[v])
+            DFS(graph, v, visited, from, cycle);
+    if (!cycle.empty()) {
+        cout << "yes\n";
+        for (int v : cycle)
+            cout << v + 1 << " ";
+    }
+    else {
+        cout << "no";
+    }
+    system("pause");
+    return 0;
+}
+
+```
+## Разбор кода
+- `#include <iostream>` - библиотека для ввода \ вывода
+- `using namespace std` - подключение пространства имен `std`
+- `#include <vector>` - библиотека векторов
+- `v' - текущая вершина графа
+- `lastV' - номер вершины, в которой цикл замкнулся
+- `to'  - соседние рёбра
+- `visited' - массив для отметки пройденых вершин
+- `void DFS(vector<vector<int>> &graph, int v, vector<int> &visited, vector<int>& from, vector<int> &cycle) ` -  создание фунции поиска в глубину
+- `setlocale(LC_ALL, "RU")` - подключение русскоязычного пакета
+- `V' - количество вершин
+- `R' - колво рёбер
+- `for (int i = 0; i < R; i++)` - цикл, для ввода списка смежности
+- `vector<int> visited(V)` - инициализация вектора visited
+- `vector<int> cycle;` - инициализация вектора cycle
+- `vector<int> from(V, -1)` - инициализация вектора from
+- `int main()` - основная фунция
+- `for (int i = 0; i < n; i++)` - цикл вывода условия в консоль
+- `while (d < n)` - цикл поиска в глубину с разных вершин
+- `if (used[d] == 0)` - проверка состояния точки
+- `cout << d + 1 << " "` - если проверка прошла, то вывести данную точку
+- `dfs(d);` - начать поиск с даннйо точки
+- `cout << endl;` - после проверки компоненты связности перевести курсор на следующий абзац
+- `d++` - увеличение номера проверяемой точки 
+
+## Тестирование
+
+## Вывод
+В результате выполнения расчётной работы приобрёл следующие навыки:
+
+- изучил основы теории графов
+- изучил способы представления графов
+- изучил базовые алгоритмы для работы с графами
