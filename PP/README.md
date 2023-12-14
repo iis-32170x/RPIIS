@@ -395,34 +395,45 @@ for (int i = 0; i < UnionVertex; i++) {
 Входные данные(Кол вершин и ребер, и имя файлов с МИ)
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/enter1.png?raw=true"> </image>
 Матрица 1:
-<br>1 0 0 1
-<br>1 1 0 0
-<br>0 1 1 0
-<br>0 0 1 1
-<br>Матрица 2:
-<br>1 0 0 0 1
-<br>1 0 1 0 0
-<br>0 1 0 1 0
-<br>0 1 0 0 0
-<br>0 0 1 1 1
+
+```
+1 0 0 1
+1 1 0 0
+0 1 1 0
+0 0 1 1
+```
+Матрица 2:
+
+```
+1 0 0 0 1
+1 0 1 0 0
+0 1 0 1 0
+0 1 0 0 0
+0 0 1 1 1
+```
 <br>Объединенная матрица инцедентности:
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/output1.png?raw=true"></image>
 <h3>Тест 2:</h3>
 Входные данные(Кол вершин и ребер, и имя файлов с МИ)
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/enter2.png?raw=true"> </image>
 Матрица 11:
-<br>1 0 0 0 0 1
-<br>1 1 0 0 0 0 
-<br>0 1 1 0 1 0
-<br>0 0 1 1 0 0
-<br>0 0 0 1 1 1 
-<br>Матрица 22:
-<br>1 0 0 0 0
-<br>0 1 0 0 0
-<br>1 1 1 0 0
-<br>0 0 1 1 0
-<br>0 0 0 1 1
-<br>0 0 0 0 1
+
+```
+1 0 0 0 0 1
+1 0 0 0 0 
+0 1 1 0 1 0
+0 0 1 1 0 0
+0 0 0 1 1 1 
+```
+Матрица 22:
+```
+1 0 0 0 0
+0 1 0 0 0
+1 1 1 0 0
+0 0 1 1 0
+0 0 0 1 1
+0 0 0 0 1
+```
 <br>Объединенная матрица инцедентности:
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/output2.png?raw=true"></image>
 <h2><B>Вывод:</B></h2>
