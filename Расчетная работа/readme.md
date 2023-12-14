@@ -241,132 +241,208 @@ euler = [0,6,7,2,8,9,3,8,4,6,5,4,1,7,3,5,0]
 
 ```c++
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <queue>
+#include <fstream>
+#include <string> 
 using namespace std;
 
-int shortestCycle(vector<vector<int>>& adjList, int numberofsize) {
-    int minCycle = numberofsize + 1;
+void createMatrix(int vertexCount, vector<vector<int>>& matrix) {
+	cout << "Select input type:" << endl << "0) Adjacency matrix from file." << endl << "1) Keyboard input using vertex connections." << endl;
 
-    for (int i = 0; i < numberofsize; i++) {
-        vector<bool> visited(numberofsize, false);
-        queue<pair<int, int>> uslqueue;
-        uslqueue.push({ i, 0 });
+	bool choice;
+	cin >> choice;
+	cout << endl;
 
-        while (!uslqueue.empty()) {
-            int cur = uslqueue.front().first;
-            int dist = uslqueue.front().second;
-            uslqueue.pop();
+	//file
 
-            for (int neighbor : adjList[cur]) {
-                if (neighbor == i) {
-                    minCycle = min(minCycle, dist + 1);
-                }
-                else if (!visited[neighbor]) {
-                    visited[neighbor] = true;
-                    uslqueue.push({ neighbor, dist + 1 });
-                }
-            }
-        }
-    }
+	if (choice == 0) {
+		cout << "Enter the absolute path to the file: ";
 
-    if (minCycle == numberofsize + 1) {
-        return -1;
-    }
-    else {
-        return minCycle;
-    }
+		string path;
+
+		int i = 0, j = 0;
+		char sim;
+
+		cin >> path;
+		cout << endl;
+
+		ifstream myfile(path);
+		if (myfile.is_open()) {
+			while (myfile.get(sim)) {
+				switch (sim) {
+					case '1': {
+						matrix[i][j] = 1;
+						j++;
+						break;
+					}
+					case '0': {
+						matrix[i][j] = 0;
+						j++;
+						break;
+					}
+					case '\n': {
+						j = 0;
+						i++;
+						break;
+					}
+				}
+			}
+			myfile.close();
+		}
+		else {
+			cout << "Unable to open file";
+			exit(0);
+		}
+	}
+
+	// keybord
+
+	if (choice == 1) {
+		cout << "Enter the elements of an undirected graph with a connection (element numbers start from 0)." << endl;
+		cout << "* If you want to stop entering, enter -1." << endl;
+
+		while (true) {
+			int a, b;
+			cin >> a;
+			if (a == -1) {
+				cout << endl << "Entry completed." << endl;
+				break;
+			}
+			cin >> b;
+
+			matrix[a][b] = 1;
+			matrix[b][a] = 1;
+		}
+	}
+
+	// output matrix
+
+	cout << "  ";
+
+	for (int i = 0; i < vertexCount; i++) {
+		cout << i << " ";
+	}
+
+	cout << endl;
+
+	for (int i = 0; i < vertexCount; i++) {
+		cout << i << " ";
+		for (int j = 0; j < vertexCount; j++) {
+			cout << matrix[i][j] << " ";
+		}
+		cout << endl;
+	}
 }
 
-int main() {
-    setlocale(LC_ALL, "ru");
-    string line;
-    cout << "Введите файл: ";
-    cin >> line;
-    ifstream inputFile(line);
-    ofstream outputFile("obhvat.txt");
-    int numberof_usl, numberof_rebr;
-    inputFile >> numberof_usl >> numberof_rebr;
 
+// DFS
 
-    vector<vector<int>> adjList(numberof_usl);
-    for (int i = 0; i < numberof_rebr; i++) {
-        int usl, s_usl;
-        inputFile >> usl >> s_usl;
-        usl--, s_usl--;
-        adjList[usl].push_back(s_usl);
-    }
-    inputFile.close();
-
-    int cycleLength = shortestCycle(adjList, numberof_usl);
-    if (cycleLength == -1) {
-        outputFile << "Обхват графа: бесконечность" << endl;
-    }
-    else {
-        outputFile << "Обхват графа: " << cycleLength << endl;
-    }
-
-    outputFile.close();
-    return 0;
+bool DFS(int v, vector<int>& visited, vector<int>& euler, vector<vector<int>>& matrix) {
+	visited.push_back(v);
+	for (int i = 0; i < matrix.size(); ++i) {
+		if (matrix[v][i] == 1 && i != visited[visited.size()-1]) {
+			matrix[v][i] = 0;
+			matrix[i][v] = 0;
+			DFS(i, visited, euler, matrix);
+		}
+	}
+	if (visited.empty()) {
+		return 1;
+	}
+	euler.push_back(v);
+	visited.pop_back();
+	if (visited.empty()) {
+		return 1;
+	}
+	v = visited[visited.size() - 1];
+	visited.pop_back();
+	DFS(v, visited, euler, matrix);
 }
-```
 
-## Разбор кода:
+bool isEuler(int vertexCount, int startVetrex, vector<int>& visited, vector<int>& euler, vector<vector<int>>& matrix) {
 
-- `#include <vector>`, `#include <fstream>` и `#include <queue>`: библиотеки , которые предоставляют возможность использовать векторы, файлы и очереди.
-- `int shortestCycle(vector<vector<int>>& adjList, int numberofsize)`: Объявление функции shortestCycle, которая принимает ссылку на вектор векторов adjList и целочисленное значение n, обозначающее количество вершин в графе. Функция возвращает целочисленное значение - длину кратчайшего цикла в графе, либо -1, если цикл отсутствует.
-- `for (int i = 0; i < numberofsize; i++)` : Цикл, в котором происходит перебор всех вершин графа. Внутри этого цикла будет запущен поиск кратчайшего цикла из каждой вершины:
-  -   `vector<bool> visited(numberofsize, false) `: Объявление вектора visited размером n, которая будет использоваться для отслеживания посещенных вершин во время обхода графа.
-  - `queue<pair<int, int>> q`: Объявление очереди q с элементами типа pair<int, int>, где первый элемент - вершина графа, а второй - расстояние от начальной вершины.
-  - `q.push({ i, 0 })`: Добавление начальной вершины i в очередь q с расстоянием 0.
-  - `while (!q.empty())`: Цикл, который будет выполняться, пока очередь не станет пустой. Здесь происходит обход графа в ширину (BFS) из текущей вершины:
-     - `int cur = q.front().first`: Извлечение текущей вершины из очереди.
-     -  `int dist = q.front().second `: Извлечение расстояния от начальной вершины до текущей вершины.
-     -   `q.pop()`: Очищение очереди
-     -   `for (int neighbor : adjList[cur]`: Цикл, в котором происходит перебор всех смежных вершин текущей вершины.
-     -   `if (neighbor == i)`: Проверка, является ли смежная вершина начальной вершиной. Если да, то обновляем значение `minCycle` с помощью строки `minCycle = min(minCycle, dist + 1)`
-     -   `else if (!visited[neighbor])`: Проверка, была ли уже посещена смежная вершина. Если нет, то добавляем её в очередь c помощью строк `visited[neighbor] = true` и `q.push({ neighbor, dist + 1 })`.
-- `if (minCycle == numberofsize  + 1){ return -1;} `:Проверка, был ли найден цикл во всем графе. Если нет, возвращаем -1, чтобы обозначить отсутствие цикла.
-- `else { return minCycle; }`: Если же цикл был найден, возвращаем его длину.
+	// check if number of vertices have odd degree 
 
-После реализации алгоритма остаётся, лишь запросить у пользователя файл с орграфом (в виде списка смежности) и вывести обхват орграфа в новый файл.
-```c++
+	for (int i = 0; i < vertexCount; i++) {
+		int counter = 0;
+		for (int j = 0; j < vertexCount; j++) {
+			if (matrix[i][j] == 1) {
+				counter++;
+			}
+		}
+		if (counter % 2 != 0 || counter == 0) {
+			return 0;
+		}
+	}
+
+	// start DFS
+
+	return DFS(startVetrex, visited, euler, matrix);
+} 
+
 int main() {
-    setlocale(LC_ALL, "ru");
-    string line;
-    cout << "Введите файл: ";
-    cin >> line;
-    ifstream inputFile(line);
-    ofstream outputFile("obhvat.txt");
-    int numberof_usl, numberof_rebr;
-    inputFile >> numberof_usl >> numberof_rebr;
+	int vertexCount;
+	cout << "Enter number of vertex: ";
+	cin >> vertexCount;
+	cout << endl;
 
+	vector<vector <int>> matrix(vertexCount, vector<int>(vertexCount));
 
-    vector<vector<int>> adjList(numberof_usl);
-    for (int i = 0; i < numberof_rebr; i++) {
-        int usl, s_usl;
-        inputFile >> usl >> s_usl;
-        usl--, s_usl--;
-        adjList[usl].push_back(s_usl);
-    }
-    inputFile.close();
+	createMatrix(vertexCount, matrix);
 
-    int cycleLength = shortestCycle(adjList, numberof_usl);
-    if (cycleLength == -1) {
-        outputFile << "Обхват графа: бесконечность" << endl;
-    }
-    else {
-        outputFile << "Обхват графа: " << cycleLength << endl;
-    }
+	cout << endl << "Enter the number of the vertex with which you want to start checking the cycle: ";
+	int startVertex;
+	cin >> startVertex;
+	cout << endl;
 
-    outputFile.close();
-    return 0;
+	vector<int> visited;
+	vector<int> euler;
+
+	if (isEuler(vertexCount, startVertex, visited, euler, matrix)) {
+		cout << "The graph contains an Euler cycle: ";
+		for (int i = 0; i < euler.size(); i++) {
+			cout << euler[i] << " ";
+		}
+		cout << endl;
+		cout << "Eulerian cycle length: " << euler.size()-1;
+	}
+	else {
+		cout << "The graph does not contains an Euler cycle." << endl;
+	}
 }
 ```
 
 ## Тестирование
-Все тесты и наглядное изображение графов можетете посмотреть  [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%A1%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%91/%D0%A0%D0%A0/%D1%82%D0%B5%D1%81%D1%82%D1%8B)
+
+Результаты выполнения программы для 3 случаев: 2 эйлерова графа и 1 обычный граф. Способа задания 2.
+
+1) Эйлеров граф на 10 вершин:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%87%D1%83%D0%BA_%D0%98/%D0%A0%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0/EulersGraph10.jpg?raw=true)
+
+![image]
+
+Этот граф был задан текстовым файлом.
+
+![image]
+   
+2) Эйлеров граф на 7 вершин:
+
+![image]
+
+![image]
+
+Этот граф был задан текстовым файлом.
+
+3)Граф на 9 вершин:
+
+![image](https://graphonline.ru/tmp/saved/qe/qeTjSdFKLQSxWznm.png)
+
+![image]
+
+Этот граф был задан текстовым файлом.
+
+![image]
 
 ## Вывод
  
