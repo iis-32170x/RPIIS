@@ -412,6 +412,7 @@ for (int i = 0; i < UnionVertex; i++) {
 0 0 1 1 1
 ```
 <br>Объединенная матрица инцедентности:
+<br>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/output1.png?raw=true"></image>
 <h3>Тест 2:</h3>
 Входные данные(Кол вершин и ребер, и имя файлов с МИ)
@@ -435,6 +436,7 @@ for (int i = 0; i < UnionVertex; i++) {
 0 0 0 0 1
 ```
 <br>Объединенная матрица инцедентности:
+<br>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/PP/Tests/output2.png?raw=true"></image>
 <h2><B>Вывод:</B></h2>
 В результате выполнения расчётной работы приобрёл следующие навыки:
