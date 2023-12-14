@@ -24,45 +24,47 @@
 #include <vector>
 #include <stack>
 using namespace std;
-vector<int> getcycle(vector<int>& from, int lastV) { 
+vector<int> getcycle(vector<int>& from, int lastV) { // lastV- номер вершины, в которой цикл замкнулся
     vector<int> cycle{ lastV };
     for (int v = from[lastV]; v != lastV; v = from[v])
         cycle.push_back(v);
     reverse(cycle.begin(), cycle.end());
     return cycle;
 }
-void DFS(vector<vector<int>> &graph, int v, vector<int> &visited, vector<int>& from, vector<int> &cycle) { 
+void DFS(vector<vector<int>>& graph, int v, vector<int>& visited, vector<int>& from, vector<int>& cycle) { // v- текущая вершина графа
     visited[v] = 1;
-    for (int to : graph[v]) {  
-        if (to == from[v]) {
-            continue;
-        } else
-        if (!visited[to]) {
-            from[to] = v;
-            DFS(graph, to, visited, from, cycle);
-            if (!cycle.empty())
+    for (int to : graph[v]) { // to -соседние рёбра
+            if (!visited[to]) {
+                from[to] = v;
+                DFS(graph, to, visited, from, cycle);// visited -массив для отметки пройденых вершин
+                if (!cycle.empty())
+                    return;
+            }
+            else if (visited[to] == 1) {
+                from[to] = v;
+                cycle = getcycle(from, to);
                 return;
-        }
-        else if (visited[to] == 1) {
-            from[to] = v;
-            cycle = getcycle(from, to);
-            return;
-        }
+            }
     }
     visited[v] = 2;
 }
 int main() {
     setlocale(LC_ALL, "RU");
     int V, R;
-    cin >> V >> R; 
+    cout << "введите количество вершин: ";
+    cin >> V;
+    cout << endl;
+    cout << "введите количество рёбер: ";
+    cin >> R;
+    cout << endl; // V-количество вершин R- колво рёбер
     vector<vector<int>> graph(V);
     for (int i = 0; i < R; i++) {
         int a, b;
+        cout << "введите " << i + 1 << " ребро\n";
         cin >> a >> b;
         a--;
         b--;
         graph[a].push_back(b);
-        graph[b].push_back(a);
     }
     vector<int> visited(V);
     vector<int> cycle;
@@ -71,12 +73,12 @@ int main() {
         if (!visited[v])
             DFS(graph, v, visited, from, cycle);
     if (!cycle.empty()) {
-        cout << "yes\n";
+        cout << "цикл найден\n";
         for (int v : cycle)
             cout << v + 1 << " ";
     }
     else {
-        cout << "no";
+        cout << "циклов не найдено";
     }
     system("pause");
     return 0;
