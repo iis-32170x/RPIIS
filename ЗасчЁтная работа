@@ -33,10 +33,7 @@ vector<int> getcycle(vector<int>& from, int lastV) {
 }
 void DFS(vector<vector<int>> &graph, int v, vector<int> &visited, vector<int>& from, vector<int> &cycle) { 
     visited[v] = 1;
-    for (int to : graph[v]) {  
-        if (to == from[v]) {
-            continue;
-        } else
+    for (int to : graph[v]) { 
         if (!visited[to]) {
             from[to] = v;
             DFS(graph, to, visited, from, cycle);
@@ -62,7 +59,6 @@ int main() {
         a--;
         b--;
         graph[a].push_back(b);
-        graph[b].push_back(a);
     }
     vector<int> visited(V);
     vector<int> cycle;
@@ -100,15 +96,9 @@ int main() {
 - `vector<int> cycle;` - инициализация вектора cycle
 - `vector<int> from(V, -1)` - инициализация вектора from
 - `int main()` - основная фунция
-- `for (int i = 0; i < n; i++)` - цикл вывода условия в консоль
-- `while (d < n)` - цикл поиска в глубину с разных вершин
-- `if (used[d] == 0)` - проверка состояния точки
-- `cout << d + 1 << " "` - если проверка прошла, то вывести данную точку
-- `dfs(d);` - начать поиск с даннйо точки
-- `cout << endl;` - после проверки компоненты связности перевести курсор на следующий абзац
-- `d++` - увеличение номера проверяемой точки 
 
-## Тестирование
+## Тестирование 
+
 
 ## Вывод
 В результате выполнения расчётной работы приобрёл следующие навыки:
