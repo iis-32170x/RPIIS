@@ -65,34 +65,20 @@ public:
 	}
 	void UnionVertices(int randomVert, int randomEdge, int randomEdgeIndex, int randomIndex,int Mincut) { 
 		setlocale(LC_ALL, "RU");
-		ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + randomEdgeIndex);
-		if (!ListSmezh[randomIndex].smezh.empty()) {
-			for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
-				if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
-					ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + i);
-				}
-			}
-		}
 		for (int i = 0; i < ListSmezh.size(); i++) {
 			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
-				if (randomEdge == ListSmezh[i].smezh[j].v) {
+				if (randomEdge == ListSmezh[i].smezh[j].v && randomVert != ListSmezh[i].u) {
 					ListSmezh[i].smezh[j].v = ListSmezh[i].u;
 					ListSmezh[randomIndex].smezh.push_back(ListSmezh[i].smezh[j]);
 					ListSmezh[i].smezh.erase(ListSmezh[i].smezh.begin() + j);
 				}
 			}
+		}
+		for(int i=0;i<ListSmezh.size();i++){
 			if (randomEdge == ListSmezh[i].u) {
 				ListSmezh[randomIndex].smezh.insert(ListSmezh[randomIndex].smezh.end(), ListSmezh[i].smezh.begin(), ListSmezh[i].smezh.end());
 				ListSmezh.erase(ListSmezh.begin() + i);
 			}
-		}
-		cout << "\nграф после удаления ребра\n";
-		for (int i = 0; i < ListSmezh.size(); i++) {
-			cout << ListSmezh[i].u;
-			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
-				cout  <<"(" << ListSmezh[i].smezh[j].v<<"," <<ListSmezh[i].smezh[j].weight<<")";
-			}
-			cout << endl;
 		}
 	}
 
@@ -126,8 +112,29 @@ public:
 							Mincut += ListSmezh[randomIndex].smezh[i].weight;
 						}
 					}
+					ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + randomEdgeIndex);
+					if (!ListSmezh[randomIndex].smezh.empty()) {
+						for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
+							if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
+								ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + i);
+							}
+						}
+					}
 					cout << "вершину " << randomVert << " и вершину " << randomEdge << endl;
 					UnionVertices(randomVert, randomEdge, randomEdgeIndex, randomIndex,Mincut);
+					for (int i = 0; i < ListSmezh.size(); i++) {
+						if (ListSmezh[i].smezh.empty()) {
+							ListSmezh.erase(ListSmezh.begin() + i);
+						}
+					}
+					cout << "\nграф после удаления ребра\n";
+					for (int i = 0; i < ListSmezh.size(); i++) {
+						cout << ListSmezh[i].u;
+						for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+							cout << "(" << ListSmezh[i].smezh[j].v << "," << ListSmezh[i].smezh[j].weight << ")";
+						}
+						cout << endl;
+					}
 				}
 			}
 			V--;
@@ -149,5 +156,6 @@ int main() {
 }
 ```
 # Результат
-![image](https://github.com/iis-32170x/RPIIS/assets/148863144/150e757d-1a30-45d1-987e-8598893c4281)
+![image](https://github.com/iis-32170x/RPIIS/assets/148863144/0464e2f3-e562-409c-8fb4-de0634e851a8)
+
 
