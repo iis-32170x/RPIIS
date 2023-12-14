@@ -17,7 +17,7 @@ void createMatrix(int vertexCount, vector<vector<int>>& matrix) {
 		cout << "Enter the absolute path to the file: ";
 
 		string path;
-		string s;
+
 		int i = 0, j = 0;
 		char sim;
 
@@ -25,7 +25,6 @@ void createMatrix(int vertexCount, vector<vector<int>>& matrix) {
 		cout << endl;
 
 		ifstream myfile(path);
-		matrix.emplace_back();
 		if (myfile.is_open()) {
 			while (myfile.get(sim)) {
 				switch (sim) {
@@ -94,7 +93,7 @@ void createMatrix(int vertexCount, vector<vector<int>>& matrix) {
 }
 
 
-// fucking DFS
+// DFS
 
 bool DFS(int v, vector<int>& visited, vector<int>& euler, vector<vector<int>>& matrix) {
 	visited.push_back(v);
@@ -130,16 +129,13 @@ bool isEuler(int vertexCount, int startVetrex, vector<int>& visited, vector<int>
 			}
 		}
 		if (counter % 2 != 0 || counter == 0) {
-			return(0);
+			return 0;
 		}
 	}
 
 	// start DFS
 
-	if (DFS(startVetrex, visited, euler, matrix)) {
-		return 1;
-	}
-	else return 0;
+	return DFS(startVetrex, visited, euler, matrix);
 } 
 
 int main() {
@@ -166,6 +162,7 @@ int main() {
 			cout << euler[i] << " ";
 		}
 		cout << endl;
+		cout << "Eulerian cycle length: " << euler.size()-1;
 	}
 	else {
 		cout << "The graph does not contains an Euler cycle." << endl;
