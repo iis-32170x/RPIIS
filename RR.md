@@ -19,38 +19,22 @@
 
 **Список смежности:** Способ представления графа в виде структуры данных. Каждая вершина графа связана с другими вершинами, с которыми она имеет рёбра. Для каждой вершины создается список смежности, содержащий вершины, с которыми она соединена.
 
-# Алгоритм
+# Алгоритм Каргера для нахождения минимального разреза в графе
 
-### Структура данных для ребер:
+Данный код реализует алгоритм Каргера для нахождения минимального разреза в графе. Минимальный разрез представляет собой множество рёбер, разделяющих граф на две непересекающиеся компоненты связности, с минимальной суммой весов рёбер.
 
-Определена структура `Edge`, представляющая ребро графа с полями `u`, `v` (вершины) и `weight` (вес).
+## Основные шаги алгоритма:
 
-### Чтение данных из файла:
+1. Создание графа с использованием структур `Smezh` (ребро) и `Edge` (вершина и связанные с ней рёбра).
 
-Реализована функция `ReadFile`, которая считывает ребра из файла в вектор `Edges`.
+2. В методе `MinCut` происходит итеративное слияние вершин до тех пор, пока в графе не останется 2 вершины. На каждой итерации случайным образом выбираются две вершины, и все исходящие из них рёбра объединяются. Веса рёбер суммируются для определения текущей величины минимального разреза.
 
-### Определение числа вершин:
-
-Реализована функция `NumVertices`, которая по вектору ребер определяет количество вершин в графе.
-
-### Класс `Graph`:
-
-Класс `Graph` содержит приватные члены `V` (количество вершин) и `edges` (список ребер).
-- Конструктор класса инициализирует количество вершин.
-- Метод `addEdge` добавляет ребра в граф.
-- Метод `collect` используется для объединения вершин при нахождении минимального разреза.
-- Метод `MinCutAlgorithm` содержит алгоритм поиска минимального разреза.
-
-### Главная функция:
-
-В главной функции создается объект класса `Graph`.
-1. Вызывается функция чтения файла и создания графа.
-2. Запускается алгоритм поиска минимального разреза.
-3. Выводится результат.
-
+3. В конце работы алгоритма выводится минимальный разрез.
+  
 ### Алгоритм поиска минимального разреза:
 
 Основан на методе "Стохастического минимального разреза" (Stoer-Wagner algorithm), который использует случайные выборки для поиска приближенного минимального разреза во взвешенном графе.
+## КОД
 
 ```cpp
 #include <iostream>
@@ -59,125 +43,111 @@
 #include <ctime>
 #include <cstdlib>
 #include<numeric>
-#include <fstream>
-#include <set>
+
 using namespace std;
-struct Edge {
-    int u, v, weight;
+struct Smezh {
+	int v, weight;
+	Smezh(int v, int w) : v(v), weight(w) {}
 };
-vector<Edge> ReadFile(string& filename) {
-    vector<Edge> edge;
-    ifstream inputFile(filename);
-
-    if (inputFile.is_open()) {
-        Edge edges;
-        while (inputFile >> edges.u >>edges.v>> edges.weight) {
-            edge.push_back(edges);
-        }
-        inputFile.close();
-    }
-    else {
-        cerr << "Unable to open the file." << endl;
-    }
-
-    return edge;
-}
-// функция для нахождения количесива вершин
-int NumVertices(vector<Edge> Edges) {
-    vector<char> vertices;
-    for (int i = 0; i < Edges.size(); i++) {
-        vertices.push_back(Edges[i].u);
-        vertices.push_back(Edges[i].v);
-    }
-    set<char> NumVertices(vertices.begin(), vertices.end());
-    int V = NumVertices.size();
-    return V;
-}
+struct Edge {
+	int u;
+	vector<Smezh> smezh;
+	Edge(int u, const vector<Smezh>& pairs) : u(u),smezh(pairs){}
+};
 class Graph {
 private:
-    int V; // Количество вершин
-    vector<Edge> edges; // Список рёбер
-
+	int V; // Количество вершин
+	vector<Edge> ListSmezh;
 public:
-    Graph(int vertices) { V = vertices; }
+	Graph(int vertices) { V = vertices; }
+	void addEdge(vector<Edge> Edges) {
+		ListSmezh = Edges;
+	}
+	void UnionVertices(int randomVert, int randomEdge, int randomEdgeIndex, int randomIndex,int Mincut) { 
+		setlocale(LC_ALL, "RU");
+		ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + randomEdgeIndex);
+		if (!ListSmezh[randomIndex].smezh.empty()) {
+			for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
+				if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
+					ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + i);
+				}
+			}
+		}
+		for (int i = 0; i < ListSmezh.size(); i++) {
+			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+				if (randomEdge == ListSmezh[i].smezh[j].v) {
+					ListSmezh[i].smezh[j].v = ListSmezh[i].u;
+					ListSmezh[randomIndex].smezh.push_back(ListSmezh[i].smezh[j]);
+					ListSmezh[i].smezh.erase(ListSmezh[i].smezh.begin() + j);
+				}
+			}
+			if (randomEdge == ListSmezh[i].u) {
+				ListSmezh[randomIndex].smezh.insert(ListSmezh[randomIndex].smezh.end(), ListSmezh[i].smezh.begin(), ListSmezh[i].smezh.end());
+				ListSmezh.erase(ListSmezh.begin() + i);
+			}
+		}
+		cout << "\nграф после удаления ребра\n";
+		for (int i = 0; i < ListSmezh.size(); i++) {
+			cout << ListSmezh[i].u;
+			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+				cout  <<"(" << ListSmezh[i].smezh[j].v<<"," <<ListSmezh[i].smezh[j].weight<<")";
+			}
+			cout << endl;
+		}
+	}
 
-    // создание графа
-    void addEdge(vector<Edge> Edges) {
-        edges = Edges;
-   }
-    //функция для обьединение=я вершин
-    void  collect(int subset1, int subset2, int weight, vector<int>& MinCut) {
-        MinCut.push_back(weight);
-        setlocale(LC_ALL, "RU");
-        cout << "Образовалось \n";
-        for (int i = 0; i < edges.size(); i++)
-        {
-            if (subset2 == edges[i].u && subset1 != edges[i].v) {
-                edges[i].u = subset1;
-                cout << "ребро " << edges[i].u << "-" << edges[i].v << "\n";
-            }
-            else
-                if (subset2 == edges[i].v && subset1 != edges[i].u) {
-                    edges[i].v = edges[i].u;
-                    edges[i].u = subset1;
-                    cout << "ребро " << edges[i].u << "-" << edges[i].v << "\n";
-                }
-                else
-                    if (subset1 == edges[i].v && subset2 == edges[i].u) {
-                        MinCut.push_back(edges[i].weight);
-                        cout << "ребро " << edges[i].u << "-" << edges[i].v << "\n";
-                        edges.erase(edges.begin() + i);
-                    }
-                    else
-                        if (subset1 == edges[i].u && subset2 == edges[i].v) {
-                            MinCut.push_back(edges[i].weight);
-                            cout << "ребро " << edges[i].u << "-" << edges[i].v << "\n";
-                            edges.erase(edges.begin() + i);
-                        }
-        }
 
-    }
-    //функция для нахождения минимального разреза
-    int MinCutAlgorithm() {
-        vector<int> Cut;
-        int MinCut = 0;
-        setlocale(LC_ALL, "RU");
-        while (V > 2) {
-            cout << "выбираем случайные вершины\n";
-            int randomEdge = rand() % edges.size();
-            int subset1 = edges[randomEdge].u;
-            int subset2 = edges[randomEdge].v;
-            int weight = edges[randomEdge].weight;
-            cout << "случайным образом выбрались вершины " << subset1 << " и " << subset2 << "\n";
-            cout << "объединяем вершину " << subset1 << " с вершиной " << subset2 << "\n";
-            edges.erase(edges.begin() + randomEdge);
-            collect(subset1, subset2, weight, Cut);
-            if (V > 3) {
-                cout << "продолжаем пока не останется две вершины \n";
-            }
-            else {
-                cout << "так как осталось два ребра можем считать минимальный разрез \n";
-            }
-            V--;
-
-        }
-        MinCut = accumulate(Cut.begin(), Cut.end(), 0);
-
-        return MinCut;
-    }
+	int MinCut() {
+		setlocale(LC_ALL, "RU");
+		int Mincut = 0;
+		cout << "начальный граф\n";
+		for (int i = 0; i < ListSmezh.size(); i++) {
+			cout << ListSmezh[i].u;
+			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+				cout << "(" << ListSmezh[i].smezh[j].v << "," << ListSmezh[i].smezh[j].weight << ")";
+			}
+			cout << endl;
+		}
+		while (V > 2) {
+			int randomIndex = 0;
+			int randomVert = 0;
+			cout << "выбираем случайным образом две вершины например: ";
+			do {
+				 randomIndex = rand() % ListSmezh.size();
+				 randomVert = ListSmezh[randomIndex].u;
+			} while (ListSmezh[randomIndex].smezh.empty());
+			for (int i = 0; i < ListSmezh.size(); i++) {
+				if (randomVert == ListSmezh[i].u) {
+					int randomEdgeIndex = rand() % ListSmezh[randomIndex].smezh.size();
+					int randomEdge = ListSmezh[randomIndex].smezh[randomEdgeIndex].v;
+					int randomWeight = ListSmezh[randomIndex].smezh[randomEdgeIndex].weight;
+					for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
+						if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
+							Mincut += ListSmezh[randomIndex].smezh[i].weight;
+						}
+					}
+					cout << "вершину " << randomVert << " и вершину " << randomEdge << endl;
+					UnionVertices(randomVert, randomEdge, randomEdgeIndex, randomIndex,Mincut);
+				}
+			}
+			V--;
+		}
+		return Mincut;
+	}
 };
 
 int main() {
-    srand(time(NULL));
-    setlocale(LC_ALL, "RU");
-    string filename = "RR.txt";
-    vector<Edge> Edges = ReadFile(filename);
-    int vertices = NumVertices(Edges);
-    Graph graph(vertices);
-    graph.addEdge(Edges);
-    int MinCut = graph.MinCutAlgorithm();
-    cout << "минимальный разрез графа равен " << MinCut;
+	srand(time(NULL));
+	vector<Edge> ListSmezh;
+	ListSmezh.push_back(Edge(0, { Smezh(1, 10), Smezh(2, 20) ,Smezh(3,30)}));
+	ListSmezh.push_back(Edge(1, {Smezh(3,40) }));
+	ListSmezh.push_back(Edge(2, { Smezh(3,50) }));
+	Graph graph(4);
+	graph.addEdge(ListSmezh);
+	int Mincut=graph.MinCut();
+	cout <<"минимальный разрез графа: "<< Mincut;
 }
 ```
 # Результат
-![image](https://github.com/iis-32170x/RPIIS/assets/148863144/5964dead-3100-4723-8ddd-bb11c0840bf4)
+![image](https://github.com/iis-32170x/RPIIS/assets/148863144/150e757d-1a30-45d1-987e-8598893c4281)
+
