@@ -98,10 +98,10 @@ int componenti(vector<vector<int>>& spisok) {
                 int curr = q.front();
                 q.pop();
 
-                for (int neighbor : spisok[curr]) {
-                    if (!visited[neighbor]) {
-                        q.push(neighbor);
-                        visited[neighbor] = true;
+                for (int sosed : spisok[curr]) {
+                    if (!visited[sosed]) {
+                        q.push(sosed);
+                        visited[sosed] = true;
                     }
                 }
             }
@@ -158,10 +158,10 @@ int main() {
    - `while (!q.empty()) {` : Это начало цикла while, который будет выполняться до тех пор, пока очередь q не станет пустой.
    - `int curr = q.front();
        q.pop();` : Извлекается первый элемент из очереди q и помещается в переменную curr. Затем этот элемент удаляется из очереди с помощью q.pop().
-   - `for (int neighbor : adj[curr])` : Это цикл for, который перебирает всех соседей текущей вершины curr из списка смежности adj[curr].
-   - `if (!visited[neighbor]) {
-        q.push(neighbor);
-        visited[neighbor] = true;}` : Если соседняя вершина neighbor еще не была посещена, она добавляется в очередь q и помечается как посещенная в векторе visited.
+   - `for (int sosed : adj[curr])` : Это цикл for, который перебирает всех соседей текущей вершины curr из списка смежности adj[curr].
+   - `if (!visited[sosed]) {
+        q.push(sosed);
+        visited[sosed] = true;}` : Если соседняя вершина sosed еще не была посещена, она добавляется в очередь q и помечается как посещенная в векторе visited.
  - `++count;` : После завершения внутреннего while-цикла, инкрементируется счетчик count, чтобы отразить посещение новой компоненты связности.
  - `return count;` : Функция возвращает общее количество компонент связности в графе.
 
