@@ -55,7 +55,6 @@ public:
 
 int main() {
     setlocale(LC_ALL, "RU");
-    // Пример графа с матрицей инцидентности
     vector<vector<int>> incidenceMatrix = {
         {1, 0, 0, 0, 0},
         {1, 0, 1, 0, 0},
@@ -66,11 +65,11 @@ int main() {
 
     Graph graph(incidenceMatrix);
 
-    // Подсчет количества компонент связности
+    
     int numComponents = graph.countConnectedComponents();
 
-    // Вывод количества компонент связности
-    cout << "Количество компонент связности: " << numComponents << endl;
+    
+    cout << "РљРѕР»-РІРѕ РєРѕРјРїРѕРЅРµРЅС‚ СЃРІСЏР·РЅРѕСЃС‚Рё: " << numComponents << endl;
   
 
     return 0;
