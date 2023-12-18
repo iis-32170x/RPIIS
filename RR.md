@@ -17,8 +17,8 @@
 - ***Неориентированный граф*** - граф, в котором все ребра являются звеньями, то есть порядок двух концов ребра графа не существенен.
   
 <h4 align="center"> Примеры неориентированного графа:</a>
-
-  ![Снимок экрана 2023-12-17 005807](https://github.com/iis-32170x/RPIIS/assets/145003765/d3e82918-d62a-40d6-a5ba-eda1ac44e3f4)<img width="571" alt="нг1" src="https://github.com/iis-32170x/RPIIS/assets/145003765/68b68eaa-4a56-4849-88a1-7c61e7b01764">
+	
+![Снимок экрана 2023-12-18 224934](https://github.com/iis-32170x/RPIIS/assets/145003765/b0bbae84-718c-46fa-acc0-6de7ffe2a77c)
 
 - ***Список ребер*** - способ представления графов, при котором для каждого ребра графа хранится пара номеров вершин, которые оно соединяет.
 
@@ -152,28 +152,35 @@ int main() {
 ```
 ## Пример работы программы
 
-### Пример №1
+<h3 align="center"> Пример №1 </a>
+	
 <h4 align="center"> От пользователя поступает 2 графа (graph_1, graph_3): </a>
 	
 ![13](https://github.com/iis-32170x/RPIIS/assets/145003765/3783525b-544e-4c21-8cbb-6958e8cb88a2)
 
+![ср13](https://github.com/iis-32170x/RPIIS/assets/145003765/481882b9-9171-4283-a12b-2a803204e641)
+
 
 ![1-3](https://github.com/iis-32170x/RPIIS/assets/145003765/e049bc09-1976-423b-9800-140108f471fb)
 
-### Пример №2
+<h3 align="center"> Пример №2 </a>
+	
 <h4 align="center"> От пользователя поступает 2 графа (graph_2, graph_5): </a>
 
 ![25](https://github.com/iis-32170x/RPIIS/assets/145003765/66d95b13-b3a8-4fdb-a3be-c1ca79d70468)
 
+![ср25](https://github.com/iis-32170x/RPIIS/assets/145003765/52ade89c-8784-4f3c-81df-1b6cc160f216)
 
 ![2-5](https://github.com/iis-32170x/RPIIS/assets/145003765/d40d1588-e34c-4460-8894-a2a616da8ed9)
 
-### Пример №2
+<h3 align="center"> Пример №3 </a>
+
 <h4 align="center"> От пользователя поступает 2 графа (graph_4, graph_2): </a>
 
 
 ![42](https://github.com/iis-32170x/RPIIS/assets/145003765/2fd9fa2b-2ff1-430d-9eae-fe48aed02afc)
 
+![ср42](https://github.com/iis-32170x/RPIIS/assets/145003765/1fe5bfc8-f0f5-4741-acad-7fafa3cb8864)
 
  ![4-2](https://github.com/iis-32170x/RPIIS/assets/145003765/9184ae35-3232-465e-85a9-31cf96206b2c)
 
