@@ -196,6 +196,7 @@ int main() {
 ```
 
 ## Разбор кода:
+
 #include <iostream>
 #include <vector>
 
