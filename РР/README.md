@@ -155,20 +155,6 @@ public:
 
         return count;
     }
-
-    vector<vector<int>> findConnectedComponents() {
-        vector<vector<int>> connectedComponents;
-
-        for (int v = 0; v < numVertices; ++v) {
-            if (!visited[v]) {
-                vector<int> component;
-                DFS(v);
-                connectedComponents.push_back(component);
-            }
-        }
-
-        return connectedComponents;
-    }
 };
 
 int main() {
@@ -245,20 +231,6 @@ int countConnectedComponents() {
     return count;
 }
 Функция countConnectedComponents подсчитывает количество компонент связности в графе. Он инициализирует переменную count нулем и затем выполняет обход графа в глубину для каждой вершины, которая еще не была посещена. После каждого такого обхода увеличивает счетчик count на единицу. В итоге метод возвращает общее количество компонент связности в графе.
-vector<vector<int>> findConnectedComponents() {
-    vector<vector<int>> connectedComponents;
-
-    for (int v = 0; v < numVertices; ++v) {
-        if (!visited[v]) {
-            vector<int> component;
-            DFS(v);
-            connectedComponents.push_back(component);
-        }
-    }
-
-    return connectedComponents;
-}
-Функция findConnectedComponents находит все компоненты связности в графе. Он создает вектор connectedComponents для хранения компонент связности. Затем выполняет обход графа в глубину для каждой вершины, которая еще не была посещена. После завершения каждого обхода, он добавляет компоненту связности в вектор connectedComponents. В итоге метод возвращает вектор всех найденных компонент связности.
 int main() {
     setlocale(LC_ALL, "RU");
     // Пример графа с матрицей инцидентности
