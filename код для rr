@@ -1,0 +1,108 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int num = 0;
+    string nameOfFile = "";
+    cout << "Введите номер файла, где хранится граф: ";
+    cin >> num;
+    switch (num)
+    {
+    case 1:
+        nameOfFile = "D:\\расч\\graph.txt";
+        break;
+    case 2:
+        nameOfFile = "D:\\i.txt";
+        break;
+    case 3:
+        nameOfFile = "D:\\grap.txt";
+        break;
+    case 4:
+        nameOfFile = "D:\\k.txt";
+        break;
+    case 5:
+        nameOfFile = "D:\\h.txt";
+        break;
+    default:
+        break;
+    }
+    ifstream fin(nameOfFile);
+    char first = '0';
+    int n = 1;
+    int N = 0;
+    // Подсчет строк и столбцов
+    while (fin.get(first)) {
+        if (first == ' ' && N == 0) n++;
+        if (first == '\n') N++;
+    }
+
+    fin.close();
+
+    // Если последний символ в файле не является символом новой строки, увеличиваем счетчик строк
+    if (first != '\n' && N > 0) {
+        N++;
+    }
+   
+   cout << "Кол-во строк: " << N << endl;
+    cout << "Кол-во столбцов: " << n << endl;
+    
+
+    //Создание матрицы и чтение из файла
+    fin.open(nameOfFile);
+    int** matrix = new int* [N];
+    for (int i = 0; i < N; i++)
+    {
+        matrix[i] = new int[n];
+    }
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            fin >> matrix[i][j];
+        }
+    }
+    cout << '\n';
+
+    bool isGraph = true;
+    //Проверка на кол-во вершин
+    if (N != 18 || n != 27) isGraph = false;
+    for (int i = 0; i < N; i++)
+    {
+        int count = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (matrix[i][j] == 1)
+            {
+                count++;
+                
+            }
+        }
+        if (count != 3) isGraph = false;
+    }
+   
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << matrix[i][j];
+            cout << ' ';
+        }
+        cout << '\n';
+    }
+    cout << '\n';
+    if (isGraph) cout << "Этот граф является графом Паппа";
+    else cout << "Этот граф не является графом Паппа";
+    fin.close();
+
+    for (int i = 0; i < N; i++) 
+    {
+        delete[] matrix[i]; 
+    }
+    delete[] matrix; 
+
+    return 0;
+}
