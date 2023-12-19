@@ -165,18 +165,14 @@ int main() {
 ```
 ### Комментарии к программе 
 ```unordered_map<int, unordered_set<int>> findGraphIntersection(const vector<unordered_map<int, unordered_set<int>>>& graphs) {``` объявление функции findGraphIntersection, которая принимает вектор graphs в качестве аргумента и возвращает unordered_map, представляющую пересечение графов.
-```unordered_map<int, unordered_set<int>> intersectionGraph = graphs[0];``` Инициализация переменной intersectionGraph копией первого графа из вектора graphs.
-```for (const auto& vertexNeighbors : currentGraph) {
-    int vertex = vertexNeighbors.first;``` Цикл, который перебирает все вершины и соседей в текущем графе. В каждой итерации переменная vertex принимает значение вершины.
-### Тестирование 
-Графическое изображение используемых графов: 
-![Alt text](%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80.png)
-Пересечение этих графов будет выглядеть: 
-![Alt text](%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82.png)
-Задание графов списком смежности :
-![Alt text](%D1%81%D1%81.png)
-После выполнения программы в файле output.txt записан ожидаемый результат.
-![Alt text](%D1%82%D0%B5%D1%81%D1%82.png)
+```unordered_map<int, unordered_set<int>> intersectionGraph = graphs[0];```Инициализация переменной intersectionGraph копией первого графа из вектора graphs.
+```for (size_t i = 1; i < graphs.size(); ++i) { const unordered_map<int, unordered_set<int>>& currentGraph = graphs[i]; unordered_map<int, unordered_set<int>> newIntersectionGraph;``` Цикл, который проходит по оставшимся графам вектора graphs. В каждой итерации объявляется переменная currentGraph, содержащая ссылку на текущий граф, и переменная newIntersectionGraph, которая будет хранить новое пересечение графов.
+```for (const auto& vertexNeighbors : currentGraph) { int vertex = vertexNeighbors.first;``` Цикл, который перебирает все вершины и соседей в текущем графе. В каждой итерации переменная vertex принимает значение вершины.
+```if (intersectionGraph.count(vertex) > 0) {const unordered_set<int>& neighbors = vertexNeighbors.second; unordered_set<int> commonNeighbors``` Проверка, содержит ли intersectionGraph вершину vertex. Если содержит, то объявляются переменные neighbors, которая хранит соседей вершины vertex, и commonNeighbors, которая будет хранить общих соседей между vertex и intersectionGraph.
+```if (!commonNeighbors.empty()) { newIntersectionGraph[vertex] = commonNeighbors;}```
+Если commonNeighbors не пустой, то он добавляется в newIntersectionGraph по ключу vertex.
+```for (const auto& vertexNeighbors : graphs[0]) {int vertex = vertexNeighbors.first; bool isCommonVertex = true;}``` Цикл, который перебирает вершины и соседей в первом графе graphs[0]. В каждой итерации переменная vertex принимает значение вершины, а переменная isCommonVertex инициализируется значением true.
+```if (isCommonVertex) {finalIntersectionGraph[vertex] = vertexNeighbors.second;}```Если переменная isCommonVertex осталась true, то вершина vertex и ее соседи (vertexNeighbors.second) добавляются в finalIntersectionGraph.
 
 ---
 ###Вывод 
