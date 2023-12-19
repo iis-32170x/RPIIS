@@ -63,6 +63,11 @@ int okruzhenie(int nomer, int vershini, vector<vector<bool>> GRAPH){
     for (int i = 0; i < vershini; i++) {
         if (GRAPH[(nomer-1)][i]) { k++; }
     }
+    for (int i = 0; i < vershini; i++) {
+        if (GRAPH[(i)][nomer - 1] != GRAPH[(nomer - 1)][i]) {
+            if (GRAPH[(i)][nomer - 1]) { k++; }
+        }
+    }
 
     return k;
 }
@@ -72,20 +77,27 @@ int main()
 {   
     int nomer;
     int smezh;
-	string path;
+	string filepath;
 	cout << "Введите путь к файлу: ";
-	cin >> path;
-    ifstream file(path);
+	cin >> filepath;
+    ifstream file(filepath);
 
     int vershini = podschet_vershin(file);
 
     vector<vector<bool>> GRAPH = create_graph(file, vershini);
    
-    cout << "Номер вершины: "; cin >> nomer;
+    cout << "Окружение вершины "; cin >> nomer;
 
-    smezh = okruzhenie(nomer,vershini,GRAPH);
+    if (nomer <= vershini) {
 
-    cout << "Вершина " << nomer <<" смежна с " << smezh << " вершинами";
+        smezh = okruzhenie(nomer, vershini, GRAPH);
+
+        cout << "Вершина " << nomer << " смежна с " << smezh << " вершиной/вершинами.";
+    }
+
+    else {
+        cout << nomer << " не является вершиной графа";
+    }
 
 	return 0;
 }
@@ -112,7 +124,7 @@ int main()
 -`int vershini = podschet_vershin(file)` записывает количество вершин в переменную.
 -Записываем граф в переменную `GRAPH`
 -Вводим вершину, для которой нужно определить окружение.
--Получаем результат
+-Получаем результат, в зависимости от правильности введенных значений.
 
 ## Тестирование
 Все тесты и наглядное изображение графов можетете посмотреть  [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%87_%D0%92/rasch/TEST)
