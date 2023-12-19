@@ -34,7 +34,8 @@ void dfs2(int node, const vector<vector<int>>& graphT, vector<bool>& visited, se
 }
 
 // Создание вектора векторов, каждый из которых хранит вершины определённого цвета
-vector<vector<int>> createVectorsWithColors(const vector<vector<int>>& graph, const vector<vector<int>>& graphT) {
+vector<vector<int>> createVectorsWithColors(const vector<vector<int>>& graph, const vector<vector<int>>& graphT)
+{
     int n = int(graph.size());
     vector<bool> visited(n, false);
     stack<int> st;
@@ -70,7 +71,8 @@ vector<vector<int>> createVectorsWithColors(const vector<vector<int>>& graph, co
 
 
 
-int main() {
+int main()
+{
     setlocale(LC_ALL, "Russian");
 
     string fileChoice;
@@ -107,11 +109,10 @@ int main() {
         graphT[v-1].push_back(u-1);
     }
 
-    // Создание вектора векторов, каждый из которых хранит вершины определённого цвета
-    // (нулевой вектор хранит все вершины цвета 0, первый - цвета 1 и т.д.)
+    // Создание вектора векторов, каждый из которых хранит вершины определённого "цвета"
     vector<vector<int>> colorGraph = createVectorsWithColors(graph, graphT);
 
-    // Если цвет всего один, то выводится "1" как единственная вершина
+    // Если "цвет" всего один, то выводится "1" как единственная вершина
     // получившегося графа конденсации
     if (colorGraph.size() == 1)
     {
