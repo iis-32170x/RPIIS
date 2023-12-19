@@ -13,43 +13,26 @@ __Неориентированный граф (кратко нг)__ — граф
 __Список смежности__ - один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из «соседей» этой вершины.
 
 __Пересечение графов__ — операция над графами, в результате которой получается граф, множества вершин и рёбер которого являются пересечениями множеств вершин и рёбер исходных графов.
+__Обход в глубину__ заключается в систематическом просмотре вершин графа и прохождении его ветвями. Иными словами, идея поиска в глубину — когда возможные пути по рёбрам, выходящим из вершин, разветвляются, нужно сначала полностью исследовать одну ветку и только потом переходить к другим веткам (если они останутся нерассмотренными).
+
+#### Пример обхода в глубину
+![Alt text](%D0%BE%D0%B1%D1%85%D0%BE%D0%B4_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83-1.gif)
 ***
 ### Алгоритм решения 
-1. Выберите произвольный граф из множества графов и пометьте его вершины как посещенные.
-2. Для каждого оставшегося графа в множестве графов:
-    * Проверьте каждую вершину в текущем графе и проверьте, принадлежит ли она предыдущему посещенному графу.
-    * Если вершина принадлежит каждому графу, добавьте ее в пересечение графов.
-3. По завершении цикла по всем графам, пересечение графов будет содержать вершины, которые присутствуют в каждом из графов.
+Создать пустое множество для отслеживания посещенных вершин.
 
-Приведем пример алгоритма для поиска пересечения графов. Исходные графы:
-![Alt text](example-2.png)
-Представим эти графы в виде списка смежности:
-* Первый граф:
->1 - 2
-1 - 3
-2 - 3
-* Второй граф:
->2 - 3
-3 - 4
-4 - 5
-* Третий граф:
->3 - 4
-4 - 5
-5 - 6
+Для каждого графа в множестве:
 
-1. Выберем первый граф и пометим его вершины как посещенные: 1, 2, 3.
+* Вызвать функцию dfs для каждой вершины графа, передавая текущую вершину и множество посещенных вершин.
 
-2. Применим алгоритм для оставшихся графов:
+В функции dfs:
+* Если вершина уже посещена, вернуться и продолжить обход с другой непосещенной вершины.
+* Поместить вершину в множество посещенных вершин.
+* Обработать вершину, если это необходимо (например, добавьте его в результат или выполните другие операции).
+* Получить соседей вершины из соответствующего графа.
 
-    * Граф 2:
-    Проверим каждую вершину в текущем графе (2, 3, 4, 5) и проверим, принадлежит ли она предыдущему посещенному графу (1, 2, 3).
-В данном случае, вершины 2 и 3 принадлежат предыдущему графу, поэтому они входят в пересечение графов.
-
-    * Граф 3:
-    Проверим каждую вершину в текущем графе (3, 4, 5, 6) и проверим, совпадает ли она с полученным пересечением (2, 3).
-В данном случае, вершина 3 совпадает, поэтому она входит в пересечение графов. Остальные вершины не принадлежат предыдущим графам, поэтому они не входят в пересечение графов.
-
-3. В результате применения алгоритма ко всем графам, пересечение графов будет содержать вершины, которые присутствуют в каждом из графов. В данном случае, пересечение графов будет состоять из вершины 3.
+ Для каждого соседа:
+* Рекурсивно вызвать функцию dfs для соседа и множества посещенных вершин.
 ---
 ### Реализация на C++
 Код, выполняющий поставленную задачу:
@@ -57,148 +40,153 @@ __Пересечение графов__ — операция над графам
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <unordered_map>
 #include <unordered_set>
 #include <vector>
-#include <unordered_map>
 
 using namespace std;
 
-vector<unordered_set<int>> readGraphsFromFile(const string& filename) {
-    ifstream file(filename);
-    vector<unordered_set<int>> graphs;
-    unordered_set<int> currentGraph;
+unordered_map<int, unordered_set<int>> findGraphIntersection(const vector<unordered_map<int, unordered_set<int>>>& graphs) {
+    if (graphs.empty()) {
+        return {};
+    }
 
+    unordered_map<int, unordered_set<int>> intersectionGraph = graphs[0];
+
+    for (size_t i = 1; i < graphs.size(); ++i) {
+        const unordered_map<int, unordered_set<int>>& currentGraph = graphs[i];
+        unordered_map<int, unordered_set<int>> newIntersectionGraph;
+
+        for (const auto& vertexNeighbors : currentGraph) {
+            int vertex = vertexNeighbors.first;
+
+            if (intersectionGraph.count(vertex) > 0) {
+                const unordered_set<int>& neighbors = vertexNeighbors.second;
+                unordered_set<int> commonNeighbors;
+
+                for (int neighbor : neighbors) {
+                    if (intersectionGraph[vertex].count(neighbor) > 0) {
+                        commonNeighbors.insert(neighbor);
+                    }
+                }
+
+                if (!commonNeighbors.empty()) {
+                    newIntersectionGraph[vertex] = commonNeighbors;
+                }
+            }
+        }
+
+        intersectionGraph = std::move(newIntersectionGraph);
+    }
+
+    unordered_map<int, unordered_set<int>> finalIntersectionGraph = intersectionGraph;
+
+    for (const auto& vertexNeighbors : graphs[0]) {
+        int vertex = vertexNeighbors.first;
+        bool isCommonVertex = true;
+
+        for (size_t i = 1; i < graphs.size(); ++i) {
+            const unordered_map<int, unordered_set<int>>& currentGraph = graphs[i];
+            if (currentGraph.count(vertex) == 0) {
+                isCommonVertex = false;
+                break;
+            }
+        }
+
+        if (isCommonVertex && finalIntersectionGraph.count(vertex) == 0) {
+            finalIntersectionGraph[vertex] = {};
+        }
+    }
+
+    return finalIntersectionGraph;
+}
+
+int main() {
+    setlocale(LC_ALL, "RU");
+
+    string inputFileName = "input.txt";
+    string outputFileName = "output.txt";
+
+    ifstream inputFile(inputFileName);
+    if (!inputFile) {
+        cerr << "Не удалось открыть входной файл " << inputFileName << endl;
+        return 1;
+    }
+
+    vector<unordered_map<int, unordered_set<int>>> graphs;
+    unordered_map<int, unordered_set<int>> graph;
     string line;
-    while (getline(file, line)) {
+    while (getline(inputFile, line)) {
         if (line.empty()) {
-            graphs.push_back(currentGraph);
-            currentGraph.clear();
+            if (!graph.empty()) {
+                graphs.push_back(graph);
+                graph.clear();
+            }
         }
         else {
             istringstream iss(line);
             int vertex;
-            while (iss >> vertex) {
-                currentGraph.insert(vertex);
+            iss >> vertex;
+            int neighbor;
+            while (iss >> neighbor) {
+                graph[vertex].insert(neighbor);
             }
         }
     }
+    if (!graph.empty()) {
+        graphs.push_back(graph);
+    }
+    inputFile.close();
 
-    if (!currentGraph.empty()) {
-        graphs.push_back(currentGraph);
+    unordered_map<int, unordered_set<int>> intersectionGraph = findGraphIntersection(graphs);
+
+    ofstream outputFile(outputFileName);
+    if (!outputFile) {
+        cerr << "Не удалось открыть выходной файл: " << outputFileName << endl;
+        return 1;
     }
 
-    return graphs;
-}
+    for (const auto& vertexNeighbors : intersectionGraph) {
+        int vertex = vertexNeighbors.first;
+        const unordered_set<int>& neighbors = vertexNeighbors.second;
 
-
-unordered_set<int> findGraphIntersection(const vector<unordered_set<int>>& graphs) {
-    if (graphs.empty()) {
-        return unordered_set<int>(); 
-    }
-
-    unordered_set<int> intersection = graphs[0];
-
-    for (size_t i = 1; i < graphs.size(); ++i) {
-        const unordered_set<int>& currentGraph = graphs[i];
-        unordered_set<int> newIntersection;
-
-        
-        for (int vertex : currentGraph) {
-            if (intersection.count(vertex) > 0) {
-                newIntersection.insert(vertex);
-            }
+        outputFile << vertex;
+        for (int neighbor : neighbors) {
+            outputFile << " " << neighbor;
         }
-
-       
-        intersection = newIntersection;
+        outputFile << endl;
     }
+    outputFile.close();
 
-    return intersection;
-}
-
-void writeIntersectionToFile(const string& filename, const unordered_set<int>& intersection) {
-    ofstream file(filename);
-    if (!file) {
-        cerr << "Ошибка при открытии файла для записи." << endl;
-        return;
-    }
-
-    for (int vertex : intersection) {
-        file << vertex << endl;
-    }
-
-    file.close();
-
-    cout << "Пересечение графов записано в файл " << filename << endl;
-}
-
-int main() {
-    string inputFilename = "input.txt"; 
-    string outputFilename = "output.txt"; 
-
-    vector<unordered_set<int>> graphs = readGraphsFromFile(inputFilename); 
-    unordered_set<int> intersection = findGraphIntersection(graphs); 
-    writeIntersectionToFile(outputFilename, intersection);
+    cout << "Пересечение графов записано в файл " << outputFileName << endl;
 
     return 0;
 }
 ```
 ### Комментарии к программе 
-Функция ```readGraphsFromFile(const string& filename)```:
-* ```ifstream file(filename);``` - Открывает файл с именем filename для чтения.
-* ```vector<unordered_set<int>> graphs;``` - Объявляет вектор graphs, который будет содержать все графы из файла.
-* ```unordered_set<int> currentGraph;``` - Объявляет пустой набор currentGraph, который будет использоваться для хранения вершин текущего графа.
-* ```string line;``` - Объявляет строковую переменную line, которая будет использоваться для считывания строк из файла.
-* ```while (getline(file, line))``` - Цикл, который считывает строки из файла поочередно в переменную line до тех пор, пока считывание возможно.
-* ```if (line.empty())``` - Проверяет, является ли текущая строка пустой. Если строка пустая, это означает, что закончился текущий граф и нужно добавить его в вектор graphs.
-* ```graphs.push_back(currentGraph);``` - Добавляет текущий граф в вектор graphs.
-* ```currentGraph.clear();``` - Очищает текущий граф, чтобы подготовить его для следующего графа.
-```else``` - Если текущая строка не пустая, это означает, что она содержит вершины текущего графа.
-* ```istringstream iss(line);``` - Создает поток iss для разбора строки line на отдельные числа.
-* ```int vertex;``` - Объявляет переменную vertex, которая будет использоваться для считывания чисел из строки.
-* ```while (iss >> vertex)``` - Цикл, который считывает числа из потока iss в переменную vertex до тех пор, пока считывание возможно.
-* ```currentGraph.insert(vertex);``` - Добавляет вершину vertex в текущий граф currentGraph.
-* По завершении цикла, если currentGraph не пустой, это означает, что последний граф в файле не был завершен разделителем. В этом случае, он добавляется в вектор graphs.
-* В конце функция возвращает вектор graphs, содержащий все считанные графы из файла.
-
-Функция ```findGraphIntersection(const vector<unordered_set<int>>& graphs)```:
-* ```if (graphs.empty())``` - Проверяет, является ли вектор графов пустым. Если да, то возвращается пустой набор ```unordered_set<int>```, так как пересечение не может быть найдено.
-* ```unordered_set<int> intersection = graphs[0];``` - Инициализирует набор intersection пересечением с первым графом из вектора graphs.
-* ```for (size_t i = 1; i < graphs.size(); ++i)``` - Цикл, который итерируется по остальным графам, начиная со второго графа.
-* ```const unordered_set<int>& currentGraph = graphs[i];``` - Объявляет константную ссылку currentGraph, которая ссылается на текущий граф из вектора graphs.
-* ```unordered_set<int> newIntersection;``` - Объявляет пустой набор newIntersection, который будет использоваться для хранения нового пересечения.
-* ```for (int vertex : currentGraph)``` - Цикл, который итерируется по вершинам текущего графа currentGraph.
-* ```if (intersection.count(vertex) > 0)``` - Проверяет, содержит ли набор intersection вершину vertex.
-* ```newIntersection.insert(vertex);``` - Если вершина vertex содержится в intersection, она добавляется в newIntersection.
-* ```intersection = newIntersection;``` - Обновляет intersection новым пересечением, найденным на текущей итерации цикла.
-* По завершении цикла, функция возвращает набор intersection, который представляет пересечение графов.
-
-Функция ```writeIntersectionToFile(const string& filename, const unordered_set<int>& intersection)```:
-* ```ofstream file(filename);``` - Открывает файл с именем filename для записи.
-* ```if (!file)``` - Проверяет, успешно ли открыт файл. Если нет, выводится сообщение об ошибке и функция завершается.
-* ```for (int vertex : intersection)``` - Цикл, который итерируется по вершинам в наборе intersection.
-* ```file << vertex << endl;``` - Записывает вершину vertex в файл, за которым следует символ новой строки.
-* ```file.close();``` - Закрывает файл после записи.
-* ```cout << "Пересечение графов записано в файл " << filename << endl;``` - Выводит сообщение о том, что пересечение графов было успешно записано в файл.
-
-Функция ```main()```:
-* ```string inputFilename = "input.txt";``` - Объявляет строковую переменную inputFilename и присваивает ей имя файла ввода.
-* ```string outputFilename = "output.txt";``` - Объявляет строковую переменную outputFilename и присваивает ей имя файла вывода.
-* ```vector<unordered_set<int>> graphs = readGraphsFromFile(inputFilename);``` - Объявляет вектор graphs и использует функцию ```readGraphsFromFile``` для чтения графов из файла в этот вектор.
-* ```unordered_set<int> intersection = findGraphIntersection(graphs);```- Находит пересечение графов.
-
+```unordered_map<int, unordered_set<int>> findGraphIntersection(const vector<unordered_map<int, unordered_set<int>>>& graphs) {``` объявление функции findGraphIntersection, которая принимает вектор graphs в качестве аргумента и возвращает unordered_map, представляющую пересечение графов.
+```unordered_map<int, unordered_set<int>> intersectionGraph = graphs[0];``` Инициализация переменной intersectionGraph копией первого графа из вектора graphs.
+```for (const auto& vertexNeighbors : currentGraph) {
+    int vertex = vertexNeighbors.first;``` Цикл, который перебирает все вершины и соседей в текущем графе. В каждой итерации переменная vertex принимает значение вершины.
 ### Тестирование 
-![Alt text](image-1.png)
-После выполнения программы в файле output.txt записан ожидаемый ответ.
+Графическое изображение используемых графов: 
+![Alt text](%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80.png)
+Пересечение этих графов будет выглядеть: 
+![Alt text](%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82.png)
+Задание графов списком смежности :
+![Alt text](%D1%81%D1%81.png)
+После выполнения программы в файле output.txt записан ожидаемый результат.
+![Alt text](%D1%82%D0%B5%D1%81%D1%82.png)
 
 ---
 ###Вывод 
 В результате выполнения расчётной работы приобрела следующие навыки:
 
 * научилась определять графы и их компоненты, как вершины и ребра связаны между собой.
+* изучила обход в глубину.
 * научилась находить пересечение графов.
 * научилась использовать алгоритмы на графах.
-* изучила базовые алгоритмы работы с векторами, файлами в C++.
+* изучила базовые алгоритмы работы с файлами в C++.
 ---
 ### Список литературы
 [1] Оре О. Теория графов. – 2-е изд.. – М.: Наука, 1980. – С. 336.
