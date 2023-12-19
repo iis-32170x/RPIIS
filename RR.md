@@ -43,41 +43,139 @@
 #include <ctime>
 #include <cstdlib>
 #include<numeric>
+#include <fstream>
+
 
 using namespace std;
-struct Smezh {
-	int v, weight;
-	Smezh(int v, int w) : v(v), weight(w) {}
-};
 struct Edge {
 	int u;
-	vector<Smezh> smezh;
-	Edge(int u, const vector<Smezh>& pairs) : u(u),smezh(pairs){}
+	int v;
+	int weight;
 };
+struct Smezh {
+	int v, weight;
+};
+struct Vertex {
+	int u;
+	vector<Smezh> smezh;
+};
+void FileRead(vector<Edge>& Edges, string FileName) {
+	ifstream inputFile(FileName);
+
+	// Проверка, удалось ли открыть файл
+	if (!inputFile.is_open()) {
+		cout << "Unable to open the file.\n";
+	}
+	// Считывание данных из файла и запись в вектор
+	Edge edge;
+	while (inputFile >> edge.u >> edge.v >> edge.weight) {
+		Edges.push_back(edge);
+	}
+
+	// Закрытие файла
+	inputFile.close();
+}
+void Adding(vector<Vertex>& ListSmezh,int vertex, int smezhn,int weight) {
+	bool Find = false;
+	for (int i = 0; i < ListSmezh.size(); i++) {
+		if (smezhn == ListSmezh[i].u) {
+			bool find = false;
+			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+				if (vertex == ListSmezh[i].smezh[j].v && weight == ListSmezh[i].smezh[j].weight) {
+					find = true;
+				}
+			}
+			if (!find) {
+				ListSmezh[i].smezh.push_back({ vertex,weight });
+			}
+			Find = true;
+        }
+	}	 	
+	if (!Find) {
+			Vertex vert;
+			Smezh sm;
+			sm.v = vertex;
+			sm.weight = weight;
+			vert.u = smezhn;
+			vert.smezh.push_back(sm);
+			ListSmezh.push_back(vert);
+			vert.smezh.clear();
+		
+	}
+}
+void AddSmezh(vector<Vertex>& ListSmezh, vector<Edge>& Edges) {
+	setlocale(LC_ALL, "RU");
+	Edge sort;
+	for (int i = 0; i < Edges.size() - 1; i++) {
+		for (int j = i + 1; j < Edges.size(); j++) {
+			if (Edges[i].u > Edges[i + 1].u) {
+				sort = Edges[i];
+				Edges[i] = Edges[j];
+				Edges[j] = sort;
+			}
+		}
+	}
+	int counting = 0;
+	Vertex vertex; // Предполагается, что у вас есть структура Vertex
+	Smezh smezhn ;  // Предполагается, что у вас есть структура Smezh
+	for (int i = 0; i < Edges.size(); i += counting) {
+		counting = 0;
+		vertex.u = Edges[i].u;
+		for (int j = i; j < Edges.size(); j++) {
+			if (Edges[i].u == Edges[j].u) {
+				smezhn.v = Edges[j].v;
+				smezhn.weight = Edges[j].weight;
+				vertex.smezh.push_back(smezhn);
+				counting++;
+			}
+		}
+		ListSmezh.push_back(vertex); 
+		vertex.smezh.clear();
+	}
+	for (int i = 0; i < ListSmezh.size(); i++) {
+		for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+			Adding(ListSmezh, ListSmezh[i].u, ListSmezh[i].smezh[j].v, ListSmezh[i].smezh[j].weight);
+		}
+	}
+}
 class Graph {
 private:
 	int V; // Количество вершин
-	vector<Edge> ListSmezh;
+	vector<Vertex> ListSmezh;
 public:
 	Graph(int vertices) { V = vertices; }
-	void addEdge(vector<Edge> Edges) {
+	void addEdge(vector<Vertex> Edges) {
 		ListSmezh = Edges;
 	}
-	void UnionVertices(int randomVert, int randomEdge, int randomEdgeIndex, int randomIndex,int Mincut) { 
-		setlocale(LC_ALL, "RU");
-		for (int i = 0; i < ListSmezh.size(); i++) {
-			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
-				if (randomEdge == ListSmezh[i].smezh[j].v && randomVert != ListSmezh[i].u) {
-					ListSmezh[i].smezh[j].v = ListSmezh[i].u;
-					ListSmezh[randomIndex].smezh.push_back(ListSmezh[i].smezh[j]);
-					ListSmezh[i].smezh.erase(ListSmezh[i].smezh.begin() + j);
+	void UnionVertices(int randomVert, int randomEdge, int randomEdgeIndex, int randomIndex, int Mincut) {
+		ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + randomEdgeIndex);//удаление ребера
+		if (!ListSmezh[randomIndex].smezh.empty()) {
+			for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
+				if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
+					ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + i);
 				}
 			}
-		}
-		for(int i=0;i<ListSmezh.size();i++){
+		}//удаление ребер
+		for (int i = 0; i < ListSmezh.size(); i++) {
+			if (randomEdge == ListSmezh[i].u) {
+				for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+					if (randomVert == ListSmezh[i].smezh[j].v) {
+						ListSmezh[i].smezh.erase(ListSmezh[i].smezh.begin() + j);
+					}
+				}
+			}
+		}//удаление ребра
+		for (int i = 0; i < ListSmezh.size(); i++) {
 			if (randomEdge == ListSmezh[i].u) {
 				ListSmezh[randomIndex].smezh.insert(ListSmezh[randomIndex].smezh.end(), ListSmezh[i].smezh.begin(), ListSmezh[i].smezh.end());
 				ListSmezh.erase(ListSmezh.begin() + i);
+			}
+		}
+		for (int i = 0; i < ListSmezh.size(); i++) {
+			for (int j = 0; j < ListSmezh[i].smezh.size(); j++) {
+				if (randomEdge == ListSmezh[i].smezh[j].v) {
+					ListSmezh[i].smezh[j].v = randomVert;
+				}
 			}
 		}
 	}
@@ -99,8 +197,8 @@ public:
 			int randomVert = 0;
 			cout << "выбираем случайным образом две вершины например: ";
 			do {
-				 randomIndex = rand() % ListSmezh.size();
-				 randomVert = ListSmezh[randomIndex].u;
+				randomIndex = rand() % ListSmezh.size();
+				randomVert = ListSmezh[randomIndex].u;
 			} while (ListSmezh[randomIndex].smezh.empty());
 			for (int i = 0; i < ListSmezh.size(); i++) {
 				if (randomVert == ListSmezh[i].u) {
@@ -111,17 +209,10 @@ public:
 						if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
 							Mincut += ListSmezh[randomIndex].smezh[i].weight;
 						}
-					}
-					ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + randomEdgeIndex);
-					if (!ListSmezh[randomIndex].smezh.empty()) {
-						for (int i = 0; i < ListSmezh[randomIndex].smezh.size(); i++) {
-							if (randomEdge == ListSmezh[randomIndex].smezh[i].v) {
-								ListSmezh[randomIndex].smezh.erase(ListSmezh[randomIndex].smezh.begin() + i);
-							}
-						}
-					}
+					}//подсчет разреза
+
 					cout << "вершину " << randomVert << " и вершину " << randomEdge << endl;
-					UnionVertices(randomVert, randomEdge, randomEdgeIndex, randomIndex,Mincut);
+					UnionVertices(randomVert, randomEdge, randomEdgeIndex, randomIndex, Mincut);
 					for (int i = 0; i < ListSmezh.size(); i++) {
 						if (ListSmezh[i].smezh.empty()) {
 							ListSmezh.erase(ListSmezh.begin() + i);
@@ -144,18 +235,23 @@ public:
 };
 
 int main() {
+	setlocale(LC_ALL, "RU");
 	srand(time(NULL));
-	vector<Edge> ListSmezh;
-	ListSmezh.push_back(Edge(0, { Smezh(1, 10), Smezh(2, 20) ,Smezh(3,30)}));
-	ListSmezh.push_back(Edge(1, {Smezh(3,40) }));
-	ListSmezh.push_back(Edge(2, { Smezh(3,50) }));
-	Graph graph(4);
+	string FileName;
+	cout << "введите имя файла из которого требуется считать данные: ";
+	cin >> FileName;
+	vector<Edge> Edges;
+	FileRead(Edges, FileName);
+	vector<Vertex> ListSmezh;
+	AddSmezh(ListSmezh, Edges);
+	Graph graph(ListSmezh.size());
 	graph.addEdge(ListSmezh);
-	int Mincut=graph.MinCut();
-	cout <<"минимальный разрез графа: "<< Mincut;
+	int Mincut = graph.MinCut();
+	cout << "минимальный разрез графа: " << Mincut;
 }
 ```
 # Результат
-![image](https://github.com/iis-32170x/RPIIS/assets/148863144/0464e2f3-e562-409c-8fb4-de0634e851a8)
+![image](https://github.com/iis-32170x/RPIIS/assets/148863144/8f46ad23-8818-4a5a-bb17-f07913e4ef3a)
+
 
 
