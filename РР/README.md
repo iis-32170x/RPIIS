@@ -18,29 +18,13 @@
 - **Матрица инцидентности** - это способ представления графа в виде матрицы. В этой матрице каждая строка соответствует одной вершине графа, а каждый столбец соответствует ребру графа. Элемент матрицы на пересечении строки i и столбца j равен 1, если ребро j либо выходит либо входит в точку i, и 0, в противном случае.
 - ### Алгоритм решения
 
-Чтобы найти минимальное количество рёбер которые необходимо удалить чтобы неориентированный граф стал планарным нам необходимо узнать не является ли этот граф уже планарным.Если он оказался планарным сразу выводим ответ равный нулю.
+Чтобы найти минимальное количество рёбер которые необходимо удалить, чтобы непланарный граф стал планарным нам необходимо узнать не является ли этот граф уже планарным.Если он оказался планарным сразу выводим сообщение о том что граф планарный.
 
-В итоге проверив планарность графа c помощью алгоритма Боера Мурвольда получим минимальное множество рёбер, образующих непланарные подграфы. Переходим к поиску минимального множества рёбер которые необходимо удалить.Будем удалять одно ребро(из этого множества) из графа и каждый раз проверять новый граф на планарность. После того как мы попробовали удалить все рёбра, мы возвращаемся к первоначальному удаленному и если наш граф ни разу не стал планарным то удаляем два. Так продолжаем до тех пор пока не обнаружим то самое минимальное множество рёбер.
+В итоге проверив планарность графа c помощью алгоритма Боера Мурвольда, переходим к поиску минимального множества рёбер которые необходимо удалить. Сгенерируем все возможные наборы из 1 ребра. Будем по очереди удалять эти рёбра из графа и каждый раз проверять новый граф на планарность. После того как мы попробовали удалить все рёбра, мы генерируем все возможные комбинации из 2 ребер. Будем по очереди удалять набор этих рёбер из графа и каждый раз проверять новый граф на планарность. Так продолжаем до тех пор пока не обнаружим то самое минимальное множество рёбер.
 
 
 Вот пример псевдокода:
 ~~~c++
-1.Читаем матрицу инцидентности из файла
-2.Проверяем граф на планарность
-3.Записываем множество рёбер, которые образую подграфы Куратовского
-4.Поиск минимального количества рёбер
-{.
-Будем удалять одно ребро(из того множества) из графа и каждый раз проверять новый граф на планарность.
-После того как мы попробовали удалить все рёбра
-мы возвращаемся к первоначальному удалённому
-если наш граф ни разу не стал планарным
-то удаляем два .
-Так продолжаем до тех пор пока не обнаружим то самое минимальное количество вершин.
-}
-5.Вывод на консоль минимального кмножества наших рёбер.
-~~~
-### Реализация алгоритма
-```C++
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -129,7 +113,7 @@ int main(int argc, char** argv) {
     }
 
     graph g(num_rows);
-    
+
     for (int ed = 0; ed < num_col; ed++) {
         for (int v_beg = 0; v_beg < num_rows - 1; v_beg++) {
             for (int v_end = v_beg + 1; v_end < num_rows; v_end++) {
@@ -137,7 +121,7 @@ int main(int argc, char** argv) {
             }
         }
     }
-        
+
     // Initialize the interior edge index
     property_map<graph, edge_index_t>::type e_index = get(edge_index, g);
     graph_traits<graph>::edges_size_type edge_count = 0;
@@ -145,69 +129,41 @@ int main(int argc, char** argv) {
     for (boost::tie(ei, ei_end) = edges(g); ei != ei_end; ++ei)
         put(e_index, *ei, edge_count++);
 
-    // Test for planarity. We just want to 
-    // compute the kuratowski subgraph as a side-effect
-    typedef std::vector<graph_traits<graph>::edge_descriptor> kuratowski_edges_t;
-    kuratowski_edges_t kuratowski_edges;
-    if (boyer_myrvold_planarity_test(boyer_myrvold_params::graph = g,
-        boyer_myrvold_params::kuratowski_subgraph =
-        std::back_inserter(kuratowski_edges)
-    ))
+    if (boyer_myrvold_planarity_test(g))
         std::cout << "Input graph is planar" << std::endl;
     else {
         std::cout << "Input graph is not planar" << std::endl;
 
         std::cout << "Edges in the Kuratowski subgraph: ";
-        kuratowski_edges_t::iterator ki, ki_end;
-        ki_end = kuratowski_edges.end();
 
-        int num_columns = 0;
-        for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
-            std::cout << *ki << " ";
-            num_columns++;
-        }
         std::cout << std::endl;
 
-        std::vector<std::vector<int>> matrix(num_rows, std::vector<int>(num_columns, 0));
 
-        int i = 0;
-        for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
-            // Получение дескриптора ребра
-            graph_traits<graph>::edge_descriptor edge = *ki;
-            matrix[source(edge, g)][i] = 1;
-            matrix[target(edge, g)][i] = 1;
-            i++;
-        }
-        for (std::size_t j = 0; j < matrix.size(); j++) {
-            for (std::size_t i = 0; i < num_columns; i++) {
-                std::cout << matrix[j][i] << " ";
-            }
-            std::cout << std::endl;
-        }
 
         std::vector<std::vector<std::vector<int>>> combinations;
         std::vector<std::vector<int>> currentCombination;
-        bool ya_shas_trusy_snimu_nahuy = false;
+        bool ya = false;
+        std::cout << InputMatrix[0].size() << "  ";
 
-        for (int x = 1; x < matrix[0].size(); x++)
+        for (int x = 1; x < InputMatrix[0].size(); x++)
         {
-            generateEdgeCombinations(matrix, combinations, currentCombination, x);
+            std::cout << x << "  " << std::endl;
+            generateEdgeCombinations(InputMatrix, combinations, currentCombination, x);
             // Вывод всех комбинаций ребер в виде матрицы инцидентности
             for (std::size_t i = 0; i < combinations.size(); ++i) {
                 graph g_t(g);
                 const std::vector<std::vector<int>>& combination = combinations[i];
-                for (std::size_t j = 0; j < combination.size(); ++j) {
-                    
-                    // Вывод ребра текущей комбинации
-                    for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
-                        // Получение дескриптора ребра
-                        graph_traits<graph>::edge_descriptor edge = *ki;
-                        if (combination[j][source(edge, g)] == 1 and combination[j][target(edge, g)])
-                        {
-                            remove_edge(source(edge, g_t), target(edge, g_t), g_t);
+                for (std::size_t ed = 0; ed < combination[0].size(); ++ed) {
+                    for (int beg = 0; beg < combination.size() - 1; beg++) {
+                        if (combination[beg][ed] == 1) {
+                            for (int end = beg + 1; end < combination.size(); end++) {
+                                if (combination[end][ed] == 1) {
+                                    remove_edge(beg, end, g_t);
+                                }
+                            }
+
                         }
                     }
-
                 }
                 if (boyer_myrvold_planarity_test(g_t)) {
                     std::cout << "Minimal graph found" << std::endl;
@@ -217,23 +173,21 @@ int main(int argc, char** argv) {
                         }
                         std::cout << std::endl;
                     }
-                    ya_shas_trusy_snimu_nahuy = true;
+                    ya = true;
                     break;
                 }
 
             }
-            if (ya_shas_trusy_snimu_nahuy) 
+            if (ya)
                 break;
-            std::cout << x << " " << matrix[0].size() << " ";
         }
-        if (ya_shas_trusy_snimu_nahuy) std::cout << "sdkfbks";
-        
-        
     }
     return 0;
 }
+
 ```
-## Вывод
+
+### Вывод
 
 В результате выполнения данной работы были получены следующие практические навыки:
 - изучены основы теории графов
