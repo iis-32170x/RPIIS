@@ -129,41 +129,72 @@ int main(int argc, char** argv) {
     for (boost::tie(ei, ei_end) = edges(g); ei != ei_end; ++ei)
         put(e_index, *ei, edge_count++);
 
-    if (boyer_myrvold_planarity_test(g))
+    // Test for planarity. We just want to 
+    // compute the kuratowski subgraph as a side-effect
+    typedef std::vector<graph_traits<graph>::edge_descriptor> kuratowski_edges_t;
+    kuratowski_edges_t kuratowski_edges;
+    if (boyer_myrvold_planarity_test(boyer_myrvold_params::graph = g,
+        boyer_myrvold_params::kuratowski_subgraph =
+        std::back_inserter(kuratowski_edges)
+    ))
         std::cout << "Input graph is planar" << std::endl;
     else {
         std::cout << "Input graph is not planar" << std::endl;
 
+        std::cout << "Edges in the Kuratowski subgraph: ";
+        kuratowski_edges_t::iterator ki, ki_end;
+        ki_end = kuratowski_edges.end();
+
+        int num_columns = 0;
+        for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
+            std::cout << *ki << " ";
+            num_columns++;
+        }
         std::cout << std::endl;
 
+        std::vector<std::vector<int>> matrix(num_rows, std::vector<int>(num_columns, 0));
 
+        int i = 0;
+        for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
+            // Получение дескриптора ребра
+            graph_traits<graph>::edge_descriptor edge = *ki;
+            matrix[source(edge, g)][i] = 1;
+            matrix[target(edge, g)][i] = 1;
+            i++;
+        }
+        for (std::size_t j = 0; j < matrix.size(); j++) {
+            for (std::size_t i = 0; i < num_columns; i++) {
+                std::cout << matrix[j][i] << " ";
+            }
+            std::cout << std::endl;
+        }
 
         std::vector<std::vector<std::vector<int>>> combinations;
         std::vector<std::vector<int>> currentCombination;
         bool ya = false;
 
-        for (int x = 1; x < InputMatrix[0].size(); x++)
+        for (int x = 1; x < matrix[0].size(); x++)
         {
-            std::cout << "Number of edges: " << x << "  " << std::endl;
-            generateEdgeCombinations(InputMatrix, combinations, currentCombination, x);
+            generateEdgeCombinations(matrix, combinations, currentCombination, x);
             // Вывод всех комбинаций ребер в виде матрицы инцидентности
             for (std::size_t i = 0; i < combinations.size(); ++i) {
                 graph g_t(g);
                 const std::vector<std::vector<int>>& combination = combinations[i];
-                for (std::size_t ed = 0; ed < combination[0].size(); ++ed) {
-                    for (int beg = 0; beg < combination.size() - 1; beg++) {
-                        if (combination[beg][ed] == 1) {
-                            for (int end = beg + 1; end < combination.size(); end++) {
-                                if (combination[end][ed] == 1) {
-                                    remove_edge(beg, end, g_t);
-                                }
-                            }
+                for (std::size_t j = 0; j < combination.size(); ++j) {
 
+                    // Вывод ребра текущей комбинации
+                    for (ki = kuratowski_edges.begin(); ki != ki_end; ++ki) {
+                        // Получение дескриптора ребра
+                        graph_traits<graph>::edge_descriptor edge = *ki;
+                        if (combination[j][source(edge, g)] == 1 and combination[j][target(edge, g)])
+                        {
+                            remove_edge(source(edge, g_t), target(edge, g_t), g_t);
                         }
                     }
+
                 }
                 if (boyer_myrvold_planarity_test(g_t)) {
-                    std::cout << std::endl << "Minimal graph found" << std::endl;
+                    std::cout << "Minimal graph found" << std::endl;
                     for (int i = 0; i < combination[0].size(); i++) {
                         for (int j = 0; j < combination.size(); j++) {
                             std::cout << combination[j][i] << " ";
@@ -178,17 +209,23 @@ int main(int argc, char** argv) {
             if (ya)
                 break;
         }
+
     }
     return 0;
 }
+
 ~~~
 
 
 ### Примеры Работы программы
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144806982/79872ee2-4e92-4e39-9e92-55d3cdd273bf)
-![image](https://github.com/iis-32170x/RPIIS/assets/144806982/ff24d318-0549-4201-868b-48860591ee8d)
+![image](https://github.com/iis-32170x/RPIIS/assets/144806982/dc56c765-fb82-411d-928a-48608205ea16)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144806982/2bb44e2d-c898-4c52-b03d-fdf97454e8b5)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144806982/aa4dd20c-a59d-4ed5-b3c9-29d459ccd66e)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144806982/febae437-eff9-4983-8f37-82aaa1eeb5c2)
 
 
 
