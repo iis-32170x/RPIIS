@@ -33,14 +33,13 @@ void dfs2(int node, const vector<vector<int>>& graphT, vector<bool>& visited, se
     }
 }
 
-// Создание вектора векторов, каждый из которых хранит вершины определённого цвета
+// Создание вектора векторов, каждый из которых хранит вершины определённого "цвета"
 vector<vector<int>> createVectorsWithColors(const vector<vector<int>>& graph, const vector<vector<int>>& graphT)
 {
     int n = int(graph.size());
     vector<bool> visited(n, false);
     stack<int> st;
 
-    // Обход в глубину для топологической сортировки
     for (int i = 0; i < n; i++)
     {
         if (!visited[i])
@@ -92,7 +91,7 @@ int main()
     
     int n; // Количество вершин
     int m; // Количество рёбер
-    int i,j;
+    int i, j;
 
     fin >> n >> m;
 
@@ -120,8 +119,8 @@ int main()
     }
     else
     {
-        // Создание массива, хранящего цвет каждой отдельной вершины графа
-        // (i-тый элемент массива хранит цвет i-той вершины изначального графа)
+        // Создание массива, хранящего "цвет" каждой отдельной вершины графа
+        // (i-тый элемент массива хранит "цвет" i-той вершины изначального графа)
         int* color = new int[n];
         for (i = 0; i < colorGraph.size(); i++)
         {
@@ -140,7 +139,7 @@ int main()
                 string coli = to_string(color[i]+1);
                 string colj = to_string(color[graph[i][j]]+1);
 
-                // Если ребром связаны вершины разного цвета,
+                // Если ребром связаны вершины разного "цвета",
                 // добавить ребро в граф конденсации
                 if (coli != colj)
                 {
