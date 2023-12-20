@@ -24,7 +24,6 @@
 ```C++
 #include <iostream>
 #include <windows.h>
-#include <queue> // очередь
 using namespace std;
 int main()
 {
@@ -34,7 +33,6 @@ int main()
     max=0;
     k  = 7;
     l = k;
-    queue<int> Queue;
     int* counter = new int[k];
     int mas[7][7] = { { 0, 1, 1, 0, 0, 0, 1 }, // матрица смежности
                       { 1, 0, 1, 1, 0, 0, 0 },
