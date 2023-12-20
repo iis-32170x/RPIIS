@@ -167,7 +167,7 @@ int main()
 
 ### Тест 3:
 Графический вид:  
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/eddb4cc7-0b6f-48e3-9a04-f099d4867bee)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/fc072e7a-1830-42c8-85f6-f53107900263)  
 
 Текстовый вид:  
 |   | 1 | 2 | 3 | 4 | 5 |
