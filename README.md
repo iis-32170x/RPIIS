@@ -35,3 +35,5 @@ R + WINDOW
 [![Screenshot-2023-10-10-224030.png](https://i.postimg.cc/ZKTGqXv5/Screenshot-2023-10-10-224030.png)](https://postimg.cc/14jCCCKk)
 
 [![Screenshot-3.png](https://i.postimg.cc/NFw5TQqV/Screenshot-3.png)](https://postimg.cc/Pp2Xnsqz)
+
+Как мы видели по примеру, наш код находит дату файла.
