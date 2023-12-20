@@ -126,7 +126,133 @@ int main()
 -	`fout.close()` : свидетельство окончания вывода данных в файл.
 - `delete[]deg` : очищение памяти после использования динамического массива.
 ## Тестирование
-Все тесты и наглядные изображения графов, участвующих в них, можно посмотреть [здесь](https://github.com/iis-32170x/RPIIS/tree/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D0%BE%D0%B2_%D0%94/PP/%D0%A2%D0%B5%D1%81%D1%82%D1%8B).
+### Изображение графа для первых трёх пунктов
+![1_graph](https://github.com/iis-32170x/RPIIS/assets/147268285/29554fe1-6cd9-4ee4-9023-523c0ad03059)
+1.
+
+   Ввод:
+  
+   3
+
+   1
+
+   2 0
+
+   1 3 0
+
+   1 0
+
+   Вывод:
+
+   The resulting adjacency list: 
+
+   1: 2 
+
+   2: 1 3 
+
+   3: 1 
+
+   Verices with degree 1: 1 3
+  
+2. 
+
+   Ввод:
+
+   The resulting adjacency list:
+   
+   3
+
+   2
+
+   2 0
+
+   1 3 0
+
+   1 0
+
+   Вывод:
+
+   The resulting adjacency list:
+
+   1: 2 
+
+   2: 1 3 
+
+   3: 1 
+
+   Vertices with degree 2: 2
+   
+3. 
+
+   Ввод:
+
+   3
+
+   3
+
+   2 0
+
+   1 3 0
+
+   1 0
+
+   Вывод:
+
+   The resulting adjacency list: 
+
+   1: 2 
+
+   2: 1 3 
+
+   3: 1 
+
+   There are no vertices with degree 3
+
+### Изображение графа для 4 пункта
+![4_graph](https://github.com/iis-32170x/RPIIS/assets/147268285/605be43a-b847-4c37-85c0-1df45d172954)
+4.   
+
+   Ввод:
+
+   3
+
+   1
+
+   0
+
+   1 3 0
+
+   1 0
+
+   Вывод:
+
+   The resulting adjacency list: 
+
+   1: There are no edges coming from the vertex
+
+   2: 1 3 
+
+   3: 1 
+
+   Vertices with degree 1: 3
+
+5.
+
+   Ввод:
+
+   0
+
+   1
+
+   0
+
+   1 3 0
+
+   1 0
+
+   Вывод:
+
+   Graph is empty
 ## Вывод
 В результате выполнения расчётной работы приобрёл следующие навыки:
 
