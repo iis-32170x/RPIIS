@@ -42,7 +42,7 @@ G(xi1, xj2) = [G1(xi1) ´ {xj2}] È [{xi1} ´ G2(xj2)] (´ - операция д
     ![image](RR/RR_photo/Graf_1.png)
   </td>
   <td>
-    <img src="images/graph2.png">
+    <img src="RR/RR_photo/Graf_1.png">
   </td>
 </tr>
 <tr>
