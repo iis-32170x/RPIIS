@@ -7,18 +7,18 @@
 ## Алгоритм:
 
 # 1.Инициализация
-``int bfs(int source, int sink, int n) {
+``` int bfs(int source, int sink, int n) {
     memset(parent, -1, sizeof(parent));
     parent[source] = source;
 
     queue<pair<int, int>> q;
-    q.push({source, INT_MAX});``
+    q.push({source, INT_MAX}); ```
 
 memset(parent, -1, sizeof(parent))- Инициализирует массив parent значениями -1, чтобы отслеживать пути в графе.
 parent[source] = source- Устанавливает источник как своего собственного родителя.
 queue<pair<int, int>> q- Очередь для выполнения поиска в ширину. В каждом элементе очереди хранится текущая вершина и минимальная пропускная способность пути до нее.
   # 2. Поиск увеличивающего пути:
-  `` while (!q.empty()) {
+  ``` while (!q.empty()) {
         int cur = q.front().first;
         int minCapacity = q.front().second;
         q.pop();
@@ -33,12 +33,12 @@ queue<pair<int, int>> q- Очередь для выполнения поиска
                 q.push({next, updatedCapacity});
             }
         }
-    }``
+    } ```
 Внутри цикла выполняется поиск в ширину по графу.
 Проверяется каждая вершина, соединенная с текущей (cur), которая еще не была посещена (parent[next] == -1).
 Если есть ребро (graph[cur][next] > 0), то обновляется массив parent, и если достигнут сток (next == sink), возвращается минимальная пропускная способность пути.
   # 3. Обновление графа:
-  ``int edmondsKarp(int source, int sink, int n) {
+  ``` int edmondsKarp(int source, int sink, int n) {
         int maxFlow = 0;
         int pathFlow;
 
@@ -55,7 +55,7 @@ queue<pair<int, int>> q- Очередь для выполнения поиска
         }
 
         return maxFlow;
-    }``
+    } ```
   Функция edmondsKarp вызывает bfs для поиска увеличивающего пути.
 Если увеличивающий путь найден (pathFlow > 0), обновляется максимальный поток.
 Затем обновляется сам граф, уменьшая пропускные способности на пути и увеличивая обратные ребра.
