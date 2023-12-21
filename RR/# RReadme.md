@@ -42,7 +42,7 @@ G(xi1, xj2) = [G1(xi1) ´ {xj2}] È [{xi1} ´ G2(xj2)] (´ - операция д
     <img src="Graf_1.png">
   </td>
   <td>
-    <img src="RR/RR_photo/Graf_2.png">
+    <img src="Graf_2.png">
   </td>
 </tr>
 <tr>
@@ -104,7 +104,7 @@ G(xi1, xj2) = [G1(xi1) ´ {xj2}] È [{xi1} ´ G2(xj2)] (´ - операция д
 
         Вывод значит можем соединить данные вершины кортежи.Далее проделываем алгоритм с каждой вершиной и получаем результат.
 
-         <img src="RR/RR_photo/result.png">
+         <img src="result.png">
 
 ## Реализация
 ```c++
@@ -257,10 +257,10 @@ for (int i = 0; i < n1 * n2; i++) {
 ```
 ## Тестирование
 
-<img src="RR/RR_photo/test1.png">
-<img src="RR/RR_photo/test1_2.png">
-<img src="RR/RR_photo/test2.png">
-<img src="RR/RR_photo/test2_2.png">
+<img src="test1.png">
+<img src="test1_2.png">
+<img src="test2.png">
+<img src="test2_2.png">
 
 ## Вывод
  
