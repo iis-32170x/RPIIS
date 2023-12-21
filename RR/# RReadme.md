@@ -39,7 +39,7 @@ G(xi1, xj2) = [G1(xi1) ´ {xj2}] È [{xi1} ´ G2(xj2)] (´ - операция д
 <table>
 <tr>
   <td>
-    <img src="RR/Graf_1.png">
+    <img src="Graf_1.png">
   </td>
   <td>
     <img src="RR/RR_photo/Graf_2.png">
