@@ -39,7 +39,7 @@ G(xi1, xj2) = [G1(xi1) ´ {xj2}] È [{xi1} ´ G2(xj2)] (´ - операция д
 <table>
 <tr>
   <td>
-    ![image](RR/RR_photo/Graf_1.png)
+    ![image]([RR/RR_photo/Graf_1.png](https://github.com/iis-32170x/RPIIS/blob/%D0%A8%D0%B0%D1%80%D0%BE%D0%B2_%D0%A4/RR/RR_photo/Graf_1.png))
   </td>
   <td>
     <img src="RR/RR_photo/Graf_1.png">
