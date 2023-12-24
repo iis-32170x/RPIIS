@@ -38,7 +38,7 @@ int main()
     }
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            cout << "Vvedite element " << i + 1 << j + 1 << endl;
+            cout << "Vvedite element matrici smejnosti " << i + 1 << j + 1 << endl;
             cin >> matrix[i][j];
         }
     }
