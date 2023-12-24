@@ -89,6 +89,7 @@ int main()
 7. Выводиться число хорд.
 
 ##Пример выполнения
+
 Графическое представление:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/150240210/6eaddeef-1554-40cd-a46f-6e7f10d1349a)
@@ -104,6 +105,7 @@ int main()
 | 5 | 1     | 1     | 0     | 1     | 0     |
 
 Обработав эту матрицу программа выдает:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/150240210/a5d568fd-2c8a-45f6-b7dd-fb01ff62c200)
 
 ##Вывод
