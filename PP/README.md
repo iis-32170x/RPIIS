@@ -108,5 +108,7 @@ int main()
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/150240210/a5d568fd-2c8a-45f6-b7dd-fb01ff62c200)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/150240210/67c4bcd4-43e4-4735-a99f-3e2c0e75dfe8)
+
 ## Вывод
 Изучил основы теории графов и разроботал код для нахождения числа хорд неориентированного графа.
