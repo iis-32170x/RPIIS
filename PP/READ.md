@@ -68,3 +68,7 @@ int main() {
 
 
 [![Screenshot-2023-12-20-093304.png](https://i.postimg.cc/NjY5gtfv/Screenshot-2023-12-20-093304.png)](https://postimg.cc/BXYqgdKm)
+
+
+И, наконец, наш код показывает, является ли этот граф ориентированным или нет.
+
