@@ -48,7 +48,7 @@
 
 ## Код программы
 
-```
+```C++
 #include <iostream>
 #include <vector>
 #include <cmath>
