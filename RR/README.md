@@ -298,6 +298,139 @@ int main()
     - Берем каждую вершину l, которая связана с i вершиной и создаем новую вершину которая связана с ij: lj
 
 20.`fingraph.close();` : закрываем файл для записи.
+
+``` C++
+#include<iostream>
+#include<vector>
+#include<fstream>
+#include<string>
+using namespace std;
+
+vector<vector<int>> funct(string path, vector<vector<int>> graph)
+{
+
+	ifstream afile;
+	string oneline;
+	string bufferstr;
+	int buffnum;
+	vector <int> buffvect;
+
+
+	afile.open(path);
+
+	if (!afile.is_open())
+	{
+		cout << "ERROR" << endl;
+	}
+	else
+	{
+		cout << "FILE IS OPENED";
+
+		while (getline(afile, oneline))
+		{
+			for (int i = 1; i <= oneline.length(); i++)
+			{
+				if (oneline[i] != ',' && oneline[i] != ' ')
+				{
+					bufferstr = bufferstr + oneline[i];
+				}
+				else {
+					try
+					{
+						buffnum = stoi(bufferstr);
+						buffvect.push_back(buffnum);
+					}
+					catch (invalid_argument)
+					{
+					}
+					bufferstr.clear();
+				}
+			}
+			buffnum = stoi(bufferstr);
+			buffvect.push_back(buffnum);
+
+			graph.push_back(buffvect);
+			buffvect.clear();
+			bufferstr.clear();
+		}
+
+		cout << endl;
+
+		for (int i = 0; i < graph.size(); i++)
+		{
+			cout << i << " ";
+			for (int j = 0; j < graph[i].size(); j++)
+			{
+				cout << graph[i][j] << " ";
+			}
+			cout << endl;
+		}
+	}
+	afile.close();
+
+	cout << endl;
+	oneline.clear();
+
+	return graph;
+}
+
+
+int main()
+{
+	string graphpath1, graphpath2, onestr, strbuf;
+	char swit;
+	ifstream filewgr1, filewgr2;
+	int numbuf = 0;
+
+	vector <vector<int>> graph1;
+	vector <vector<int>> graph2;
+    vector<int> vecbuf;
+
+	string fingrpath = "D:\\rr\\result.txt";
+
+	cout << "1st GRAPH FILENAME PATH (including file; e.g. D:\\rr\\graph1.txt): "; cin >> graphpath1; cout << endl;
+	cout << "2nd GRAPH FILENAME PATH (including file; e.g. D:\\rr\\graph2.txt): "; cin >> graphpath2; cout << endl;
+	cout << "CHANGE FINAL GRAPH FILENAME PATH (including file; by default: D:\\rr\\result.txt)? y - yes, n - no" << endl;
+	cin >> swit;
+	if (swit == 'y')
+	{
+		cout << "CHANGE FINAL GRAPH FILENAME PATH (including file;  e.g. D:\\rr\\result.txt):" << endl;
+		cin >> fingrpath;
+	}
+
+	graph1 = funct(graphpath1, graph1);
+	graph2 = funct(graphpath2, graph2);
+
+
+    ofstream fingraph;
+	fingraph.open(fingrpath);
+
+
+	for (int i = 0; i < graph1.size(); i++)
+	{
+		for (int j = 0; j < graph2.size(); j++)
+		{
+			fingraph << "<" << i << "," << j  << ">" << " ";
+			for (int k = 0; k < graph2[j].size(); k++)
+			{
+				fingraph << "<" << i << "," << graph2[j][k] << ">" << " ";
+			}
+
+			for (int l = 0; l < graph1[i].size(); l++)
+			{
+				fingraph << "<" << graph1[i][l] << "," << j << ">" << " ";
+			}
+			fingraph << endl;
+		}
+
+		fingraph << endl;
+	} 
+
+	fingraph.close();
+}
+```
+
+^^^ Исправленная версия
 ## Тестирование
 ![Graph1](https://github.com/iis-32170x/RPIIS/assets/144227421/9ceee6c9-d269-4010-9233-54cab0983f9a)  
 Graph1  
