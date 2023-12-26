@@ -94,9 +94,16 @@ int main() {
 ```
 
 Попробуем на произвольном графике:
+
+
 <img width="530" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/148941447/d0dbe436-a519-40f6-a48a-4a033ff58c3c">
 
+
+
 <img width="530" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/148941447/f017ceee-fedb-4711-a594-b8a09fb1ddc8">
+
+
+
 
 В Результате этот выполняет проверку неориентированного графа на двудольность в соответствии с условием.
 
