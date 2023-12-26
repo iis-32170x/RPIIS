@@ -50,91 +50,47 @@ bool* connectivity(short int** matrix, bool* proof1, bool* proof2, int v) {
     }
     return proof1;
 }
-int edgeconnectivity(short int** matrix, int v, bool* proof1, bool* proof2, int min, int edg, bool** edges, int level,int skp,bool*proof,int lvl) {
-    if (edg != min) {
-        if (skp==level) {
-            for (int i = 0; i < v - 1; i++) {
-                for (int j = i + 1; j < v; j++) {
-                   
-                        if (matrix[i][j] == 1 ) {
-                            matrix[i][j] = 0;
-                            matrix[j][i] = 0;
-                            proof1 = connectivity(matrix, proof1, proof2, v);
-                            for (int t = 0; t < v; t++) {
-                                if (proof1[t] == false) {
-                                    edg++;
-                                    min = edg;
-                                    apdate(proof1, v, proof2);
-                                    matrix[i][j] = 1;
-                                    matrix[j][i] = 1;
-                                    i = v; j = v; t = v;
-                                    break;
-                                }
-                            }
-                            if (edg != min) {
-                                apdate(proof1, v, proof2);
-                                matrix[i][j] = 1;
-                                matrix[j][i] = 1;
-                            }
-                        }
-                    
-                }
-
-            }
-        }
-        else{
-            skp++;
-        }
-    }
-    if (edg != min) {
-        edg++;
-        again:
-        if (level!=edg-1) {
-            if (edg < min) {
-                for (int i = 0; i < v-1; i++) {
-                    for (int j = i+1; j < v; j++) {
-                        if (matrix[i][j] == 1) {
-                            matrix[i][j] = 0; matrix[j][i] = 0;
-                            min=edgeconnectivity(matrix, v, proof1, proof2, min, edg, edges, level,skp,proof,lvl);
-                            matrix[i][j] = 1; matrix[j][i] = 1;
-                            if (edg == min) {
-                                i = v; j = v;
-                            }
-                        }
+void edgeconnectivity(short int**& matrix, int v, bool* proof1, bool* proof2, int& min, int& edg, int& num,bool& answer) {
+    for (int i = 0; i < v - 1; i++) {
+        for (int j = i + 1; j < v; j++) {
+            if (matrix[i][j] == 1) {
+                matrix[i][j] = 0;
+                matrix[j][i] = 0;
+                proof1 = connectivity(matrix, proof1, proof2, v);
+                for (int t = 0; t < v; t++) {
+                    if (proof1[t] == false) {
+                        min = edg;
+                        answer = true;
+                        apdate(proof1, v, proof2);
+                        matrix[i][j] = 1;
+                        matrix[j][i] = 1;
+                        break;
                     }
                 }
-            }
-            if (proof[lvl-1] == true) {
-                skp--;
-                lvl--;
-            }
-            else {
-                if (edg != min) {
-                    skp = 1;
-                    proof[level] = true;
-                    level++;
-                    lvl = level;
-                    goto again;
+                apdate(proof1, v, proof2);
+                if (num != min) {
+                    edg++;
+                    num++;
+                    edgeconnectivity(matrix, v, proof1, proof2, min, edg, num,answer);
+
                 }
+                matrix[i][j] = 1;
+                matrix[j][i] = 1;
             }
         }
-        else {
-            edg--;
-        }
     }
-    if (min == edg && level!=1) {
-        level--;
-    }
-    return min;
+    edg--;
+    num--;
+    return;
 }
 int main() {
     setlocale(LC_ALL, "Russian");
-    std::ifstream file("5.txt");
+    std::ifstream file("4.txt");
     if (!file.is_open()) {
         std::cout << "Не удалось открыть файл." << std::endl;
         return 1;
     }
-    int v, level = 1, lvl = 1, skp = 1,ways=0,max=0; bool graph=false;
+    int v, skp = 1, ways = 0, max = 0,Min; bool graph = false,answer=false;
     file >> v;
     file.seekg(2, std::ios_base::beg);
     short int** matrix = new short int* [v];
@@ -143,7 +99,6 @@ int main() {
     }
     for (int i = 0; i < v; i++) {
         for (int j = 0; j < v; j++) {
-
             file >> matrix[i][j];
         }
     }
@@ -180,7 +135,7 @@ int main() {
             min = amntedges;
         amntedges = 0;
     }
-    if (ways == 1 && graph==false) {
+    if (ways == 1 && graph == false) {
         min = 0;
         for (int i = 0; i < v; i++) {
             if (matrix[i][0] == 1)
@@ -204,20 +159,13 @@ int main() {
     }
     bool* proof1 = new bool[v];
     bool* proof2 = new bool[v];
-    bool* proof = new bool[min+1];
-    bool** edges = new bool* [v];
-    int edg = 0;
+    bool* proof = new bool[min + 1];
+    int edg = 1, num = 1;
     for (int i = 0; i < v; i++) {
         proof1[i] = false;
         proof2[i] = false;
     }
-    for (int i = 0; i < v; i++) {
-        edges[i] = new bool[v];
-        for (int j = 0; j < v; j++) {
-            edges[i][j] = false;
-        }
-    }
-    for (int i = 0; i < min; i++) {
+    for (int i = 0; i < min + 1; i++) {
         proof[i] = false;
     }
     if (graph == false) {
@@ -241,29 +189,57 @@ int main() {
         std::cout << "Граф несвязный";
         goto skip;
     }
-    if (graph == false && ways ==0) {
+    if (graph == false && ways == 0) {
         std::cout << "Реберная связность:" << min;
         goto skip;
     }
-    if (min == 1 && graph==true) {
+    if (min == 1 && graph == true) {
         std::cout << "Реберная связность:" << min;
         goto skip;
     }
     apdate(proof1, v, proof2);
-   min=edgeconnectivity(matrix, v, proof1, proof2, min, edg, edges, level,skp,proof,lvl);
-   std::cout << "Реберная связность:" << min;
-    skip:
+    for (int i = 1; i <= min; i++) {
+        Min = i;
+        edgeconnectivity(matrix, v, proof1, proof2, Min, edg, num,answer);
+        edg = 1; num = 1;
+        if (answer == true) {
+            min = Min;
+            break;
+        }
+    }
+    std::cout << "Реберная связность:" << min << endl;
+
+skip:
     delete[] proof1;
     delete[] proof2;
     delete[] proof;
-        for (int i = 0; i < v; i++) {
-        delete[]edges[i];
+    for (int i = 0; i < v; i++) {
         delete[]matrix[i];
-        }
+    }
     delete[]matrix;
-    delete[]edges;
 }
 ```
 # Тестовые значения
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/ba641e84-9a16-4d21-a630-f5ffdca701f7)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/bfd656bc-45f1-4784-ab26-ccdb81aca1e2)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/f4e87f4b-e6ca-44bd-a462-e1a112710a11)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/fc3160b2-afe9-454e-a080-520cae2d2831)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/4d7fbbb3-70f0-406a-aa00-64ec250c36be)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/cec6e3c9-3523-4249-ae47-a0b0e3474ee9)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/4c854f0f-4750-48cf-a8eb-63aa1f1f34b7)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/3af24be8-2ea6-4e21-a202-24a2826aab5c)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/85d02136-297d-444f-ad9e-49aa56169961)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/cd81ddb5-8a14-486d-a3d7-82707ee657e4)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/a12aa29b-6d88-4e7f-88a0-78a85193fdcc)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/3e91a0be-cf38-4a93-9a51-5d89fd83c9f9)
+
+
+
+
+
+
+
+
+
 
 
