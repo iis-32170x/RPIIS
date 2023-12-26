@@ -42,6 +42,12 @@
 
 7.Вывести является ли исходный граф графу Паппа. 
 
+# Тесты:
+<img width="899" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/144939284/81a8c9d7-1dde-4836-85b2-bb2decb24d5c">
+
+<img width="883" alt="Снимок экрана 2023-12-26 153436" src="https://github.com/iis-32170x/RPIIS/assets/144939284/11049757-5cd9-4876-8759-ce6318747f8b">
+
+
 
 
 
