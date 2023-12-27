@@ -65,4 +65,4 @@ cout << "Количество отдельных вершин: " << NumberOf << 
 <h3 align="left"> №1 изучены основы теории графов</h3>
 <h3 align="left"> №2 изучены способы представления графов</h3>
 <h3 align="left"> №3 изучены базовые алгоритмы для работы с графами</h3>
- 
+ <img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
