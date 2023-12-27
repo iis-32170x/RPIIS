@@ -232,6 +232,16 @@ skip:
 ![image](https://github.com/iis-32170x/RPIIS/assets/144935038/cd81ddb5-8a14-486d-a3d7-82707ee657e4)
 ![image](https://github.com/iis-32170x/RPIIS/assets/144935038/a12aa29b-6d88-4e7f-88a0-78a85193fdcc)
 ![image](https://github.com/iis-32170x/RPIIS/assets/144935038/3e91a0be-cf38-4a93-9a51-5d89fd83c9f9)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/4307e5c8-d815-46cc-9740-7d68419e1fdb)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/e04b908f-acbe-4075-9736-0f306e0d07dd)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/dce2223c-5df5-4a6f-90ee-cd10caf7014a)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/be65c995-fc24-4ad7-86c6-476e6924c141)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/43abd75c-9a94-471b-a88e-81098a007017)
+![image](https://github.com/iis-32170x/RPIIS/assets/144935038/9b270d42-1ce8-4984-94a2-73b1c847113b)
+
+
+
+
 
 
 
