@@ -48,7 +48,8 @@
 
 [2](https://github.com/iis-32170x/RPIIS/blob/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C/%D0%A0%D0%A0/%D0%A2%D0%B5%D1%81%D1%822.png)
 
-[3]()
+[3](https://github.com/iis-32170x/RPIIS/blob/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C/%D0%A0%D0%A0/%D0%A2%D0%B5%D1%81%D1%823.png)
+
 ## Вывод 
 
 В ходе выполнения расчётной работы, я:
