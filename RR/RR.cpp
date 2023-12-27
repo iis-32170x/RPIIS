@@ -81,7 +81,7 @@ void readGraphFromFile(Graph& graph, const string& filename) {
     graph.UnionGraphs(tempGraph);
     file.close();
 }
-Graph inputGraphFromUser() {
+Graph inputGraph() {
     int size;
     cout << "Введите размер матрицы смежности: ";
     cin >> size;
@@ -105,7 +105,7 @@ int main() {
     if (vybor == 'y' || vybor == 'Y') {
         // Ввод и сохранение первого графа
         cout << "Введите данные для первого графа." << endl;
-        Graph g1 = inputGraphFromUser();
+        Graph g1 = inputGraph();
         cout << "Хотите сохранить первый граф в файл? (y/n): ";
         cin >> vybor;
         if (vybor == 'y' || vybor == 'Y') {
@@ -119,7 +119,7 @@ int main() {
         }
         // Ввод и сохранение второго графа
         cout << "Введите данные для второго графа." << endl;
-        Graph g2 = inputGraphFromUser();
+        Graph g2 = inputGraph();
         cout << "Хотите сохранить второй граф в файл? (y/n): ";
         cin >> vybor;
         if (vybor == 'y' || vybor == 'Y') {
