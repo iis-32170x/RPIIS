@@ -19,3 +19,70 @@
  <h3 align="left">№2 Теперь нам нужно узнать между какими точками имеется связь (в нашем случае олна точка может иметь от 1 до 3 связей, или же вообще не иметь)</h3>
  <h3 align="left">№3 Конечная цель-узнать сколько отдельных "кластеров" вершин (связанных подграфов) содержит граф. (в нашем случае 2)</h3>
 <h2 align="left">###Реализация</h2>
+#include <iostream>
+
+using namespace std;
+
+void FindConnectedDots(bool* matrix, bool* canBeUsedAsBase, int index, int dotCount)
+{
+    
+    for (int i = index + 1; i < dotCount; i++)
+    {
+        if (matrix[index * dotCount + i] == true)  // Используем одномерный массив для представления двумерной матрицы
+        {
+            canBeUsedAsBase[i] = false;
+            FindConnectedDots(matrix, canBeUsedAsBase, i, dotCount);
+        }
+    }
+}
+
+int main() {
+    setlocale(LC_ALL,"RU");
+    cout << "Введите количество точек" << endl;
+    int dotCount;
+    cin >> dotCount;
+    bool* matrix;
+    bool* canBeUsedAsBase;
+    canBeUsedAsBase = new bool[dotCount];
+    matrix = new bool[dotCount * dotCount];  // Используем одномерный массив для представления двумерной матрицы
+    for (int i = 0; i < dotCount - 1; i++)
+    {
+        for (int j = i + 1; j < dotCount; j++)
+        {
+            int temp;
+            cout << "Связаны ли " << i + 1 << " and " << j + 1 << "? (1 - да, 0 - нет): ";
+            cin >> temp;
+            if (temp == 1)
+            {
+                matrix[i * dotCount + j] = true;  // Преобразуем индексы двумерной матрицы в одномерный индекс
+                matrix[j * dotCount + i] = true;
+            }
+            else
+            {
+                matrix[i * dotCount + j] = false;
+                matrix[j * dotCount + i] = false;
+            }
+        }
+    }
+
+    for (int i = 0; i < dotCount; i++)
+    {
+        canBeUsedAsBase[i] = true;
+    }
+
+    int NumberOf = 0;
+
+    for (int i = 0; i < dotCount; i++)
+    {
+        if (canBeUsedAsBase[i] == false) continue;
+        FindConnectedDots(matrix, canBeUsedAsBase, i, dotCount);
+        NumberOf++;
+    }
+
+    cout << "Количество отдельных вершин: " << NumberOf << endl;
+
+    delete[] matrix;
+    delete[] canBeUsedAsBase;
+
+    return 0;
+}
