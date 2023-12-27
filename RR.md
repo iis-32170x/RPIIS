@@ -19,20 +19,17 @@
 2. Находим эксцентриситеты всех вершин.
 3. Выводим результат.
 ### Пример списка смежности:
-
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A8%D0%B0%D1%80%D0%BA%D0%BE_%D0%A1/prm.jpg)
 ### Тест 1:
-![IMG_0693.jpg](..%2F..%2F..%2F..%2FDownloads%2FIMG_0693.jpg) 
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A8%D0%B0%D1%80%D0%BA%D0%BE_%D0%A1/pr1.jpg)\
 Радиус: 2
 
 ### Тест 2:
-
-![IMG_0694.jpg](..%2F..%2F..%2F..%2FDownloads%2FIMG_0694.jpg)
-\
-Радиус:
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A8%D0%B0%D1%80%D0%BA%D0%BE_%D0%A1/pr2.png)\
+Радиус: 1
 ### Тест 3:
-![IMG_0695 2.jpg](..%2F..%2F..%2F..%2FDownloads%2FIMG_0695%202.jpg)
-Радиус:
-
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A8%D0%B0%D1%80%D0%BA%D0%BE_%D0%A1/pr3.png)\
+Радиус: 2
 
 
 ### Вывод:
