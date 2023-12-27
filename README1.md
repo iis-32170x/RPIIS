@@ -27,4 +27,35 @@
  <h3 align="left">№2 Нахождение связей между точками</h3>
  <h3 align="left">№3 Подсчет отдельных вершин графа</h3>
  <h3 align="left">№4 Вывод результатов.</h3>
-Рассмотрим 1-ую часть кода:
+<h2 align="left">Рассмотрим 1 часть кода:</h2>
+cout << "Введите количество точек" << endl;
+int dotCount;
+cin >> dotCount;
+Этот код выводит сообщение на экран, запрашивающее количество точек, и затем считывает введенное значение с помощью cin в переменную dotCount.
+<h2 align="left">Рассмотрим 2 часть кода:</h2>
+void FindConnectedDots(bool* matrix, bool* canBeUsedAsBase, int index, int dotCount)
+{
+    
+    for (int i = index + 1; i < dotCount; i++)
+    {
+        if (matrix[index * dotCount + i] == true)  // Используем одномерный массив для представления двумерной матрицы
+        {
+            canBeUsedAsBase[i] = false;
+            FindConnectedDots(matrix, canBeUsedAsBase, i, dotCount);
+        }
+    }
+}
+<h3 align="left">Эта функция используется для поиска связанных точек в графе. Она принимает указатели на матрицу смежности matrix, массив canBeUsedAsBase, индекс index текущей вершины и общее количество вершин dotCount. Она рекурсивно исследует смежные вершины и изменяет массив canBeUsedAsBase, указывая, может ли вершина быть использована в качестве базовой для новой компоненты связности.</h3>
+<h2 align="left">Рассмотрим 3 часть кода:</h2>
+int NumberOf = 0;
+
+for (int i = 0; i < dotCount; i++)
+{
+    if (canBeUsedAsBase[i] == false) continue;
+    FindConnectedDots(matrix, canBeUsedAsBase, i, dotCount);
+    NumberOf++;
+}
+Этот код находит компоненты связности в графе, проходя по каждой вершине и вызывая функцию FindConnectedDots для каждой вершины, которая еще не была использована в качестве базовой для другой компоненты связности. Каждый раз, когда вызывается FindConnectedDots, увеличивается счетчик NumberOf, представляющий количество найденных компонент связности.
+<h2 align="left">Рассмотрим 4 часть кода:</h2>
+cout << "Количество отдельных вершин: " << NumberOf << endl;
+Этот код выводит на экран количество найденных отдельных вершин.
