@@ -71,10 +71,6 @@ int main()
         b++;
         g++;
     }
-    for (int i = 0; i < n; i++) {
-        cout << Ver[i];
-    }
-
     cout << "Chislo hord: " << a / 2;
     return 0;
 }
