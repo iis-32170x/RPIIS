@@ -40,15 +40,15 @@
 
 Пример графа 1:
 
-<image src="graph1.jpg" alt="graph1">
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%92/images/graph1.jpg)
 
 Пример графа 2:
 
-<image src="graph2.jpg" alt="graph2">
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%92/images/graph2.jpg)
 
 Граф на выходе в результате объединения:
 
-<image src="unitedGraph.jpg" alt="unGraph">
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%92/images/unitedGraph.jpg)
 
 
 ### Вывод
