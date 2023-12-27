@@ -159,14 +159,10 @@ int main() {
     }
     bool* proof1 = new bool[v];
     bool* proof2 = new bool[v];
-    bool* proof = new bool[min + 1];
     int edg = 1, num = 1;
     for (int i = 0; i < v; i++) {
         proof1[i] = false;
         proof2[i] = false;
-    }
-    for (int i = 0; i < min + 1; i++) {
-        proof[i] = false;
     }
     if (graph == false) {
         for (int i = 0; i < v; i++) {
