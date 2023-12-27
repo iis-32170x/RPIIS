@@ -208,7 +208,6 @@ int main() {
 skip:
     delete[] proof1;
     delete[] proof2;
-    delete[] proof;
     for (int i = 0; i < v; i++) {
         delete[]matrix[i];
     }
