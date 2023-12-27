@@ -1,39 +1,32 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <fstream>
 using namespace std;
-
 class Graph {
 private:
     vector<vector<int>> Matrix_smezh;
-
 public:
-
     Graph(int razmer = 0) {
         Matrix_smezh.resize(razmer, vector<int>(razmer, 0));
     }
-
-    void addEdge(int v1, int v2, int value) {
+    void addRebro(int v1, int v2, int ves) {
         if (v1 < Matrix_smezh.size() && v2 < Matrix_smezh.size()) {
-            Matrix_smezh[v1][v2] = value;
-            Matrix_smezh[v2][v1] = value; // Для неориентированного графа
+            Matrix_smezh[v1][v2] = ves;
+            Matrix_smezh[v2][v1] = ves; // Для неориентированного графа
         }
     }
-
-    void UnionGraphs(const Graph& other) {
-        int maxSize = max(Matrix_smezh.size(), other.Matrix_smezh.size());
+    void UnionGraphs(const Graph& drugoy) {
+        int maxSize = max(Matrix_smezh.size(), drugoy.Matrix_smezh.size());
         resizeMatrix(maxSize);
-
-        for (int i = 0; i < other.Matrix_smezh.size(); ++i) {
-            for (int j = 0; j < other.Matrix_smezh[i].size(); ++j) {
-                if (other.Matrix_smezh[i][j]) {
-                    Matrix_smezh[i][j] = other.Matrix_smezh[i][j];
+        for (int i = 0; i < drugoy.Matrix_smezh.size(); ++i) {
+            for (int j = 0; j < drugoy.Matrix_smezh[i].size(); ++j) {
+                if (drugoy.Matrix_smezh[i][j]) {
+                    Matrix_smezh[i][j] = drugoy.Matrix_smezh[i][j];
                 }
             }
         }
     }
-
-    void printGraph() const {
+    void displayGraph() const {
         cout << "Матрица смежности:" << endl;
         for (const auto& row : Matrix_smezh) {
             for (int val : row) {
@@ -42,29 +35,25 @@ public:
             cout << endl;
         }
     }
-
     void resizeMatrix(int newSize) {
         Matrix_smezh.resize(newSize);
         for (auto& row : Matrix_smezh) {
             row.resize(newSize, 0);
         }
     }
-
-    const vector<vector<int>>& getAdjacencyMatrix() const {
+    const vector<vector<int>>& getMatrix_smezh() const {
         return Matrix_smezh;
     }
 };
-
 void writeGraphToFile(const Graph& graph, const string& filename) {
     ofstream file(filename);
     if (!file.is_open()) {
         cout << "Не удалось открыть файл для записи: " << filename << endl;
         return;
     }
-
-    const auto& adjacencyMatrix = graph.getAdjacencyMatrix();
-    file << adjacencyMatrix.size() << endl;
-    for (const auto& row : adjacencyMatrix) {
+    const auto& Matrix_smezh = graph.getMatrix_smezh();
+    file << Matrix_smezh.size() << endl;
+    for (const auto& row : Matrix_smezh) {
         for (int val : row) {
             file << val << " ";
         }
@@ -73,61 +62,53 @@ void writeGraphToFile(const Graph& graph, const string& filename) {
     file.close();
     cout << "Граф записан в файл " << filename << endl;
 }
-
 void readGraphFromFile(Graph& graph, const string& filename) {
     ifstream file(filename);
     if (!file.is_open()) {
         cout << "Не удалось открыть файл: " << filename << endl;
         return;
     }
-
     int size;
     file >> size;
-
     Graph tempGraph(size);
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
             int edge;
             file >> edge;
-            tempGraph.addEdge(i, j, edge);
+            tempGraph.addRebro(i, j, edge);
         }
     }
-
     graph.UnionGraphs(tempGraph);
     file.close();
 }
-
 Graph inputGraphFromUser() {
     int size;
     cout << "Введите размер матрицы смежности: ";
     cin >> size;
-
     Graph graph(size);
     cout << "Введите матрицу смежности (по " << size << " чисел в каждой строке):" << endl;
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
-            int edge;
-            cin >> edge;
-            graph.addEdge(i, j, edge); //
+            int rebro;
+            cin >> rebro;
+            graph.addRebro(i, j, rebro);
         }
     }
     return graph;
 }
-
 int main() {
     Graph unionGraph;
-    char choice;
+    char vybor;
     setlocale(0, "");
     cout << "Хотите ввести новые графы? (y/n): ";
-    cin >> choice;
-    if (choice == 'y' || choice == 'Y') {
+    cin >> vybor;
+    if (vybor == 'y' || vybor == 'Y') {
         // Ввод и сохранение первого графа
         cout << "Введите данные для первого графа." << endl;
         Graph g1 = inputGraphFromUser();
-
         cout << "Хотите сохранить первый граф в файл? (y/n): ";
-        cin >> choice;
-        if (choice == 'y' || choice == 'Y') {
+        cin >> vybor;
+        if (vybor == 'y' || vybor == 'Y') {
             string filename;
             cout << "Введите имя файла для первого графа без расширения: ";
             cin >> filename;
@@ -136,14 +117,12 @@ int main() {
             }
             writeGraphToFile(g1, filename);
         }
-
         // Ввод и сохранение второго графа
         cout << "Введите данные для второго графа." << endl;
         Graph g2 = inputGraphFromUser();
-
         cout << "Хотите сохранить второй граф в файл? (y/n): ";
-        cin >> choice;
-        if (choice == 'y' || choice == 'Y') {
+        cin >> vybor;
+        if (vybor == 'y' || vybor == 'Y') {
             string filename;
             cout << "Введите имя файла для второго графа без расширения: ";
             cin >> filename;
@@ -153,7 +132,6 @@ int main() {
             }
             writeGraphToFile(g2, filename);
         }
-
         // Объединение введенных графов
         unionGraph.UnionGraphs(g1);
         unionGraph.UnionGraphs(g2);
@@ -163,9 +141,7 @@ int main() {
         readGraphFromFile(unionGraph, "graph1.txt");
         readGraphFromFile(unionGraph, "graph2.txt");
     }
-
     cout << "Объединенный граф:" << endl;
-    unionGraph.printGraph();
-
+    unionGraph. displayGraph();
     return 0;
 }
