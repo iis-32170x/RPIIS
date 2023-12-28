@@ -47,7 +47,6 @@
 #include<tuple>
 #include<vector>
 #include<fstream>
-#include<conio.h>
 #include<iostream>
 using namespace std;
 
@@ -158,7 +157,6 @@ int main()
 		}
 	}
 	cout << " Результат разреза записан в файл result.txt";
-	_getch();
 	return 0;
 }
 ```
