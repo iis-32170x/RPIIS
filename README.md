@@ -24,6 +24,10 @@ echo The search is complete. The result is written to result.txt
 ```
 
 ---
+Ключ /a отвечает за вывод файлов с указанными атрибутами.
+Ключ /s отвечает за вывод списка файлов из указанного каталога и его подкаталогов.
+Ключ /b отвечает за вывод только имён файлов.
+
 ### .sh файл
 
 ```sh
@@ -34,7 +38,7 @@ permission=$2
 if [ ! -d "$folder" ]; then
   echo "Данной папки нет"
   exit 1
-fi
+
 
 # Поиск файлов с заданным атрибутом доступа
 find "$folder" -type f -perm "$permission" > result.txt
