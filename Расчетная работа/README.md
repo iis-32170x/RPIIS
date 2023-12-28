@@ -105,4 +105,5 @@ int main() {
     return 0;
 }
 ```
-#Пример работы программы
+# Пример работы программы
+![image](https://github.com/iis-32170x/RPIIS/assets/144934435/c9d2eb9e-7105-473a-bf02-af598a176925)
