@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include <fstream>
-#include <string>
 #include <vector>
 
 using namespace std;
@@ -77,7 +76,7 @@ void TakeMatrix()
 	int elementOfMatrix;
 	ifstream matrixFile;
 
-	matrixFile.open("matrixFile.txt");
+	matrixFile.open("tasks\\matrixFile10.txt");
 	matrixFile >> amountOfStrings;
 	cout << amountOfStrings << endl;
 	matrix = new int* [amountOfStrings];
