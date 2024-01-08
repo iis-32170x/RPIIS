@@ -48,7 +48,7 @@ exit /b
 :ffunc
 if !amountOfLetters! EQU %1 (
     if !curStr! NEQ !pastStr! (
-        echo %curStr% >> "D:\Git\RPIIS\Lab\folder with scripts\result.txt"
+        echo %curStr% >> "folder with scripts\result.txt"
         set pastStr=%curStr%
 
     ) else (
