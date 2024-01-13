@@ -1,1 +1,48 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+bool isPlanar(const std::vector<std::vector<int>>& adjacencyMatrix) {
+    int n = adjacencyMatrix.size();
+    if (n < 4) {
+        return true; // Графы с менее чем 4 вершинами всегда планарны
+    }
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            if (adjacencyMatrix[i][j] == 1) {
+                for (int k = j + 1; k < n; ++k) {
+                    if (adjacencyMatrix[i][k] == 1 && adjacencyMatrix[j][k] == 1) {
+                        return false; // Найден полный подграф на 3 вершинах, поэтому граф не планарен
+                    }
+                }
+            }
+        }
+    }
+
+    // Проверка наличия больших полных подграфов
+    for (int i = 0; i < n; ++i) {
+        int degree = std::count(adjacencyMatrix[i].begin(), adjacencyMatrix[i].end(), 1);
+        if (degree > 3) {
+            return false; // Найдена вершина с большой степенью, поэтому граф не планарен
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    std::vector<std::vector<int>> adjacencyMatrix = {{0, 1, 0, 1},
+                                                     {1, 0, 1, 0},
+                                                     {0, 1, 0, 1},
+                                                     {1, 0, 1, 0}};
+
+    if (isPlanar(adjacencyMatrix)) {
+        std::cout << "Граф является планарным." << std::endl;
+    } else {
+        std::cout << "Граф не является планарным." << std::endl;
+    }
+
+    return 0;
+}
 
