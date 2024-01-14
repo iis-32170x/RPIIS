@@ -13,6 +13,18 @@
 Функция main создает матрицу смежности заданного графа и вызывает функцию isPlanar для проверки его планарности. 
 В зависимости от результата, программа выводит соответствующее сообщение.
 # Испытание:
+Пример матрицы смежности не планарного графа:
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/3c00cea1-ac92-43b6-b8de-a5a22fc7683e)
+
+Результат:
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/4c3e6cbc-97bd-4c4c-8f4a-a73ac4b4350a)
+
+Пример матрицы смежности планарного графа:
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/fb22a4fe-e832-4992-a3bf-e4896f91cd13)
+
+Результат:
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/3c7d6c70-f025-4f39-af1d-0bc8c924ff92)
+
 
 # Графическое изображение:
 ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/d8c07795-971e-4664-9e45-9fe017579ea6)
