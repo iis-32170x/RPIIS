@@ -1,0 +1,255 @@
+\documentclass [a4paper, 10pt, twocolumn] {article}
+
+\usepackage {geometry}
+\usepackage{graphicx, caption}
+\usepackage{float}
+
+\geometry{top=8mm}
+\geometry{inner=27mm}
+\geometry{outer=26mm}
+
+\begin {document}
+\author {\large {Alena Cherkas, Aliaksandr Kupo} \\ {\textit {Francisk Skorina}} \\ {\textit{Gomel State University}} \\{Gomel, Belarus} \\{Email: \large{alenacherkas.iss@gmail.com, kupo@gsu.by}}}
+\date {}
+\title {\textbf {OSTIS Technology Integration with Third-party NLP Services}}
+\maketitle {} 
+\textbf{\textit{Abstract}—This article is devoted to the integration of
+OSTIS Technology with third-party services based on neural
+networks. As an example of integration, the task of keeping
+minutes of meetings is considered, the solution of which is
+based on transcription and summarization. Transcription
+is carried out using the Whisper service, summarization —
+retext.ai.} 
+
+\textbf{\textit{Keywords}—OSTIS Technology integration; neural networks; transcription task; summarization task; Natural
+Language Processing.}
+\\\\
+\centerline{\large{I. I\small{NTRODUCTION}}}
+\\
+
+After the appearance of ChatGPT, its analogues and
+other services based on neural networks in the general
+availability, a large number of opportunities appeared in
+the professional activities of representatives of different
+professions, scientific activities, and personal life. In
+particular, the scope of application of OSTIS technology
+has expanded [1].
+
+Integration of OSTIS Technology with third-party
+services based on neural networks allows you to create
+universal components adapted to reuse. Thus, for example,
+when using ChatGPT, it becomes possible not only to
+get an answer to a given question, but also to save it by
+formalization, that is, writing on SC-code [2], thereby
+replenishing the global knowledge base. After that, the
+system using this knowledge base will be able to process
+the information received to solve other tasks [3].
+
+Thus, when integrated with ChatGPT or its analogues,
+the Nika dialog platform, operating on the basis of OSTIS,
+can access the advantages of dialog systems representing
+a neural network, while maintaining the advantages of
+OSTIS.
+
+ChatGPT can also generate insufficiently correct responses. If the user does not have enough knowledge in
+the field of the question being asked, then it is almost
+impossible to distinguish truth from lies in the neural
+network response. This reduces the quality of work
+with the service and its capabilities. The integration of
+ChatGPT with OSTIS allows you to identify incorrect
+information in the responses of the service.
+
+The task of integrating ChatGPT with OSTIS, namely
+the Nika dialog system, has already been solved. However,
+OSTIS Technology can be integrated with services of
+completely different orientation [1], working on the basis
+of neural networks. Thus, it is possible to optimize their
+work, expand functionality, and reduce the number of
+shortcomings [4].
+\\\\
+\centerline{\large{II. O\small{VERVIEW OF EXISTING APPROACHES}}}
+\\
+
+The possibility of integration is demonstrated by the
+example of to creating a meeting protocol. To do this, the
+tasks of transcription and summarization will be solved.
+To convert an audio recording into a text format, there
+are many services based on neural networks. One of the
+available services is Whisper from OpenAI.
+
+Whisper is an Automatic Speech Recognition (ASR)
+system trained on more than 650 thousand hours of
+multilingual and multitasking controlled data collected
+from the Internet. The developers of the service note that
+using such a large and diverse data set leads to increased
+resistance to accents, background noise and technical
+language. In addition, Whisper allows you to perform
+transcription in several languages, as well as translation
+from these languages into English.
+
+Whisper is built on the transformer architecture, stacking encoder blocks and decoder blocks with the attention
+mechanism propagating information between both. It
+will take the audio recording, split it into 30-second
+chunks and process them one by one. For each 30-second
+recording, it will encode the audio using the encoder
+section and save the position of each word said, and
+leverage this encoded information to find what was said
+using the decoder.
+
+The decoder will predict what user call tokens from all
+this information, which are basically each words being
+said. Then, it will repeat this process for the next word
+using all the same information as well as the predicted
+previous word, helping it guess the next one that would
+make more sense.
+
+The overall architecture is a classic encoder-decoder
+that is similar to GPT-3 and other language models.
+OpenAI open-sourced their code and everything instead
+of an API, so everyone can use Whisper as a pre-trained
+foundation architecture to build upon and create more
+powerful models for his necessities.
+\begin{figure}[H]
+	\center{\includegraphics[width=1.0\linewidth]{draw1.png}}
+	\caption*{Figure 1. Whisper architecture [5]}
+\end{figure}
+
+Transcription of audio into text takes place in several
+stages. The audio signal that is recorded on the device may
+contain noises, echoes, pauses and other acoustic features
+that make speech recognition difficult. Therefore, before
+transcription, the audio signal passes through various
+filters and noise reduction algorithms that allow you to
+get a cleaner sound.
+
+After preprocessing the audio signal, speech recognition algorithms are superimposed on it. Usually these
+algorithms are based on neural networks that are trained to
+recognize speech in different conditions. These networks
+are used to recognize phonemes, words and phrases in
+audio.
+
+After the neural network recognizes speech in audio,
+it matches the received phrases with the text. Usually,
+matching algorithms are used for this, which find the most
+suitable variants of recognized phrases for each section
+of audio.
+\begin{figure}[H]
+	\center{\includegraphics[width=1.0\linewidth]{draw2.png}}
+	\caption*{Figure 2. Whisper multitasking format [6]}
+\end{figure}
+
+
+Neural networks cannot always correctly recognize
+speech in audio, so Whisper uses various error-handling
+algorithms that allow you to correct recognition errors
+and improve the quality of transcription. The end result
+is a textual representation of audio that can be used
+for various tasks, such as content search and analysis,
+automatic transcriptions, and subtitle creation.
+
+The amount of pretraining speech recognition data
+for a given language is very predictive of zero-shot
+performance on that language in Fleurs.
+
+For small models, performance on English speech
+\begin{figure}[H]
+	\center{\includegraphics[width=1.0\linewidth]{draw3.png}}
+	\caption*{Figure 3. Correlation of pre-training supervision amount with downstream speech recognition}
+		\center{\includegraphics[width=1.0\linewidth]{draw4.png}}
+	\caption*{Figure 4. Multitask and multilingual transfer improves with scale [6]}
+\end{figure}
+recognition degrades when trained jointly in a multitask and multilingual setup. However, multilingual and
+multitask models benefit more from scale and eventually
+outperform models trained on English data only. At the
+4-th picture 95 percents bootstrap estimate confidence
+intervals are shown [6].
+
+Another problem is creating an output from the existing
+text version of the meeting. This will help to create a
+meeting protocol.
+
+Text Summarization is a natural language processing
+(NLP) task that involves condensing a lengthy text
+document into a shorter, more compact version while still retaining the most important information and meaning.
+The goal is to produce a summary that accurately
+represents the content of the original text in a concise
+form.
+
+During training, the neural network learns to identify
+important phrases, sentences, and ideas in the full-length
+text, and generate a shorter summary that accurately
+captures the main points.
+
+There are different approaches to text summarization,
+including extractive methods that identify and extract important sentences or phrases from the text, and abstractive
+methods that generate new text based on the content of
+the original text.
+
+One approach for text summarization is to use an
+encoder-decoder architecture with an attention mechanism.
+The encoder takes in the full-length text and encodes it
+into a fixed-length vector representation. The decoder then
+generates the summary based on this encoded representation. The attention mechanism allows the decoder to focus
+on the most important parts of the encoded representation
+while generating the summary.
+
+A major limitation of this network is its incapacity to
+extract significant contextual connections from extended
+semantic sentences. When a lengthy text contains contextual relationships within its substrings, the basic seq2seq
+model cannot recognize those contexts. As a result, the
+model’s performance is somewhat compromised, leading
+to reduced accuracy.
+\begin{figure}[H]
+	\center{\includegraphics[width=1.0\linewidth]{draw5.png}}
+	\caption*{Figure 5. Encoder-decoder model [7]}
+\end{figure}
+
+The encoder network extracts or obtain features from
+input data and products internal state vector or context
+vectors, which summarizes the input sequence. In STM
+networks, these vectors are referred to as hidden state
+and cell state vectors. The decoder network interprets the
+context vector produced by the encoder and generates the
+output sequence. The final call of the encoder produces
+the context vector that serves as the input to the first call
+of the decoder network. The decoder then use this context
+vector along with the initial states to start generating the
+output sequence, and the outputs are considered for future
+predictions.
+
+Attention is a type of enhancement to the current
+sequence-to-sequence network that addresses its limitations. It derives its name from its ability to highlight
+important parts of a sequence. By considering only a
+few relevant items in the input sequence, the output
+sequence becomes conditional and is guided by weighted
+constraints. These constraints are the contexts that receive
+attention, which are subsequently used for training and
+predicting the desired results.
+\begin{figure}[H]
+	\center{\includegraphics[width=1.0\linewidth]{draw6.png}}
+	\caption*{Figure 6. Attention architecture [7]}
+		\center{\includegraphics[width=1.0\linewidth]{draw7.png}}
+	\caption*{Figure 7. Attention model [7]}
+\end{figure}
+
+The attention-based sequence-to-sequence model requires considerable computational power, but its performance is superior to that of the traditional sequence-tosequence model. Additionally, the model can demonstrate
+how attention is focused on the input sequence when
+predicting the output sequence. This is helpful in comprehending and identifying the specific input-output pairs
+and the extent to which the model considers them.
+
+The model aims to create a context vector that is
+tailored for each output time step by selectively filtering
+the input sequence [7].
+
+Another approach is to use reinforcement learning,
+where the neural network is trained to generate summaries
+that maximize a reward function based on the quality of
+the summary. This approach can be useful when there is
+not enough labeled data available for supervised learning
+[8].
+
+The key to neural network text summarization is in
+finding a balance between generating a summary that is
+short and concise while still accurately conveying the
+main ideas of the full-length text.
+\end{document}
