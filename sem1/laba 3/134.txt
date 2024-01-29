@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+
+\usepackage[english,russian]{babel}
+
+\linespread{1}
+\setlength{\parskip}{0.0cm}
+\usepackage[letterpaper,top=2cm,bottom=1.5cm,left=2.4cm,right=2.4cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{multicol}
+\setlength{\columnsep}{0.5cm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\pagestyle{fancy}
+
+\setcounter{page}{134}
+
+
+\begin{document}
+
+\begin{multicols}{2}
+and non-directional training algorithms. This framework
+significantly limits the class of constructed neural networks and has all the disadvantages of gradient methods.
+
+Thus, today the following disadvantages are typical for
+modern frameworks.
+
+
+Most of them either have a limited set of training
+algorithms, or support a limited neural networks class, or
+have low performance.
+
+
+\begin{center}
+\paragraph{\normalsize{\sc{\romannumeral 3.   Framework architecture and structure}}}
+\end{center}
+Consider a variant of a software package implemented
+in a form of framework in which random search algorithms are used to train neural networks.
+
+The software package was developed in C++ using
+the OpenMP and OpenCL libraries. OpenMP libraries
+provide efficient organization of parallel computing within
+a single processor, while OpenCL provides compatibility
+and parallel computing on a wide class of computing
+devices.
+
+According to the ostis 2021 standard, the framework
+can be described as follows:
+\vspace{2\baselineskip}
+
+
+\textbf{\textit{framework}}
+
+\Rightarrow \hspace{2em} decomposition*:
+
+\hspace{1.1em} \textbf{\{} \textbf{•} \hspace{2em}   \textit{algorithms library}
+
+
+\hspace{2em} \textbf{•}  \hspace{2em} \textit{train behaviour parameters} 
+
+\hspace{2em} \textbf{•} \hspace{2em}  \textit{architecture library}
+
+\hspace{2em} \textbf{•} \hspace{2em}   \textit{database}
+
+\hspace{2em} \textbf{•} \hspace{2em}  \textit{compress/decompress module}
+
+\hspace{2em} \textbf{•} \hspace{2em}  \textit{predict module}
+
+\hspace{2em} \textbf{•} \hspace{2em}  \textit{load/save module}
+
+\hspace{1.1em} \textbf{\}}
+\vspace{1\baselineskip}
+
+
+
+\textbf{\textit{algorithms library}}
+
+
+\ni \hspace{2em} FAST\textunderscore ANNEALING
+
+\ni \hspace{2em} SLOW\textunderscore ANNEALING
+
+\ni \hspace{2em} GENETIC
+
+\ni \hspace{2em} SGD
+
+\ni \hspace{2em} MOMGRAD
+
+\ni \hspace{2em} ADAM
+
+\ni \hspace{2em} FTML
+
+\vspace{1\baselineskip}
+
+
+
+\textbf{\textit{train behaviour parameters}} 
+
+\ni \hspace{2em} NO\textunderscore TRAIN
+
+\ni \hspace{2em} JUST\textunderscore TRAIN
+
+
+\ni \hspace{2em} NEW\textunderscore TRAIN
+
+
+\ni \hspace{2em} CONTINUE\textunderscore TRAIN
+\vspace{1\baselineskip}
+
+
+
+\textbf{\textit{architecture library}}
+
+
+\ni \hspace{2em} RBM\textunderscore BERNOULLI\textunderscore BERNOULLI
+
+
+\ni \hspace{2em} RBM\textunderscore GAUSS\textunderscore BERNOULLI
+
+
+\ni \hspace{2em} AUTOENCODER
+
+
+\ni  \hspace{2em} PERCEPTRON\textunderscore NN
+
+
+\ni \hspace{2em} CONV\textunderscore LAYER
+
+
+\ni \hspace{2em} POOLING\textunderscore LAYER
+
+
+
+\textbf{\textit{PERCEPTRON\textunderscore NN}}
+
+\Rightarrow \hspace{2em} \textit{part*:}
+
+\hspace{2.7em} \textit{ActivationFunction}
+\vspace{1\baselineskip}
+
+\textbf{\textit{AUTOENCODER}}
+
+\Rightarrow \hspace{2em} \textit{part*:}
+
+\hspace{2.7em} \textit{ActivationFunction}
+\vspace{1\baselineskip}
+
+\textbf{\textit{ActivationFunction}}
+
+\ni \hspace{2em} NONE
+
+
+\ni \hspace{2em} BIPOLYARSIGM
+
+
+\ni \hspace{2em} SIGM
+
+
+\ni \hspace{2em} ReLU
+
+
+\ni \hspace{2em} SOFTMAX
+\vspace{1\baselineskip}
+
+
+The developed software package consists of the following main modules: two libraries (algorithms and
+architectures of neural networks), a database and a
+database with configuration files (for setting up algorithms
+from the library), modules (for execution on connected
+computing devices and the neural networks functioning),
+and finally, user interaction interface.
+
+The database contains all the necessary data sets for
+training neural networks. The data is loaded at the
+user request. The framework has built-in methods for
+generating various types of samples (from the requested
+data) for training and testing neural networks.
+
+The algorithm library contains a wide range of different
+optimization algorithms: simple gradient, moment and
+adaptive moment methods, following the moving leader
+method, genetic algorithm and annealing method. Configuration files are loaded during the framework initialization
+and contain sets with optimal parameter values, which, if
+necessary, are recalculated taking into account the neural
+network architecture. Execution Modules on connected
+computing devices are loaded as they are found. The
+framework also has a high degree of flexibility, it can
+be executed on a limited number of processor threads
+(the limit can be adjusted), on several connected computing devices. In addition, a completely single-threaded
+execution mode is possible.
+
+The framework allows assembly without the use
+of parallel computing on connected devices and the
+processor. For this, the constants.h file contains the
+DISABLE\textunderscore OPEN\textunderscore CL, DISABLE\textunderscore OPENMP constants.
+When set to non-zero values, the framework disables
+the ability to use parallel computing. This allows the
+framework to be independent of the settings and computer
+configuration. The framework has additional constants ENABLE\textunderscore FAST\textunderscore MATH and ENABLE\textunderscore NORMAL\textunderscore DISTR.
+They allow us to activate the possibility of using accelerated trigonometric functions, for example, to generate a
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
