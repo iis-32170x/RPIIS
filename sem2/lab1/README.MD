@@ -308,7 +308,7 @@ void print(node* p) // распечатка дерева по уровням
 ```
 
 ## Пример выполнения(представлен в консоли):
-![Image alt](https://github.com/iis-32170x/RPIIS/blob/Кадиков_П/sem2/lab1/Безымянный.png					
+![Image alt](https://github.com/iis-32170x/RPIIS/blob/Кадиков_П/sem2/lab1/images/resultsOfLaba.png)					
 Все работает как следует.
 
 ## Вывод
