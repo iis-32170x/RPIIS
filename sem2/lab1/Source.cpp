@@ -4,29 +4,29 @@ using namespace std;
 
 struct node 
 {
-	int info; // значения
-	node* left; // указатель на левое поддерево
-	node* right; // указатель на правое поддерево
-	int balance; // баланс: высота правого поддерева минус высота левого поддерева
+	int info; 
+	node* left; 
+	node* right; 
+	int balance; 
 };
 
-int Height(node* root); // вычисление высоты дерева
+int Height(node* root); 
 
-void SetBalance(node* (&root)); //нахождение значение баланса для текущего узла
-void TurnLeft(node* (&root)); // левый поворот дерева
-void TurnRight(node* (&root)); // правый поворот дерева
-void insert(node* (&root), int d); // добавление узла в дерево поиска
-void output(node* p);  // распечатка дерева в симметрическом порядке
-void print_n(const node* p, int n, int level, int prob); // печать n-ого уровня дерева
-void print(node* p); // распечатка дерева по уровням
-void clear(node** p); // очистка
+void SetBalance(node* (&root)); 
+void TurnLeft(node* (&root)); 
+void TurnRight(node* (&root)); 
+void insert(node* (&root), int d); 
+void output(node* p);  
+void print_n(const node* p, int n, int level, int prob); 
+void print(node* p); 
+void clear(node** p); 
 
-node* minValueNode(node* root); // поиск минимума
-node* maxValueNode(node* root); // поиск максимума
-node* deleteNode(node* root, int key); // удаление узла дерева
-node* findClosestMin(node* root, int value); // поиск ближайшего меньшего
-node* findClosestMax(node* root, int value); // поиск ближайшего большего
-node* search(node* root, int value); // поиск нужной ячейки 
+node* minValueNode(node* root); 
+node* maxValueNode(node* root); 
+node* deleteNode(node* root, int key); 
+node* findClosestMin(node* root, int value); 
+node* findClosestMax(node* root, int value); 
+node* search(node* root, int value);  
 
 int main() 
 {
@@ -101,27 +101,27 @@ int main()
 	return 0;
 }
 
-int Height(node* root) // вычисление высоты дерева
+int Height(node* root) 
 {
 	if (root == NULL)
-		return 0; // если дерево пусто возвращаем 0
+		return 0; 
 	else {
-		int hLeft = Height(root->left), // считаем высоту левого поддерева
-			hRight = Height(root->right); // считаем высоту правого поддерева
-		if (hLeft > hRight) // если высота слева больше то возвращаем ее + 1(т.е. добавили еще наш узел)
+		int hLeft = Height(root->left), 
+			hRight = Height(root->right); 
+		if (hLeft > hRight) 
 			return hLeft + 1;
 		else
-			return hRight + 1; // иначе возвращаем высоту правого поддерева + 1
+			return hRight + 1; 
 	}
 }
 
-void SetBalance(node* (&root)) //нахождение значение баланса для текущего узла
+void SetBalance(node* (&root)) 
 {
 	if (root != NULL)
 		root->balance = Height(root->right) - Height(root->left);
 }
 
-void TurnLeft(node* (&root)) // левый поворот дерева
+void TurnLeft(node* (&root)) 
 {
 	node* rightSubtree, * rightSubtreeLeftSubtree;
 	rightSubtree = root->right;
@@ -134,7 +134,7 @@ void TurnLeft(node* (&root)) // левый поворот дерева
 	SetBalance(root);
 }
 
-void TurnRight(node* (&root)) //правый поворот АВЛ-дерева
+void TurnRight(node* (&root)) 
 {
 	node* leftSubtree, * leftSubtreeRightSubtree;
 	leftSubtree = root->left;
@@ -147,44 +147,44 @@ void TurnRight(node* (&root)) //правый поворот АВЛ-дерева
 	SetBalance(root);
 }
 
-void insert(node* (&root), int d) // добавление узла в дерево поиска
+void insert(node* (&root), int d) 
 {
-	if (root == NULL) // нашли пустой указатель(пустое место)
-	{ // создаём новый узел дерева на найденном месте
+	if (root == NULL) 
+	{ 
 		root = new node;
 		root->info = d;
 		root->balance = 0;
 		root->left = NULL;
 		root->right = NULL;
 	}
-	else // если текущий узел не пусто, то...
+	else 
 	{
-		if (d > root->info) // идём в правое поддерево
+		if (d > root->info) 
 		{
-			insert(root->right, d); // добавляем узел в правое поддерево
-			if (Height(root->right) - Height(root->left) > 1) // если баланс АВЛ-дерева нарушен, то...
+			insert(root->right, d); 
+			if (Height(root->right) - Height(root->left) > 1) 
 			{
-				if (Height(root->right->right) < Height(root->right->left)) // а если были еще проблемы в поддеревьях у правого поддерева 
-					TurnRight(root->right); // то предварительно поворачиваем правое поддерево
-				TurnLeft(root); // поворот дерева влево
+				if (Height(root->right->right) < Height(root->right->left)) 
+					TurnRight(root->right); 
+				TurnLeft(root);
 			}
 		}
 		else
-			if (d < root->info) // идем в левое поддерево
+			if (d < root->info) 
 			{
-				insert(root->left, d); // добавляем узел в левое поддерево
-				if (Height(root->left) - Height(root->right) > 1) //если баланс АВЛ - дерева нарушен, то...
+				insert(root->left, d); 
+				if (Height(root->left) - Height(root->right) > 1) 
 				{
-					if (Height(root->left->left) < Height(root->left->right)) //а если были еще проблемы в поддеревьях у левого поддерева 
-						TurnLeft(root->left); // то предварительно поворачиваем левое  поддерево
-					TurnRight(root); // поворот дерева вправо
+					if (Height(root->left->left) < Height(root->left->right)) 
+						TurnLeft(root->left); 
+					TurnRight(root); 
 				}
 			}
-		SetBalance(root); // пересчитываем значение баланса
+		SetBalance(root); 
 	}
 }
 
-void output(node* p)   // распечатка дерева в симметрическом порядке
+void output(node* p)   
 {
 	if (p != NULL)
 	{
@@ -194,7 +194,7 @@ void output(node* p)   // распечатка дерева в симметрическом порядке
 	}
 }
 
-void print_n(const node* p, int n, int level, int prob) // печать n-ого уровня дерева
+void print_n(const node* p, int n, int level, int prob) 
 {
 	if (p)
 	{
@@ -212,21 +212,21 @@ void print_n(const node* p, int n, int level, int prob) // печать n-ого уровня д
 	}
 }
 
-void print(node* p) // распечатка дерева по уровням
+void print(node* p) 
 {
 	int h = Height(p);
 	int prob = 3;
 	if (p)
 	{
-		for (int i = 0; i <= h; i++) // задаём номера уровней
+		for (int i = 0; i <= h; i++) 
 		{
-			print_n(p, i, 0, prob * (h - i)); // вызывается функция печати n-ого уровня дерева
+			print_n(p, i, 0, prob * (h - i)); 
 			cout << endl;
 		}
 	}
 }
 
-void clear(node** p) // очистка
+void clear(node** p) 
 {
 	if ((*p) != NULL) {
 		clear(&(*p)->left);
@@ -237,7 +237,7 @@ void clear(node** p) // очистка
 	}
 }
 
-node* minValueNode(node* root)  // поиск минимума
+node* minValueNode(node* root)  
 {
 	node* current = root;
 	while (current->left != NULL) {
@@ -245,7 +245,7 @@ node* minValueNode(node* root)  // поиск минимума
 	}
 	return current;
 }
-node* maxValueNode(node* root) // поиск максимума
+node* maxValueNode(node* root) // ГЇГ®ГЁГ±ГЄ Г¬Г ГЄГ±ГЁГ¬ГіГ¬Г 
 {
 	node* current = root;
 	while (current->right != NULL) {
@@ -254,7 +254,7 @@ node* maxValueNode(node* root) // поиск максимума
 	return current;
 }
 
-node* deleteNode(node* root, int key) // удаление узла дерева 
+node* deleteNode(node* root, int key) 
 {
 	if (root == NULL) {
 		return root;
@@ -302,7 +302,7 @@ node* deleteNode(node* root, int key) // удаление узла дерева
 	return root;
 }
 
-node* findClosestMin(node* root, int value) // поиск ближайшего меньшего
+node* findClosestMin(node* root, int value) 
 {
 	node* closest = nullptr;
 	node* current = root;
@@ -320,7 +320,7 @@ node* findClosestMin(node* root, int value) // поиск ближайшего меньшего
 	return closest;
 }
 
-node* findClosestMax(node* root, int value) // поиск ближайшего большего
+node* findClosestMax(node* root, int value)
 {
 	node* closest = nullptr;
 	node* current = root;
@@ -338,7 +338,7 @@ node* findClosestMax(node* root, int value) // поиск ближайшего большего
 	return closest;
 } 
 
-node* search(node* root, int value) // поиск нужной ячейки
+node* search(node* root, int value) 
 {
 	node* current = root;
 	while (current != nullptr && current->info != value) {
