@@ -1,0 +1,20 @@
+Дерево в матрицу:
+ 
+Входные данные:
+
+QuadTreeNode* root = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+root->topLeft = new QuadTreeNode{true, 12, nullptr, nullptr, nullptr, nullptr};            
+root->topRight = new QuadTreeNode{true, 136, nullptr, nullptr, nullptr, nullptr};
+root->bottomLeft = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+root->bottomLeft->topLeft = new QuadTreeNode{true, 12, nullptr, nullptr, nullptr, nullptr};
+root->bottomLeft->topRight = new QuadTreeNode{true, 12, nullptr, nullptr, nullptr, nullptr};
+root->bottomLeft->bottomLeft = new QuadTreeNode{true, 100, nullptr, nullptr, nullptr, nullptr};
+root->bottomLeft->bottomRight = new QuadTreeNode{true, 100, nullptr, nullptr, nullptr, nullptr}; 
+root->bottomRight = new QuadTreeNode{true, 12, nullptr, nullptr, nullptr, nullptr};
+
+Выходные данные:
+
+12 12 136 136 
+12 12 136 136 
+12 12 12 12 
+100 100 12 12 
