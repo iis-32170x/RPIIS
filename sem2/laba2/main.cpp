@@ -1,4 +1,5 @@
 #include "symmetric_difference.hpp"
+#include <iostream>
 using namespace std;
 
 

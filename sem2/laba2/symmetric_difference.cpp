@@ -3,22 +3,33 @@ using namespace std;
 
 set<int> symmetric_difference(const string& file_path) {
     ifstream file(file_path);
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         cout << "Ошибка при открытии файла.";
         exit(-1);
     }
     vector<set<int>> sets;
     sets.emplace_back();
+    string number;
     char ch;
     while (file.get(ch)) {
         if (isdigit(ch)) {
-            sets.back().insert(ch - '0');
-        } else if (ch == '\n') { 
-            sets.emplace_back();
-        } else if (ch != ' ') {
-            cout << "Ошибка при чтении файла." << endl;
-            exit(-1);
+            number += ch;
+        } else if (ch == ' ' || ch == ',' || ch == '\n') {
+            if (!number.empty()) {
+                sets.back().insert(stoi(number));
+                number.clear();
+            }
+            if (ch == '\n') {
+                sets.emplace_back();
+            }
+        } else {
+            cout << "Ошибка при чтении файла: недопустимый символ." << endl;
+            exit(-1); 
         }
+    }
+
+    if (!number.empty()) {
+        sets.back().insert(stoi(number));
     }
 
     set<int> result = sets[0];
