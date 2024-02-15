@@ -3,11 +3,15 @@
 #include "QuadTreeConverter.hpp"
 using namespace std;
 
-bool isHomogeneous(int x, int y, int size, vector<vector<int>>& matrix) {
+bool isHomogeneous(vector<vector<int>> &matrix, int size, int x, int y)
+{
     int firstValue = matrix[x][y];
-    for (int i = x; i < x + size; i++) {
-        for (int j = y; j < y + size; j++) {
-            if (matrix[i][j] != firstValue) {
+    for (int i = x; i < x + size; i++)
+    {
+        for (int j = y; j < y + size; j++)
+        {
+            if (matrix[i][j] != firstValue)
+            {
                 return false;
             }
         }
@@ -15,35 +19,85 @@ bool isHomogeneous(int x, int y, int size, vector<vector<int>>& matrix) {
     return true;
 }
 
-QuadTreeNode* convertToQuadTree(int x, int y, int size, vector<vector<int>>& matrix) {
-    if (isHomogeneous(x, y, size, matrix)) {
+QuadTreeNode *convertToQuadTree(vector<vector<int>> &matrix, int size, int x, int y)
+{
+    if (size == 0)
+    {
+        size = matrix.size();
+    }
+
+    if (isHomogeneous(matrix, size, x, y))
+    {
         return new QuadTreeNode{true, matrix[x][y], nullptr, nullptr, nullptr, nullptr};
     }
-    else {
+    else
+    {
         int newSize = size / 2;
-        QuadTreeNode* node = new QuadTreeNode();
+        QuadTreeNode *node = new QuadTreeNode();
         node->isLeaf = false;
         node->value = -1;
-        node->topLeft = convertToQuadTree(x, y, newSize, matrix);
-        node->topRight = convertToQuadTree(x, y + newSize, newSize, matrix);
-        node->bottomLeft = convertToQuadTree(x + newSize, y, newSize, matrix);
-        node->bottomRight = convertToQuadTree(x + newSize, y + newSize, newSize, matrix);
+        node->topLeft = convertToQuadTree(matrix, newSize, x, y);
+        node->topRight = convertToQuadTree(matrix, newSize, x, y + newSize);
+        node->bottomLeft = convertToQuadTree(matrix, newSize, x + newSize, y);
+        node->bottomRight = convertToQuadTree(matrix, newSize, x + newSize, y + newSize);
         return node;
     }
 }
 
-void convertToMatrix(QuadTreeNode* node, int x, int y, int size, vector<vector<int>>& matrix) {
-    if (node->isLeaf) {
-        for (int i = x; i < x + size; i++) {
-            for (int j = y; j < y + size; j++) {
+void fillMatrix(QuadTreeNode *node, vector<vector<int>> &matrix, int x, int y, int size)
+{
+    if (node == nullptr)
+    {
+        return;
+    }
+
+    if (node->isLeaf)
+    {
+        for (int i = x; i < x + size; i++)
+        {
+            for (int j = y; j < y + size; j++)
+            {
                 matrix[i][j] = node->value;
             }
         }
-    } else {
-        int newSize = size / 2;
-        if (node->topLeft) convertToMatrix(node->topLeft, x, y, newSize, matrix);
-        if (node->topRight) convertToMatrix(node->topRight, x, y + newSize, newSize, matrix);
-        if (node->bottomLeft) convertToMatrix(node->bottomLeft, x + newSize, y, newSize, matrix);
-        if (node->bottomRight) convertToMatrix(node->bottomRight, x + newSize, y + newSize, newSize, matrix);
     }
+    else
+    {
+        int newSize = size / 2;
+        fillMatrix(node->topLeft, matrix, x, y, newSize);
+        fillMatrix(node->topRight, matrix, x, y + newSize, newSize);
+        fillMatrix(node->bottomLeft, matrix, x + newSize, y, newSize);
+        fillMatrix(node->bottomRight, matrix, x + newSize, y + newSize, newSize);
+    }
+}
+
+int getMaxDepth(QuadTreeNode *node)
+{
+    if (node == nullptr)
+        return 0;
+    if (node->isLeaf)
+        return 1;
+
+    int depthTopLeft = getMaxDepth(node->topLeft);
+    int depthTopRight = getMaxDepth(node->topRight);
+    int depthBottomLeft = getMaxDepth(node->bottomLeft);
+    int depthBottomRight = getMaxDepth(node->bottomRight);
+
+    int maxDepth = 1 + max({depthTopLeft, depthTopRight, depthBottomLeft, depthBottomRight});
+
+    return maxDepth;
+}
+
+vector<vector<int>> convertToMatrix(QuadTreeNode *node)
+{
+    if (node == nullptr)
+    {
+        return vector<vector<int>>();
+    }
+
+    int size = pow(2, getMaxDepth(node) - 1);
+    vector<vector<int>> matrix(size, vector<int>(size, 0));
+
+    fillMatrix(node, matrix, 0, 0, size);
+    return matrix;
 }

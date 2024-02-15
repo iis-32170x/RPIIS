@@ -1,0 +1,42 @@
+Входные данные:
+
+QuadTreeNode* root = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+
+    root->topLeft = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+
+    root->topRight = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+        root->topRight->topLeft = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+        root->topRight->topRight = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+        root->topRight->bottomLeft = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+        root->topRight->bottomRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+
+    root->bottomLeft = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+        root->bottomLeft->topLeft = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+        root->bottomLeft->topRight = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomLeft->topRight->topLeft = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+            root->bottomLeft->topRight->topRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomLeft->topRight->bottomLeft = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomLeft->topRight->bottomRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+        root->bottomLeft->bottomLeft = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+        root->bottomLeft->bottomRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+
+    root->bottomRight = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+        root->bottomRight->topLeft = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+        root->bottomRight->topRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+        root->bottomRight->bottomLeft = new QuadTreeNode{false, -1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomRight->bottomLeft->topLeft = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomRight->bottomLeft->topRight = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomRight->bottomLeft->bottomLeft = new QuadTreeNode{true, 1, nullptr, nullptr, nullptr, nullptr};
+            root->bottomRight->bottomLeft->bottomRight = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+        root->bottomRight->bottomRight = new QuadTreeNode{true, 0, nullptr, nullptr, nullptr, nullptr};
+
+Выходные данные: 
+
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 1 
+0 0 0 0 1 1 1 1 
+0 0 0 1 1 1 1 1 
+0 0 1 1 1 1 1 1 
+0 0 1 1 1 1 0 0 
+0 0 1 1 1 0 0 0

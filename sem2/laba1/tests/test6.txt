@@ -1,0 +1,32 @@
+Входные данные:
+
+0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 
+0 0 0 0 1 1 1 1 
+0 0 0 0 1 1 1 1 
+0 0 0 1 1 1 1 1 
+0 0 1 1 1 1 1 1 
+0 0 1 1 1 1 0 0 
+0 0 1 1 1 0 0 0
+
+Алгоритм теста:
+
+QuadTreeNode* root = convertToQuadTree(matrix);
+vector<vector<int>> testMatrix(matrix.size(), vector<int>(matrix.size(), 0));
+testMatrix = convertToMatrix(root);
+for (int i = 0; i < testMatrix.size(); i++) {
+    for (int j = 0; j < testMatrix[i].size(); j++) {
+        if (testMatrix[i][j] != matrix[i][j]) {
+            result = false;
+        }
+    }
+}
+if (result) {
+     cout << "Тест пройден успешно!" << endl;
+} else {
+    cout << "Тест не пройден!" << endl;
+}
+
+Выходные данные:
+
+Тест успешно пройден!

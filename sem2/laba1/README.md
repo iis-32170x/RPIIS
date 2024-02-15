@@ -42,11 +42,25 @@ struct QuadTreeNode {
 
 Поскольку дерево само по себе является рекурсивной структурой данных, то и в алгоритмах преобразований будут использоваться рекурсии.
 
+```cpp
+// QuadTreeConverter.hpp
+bool isHomogeneous(vector<vector<int>>& matrix, int size, int x = 0, int y = 0);
+
+QuadTreeNode *convertToQuadTree(vector<vector<int>> &matrix, int size = 0, int x = 0, int y = 0);
+
+vector<vector<int>> convertToMatrix(QuadTreeNode *node);
+
+int getMaxDepth(QuadTreeNode* node);
+
+void fillMatrix(QuadTreeNode* node, vector<vector<int>>& matrix, int x, int y, int size);
+```
+В заголовочном файле довольно много параметров в функциях указаны по умолчанию. Подробнее об этом в описании к каждой функции ниже.
+
 ---
 
-### Перевод матрицы в дерево
+## Перевод матрицы в дерево
 ```cpp
-bool isHomogeneous(int x, int y, int size, vector<vector<int>>& matrix) {
+bool isHomogeneous(vector<vector<int>>& matrix, int size, int x, int y) {
     int firstValue = matrix[x][y];
     for (int i = x; i < x + size; i++) {
         for (int j = y; j < y + size; j++) {
@@ -58,52 +72,77 @@ bool isHomogeneous(int x, int y, int size, vector<vector<int>>& matrix) {
     return true;
 }
 ```
-В функции `isHomogeneous` происходит проверка квадранта матрицы на однородность (состоит ли квадрант из одинаковых элементов). Параметры `х` и `у` описывают крайний элемент квадранта (впоследствии этот элемент будет перемещаться в зависимости от рассматриваемого квадранта), размер матрицы и саму матрицу. Специально нарекаем крайний элемент, относительно которого будет рассматриваться однородность. Если найдется хоть один элемент, не равный основному -> квадрант неоднороден, и возвращаем `false`.
+В функции `isHomogeneous` происходит проверка квадранта матрицы на однородность (состоит ли квадрант из одинаковых элементов). Параметры `х` и `у` (по умолчанию равны нулю) описывают крайний элемент квадранта (впоследствии этот элемент будет перемещаться в зависимости от рассматриваемого квадранта), размер матрицы и саму матрицу. Специально нарекаем крайний элемент, относительно которого будет рассматриваться однородность. Если найдется хоть один элемент, не равный основному -> квадрант неоднороден, и возвращаем `false`.
 
 ```cpp
-QuadTreeNode* convertToQuadTree(int x, int y, int size, vector<vector<int>>& matrix) {
-    if (isHomogeneous(x, y, size, matrix)) {
-        return new QuadTreeNode{true, matrix[x][y], nullptr, nullptr, nullptr, nullptr};
-    }
-    else {
-        int newSize = size / 2;
-        QuadTreeNode* node = new QuadTreeNode();
-        node->isLeaf = false;
-        node->value = -1;
-        node->topLeft = convertToQuadTree(x, y, newSize, matrix);
-        node->topRight = convertToQuadTree(x, y + newSize, newSize, matrix);
-        node->bottomLeft = convertToQuadTree(x + newSize, y, newSize, matrix);
-        node->bottomRight = convertToQuadTree(x + newSize, y + newSize, newSize, matrix);
-        return node;
-    }
+QuadTreeNode* convertToQuadTree(vector<vector<int>>& matrix, int size, int x, int y) {
+    if (size == 0) {
+        size = matrix.size();
+    }
+
+    if (isHomogeneous(matrix, size, x, y)) {
+        return new QuadTreeNode{true, matrix[x][y], nullptr, nullptr, nullptr, nullptr};
+    }
+    else {
+        int newSize = size / 2;
+        QuadTreeNode* node = new QuadTreeNode();
+        node->isLeaf = false;
+        node->value = -1;
+        node->topLeft = convertToQuadTree(matrix, newSize, x, y);
+        node->topRight = convertToQuadTree(matrix, newSize, x, y + newSize);
+        node->bottomLeft = convertToQuadTree(matrix, newSize, x + newSize, y);
+        node->bottomRight = convertToQuadTree(matrix, newSize, x + newSize, y + newSize);
+        return node;
+    }
 }
 ```
-В функции `convertToQuadTree`, как понятно из названия, происходит преобразование в дерево. Если квадрант однородный -> создаем лист (первый параметр = `true`). В ином же случае делим изначальный размер матрицы на 2, создаем новый узел, его параметр `isLeaf` указываем `false`, значение = `-1` (поскольку обычно для описания изображения используются `0` или `1`, то `-1` вряд ли описывает что-либо) и рекурсивно вызываем функцию для всех четырёх квадрантов. При первом вызове функции параметры `х` и `у` равны нулю, после чего с помощью переменной `newSize` эти параметры изменяются как раз на крайние элементы всех четырех квадрантов для последующей проверки на однородность.
+В функции `convertToQuadTree`, как понятно из названия, происходит преобразование в дерево.
+Строка `if (size == 0)` предназначена для инициализации переменной, равной размерности матрицы. В прототипе функции эта переменная равна нулю по умолчанию, поэтому при вызове самой функции этот оператор выполнится только единожды, чтобы не мешать выполнению остальной части при рекурсивном вызове. 
+Если квадрант однородный -> создаем лист (первый параметр = `true`). В ином же случае делим изначальный размер матрицы на 2, создаем новый узел, его параметр `isLeaf` указываем `false`, значение = `-1` (поскольку обычно для описания изображения используются `0` или `1`, то `-1` вряд ли описывает что-либо) и рекурсивно вызываем функцию для всех четырёх квадрантов. При первом вызове функции параметры `х` и `у` равны нулю, после чего с помощью переменной `newSize` эти параметры изменяются как раз на крайние элементы всех четырех квадрантов для последующей проверки на однородность.
 
 ---
-### Перевод дерева в матрицу
+## Перевод дерева в матрицу
+Перевод дерева в матрицу реализован в двух функциях `fillMatrix` и `convertToMatrix`: первая предназначена для заполнения матрицы значениями дерева, вторая же инициализирует саму матрицу, далее вызывает функцию `fillMatrix` и возвращает готовую матрицу. 
 ```cpp
-void convertToMatrix(QuadTreeNode* node, int x, int y, int size, vector<vector<int>>& matrix) {
-    if (node->isLeaf) {
-        for (int i = x; i < x + size; i++) {
-            for (int j = y; j < y + size; j++) {
-                matrix[i][j] = node->value;
-            }
-        }
-    } else {
-        int newSize = size / 2;
-        if (node->topLeft) convertToMatrix(node->topLeft, x, y, newSize, matrix);
-        if (node->topRight) convertToMatrix(node->topRight, x, y + newSize, newSize, matrix);
-        if (node->bottomLeft) convertToMatrix(node->bottomLeft, x + newSize, y, newSize, matrix);
-        if (node->bottomRight) convertToMatrix(node->bottomRight, x + newSize, y + newSize, newSize, matrix);
-    }
+void fillMatrix(QuadTreeNode* node, vector<vector<int>>& matrix, int x, int y, int size) {
+    if (node == nullptr) {
+        return;
+    }
+
+    if (node->isLeaf) {
+        for (int i = x; i < x + size; i++) {
+            for (int j = y; j < y + size; j++) {
+                matrix[i][j] = node->value;
+            }
+        }
+    } else {
+        int newSize = size / 2;
+        fillMatrix(node->topLeft, matrix, x, y, newSize);
+        fillMatrix(node->topRight, matrix, x, y + newSize, newSize);
+        fillMatrix(node->bottomLeft, matrix, x + newSize, y, newSize);
+        fillMatrix(node->bottomRight, matrix, x + newSize, y + newSize, newSize);
+    }
+}
+
+vector<vector<int>> convertToMatrix(QuadTreeNode* node) {
+    if (node == nullptr) {
+        return vector<vector<int>>();
+    }
+
+    int size = pow(2, getMaxDepth(node) - 1);
+    vector<vector<int>> matrix(size, vector<int>(size, 0));
+
+    fillMatrix(node, matrix, 0, 0, size);
+    return matrix;
 }
 ```
-В функции `convertToMatrix` происходит примерно всё то же самое, что и в `convertToQuadTree`, только наоборот: если узел - лист -> заполняем соответстввющий квадрант матрицы значением этого листа, в ином случае снова делим размер матрицы на 2 и рекурсивно вызываем функцию для всех четырех дочерних узлов, причём перемещая крайний элемент с помощью всё той же переменной `newSize` во все четыре квадранта.
+В функции `fillMatrix` происходит примерно всё то же самое, что и в `convertToQuadTree`, только наоборот: если узел - лист -> заполняем соответстввющий квадрант матрицы значением этого листа, в ином случае снова делим размер матрицы на 2 и рекурсивно вызываем функцию для всех четырех дочерних узлов, причём перемещая крайний элемент с помощью всё той же переменной `newSize` во все четыре квадранта.
+
+`convertToMatrix`: инициализируем переменную `size`, равная результату функции `getMaxDepth`, которая предназначена для нахождения глубины дерева для инициализации матрицы нужного размера, матрицу, вызываем функцию заполнения матрицы и возвращаем её.  
 
 ---
 
-### Тестирование
+## Тестирование
 Для вывода дерева на экран будет использоваться функция `printQuadTree`
 ```cpp
 void printQuadTree(QuadTreeNode* node, int depth = 0) {
@@ -163,12 +202,12 @@ void printQuadTree(QuadTreeNode* node, int depth = 0) {
 
 ---
 
-## Вывод
-В рамках данной лабораторной работы были изучены способы взаимодействия со структурой данных квадродерево. Реализовал библиотеку для перевода квадродерева в матрицу и матрицы в квадродерево.
+# Вывод
+В рамках данной лабораторной работы были изучены способы взаимодействия со структурой данных квадродерево. Была реализована библиотека для перевода квадродерева в матрицу и матрицы в квадродерево.
 
 ---
 
-## Источники
+# Источники
 1. https://www.youtube.com/watch?v=dQw4w9WgXcQ
 2. https://en.wikipedia.org/wiki/Quadtree
 3. Фундаментальные алгоритмы на C++. Анализ / Структуры данных / Сортировка / Поиск: Пер. с англ. / Роберт Седжвик. – К. Издательство «ДиаСофт», 2001. – 688 с.

@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <algorithm>
 using namespace std;
 
 struct QuadTreeNode {
@@ -14,10 +16,14 @@ struct QuadTreeNode {
     QuadTreeNode* bottomRight;
 };
 
-bool isHomogeneous(int x, int y, int size, vector<vector<int>>& matrix);
+bool isHomogeneous(vector<vector<int>>& matrix, int size, int x = 0, int y = 0);
 
-QuadTreeNode* convertToQuadTree(int x, int y, int size, vector<vector<int>>& matrix);
+QuadTreeNode *convertToQuadTree(vector<vector<int>> &matrix, int size = 0, int x = 0, int y = 0);
 
-void convertToMatrix(QuadTreeNode* node, int x, int y, int size, vector<vector<int>>& matrix);
+vector<vector<int>> convertToMatrix(QuadTreeNode *node);
 
-#endif // QUAD_TREE_CONVERTER_HPP
+int getMaxDepth(QuadTreeNode* node);
+
+void fillMatrix(QuadTreeNode* node, vector<vector<int>>& matrix, int x, int y, int size);
+
+#endif
