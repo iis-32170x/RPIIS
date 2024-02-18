@@ -12,10 +12,10 @@ struct QuadTree {
 	QuadTree* second = nullptr;
 	QuadTree* third = nullptr;
 	QuadTree* fourth = nullptr;
-	void ViewTree(QuadTree* root, int level);
-	QuadTree* Add_data(QuadTree* root, int data);
-	QuadTree* TakeFromArray(const vector<vector<int>>& arr, int row, int col, int size);
+	void ViewTreeHelper(int level);
+	void ViewTree();
+    QuadTree* TakeFromMatrix(const vector<vector<int>>& matrix, int row, int col, int size);
+	QuadTree* TakeFromMatrix(const vector<vector<int>>& matrix);
 	void TakeFromTree(QuadTree* root, vector<vector<int>>& matrix, int row, int col, int size);
-
+	vector<vector<int>> TakeFromTree1(const vector<vector<int>>& matrix);
 };
-
