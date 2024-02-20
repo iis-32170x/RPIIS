@@ -23,7 +23,8 @@
 
 Эти концепции и алгоритмы помогут вам эффективно выполнять операции с очередью и понимать их применение в различных алгоритмах и приложениях.
 ## Пример работы с очередью на C++
-# КОД([cpp](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9D/lab1pivas.bat).файл)
+# ([cpp](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9D/sem%202/%D0%9F%D0%98%D0%9E%D0%98%D0%92%D0%98%D0%A1%20%D0%BB%D0%B0%D0%B11.cpp).файл)
+# ([header](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9D/sem%202/%D0%9F%D0%98%D0%9E%D0%98%D0%92%D0%98%D0%A1%20%D0%BB%D0%B0%D0%B11.h).файл)
 ```cpp
 #include<iostream>
 #include <conio.h>
