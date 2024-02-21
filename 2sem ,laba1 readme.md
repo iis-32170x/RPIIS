@@ -53,3 +53,51 @@ def append(self, data):
         new_node.prev = self.tail
         self.tail.next = new_node
         self.tail = new_node
+
+3.Дальше мы создаем метод который будет добавлять элементы в начало списка
+
+def prepend(self, data):
+
+    new_node = Node(data)
+    if self.head is None:
+        self.head = new_node
+        self.tail = new_node
+    else:
+        new_node.next = self.head
+        self.head.prev = new_node
+        self.head = new_node
+
+4.Дальше мы добавляем метод который будет искать есть ли элемент в списке
+
+def search(self, data):
+
+    current = self.head
+    while current:
+        if current.data == data:
+            return True
+        current = current.next
+    return False
+
+5.Метод который ищет элемент по его индексу
+
+def rsearch(self, index):
+
+    if index >= 0:
+        current = self.head
+        position = 0
+        while current:
+            if position == index:
+                return current.data
+            current = current.next
+            position += 1
+    else:
+        current = self.tail
+        position = -1
+        while current:
+            if position == index:
+                return current.data
+            current = current.prev
+            position -= 1
+    return None
+
+6.
