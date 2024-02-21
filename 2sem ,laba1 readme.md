@@ -20,3 +20,14 @@
 1.Начинается все с обьявления двух классов Node, с его полями data(элементы списка) и ссылки на элементы prev и next.
   
   Класс Linklist - это и есть наш двунаправленный список, с его полями head(первый элемент), tail(последний)
+  
+  class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+class LinkList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
