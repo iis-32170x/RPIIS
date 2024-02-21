@@ -38,3 +38,18 @@ class LinkList:
         self.head = None
         
         self.tail = None
+
+2.Дальше мы создаем метод append который добавляет элементы в конец списка
+
+
+def append(self, data):
+
+    new_node = Node(data)
+    if self.head is None:
+        self.head = new_node
+        self.tail = new_node
+        
+    else:
+        new_node.prev = self.tail
+        self.tail.next = new_node
+        self.tail = new_node
