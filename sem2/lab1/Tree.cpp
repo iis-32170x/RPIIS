@@ -1,4 +1,4 @@
-#include "Tree.h"
+п»ї#include "Tree.h"
 
 void QuadTree::ViewTreeHelper(int level) {
     for (int i = 0; i < level; i++) {
@@ -30,7 +30,7 @@ void QuadTree::ViewTree() {
 QuadTree* QuadTree::TakeFromMatrix(const vector<vector<int>>& matrix, int row, int col, int size) {
     if (matrix.size() != 4) {
         cout << "Invalid matrix size" << endl;
-          exit(1);
+        exit(1);
     }
     if (size == 1) {
         QuadTree* node = new QuadTree;
@@ -41,12 +41,12 @@ QuadTree* QuadTree::TakeFromMatrix(const vector<vector<int>>& matrix, int row, i
     int newSize = size / 2;
 
     int firstData = matrix[row][col];
-    bool flag = true;// флаг отвечает за проверку на равенство всех элементов подматрицы 
+    bool flag = true; 
 
     for (int i = row; i < row + size; i++) {
         for (int j = col; j < col + size; j++) {
             if (matrix[i][j] != firstData) {
-               flag = false;
+                flag = false;
                 break;
             }
         }
@@ -74,35 +74,39 @@ QuadTree* QuadTree::TakeFromMatrix(const vector<vector<int>>& matrix) {
 
 
 
-void QuadTree::TakeFromTree(QuadTree* root, vector<vector<int>>& matrix, int row, int col, int size) {
+void QuadTree::TakeFromTree1(QuadTree* root, vector<vector<int>>& matrix, int row, int col, int size) {
     if (root) {
-        if (size == 1) {
+        if (root->first == nullptr) { // РџСЂРѕРІРµСЂРєР°, С‡С‚Рѕ СѓР·РµР» СЏРІР»СЏРµС‚СЃСЏ Р»РёСЃС‚РѕРІС‹Рј
             if (row >= matrix.size() || col >= matrix[0].size()) {
-                std::cerr << "Invalid row or col position" << std::endl;
+                cerr << "Invalid row or col position" << endl;
                 exit(1);
             }
 
-            matrix[row][col] = root->data;
+            for (int i = row; i < row + size; i++) {
+                for (int j = col; j < col + size; j++) {
+                    matrix[i][j] = root->data; // Р—Р°РїРёСЃС‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ root->data РІРјРµСЃС‚Рѕ root->first->data
+                }
+            }
+
             return;
         }
 
         int newSize = size / 2;
 
-        TakeFromTree(root->first, matrix, row, col, newSize);
-        TakeFromTree(root->second, matrix, row, col + newSize, newSize);
-        TakeFromTree(root->third, matrix, row + newSize, col, newSize);
-        TakeFromTree(root->fourth, matrix, row + newSize, col + newSize, newSize);
+        TakeFromTree1(root->first, matrix, row, col, newSize);
+        TakeFromTree1(root->second, matrix, row, col + newSize, newSize);
+        TakeFromTree1(root->third, matrix, row + newSize, col, newSize);
+        TakeFromTree1(root->fourth, matrix, row + newSize, col + newSize, newSize);
     }
 }
 
-vector<vector<int>> QuadTree::TakeFromTree1(const vector<vector<int>>& matrix) {
-    int size = matrix.size();  
-    vector<vector<int>> result(size, vector<int>(size, 0));  
+vector<vector<int>> QuadTree::TakeFromTree(const vector<vector<int>>& matrix) {
+    int size = matrix.size();
+    vector<vector<int>> result(size, vector<int>(size, 0));
 
-    TakeFromTree(this, result, 0, 0, size);  
+    TakeFromTree1(this, result, 0, 0, size);
 
     return result;
 }
-
 
 

@@ -5,7 +5,7 @@ int main() {
 
 	vector<vector<int>> matrix = {
 		{1, 1, 98, 65},
-		{1, 2, 15, 4},
+		{1, 1, 15, 4},
 		{9, 10, 11, 12},
 		{13, 14, 15, 16}
 	};
@@ -15,7 +15,7 @@ int main() {
 	root->ViewTree();
 	cout << endl;
 	cout << "Martix from QuadTree: " << endl;
-	vector<vector<int>> matrix1 = root->TakeFromTree1(matrix);
+	vector<vector<int>> matrix1 = root->TakeFromTree(matrix);
 	for (int i = 0; i < matrix1.size(); i++) {
 		for (int j = 0; j < matrix1[i].size(); j++) {
 			cout << matrix1[i][j] << " ";
