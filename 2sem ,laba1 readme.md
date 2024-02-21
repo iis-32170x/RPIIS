@@ -136,3 +136,120 @@ def merge(self, other_list):
         current = current.next
 
     return new_list
+
+8.Метод  который нажодит пересечение двух списков
+
+def intersection(self, other_list):
+
+    new_list = LinkList()
+    current = self.head
+    while current:
+        if other_list.search(current.data):
+            new_list.append(current.data)
+        current = current.next
+    return new_list
+
+9.Метод который сортирует элементы по возростанию
+
+ def vosr_sort(self):
+ 
+     if self.head is None or self.head.next is None:
+         return
+
+     sorted_head = self.head
+     unsorted_head = self.head.next
+     sorted_head.next = None
+     unsorted_head.prev = None
+
+     while unsorted_head:
+         current = unsorted_head
+         unsorted_head = unsorted_head.next
+         current.prev = None
+         current.next = None
+
+         if current.data < sorted_head.data:
+             current.next = sorted_head
+             sorted_head.prev = current
+             sorted_head = current
+         else:
+             temp = sorted_head
+             while temp.next and temp.next.data < current.data:
+                 temp = temp.next
+             current.next = temp.next
+             if temp.next:
+                 temp.next.prev = current
+             temp.next = current
+             current.prev = temp
+
+     self.head = sorted_head
+     self.tail = current
+
+10. Сортировка по убыванию
+
+   def ubiv_sort(self):
+   
+       if self.head is None or self.head.next is None:
+           return
+
+       sorted_head = self.head
+       unsorted_head = self.head.next
+       sorted_head.next = None
+       unsorted_head.prev = None
+
+       while unsorted_head:
+           current = unsorted_head
+           unsorted_head = unsorted_head.next
+           current.prev = None
+           current.next = None
+
+           if current.data > sorted_head.data:
+               current.next = sorted_head
+               sorted_head.prev = current
+               sorted_head = current
+           else:
+               temp = sorted_head
+               while temp.next and temp.next.data > current.data:
+                   temp = temp.next
+               current.next = temp.next
+               if temp.next:
+                   temp.next.prev = current
+               temp.next = current
+               current.prev = temp
+
+       self.head = sorted_head
+       self.tail = current
+       
+11.Создаем экземпляр класса LinkList вызываем методы(любые) а также прописываем цикл для вывода результата.
+
+
+my_list = LinkList()
+
+
+my_list.append(4)
+my_list.append(2)
+my_list.append(7)
+my_list.append(1)
+
+
+
+my_list.ubiv_sort()
+
+
+
+print("Elements in the list:")
+current = my_list.head
+while current:
+    print(current.data)
+    current = current.next
+
+<h3>Тестирование программы</h3>
+
+<img width="897" alt="Снимок экрана 2024-02-21 211129" src="https://github.com/iis-32170x/RPIIS/assets/144939284/bb16a7fc-8b10-417e-b80d-1649e6b60dce">
+
+<img width="917" alt="Снимок экрана 2024-02-21 211057" src="https://github.com/iis-32170x/RPIIS/assets/144939284/db38b76a-b89c-45ff-adcf-ec4fbc837250">
+
+<img width="971" alt="Снимок экрана 2024-02-21 210958" src="https://github.com/iis-32170x/RPIIS/assets/144939284/77acbe24-a9ad-4bee-9cf0-914d300409f4">
+
+
+
+
