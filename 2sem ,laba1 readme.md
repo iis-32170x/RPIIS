@@ -100,4 +100,39 @@ def rsearch(self, index):
             position -= 1
     return None
 
-6.
+6.Метод который удаляет элемент из списка
+
+def delete(self, data):
+
+    current = self.head
+    while current:
+        if current.data == data:
+            if current.prev:
+                current.prev.next = current.next
+            else:
+                self.head = current.next
+            if current.next:
+                current.next.prev = current.prev
+            else:
+                self.tail = current.prev
+            return
+        current = current.next
+
+7.Метод который находит обЪединение двух списков
+
+def merge(self, other_list):
+
+    new_list = LinkList()
+    current = self.head
+
+    while current:
+        new_list.append(current.data)
+        current = current.next
+
+    current = other_list.head
+    while current:
+        if not new_list.search(current.data):
+            new_list.append(current.data)
+        current = current.next
+
+    return new_list
