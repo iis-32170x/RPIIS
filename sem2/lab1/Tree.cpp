@@ -84,7 +84,7 @@ void QuadTree::TakeFromTree1(QuadTree* root, vector<vector<int>>& matrix, int ro
 
             for (int i = row; i < row + size; i++) {
                 for (int j = col; j < col + size; j++) {
-                    matrix[i][j] = root->data; // Записываем значение root->data вместо root->first->data
+                    matrix[i][j] = root->data; 
                 }
             }
 
