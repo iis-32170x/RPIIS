@@ -248,7 +248,7 @@ int main() {
 }
 ```
 
-![[img/Screenshot from 2024-02-22 19-25-00.png]]
+![пример запуска программы](img/Screenshot from 2024-02-22 19-25-00.png)
 
 ## Вывод
 
