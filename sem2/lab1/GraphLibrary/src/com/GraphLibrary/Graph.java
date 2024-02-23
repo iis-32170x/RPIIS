@@ -22,24 +22,32 @@ public class Graph {
     }
 
     public void addVertex(String name) {
-        adjacency.add(new ArrayList<>());
-        adjacency.get(adjacency.size() - 1).add(name);
+        if (!indexes.containsKey(name)) {
+            adjacency.add(new ArrayList<>());
+            adjacency.get(adjacency.size() - 1).add(name);
 
-        indexes.put(name, countOfTable);
+            indexes.put(name, countOfTable);
 
-        countOfTable++;
+            countOfTable++;
 
-        System.out.println("Добавлена вершина " + name);
+            System.out.println("Добавлена вершина " + name);
+        } else {
+            System.out.println("Вершина с таким название уже имеется");
+        }
     }
 
     public void addEdge(String first, String second) {
-        if (indexes.containsKey(first) && indexes.containsKey(second)) {
-            adjacency.get(indexes.get(first)).add(second);
-            adjacency.get(indexes.get(second)).add(first);
+        if (!adjacency.get(indexes.get(first)).contains(second)) {
+            if (indexes.containsKey(first) && indexes.containsKey(second)) {
+                adjacency.get(indexes.get(first)).add(second);
+                adjacency.get(indexes.get(second)).add(first);
 
-            System.out.println("Дабавлено ребро между " + first + " и " + second);
+                System.out.println("Дабавлено ребро между " + first + " и " + second);
+            } else {
+                System.out.println("Данные введены некорректно");
+            }
         } else {
-            System.out.println("Данные введены некорректно");
+            System.out.println("Такое ребро уже имеется");
         }
     }
 
@@ -74,9 +82,13 @@ public class Graph {
     }
 
     public void addArc(String fromVertexName, String toVertexName) {
-        System.out.println("Добавлена дуга из " + fromVertexName + " в " + toVertexName);
+        if (!adjacency.get(indexes.get(fromVertexName)).contains(toVertexName)) {
+            System.out.println("Добавлена дуга из " + fromVertexName + " в " + toVertexName);
 
-        adjacency.get(indexes.get(fromVertexName)).add(toVertexName);
+            adjacency.get(indexes.get(fromVertexName)).add(toVertexName);
+        } else {
+            System.out.println("Эти вершины уже связаны");
+        }
     }
 
     public void deleteArc(String fromVertexName, String toVertexName) {

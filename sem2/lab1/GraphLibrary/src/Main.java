@@ -31,6 +31,7 @@ public class Main {
         graph.addEdge("2", "4");
         graph.addEdge("2", "5");
         graph.addEdge("5", "1");
+        graph.addEdge("5", "1");
 
        // graph.printAdjacencyList();
         //graph.DFSTree();
