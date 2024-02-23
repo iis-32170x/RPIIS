@@ -15,13 +15,13 @@ public class Main {
         graph.addVertex("First");
         graph.addVertex("Second");
 
-        System.out.println("Тест удаления вешин");
+        System.out.println("Тест удаления вершин");
 
         graph.deleteVertex("bimbimbombom");
         graph.deleteVertex("q");
         graph.deleteVertex("bimbimbombom");
 
-        System.out.println("Тест Добавления дуг");
+        System.out.println("Тест добавления дуг");
 
         graph.addArc("$$$", "Second");
         graph.addArc("$$$", "First");
