@@ -69,7 +69,7 @@ public class Graph {
 
             System.out.println("Удалена вешина " + nameOfVertex);
         } else {
-            System.out.println("Данные введены не корректно");
+            System.out.println("Данные введены некорректно");
         }
     }
 
@@ -85,7 +85,7 @@ public class Graph {
 
         adjacency.get(indexes.get(fromVertexName)).remove(toVertexName);
         } else {
-            System.out.println("Данные введены не корректно");
+            System.out.println("Данные введены некорректно");
         }
     }
 
