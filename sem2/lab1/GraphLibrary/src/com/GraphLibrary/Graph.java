@@ -1,5 +1,6 @@
 package com.GraphLibrary;
 
+import java.util.Stack;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -8,21 +9,9 @@ public class Graph {
     Hashtable<String, Integer> indexes;
     int countOfTable = 0;
 
-    public Graph() {
-        adjacency = new ArrayList<ArrayList<String>>();
-        adjacency.add(new ArrayList<String>());
-
-        adjacency.get(0).add("Main");
-
-        indexes = new Hashtable<>();
-        indexes.put("Main", countOfTable);
-
-        countOfTable++;
-    }
-
     public Graph(String name) {
-        adjacency = new ArrayList<ArrayList<String>>();
-        adjacency.add(new ArrayList<String>());
+        adjacency = new ArrayList<>();
+        adjacency.add(new ArrayList<>());
 
         adjacency.get(0).add(name);
 
@@ -33,17 +22,21 @@ public class Graph {
     }
 
     public void addVertex(String name) {
-        adjacency.add(new ArrayList<String>());
+        adjacency.add(new ArrayList<>());
         adjacency.get(adjacency.size() - 1).add(name);
 
         indexes.put(name, countOfTable);
 
         countOfTable++;
+
+        System.out.println("Добавлена вершина " + name);
     }
 
     public void addEdge(String first, String second) {
         adjacency.get(indexes.get(first)).add(second);
         adjacency.get(indexes.get(second)).add(first);
+
+        System.out.println("Дабавлено ребро между " + first + " и " + second);
     }
 
     public void printAdjacencyList() {
@@ -54,7 +47,7 @@ public class Graph {
                 System.out.println(strings.get(j) + " ");
             }
 
-            System.out.println();
+            System.out.print("_____________________\n");
         }
     }
 
@@ -68,5 +61,48 @@ public class Graph {
         }
 
         adjacency.remove(index);
+
+        System.out.println("Удалена вешина " + nameOfVertex);
+    }
+
+    public void addArc(String fromVertexName, String toVertexName) {
+        System.out.println("Добавлена дуга из " + fromVertexName + " в " + toVertexName);
+
+        adjacency.get(indexes.get(fromVertexName)).add(toVertexName);
+    }
+
+    public void deleteArc(String fromVertexName, String toVertexName) {
+        System.out.println("Удалена дуга из " + fromVertexName + " в " + toVertexName);
+
+        adjacency.get(indexes.get(fromVertexName)).remove(toVertexName);
+    }
+
+    public void DFSTree() {
+        Stack<String> stack = new Stack<>();
+        Hashtable<String, String> loopProtection = new Hashtable<>();
+        int i = 2;
+
+        stack.push(adjacency.get(0).get(0));
+
+        while (!stack.isEmpty()) {
+            i = 2;
+            String temp = stack.pop();
+            loopProtection.put(temp, "Verified");
+
+            if (adjacency.get(indexes.get(temp)).size() > 2) {
+                System.out.print("\nВершина " + temp + " продолжается в ");
+                System.out.print("\n");
+            }
+
+            if (indexes.get(temp) == 0)
+                i = 1;
+            for (; i < adjacency.get(indexes.get(temp)).size(); i++) {
+
+                    System.out.print(adjacency.get(indexes.get(temp)).get(i) + " ");
+
+                if (!loopProtection.containsKey(adjacency.get(indexes.get(temp)).get(i)))
+                    stack.push(adjacency.get(indexes.get(temp)).get(i));
+            }
+        }
     }
 }
