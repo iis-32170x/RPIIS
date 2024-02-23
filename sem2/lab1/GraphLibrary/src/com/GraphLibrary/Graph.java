@@ -33,10 +33,14 @@ public class Graph {
     }
 
     public void addEdge(String first, String second) {
-        adjacency.get(indexes.get(first)).add(second);
-        adjacency.get(indexes.get(second)).add(first);
+        if (indexes.containsKey(first) && indexes.containsKey(second)) {
+            adjacency.get(indexes.get(first)).add(second);
+            adjacency.get(indexes.get(second)).add(first);
 
-        System.out.println("Дабавлено ребро между " + first + " и " + second);
+            System.out.println("Дабавлено ребро между " + first + " и " + second);
+        } else {
+            System.out.println("Данные введены некорректно");
+        }
     }
 
     public void printAdjacencyList() {
@@ -52,17 +56,21 @@ public class Graph {
     }
 
     public void deleteVertex(String nameOfVertex) {
-        int index = indexes.get(nameOfVertex);
+        if (indexes.containsKey(nameOfVertex)) {
+            int index = indexes.get(nameOfVertex);
 
-        for (int i = 1; i < adjacency.get(index).size(); i++) {
-            int tempIndex = indexes.get(adjacency.get(index).get(i));
+            for (int i = 1; i < adjacency.get(index).size(); i++) {
+                int tempIndex = indexes.get(adjacency.get(index).get(i));
 
-            adjacency.get(tempIndex).remove(nameOfVertex);
+                adjacency.get(tempIndex).remove(nameOfVertex);
+            }
+
+            adjacency.remove(index);
+
+            System.out.println("Удалена вешина " + nameOfVertex);
+        } else {
+            System.out.println("Данные введены не корректно");
         }
-
-        adjacency.remove(index);
-
-        System.out.println("Удалена вешина " + nameOfVertex);
     }
 
     public void addArc(String fromVertexName, String toVertexName) {
@@ -72,9 +80,13 @@ public class Graph {
     }
 
     public void deleteArc(String fromVertexName, String toVertexName) {
+        if (indexes.containsKey(fromVertexName) && indexes.containsKey(toVertexName)) {
         System.out.println("Удалена дуга из " + fromVertexName + " в " + toVertexName);
 
         adjacency.get(indexes.get(fromVertexName)).remove(toVertexName);
+        } else {
+            System.out.println("Данные введены не корректно");
+        }
     }
 
     public void DFSTree() {
@@ -96,6 +108,7 @@ public class Graph {
 
             if (indexes.get(temp) == 0)
                 i = 1;
+
             for (; i < adjacency.get(indexes.get(temp)).size(); i++) {
 
                     System.out.print(adjacency.get(indexes.get(temp)).get(i) + " ");
