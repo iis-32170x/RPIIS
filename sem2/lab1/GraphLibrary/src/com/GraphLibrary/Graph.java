@@ -53,6 +53,8 @@ public class Graph {
 
     public void printAdjacencyList() {
         for (ArrayList<String> strings : adjacency) {
+            if (strings.contains(null))
+                continue;
             System.out.println("Adjacency list of " + strings.get(0));
 
             for (int j = 1; j < strings.size(); j++) {
@@ -73,7 +75,9 @@ public class Graph {
                 adjacency.get(tempIndex).remove(nameOfVertex);
             }
 
-            adjacency.remove(index);
+            adjacency.get(index).set(0, null);
+            indexes.remove(nameOfVertex);
+
 
             System.out.println("Удалена вешина " + nameOfVertex);
         } else {
@@ -92,10 +96,11 @@ public class Graph {
     }
 
     public void deleteArc(String fromVertexName, String toVertexName) {
-        if (indexes.containsKey(fromVertexName) && indexes.containsKey(toVertexName)) {
-        System.out.println("Удалена дуга из " + fromVertexName + " в " + toVertexName);
+        if (adjacency.get(indexes.get(fromVertexName)).contains(toVertexName)) {
 
-        adjacency.get(indexes.get(fromVertexName)).remove(toVertexName);
+            System.out.println("Удалена дуга из " + fromVertexName + " в " + toVertexName);
+
+            adjacency.get(indexes.get(fromVertexName)).remove(toVertexName);
         } else {
             System.out.println("Данные введены некорректно");
         }
@@ -123,7 +128,7 @@ public class Graph {
 
             for (; i < adjacency.get(indexes.get(temp)).size(); i++) {
 
-                    System.out.print(adjacency.get(indexes.get(temp)).get(i) + " ");
+                System.out.print(adjacency.get(indexes.get(temp)).get(i) + " ");
 
                 if (!loopProtection.containsKey(adjacency.get(indexes.get(temp)).get(i)))
                     stack.push(adjacency.get(indexes.get(temp)).get(i));

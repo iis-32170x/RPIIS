@@ -7,6 +7,9 @@ public class Main {
         graph.addVertex("3");
         graph.addVertex("4");
         graph.addVertex("5");
+        graph.deleteVertex("5");
+
+        graph.printAdjacencyList();
         /*
         graph.addVertex("Claire");
         graph.addVertex("C++");
@@ -24,7 +27,7 @@ public class Main {
         graph.addEdge("Alise", "First");
         graph.addEdge("Alise", "C++");
         graph.printAdjacencyList();
-        */
+
 
         graph.addEdge("1", "2");
         graph.addEdge("1", "3");
@@ -34,6 +37,6 @@ public class Main {
         graph.addEdge("5", "1");
 
        // graph.printAdjacencyList();
-        //graph.DFSTree();
+        //graph.DFSTree();*/
     }
 }
