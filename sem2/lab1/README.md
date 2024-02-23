@@ -100,18 +100,29 @@ class YoungTableau
         {
             if (table.size() == 0)
                 std::cout << "\nТаблица пуста.\n";
-            else
-            {
-                std::cout << "\nТаблица Юнга:\n";
-                for (auto& row : table)
-                {
-                    for (int element : row)
-                    {
-                        std::cout << element << " ";
-                    }
-                    std::cout << "\n";
-                }
-            }
+				bool nonempty_row = 0;
+			for (auto& row : table)
+			{
+				if (!row.empty())
+				{
+					nonempty_row = 1;
+					break;
+				}
+			}
+			if (!nonempty_row)
+			{
+				std::cout << "\nТаблица пуста.\n";
+				return;
+			}
+            std::cout << "\nТаблица Юнга:\n";
+			for (auto& row : table)
+			{
+				for (int element : row)
+				{
+					std::cout << element << " ";
+				}
+				std::cout << "\n";
+			}
         }
 
         void printToFile(std::string filename)
@@ -119,18 +130,15 @@ class YoungTableau
             std::ofstream fout(filename);
             if (table.size() == 0)
                 fout << "Таблица пуста.";
-            else
-            {
-                fout << "Таблица Юнга:";
-                for (auto& row : table)
-                {
-                    fout << "\n";
-					for (int element : row)
-                    {
-                        fout << element << " ";
-                    }
-                }
-            }
+            fout << "Таблица Юнга:";
+			for (auto& row : table)
+			{
+				fout << "\n";
+				for (int element : row)
+				{
+					fout << element << " ";
+				}
+			}
 
             std::cout << "Таблица была выведена в " << filename << "\n";
         }

@@ -99,19 +99,33 @@ class YoungTableau
         {
             // Если таблица пуста, сообщаем об этом
             if (table.size() == 0)
-                std::cout << "\nТаблица пуста.\n";
-            // Иначе выводим её целиком
-            else
             {
-                std::cout << "\nТаблица Юнга:\n";
-                for (auto& row : table)
+                std::cout << "\nТаблица пуста.\n";
+                return;
+            }
+            bool nonempty_row = 0;
+            for (auto& row : table)
+            {
+                if (!row.empty())
                 {
-                    for (int element : row)
-                    {
-                        std::cout << element << " ";
-                    }
-                    std::cout << "\n";
+                    nonempty_row = 1;
+                    break;
                 }
+            }
+            if (!nonempty_row)
+            {
+                std::cout << "\nТаблица пуста.\n";
+                return;
+            }
+            // Иначе выводим её целиком
+            std::cout << "\nТаблица Юнга:\n";
+            for (auto& row : table)
+            {
+                for (int element : row)
+                {
+                    std::cout << element << " ";
+                }
+                std::cout << "\n";
             }
         }
 
@@ -121,18 +135,32 @@ class YoungTableau
             std::ofstream fout(filename);
 			// Если таблица пуста, сообщаем об этом
             if (table.size() == 0)
-                fout << "Таблица пуста.";
-            // Иначе выводим её целиком
-            else
             {
-                fout << "Таблица Юнга:";
-                for (auto& row : table)
+                fout << "Таблица пуста.";
+                return;
+            }
+            bool nonempty_row = 0;
+            for (auto& row : table)
+            {
+                if (!row.empty())
                 {
-                    fout << "\n";
-					for (int element : row)
-                    {
-                        fout << element << " ";
-                    }
+                    nonempty_row = 1;
+                    break;
+                }
+            }
+            if (!nonempty_row)
+            {
+                fout << "Таблица пуста.";
+                return;
+            }
+            // Иначе выводим её целиком
+            fout << "Таблица Юнга:";
+            for (auto& row : table)
+            {
+                fout << "\n";
+			    for (int element : row)
+                {
+                    fout << element << " ";
                 }
             }
 
