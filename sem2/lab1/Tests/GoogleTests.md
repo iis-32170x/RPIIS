@@ -1,4 +1,5 @@
-```#include "pch.h"
+``` c++
+#include "pch.h"
 #include "D:\БГУИР\Пиво\sem2\PriorityQueue\PriorityQueue.h"
 
 TEST(PriorityQueueTest, PushAndPopTest) {
