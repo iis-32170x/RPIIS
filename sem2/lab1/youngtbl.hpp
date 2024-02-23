@@ -56,6 +56,7 @@ class YoungTableau
                 {
                     row.erase(it);
                     std::cout << "Из таблицы был удалён первый встретившийся элемент " << element << ".\n";
+                    in_table = 1;
                     break;
                 }
             }
