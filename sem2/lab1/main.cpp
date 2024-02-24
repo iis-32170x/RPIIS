@@ -37,10 +37,8 @@ int main()
     }
     cout << endl;
 
-    // Построение дерева из массива
     Node* root = buildTree(arr, 0, n - 1);
 
-    // Вывод дерева
     cout << "Дерево: " << endl;
     printTree(root);
     cout << endl;
