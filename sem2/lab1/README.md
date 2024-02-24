@@ -175,7 +175,7 @@ void Peresechenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
 ## <p align="center">Вывод:</p>
 В ходе выполнения работы познакомился созданием библиотек в С++, реализоавал библиотеку работы с массивами,а также создал систему тестов,которая проверяет корректность созданной библиотеки, отточил свои навыки в создании структур и функций.
 ## <p align="center">Используемые источники:</p>
-
+1. [Литература](https://drive.google.com/drive/folders/1rJjlVms04Betx1EkAgaek2xNpHV6c_1j)
 2. [Создание библиотеки](https://www.youtube.com/watch?v=pAxEfF2yVlM&t=1s)
 ****
 
