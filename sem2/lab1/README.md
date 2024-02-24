@@ -27,11 +27,24 @@
 
 
 ## <p align="center">Описание используемых алгоритмов:</p>
-1. **Метод вставки (enqueue):**
-   Этот метод добавляет элемент в конец вектор
+1. **Алгоритм добавления элемента:**
+   Этот алгоритм добавляет элемент в множество
 ```cpp
-void Queue::enqueue(int value) {
-    queue.push_back(value);
+void Add(Branch*& current, int value) {
+	if (!current) {
+		current = new Branch(value);
+		return;
+	}
+	else
+		if (value < current->data) {
+			Add(current->left, value);
+		}
+		else if (value > current->data)
+		{
+			Add(current->right, value);
+		}
+		else 	return;
+}
 }
 ```
 2.**Метод удаления (dequeue):**
