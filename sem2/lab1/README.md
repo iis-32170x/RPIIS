@@ -29,7 +29,7 @@
 ## <p align="center">Описание используемых алгоритмов:</p>
 1. **Алгоритм добавления элемента:**
    Этот алгоритм добавляет элемент в множество
-```cpp
+```
 void Add(Branch*& current, int value) {
 	if (!current) {
 		current = new Branch(value);
