@@ -9,7 +9,7 @@
 ## Алгоритм 
 Данный код состоит из двух функций и основной части программы.Разберем каждую часть по отдельности
 Функция parse_set(input_set):
-```pyhton
+```python
 ef parse_set(input_set):
 input_set = input_set.strip()
 if not input_set.startswith('{') or not input_set.endswith('}'):
