@@ -42,14 +42,81 @@
 
 
 ## <p align="center">Описание используемых алгоритмов:</p>
+1) Структура treenode: объявляем структуру дерева, содержащую информацию о узлах(data) и вектор указателей на детей(`vector <treenode*>`) и  указатель родителей(`treenode* parent`)
+ ```cpp
+struct treenode {
+    int data;
+    vector<treenode*> children;
+    treenode* parent;
+};
+```
+2) Функция getnewnode: Выделяем память под новые узлы дерева и присваиваем им значение(data)
+```cpp
+treenode* getnewnode(int data) {
+    treenode* newnode = new treenode();
+    newnode->data = data;
+    return newnode;
+}
+```
+3) Функция addchild:  Получаем новый узел(`newnode`) с помощью `getnewnode` и устанавливаем указатель родительского узла на новый узел
+```cpp
+void addchild(treenode* node, int data) {
+    treenode* newnode = getnewnode(data);
+    newnode->parent = node;
+    node->children.push_back(newnode);
+}
+```
+4) Функция вывода дерева в консоль printTree: Выводим структуру дерева с помощью рекурсии
+```cpp
+void printTree(treenode* root, int depth = 0) {
+    if (root == nullptr)
+        return;
 
+    // Print the current node
+    for (int i = 0; i < depth; i++)
+        cout << "  ";
+    cout << "|--" << root->data << endl;
 
+    // Print each child
+    for (treenode* child : root->children)
+        printTree(child, depth + 1);
+}
+```
+5) Функция поиска узла findnode: Ищет узел в дереве с указанными данными(`data`),используя рекурсию, и возвращает указатель на него.
+ ```cpp
+treenode* findnode(treenode* node, int a) {
+    if (node == nullptr)
+        return nullptr;
 
+    if (node->data == a)
+        return node;
 
-## <p align="center">Вывод:</p>
+    treenode* foundnode = nullptr;
+    for (treenode* child : node->children) {
+        foundnode = findnode(child, a);
+        if (foundnode != nullptr)
+            break;
+    }
 
+    return foundnode;
+}
+```
+6)Функция освобождения память deleteTree: Рекурсивно удаляет все дерево.
+```cpp
+void deleteTree(treenode* root) {
+    if (root == nullptr)
+        return;
 
+    for (treenode* child : root->children) {
+        deleteTree(child);
+    }
 
+    delete root;
+}
+```
 
 
 ## <p align="center">Используемые источники:</p>
+1) Помощь в создании библиотеки https://www.youtube.com/watch?v=ZwaE-JM7smI.
+2) Помощь в реализации N-ary tree 1.https://www.youtube.com/watch?v=bADJ2IjFsWs 2. https://youtu.be/6j4Nz_ZLz9w?si=8LDzmKlT6VuEUftl
+3) Помощь в освоении материала https://chat.openai.com
