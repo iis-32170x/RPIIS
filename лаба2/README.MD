@@ -7,7 +7,7 @@
 
 - `Элментом множества` может являться буквольный символ, число, кортеж, отдельное множество, пустое множество, сочетание буквы и числа.
 ## Алгоритм 
-Самое сложное в данной лабораторной работе сделать правильное считывание множества из файла и предусмотреть все возможные исключения 
+Самое сложное в данной лабораторной работе сделать правильное считывание множества из файла и предусмотреть все возможные исключения. 
 ```python
 def parse_set(input_set):
     input_set = input_set.strip()
@@ -18,4 +18,31 @@ def parse_set(input_set):
     elements = set()
     stack = []
     current_element = ""
+```
+В этом фрагменте определена функция parse_set, которая принимает входное множество input_set. Сначала удаляются начальные и конечные пробелы с помощью метода strip(). Затем проверяется, начинается ли input_set с символа '{' и заканчивается ли символом '}'. Если это не так, выбрасывается исключение ValueError с сообщением "Множество должно быть заключено в фигурные скобки." Затем удаляются первая и последняя скобки из input_set с помощью среза input_set[1:-1], чтобы получить только элементы между фигурными скобками. Создаются пустое множество elements, пустой стек stack и пустая строка current_element, которая будет использоваться для построения текущего элемента множества.
+```python
+for char in input_set:
+        if char == ',' and not stack:
+            elements.add(current_element.strip())
+            current_element = ""
+        elif char == ' ':
+            raise ValueError("Между элементами множества должна быть запятая.")
+        elif char == '{':
+            stack.append('{')
+            current_element += char
+        elif char == '}':
+            if not stack or stack[-1] != '{':
+                raise ValueError("Некорректная закрывающая скобка '}'.")
+            stack.pop()
+            current_element += char
+        elif char == '<':
+            stack.append('<')
+            current_element += char
+        elif char == '>':
+            if not stack or stack[-1] != '<':
+                raise ValueError("Некорректная закрывающая скобка '>'.")
+            stack.pop()
+            current_element += char
+        else:
+            current_element += char
 ```
