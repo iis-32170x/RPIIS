@@ -1,7 +1,7 @@
 #include "NG.h"
 
 void Ngraph::AddVertex(int a) {
-    if (graph.find(a) == graph.end()) {
+    if ((graph.find(a) == graph.end())&&a>0) {
         graph[a] = std::set<int>();
     }
     
