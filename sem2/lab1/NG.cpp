@@ -7,18 +7,13 @@ void Ngraph::AddVertex(int a) {
     
 }
 
-void Ngraph::DeleteEdge(int a, int b)
-{
-    if (graph.find(a) == graph.end() || graph.find(b) == graph.end() || graph[a].find(b) == graph[a].end()) {
+void Ngraph::AddEdge(int a, int b) {
+    if (graph.find(a) == graph.end() || graph.find(b) == graph.end()) {
         return;
-
-    }
-        graph[a].erase(b);
-        graph[b].erase(a);
-    
+    } 
+    graph[a].insert(b);
+    graph[b].insert(a);
 }
-
-
 
 void Ngraph::DeleteVertex(int a)
 {
@@ -29,16 +24,14 @@ void Ngraph::DeleteVertex(int a)
     }
 }
 
-
-void Ngraph::AddEdge(int a, int b) {
-    if (graph.find(a) == graph.end() || graph.find(b) == graph.end()) {
+void Ngraph::DeleteEdge(int a, int b)
+{
+    if (graph.find(a) == graph.end() || graph.find(b) == graph.end() || graph[a].find(b) == graph[a].end()) {
         return;
 
-    } 
-    graph[a].insert(b);
-    graph[b].insert(a);
-
-  
+    }
+        graph[a].erase(b);
+        graph[b].erase(a);
 }
 
 
