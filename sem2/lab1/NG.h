@@ -3,7 +3,6 @@
 #include <vector>
 #include <set>
 #include <map>
-#include <iostream>
 
 class Ngraph {
 public:
