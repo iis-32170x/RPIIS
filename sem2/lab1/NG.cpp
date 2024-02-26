@@ -41,20 +41,6 @@ void Ngraph::AddEdge(int a, int b) {
   
 }
 
-void Ngraph::printGraph()
-{
-        for (const auto& kv : graph) {
-            std::cout << "Вершина " << kv.first << " смежна с вершинами ";
-            for (int neighbor : kv.second) {
-                std::cout << neighbor << " ";
-            }
-            std::cout << std::endl;
-        }
-    
-}
-
-
-
 
 void Ngraph::DFS(int a, std::map<int, bool>& visited)
 {
