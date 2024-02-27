@@ -34,6 +34,7 @@ private:
     void swap(Node*& a, Node*& b);
     void split(Node* p, int x, Node*& f, Node*& s);
     Node* merge(Node* l, Node* r);
+    bool InTree(Node* node, int key);
 public:
     Node* root = nullptr;
     void insert(int x);
@@ -44,7 +45,6 @@ public:
     void outTree(Node* node,int);
     Node* search(Node*, int);
     Node* unite(Node* l, Node* r);
-    bool InTree(Node* node, int key);
     Node* intersect(Node* root1, Node* root2);
 };
 #endif
