@@ -6,8 +6,6 @@
 
 class Ngraph {
 public:
-
-	
    	void AddVertex(int a);
 	void AddEdge(int a, int b);
 	void DeleteVertex(int a);
