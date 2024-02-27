@@ -4,6 +4,7 @@ void Treap::swap(Node*& a, Node*& b) {
     Node* temp = a;
     a = b;
     b = temp;
+    delete temp;
 }
 
 void Treap::split(Node* p, int x, Node*& f, Node*& s) {
