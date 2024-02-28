@@ -120,7 +120,9 @@ void Ngraph::DFSTree(int first)
 Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 6 тестов: 5 тестов на работу всех функций и 1 на ожидаемую ошибку. Все тесты прошли успешно.
 
 <p align="center">
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/624c8845-293e-4810-80f9-7bc6e2991960)
+   
+  ![tests](https://github.com/iis-32170x/RPIIS/assets/147048129/c8080879-0aba-4a4e-8886-221105d3fdf4)
+
 </p>
 
 **Система тестов:**
