@@ -19,15 +19,8 @@ void Ngraph::AddVertex(int a) {
 }
 
 void Ngraph::AddEdge(int a, int b) {
-    try
-    {
-        if (!VertexExists(a) || VertexExists(b)) {
-            throw std::invalid_argument("This vertex(es) is not exist");
-        }
-    }
-    catch (const std::invalid_argument& e)
-    {
-        std::cerr << "Exception caught: " << e.what() << std::endl;
+    if (!VertexExists(a) || !VertexExists(b)) {
+        throw std::invalid_argument("This vertex(es) is not exist");
     }
     graph[a].insert(b);
     graph[b].insert(a);
