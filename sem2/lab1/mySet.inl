@@ -113,6 +113,27 @@ bool mySet<T>::contain(T value) const {
 
 
 template <typename T>
+int mySet<T>::index(T value) const {
+    int left = 0;
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (set[mid] == value) {
+            return mid;
+        } else if (set[mid] < value) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+
+template <typename T>
 int mySet<T>::index_to_insert(T value) {
     int left = 0;
     int right = size - 1;
@@ -354,4 +375,3 @@ void printSet(const mySet<T> set, char end){
     }
     std::cout << "}" << end;
 }
-
