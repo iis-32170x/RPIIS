@@ -128,101 +128,90 @@ void Ngraph::DFSTree(int first)
 **Система тестов:**
 
 ```cpp
-#include "pch.h"
 #include <gtest/gtest.h>
-#include "../priorituQueue/priorityQueue.h"
-using namespace std;
+#include "pch.h"
+#include "../Undirected graph/undirectedGraph.h"
 
-//базовый тест на вставку и извлечение
-TEST(PriorityQueueTest, InsertAndExtract1) {
-    PriorityQueue pq;
+TEST(NgraphTest, AddVertex) {
+    Ngraph graph;
+    graph.AddVertex(1);
+    graph.AddVertex(2);
+    graph.AddVertex(3);
 
-    EXPECT_TRUE(pq.isEmpty());
-
-    pq.insert(10);
-    pq.insert(5);
-    pq.insert(20);
-
-    EXPECT_FALSE(pq.isEmpty());
-
-    EXPECT_EQ(pq.extract(), 20);
-    EXPECT_EQ(pq.extract(), 10);
-    EXPECT_EQ(pq.extract(), 5);
-
-    EXPECT_TRUE(pq.isEmpty());
+    EXPECT_TRUE(graph.VertexExists(1));
+    EXPECT_TRUE(graph.VertexExists(2));
+    EXPECT_TRUE(graph.VertexExists(3));
+    EXPECT_FALSE(graph.VertexExists(0));
 }
 
-//базовый тест на вставку и извлечение
-TEST(PriorityQueueTest, InsertAndExtract2) {
-    PriorityQueue pq;
+TEST(NgraphTest, AddEdge) {
+    Ngraph graph;
+    graph.AddVertex(1);
+    graph.AddVertex(2);
+    graph.AddVertex(3);
 
-    pq.insert(10);
-    pq.insert(5);
-    pq.insert(20);
-    pq.insert(15);
-    pq.insert(25);
+    graph.AddEdge(1, 2);
+    graph.AddEdge(2, 3);
 
-    EXPECT_EQ(pq.extract(), 25);
-    EXPECT_EQ(pq.extract(), 20);
-    EXPECT_EQ(pq.extract(), 15);
-    EXPECT_EQ(pq.extract(), 10);
-    EXPECT_EQ(pq.extract(), 5);
-
-    EXPECT_TRUE(pq.isEmpty());
+    EXPECT_TRUE(graph.EdgeExists(1, 2));
+    EXPECT_TRUE(graph.EdgeExists(2, 1));
+    EXPECT_TRUE(graph.EdgeExists(2, 3));
+    EXPECT_FALSE(graph.EdgeExists(1, 3));
 }
 
-//тест на вставку и извлечение с одинаковыми элементами
-TEST(PriorityQueueTest, InsertAndExtractWithDuplicates) {
-    PriorityQueue pq;
-    pq.insert(10);
-    pq.insert(5);
-    pq.insert(10);
-    pq.insert(8);
+TEST(NgraphTest, DeleteVertex) {
+    Ngraph graph;
+    graph.AddVertex(1);
+    graph.AddVertex(2);
+    graph.AddVertex(3);
 
-    EXPECT_EQ(pq.extract(), 10);
-    EXPECT_EQ(pq.extract(), 10);
-    EXPECT_EQ(pq.extract(), 8);
-    EXPECT_EQ(pq.extract(), 5);
-    EXPECT_TRUE(pq.isEmpty());
+    graph.AddEdge(1, 2);
+    graph.AddEdge(2, 3);
+
+    graph.DeleteVertex(2);
+
+    EXPECT_FALSE(graph.VertexExists(2));
+    EXPECT_FALSE(graph.EdgeExists(1, 2));
+    EXPECT_FALSE(graph.EdgeExists(2, 3));
 }
 
-//тест на извлечение из пустой очереди
-TEST(PriorityQueueTest, ExtractFromEmptyQueue) {
-    PriorityQueue pq;
+TEST(NgraphTest, DeleteEdge) {
+    Ngraph graph;
+    graph.AddVertex(1);
+    graph.AddVertex(2);
+    graph.AddVertex(3);
 
-    EXPECT_THROW(pq.extract(), std::out_of_range);
+    graph.AddEdge(1, 2);
+    graph.AddEdge(2, 3);
+
+    graph.DeleteEdge(1, 2);
+
+    EXPECT_FALSE(graph.EdgeExists(1, 2));
+    EXPECT_FALSE(graph.EdgeExists(2, 1));
+    EXPECT_TRUE(graph.EdgeExists(2, 3));
 }
 
-//тест на вставку и извлечение с отрицательными элементами
-TEST(PriorityQueueTest, InsertWithNegativeNumbers) {
-    PriorityQueue pq;
-    
-    pq.insert(10);
-    pq.insert(-5);
-    pq.insert(25);
-    pq.insert(-10);
-    pq.insert(-2);
+TEST(NgraphTest, DFSTreeTest) {
+    Ngraph graph;
 
-    EXPECT_EQ(pq.extract(), 25);
-    EXPECT_EQ(pq.extract(), 10);
-    EXPECT_EQ(pq.extract(), -2);
-    EXPECT_EQ(pq.extract(), -5);
-    EXPECT_EQ(pq.extract(), -10);
-    EXPECT_TRUE(pq.isEmpty());
-}
+    graph.AddVertex(1);
+    graph.AddVertex(2);
+    graph.AddVertex(3);
+    graph.AddEdge(1, 2);
+    graph.AddEdge(2, 3);
 
-int main(int argc, char** argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    testing::internal::CaptureStdout();
+    graph.DFSTree(1);
+    std::string output = testing::internal::GetCapturedStdout();
+
+    ASSERT_EQ(output, "1 2 3 \n");
 }
 ```
 ## <p align="center">Вывод:</p>
 
-В результате выполнения лабораторной работы были углублены знания в области принципов работы приоритетных очередей, основанных на max-heap. Освоена методика "подъема" и "опускания" элементов, что позволило эффективно управлять структурой данных с максимальным элементом в корне. Также приобретены навыки применения стандартных контейнеров C++, в частности, использование `std::vector` для представления бинарной кучи.
+В результате выполнения лабораторной работы были упорядочены знания по теории графов, в частности по работе с неориентированными графами и поиску в глубину. Улучшены навыки работы со стандартными библиотеками С++, а так же получен опыт в создании собственной статической библиотеки, что явно пригодится в будущем при более масштабных работах.
 
-Реализована библиотека для приоритетной очереди, включающая грамотные операции вставки, извлечения и проверки на пустоту, обеспечив эффективность и корректность работы структуры данных. Написаны тесты с использованием Google Test, что позволило убедиться в надежности и правильности реализации.
-
-Лабораторная работа предоставила глубокое понимание проектирования и реализации приоритетных очередей. Опыт работы с тестовыми фреймворками, в данном случае с Google Test, был ценен для проверки функциональности кода и обеспечения его корректности. Использование стандартных исключений для обработки ошибок стало неотъемлемой частью опыта в создании надежных программных решений.
+Освоена работа с тестовыми фреймворками для проверки правильности работы программы, в данном случае библиотеки.
 
 ## <p align="center">Используемые источники:</p>
 1. Алгоритмы: построение и анализ, 2-е издание. : Пер. с англ. – М. :
