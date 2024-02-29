@@ -43,8 +43,10 @@ TEST(IntersectionTest, ValidIntersection2) {
 
     std::vector<std::string> result = intersection(filename);
 
-    ASSERT_EQ(result.size(), 1);
+    ASSERT_EQ(result.size(), 3);
     EXPECT_EQ(result[0], "S_d");
+    EXPECT_EQ(result[1], "S_d");
+    EXPECT_EQ(result[2], "S_d");
 
     std::remove(filename.c_str());
 }
