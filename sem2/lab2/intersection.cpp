@@ -146,7 +146,6 @@ void intersectionCalc(std::vector<std::string>& result, Set set1, Set set2) {
         for (size_t j = 0; j < set2.subsets.size(); j++) {
             if (set1.subsets[i] == set2.subsets[j]) {
                 result.push_back(set1.subsets[i]);
-                break;
             }
         }
     }
@@ -165,4 +164,3 @@ std::vector<std::string> intersection(const std::string& filename){
 
     return result;
 }
-
