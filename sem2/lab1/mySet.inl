@@ -30,7 +30,11 @@ mySet<T>& mySet<T>::operator=(const mySet<T> &other) {
 
 template <typename T>
 mySet<T>::~mySet() {
-    delete[] set;
+    if (size > 0) {
+        delete[] set;
+        size = 0;
+        set = nullptr;
+    }
 }
 
 template <typename T>
@@ -78,9 +82,11 @@ void mySet<T>::del(T value) {
 
 template<typename T>
 void mySet<T>::clear() {
-    delete[] set;
-    size = 0;
-    set = new T[size];
+    if (size > 0) {
+        delete[] set;
+        size = 0;
+        set = nullptr;
+    }
 }
 
 

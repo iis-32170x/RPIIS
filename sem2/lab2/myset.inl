@@ -30,7 +30,11 @@ mySet<T>& mySet<T>::operator=(const mySet<T> &other) {
 
 template <typename T>
 mySet<T>::~mySet() {
-    delete[] set;
+    if (size > 0) {
+        delete[] set;
+        size = 0;
+        set = nullptr;
+    }
 }
 
 template <typename T>
@@ -78,9 +82,11 @@ void mySet<T>::del(T value) {
 
 template<typename T>
 void mySet<T>::clear() {
-    delete[] set;
-    size = 0;
-    set = new T[size];
+    if (size > 0) {
+        delete[] set;
+        size = 0;
+        set = nullptr;
+    }
 }
 
 
@@ -109,6 +115,27 @@ bool mySet<T>::contain(T value) const {
     }
 
     return false;
+}
+
+
+template <typename T>
+int mySet<T>::index(T value) const {
+    int left = 0;
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (set[mid] == value) {
+            return mid;
+        } else if (set[mid] < value) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
 }
 
 
@@ -354,4 +381,3 @@ void printSet(const mySet<T> set, char end){
     }
     std::cout << "}" << end;
 }
-
