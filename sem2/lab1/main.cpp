@@ -102,7 +102,7 @@ int main()
             cout << endl;
         }
 
-        void clearTree(Node * root);
+         clearTree(root);
 
     return 0;
 }
