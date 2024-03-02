@@ -317,7 +317,7 @@ void clearTree(Node* root)
 Выбираем операцию выхода, выходим из программы, при этом очищая за собой память.
 
 ## Источники
-[youtubchik](https://www.youtube.com/watch?v=g0neKAAd668)\
+https://www.youtube.com/watch?v=g0neKAAd668
 
 https://habr.com/ru/articles/267855/
 
