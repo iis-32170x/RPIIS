@@ -300,19 +300,19 @@ void clearTree(Node* root)
 Сортируем массив по возрастанию: {0 1 2 3 4 5 6 7 9 10}
 
 Получаем бинарное дерево поиска.
-
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/скрин1.png)
 
 Выбираем операцию вставки элемента в дерево и получаем преобразованное дерево с добавленным узлом.
-
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/скрин2.png)
 
 Выбираем операцию поиска элемента, вводим искомый элемент и получаем результат по находке.
-
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/скрин3.png)
 
 Выбираем операцию удаления элемента, вводим искомый элемент и получаем получаем преобразованное дерево без этого узла.
-
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/скрин4.png)
 
 Выбираем операцию обхода деревьев и получаем результат.
-
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/скрин5.png)
 
 Выбираем операцию выхода, выходим из программы, при этом очищая за собой память.
 
@@ -320,7 +320,7 @@ void clearTree(Node* root)
 Тестирование проводилось с помощью фреймворка Google test.
 ![Image alt](https://github.com/iluxa313/iluxa313/blob/main/Снимок%20экрана%202024-03-03%20140420.png)
 
-## Источники
+## Источники:
 - https://www.youtube.com/watch?v=g0neKAAd668
 
 - https://habr.com/ru/articles/267855/
