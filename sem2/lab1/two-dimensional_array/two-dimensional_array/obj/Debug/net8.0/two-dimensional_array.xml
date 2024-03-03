@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>two-dimensional_array</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:two_dimensional_array.TwoArray.#ctor(System.Int32[][]@)" -->
+        <member name="M:two_dimensional_array.TwoArray.NewArray(System.Int32[][]@)">
+            <summary>
+            Это метод, который создаёт совсем новый массив
+            </summary>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.AddElement(System.Int32[][]@)">
+            <summary>
+            Это метод, с помощью которого вы добавляете все элементы в пустой массив
+            </summary>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.Sort(System.Int32[][]@)">
+            <summary>
+            Это метод, который сортирует ваш массив
+            </summary>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.OutPut(System.Int32[][]@)">
+            <summary>
+            Это метод, который выводит ваш массив
+            </summary>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.InsertElement(System.Int32[][]@,System.Int32)">
+            <summary>
+            Это метод, который добавляет один элемент в ваш массив
+            </summary>
+            <param name="element">Число, которое нужно вставить.</param>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.FindElement(System.Int32[][]@,System.Int32,System.Int32)">
+            <summary>
+            Это метод, который находит элемент, находящийся в 
+            определенной строке и определенном столбце
+            </summary>
+            <param name="row">Строка искомого элемента.</param>
+            <param name="column">Столбец искомого элемента</param>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.FindElement(System.Int32[][]@,System.Int32)">
+            <summary> Это метод, который находит строку и столбец искомого элемента</summary>
+            <param name="element">Элемент, который нужно найти.</param>
+            <returns>В консоль строка и столбец искомого элемента.</returns>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.Merge(System.Int32[][]@,System.Int32[][]@)">
+            <summary>
+            Это метод, который меняет наш массив на
+            объединение нашего массива и вводимого
+            </summary>
+            <param name="secondMass">Объект класса, который имеет массив.</param>
+        </member>
+        <member name="M:two_dimensional_array.TwoArray.Intersection(System.Int32[][]@,System.Int32[][]@)">
+            <summary>
+            Это метод, который меняет наш массив на
+            пересечение нашего массива и вводимого
+            </summary>
+            <param name="secondMass">Объект класса, который имеет массив.</param>
+        </member>
+    </members>
+</doc>
