@@ -1,11 +1,11 @@
-def GenereteBanch(branch, ban, n):
-    if (len(branch) == n):
+def generete_branch(branch, ban):
+    if (len(branch) == len(ban)):
         print(ban)
         return
 
-    for i in range(len(branch)):
-        ban.append(branch[i])
-        GenereteBanch(branch, ban, n + 1)
+    for el in range(len(branch)):
+        ban.append(branch[el])
+        generete_branch(branch, ban)
         ban.pop()
 
 
@@ -15,4 +15,4 @@ if __name__ == "__main__":
         if branch.count(i) > 1:
             branch.remove(i)
     ban = []
-    GenereteBanch(branch, ban, 0)
+    generete_branch(branch, ban)
