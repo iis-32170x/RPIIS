@@ -1,24 +1,24 @@
 #pragma once
-
+using namespace std;
 
 
 class MyQueue {
 public:
-    MyQueue();
-    virtual ~MyQueue();
+    MyQueue(); // Конструктор
+    virtual ~MyQueue(); // Деструктор
 
-    void    Push(int value);
-    int     Pop();
-    void    View();
-    bool    Check();
-    void    HeadElemenetToTail();
+    void Push(string information); // Добавление элемента в очередь
+    string Pop(); // Извлечение элемента из очереди
+    void View(); // Просмотр очереди
+    bool Check(); // Проверка на пустоту очереди
+    void HeadElemenetToTail(); // Перемещение элемента из головы в хвост
 
 private:
     typedef struct QueueElement {
-        int             el;
-        QueueElement* prev;
+        string inf; // Информация о элементе
+        QueueElement* prev; // Указатель на предыдущий элемент
     } QueueElement;
 
-    QueueElement* last;
-    QueueElement* begin;
+    QueueElement* last; // Указатель на последний элемент очереди
+    QueueElement* begin; // Указатель на первый элемент очереди
 };
