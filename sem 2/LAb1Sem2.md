@@ -28,16 +28,13 @@
 ```cpp
 #include<iostream>
 #include <conio.h>
-#include<cctype>
 #include<string>
 #include "ПИОИВИС лаб1.h"
 #include <vector>
 using namespace std;
 
-
-
 MyQueue::MyQueue() {
-    last = begin = NULL;
+    last = begin = nullptr;
 }
 
 MyQueue::~MyQueue() {
@@ -49,12 +46,12 @@ MyQueue::~MyQueue() {
 }
 
 bool MyQueue::Check() {
-    return(begin == NULL);
+    return (begin == nullptr);
 }
 
-void MyQueue::Push(int value) {
+void MyQueue::Push(std::string information) {
     QueueElement* tmp = new QueueElement;
-    tmp->el = value;
+    tmp->inf = information;
     tmp->prev = nullptr;
 
     if (begin == nullptr) {
@@ -68,178 +65,158 @@ void MyQueue::Push(int value) {
 
 void MyQueue::View() {
     QueueElement* tmp = begin;
-    system("cls");
-    cout << "Очередь : ";
     while (tmp != nullptr) {
-        cout << tmp->el << " ";
+        std::cout << "(" << tmp->inf << ") ";
         tmp = tmp->prev;
     }
+    if (begin != nullptr) {
+        std::cout << "<- хвост очереди";
+    }
+    std::cout << "\nнажмите любую клавишу, чтобы выйти из просмотра : ";
+    while (!_kbhit()) {
+    }
+    _getch();
+    system("cls");
 }
 
-int MyQueue::Pop() {
+std::string MyQueue::Pop() {
     if (Check()) {
-        return 1234567;
+        std::string popinf;
+        return popinf;
     }
     else {
-        int popel = begin->el;
+        std::string popinf = begin->inf;
         QueueElement* tmp = begin;
         begin = begin->prev;
         delete tmp;
-        return popel;
+        return popinf;
     }
 }
 
 void MyQueue::HeadElemenetToTail() {
-    setlocale(LC_ALL, "ru");
-    int mass[] = { 1,2,3,4,5 };
-    for (int c : mass) {
+    std::vector <std::string> infomation = { "молоко","хлеб","мука","сырок","вода","батон" };
+    for (auto& c : infomation) {
         Push(c);
     }
-    cout << "Очередь : ";
+    std::cout << "Очередь : ";
     View();
     Push(Pop());
-    cout << "Переделанная очередь : ";
+    std::cout << "Переделанная очередь : ";
     View();
 }
 
 int main() {
     setlocale(LC_ALL, "ru");
     MyQueue queue;
-    int choice = 0, choice2 = 0, choice3 = 0, choice4 = 0, popel = 0, el = 0;
-    bool digit = true;
-    bool size = false;
+    int choice = 0, choice2 = 0, choice3 = 0, choice4 = 0;
     string elm;
-
+    string popinf;
     do {
-        cout << "Выбирете действие\n"
-            <<"1.Перейти к обычному меню\n"
-            <<"2.Перейти к методу перемещающему элемент из головы очереди в хвост\n";
-        cin >> elm;
-        digit = true;
-        size = false;
-        for (char c : elm) {
-            if (!isdigit(c)) {
-                digit = false;
+        cout << "Выберите действие\n"
+            << "1.Перейти к обычному меню\n"
+            << "2.Перейти к методу перемещающему элемент из головы очереди в хвост\n";
+        getline(cin, elm);
+        if (elm.size() == 1) {
+            if (elm[0] == '1') {
+                choice4 = 1;
+            }
+            else if (elm[0] == '2') {
+                choice4 = 2;
             }
         }
-        if (digit && elm.size() < 2) {
-            if (stoi(elm) == 2 || stoi(elm) == 1) {
-                choice4 = stoi(elm);
-                size = true;
-            }
-        }
-        elm.clear();
         system("cls");
-    } while (!digit || !size);
+        elm.clear();
+    } while (choice4 == 0);
     if (choice4 == 1) {
+        // Обычное меню
         do {
             do {
-                cout << "выбирете действие\n"
+                choice = 0;
+                cout << "Выберите действие\n"
                     << " 1.Добавление\n"
                     << " 2.Взятие элемента\n"
                     << " 3.Просмотр очереди\n"
                     << " 4.Выйти"
                     << endl;
-                cin >> elm;
-                digit = true;
-                size = false;
-                for (char c : elm) {
-                    if (!isdigit(c)) {
-                        digit = false;
+                getline(cin, elm);
+                if (elm.size() == 1) {
+                    if (isdigit(elm[0])) {
+                        choice = stoi(elm);
                     }
                 }
-                if (digit && elm.size() < 2) {
-                    choice = stoi(elm);
-                    size = true;
-                }
-                elm.clear();
                 system("cls");
-            } while (!digit || !size);
+                elm.clear();
+            } while (choice == 0);
             switch (choice) {
             case 1:
+                // Добавление элементов в очередь
                 do {
-                    do {
-                        system("cls");
-                        cout << "Введите элемент : ";
-                        cin >> elm;
-                        digit = true;
-                        size = false;
-                        for (char c : elm) {
-                            if (!isdigit(c)) {
-                                digit = false;
-                            }
-                        }
-                        if (digit && elm.size() < 6) {
-                            el = stoi(elm);
-                            size = true;
-                        }
-                        elm.clear();
-                    } while (!digit || !size);
                     system("cls");
-                    queue.Push(el);
                     do {
-                        cout << "Выбирете действие\n"
+                        cout << "Введите информацию : ";
+                        getline(cin, elm);
+                        system("cls");
+                    } while (elm.empty());
+                    queue.Push(elm);
+                    elm.clear();
+                    do {
+                        choice2 = 0;
+                        cout << "Выберите действие\n"
                             << " 1.Добавить еще\n"
                             << " 2.Больше не добавлять\n"
                             << endl;
-                        cin >> elm;
-                        digit = true;
-                        size = false;
-                        for (char c : elm) {
-                            if (!isdigit(c)) {
-                                digit = false;
+                        getline(cin, elm);
+                        if (elm.size() == 1) {
+                            if (elm[0] == '1') {
+                                choice2 = 1;
+                            }
+                            else if (elm[0] == '2') {
+                                choice2 = 2;
                             }
                         }
-                        if (digit && elm.size() < 2) {
-                            if (stoi(elm) == 1 || stoi(elm) == 2) {
-                                choice2 = stoi(elm);
-                                size = true;
-                            }
-                        }
-                        elm.clear();
                         system("cls");
-                    } while (!digit || !size);
+                        elm.clear();
+                    } while (choice2 == 0);
                 } while (choice2 != 2);
                 break;
             case 2:
-                popel = queue.Pop();
-                if (popel != 1234567) {
-                    do{
-                    cout << "Выбирете действие \n"
-                        << "1.Добавть взятый элемент в конец очереди \n"
-                        << "2.Удалить взятый элемент\n"
-                        << endl;
-                    cin >> elm;
-                    digit = true;
-                    size = false;
-                    for (char c : elm) {
-                        if (!isdigit(c)) {
-                            digit = false;
+                // Извлечение элемента из очереди
+                popinf = queue.Pop();
+                if (!popinf.empty()) {
+                    do {
+                        choice3 = 0;
+                        cout << "Выберите действие \n"
+                            << "1.Добавить взятый элемент в конец очереди \n"
+                            << "2.Удалить взятый элемент\n"
+                            << endl;
+                        getline(cin, elm);
+                        if (elm.size() == 1) {
+                            if (elm[0] == '1') {
+                                choice3 = 1;
+                            }
+                            else if (elm[0] == '2') {
+                                choice3 = 2;
+                            }
                         }
-                    }
-                    if (digit && elm.size() < 2) {
-                        if (stoi(elm) == 1 || stoi(elm) == 2) {
-                            choice3 = stoi(elm);
-                            size = true;
-                        }
-                    }
-                    elm.clear();
+                        system("cls");
+                        elm.clear();
+                    } while (choice3 == 0);
                     system("cls");
-                } while (!digit || !size);                   
-                system("cls");
                     switch (choice3) {
                     case 1:
-                        queue.Push(popel);
+                        // Добавление извлеченного элемента в конец очереди
+                        queue.Push(popinf);
                         cout << "Элемент добавлен в конец очереди ";
-                        cout << "\nнажмите любую клавишу что бы продолжить : ";
+                        cout << "\nнажмите любую клавишу, чтобы продолжить : ";
                         while (!_kbhit()) {
                         }
                         _getch();
                         system("cls");
                         break;
                     case 2:
+                        // Удаление извлеченного элемента
                         cout << "элемент был удален";
-                        cout << "\nнажмите любую клавишу что бы продолжить : ";
+                        cout << "\nнажмите любую клавишу, чтобы продолжить : ";
                         while (!_kbhit()) {
                         }
                         _getch();
@@ -250,7 +227,7 @@ int main() {
                 }
                 else {
                     cout << "очередь пустая";
-                    cout << "\nнажмите любую клавишу что бы продолжить : ";
+                    cout << "\nнажмите любую клавишу, чтобы продолжить : ";
                     while (!_kbhit()) {
                     }
                     _getch();
@@ -258,12 +235,9 @@ int main() {
                 }
                 break;
             case 3:
+                // Просмотр очереди
+                cout << "Очередь : ";
                 queue.View();
-                cout << "\nнажмите любую клавишу что бы выйти из просмотра : ";
-                while (!_kbhit()) {
-                }
-                _getch();
-                system("cls");
                 break;
             case 4:
             {
@@ -274,6 +248,7 @@ int main() {
         } while (choice != 4);
     }
     else {
+        // Вызов метода перемещения элемента из головы в хвост
         queue.HeadElemenetToTail();
     }
     return 0;
