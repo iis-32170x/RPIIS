@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">def </span><span class="s1">GenereteBanch</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">, </span><span class="s1">ban</span><span class="s2">, </span><span class="s1">n</span><span class="s2">):</span>
+    <span class="s0">if </span><span class="s2">(</span><span class="s1">len</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">) == </span><span class="s1">n</span><span class="s2">):</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s1">ban</span><span class="s2">)</span>
+        <span class="s0">return</span>
+
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">len</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">)):</span>
+        <span class="s1">ban</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">[</span><span class="s1">i</span><span class="s2">])</span>
+        <span class="s1">GenereteBanch</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">, </span><span class="s1">ban</span><span class="s2">, </span><span class="s1">n </span><span class="s2">+ </span><span class="s3">1</span><span class="s2">)</span>
+        <span class="s1">ban</span><span class="s2">.</span><span class="s1">pop</span><span class="s2">()</span>
+
+
+<span class="s0">if </span><span class="s1">__name__ </span><span class="s2">== </span><span class="s4">&quot;__main__&quot;</span><span class="s2">:</span>
+    <span class="s1">branch </span><span class="s2">= [</span><span class="s3">123</span><span class="s2">, </span><span class="s4">'Gpt'</span><span class="s2">, </span><span class="s3">567</span><span class="s2">, </span><span class="s4">'Gpt'</span><span class="s2">, </span><span class="s3">78.54</span><span class="s2">]</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">branch</span><span class="s2">:</span>
+        <span class="s0">if </span><span class="s1">branch</span><span class="s2">.</span><span class="s1">count</span><span class="s2">(</span><span class="s1">i</span><span class="s2">) &gt; </span><span class="s3">1</span><span class="s2">:</span>
+            <span class="s1">branch</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">i</span><span class="s2">)</span>
+    <span class="s1">ban </span><span class="s2">= []</span>
+    <span class="s1">GenereteBanch</span><span class="s2">(</span><span class="s1">branch</span><span class="s2">, </span><span class="s1">ban</span><span class="s2">, </span><span class="s3">0</span><span class="s2">)</span>
+</pre>
+</body>
+</html>
