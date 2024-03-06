@@ -2,13 +2,14 @@
 using System;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
+using TwoDimensionalArray;
 
 namespace TwoDimensionalArray
 {
     /// <summary>
     /// Класс, для работы с двумерным массивом
     /// </summary>
-    public class TwoArray
+    public class TwoArray: ITwoArray
     {
         /// <summary>
         /// Это метод, который создаёт совсем новый массив
