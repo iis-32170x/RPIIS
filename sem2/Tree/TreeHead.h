@@ -8,7 +8,9 @@ private:
 
 public:
 	std::vector<int>array;
+
 	int size;
+
 	FenwickTree(int);
 
 	void CreateTree();
@@ -16,9 +18,6 @@ public:
 	int Sum(int, int);
 
 	void Update(int, int);
-
-
-
 private:
 	int f(int);
 
