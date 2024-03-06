@@ -3,7 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
 
-namespace two_dimensional_array
+namespace TwoDimensionalArray
 {
     /// <summary>
     /// Класс, для работы с двумерным массивом
@@ -177,13 +177,19 @@ namespace two_dimensional_array
         [Description("Это метод, который находит строку и столбец искомого элемента")]
         public void FindElement(ref int[][] massive, int element)
         {
+            bool isElement = true;
             for(int i = 0; i < massive.Length; i++)
             {
                 for(int j = 0; j < massive[i].Length; j++)
                 {
-                    if (massive[i][j] == element) Console.WriteLine("Строка: {0}. Столбец: {1}", i,j);
+                    if (massive[i][j] == element)
+                    {
+                        Console.WriteLine("Строка: {0}. Столбец: {1}", i, j);
+                        isElement = false;
+                    }
                 }
             }
+            if(isElement) Console.WriteLine("Элемент не найден");
         }
         /// <summary>
         /// Это метод, который меняет наш массив на

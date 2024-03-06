@@ -5,7 +5,7 @@ using System.Data.Common;
 using System.IO;
 using System.Xml.Linq;
 
-namespace two_dimensional_array.Tests
+namespace TwoDimensionalArray.Tests
 {
     public class TwoArrayTests
     {
@@ -210,7 +210,7 @@ namespace two_dimensional_array.Tests
 
                 _twoArray.FindElement(ref massive, element);
 
-                string expectedOutput = "";
+                string expectedOutput = "Ёлемент не найден\r\n";
                 Assert.AreEqual(expectedOutput, sw.ToString());
             }
         }

@@ -4,42 +4,42 @@
         <name>two-dimensional_array</name>
     </assembly>
     <members>
-        <member name="T:two_dimensional_array.TwoArray">
+        <member name="T:TwoDimensionalArray.TwoArray">
             <summary>
             Класс, для работы с двумерным массивом
             </summary>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.NewArray(System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.NewArray(System.Int32[][]@)">
             <summary>
             Это метод, который создаёт совсем новый массив
             <param name="massive">Ступенчатый массив, который нужно инициализировать.</param>
             </summary>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.AddElement(System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.AddElement(System.Int32[][]@)">
             <summary>
             Это метод, с помощью которого вы добавляете все элементы в пустой массив
             <param name="massive">Ступенчатый массив, в который нужно добавлять элементы.</param>
             </summary>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.Sort(System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.Sort(System.Int32[][]@)">
             <summary>
             Это метод, который сортирует ваш массив
             <param name="massive">Ступенчатый массив, который нужно отсортировать.</param>
             </summary>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.OutPut(System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.OutPut(System.Int32[][]@)">
             <summary>
             Это метод, который выводит ваш массив
             </summary>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.InsertElement(System.Int32[][]@,System.Int32)">
+        <member name="M:TwoDimensionalArray.TwoArray.InsertElement(System.Int32[][]@,System.Int32)">
             <summary>
             Это метод, который добавляет один элемент в ваш массив
             </summary>
             <param name="element">Число, которое нужно вставить.</param>
             <param name="massive">Ступенчатый массив, в который нужно вставить элемент.</param>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.FindElement(System.Int32[][]@,System.Int32,System.Int32)">
+        <member name="M:TwoDimensionalArray.TwoArray.FindElement(System.Int32[][]@,System.Int32,System.Int32)">
             <summary>
             Это метод, который находит элемент, находящийся в 
             определенной строке и определенном столбце
@@ -48,13 +48,13 @@
             <param name="row">Строка искомого элемента.</param>
             <param name="column">Столбец искомого элемента</param>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.FindElement(System.Int32[][]@,System.Int32)">
+        <member name="M:TwoDimensionalArray.TwoArray.FindElement(System.Int32[][]@,System.Int32)">
             <summary> Это метод, который находит строку и столбец искомого элемента</summary>
             <param name="massive">Ступенчатый массив, в котором нужно найти элемент.</param>
             <param name="element">Элемент, который нужно найти.</param>
             <returns>В консоль строка и столбец искомого элемента.</returns>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.Merge(System.Int32[][]@,System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.Merge(System.Int32[][]@,System.Int32[][]@)">
             <summary>
             Это метод, который меняет наш массив на
             объединение нашего массива и вводимого
@@ -62,7 +62,7 @@
             <param name="massive">Ступенчатый массив, который нужно объединить с другим массивом.</param>
             <param name="secondMass">Ступенчатый массив, который должен быть объединен с первым массивом.</param>
         </member>
-        <member name="M:two_dimensional_array.TwoArray.Intersect(System.Int32[][]@,System.Int32[][]@)">
+        <member name="M:TwoDimensionalArray.TwoArray.Intersect(System.Int32[][]@,System.Int32[][]@)">
             <summary>
             Это метод, который меняет наш массив на
             пересечение нашего массива и вводимого

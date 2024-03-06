@@ -382,14 +382,14 @@
           }
         }
       },
-      "two-dimensional_array/1.0.0": {
+      "TwoDimensionalArray/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/two-dimensional_array.dll": {}
+          "bin/placeholder/TwoDimensionalArray.dll": {}
         },
         "runtime": {
-          "bin/placeholder/two-dimensional_array.dll": {}
+          "bin/placeholder/TwoDimensionalArray.dll": {}
         }
       }
     }
@@ -985,10 +985,10 @@
         "version.txt"
       ]
     },
-    "two-dimensional_array/1.0.0": {
+    "TwoDimensionalArray/1.0.0": {
       "type": "project",
-      "path": "../two-dimensional_array/two-dimensional_array.csproj",
-      "msbuildProject": "../two-dimensional_array/two-dimensional_array.csproj"
+      "path": "../two-dimensional_array/TwoDimensionalArray.csproj",
+      "msbuildProject": "../two-dimensional_array/TwoDimensionalArray.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -997,8 +997,8 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
       "NUnit3TestAdapter >= 4.2.1",
-      "coverlet.collector >= 6.0.0",
-      "two-dimensional_array >= 1.0.0"
+      "TwoDimensionalArray >= 1.0.0",
+      "coverlet.collector >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -1007,9 +1007,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two_dimensional_array.Tests\\two_dimensional_array.Tests.csproj",
-      "projectName": "two_dimensional_array.Tests",
-      "projectPath": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two_dimensional_array.Tests\\two_dimensional_array.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two_dimensional_array.Tests\\TwoDimensionalArray.Tests.csproj",
+      "projectName": "TwoDimensionalArray.Tests",
+      "projectPath": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two_dimensional_array.Tests\\TwoDimensionalArray.Tests.csproj",
       "packagesPath": "C:\\Users\\MrZet\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two_dimensional_array.Tests\\obj\\",
       "projectStyle": "PackageReference",
@@ -1028,8 +1028,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two-dimensional_array\\two-dimensional_array.csproj": {
-              "projectPath": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two-dimensional_array\\two-dimensional_array.csproj"
+            "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two-dimensional_array\\TwoDimensionalArray.csproj": {
+              "projectPath": "C:\\Users\\MrZet\\source\\repos\\two-dimensional_array\\two-dimensional_array\\TwoDimensionalArray.csproj"
             }
           }
         }
