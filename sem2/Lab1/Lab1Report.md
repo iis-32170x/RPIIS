@@ -22,7 +22,7 @@
 
 Конструктор `FenwickTree` с параметром `n`- размер массива, который присваивает полю `size` значение n, создает массивы array и PrefixSum из n нулей 
 
-![image](Imgs/Матрица1.png)
+![image](imgs/Constructor.jpg)
 Public поля структуры: 
 
 `size`- размер массива, 
