@@ -5,49 +5,49 @@ using System.ComponentModel;
 
 namespace two_dimensional_array
 {
+    /// <summary>
+    /// Класс, для работы с двумерным массивом
+    /// </summary>
     public class TwoArray
     {
         /// <summary>
-        /// Это конструктор, в котором создаётся наш массив при создании объекта класса
-        [Description("Это конструктор, в котором создаётся наш массив при создании объекта класса")]
-        public TwoArray(ref int[][]massive)
+        /// Это метод, который создаёт совсем новый массив
+        /// <param name="massive">Ступенчатый массив, который нужно инициализировать.</param>
+        /// </summary>
+        [Description("Это метод, который создаёт совсем новый массив")]
+        public void NewArray(ref int[][] massive)
         {
-            int massSize = 0;
+            int massSize;
             Console.Write("Введите размер массива NxN. N не должен превышать 5 элементов и должен быть больше нуля: ");
-            massSize = Int32.Parse(Console.ReadLine());
-            while(massSize >5 || massSize <=0)
+            try
             {
-                Console.WriteLine("N введён неверно, введите ещё раз");
                 massSize = Int32.Parse(Console.ReadLine());
             }
+            catch
+            {
+                massSize = 0;
+            }
+            while (massSize > 5 || massSize <= 0)
+            {
+                Console.Write("N введён неверно, введите ещё раз: ");
+                try
+                {
+                    massSize = Int32.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    massSize = 0;
+                }
+            }
             massive = new int[massSize][];
-            for(int i = 0; i < massive.Length; i++)
+            for (int i = 0; i < massive.Length; i++)
             {
                 massive[i] = new int[massSize];
             }
         }
         /// <summary>
-        /// Это метод, который создаёт совсем новый массив
-        /// </summary>
-        [Description("Это метод, который создаёт совсем новый массив")]
-        public void NewArray(ref int[][] massive)
-        {
-            int Size = 0;
-            Console.Write("Введите размер массива NxN. N не должен превышать 5 элементов и должен быть больше нуля: ");
-            Size = Int32.Parse(Console.ReadLine());
-            while (Size > 5 || Size <= 0)
-            {
-                Console.WriteLine("N введён неверно, введите ещё раз");
-                Size = Int32.Parse(Console.ReadLine());
-            }
-            massive = new int[Size][];
-            for (int i = 0; i < massive.Length; i++)
-            {
-                massive[i] = new int[Size];
-            }
-        }
-        /// <summary>
         /// Это метод, с помощью которого вы добавляете все элементы в пустой массив
+        /// <param name="massive">Ступенчатый массив, в который нужно добавлять элементы.</param>
         /// </summary>
         [Description("Это метод, с помощью которого вы добавляете все элементы в пустой массив")]
         public void AddElement(ref int[][]massive)
@@ -58,13 +58,23 @@ namespace two_dimensional_array
                 for(int j = 0; j < massive[i].Length; j++)
                 {
                     Console.Write("Введите элемент {0} ",(count+1));
-                    massive[i][j] = Int32.Parse(Console.ReadLine());
+                again:
+                    try
+                    {
+                        massive[i][j] = Int32.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        Console.Write("Неправильный ввод, попробуйте ещё раз: ");
+                        goto again;
+                    }
                     count++;
                 }
             }
         }
         /// <summary>
         /// Это метод, который сортирует ваш массив
+        /// <param name="massive">Ступенчатый массив, который нужно отсортировать.</param>
         /// </summary>
         [Description("Это метод, который сортирует ваш массив")]
         public void Sort(ref int[][] massive)
@@ -102,6 +112,7 @@ namespace two_dimensional_array
         /// Это метод, который добавляет один элемент в ваш массив
         /// </summary>
         /// <param name="element">Число, которое нужно вставить.</param>
+        /// <param name="massive">Ступенчатый массив, в который нужно вставить элемент.</param>
         [Description("Это метод, который добавляет один элемент в ваш массив")]
         public void InsertElement(ref int[][] massive, int element)
         {
@@ -142,14 +153,25 @@ namespace two_dimensional_array
         /// Это метод, который находит элемент, находящийся в 
         /// определенной строке и определенном столбце
         /// </summary>
+        /// <param name="massive">Ступенчатый массив, в котором нужно найти элемент.</param>
         /// <param name="row">Строка искомого элемента.</param>
         /// <param name="column">Столбец искомого элемента</param>
         [Description("Это метод, который находит элемент, находящийся в определенной строке и определенном столбце")]
         public int FindElement(ref int[][] massive,int row, int column)
         {
-            return massive[row][column];
+            int element = -1;
+            try
+            {
+                element = massive[row][column];
+            }
+            catch
+            {
+                Console.WriteLine("Индекс вышел за границы массива.");
+            }
+            return element;
         }
         /// <summary> Это метод, который находит строку и столбец искомого элемента</summary>
+        /// <param name="massive">Ступенчатый массив, в котором нужно найти элемент.</param>
         /// <param name="element">Элемент, который нужно найти.</param>
         /// <returns>В консоль строка и столбец искомого элемента.</returns>
         [Description("Это метод, который находит строку и столбец искомого элемента")]
@@ -167,7 +189,8 @@ namespace two_dimensional_array
         /// Это метод, который меняет наш массив на
         /// объединение нашего массива и вводимого
         /// </summary>
-        /// <param name="secondMass">Объект класса, который имеет массив.</param>
+        /// <param name="massive">Ступенчатый массив, который нужно объединить с другим массивом.</param>
+        /// <param name="secondMass">Ступенчатый массив, который должен быть объединен с первым массивом.</param>
         [Description("Это метод, который меняет наш массив на объединение нашего массива и вводимого")]
         public void Merge(ref int[][] massive, ref int[][]secondMass)
         {
@@ -192,9 +215,10 @@ namespace two_dimensional_array
         /// Это метод, который меняет наш массив на
         /// пересечение нашего массива и вводимого
         /// </summary>
-        /// <param name="secondMass">Объект класса, который имеет массив.</param>
+        /// <param name="massive">Ступенчатый массив, в котором нужно найти пересечение с другим массивом.</param>
+        /// <param name="secondMass">Ступенчатый массив, с которым должно быть найдено пересечение с первым массивом.</param>
         [Description("Это метод, который меняет наш массив на пересечение нашего массива и вводимого")]
-        public void Intersection(ref int[][] massive, ref int[][] secondMass)
+        public void Intersect(ref int[][] massive, ref int[][] secondMass)
         {
             var flatMass = new int[1000];
             bool isRepeat = false;
