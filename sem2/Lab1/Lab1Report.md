@@ -23,6 +23,7 @@
 Конструктор `FenwickTree` с параметром `n`- размер массива, который присваивает полю `size` значение n, создает массивы array и PrefixSum из n нулей 
 
 ![image](imgs/Constructor.jpg)
+
 Public поля структуры: 
 
 `size`- размер массива, 
@@ -46,6 +47,27 @@ Private функции:
 `int f(int i)`- возвращает побитовое 'И' от i и i+1
 
 `int g(int i)`- возвращает побитовое 'ИЛИ' от i и i+1
+
+### Начальные значения тестов:
+
+![image](imgs/StartValue.jpg)
+
+### Тесты нахождения суммы на отрезке:
+
+![image](imgs/TestSumCode.jpg)
+
+### Результат:
+
+![image](imgs/TestSum.jpg)
+
+### Тесты обновления значения в массиве:
+
+![image](imgs/TestUpdateCode.jpg)
+
+### Результат:
+
+![image](imgs/TestUpdate.jpg)
+
 
 
 
