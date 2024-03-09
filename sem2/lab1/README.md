@@ -164,6 +164,8 @@ void BTreeNode::delete_key(int k)
 ```
 ## Результаты тестирования (GoogleTest)
 
+В программах тестирования были проведены тесты над основными операциями над В-деревьями с различными параметрами
+
 ***Тест 1. В-дерево с параметром 3***
 
 ![test1](https://github.com/iis-32170x/RPIIS/assets/145003765/8cc67f64-54f3-495e-ba1c-abcf9df7d109)
@@ -178,3 +180,20 @@ void BTreeNode::delete_key(int k)
 ![test3](https://github.com/iis-32170x/RPIIS/assets/145003765/a0bd569c-eb7f-4f62-a844-0a23ada521a0)
 
 **Итог**  все тесты пройдены успешно!
+
+## Примеры выполнения программы
+
+* Дерево заполняется автоматически при помощи функции rand()
+
+![Снимок экрана 2024-03-09 201807](https://github.com/iis-32170x/RPIIS/assets/145003765/9234c8bf-5eaa-4510-a9d2-6f58c234a693)
+
+
+* Дерево заполняется в коде
+
+![Снимок экрана 2024-03-09 201609](https://github.com/iis-32170x/RPIIS/assets/145003765/3b15850a-77c1-4362-b15b-22c8bdeec156)
+
+## Список использованных источников: 
+* https://www.cs.usfca.edu/~galles/visualization/BTree.html
+* https://ru.wikipedia.org/wiki/B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE
+* https://habr.com/ru/companies/otus/articles/459216/
+* https://habr.com/ru/articles/114154/
