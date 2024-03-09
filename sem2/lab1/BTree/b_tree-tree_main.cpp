@@ -9,7 +9,7 @@ int main()
 	BTree b_t(3); // Создаем В-дерево с параметром t
 	PrettyPrint printer;
 
-
+// В-дерево заполняется рандомом
 	srand(2478);
 	/*cout << "\n \t----------ВСТАВКА----------\n";*/
 
@@ -21,8 +21,8 @@ int main()
 		printer.print(b_t);
 	}
 
+// В-дерево заполняется в коде
 	//cout << "\n \t----------ВСТАВКА----------\n";
-
 	//b_t.insert_key(1);
 	//cout << " 7: \n";
 	//printer.print(b_t);
