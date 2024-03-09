@@ -162,3 +162,19 @@ void BTreeNode::delete_key(int k)
 	return;
 }
 ```
+## Результаты тестирования (GoogleTest)
+
+***Тест 1. В-дерево с параметром 3***
+
+![test1](https://github.com/iis-32170x/RPIIS/assets/145003765/8cc67f64-54f3-495e-ba1c-abcf9df7d109)
+
+***Тест 2. В-дерево с параметром 4***
+
+![test2](https://github.com/iis-32170x/RPIIS/assets/145003765/a8c080cb-dac4-4e17-8058-1b2ed24b5075)
+
+
+***Тест 3. В-дерево с параметром 5***
+
+![test3](https://github.com/iis-32170x/RPIIS/assets/145003765/a0bd569c-eb7f-4f62-a844-0a23ada521a0)
+
+**Итог**  все тесты пройдены успешно!
