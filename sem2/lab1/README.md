@@ -39,5 +39,194 @@
 
 2. Метод вставки (insert): Отвечает за вставку нового элемента в приоритетную очередь. Этот метод добавляет элемент в конец вектора и затем вызывает метод up, который поднимает элемент вверх по дереву для обеспечения соблюдения условий бинарной кучи.
 - Вспомогательный метод up: Отвечает за подъем элемента вверх по дереву для восстановления условий бинарной кучи после вставки. Этот метод выполняет цикл, сравнивая значение текущего элемента с его родителем и меняя их местами при необходимости до тех пор, пока элемент не достигнет правильной позиции.
+```C++
+void PriorityQueue::insert(int value) {
+    vect.push_back(value);
+    up(vect.size() - 1);
+}
+void PriorityQueue::up(int i) {
+    while (vect[i] > vect[(i - 1) / 2] && i != 0) {
+        std::swap(vect[(i - 1) / 2], vect[i]);
+        i = (i - 1) / 2;
+    }
+}
+```
+3. Метод извлечения (extract): Отвечает за извлечение элемента с наивысшим приоритетом из приоритетной очереди. Этот метод извлекает значение из корня, заменяет корень последним элементом вектора, а затем вызывает метод down, который опускает новый корень вниз по дереву для восстановления условий бинарной кучи. Также учитыется случай, когда происходит попытка извлечения из пустой очереди, для этого случая создано исключение std::out_of_range
+- Вспомогательный метод down: Отвечает за опускание элемента вниз по дереву для восстановления условий бинарной кучи после извлечения. Этот метод выполняет цикл, сравнивая значение текущего элемента с его потомками и меняя его место с наибольшим из потомков, если это необходимо, до тех пор, пока элемент не достигнет правильной позиции.
+```C++
+int PriorityQueue::extract() {
+    if (isEmpty()) {
+        throw std::out_of_range("Priority queue is empty");
+    }
 
-3. 
+    int value = vect[0];
+    vect[0] = vect[vect.size() - 1];
+    vect.pop_back();
+    down(0);
+    return value;
+}
+void PriorityQueue::down(int i) {
+    while (2 * i + 1 < vect.size()) {
+        int maxChild = 2 * i + 1;
+        if (maxChild + 1 < vect.size() && vect[maxChild] < vect[maxChild + 1]) {
+            maxChild++;
+        }
+        if (vect[i] >= vect[maxChild]) {
+            break;
+        }
+        std::swap(vect[maxChild], vect[i]);
+        i = maxChild;
+    }
+}
+```
+4. Метод проверки пустой очереди (isEmpty): Проверяет, пуста ли приоритетная очередь. Возвращает true, если вектор a пуст, и false в противном случае.
+```C++
+bool PriorityQueue::isEmpty() const {
+    return vect.empty();
+}
+```
+5. Алгоритм работы очереди с приоритетом:
+   
+   5.1 Инициализация:
+   - Создание экземпляра класса PriorityQueue.
+   - Вектор a используется для хранения элементов в виде бинарной кучи.
+  
+   5.2 Вставка элемента:
+   - Новый элемент добавляется в конец вектора.
+   - Вызывается метод up для восстановления условий бинарной кучи.
+  
+   5.3 Извлечение элемента:
+   - Проверка наличия элементов в куче.
+   - Извлечение значения из корня (с наивысшим приоритетом).
+   - Замена корня последним элементом вектора.
+   - Вызов метода down для восстановления условий бинарной кучи.
+  
+   5.4 Подъем элемента вверх:
+   - Пока текущий элемент больше родителя и не достигнут корень:
+      - Меняем местами текущий элемент и его родителя.
+      - Обновляем индекс текущего элемента.
+    
+   5.5 Опускание элемента вниз:
+   - Пока есть хотя бы один потомок текущего элемента:
+         - Выбираем максимального из потомков.
+         - Если текущий элемент меньше выбранного потомка, меняем их местами.
+         - Обновляем индекс текущего элемента.
+       
+   5.6 Проверка наличия элементов:
+   - Проверка, пуста ли куча, основываясь на пустоте вектора a.
+
+
+## Результаты тестирования:
+Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 5 тестов: 2 теста на вставку и извлечение, тест на вставку и извлечение с одинаковыми элементами, тест на вставку и извлечение с отрицательными элементами, тест на извлечение из пустой очереди. 
+
+![test](https://github.com/iis-32170x/RPIIS/blob/Давыдов_Р/sem2/lab1/изображение_2024-03-11_010834797.png)
+
+Код системы тестов:
+```C++
+#include "pch.h"
+#include <gtest/gtest.h>
+#include "../priorityQueue/priorityQueue.h"
+using namespace std;
+
+
+TEST(PriorityQueueTest, InsertAndExtract1) {
+    PriorityQueue queue;
+
+    EXPECT_TRUE(queue.isEmpty());
+
+    queue.insert(10);
+    queue.insert(5);
+    queue.insert(15);
+    queue.insert(2);
+
+    EXPECT_FALSE(queue.isEmpty());
+    EXPECT_EQ(queue.extract(), 15);
+    EXPECT_EQ(queue.extract(), 10);
+    EXPECT_EQ(queue.extract(), 5);
+    EXPECT_EQ(queue.extract(), 2);
+    EXPECT_TRUE(queue.isEmpty());
+}
+
+
+TEST(PriorityQueueTest, InsertAndExtract2) {
+    PriorityQueue queue;
+
+    queue.insert(10);
+    queue.insert(5);
+    queue.insert(20);
+    queue.insert(15);
+    queue.insert(25);
+    queue.insert(35);
+    queue.insert(17);
+
+    EXPECT_EQ(queue.extract(), 35);
+    EXPECT_EQ(queue.extract(), 25);
+    EXPECT_EQ(queue.extract(), 20);
+    EXPECT_EQ(queue.extract(), 17);
+    EXPECT_EQ(queue.extract(), 15);
+    EXPECT_EQ(queue.extract(), 10);
+    EXPECT_EQ(queue.extract(), 5);
+
+    EXPECT_TRUE(queue.isEmpty());
+}
+
+
+TEST(PriorityQueueTest, InsertAndExtractWithDuplicates) {
+    PriorityQueue queue;
+    queue.insert(10);
+    queue.insert(6);
+    queue.insert(5);
+    queue.insert(10);
+    queue.insert(6);
+
+    EXPECT_EQ(queue.extract(), 10);
+    EXPECT_EQ(queue.extract(), 10);
+    EXPECT_EQ(queue.extract(), 6);
+    EXPECT_EQ(queue.extract(), 6);
+    EXPECT_EQ(queue.extract(), 5);
+    EXPECT_TRUE(queue.isEmpty());
+}
+
+TEST(PriorityQueueTest, ExtractFromEmptyQueue) {
+    PriorityQueue queue;
+
+    EXPECT_THROW(queue.extract(), std::out_of_range);
+}
+
+
+TEST(PriorityQueueTest, InsertWithNegativeNumbers) {
+    PriorityQueue queue;
+
+    queue.insert(-34);
+    queue.insert(10);
+    queue.insert(-5);
+    queue.insert(25);
+    queue.insert(-7);
+    queue.insert(-2);
+
+    EXPECT_EQ(queue.extract(), 25);
+    EXPECT_EQ(queue.extract(), 10);
+    EXPECT_EQ(queue.extract(), -2);
+    EXPECT_EQ(queue.extract(), -5);
+    EXPECT_EQ(queue.extract(), -7);
+    EXPECT_EQ(queue.extract(), -34);
+    EXPECT_TRUE(queue.isEmpty());
+}
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
+## Вывод:
+
+По итогам выполнения лабораторной работы были получены знания о работе бинарной кучи, приоритетной очереди и алгоритмов, позволяющих работать с ней.  Также был изучен метод создания библиотеки для различных задач.  Была освоена работа с фреймворком GoogleTest и написание систем тестов для проверки работоспособности программ. 
+
+## Источники
+Создание библиотеки - https://youtu.be/5mD-rhaYF4U?si=hh6JyfX1HLe4aOrj
+
+Двоичная куча - https://habr.com/ru/articles/112222/
+
+GoogleTest - https://habr.com/ru/articles/667880/
+
+Прочая помощь - https://poe.com/Assistant
