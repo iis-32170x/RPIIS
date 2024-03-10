@@ -168,16 +168,19 @@ void BTreeNode::delete_key(int k)
 
 ***Тест 1. В-дерево с параметром 3***
 
-![test1](https://github.com/iis-32170x/RPIIS/assets/145003765/8cc67f64-54f3-495e-ba1c-abcf9df7d109)
+![Снимок экрана 2024-03-10 115333](https://github.com/iis-32170x/RPIIS/assets/145003765/fa3c3374-cc3e-43f0-ab2f-6f15b7bb9a62)
+
 
 ***Тест 2. В-дерево с параметром 4***
 
-![test2](https://github.com/iis-32170x/RPIIS/assets/145003765/a8c080cb-dac4-4e17-8058-1b2ed24b5075)
+![Снимок экрана 2024-03-10 115246](https://github.com/iis-32170x/RPIIS/assets/145003765/0c45a456-9b9a-4a6b-8b62-11c0dcf2393e)
+
 
 
 ***Тест 3. В-дерево с параметром 5***
 
-![test3](https://github.com/iis-32170x/RPIIS/assets/145003765/a0bd569c-eb7f-4f62-a844-0a23ada521a0)
+![Снимок экрана 2024-03-10 114852](https://github.com/iis-32170x/RPIIS/assets/145003765/3012a47b-a528-4f63-9271-77a98cd57d9f)
+
 
 **Итог**  все тесты пройдены успешно!
 
