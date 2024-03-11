@@ -14,4 +14,115 @@
 4. **Бинарное дерево:**
    Двои́чное де́рево — иерархическая структура данных, в которой каждый узел имеет не более двух потомков.
 
-##
+## Алгоритм
+### Заголовочный файл RMQ_tree.h
+
+#### Библиотеки для работы с консолью и текстом:
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+```
+
+#### Объявление структуры, описывающей один узел RMQ:
+```cpp
+struct tree
+{
+	tree* left_child = NULL;
+	tree* right_child = NULL;
+
+	int l_border = 0;
+	int r_border = 0;
+
+	int max_value = 0;
+	int modification = 0;
+
+	int value = 0;
+	int nomer = 0;
+};
+```
+`tree* left_child, right_child;` - указатели на дочерние левый и правый узлы соответственно.
+
+`int l_border, r_border;` - показывают, какой отрезок охватывает данный узел.
+
+`int max_value;` - максимальное значение, которое встречается на этом интервале (будет выбираться из сыновей).
+
+`int modification;` - будет хранить модификацию для всего этого интервала.
+
+`int value;` - значение этого узла.
+
+`int nomer;` - номер узла.
+
+#### Функция создания дерева:
+```cpp
+void create_tree(tree* node, int section[], int length_of_section, int l_limit, int numeral)
+{
+	int max = section[0], sum = 0;
+
+	for (int i = 0; i < length_of_section; i++)
+	{
+		sum += section[i];
+		if (section[i] > max)
+		{
+			max = section[i];
+		}
+	}
+
+	node->nomer = numeral;
+	node->value = sum;
+	node->max_value = max;
+	node->l_border = l_limit;
+	node->r_border = l_limit + length_of_section - 1;
+
+	if (length_of_section != 1)
+	{
+		int temp = log2(length_of_section);
+		int razbienie;
+
+		if (length_of_section != pow(2, temp))
+		{
+			razbienie = pow(2, temp);
+		}
+		else
+		{
+			razbienie = length_of_section / 2;
+		}
+
+		if (node->left_child == NULL)
+		{
+			int* tempmassiv = new int[razbienie];
+			for (int i = 0; i < razbienie; i++)
+			{
+				tempmassiv[i] = section[i];
+			}
+
+			node->left_child = new tree;
+
+			create_tree(node->left_child, tempmassiv, razbienie, l_limit, 2 * numeral);
+
+			delete[] tempmassiv;
+		}
+
+		if (node->right_child == NULL)
+		{
+			int* tempmassiv2 = new int[length_of_section - razbienie];
+			for (int i = razbienie; i < length_of_section; i++)
+			{
+				tempmassiv2[i - razbienie] = section[i];
+			}
+
+			node->right_child = new tree;
+
+			create_tree(node->right_child, tempmassiv2, length_of_section - razbienie, l_limit + razbienie, 2 * numeral + 1);
+
+			delete[] tempmassiv2;
+		}
+	}
+}
+```
+
+В функцию передаем: Указатель на данный узел дерева, массив с числами (листьями на данном отрезке), длина этого массива (количество листьев на данном отрезке), левый предел отрезка, номер узла.
+
+Далее вычисляем и добавляем в структуру: номер узла, значение узла, максимальное значение из массива, левую и правую границы отрезка.
+
+Принцип создания дерева: из полученного исходного количества листьев выделяем 2^n листьев (из 9: 2^3 = 8, из 12: 2^3 = 8, из 19: 2^4 = 16, и т.д.)
