@@ -225,3 +225,5 @@ TEST(PriorityQueueTest, InsertWithNegativeNumbers) {
 GoogleTest - https://habr.com/ru/articles/667880/
 
 Прочая помощь - https://poe.com/Assistant
+
+За помощь с кодом выражаю благодарность Романчуку Ивану - https://github.com/iis-32170x/RPIIS/tree/Романчук_И/sem2/lab1
