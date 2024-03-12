@@ -69,7 +69,9 @@ int deq(queue * q,int MAXN)
 `Исходные данные`
 
 5
+
 1 2 3 5 8
+
 0
 
 
