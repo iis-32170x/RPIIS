@@ -1,6 +1,11 @@
 #include "TreeHead.h" 
 FenwickTree::FenwickTree(int n)
 {
+    if (n < 0)
+    {
+        std::cout << " Ошибка! Отрицательный размер исходного массива." << "\n";
+        exit(0);
+    }
     size = n;
     array = std::vector<int>(n, 0);
     PrefixSum = std::vector<int>(n, 0);
@@ -50,3 +55,4 @@ void FenwickTree::Update(int pos, int value)
         PrefixSum[i] += value;
     }
 }
+
