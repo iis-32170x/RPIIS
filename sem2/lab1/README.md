@@ -92,4 +92,5 @@ Changed array: 43 65 23 -46 28 535 34 65 23 54
 
 ## <p align="center">Используемые источники:</p>
 1.https://goo.su/S1UIC
+
 2.https://youtu.be/muW1tOyqUZ4?si=m_kQEUlLwyLNzN95
