@@ -7,7 +7,8 @@
     vector<int> tree;
     vector<int> arr;
 
-    FenwickTree::FenwickTree(int size)                   
+    FenwickTree::FenwickTree(int size)       
+    {
         tree.resize(size + 1);
         arr.resize(size + 1);
     }
