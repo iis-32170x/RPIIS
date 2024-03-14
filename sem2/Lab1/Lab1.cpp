@@ -26,6 +26,7 @@ int main()
 	qu.ViewQueue();
 	cout << endl;
 
+
 	string ab = qu.GetFromQueue();
 	cout << ab << endl;
 
@@ -34,7 +35,7 @@ int main()
 
 	qu.DeleteQueue();
 
-	if (qu.empty == true)
+	if (qu.isEmpty())
 		cout << "Queue is empty";
 	else
 		qu.ViewQueue();

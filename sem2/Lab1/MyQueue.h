@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+
+
 template<typename T>
 struct MyQueue
 {
@@ -37,12 +40,18 @@ template<typename T> void InQueue(MyQueue<T>** b, MyQueue<T>** e, T in, int prio
 
 template<typename T> T OutQueue(MyQueue<T>** p)
 {
+
+
 	MyQueue<T>* t = *p;
 	T out;
-	out = (*p)->info;
-	*p = (*p)->prev;
+	if(*p != NULL)
+	{
+		out = (*p)->info;
+		*p = (*p)->prev;
+	}
 	delete t;
 	return out;
+	
 }
 
 
@@ -112,9 +121,11 @@ int Random(int num)
 template<typename T>
 class MyQueueWithPriority
 {
-	MyQueue<T>* beginQ, * endQ;
 
+	
+	MyQueue<T>* beginQ, * endQ;
 public:
+	
 	MyQueueWithPriority()
 	{
 		beginQ = NULL;
@@ -143,6 +154,9 @@ public:
 	{
 		Del_All(&endQ);
 	}
-	bool empty = EmptinessCheck(endQ);
+	bool isEmpty()
+	{
+		return EmptinessCheck(endQ);
+	}
 };
 
