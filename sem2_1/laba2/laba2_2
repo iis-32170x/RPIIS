@@ -1,3 +1,6 @@
+import ast
+
+
 def generete_branch(branch, ban):
     if (len(branch) == len(ban)):
         print(ban)
@@ -10,7 +13,10 @@ def generete_branch(branch, ban):
 
 
 if __name__ == "__main__":
-    branch = [123, 'Gpt', 567, 'Gpt', 78.54]
+    stroka_in = input("Введите множество ")
+    new_stroka_in = stroka_in.replace('{', '[')
+    itogo_stroka_in = new_stroka_in.replace('}', ']')
+    branch = ast.literal_eval(itogo_stroka_in)
     for i in branch:
         if branch.count(i) > 1:
             branch.remove(i)
