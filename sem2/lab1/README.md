@@ -147,7 +147,7 @@ void Union(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
 ```
 6. **Пересечение двух множеств**
    
-   Функция Intersection использует функцию proverka для выполнения операции пересечения между двумя бинарными деревьями mnozhA и mnozhB. Функция proverka выполняет поиск значения value в дереве mnozhB и добавляет его в дерево mnozhC, если оно присутствует.
+   Функция Intersection использует функцию proverka для выполнения операции пересечения между двумя множествами mnozhA и mnozhB. Функция proverka выполняет поиск значения value в множестве mnozhB и добавляет его в множество mnozhC, если оно присутствует.
 ```cpp
 void proverka(int value, Branch* node, Branch*& mnozhC) {
     if (!node) {
