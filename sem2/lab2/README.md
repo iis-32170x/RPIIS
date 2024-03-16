@@ -61,7 +61,7 @@
 Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 9 тестов.
 
 <p align="center">
-  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%87%D1%83%D0%BA_%D0%98/sem2/lab2/TestsIntersection.png?raw=true" alt="Тесты библиотеки">
+  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%87%D1%83%D0%BA_%D0%98/sem2/lab2/intersection.png?raw=true" alt="Тесты библиотеки">
 </p>
 
 **Система тестов:**
