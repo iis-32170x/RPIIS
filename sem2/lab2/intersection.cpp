@@ -107,7 +107,7 @@ void processSubsets(const std::string& line, size_t& i, Set& SET) {
 
             i = pos++;
         }
-        else if (line[i] != ','){
+        else if (line[i] != ',') {
             size_t posInside = i;
             if (line[i] == '<') {
                 SubSet SUBSET;
@@ -121,7 +121,7 @@ void processSubsets(const std::string& line, size_t& i, Set& SET) {
                         check.pop();
                     }
                 }
-                if ((i - posInside) > 0)  {
+                if ((i - posInside) > 0) {
                     SUBSET.all_elements.push_back(line.substr(i, posInside - i + 1));
                 }
                 else {
@@ -215,7 +215,7 @@ Set intersectionCalc(Set temp_result, Set set1, Set set2) {
     for (size_t i = 0; i < set1.all_subsets.size(); i++) {
         for (size_t j = 0; j < set2.all_subsets.size(); j++) {
             if ((set1.all_subsets[i].notoriented == 1 && set2.all_subsets[j].notoriented == 1) && (set1.all_subsets[i].all_elements.size() == set2.all_subsets[j].all_elements.size())) {
-                
+
                 size_t elements_count = 0;
                 std::vector<std::string>temp_elements = set2.all_subsets[j].all_elements;
 
@@ -244,14 +244,14 @@ Set intersectionCalc(Set temp_result, Set set1, Set set2) {
     return (temp_result);
 }
 
-std::vector<std::string> intersection(const std::string& filename){
+std::vector<std::string> intersection(const std::string& filename) {
     std::vector<Set> sets = read(filename);
-    
+
     Set temp_result;
     temp_result.name = "RESULT";
 
     for (size_t i = 0; i + 1 < sets.size(); i++) {
-        sets[i+1] = intersectionCalc(temp_result, sets[i], sets[i+1]);
+        sets[i + 1] = intersectionCalc(temp_result, sets[i], sets[i + 1]);
         temp_result = {};
     }
 
@@ -262,7 +262,9 @@ std::vector<std::string> intersection(const std::string& filename){
             string ss = "{";
             for (size_t j = 0; j < sets[sets.size() - 1].all_subsets[i].all_elements.size(); j++) {
                 ss += (sets[sets.size() - 1].all_subsets[i].all_elements[j]);
+                ss += ",";
             }
+            ss.pop_back();
             ss += "}";
             result.push_back(ss);
         }
