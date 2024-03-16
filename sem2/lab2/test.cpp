@@ -11,6 +11,7 @@ TEST(BracketsBalanceTest, BracketsBalance) {
     EXPECT_FALSE(bracketsBalance("1,2,3}"));
     EXPECT_FALSE(bracketsBalance("<1,2,3"));
     EXPECT_FALSE(bracketsBalance("1,2,3>"));
+    EXPECT_FALSE(bracketsBalance("1,2,3><"));
 }
 
 // test without nested sets
@@ -43,10 +44,8 @@ TEST(IntersectionTest, ValidIntersection2) {
 
     std::vector<std::string> result = intersection(filename);
 
-    ASSERT_EQ(result.size(), 3);
+    ASSERT_EQ(result.size(), 1);
     EXPECT_EQ(result[0], "S_d");
-    EXPECT_EQ(result[1], "S_d");
-    EXPECT_EQ(result[2], "S_d");
 
     std::remove(filename.c_str());
 }
@@ -69,24 +68,25 @@ TEST(IntersectionTest, ValidIntersection3) {
     std::remove(filename.c_str());
 }
 
-// test with a lot of brackets
+ //test with a lot of brackets
 TEST(IntersectionTest, ValidIntersection4) {
     const std::string filename = "tempTestFile.txt";
 
     std::ofstream file(filename);
     file << "A={<>,{<>},{}}\n";
-    file << "B={{{}},<0>}\n";
-    file << "C={}\n";
+    file << "B={{{}},<0>,<>}\n";
+    file << "C={<>}\n";
     file.close();
 
     std::vector<std::string> result = intersection(filename);
 
-    ASSERT_EQ(result.size(), 0);
+    ASSERT_EQ(result.size(), 1);
+    EXPECT_EQ(result[0], "<>");
 
     std::remove(filename.c_str());
 }
 
-// test with undirected set
+// test with directed set
 TEST(ExeptionsTest, InvalidArgument1) {
     const std::string filename = "tempTestFile.txt";
 
@@ -138,6 +138,23 @@ TEST(ExeptionsTest, InvalidArgument4) {
     EXPECT_THROW(read(filename), std::invalid_argument);
 }
 
+TEST(ExeptionsTest, Name) {
+    const std::string filename = "tempTestFile.txt";
+
+    std::ofstream file(filename);
+    file << "A={{{{{},<>}}}}\n";
+    file << "B={{{{{},<>}}}}\n";
+    file.close();
+    
+
+
+    std::vector<std::string> result = intersection(filename);
+
+    ASSERT_EQ(result.size(), 1);
+    EXPECT_EQ(result[0], "{{{{},<>}}}");
+
+    std::remove(filename.c_str());
+}
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
