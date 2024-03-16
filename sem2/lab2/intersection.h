@@ -9,20 +9,20 @@
 #include <stack>
 
 struct SubSet {
-	std::vector<std::string> element;
-	size_t oriented = 0;
+	std::vector<std::string> all_elements;
+	bool notoriented = 0;
 };
 
 struct Set {
-	bool oriented = 0;
 	std::string name;
-	std::vector<std::string> subsets;
+	std::vector<SubSet> all_subsets;
 };
 
 bool bracketsBalance(const std::string& line);
 void print(const std::vector<Set>& sets);
+void elementsOfSubset(const std::string& ss, std::stack<char>& check, SubSet& SUBSET);
 void processSubsets(const std::string& line, size_t& i, Set& SET);
-std::vector<Set> read(const std::string& filename);
+std::vector<Set>read(const std::string& filename);
 
-void intersectionCalc(std::vector<std::string>& result, Set set1, Set set2);
+Set intersectionCalc(Set temp_result, Set set1, Set set2);
 std::vector<std::string> intersection(const std::string& filename);
