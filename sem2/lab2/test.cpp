@@ -86,6 +86,43 @@ TEST(IntersectionTest, ValidIntersection4) {
     std::remove(filename.c_str());
 }
 
+TEST(ExeptionsTest, ValidIntersection5) {
+    const std::string filename = "tempTestFile.txt";
+
+    std::ofstream file(filename);
+    file << "A={{{{{},<>}}}}\n";
+    file << "B={{{{{},<>}}}}\n";
+    file.close();
+
+
+
+    std::vector<std::string> result = intersection(filename);
+
+    ASSERT_EQ(result.size(), 1);
+    EXPECT_EQ(result[0], "{{{{},<>}}}");
+
+    std::remove(filename.c_str());
+}
+
+TEST(ExeptionsTest, ValidIntersection6) {
+    const std::string filename = "tempTestFile.txt";
+
+    std::ofstream file(filename);
+    file << "A={{1,2,3},<7,3>,2}\n";
+    file << "B={{2,3,1},{7,3}}\n";
+    file << "C={{1,3,2},{7,3}}\n";
+    file.close();
+
+
+
+    std::vector<std::string> result = intersection(filename);
+
+    ASSERT_EQ(result.size(), 1);
+    EXPECT_EQ(result[0], "{1,2,3}");
+
+    std::remove(filename.c_str());
+}
+
 // test with directed set
 TEST(ExeptionsTest, InvalidArgument1) {
     const std::string filename = "tempTestFile.txt";
@@ -136,24 +173,6 @@ TEST(ExeptionsTest, InvalidArgument4) {
     const std::string filename = "tempTestFile.txt";
 
     EXPECT_THROW(read(filename), std::invalid_argument);
-}
-
-TEST(ExeptionsTest, Name) {
-    const std::string filename = "tempTestFile.txt";
-
-    std::ofstream file(filename);
-    file << "A={{{{{},<>}}}}\n";
-    file << "B={{{{{},<>}}}}\n";
-    file.close();
-    
-
-
-    std::vector<std::string> result = intersection(filename);
-
-    ASSERT_EQ(result.size(), 1);
-    EXPECT_EQ(result[0], "{{{{},<>}}}");
-
-    std::remove(filename.c_str());
 }
 
 int main(int argc, char** argv) {
