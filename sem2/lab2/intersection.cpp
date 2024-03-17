@@ -38,39 +38,6 @@ void print(const std::vector<Set>& all_sets) {
     }
 }
 
-void elementsOfSubset(const std::string& ss, std::stack<char>& check, SubSet& SUBSET) {
-    for (size_t j = 0; j < ss.size(); j++) {
-        size_t posInside = j;
-        if (ss[j] == '<' || ss[j] == '{') {
-            check.push(ss[j]);
-            while (!check.empty() && posInside < ss.size()) {
-                posInside++;
-                if (ss[posInside] == '<' || ss[posInside] == '{') {
-                    check.push(ss[posInside]);
-                }
-                if ((ss[posInside] == '>' && check.top() == '<') || (ss[posInside] == '}' && check.top() == '{')) {
-                    check.pop();
-                }
-            }
-            if ((j - posInside) > 1) {
-                SUBSET.all_elements.push_back(ss.substr(j, posInside - j + 1));
-            }
-            else {
-                SUBSET.all_elements.push_back(ss.substr(j, 2));
-            }
-
-            j = posInside;
-        }
-        if ((ss[j] != ',' && ss[j] != '{' && ss[j] != '<' && ss[j] != '>' && ss[j] != '}') && posInside < ss.size()) {
-            while (ss[posInside] != ',' && posInside < ss.size()) {
-                posInside++;
-            }
-            SUBSET.all_elements.push_back(ss.substr(j, posInside - j));
-            j = posInside;
-        }
-    }
-}
-
 void processSubsets(const std::string& line, size_t& i, Set& SET) {
     for (i; i < line.size(); i++) {
         std::stack<char> check;
@@ -100,7 +67,7 @@ void processSubsets(const std::string& line, size_t& i, Set& SET) {
                 SUBSET.notoriented = 1;
                 std::string ss = line.substr(startPos + 1, pos - startPos - 1);
 
-                elementsOfSubset(ss, check, SUBSET);
+                SUBSET.all_elements.push_back(ss);
             }
 
             SET.all_subsets.push_back(SUBSET);
@@ -216,20 +183,9 @@ Set intersectionCalc(Set temp_result, Set set1, Set set2) {
         for (size_t j = 0; j < set2.all_subsets.size(); j++) {
             if ((set1.all_subsets[i].notoriented == 1 && set2.all_subsets[j].notoriented == 1) && (set1.all_subsets[i].all_elements.size() == set2.all_subsets[j].all_elements.size())) {
 
-                size_t elements_count = 0;
-                std::vector<std::string>temp_elements = set2.all_subsets[j].all_elements;
-
-                for (size_t k = 0; k < set1.all_subsets[i].all_elements.size(); k++) {
-                    for (size_t n = 0; n < temp_elements.size(); n++) {
-                        if (set1.all_subsets[i].all_elements[k] == temp_elements[n]) {
-                            elements_count++;
-                            temp_elements[n] = " ";
-                        }
-                        if (elements_count == set1.all_subsets[i].all_elements.size()) {
-                            temp_result.all_subsets.push_back(set1.all_subsets[i]);
-                            break;
-                        }
-                    }
+                if (sizeof(set1.all_subsets[i].all_elements[0]) == sizeof(set2.all_subsets[j].all_elements[0])) {
+                    temp_result.all_subsets.push_back(set1.all_subsets[i]);
+                    break;
                 }
             }
             else if (set1.all_subsets[i].notoriented != 1 && set2.all_subsets[j].notoriented != 1) {
