@@ -47,7 +47,7 @@ string trim(const string& str) {
 }
 ```
 
-### Функция ntersection(const string& file_path) (Формирование булеана множества):
+### Функция ntersection(const string& file_path) :
 
 ```c++
 set<string> intersection(const string& file_path) {
