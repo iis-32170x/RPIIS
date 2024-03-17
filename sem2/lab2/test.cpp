@@ -86,12 +86,12 @@ TEST(IntersectionTest, ValidIntersection4) {
     std::remove(filename.c_str());
 }
 
-TEST(ExeptionsTest, ValidIntersection5) {
+TEST(IntersectionTest, ValidIntersection5) {
     const std::string filename = "tempTestFile.txt";
 
     std::ofstream file(filename);
-    file << "A={{{{{},<>}}}}\n";
-    file << "B={{{{{},<>}}}}\n";
+    file << "A={{A,{B,{C,{D},{E}}}}}\n";
+    file << "B={{A,{B,{C,{E},{D}}}}}\n";
     file.close();
 
 
@@ -99,12 +99,12 @@ TEST(ExeptionsTest, ValidIntersection5) {
     std::vector<std::string> result = intersection(filename);
 
     ASSERT_EQ(result.size(), 1);
-    EXPECT_EQ(result[0], "{{{{},<>}}}");
+    EXPECT_EQ(result[0], "{A,{B,{C,{D},{E}}}}");
 
     std::remove(filename.c_str());
 }
 
-TEST(ExeptionsTest, ValidIntersection6) {
+TEST(IntersectionTest, ValidIntersection6) {
     const std::string filename = "tempTestFile.txt";
 
     std::ofstream file(filename);
