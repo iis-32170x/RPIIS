@@ -370,6 +370,13 @@ void BTreeNode::merge(int idx)
 	return;
 }
 
+// Деструктор
+BTreeNode::~BTreeNode() 
+{
+	delete[] keys;
+	delete[] C;
+}
+
 // Основная функция, которая вставляет новый ключ в это B-дерево
 void BTree::insert_key(int k)
 {
@@ -537,4 +544,14 @@ void BTree::delete_key(int k)
 		delete tmp;
 	}
 	return;
+}
+
+//Деструктор
+BTree:: ~BTree() 
+{
+	if (root != nullptr)
+	{
+		delete root;
+		root = nullptr;
+	}
 }
