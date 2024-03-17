@@ -20,7 +20,6 @@ struct Set {
 
 bool bracketsBalance(const std::string& line);
 void print(const std::vector<Set>& sets);
-void elementsOfSubset(const std::string& ss, std::stack<char>& check, SubSet& SUBSET);
 void processSubsets(const std::string& line, size_t& i, Set& SET);
 std::vector<Set>read(const std::string& filename);
 
