@@ -61,6 +61,9 @@ public:
 	// Функция слияния idx-го дочернего узла с (idx+1)-м дочерним элементом узла узел
 	void merge(int idx);
 
+        // Деструктор
+        ~BTreeNode();
+
 	friend class BTree;
 	friend class PrettyPrint;
 };
@@ -89,6 +92,9 @@ public:
 
 	// Основная функция удаления ключа в B-дереве
 	void delete_key(int k);
+
+        // Деструктор
+        ~BTree();
 
 	friend class PrettyPrint;
 };
