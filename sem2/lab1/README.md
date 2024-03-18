@@ -125,4 +125,305 @@ void create_tree(tree* node, int section[], int length_of_section, int l_limit, 
 
 Далее вычисляем и добавляем в структуру: номер узла, значение узла, максимальное значение из массива, левую и правую границы отрезка.
 
-Принцип создания дерева: из полученного исходного количества листьев выделяем 2^n листьев (из 9: 2^3 = 8, из 12: 2^3 = 8, из 19: 2^4 = 16, и т.д.)
+Принцип создания дерева: из полученного исходного количества листьев выделяем 2^n листьев (из 9: 2^3 = 8, из 12: 2^3 = 8, из 19: 2^4 = 16, и т.д.), если количество листьев = 2^n, то делим на 2. В левому потомку передаем массив размером 2^n, правому - "исходное количество листьев - 2^n".
+
+
+#### Функция изменения 
+```cpp
+void modify_tree(tree* node, int left_limit, int right_limit, int change)
+{
+	if (left_limit <= node->l_border && right_limit >= node->r_border)
+	{
+		node->modification += change;
+
+	}
+	else
+	{
+		if (node->left_child != NULL)
+		{
+			modify_tree(node->left_child, left_limit, right_limit, change);
+		}
+
+		if (node->right_child != NULL)
+		{
+			modify_tree(node->right_child, left_limit, right_limit, change);
+		}
+	}
+
+	if ((node->right_child != NULL) && (node->left_child != NULL))
+	{
+		if (node->left_child->max_value + node->left_child->modification >= node->right_child->max_value + node->right_child->modification)
+		{
+			node->max_value = node->left_child->max_value + node->left_child->modification;
+		}
+		else
+		{
+			node->max_value = node->right_child->max_value + node->right_child->modification;
+		}
+	}
+}
+```
+Интервал будет разбиваться на две равные половины, и информация об этих половинах будет храниться в сыновьях данного узла. Если при вызове функции modify (прибавление) узел полностью накрывается, то будем прибавлять к его полю modification, число change (то значение, которое прибавляется ко всем элементам). Если узел накрывается интервалом частично, то мы оставляем поле modification неизменным (оно будет отражать только изменение для всего интервала), вызываем функцию изменения рекурсивно для тех потомков, которые накрываются изменяемым интервалом с тем же значением value и с пересчитанным интервалом. В таком случае, на рекурсивном спуске следует пересчитывать значение поля max_value данного узла, заменяя его на максимальное из значений max_value + modification из его сыновей.
+
+
+#### Функция поиска максимума
+```cpp
+int find_max(tree* node, int left_limit, int right_limit, int sumadd)
+{
+	if (node->l_border == left_limit && node->r_border == right_limit)
+	{
+		return sumadd + node->max_value;
+	}
+	else
+	{
+		int res = -INFINITY;
+		if (left_limit <= node->left_child->r_border)
+		{
+			res = max(find_max(node->left_child, left_limit, min(right_limit, node->left_child->r_border), sumadd + node->left_child->modification), res);
+		}
+		if (right_limit >= node->right_child->l_border)
+		{
+			res = max(find_max(node->right_child, max(left_limit, node->right_child->l_border), right_limit, sumadd + node->right_child->modification), res);
+		}
+		return res;
+	}
+}
+```
+Теперь рассмотрим функцию максимума для интервала. Вначале введем понятие накопленной суммы (sumadd). Каждый раз, когда на рекурсивном спуске мы будем проходить через какую-то вершину, то будем прибавлять к сумме значение поля modification (таким образом, мы учтем все изменения, которые совершались с данными объектами, которые меняют все элементы, в том числе максимум). Т.е. в каждую функцию в качестве sumadd должна передаваться сумма sumadd и поля modification для узла, обрабатываемого вызываемой функцией. При вызове функции поиска должен передаваться указатель на корень дерева, а значение sumadd должно быть равно полю modification для корня. Если границы текущего интервала совпадают с запросом, то мы возвращаем наверх значение max_value + sumadd (т.е. значение максимального элемента плюс все изменения, которые накладывались на данный интервал). Если же интервал покрывается не полностью, то мы будем вызывать функцию для тех его детей, которые хотя бы частично пересекаются с интервалом и возвращать максимальное из значений, возвращенное этими функциями. Для дерева максимумов мы будем возвращать максимум из возвращенных значений.
+
+
+#### Функция нахождения суммы на отрезке
+```cpp
+void sum_tree(tree* node, int left_limit, int right_limit, int* sum)
+{
+	*sum += (node->modification) * (right_limit - left_limit + 1);
+
+	if (node->left_child && (left_limit <= node->left_child->r_border))
+	{
+		sum_tree(node->left_child, left_limit, min(right_limit, node->left_child->r_border), sum);
+	}
+	if (node->right_child && (right_limit >= node->right_child->l_border))
+	{
+		sum_tree(node->right_child, max(left_limit, node->right_child->l_border), right_limit, sum);
+	}
+}
+```
+Рекурсивно проходим все листья на заданном отрезке, на каждом узле добавляя к сумме модификацию данного узла, умноженную на количество листьев, связнных с этой вершиной и в тоже время попадающих в заданный интервал.
+
+
+#### Дополнительные функции: 1) Вывести дерево; 2) Удалить дерево
+```cpp
+void show_tree(tree* root, int length)
+{
+	if (!root)
+	{
+		cout << "Error!" << endl;
+		exit(-1);
+	}
+	tree* buffroot = root;
+	int logN = log2(length);
+	int left_dir;
+	int right_dir;
+	int full_length;
+
+	if (pow(2, logN) != length)
+	{
+		full_length = pow(2, int(log2(length)) + 1);
+	}
+	else
+	{
+		full_length = length;
+	}
+
+	int for_setw = 4 * full_length;
+
+	for (int i = 1; i < full_length * 2; i++)
+	{
+		logN = int(log2(i));
+
+		for (int k = logN; k > 0; k--)
+		{
+			if (buffroot != NULL)
+			{
+				left_dir = (buffroot->nomer) * pow(2, k);
+
+				right_dir = (buffroot->nomer) * pow(2, k) + pow(2, k) - 1;
+
+
+				if (i - left_dir > right_dir - i)
+				{
+					buffroot = buffroot->right_child;
+				}
+				if (i - left_dir < right_dir - i)
+				{
+					buffroot = buffroot->left_child;
+				}
+			}
+		}
+
+
+		if (pow(2, logN) == i)
+		{
+			for_setw = for_setw / 2;
+			cout << endl;
+			cout << setw(for_setw + full_length - 2 * pow(2, logN) / 3);
+		}
+		else
+		{
+			cout << setw(2 * for_setw);
+		}
+
+		if (buffroot != NULL)
+		{
+			cout << buffroot->modification << " ";
+		}
+
+		buffroot = root;
+	}
+}
+
+tree* delete_tree(tree* node)
+{
+	tree* temp_node_l = NULL, * temp_node_r = NULL;
+	if (node->left_child != NULL && node->right_child != NULL)
+	{
+		temp_node_l = node->left_child;
+		temp_node_r = node->right_child;
+	}
+	delete node;
+	if (temp_node_l && temp_node_r)
+	{
+		delete_tree(temp_node_l);
+		delete_tree(temp_node_r);
+	}
+	return NULL;
+}
+```
+
+### Исходный файл RMQ.cpp
+
+#### Реализация работы всех вышеописанных функций (меню)
+```cpp
+#include "RMQ_tree.h"
+#include <ctime>
+
+int main()
+{
+	srand(time(NULL));
+
+	tree* root = new tree;
+
+	int amount_of_leaves, swit4 = 1, left_lim, right_lim, modif;
+
+	int for_max_n_sum, * ptr_sum = &for_max_n_sum;
+
+	cout << "Input amount of leaves: ";
+
+	do
+	{
+		cin >> amount_of_leaves;
+	} while (amount_of_leaves < 1);
+
+	int* leaves = new int[amount_of_leaves];
+
+	for (int i = 0; i < amount_of_leaves; i++)
+	{
+		leaves[i] = /*rand() % 41 - 2*/0;
+	}
+
+	create_tree(root, leaves, amount_of_leaves, 0, 1);
+
+	show_tree(root, amount_of_leaves);
+
+	while (swit4)
+	{
+		cout << endl << endl << "1) Modify tree - 1\n2) Find max - 2\n3) Find sum - 3" << endl;
+
+		do
+		{
+			cin >> swit4;
+		} while (swit4 < 0 || swit4 > 3);
+
+		cout << endl;
+
+		switch (swit4)
+		{
+		case(1):
+		{
+			cout << "Define the section, where max value will be changed: [a, b] ([1, " << amount_of_leaves << "])" << endl;
+
+			cout << "a: ";
+			do
+			{
+				cin >> left_lim;
+			} while (left_lim < 1 || left_lim > amount_of_leaves);
+
+			cout << "b: ";
+			do
+			{
+				cin >> right_lim;
+			} while (right_lim < left_lim || right_lim > amount_of_leaves);
+
+			cout << "Input modification: ";
+			cin >> modif;
+
+			modify_tree(root, left_lim - 1, right_lim - 1, modif);
+			show_tree(root, amount_of_leaves);
+
+			break;
+		}
+
+		case(2):
+		{
+
+			cout << "Define the section, where max value will be found: [a, b] ([1, " << amount_of_leaves << "])" << endl;
+
+			cout << "a: ";
+			do
+			{
+				cin >> left_lim;
+			} while (left_lim < 1 || left_lim > amount_of_leaves);
+
+			cout << "b: ";
+			do
+			{
+				cin >> right_lim;
+			} while (right_lim < left_lim || right_lim > amount_of_leaves);
+
+			for_max_n_sum = find_max(root, left_lim - 1, right_lim - 1, root->modification);
+
+			cout << "Max value on [" << left_lim << ", " << right_lim << "]: " << for_max_n_sum << endl;
+
+			break;
+		}
+		case(3):
+		{
+			for_max_n_sum = 0;
+
+			cout << "Define the section, where sum will be found: [a, b] ([1, " << amount_of_leaves << "])" << endl;
+
+			cout << "a: ";
+			do
+			{
+				cin >> left_lim;
+			} while (left_lim < 1 || left_lim > amount_of_leaves);
+
+			cout << "b: ";
+			do
+			{
+				cin >> right_lim;
+			} while (right_lim < left_lim || right_lim > amount_of_leaves);
+
+			sum_tree(root, left_lim - 1, right_lim - 1, ptr_sum);
+
+			cout << "Sum on [" << left_lim << ", " << right_lim << "]: " << for_max_n_sum << endl;
+
+			break;
+		}
+		}
+	}
+
+	root = delete_tree(root);
+	show_tree(root, amount_of_leaves);
+}
+```
