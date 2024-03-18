@@ -33,7 +33,7 @@ public:
 };
 ```
 ## Функция добавления строки в дерево
-```С++
+```C++
 void AddString(string s, Node* root)
 {
 	Node* current = root;//Текущая вершина при обходе дерева
@@ -58,7 +58,7 @@ void AddString(string s, Node* root)
 		}
 		if (fnd == false)//Если не найден, создаём новый узел
 		{
-			if (current->num == 0)
+			if (current->front_ptrs[0] == nullptr)
 				current->front_ptrs[current->num] = new Node(s[i]);
 			else
 				current->front_ptrs.push_back(new Node(s[i]));
@@ -81,41 +81,41 @@ int DelString(string s, Node* root)
 	Node* ptr;
 	int i, j;
 	bool fnd = false;
-	for (i = 0; i < s.size(); i++)//Обход строки для попадания в её конец и проверка на существование слова в боре
+	for (i = 0; i < s.size(); i++)//Идём по элементам строки к её последнему элементу
 	{
 		for (j = 0; j < current->front_ptrs.size(); j++)
 		{
 
 			ptr = current->front_ptrs[j];
-			if (ptr == nullptr)//Если наткнулись на nullptr, раньше конца слова, строки в боре нет
+			if (ptr == nullptr)//Если натыкаемся на nullptr, пишем, что строки в боре нет, завершаем функцию
 			{
 				cout << "Строка не найдена" << endl << endl;
 				return 1;
 			}
-			if (s[i] == ptr->c)//Если нашли потомка со следующим в строке символом, переходим на него
+			if (s[i] == ptr->c)
 			{
 				current = current->front_ptrs[j];
 				fnd = true;
 				break;
 			}
 		}
-		if (fnd == false)//Если не нашли, строки в боре нет
+		if (fnd == false)//Если не нашли потомка с следующим символом, пишем, что строки в боре нет, завершаем функцию
 		{
 			cout << "Строка не найдена" << endl << endl;
 			return 1;
 		}
 	}
-	if (current->end != true)//Если дошли до последнего символа в строке, но текущий узел не помеченым концом, строка в бор не добавлялась
+	if (current->end != true)//Если узел с последним символом строки не помечен как конец слова, пишем, что строки в боре нет, завершаем функцию
 	{
 		cout << "Строка не найдена" << endl << endl;
 		return 1;
 	}
-	for (i = s.size() - 1; i >= 0; i--)//Начинаем удаление с последнего симсвола
+	for (i = s.size() - 1; i >= 0; i--)//Начинаем удаление с последнего символа
 	{
-		if (current->num < 1 && current->end == false)//Если этот узел не имел предков кроме удалённого и не является концом другого слова, производим его удаление
+		if ((current->num < 1 && current->end == false) || (i == s.size() - 1 && current->num < 1))//Если текущий узел не содержит потомков кроме раннее удалённого,не является концом другого слова или если он последний символ строки и не имеет больше потомков, удаляем его
 		{
-			current = current->back_ptr;
-			for (j = 0; j < current->front_ptrs.size(); j++)
+			current = current->back_ptr;//Переходим на предка
+			for (j = 0; j < current->front_ptrs.size(); j++)//Ищем среди потомков узел, интересующий нас, удаляем его и указатель, указывавший на него из вектора
 			{
 				ptr = current->front_ptrs[j];
 				if (s[i] == ptr->c)
@@ -127,14 +127,90 @@ int DelString(string s, Node* root)
 			}
 			current->num--;
 		}
-		else
+		else//Иначе, если символ, не подходящий под условия выше, является последним в строке, убираем его статус последнего символа в строке и завершаем функцию, или просто завершаем функцию
 		{
-			if (i == s.size() - 1)//Если не можем удалить последний узел слова, обозначаем, что это больше не его конец
+			if (i == s.size() - 1)
 				current->end = false;
 			break;
 		}
 	}
 	cout << "Строка удалена" << endl << endl;
 	return 0;
+}
+```
+## Функция для вывода всего бора
+```C++
+void ShowBor(Node* root)
+{
+	Node* current = root->back_ptr;//Переходим сразу на узел перед корневым
+	string word;
+	rekurs(current, word);//Передаём этот узел в функцию для рекурсии
+	cout << endl;
+}
+```
+## Вспомогательная рекурсивная функция для функции ShowBor
+```C++
+void rekurs(Node* current, string word)
+{
+	int i;
+	for (i = 0; i < current->front_ptrs.size(); i++)//Обходим всех потомков текущего узла
+	{
+		if (current->front_ptrs[i] != nullptr)//Если i-тый потомок не равен nullptr
+		{
+			current = current->front_ptrs[i];//Переходим на него и, если это не корень, записываем его символ в слово word, а если он помечен концом строки, выводим слово word
+			if (current->is_root == false)
+			{
+				word.push_back(current->c);
+				if (current->end == true)
+				{
+					cout << word << endl;
+				}
+			}
+			rekurs(current, word);//Снова запускаем рекурсию для этого узла
+		}
+	}
+}
+```
+## Функция поиска строки
+```C++
+int SearchString(string s, Node* root)
+{
+	Node* current = root;
+	Node* ptr;
+	int i, j;
+	bool fnd = false;
+	for (i = 0; i < s.size(); i++)
+	{
+		for (j = 0; j < current->front_ptrs.size(); j++)
+		{
+			ptr = current->front_ptrs[j];
+			if (ptr == nullptr)
+			{
+				cout << "Строка не найдена" << endl << endl;
+				return 1;
+			}
+			if (s[i] == ptr->c)
+			{
+				current = current->front_ptrs[j];
+				fnd = true;
+				break;
+			}
+		}
+		if (fnd == false)
+		{
+			cout << "Строка не найдена" << endl << endl;
+			return 1;
+		}
+	}
+	if (current->end == true)
+	{
+		cout << "Строка найдена" << endl << endl;
+		return 0;
+	}
+	else
+	{
+		cout << "Строка не найдена" << endl << endl;
+		return 1;
+	}
 }
 ```
