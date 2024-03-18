@@ -427,3 +427,13 @@ int main()
 	show_tree(root, amount_of_leaves);
 }
 ```
+
+
+## Вывод
+В рамках данной лабораторной работы были изучена структура Дерево максимумов. Была реализована библиотека с основными операциями над Деревом максимумов.
+
+
+## Источники
+1. https://drive.google.com/drive/folders/1U-r54LZD2m_yiPa1TuaaaS4t1hEWxa7q
+2. http://e-maxx.ru/algo/segment_tree
+3. https://brestprog.by/topics/segmenttree/
