@@ -434,6 +434,6 @@ int main()
 
 
 ## Источники
-1. https://drive.google.com/drive/folders/1U-r54LZD2m_yiPa1TuaaaS4t1hEWxa7q
+1. https://drive.google.com/drive/folders/1U-r54LZD2m_yiPa1TuaaaS4t1hEWxa7q (6 лекция)
 2. http://e-maxx.ru/algo/segment_tree
 3. https://brestprog.by/topics/segmenttree/
