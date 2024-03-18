@@ -2,9 +2,9 @@
 
 # Лабораторная работа №2
 **Вариант №12**    
-Симеетрическая разность нескольких мультимножеств
+Симметрическая разность нескольких мультимножеств
 ## Цели лабораторной работы:
-1. Разработать библиотеку для работы с очередью  на выбранном императивном языке программирования (например, C++, Java, Python).
+1. Разработать библиотеку для считывания из файла и работы с несколькими мультимножествами на выбранном императивном языке программирования (например, C++, Java, Python).
 2. Создать тестовую программу для демонстрации функциональности разработанной библиотеки.
 3. Разработать систему тестов для проверки работоспособности и корректности библиотеки, учитывая требования полноты, адекватности и непротиворечивости.
 4. Обеспечить обработку некорректных данных, предусмотрев корректное завершение программы при возникновении ошибок.
@@ -13,7 +13,7 @@
 ## Задачи лабораторной работы
 1. Изучить спецификацию задачи по работе с множествами.
 2. Выбрать язык программирования для реализации библиотеки (например, C++, Java, Python) в соответствии с индивидуальным заданием.
-3. Разработать и реализовать библиотеку для работы с множествами, включая операции вставки и удаления элементов.
+3. Разработать и реализовать библиотеку для считывания из файла и нахождения симметрической разности нескольких мультимножеств.
 4. Написать тестовую программу, которая демонстрирует основные сценарии использования библиотеки.
 5. Разработать систему тестов, включающую тест-кейсы для проверки различных аспектов работы библиотеки, включая корректность, производительность и обработку ошибок.
 6. Провести тестирование разработанной библиотеки, убедившись в ее правильной работе на различных входных данных.
@@ -21,161 +21,276 @@
 
 ## Список используемых понятий:
 1. **Множество** - набор, совокупность каких-либо объектов
-2. **Объединением множеств А и В** называется множество, содержащее все элементы, принадлежащие либо множеству А, либо В, либо им обоим
-3. **Пересечением множеств А и В** называется множество, состоящее из всех элементов, принадлежащих одновременно каждому из множеств
-А и В.
+2. **Симметрическая разность** — это теоретико-множественная операция, результатом которой является новое множество, включающее все элементы исходных множеств, не принадлежащие одновременно обоим исходным множествам.
+
 
 
 ## <p align="center">Описание используемых алгоритмов:</p>
-1. **Алгоритм добавления элемента**
+1. **Алгоритм считывания из файла**
    
-   Этот алгоритм добавляет элемент в множество. Добавление сделано так, чтобы элементы множества не повторялись и были различны
+   Этот алгоритм добавляет множества из файла в структуру, а так же контролирует корректный ввод
 ```cpp
-void Add(Branch*& current, int value) {
-	if (!current) {
-		current = new Branch(value); //добавляем/создаем элемент
-		return;
-	}
-	else
-		if (value < current->data) { 
-			Add(current->left, value);
-		}
-		else if (value > current->data)
-		{
-			Add(current->right, value);
-		}
-		else 	return;
-}
-}
-```
-2. **Алгоритм удаления элемента**
+void ReadFile(Mnozh MultMn[], string path) {
+    ifstream file;
+    file.open(path);
+    int KolSkob = 0;
+    int KolSkobKort = 0;
+
+    if (file.is_open()) {
+        char ch;
+        int m = 0;
+        MultMn[0].KolMnoz = m + 1;
+        int KolElemMnozh = 0;
+        bool permn = false;
+        while (file.get(ch)) {
+            if (ch == '{') {
+                if (KolSkob > 0) {
+                    MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                    MultMn[m].El[KolElemMnozh].NeorMN = true;
+                    MultMn[m].El[KolElemMnozh].razm += ch;
+                    KolSkob++;
+                }
+                else {
+                    if (permn == false) {
+                        KolSkob++;
+                        permn = true;
+                    }
+                    else {
+                        m++;
+                        MultMn[0].KolMnoz = m + 1;
+                        KolElemMnozh = 0;
+                        KolSkob++;
+                    }
+                }
+            }
+            else if (ch == ',') {
+                if (KolSkob == 1) {
+                    KolElemMnozh++;
+                }
+                else {
+                    MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                    if (MultMn[m].El[KolElemMnozh].NeorMN)
+                        MultMn[m].El[KolElemMnozh].razm += ch;
+                }
+            }
+            else if (isdigit(ch)) {
+                if (KolSkob == 1) {
+                    if (MultMn[m].El[KolElemMnozh].kratn == 1) {
+                        MultMn[m].El[KolElemMnozh].kratn = (ch - 48);
+                    }
+                    else {
+                        MultMn[m].El[KolElemMnozh].kratn = MultMn[m].El[KolElemMnozh].kratn * 10 + (ch - 48);
+                    }
+                }
+                else {
+                    MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                    if (MultMn[m].El[KolElemMnozh].NeorMN)
+                        MultMn[m].El[KolElemMnozh].razm += ch;
+                }
+            }
+            else if (ch == '<') {
+                KolSkob++;
+                KolSkobKort++;
+                MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                if (MultMn[m].El[KolElemMnozh].NeorMN)
+                    MultMn[m].El[KolElemMnozh].razm += ch;
+            }
+            else if (ch == '>') {
+                KolSkob--;
+                KolSkobKort--;
+                MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                if (MultMn[m].El[KolElemMnozh].NeorMN)
+                    MultMn[m].El[KolElemMnozh].razm += ch;
+            }
+            else if (ch == '}') {
+                if (KolSkob > 1) {
+                    MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                    if (MultMn[m].El[KolElemMnozh].NeorMN)
+                        MultMn[m].El[KolElemMnozh].razm += ch;
+                    KolSkob--;
+                }
+                else {
+                    MultMn[m].MoshMn = KolElemMnozh + 1;
+                    KolSkob--;
+                }
+            }
+            else if (ch == ' ' || ch == '\n') {}
+            else {
+                MultMn[m].El[KolElemMnozh].el.push_back(ch);
+                if (MultMn[m].El[KolElemMnozh].NeorMN)
+                    MultMn[m].El[KolElemMnozh].razm += ch;
+            }
+        }
+    }
+    else {
+        cout << "Error";
+    }
+    MultMn[0].KolSkob = KolSkob;
+    MultMn[0].KolSkobKort = KolSkobKort;
+    file.close();
+    ViewMnozh(MultMn);
+    SortMnozh(MultMn);
+
+    SimRaznNM(MultMn);
    
-   Этот алгоритм удаляет заданный элемент, если такой имеется. В противном случае ничего не произойдет
-```cpp
-Branch* findMinNode(Branch* node) {
-	if (node == nullptr) {
-		return nullptr; // Не найден минимальный узел
-	}
-	else if (node->left == nullptr) {
-		return node; // Мы достигли самого левого узла в дереве
-	}
-	else {
-		return findMinNode(node->left); // Рекурсивно ищем в левом поддереве
-	}
-}
-
-
-void removeNode(Branch*& current, int value) {
-	if (current == nullptr) {
-		return; // Узел не найден
-	}
-	if (value < current->data) {
-		// Ищем в левом поддереве
-		removeNode(current->left, value);
-	}
-	else if (value > current->data) {
-		// Ищем в правом поддереве
-		removeNode(current->right, value);
-	}
-	else {
-		// Нашли узел
-		if (current->left == nullptr) {
-			// Узел имеет только правого потомка
-			Branch* temp = current;
-			current = current->right;
-			delete temp;
-		}
-		else if (current->right == nullptr) {
-			// Узел имеет только левого потомка
-			Branch* temp = current;
-			current = current->left;
-			delete temp;
-		}
-		else {
-			// Узел имеет двух потомков, находим и удаляем узел с минимальным значением в правом поддереве
-			Branch* minRight = findMinNode(current->right);
-			current->data = minRight->data;
-			removeNode(current->right, minRight->data);
-		}
-	}
 }
 ```
-3. **Алгоритм поиска элемента**
-
-   Данный алгоритм ищет заданный элемент и возвращает ссылку, если элемент найден
+2. **Сортировка множеств**
+   
+   Этот алгоритм перезаписывает мультимножество, например: {A, A} => {2A}
 ```cpp
-Branch* FindElem(Branch* node, int value) {
-	if (!node){
-		std::cout << "Элемент не найден";
-		return NULL;
+void SortMnozh(Mnozh MultMn[]) {                    //Убираем повторяющиеся элементы и увеличиваем кратность
+    for (int i = 0; i <= MultMn[0].KolMnoz; i++) {
+        for (int j = 0; j < MultMn[i].MoshMn; j++) {
+            for (int k = j + 1; k < MultMn[i].MoshMn; k++) {
+                if ((MultMn[i].El[j].el == MultMn[i].El[k].el && ((MultMn[i].El[j].kratn != MultMn[i].El[k].kratn) || (MultMn[i].El[j].kratn == 1 && MultMn[i].El[k].kratn == 1))) || ((MultMn[i].El[j].razm == MultMn[i].El[k].razm) && (MultMn[i].El[j].NeorMN == true && MultMn[i].El[k].NeorMN == true))) {
+                    MultMn[i].El[j].kratn = MultMn[i].El[j].kratn + MultMn[i].El[k].kratn;
+                    for (int t = k; t < MultMn[i].MoshMn - 1; t++) {
+                        MultMn[i].El[t] = MultMn[i].El[t + 1];
+                    }
+                    MultMn[i].MoshMn--;
+                    k--;
+                }
+
+            }
+        }
+    }
 }
-	if (node->data == value) {
-		std::cout << "Элемент найден";
-		return node;
-	}
-	if (node->data<value)
-		FindElem(node->right, value);
-	else 
-		FindElem(node->left, value);
+```
+3. **Вывод множеств на экран**
+   
+```cpp
+void ViewMnozh(Mnozh MultMn[]) {                //Вывод множеств, содержащихся в файле
+    for (int i = 0; i < MultMn[0].KolMnoz; i++) {
+        cout << "Множество " << i + 1 << ':' << '\t';
+        for (int j = 0; j < MultMn[i].MoshMn; j++) {
+            if (MultMn[i].El[j].kratn == 1)
+                cout << MultMn[i].El[j].el << '\t';
+            else
+                cout << MultMn[i].El[j].kratn << ' ' << MultMn[i].El[j].el << "     ";
+        }
+        cout << endl;
+    }
+    cout << endl;
 }
 ```
 
-4. **Вывод множества на экран**
+4. **Алгоритм симметрической разности**
 ```cpp
-void print(Branch* node) {
-	if (!node) return;
-	print(node->left);
-	std::cout << node->data << " ";
-	print(node->right);
+void SimRaznNM(Mnozh MultMn[]) {        //Симметрическая разность
+    Mnozh C = MultMn[0];
+    if (MultMn[0].KolSkob == 0) {
+
+        int n = 1;
+        while (n < MultMn[0].KolMnoz) {
+            Mnozh D, E, L;
+
+            int d = 0, e = 0, l = 0;
+
+
+            for (int i = 0; i < C.MoshMn; i++) {    //Разность A и B
+                bool isduplicate = false;
+                for (int j = 0; j < MultMn[n].MoshMn; j++) {
+                    if (C.El[i].el == MultMn[n].El[j].el || ((C.El[i].razm == MultMn[n].El[j].razm) && (C.El[i].NeorMN == true && MultMn[n].El[j].NeorMN == true))) {
+                        int kr = C.El[i].kratn - MultMn[n].El[j].kratn;
+                        if (kr == 0) {}
+                        else if (kr > 0) {
+                            D.El[d].el = C.El[i].el;
+                            D.El[d].kratn = kr;
+                            d++;
+                            D.MoshMn++;
+                        }
+                        else {              //Учитываем кратность элементов при сим разности и берем модуль разности кратностей
+                            kr *= -1;
+                            D.El[d] = C.El[i];
+                            D.El[d].kratn = kr;
+                            d++;
+                            D.MoshMn++;
+                        }
+                        isduplicate = true;  break;
+                    }
+                }
+                if (!isduplicate) {
+                    D.El[d] = C.El[i];
+                    D.El[d].kratn = C.El[i].kratn;
+                    d++;
+                    D.MoshMn++;
+                }
+            }
+
+            for (int i = 0; i < MultMn[n].MoshMn; i++) {    //Разность B и A
+                bool isduplicate = false;
+                for (int j = 0; j < C.MoshMn; j++) {
+                    if (C.El[j].el == MultMn[n].El[i].el || ((C.El[j].razm == MultMn[n].El[i].razm) && (C.El[j].NeorMN == true && MultMn[n].El[i].NeorMN == true))) {
+
+                        isduplicate = true;  break;
+                    }
+                }
+                if (!isduplicate) {
+                    E.El[e] = MultMn[n].El[i];
+                    E.El[e].kratn = MultMn[n].El[i].kratn;
+                    e++;
+                    E.MoshMn++;
+                }
+            }
+
+            for (int i = 0; i < E.MoshMn; i++) {    //Объединение 
+                bool isDuplicate = false;
+                for (int j = 0; j < L.MoshMn; j++) {
+                    if (E.El[i].el == L.El[j].el) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    L.El[l] = E.El[i];
+                    L.El[l].kratn = E.El[i].kratn;
+                    l++;
+                    L.MoshMn++;
+                }
+            }
+
+            for (int i = 0; i < D.MoshMn; i++) {
+                bool isDuplicate = false;
+                for (int j = 0; j < L.MoshMn; j++) {
+                    if (D.El[i].el == L.El[j].el) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    L.El[l] = D.El[i];
+                    L.El[l].kratn = D.El[i].kratn;
+                    l++;
+                    L.MoshMn++;
+                }
+            }
+            L.MoshMn--;
+            C = L;
+            n++;
+        }
+
+        cout << endl << "Результат симметрической разности нескольких мультимножеств:" << endl;
+        for (int j = 0; j < C.MoshMn; j++) {
+            if (C.El[j].kratn == 1)
+                cout << C.El[j].el << '\t';
+            else
+                cout << C.El[j].kratn << ' ' << C.El[j].el << "     ";
+        }
+    }
+    else
+        cout << "Некорректный ввод";
+    cout << endl;
+}
 }
 ```
 
- 5. **Алгоритм объединения**
-
-   ```cpp
-void add1(Branch*& current, Branch*& mnozhC) {
-	if (!current) return;
-	Add(mnozhC, current->data);
-	add1(current->right, mnozhC);
-	add1(current->left, mnozhC);
-}
-
-void Objedinenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
-	add1(mnozhA, mnozhC); //добавляем элементы множества А
-	add1(mnozhB, mnozhC); //добавляем элементы множества В
-}
-   ```
-
-   6. **Алгоритм пересечения**
-	
-      В данном алгоритме каждый элемент множества А сравнивается с каждым элементом множества В. При совпадении элемент добавляется в пересечение
-   ```cpp
-void proverka(int value, Branch* node, Branch*& mnozhC) { 
-	if (!node) return;
-	if (node->data == value) {
-		Add(mnozhC, value);
-		return;
-	}
-	proverka(value, node->left, mnozhC);
-	proverka(value, node->right, mnozhC);
-}
-
-
-
-void Peresechenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
-	if (!mnozhA) return;
-	proverka(mnozhA->data, mnozhB, mnozhC);
-
-	Peresechenie(mnozhA->left, mnozhB, mnozhC);
-	Peresechenie(mnozhA->right, mnozhB, mnozhC);
-}
-   ```
 *****
 ## <p align="center">Тесты:</p>
 ![результат тестов](https://github.com/iis-32170x/RPIIS/blob/Титов_А/sem2/lab2/тесты/выполнение_тестов.png)
 ******
 ## <p align="center">Вывод:</p>
-В ходе выполнения работы познакомился созданием библиотек в С++, реализоавал библиотеку работы с массивами,а также создал систему тестов,которая проверяет корректность созданной библиотеки, отточил свои навыки в создании структур и функций.
+В ходе выполнения работы познакомился созданием библиотек в С++, реализоавал библиотеку работы со считыванием из файла и симметрической разностью,а также создал систему тестов,которая проверяет корректность созданной библиотеки, отточил свои навыки в создании структур и функций.
 ## <p align="center">Используемые источники:</p>
 1. [Создание библиотеки](https://www.youtube.com/watch?v=pAxEfF2yVlM&t=1s)
 2. [Считывание из файла](https://youtu.be/CBnB2fvfu_I?si=9NhPBXS0RgMw2gTC)
