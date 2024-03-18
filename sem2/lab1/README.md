@@ -350,14 +350,11 @@ void printToFile(std::string filename): Выводит содержимое та
 9
 ```
 Что соответствует таблице Юнга:
+![tableau1](https://github.com/iis-32170x/RPIIS/assets/146937124/335415ec-b6d1-4141-8218-7a49a7079b0c)
 
-![](img/tableau1.png)
+
 
 Далее были проведены следующие манипуляции:
-![](img/s2_lab1_img_1.png)
-![](img/s2_lab1_img_2.png)
-![](img/s2_lab1_img_3.png)
-![](img/s2_lab1_img_4.png)
 
 Полученный при выполнении действия 5 из меню файл *output1.txt* имеет содержание:
 ```
