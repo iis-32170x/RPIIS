@@ -368,6 +368,13 @@ void printToFile(std::string filename): Выводит содержимое та
 
 ![](img/tableau2.png)
 
+<img width="392" alt="Снимок экрана 2024-03-19 094437" src="https://github.com/iis-32170x/RPIIS/assets/146937124/88df9d6a-757d-487d-bbb6-dbb2d8833d39">
+
+<img width="544" alt="Снимок экрана 2024-03-19 094554" src="https://github.com/iis-32170x/RPIIS/assets/146937124/907301d2-f6c9-49f5-b5fe-726fc62def46">
+
+
+<img width="235" alt="Снимок экрана 2024-03-19 094704" src="https://github.com/iis-32170x/RPIIS/assets/146937124/0b79ee67-5582-44bb-a057-b59938a680b4">
+
 Результаты манипуляций соответствуют ожидаемым.
 
 ## Вывод
