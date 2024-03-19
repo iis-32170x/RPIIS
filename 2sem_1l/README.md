@@ -17,151 +17,204 @@
 ### Реализация:
 
 
+##### Объявляем класс MySet и его публичные и приватные члены.
+Публичные методы выполняют различные операции над множеством.
+Приватные методы resize() и isFull() используются для манипуляции с размером и проверки на полноту множества.
+Поле elements представляет собой массив, в котором хранятся элементы множества.
+Поле capacity отслеживает текущую емкость массива.
+Поле count содержит текущее количество элементов в множестве.
 
+```c++
+class MySet {
+public:
+    MySet();
+    ~MySet();
 
+    void insert(int element);
+    void remove(int element);
+    bool contains(int element) const ;
 
+    MySet intersection(const MySet& other) const;
+    MySet unionWith(const MySet& other);
 
+    void clear();
+    int size();
+    void print();
 
+    MySet(const MySet& other);
+    MySet& operator=(const MySet& other);
+ 
+private:
+    int* elements;
+    int capacity;
+    int count;
 
-
-
-
-
-*Код:*  
-
-```batch
-@echo off
-rem "На вход пакетному файлу отправляем абсолютный путь к папке. Если такой папки нет, то пишет “No input folder” и выполнение программы завершается.
-if "%~1"=="" (
-    echo No input folder 
-    pause 
-    exit /b 2
-)
-
-rem "Команда If...() используется для проверки, существует ли первый аргумент (папка). Двойка-код возврата, указывающий на ошибку." 
-
-if exist "D:\study\batniki\alotoffiles" (
-    echo Directory exists
-) else (
-    echo Directory not exists 
-    pause
-    exit
-)
-
-pause 
-
-rem "Определяем переменные в пакетном файле:searchDir - папка с файлами, outputFile - текстовый файл с результатом программы"
-set "searchDir=alotoffiles"
-set "outputFile=result.txt"
-
-rem "Нижняя команда создаёт пустой файл или очищает содержимое существующего."
-type nul > "%outputFile%" 
-
-rem "Инициируем перебор всех файлов в спискe"
-for /r "%searchDir%" %%A in (*) do (
-    for /r "%searchDir%" %%B in (*) do (
-       if /I "%%A" neq "%%B" (
-          rem "/I задает сравнение текстовых строк без учета регистра; neq - неактуален ли один одному"
-          fc /b "%%A" "%%B" > nul
-          rem "nul - отказ от вывода данных в терминал"  
-          if errorlevel 1 (
-          echo "files are different" > nul 
-          ) else (
-          echo %%A >> "%outputFile%"
-          echo %%B >> "%outputFile%"
-          echo %%--------------------------------------------------------- >> "%outputFile%"
-          )
-      )
-   )
-)
-
-echo "Results in result.txt"
-pause
-```
-### Пример выполнения работы:
-
-1.На вход пакетному файлу отправляем абсолютный путь к папке. Если путь не задан, то пишет “No input folder” и выполнение программы завершается.
-![Пример](/images/failbatpng.png)  
-
-
-2.Далее используем команду if...() для проверки, существует ли первый аргумент(папка).
-![Пример](/images/excelbatpng2.png)
-
-3.Следующим шагом определяем переменные в пакетном файле, где searchDir - папка с файлами для сортировки (в случае примера это папка alotoffiles), а текстовый документ, куда отправится результат - outputFile (result.txt в примере)
-![Пример](/images/alotoffielspng.png)  
-
-4.Создаём пустой файл под результат или очищаем содержимое существующего.
-
-5.Далее с помощью команд for...() инициализируем перебор всех файлов в папке, после чего выводится сообщение о том, что результаты записаны.
-![Пример](/images/filebatresultpng.png)  
-![Пример](/images/resultpng.png)  
-
-
-
-
-
-
-
-## File.sh
-
-*Код:*
-```bash
-#!/bin/bash
-
-if [ -z "$1" ]; 
-    then
-    echo "No input folder"
-    
-    #Выводит текст с ожиданием ввода для продолжения (pause)
-    read -p "Press any key to continue..."
-    exit
-fi
-
-#Определяем переменные в пакетном файле:searchDir - папка с файлами, outputFile - текстовый файл с результатом программы
-searchDir="D:/study/batniki/alotoffiles"
-outputFile="result.txt"
-
-#Проверка, является ли папкой и существует ли
-if [ ! -d "$searchDir" ]; then
-    echo "Directory does not exist"
-    read -p "Press any key to continue..."
-    exit
-fi
-
-read -p "Press any key to continue..."
-
-# Создаем пустой файл result.txt
-> "$outputFile"
-
-# Цикл обхода всех файлов в указанной папке и ее подкаталогах
-for fileA in "$searchDir"/*; do
-    for fileB in "$searchDir"/*; do
-        if [ "$fileA" != "$fileB" ]; then
-            if ! cmp -s "$fileA" "$fileB"; then
-                echo "files are different" > /dev/null
-            else
-                echo "$fileA" >> "$outputFile"
-                echo "$fileB" >> "$outputFile"
-                echo "---------------------------------------------------------" >> "$outputFile"
-            fi
-        fi
-    done
-done
-
-echo "Results in $outputFile"
-read -p "Press any key to continue..."
-exit
+    void resize(int newCapacity);
+    bool isFull();
+};
 ```
 
-### Пример выполнения работы:
+##### Инициализируем по умолчанию конструктор и деструктор:
 
-Ход выполнения работы аналогичен предыдущей программе. Главным и единственным же отличием является синтаксис.
-![Пример](/images/fileshresult.png)
-![Пример](/images/resultpng.png)
+```c++
+MySet::MySet() : capacity(10), count(0) {
+    elements = new int[capacity];
+}
 
-### Итог
+MySet::~MySet() {
+    delete[] elements;
+}
+```
 
-В ходе работы были приобретены некоторые основные навыки работы в Git Bush. А так же научился командам для работы в GitHub.
+##### Методы класса MySet (вставка элемента, увеличение ёмкости множества, удаление элемента, поиск элемента):
+
+```c++
+void MySet::insert(int element) {
+    if (contains(element)) {
+        return;
+    }
+
+    if (isFull()) {
+        resize(capacity * 2);
+    }
+
+    elements[count] = element;
+    count++;
+}
+
+void MySet::remove(int element) {
+    int index = -1;
+
+    for (int i = 0; i < count; i++) {
+        if (elements[i] == element) {
+            index = i;
+            break;
+        }
+    }
+
+    if (index != -1) {
+        for (int i = index; i < count - 1; i++) {
+            elements[i] = elements[i + 1];
+        }
+
+        count--;
+    }
+}
+
+bool MySet::contains(int element) const {
+    for (int i = 0; i < count; i++) {
+        if (elements[i] == element) {
+            return true;
+        }
+    }
+
+    return false;
+}
+```
+
+##### Объединение и пересечение двух множеств
+
+```c++
+MySet MySet::intersection(const MySet& other) const {
+    MySet result;
+
+    for (int i = 0; i < count; i++) {
+        if (other.contains(elements[i])) {
+            result.insert(elements[i]);
+        }
+    }
+
+    return result;
+} 
+
+MySet MySet::unionWith(const MySet& other) {
+    MySet result = *this;
+
+    for (int i = 0; i < other.count; i++) {
+        result.insert(other.elements[i]);
+    }
+
+    return result;
+}
+```
+
+##### Функции очистки, определения размера, вывода и увелечения размера множества
+
+```c++
+void MySet::clear() {
+    count = 0;
+}
+
+int MySet::size() {
+    return count;
+}
+
+void MySet::print() {
+    std::cout << "{ ";
+    for (int i = 0; i < count; i++) {
+        std::cout << elements[i] << " ";
+    } 
+    std::cout << "}" << std::endl;
+}
+
+void MySet::resize(int newCapacity) {
+
+    int* newElements = new int[newCapacity];
+
+    for (int i = 0; i < count; i++) {
+        newElements[i] = elements[i];
+    }
+
+    delete[] elements;
+
+    elements = newElements;
+    capacity = newCapacity;
+}
+```
+
+##### 
+
+```c++
+```
+
+## Пример работы программы
+
+Программа (main.cpp) работает следующим образом:
+
+*Пользователю предлагаются операции над множеством:
+1. Создание множества
+1.1. Пользователь вводит количество элементов множества и поочерёдно их вводит
+1.2. Новое множество выводится на экран
+2. Добавление элемента
+2.2. Пользователь вводит необходимый элемент
+2.2. Новое множество выводится на экран
+3. Удаление элемента
+3.1. Пользователь вводит элемент, который нужно удалить
+3.2. Если элемент есть, он удаляется из множества.
+3.3. Если элемент не обнаружен, выводится результат
+3.4. Множество выводится на экран
+4. Поиск элемента
+4.1. Пользователь вводит необходимый элемент
+4.2. Если элемент присутствует в множестве, то программа об этом сообщает
+4.3. Если элемент отсутсвует, программа сообщает об обратном
+5. Множество, полученное посредством предыдущих операций (1-3) выводится на экран
+6. Пересечение и обьединение множеств
+6.1. Пользователь вводит необходимые ему два множества (как при создании множеств)
+6.2. На экран выводится пересечение и обьединение данных множеств
+
+![image](images/1kart.png)  ![image](images/2kart.png)
+
+
+## Вывод
+
+В ходе выполнения работы было реализовано множество и интерфейс для работы с ним.
+
+
+
+
+
+
+
 
 
 
