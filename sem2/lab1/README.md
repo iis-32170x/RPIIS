@@ -452,7 +452,12 @@ int main()
 
 Нахождение суммы (в форме: сумма - отрезок): 35 - [2, 3], 65 - [3, 5], 23 - [5, 5], 57 - [5, 7], 131 - [1, 7]
 
+3. 
+![test3](https://github.com/iis-32170x/RPIIS/assets/144227421/8080bf57-a7f5-43a5-9549-2d6b8a091169)
 
+![test31](https://github.com/iis-32170x/RPIIS/assets/144227421/3402d9ac-79fc-413a-8523-663336384f5a)
+
+![test32](https://github.com/iis-32170x/RPIIS/assets/144227421/27ec96e0-f8cd-412e-820c-a37c773a4278)
 
 
 ## Вывод
