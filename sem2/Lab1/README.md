@@ -7,7 +7,26 @@
 `Бор` — структура данных для хранения набора строк, представляющая из себя подвешенное дерево с символами на рёбрах. Строки получаются последовательной записью всех символов, хранящихся на рёбрах между корнем бора и терминальной вершиной.(источник:
 https://neerc.ifmo.ru/wiki/index.php?title=%D0%91%D0%BE%D1%80)
 # Описание алгоритмов
-## Описание структуры узла
+## Файл Node.h
+```C++
+#pragma once
+#include <iostream>
+#include <vector>
+class Node
+{
+public:
+	std::vector<Node*> front_ptrs = { nullptr };
+	Node* back_ptr;
+	char c;
+	int num = 0;
+	bool is_root = false;
+	bool end = false;
+	Node();
+	Node(char c);
+	Node(Node* p);
+};
+```
+## Файл Node.cpp (описание класса узла)
 ```C++
 class Node
 {
@@ -32,7 +51,20 @@ public:
   }
 };
 ```
-## Функция добавления строки в дерево
+## Файл bor.h
+```C++
+#pragma once
+#include "Node.h"
+#include <string>
+void AddString(std::string, Node*);
+int DelString(std::string s, Node* root);
+void rekurs(Node* current, std::string word);
+void ShowBor(Node* root);
+int SearchString(std::string s, Node* root);
+void DelBor(Node*);
+```
+## Файл bor.cpp (описание каждой функции в нём)
+### Функция добавления строки в дерево
 ```C++
 void AddString(string s, Node* root)
 {
@@ -73,7 +105,7 @@ void AddString(string s, Node* root)
 	cout << "Строка добавлена" << endl << endl;
 }
 ```
-## Функция удаления строки
+### Функция удаления строки
 ```C++
 int DelString(string s, Node* root)
 {
@@ -138,7 +170,7 @@ int DelString(string s, Node* root)
 	return 0;
 }
 ```
-## Функция для вывода всего бора
+### Функция для вывода всего бора
 ```C++
 void ShowBor(Node* root)
 {
@@ -148,7 +180,7 @@ void ShowBor(Node* root)
 	cout << endl;
 }
 ```
-## Вспомогательная рекурсивная функция для функции ShowBor
+### Вспомогательная рекурсивная функция для функции ShowBor
 ```C++
 void rekurs(Node* current, string word)
 {
@@ -171,9 +203,9 @@ void rekurs(Node* current, string word)
 	}
 }
 ```
-## Функция поиска строки
+### Функция поиска строки
 ```C++
-int SearchString(string s, Node* root)
+int SearchString(string s, Node* root)//Алгоритм идентичен алгоритму проверки наличия строки из функции DelString
 {
 	Node* current = root;
 	Node* ptr;
@@ -214,3 +246,76 @@ int SearchString(string s, Node* root)
 	}
 }
 ```
+### Функция удаления бора при завершении программы
+```C++
+void DelBor(Node* root)
+{
+	int i;
+	if (root != nullptr)
+		for (i = 0; i < root->front_ptrs.size(); i++)//Перебираем всех потомков данного узла
+		{
+			if (root->front_ptrs[i])//Если потомок существует, рекурсивно снова запускаем для енго функцию
+			{
+				DelBor(root->front_ptrs[i]);
+			}
+		}
+	delete root;//И начиная с последнего доступного элемента, производим удаление
+}
+```
+### Файл Source.cpp
+```C++
+#include <iostream>
+#include <string>
+#include "Node.h"; 
+#include "bor.h";
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int n = 0;
+	string s;
+	Node* root = new Node();
+	root->back_ptr = new Node(root);
+	do
+	{
+ 		cout << "Выберите операцию: 1 - добавить строку в бор, 2 - удалить cтроку из бора, 3 - поиск строки в боре, 4 - вывести все строки в боре, 0 - завершить программу " << endl;
+		cin >> n;
+		switch (n)
+		{
+		case 1:
+			cout << "Введите строку: ";
+			cin >> s;
+			AddString(s, root);
+			break;
+		case 2:
+			cout << "Введите строку: ";
+			cin >> s;
+			DelString(s, root);
+			break;
+		case 3:
+			cout << "Введите строку: ";
+			cin >> s;
+			SearchString(s, root);
+			break;
+		case 4:
+			cout << "Строки в боре: " << endl;
+			ShowBor(root);
+			break;
+		case 0:
+			delete root->back_ptr;
+			Delbor(root);
+			return 0;
+		default:
+			cout << "Введено необозначенное число";
+		}
+	} while (true);
+}
+```
+## Тестирование
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/f76264de-a002-489c-bde9-2105906e4a6e)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/c6be2b60-d3ae-4482-931e-a8898231b44a)
+
+## Вывод
+Мы организовали правильную работы бора как структуры данных со всеми необходимыми функциями.  
+
