@@ -28,28 +28,21 @@ public:
 ```
 ## Файл Node.cpp (описание класса узла)
 ```C++
-class Node
+#include "Node.h"
+#include <iostream>
+#include <vector>
+Node::Node()
 {
-public:
-	std::vector<Node*> front_ptrs = { nullptr };//Вектор указателей на потомков данного узла
-	Node* back_ptr;//Указатель на предка данного узла
-	char c;//Символ, хранящийся в этом узле
-	int num = 0;//Количество потомков
-	bool is_root = false;//Обозначение, является ли узел корнем
-	bool end = false;//Обозначение, является ли этот узел концом слова
-	Node()//Конструктор для корневого узла
-  {
-	  is_root = true;
-  }
-	Node(char c)//Конструктор для обычного узла (с указанием символа, хранящегося в нём)
-  {
+	is_root = true;
+}
+Node::Node(char c)
+{
 	this->c = c;
-  }
-	Node(Node* p)//Конструктор для узла, предшествующего корневому
-  {
+}
+Node::Node(Node* p)
+{
 	this->front_ptrs[0] = p;
-  }
-};
+}
 ```
 ## Файл bor.h
 ```C++
