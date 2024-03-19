@@ -1,51 +1,59 @@
-﻿#include <iostream>
+#include <iostream>
 #include "..\StaticLib\pch.h"
 using namespace std;
+
 int main() {
-    AVLTree tree;
+    Node* tree = nullptr;
     setlocale(LC_ALL, "RU");
-   
-    // Вставка элементов в дерево
-    tree.insert(10);
-    tree.insert(5);
-    tree.insert(15);
-    tree.insert(3);
-    tree.insert(7);
-    tree.insert(12);
-    tree.insert(17);
+
+    // Заполнение дерева(проверка вставки)
+    insert(&tree, 10);
+    insert(&tree, 5);
+    insert(&tree, 15);
+    insert(&tree, 3);
+    insert(&tree, 7);
+    insert(&tree, 17);
+    insert(&tree, 12);
 
     try {
-        // Поиск элемента
-        int searchKey =7;
-        bool searchResult = tree.search(searchKey);
+
+        print(tree);
+
+        // Поиск
+        int searchKey = 7;
+        bool searchResult = search(tree, searchKey);
         cout << "Результат поиска " << searchKey << ": " << (searchResult ? "Найдено" : "Не найдено") << endl;
 
-        // Поиск минимального элемента
-        int minKey = tree.findMin();
+        // Поиск минимального 
+        int minKey = findMin(tree);
         cout << "Минимальный элемент: " << minKey << endl;
 
         // Поиск максимального элемента
-        int maxKey = tree.findMax();
+        int maxKey = findMax(tree);
         cout << "Максимальный элемент: " << maxKey << endl;
 
-        // Поиск ближайшего элемента, меньшего заданного
-        int closestMinKey = tree.findClosestSmaller(searchKey);
+        // Поиск ближайшего наименьшего
+        int closestMinKey = findClosestSmaller(tree, searchKey);
         cout << "Ближайший элемент, меньший " << searchKey << ": " << closestMinKey << endl;
 
-        // Поиск ближайшего элемента, большего заданного
-        int closestMaxKey = tree.findClosestGreater(searchKey);
+        // Поиск ближайшего наибольшего 
+        int closestMaxKey = findClosestGreater(tree, searchKey);
         cout << "Ближайший элемент, больший " << searchKey << ": " << closestMaxKey << endl;
 
-        // Удаление элемента
-        int keyToRemove = 12;
-        bool removeResult = tree.remove(keyToRemove);
+        // Удаление
+        int keyToRemove = 17;
+        bool removeResult = remove(&tree, keyToRemove);
         cout << "Результат удаления элемента " << keyToRemove << ": " << (removeResult ? "Удалено" : "Не найдено") << endl;
 
-        tree.print();
+        // Вывод полученного дерева 
+        print(tree);
     }
     catch (const exception& e) {
         cout << "Ошибка: " << e.what() << endl;
     }
+
+    // Очистка памяти
+    clear(tree);
 
     return 0;
 }
