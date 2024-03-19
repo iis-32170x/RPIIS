@@ -246,7 +246,8 @@ int SearchString(string s, Node* root)//Алгоритм идентичен ал
 	}
 }
 ```
-### Функция удаления бора при завершении программы
+### Функция удаления бора при завершении программы 
+(Источник: https://www.cyberforum.ru/cpp-beginners/thread3068833.html)
 ```C++
 void DelBor(Node* root)
 {
