@@ -8,6 +8,7 @@ public:
     void insert(int element);
     void remove(int element);
     bool contains(int element) const ;
+    int contains2(int element) const;
 
     MySet intersection(const MySet& other) const;
     MySet unionWith(const MySet& other);
@@ -74,6 +75,15 @@ bool MySet::contains(int element) const {
         }
     }
     return false;
+}
+
+int MySet::contains2(int element) const {
+    for (int i = 0; i < count; i++) {
+        if (elements[i] == element) {
+            return i;
+        }
+    }
+    return 0;
 }
 
 MySet MySet::intersection(const MySet& other) const {
