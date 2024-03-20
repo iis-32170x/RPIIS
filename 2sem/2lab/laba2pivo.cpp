@@ -45,7 +45,7 @@ int main() {
     for (int j = 0; j < num_sets; j++) 
 
     {
-        if (j % 2) cout << "; ";
+       if (j != 0) cout << "; ";
         cout << cortprod[i][j];
 
     }
