@@ -38,12 +38,20 @@ int main() {
     vector<string> el;
     run_testcase(path, num_sets, sets);
     getcort(sets,0,num_sets,cortprod,el);
-    for (int i = 0; i < cortprod.size(); i++) 
+   for (int i = 0; i < cortprod.size(); i++) 
+{
+    cout << "\n";
+    cout << "{";
+    for (int j = 0; j < num_sets; j++) 
+
     {
-        cout << "\n";
-        for (int j = 0; j < num_sets; j++)
-            cout << cortprod[i][j];
+        if (j % 2) cout << "; ";
+        cout << cortprod[i][j];
+
     }
+     
+    cout << "}";
+}
         
     return 0;
 }
