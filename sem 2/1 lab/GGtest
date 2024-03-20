@@ -1,0 +1,31 @@
+#include <gtest/gtest.h>
+#include "C:\Users\ASUS\source\repos\Project15\Project15\Qtree.h" 
+TEST(ListFunctionTest, BasicTest) {
+    vector<vector<int>> test_matrix = { {1, 1}, 
+                                        {1, 1} };
+    EXPECT_TRUE(list(test_matrix, 2, 0, 0));
+}
+TEST(GetMaxDepthFunctionTest, BasicTest) {
+    QuadTree *root = new QuadTree{ false, 0,
+        new QuadTree{true, 1, nullptr, nullptr, nullptr, nullptr}, 
+        nullptr, nullptr, nullptr };
+    EXPECT_EQ(getMaxDepth(root), 2);
+}
+TEST(ToTreeFunctionTest, BasicTest) {
+    vector<vector<int>> test_matrix = { {1, 1}, {1, 1} };
+    QuadTree* result = To_tree(test_matrix, 2, 0, 0);
+}
+TEST(FillMatrixFunctionTest, BasicTest) {
+    QuadTree *root = new QuadTree{ true, 1, nullptr, nullptr, nullptr, nullptr };
+    vector<vector<int>> test_matrix = { {0, 0}, {0, 0} };
+    zapolneniye(root, test_matrix, 0, 0, 2);
+}
+TEST(ToMatrixFunctionTest, BasicTest) {
+    QuadTree* root = new QuadTree{ true, 1, nullptr, nullptr, nullptr, nullptr };
+    vector<vector<int>> expected_matrix = { {1} };
+    EXPECT_EQ(To_matrix(root), expected_matrix);
+}
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS(); 
+}
