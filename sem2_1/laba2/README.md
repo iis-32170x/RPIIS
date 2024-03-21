@@ -20,8 +20,6 @@
 
 ##
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Micro+5&size=50&pause=1000&color=48D13C&random=false&width=435&lines=Key+Consept)](https://git.io/typing-svg)
-
- :=【﻿Декартово дерево　－　это структура данных, которая строится на основе упорядоченного массива и использует приоритетные очереди для хранения элементов.】
  
  :=【Множество - Неупорядоченная коллекция уникальных элементов.】
  
@@ -61,17 +59,44 @@ if __name__ == "__main__":
         new_stroka_in = stroka_in.replace('{', '[')
     itogo_stroka_in = new_stroka_in.replace('}', ']')
     branch = ast.literal_eval(itogo_stroka_in)
+    branch_new = get_list(branch)
 ```
 1.Меняем строку так, чтобы вместо фигурных скобок были квадратный.
 
 2.Записываем в массив строку
 
+3. Обновляем массив сортировкой переходя в функцию с рекурсией `get_list(branch)`
+
 ≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋
 
 ```python
+    def get_list(branch):
+    new_branch = []
+    string_set = set()
+    nums_set = set()
     for i in branch:
-        if branch.count(i) > 1:
-            branch.remove(i)
+        if type(i) == list:
+            get_list(i)
+        elif type(i) == str:
+            string_set.add(i)
+        else:
+            nums_set.add(i)
+    nums_set = list(nums_set)
+    nums_set.sort()
+    string_set = list(string_set)
+    string_set.sort()
+    new_branch.extend(nums_set)
+    new_branch.extend(string_set)
+    return new_branch
+```
+
+1. Создаем массивы для строк, для чисел и массив который будем позвращать
+
+2. Циклои пробегаем по элементам изначального массива, если это масссив то рекурсией сортируем его 
+
+≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋-≋
+
+```python
     ban = []
     generete_branch(branch, ban)
 ```
