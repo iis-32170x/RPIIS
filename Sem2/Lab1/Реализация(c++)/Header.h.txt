@@ -1,0 +1,14 @@
+#pragma once
+namespace myspace{
+	struct dm
+	{
+		int max, add, l, r;
+		struct dm* left, * right;
+	};
+int min(int a, int b);
+int max(int a, int b);
+dm* build(int l, int r);
+void modify(dm* root, int l, int r, int val);
+int findmax(dm* root, int l, int r, int sumadd);
+void deleteTree(dm* root);
+}

@@ -1,0 +1,16 @@
+#include<iostream>
+#include"Header.h"
+using namespace myspace;
+int main()
+{
+	dm* tree = build(0, 5);
+	modify(tree, 0, 0, -1);
+	modify(tree, 2, 2, 10);
+	modify(tree, 1, 1, -14);
+	modify(tree, 3, 3, -12);
+	modify(tree, 4, 4, 22);
+	modify(tree, 0, 3, -15);
+	int max13 = findmax(tree, 2, 4, tree->add);
+	std::cout <<"Max element: " << max13;
+	deleteTree(tree);
+}
