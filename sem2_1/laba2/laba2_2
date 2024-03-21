@@ -10,6 +10,25 @@ def generete_branch(branch, ban):
         ban.append(branch[el])
         generete_branch(branch, ban)
         ban.pop()
+def get_list(branch):
+    se = []
+    new_branch = []
+    string_set = set()
+    nums_set = set()
+    for i in branch:
+        if type(i) == list:
+            se += list(get_list(i))
+        elif type(i) == str:
+            string_set.add(i)
+        else:
+            nums_set.add(i)
+    nums_set = list(nums_set)
+    nums_set.sort()
+    string_set = list(string_set)
+    string_set.sort()
+    new_branch.extend(nums_set)
+    new_branch.extend(string_set)
+    return new_branch
 
 
 if __name__ == "__main__":
@@ -17,8 +36,9 @@ if __name__ == "__main__":
     new_stroka_in = stroka_in.replace('{', '[')
     itogo_stroka_in = new_stroka_in.replace('}', ']')
     branch = ast.literal_eval(itogo_stroka_in)
-    for i in branch:
-        if branch.count(i) > 1:
-            branch.remove(i)
+    branch_new = get_list(branch)
+    for i in branch_new.copy():
+        if branch_new.count(i) > 1:
+            branch_new.remove(i)
     ban = []
-    generete_branch(branch, ban)
+    generete_branch(branch_new, ban)
