@@ -41,7 +41,7 @@ void run_testcase(const string& path, int& num_sets, vector<vector<string>>& set
 vector<vector<pair<string, int>>> CountMultiplicities(const vector<vector<string>>& sets) {
     vector<vector<pair<string, int>>> counts(sets.size());
 
-    for (size_t i = 0; i < sets.size(); ++i) {
+    for (int i = 0; i < sets.size(); ++i) {
         vector<string> unique_elements;
         vector<int> element_counts;
 
@@ -65,8 +65,8 @@ vector<vector<pair<string, int>>> CountMultiplicities(const vector<vector<string
         }
 
         
-        for (size_t j = 0; j < unique_elements.size(); ++j) {
-            counts[i].push_back(std::make_pair(unique_elements[j], element_counts[j]));
+        for (int j = 0; j < unique_elements.size(); ++j) {
+            counts[i].push_back(make_pair(unique_elements[j], element_counts[j]));
         }
     }
 
