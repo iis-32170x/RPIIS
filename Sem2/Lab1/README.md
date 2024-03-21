@@ -125,7 +125,8 @@ int max13 = findmax(tree, 0, 4, tree->add);
 В данном примере мы по отдельности заполням каждый элемент отрезка
 и в результате получаем отрезок [-1,-14,10,-12,22] и вызываем функцию findmax для всего отрезка.
 
-![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Images/с1.png)
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c1.png)
+Sem1/Images/a1.png
 
 ```c++
 dm* tree =build(0, 5);
@@ -139,7 +140,7 @@ int max13 = findmax(tree, 0, 4, tree->add);
 ```
 Добавляем изменение на отрезке [0,3] на 15. В результате получаем новый отрезок [14,1,25,3,22].
 
-![Img2](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Images/с2.png)
+![Img2](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c2.png)
 
 ```c++
 dm* tree =build(0, 5);
@@ -153,7 +154,7 @@ int max13 = findmax(tree, 2, 4, tree->add);
 ```
 А теперь изменим отрезок поиска максимального элемента и сам отрезок.В резульате отрезок примет вид:[-1,-14,10,-12,22]
 
-![Img3](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Images/с3.png)
+![Img3](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c3.png)
 
 # Спасибо за внимание!
 [Для вопросов и претензий](https://www.youtube.com/watch?v=HEXWRTEbj1I)
