@@ -7,18 +7,20 @@ def generete_branch(branch, ban):
         return
 
     for el in range(len(branch)):
-        ban.append(branch[el])
-        generete_branch(branch, ban)
-        ban.pop()
+        if branch[el] not in ban:
+            ban.append(branch[el])
+            generete_branch(branch, ban)
+            ban.pop()
 
 
 def get_list(branch):
+    se = []
     new_branch = []
     string_set = set()
     nums_set = set()
     for i in branch:
         if type(i) == list:
-            get_list(i)
+            se.append(get_list(i))
         elif type(i) == str:
             string_set.add(i)
         else:
@@ -29,6 +31,12 @@ def get_list(branch):
     string_set.sort()
     new_branch.extend(nums_set)
     new_branch.extend(string_set)
+    if se:
+        se.sort()
+        for el in se:
+            if se.count(el) > 1:
+                se.remove(el)
+        new_branch.extend(se)
     return new_branch
 
 
@@ -40,3 +48,4 @@ if __name__ == "__main__":
     branch_new = get_list(branch)
     ban = []
     generete_branch(branch_new, ban)
+# {1,2,{'fdas', {1,4}}, 1,1,1, {{1,4}, 'fdas'}}
