@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include "UnionOfSets.h"
 
 using namespace std;
