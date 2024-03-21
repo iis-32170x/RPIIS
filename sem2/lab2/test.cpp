@@ -50,7 +50,7 @@ TEST(OutputResultTest, SingleSetTest) {
     vector<pair<string, int>> max_counts = { {"a", 1}, {"b", 2}, {"c", 1} };
     testing::internal::CaptureStdout();
     OutputResult(max_counts);
-    std::string output = testing::internal::GetCapturedStdout();
+    string output = testing::internal::GetCapturedStdout();
     ASSERT_EQ(output, "The union of the sets: \na b b c \n");
 }
 
@@ -58,6 +58,3 @@ int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
-
-
-
