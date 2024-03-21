@@ -90,7 +90,7 @@
 # Источники
 [Написание GTests](https://habr.com/ru/articles/667880/)
 
-[Использование библиотеки STL vector]((https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170)https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170](https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170)](https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170)](https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170))
+[Использование библиотеки STL vector](https://learn.microsoft.com/ru-ru/cpp/standard-library/vector-class?view=msvc-170)
 
 [Использование библиотеки STL pair](https://habr.com/ru/articles/667880/](https://informatics.msk.ru/mod/book/view.php?id=492&chapterid=206)](https://informatics.msk.ru/mod/book/view.php?id=492&chapterid=206))
 
