@@ -18,11 +18,14 @@ def get_list(branch):
     new_branch = []
     string_set = set()
     nums_set = set()
+    bool_set = set()
     for i in branch:
         if type(i) == list:
             se.append(get_list(i))
         elif type(i) == str:
             string_set.add(i)
+        elif type(i) == bool:
+            bool_set.add(i)
         else:
             nums_set.add(i)
     nums_set = list(nums_set)
@@ -31,6 +34,9 @@ def get_list(branch):
     string_set.sort()
     new_branch.extend(nums_set)
     new_branch.extend(string_set)
+    bool_set = list(bool_set)
+    bool_set.sort()
+    new_branch.extend(bool_set)
     if se:
         se.sort()
         for el in se:
@@ -48,4 +54,4 @@ if __name__ == "__main__":
     branch_new = get_list(branch)
     ban = []
     generete_branch(branch_new, ban)
-# {1,2,{'fdas', {1,4}}, 1,1,1, {{1,4}, 'fdas'}}
+# {3,2,{'fdas', {1,4}}, 3,3,3, True, {{1,4}, 'fdas'}}
