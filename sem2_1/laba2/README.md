@@ -71,12 +71,13 @@ if __name__ == "__main__":
 
 ```python
     def get_list(branch):
+    se = []
     new_branch = []
     string_set = set()
     nums_set = set()
     for i in branch:
         if type(i) == list:
-            get_list(i)
+            se.append(get_list(i))
         elif type(i) == str:
             string_set.add(i)
         else:
@@ -87,6 +88,12 @@ if __name__ == "__main__":
     string_set.sort()
     new_branch.extend(nums_set)
     new_branch.extend(string_set)
+    if se:
+        se.sort()
+        for el in se:
+            if se.count(el) > 1:
+                se.remove(el)
+        new_branch.extend(se)
     return new_branch
 ```
 
@@ -122,11 +129,12 @@ def generete_branch(branch, ban):
 
 ```python
    for el in range(len(branch)):
-        ban.append(branch[el])
-        generete_branch(branch, ban)
-        ban.pop()
+        if branch[el] not in ban:
+            ban.append(branch[el])
+            generete_branch(branch, ban)
+            ban.pop()
 ```
-Создаем цикл в котором будем заполнять массив `ban` элементам из массива `banch` по одному элементу. После рекурсивно переходим и заполняем массов элементами пока колличество элементов не станет равно колличеству элементов в иходнем массиве. После удаляем последний элемент. 
+Создаем цикл в котором будем заполнять массив `ban` элементам из массива `banch` по одному элементу. После рекурсивно переходим и заполняем массов элементами пока колличество элементов не станет равно колличеству элементов в иходнем массиве. Делаем проверку на повторение элемента. После удаляем последний элемент. 
 
 ---
 
