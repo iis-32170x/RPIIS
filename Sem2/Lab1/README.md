@@ -112,49 +112,12 @@ int findmax(dm* root, int l, int r, int sumadd)
 ___
 
 ##  *Пример выполнения*
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c4.png)
+___
+В результате выполнения данной работы были получены следующие практические навыки:
 
-```c++
-dm* tree =build(0, 5);
-modify(tree, 0, 0, -1);
-modify(tree, 2, 2, 10);
-modify(tree, 1, 1, -14);
-modify(tree, 3, 3, -12);
-modify(tree, 4, 4, 22);
-int max13 = findmax(tree, 0, 4, tree->add);
-```
-В данном примере мы по отдельности заполням каждый элемент отрезка
-и в результате получаем отрезок [-1,-14,10,-12,22] и вызываем функцию findmax для всего отрезка.
-
-![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c1.png)
-Sem1/Images/a1.png
-
-```c++
-dm* tree =build(0, 5);
-modify(tree, 0, 0, -1);
-modify(tree, 2, 2, 10);
-modify(tree, 1, 1, -14);
-modify(tree, 3, 3, -12);
-modify(tree, 4, 4, 22);
-modify(tree, 0, 3, 15);
-int max13 = findmax(tree, 0, 4, tree->add);
-```
-Добавляем изменение на отрезке [0,3] на 15. В результате получаем новый отрезок [14,1,25,3,22].
-
-![Img2](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c2.png)
-
-```c++
-dm* tree =build(0, 5);
-modify(tree, 0, 0, -1);
-modify(tree, 2, 2, 10);
-modify(tree, 1, 1, -14);
-modify(tree, 3, 3, -12);
-modify(tree, 4, 4, 22);
-modify(tree, 0, 3, -15);
-int max13 = findmax(tree, 2, 4, tree->add);
-```
-А теперь изменим отрезок поиска максимального элемента и сам отрезок.В резульате отрезок примет вид:[-1,-14,10,-12,22]
-
-![Img3](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c3.png)
-
++ изучение структуры дерево максимумов
++ умение работать с header-файлами
++ изучение базовых алгоритмов для работы со структурами типа дерево максимумов
 # Спасибо за внимание!
 [Для вопросов и претензий](https://www.youtube.com/watch?v=HEXWRTEbj1I)

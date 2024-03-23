@@ -3,14 +3,49 @@
 using namespace myspace;
 int main()
 {
-	dm* tree = build(0, 5);
-	modify(tree, 0, 0, -1);
-	modify(tree, 2, 2, 10);
-	modify(tree, 1, 1, -14);
-	modify(tree, 3, 3, -12);
-	modify(tree, 4, 4, 22);
-	modify(tree, 0, 3, -15);
-	int max13 = findmax(tree, 2, 4, tree->add);
-	std::cout <<"Max element: " << max13;
+	std::cout << "Enter array size: ";
+	int n;
+	std::cin >> n;
+	dm* tree = build(0, n - 1);
+	std::cout << "Enter array elements" << std::endl;
+	for (int i = 0; i < n; i++)
+	{
+		int e;
+		std::cin >> e;
+		modify(tree, i, i, e);
+
+	}
+	//Finding the maximum on the array segment. Changing all numbers on the array segment by some value.
+	while (true) {
+		int e1;
+		std::cout << "1 - Finding the maximum on the array segment;\t" << "2 - Changing all numbers on the array segment by some value\t" << "3 - Exit." << std::endl;
+		std::cin >> e1;
+		if(e1 == 1)
+		{
+			std::cout << "Enter segment boundaries:\n";
+			int g1, g2;
+			std::cin >> g1;
+			std::cin >> g2;
+			int max13 = findmax(tree, g1, g2, tree->add);
+			std::cout << "Max element: " << max13 << "\n";
+		}
+		else if(e1 == 2)
+		{
+			std::cout << "Enter segment boundaries:\n";
+			int g1, g2;
+			std::cin >> g1;
+			std::cin >> g2;
+			std::cout << "Enter value:\n";
+			int value;
+			std::cin >> value;
+			modify(tree, g1, g2, value);
+			std::cout << "change implemented\n";
+		}
+		else if (e1 == 3) {
+			break;
+		}
+		else
+			break;
+	}
 	deleteTree(tree);
 }
