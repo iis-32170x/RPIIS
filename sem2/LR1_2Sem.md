@@ -27,6 +27,7 @@
 
 ```
 
+
 #include <iostream>
 #pragma once
 
@@ -227,14 +228,40 @@ struct JungTable {
 		return -1;
 	}
 
+	int lengthOfRow(tableRow* t) {
+		cell* p = t->row;
+		int size = 0;
+		if (p) {
+			++size;
+		}
+		else {
+			return 0;
+		}
+		while (p) {
+			p = p->nextCell;
+			++size;
+		}
+		return size;
+	}
+
 	void addCell_New(tableRow* r, int val) {
 		tableRow* t = r;
 		if (val >= maximum(t->row)) {
 			cell* p = t->row;
 			while (p) {
-				if (p->nextCell == NULL) {
+				if (p->nextCell == NULL && lengthOfRow(t) < 5) {
 					p->nextCell = addCell(p, val);
 					break;
+				}
+				else if (lengthOfRow(t) == 5) {
+					if (t->nextRow == NULL) {
+						t->nextRow = addRow(t);
+						t->nextRow->row = createCell(val, t->nextRow);
+					}
+					else {
+						addCell_New(t->nextRow, val);
+						break;
+					}
 				}
 				else {
 					p = p->nextCell;
@@ -245,8 +272,18 @@ struct JungTable {
 			cell* p = t->row;
 			while (p) {
 				if (p->nextCell) {
-					if (p->val < val < p->nextCell->val) {
-						p->val = val;
+					if (p->val < val < p->nextCell->val && lengthOfRow(t) < 5) {
+						std::swap(p->val, val);
+						if (t->nextRow == NULL) {
+							t->nextRow = addRow(t);
+							t->nextRow->row = createCell(p->nextCell->val, t->nextRow);
+						}
+						else {
+							addCell_New(t->nextRow, p->nextCell->val);
+							break;
+						}
+					}
+					else if (p->val < val < p->nextCell->val && lengthOfRow(t) == 5) {
 						if (t->nextRow == NULL) {
 							t->nextRow = addRow(t);
 							t->nextRow->row = createCell(p->nextCell->val, t->nextRow);
@@ -262,6 +299,14 @@ struct JungTable {
 				}
 				else {
 					std::swap(p->val,val);
+					if (t->nextRow == NULL) {
+						t->nextRow = addRow(t);
+						t->nextRow->row = createCell(val, t->nextRow);
+					}
+					else {
+						addCell_New(t->nextRow, val);
+						break;
+					}
 					break;
 				}
 			}
@@ -282,6 +327,7 @@ struct JungTable {
 		}
 	}
 };
+
 ```
 ## LR1_Pioivis.cpp
 
