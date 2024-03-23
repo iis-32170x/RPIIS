@@ -2,7 +2,6 @@
 #pragma once
 
 struct JungTable {
-	int s = 3;
 
 	struct cell {
 		int val = -999;
@@ -223,7 +222,8 @@ struct JungTable {
 					p->nextCell = addCell(p, val);
 					break;
 				}
-				else if (lengthOfRow(t) == 5) {
+				else if (p->nextCell == NULL && lengthOfRow(t) == 5) {
+					std::swap(p->val,val);
 					if (t->nextRow == NULL) {
 						t->nextRow = addRow(t);
 						t->nextRow->row = createCell(val, t->nextRow);
@@ -239,7 +239,7 @@ struct JungTable {
 			}
 		}
 		else {
-			cell* p = t->row;
+			cell* &p = t->row;
 			while (p) {
 				if (p->nextCell) {
 					if (p->val < val < p->nextCell->val && lengthOfRow(t) < 5) {
