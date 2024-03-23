@@ -20,14 +20,15 @@
 Библиотека *YoungTableau.h*:
 ```cpp
 
+##pragma once
+
 #include <vector>
+#include <algorithm>
+#include <iostream>
+#include <fstream>
 #include <string>
 
-class YoungTableau
-{
-private:
-    std::vector<std::vector<int>> table;
-
+class YoungTableau {
 public:
     void initialize(int row_number);
     size_t width();
@@ -36,6 +37,10 @@ public:
     void removeAll(int element);
     void print();
     void printToFile(std::string filename);
+
+private:
+    std::vector<std::vector<int>> table;
+    int row_number; // Добавлено поле для хранения количества элементов в строке
 };
 
 
@@ -52,118 +57,130 @@ public:
 
 void YoungTableau::initialize(int row_number)
 {
-    if (!table.empty())
-    {
-        for (auto& row : table)
-            row.clear();
-        table.clear();
-    }
-    for (int i = 0; i < row_number; i++)
-    {
-        table.push_back({});
-    }
+	if (!table.empty())
+	{
+		for (auto& row : table)
+			row.clear();
+		table.clear();
+	}
+	this->row_number = row_number; // Инициализация поля row_number
+	for (int i = 0; i < row_number; i++)
+	{
+		table.push_back({});
+	}
 }
-
 size_t YoungTableau::width()
 {
-    return table.size();
+	return table.size();
 }
 
 void YoungTableau::add(int line_number, int element)
 {
-    table[line_number - 1].push_back(element);
+	if (line_number <= table.size())
+	{
+		auto& row = table[line_number - 1];
+		if (row.size() <= row_number - line_number + 1) // Проверяем, что количество элементов в строке не превышает ограничение
+		{
+			row.push_back(element);
+			std::sort(row.begin(), row.end());
+		}
+		else
+		{
+			std::cout << "Ошибка: Превышено ограничение на количество элементов в строке.\n";
+		}
+	}
+	else
+	{
+		std::cout << "Ошибка: Недопустимый номер строки.\n";
+	}
 }
-
 void YoungTableau::remove(int element)
 {
-    bool in_table = false;
+	bool in_table = false;
+	for (auto& row : table)
+	{
+		auto it = std::find(row.begin(), row.end(), element);
 
-    for (auto& row : table)
-    {
-        auto it = std::find(row.begin(), row.end(), element);
-
-        if (it != row.end())
-        {
-            row.erase(it);
-            std::cout << "Из таблицы был удалён первый встретившийся элемент " << element << ".\n";
-            in_table = true;
-            break;
-        }
-    }
-    if (!in_table)
-        std::cout << "Данного элемента нет в таблице.\n";
+		if (it != row.end())
+		{
+			row.erase(it);
+			std::cout << "Из таблицы был удалён первый встретившийся элемент " << element << ".\n";
+			in_table = true;
+			break;
+		}
+	}
+	if (!in_table)
+		std::cout << "Данного элемента нет в таблице.\n";
 }
 
 void YoungTableau::removeAll(int element)
 {
-    bool in_table = false;
+	bool in_table = false;
+	for (auto& row : table)
+	{
+		while (true)
+		{
+			auto it = std::find(row.begin(), row.end(), element);
 
-    for (auto& row : table)
-    {
-        while (true)
-        {
-            auto it = std::find(row.begin(), row.end(), element);
-
-            if (it != row.end())
-            {
-                row.erase(it);
-                in_table = true;
-            }
-            else
-                break;
-        }
-    }
-    if (!in_table)
-        std::cout << "Данного элемента нет в таблице.\n";
-    else
-        std::cout << "Из таблицы были удалены все элементы " << element << ".\n";
+			if (it != row.end())
+			{
+				row.erase(it);
+				in_table = true;
+			}
+			else
+				break;
+		}
+	}
+	if (!in_table)
+		std::cout << "Данного элемента нет в таблице.\n";
+	else
+		std::cout << "Из таблицы были удалены все элементы " << element << ".\n";
 }
 
 void YoungTableau::print()
 {
-    if (table.size() == 0)
-        std::cout << "\nТаблица пуста.\n";
-    bool nonempty_row = false;
-    for (auto& row : table)
-    {
-        if (!row.empty())
-        {
-            nonempty_row = true;
-            break;
-        }
-    }
-    if (!nonempty_row)
-    {
-        std::cout << "\nТаблица пуста.\n";
-        return;
-    }
-    std::cout << "\nТаблица Юнга:\n";
-    for (auto& row : table)
-    {
-        for (int element : row)
-        {
-            std::cout << element << " ";
-        }
-        std::cout << "\n";
-    }
+	if (table.size() == 0)
+		std::cout << "\nТаблица пуста.\n";
+	bool nonempty_row = false;
+	for (auto& row : table)
+	{
+		if (!row.empty())
+		{
+			nonempty_row = true;
+			break;
+		}
+	}
+	if (!nonempty_row)
+	{
+		std::cout << "\nТаблица пуста.\n";
+		return;
+	}
+	std::cout << "\nТаблица Юнга:\n";
+	for (auto& row : table)
+	{
+		for (int element : row)
+		{
+			std::cout << element << " ";
+		}
+		std::cout << "\n";
+	}
 }
 
 void YoungTableau::printToFile(std::string filename)
 {
-    std::ofstream fout(filename);
-    if (table.size() == 0)
-        fout << "Таблица пуста.";
-    fout << "Таблица Юнга:";
-    for (auto& row : table)
-    {
-        fout << "\n";
-        for (int element : row)
-        {
-            fout << element << " ";
-        }
-    }
-
-    std::cout << "Таблица была выведена в " << filename << "\n";
+	std::ofstream fout(filename);
+	if (table.size() == 0)
+		fout << "Таблица пуста.";
+	fout << "Таблица Юнга:";
+	for (auto& row : table)
+	{
+		fout << "\n";
+		for (int element : row)
+		{
+			fout << element << " ";
+		}
+	}
+	std::cout << "Таблица была выведена в " << filename << "\n";
 }
 ```
 
@@ -178,14 +195,9 @@ void YoungTableau::printToFile(std::string filename)
 int main()
 {
     setlocale(LC_ALL, "Ru");
-    
-       
-
-   
-
     YoungTableau t;
 
-   
+
     while (true)
     {
         std::cout << "\n1) Прочесть таблицу из файла";
@@ -278,7 +290,7 @@ int main()
         }
     }
 
-    
+
 
     return 0;
 }
