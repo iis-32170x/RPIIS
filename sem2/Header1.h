@@ -206,7 +206,7 @@ struct JungTable {
 		else {
 			return 0;
 		}
-		while (p) {
+		while (p->nextCell) {
 			p = p->nextCell;
 			++size;
 		}
