@@ -114,17 +114,14 @@ public class Graph {
         stack.push(adjacency.get(0).get(0));
 
         while (!stack.isEmpty()) {
-            i = 2;
+            i = 1;
             String temp = stack.pop();
             loopProtection.put(temp, "Verified");
 
-            if (adjacency.get(indexes.get(temp)).size() > 2) {
+            if (adjacency.get(indexes.get(temp)).size() >= 2) {
                 System.out.print("\nВершина " + temp + " продолжается в ");
                 System.out.print("\n");
             }
-
-            if (indexes.get(temp) == 0)
-                i = 1;
 
             for (; i < adjacency.get(indexes.get(temp)).size(); i++) {
 
