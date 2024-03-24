@@ -30,6 +30,7 @@
 #pragma once
 
 struct JungTable {
+	int s = 3;
 
 	struct cell {
 		int val = -999;
@@ -247,7 +248,13 @@ struct JungTable {
 		tableRow* t = r;
 		int i = 1;
 		while (i < row) {
-			t = t->nextRow;
+			if (t->nextRow) {
+				t = t->nextRow;
+				++i;
+			}
+			else {
+				break;
+			}
 		}
 
 		int k = 1;
@@ -255,6 +262,7 @@ struct JungTable {
 		tableRow* s = r;
 		while (k < row - 1) {
 			s = s->nextRow;
+			++k;
 		}
 		if (row - 1 <= 0) {
 			prev = 9999;
@@ -298,9 +306,14 @@ struct JungTable {
 						break;
 					}
 					else {
-						addCell_New(r, val, row + 1);
+						addCell_New(r, temp, row + 1);
 						break;
 					}
+				}
+				else if (!p->nextCell) {
+					int temp = p->val;
+					p->val = val;
+					p->nextCell = addCell(p, temp);
 				}
 				else {
 					p = p->nextCell;
@@ -323,6 +336,7 @@ struct JungTable {
 		}
 	}
 };
+
 
 ```
 ## LR1_Pioivis.cpp
