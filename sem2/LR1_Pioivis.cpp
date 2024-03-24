@@ -90,15 +90,14 @@ bool isAdded_c_w() {
 
 bool popped_and_filled() {
 	JungTable s;
-	JungTable::tableRow* t = new JungTable::tableRow;
 	int arr[6] = { 2, 4, 3, 5, 9, 8};
-	s.addCell_New(t, 1); // сначала неважно, что затолкать в третий аргумент, да и вообще его деволтным в единицу переделал
+	s.addCell_New( 1, 1); // сначала неважно, что затолкать в третий аргумент
 	for (int i = 0; i < 6; ++i) {
-		s.addCell_New(t, arr[i]);
+		s.addCell_New(arr[i]);
 	}
-	s.viewTable(t);
-	s.popCell_new(t, 1, 2);
-	s.viewTable(t);
+	s.viewTable();
+	s.popCell_new(1, 2);
+	s.viewTable();
 
 	return true;
 }
