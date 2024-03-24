@@ -5,10 +5,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-//ГОТОВО
-//ГОТОВО
-//ГОТОВО
-//ГОТОВО
+
 using namespace std;
 
 template <typename T>
