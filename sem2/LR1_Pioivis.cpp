@@ -92,7 +92,7 @@ bool popped_and_filled() {
 	JungTable s;
 	JungTable::tableRow* t = new JungTable::tableRow;
 	int arr[6] = { 2, 4, 3, 5, 9, 8};
-	s.addCell_New(t, 1); // сначала неважно, что затолкать в третий аргумент
+	s.addCell_New(t, 1); // сначала неважно, что затолкать в третий аргумент, да и вообще его деволтным в единицу переделал
 	for (int i = 0; i < 6; ++i) {
 		s.addCell_New(t, arr[i]);
 	}
