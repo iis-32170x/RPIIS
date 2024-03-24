@@ -6,7 +6,7 @@ bool isCreated() {
 	int count = 0;
 	JungTable s;
 	JungTable::tableRow* t;
-	t = s.createTable();
+	t = s.createRow();
 	if (t != NULL) {
 		++count;
 	}
@@ -31,7 +31,7 @@ bool isCreated_c() {
 	int array[5] = { 1, 2, 3, 4, 5 };
 	for (int i = 0; i < 5; ++i) {
 		JungTable::tableRow* t;
-		t = s.createTable();
+		t = s.createRow();
 		t->row = s.createCell(array[i], t);
 		if (t->row->val == array[i]) {
 			++count;
@@ -45,7 +45,7 @@ bool isCreated_c_w() {
 	JungTable s;
 	for (int i = 0; i < 5; ++i) {
 		JungTable::tableRow* t = new JungTable::tableRow;
-		t = s.createTable();
+		t = s.createRow();
 		t->row = s.createCellWithoutValue(t);
 		if (t->row != NULL) {
 			++count;
@@ -59,7 +59,7 @@ bool isAdded_c() {
 	JungTable s;
 	int array[5] = { 1, 3, 8, 4, 5 };
 	JungTable::tableRow* t;
-	t = s.createTable();	
+	t = s.createRow();	
 	t->row = s.createCell(array[0], t);
 	JungTable::cell* p = t->row;
 	for (int i = 1; i < 5; ++i) {
@@ -90,9 +90,9 @@ bool isAdded_c_w() {
 
 bool popped_and_filled() {
 	JungTable s;
-	JungTable::tableRow* t = s.createTable();
-	int arr[6] = { 2, 4, 3, 5, 9 , 8};
-	t->row = s.createCell(1, t);
+	JungTable::tableRow* t = new JungTable::tableRow;
+	int arr[6] = { 2, 4, 3, 5, 9, 8};
+	s.addCell_New(t, 1, 2); // сначала неважно, что затолкать в третий аргумент
 	for (int i = 0; i < 6; ++i) {
 		s.addCell_New(t, arr[i],1);
 	}
