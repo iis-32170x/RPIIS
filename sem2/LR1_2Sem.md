@@ -41,6 +41,7 @@ struct JungTable {
 		tableRow* nextRow = NULL;
 	};
 
+	tableRow* JungTable_ = new tableRow;
 
 	void Sort_p(cell** p) {
 		cell* t = NULL, * t1, * r;
@@ -95,8 +96,8 @@ struct JungTable {
 		return t;
 	}
 
-	void viewTable(tableRow* r) {
-		tableRow* t = r;
+	void viewTable() {
+		tableRow* t = JungTable_;
 		while (t != NULL) {
 			cell* p = t->row;
 			while (p != NULL) {
@@ -156,8 +157,8 @@ struct JungTable {
 		prev->nextCell = next;
 	}
 
-	void popCell_new(tableRow* r, int row, int col) {
-		tableRow* t = r;
+	void popCell_new(int row, int col) {
+		tableRow* t = JungTable_;
 		cell* prev = NULL;
 
 		for (int i = 1; i < row; ++i) {
@@ -179,8 +180,8 @@ struct JungTable {
 			}
 		}
 
-		popCell(row, col, r);
-		tableRow* q = r;
+		popCell(row, col, JungTable_);
+		tableRow* q = JungTable_;
 		for (int i = row; i >= 1; --i) {
 			if (i == 1) {
 				break;
@@ -213,7 +214,7 @@ struct JungTable {
 		}
 	}
 
-	int maximum(cell* p, int row) {
+	int maximum(cell* p) {
 		cell* t = p;
 		int max = t->val;
 		while (t->nextCell) {
@@ -244,12 +245,13 @@ struct JungTable {
 		return size;
 	}
 
-	void addCell_New(tableRow* r, int val, int row) {
-		if (r->nextRow == NULL && r->row == NULL) {
-			r->row = createCell(val, r);
+	void addCell_New(int val, int row = 1, tableRow* r = NULL) {
+		tableRow* m = JungTable_;
+		if (JungTable_->nextRow == NULL && JungTable_->row == NULL) {
+			JungTable_->row = createCell(val, JungTable_);
 		}
 		else {
-			tableRow* t = r;
+			tableRow* t = m;
 			int i = 1;
 			while (i < row) {
 				if (t->nextRow) {
@@ -263,7 +265,7 @@ struct JungTable {
 
 			int k = 1;
 			int prev = 0;
-			tableRow* s = r;
+			tableRow* s = m;
 			while (k < row - 1) {
 				s = s->nextRow;
 				++k;
@@ -275,7 +277,7 @@ struct JungTable {
 				prev = lengthOfRow(s);
 			}
 
-			if (val >= maximum(t->row, row)) {
+			if (val >= maximum(t->row)) {
 				cell* p = t->row;
 				while (p) {
 					if (p->nextCell == NULL && lengthOfRow(t) < prev) {
@@ -289,7 +291,7 @@ struct JungTable {
 							break;
 						}
 						else {
-							addCell_New(r, val, row + 1);
+							addCell_New(val, row + 1,JungTable_);
 							break;
 						}
 					}
@@ -310,14 +312,9 @@ struct JungTable {
 							break;
 						}
 						else {
-							addCell_New(r, temp, row + 1);
+							addCell_New(temp, row + 1, JungTable_);
 							break;
 						}
-					}
-					else if (!p->nextCell) {
-						int temp = p->val;
-						p->val = val;
-						p->nextCell = addCell(p, temp);
 					}
 					else {
 						p = p->nextCell;
@@ -377,7 +374,7 @@ bool isCreated() {
 	int count = 0;
 	JungTable s;
 	JungTable::tableRow* t;
-	t = s.createTable();
+	t = s.createRow();
 	if (t != NULL) {
 		++count;
 	}
@@ -402,7 +399,7 @@ bool isCreated_c() {
 	int array[5] = { 1, 2, 3, 4, 5 };
 	for (int i = 0; i < 5; ++i) {
 		JungTable::tableRow* t;
-		t = s.createTable();
+		t = s.createRow();
 		t->row = s.createCell(array[i], t);
 		if (t->row->val == array[i]) {
 			++count;
@@ -416,7 +413,7 @@ bool isCreated_c_w() {
 	JungTable s;
 	for (int i = 0; i < 5; ++i) {
 		JungTable::tableRow* t = new JungTable::tableRow;
-		t = s.createTable();
+		t = s.createRow();
 		t->row = s.createCellWithoutValue(t);
 		if (t->row != NULL) {
 			++count;
@@ -430,7 +427,7 @@ bool isAdded_c() {
 	JungTable s;
 	int array[5] = { 1, 3, 8, 4, 5 };
 	JungTable::tableRow* t;
-	t = s.createTable();	
+	t = s.createRow();	
 	t->row = s.createCell(array[0], t);
 	JungTable::cell* p = t->row;
 	for (int i = 1; i < 5; ++i) {
@@ -461,15 +458,14 @@ bool isAdded_c_w() {
 
 bool popped_and_filled() {
 	JungTable s;
-	JungTable::tableRow* t = s.createTable();
-	int arr[6] = { 2, 4, 3, 5, 9 , 8};
-	t->row = s.createCell(1, t);
+	int arr[6] = { 2, 4, 3, 5, 9, 8};
+	s.addCell_New( 1, 1); // сначала неважно, что затолкать в третий аргумент
 	for (int i = 0; i < 6; ++i) {
-		s.addCell_New(t, arr[i],1);
+		s.addCell_New(arr[i]);
 	}
-	s.viewTable(t);
-	s.popCell_new(t, 1, 2);
-	s.viewTable(t);
+	s.viewTable();
+	s.popCell_new(1, 2);
+	s.viewTable();
 
 	return true;
 }
