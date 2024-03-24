@@ -1,11 +1,11 @@
 #include "Header.h"
+#include "Header.h"
 int main() {
     setlocale(LC_ALL, "RU");
-    int n;
-    cout << "Введите количество элементов в множестве: ";
-    cin >> n;
     Set generator;
-    generator.readSet(n);
+    string set;
+    getline(cin, set);
+    generator.readSet(set);
     generator.genSet();
     return 0;
 }
