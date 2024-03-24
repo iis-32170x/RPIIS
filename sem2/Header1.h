@@ -216,7 +216,7 @@ struct JungTable {
 		return size;
 	}
 
-	void addCell_New(tableRow* r, int val, int row) {
+	void addCell_New(tableRow* r, int val, int row = 1) {
 		if (r->nextRow == NULL && r->row == NULL) {
 			r->row = createCell(val, r);
 		}
