@@ -26,13 +26,10 @@
 ## C++
 
 ```
-
-
 #include <iostream>
 #pragma once
 
 struct JungTable {
-	int s = 3;
 
 	struct cell {
 		int val = -999;
@@ -215,17 +212,19 @@ struct JungTable {
 		}
 	}
 
-	int maximum(cell* p) {
+	int maximum(cell* p, int row) {
 		cell* t = p;
-		while (t) {
-			if (t->nextCell == NULL) {
-				return t->val;
+		int max = t->val;
+		while (t->nextCell) {
+			if (t->nextCell && t->nextCell->val > t->val) {
+				max = t->nextCell->val;
+				t = t->nextCell;
 			}
-			else {
+			else if(t->nextCell) {
 				t = t->nextCell;
 			}
 		}
-		return -1;
+		return max;
 	}
 
 	int lengthOfRow(tableRow* t) {
@@ -237,77 +236,74 @@ struct JungTable {
 		else {
 			return 0;
 		}
-		while (p) {
+		while (p->nextCell) {
 			p = p->nextCell;
 			++size;
 		}
 		return size;
 	}
 
-	void addCell_New(tableRow* r, int val) {
+	void addCell_New(tableRow* r, int val, int row) {
 		tableRow* t = r;
-		if (val >= maximum(t->row)) {
+		int i = 1;
+		while (i < row) {
+			t = t->nextRow;
+		}
+
+		int k = 1;
+		int prev = 0;
+		tableRow* s = r;
+		while (k < row - 1) {
+			s = s->nextRow;
+		}
+		if (row - 1 <= 0) {
+			prev = 9999;
+		}
+		else {
+			prev = lengthOfRow(s);
+		}
+
+		if (val >= maximum(t->row, row)) {
 			cell* p = t->row;
 			while (p) {
-				if (p->nextCell == NULL && lengthOfRow(t) < 5) {
+				if (p->nextCell == NULL && lengthOfRow(t) <= prev) {
 					p->nextCell = addCell(p, val);
 					break;
 				}
-				else if (lengthOfRow(t) == 5) {
+				else if (p->nextCell == NULL && lengthOfRow(t) == prev) {
 					if (t->nextRow == NULL) {
 						t->nextRow = addRow(t);
 						t->nextRow->row = createCell(val, t->nextRow);
+						break;
 					}
 					else {
-						addCell_New(t->nextRow, val);
+						addCell_New(r, val, row + 1);
+						break;
+					}
+				}
+				else{
+					p = p->nextCell;
+				}
+			}
+		}
+		else{
+			cell* p = t->row;
+			while (p) {
+				if (p->nextCell && p->val < val && val < p->nextCell->val) {
+					int temp = p->nextCell->val;
+					p->nextCell->val = val;
+					if (t->nextRow == NULL) {
+						t->nextRow = addRow(t);
+						t->nextRow->row = createCell(temp, t->nextRow);
+						break;
+					}
+					else {
+						addCell_New(r, val, row + 1);
 						break;
 					}
 				}
 				else {
 					p = p->nextCell;
-				}
-			}
-		}
-		else {
-			cell* p = t->row;
-			while (p) {
-				if (p->nextCell) {
-					if (p->val < val < p->nextCell->val && lengthOfRow(t) < 5) {
-						std::swap(p->val, val);
-						if (t->nextRow == NULL) {
-							t->nextRow = addRow(t);
-							t->nextRow->row = createCell(p->nextCell->val, t->nextRow);
-						}
-						else {
-							addCell_New(t->nextRow, p->nextCell->val);
-							break;
-						}
-					}
-					else if (p->val < val < p->nextCell->val && lengthOfRow(t) == 5) {
-						if (t->nextRow == NULL) {
-							t->nextRow = addRow(t);
-							t->nextRow->row = createCell(p->nextCell->val, t->nextRow);
-						}
-						else {
-							addCell_New(t->nextRow, p->nextCell->val);
-							break;
-						}
-					}
-					else {
-						p = p->nextCell;
-					}
-				}
-				else {
-					std::swap(p->val,val);
-					if (t->nextRow == NULL) {
-						t->nextRow = addRow(t);
-						t->nextRow->row = createCell(val, t->nextRow);
-					}
-					else {
-						addCell_New(t->nextRow, val);
-						break;
-					}
-					break;
 				}
 			}
 		}
