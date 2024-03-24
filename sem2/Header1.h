@@ -13,6 +13,7 @@ struct JungTable {
 		tableRow* nextRow = NULL;
 	};
 
+	tableRow* JungTable_ = new tableRow;
 
 	void Sort_p(cell** p) {
 		cell* t = NULL, * t1, * r;
@@ -67,8 +68,8 @@ struct JungTable {
 		return t;
 	}
 
-	void viewTable(tableRow* r) {
-		tableRow* t = r;
+	void viewTable() {
+		tableRow* t = JungTable_;
 		while (t != NULL) {
 			cell* p = t->row;
 			while (p != NULL) {
@@ -128,8 +129,8 @@ struct JungTable {
 		prev->nextCell = next;
 	}
 
-	void popCell_new(tableRow* r, int row, int col) {
-		tableRow* t = r;
+	void popCell_new(int row, int col) {
+		tableRow* t = JungTable_;
 		cell* prev = NULL;
 
 		for (int i = 1; i < row; ++i) {
@@ -151,8 +152,8 @@ struct JungTable {
 			}
 		}
 
-		popCell(row, col, r);
-		tableRow* q = r;
+		popCell(row, col, JungTable_);
+		tableRow* q = JungTable_;
 		for (int i = row; i >= 1; --i) {
 			if (i == 1) {
 				break;
@@ -185,7 +186,7 @@ struct JungTable {
 		}
 	}
 
-	int maximum(cell* p, int row) {
+	int maximum(cell* p) {
 		cell* t = p;
 		int max = t->val;
 		while (t->nextCell) {
@@ -216,12 +217,13 @@ struct JungTable {
 		return size;
 	}
 
-	void addCell_New(tableRow* r, int val, int row = 1) {
-		if (r->nextRow == NULL && r->row == NULL) {
-			r->row = createCell(val, r);
+	void addCell_New(int val, int row = 1, tableRow* r = NULL) {
+		tableRow* m = JungTable_;
+		if (JungTable_->nextRow == NULL && JungTable_->row == NULL) {
+			JungTable_->row = createCell(val, JungTable_);
 		}
 		else {
-			tableRow* t = r;
+			tableRow* t = m;
 			int i = 1;
 			while (i < row) {
 				if (t->nextRow) {
@@ -235,7 +237,7 @@ struct JungTable {
 
 			int k = 1;
 			int prev = 0;
-			tableRow* s = r;
+			tableRow* s = m;
 			while (k < row - 1) {
 				s = s->nextRow;
 				++k;
@@ -247,7 +249,7 @@ struct JungTable {
 				prev = lengthOfRow(s);
 			}
 
-			if (val >= maximum(t->row, row)) {
+			if (val >= maximum(t->row)) {
 				cell* p = t->row;
 				while (p) {
 					if (p->nextCell == NULL && lengthOfRow(t) < prev) {
@@ -261,7 +263,7 @@ struct JungTable {
 							break;
 						}
 						else {
-							addCell_New(r, val, row + 1);
+							addCell_New(val, row + 1,JungTable_);
 							break;
 						}
 					}
@@ -282,14 +284,9 @@ struct JungTable {
 							break;
 						}
 						else {
-							addCell_New(r, temp, row + 1);
+							addCell_New(temp, row + 1, JungTable_);
 							break;
 						}
-					}
-					else if (!p->nextCell) {
-						int temp = p->val;
-						p->val = val;
-						p->nextCell = addCell(p, temp);
 					}
 					else {
 						p = p->nextCell;
