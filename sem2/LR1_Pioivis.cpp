@@ -1,4 +1,4 @@
-﻿#include "Header1.h"
+#include "Header1.h"
 
 using namespace std;
 
@@ -91,10 +91,10 @@ bool isAdded_c_w() {
 bool popped_and_filled() {
 	JungTable s;
 	JungTable::tableRow* t = s.createTable();
-	int arr[5] = { 1, 2, 3, 4, 5 };
-	t->row = s.createCell(8, t);
-	for (int i = 0; i < 5; ++i) {
-		s.addCell_New(t, arr[i]);
+	int arr[6] = { 2, 4, 3, 5, 9 , 8};
+	t->row = s.createCell(1, t);
+	for (int i = 0; i < 6; ++i) {
+		s.addCell_New(t, arr[i],1);
 	}
 	s.viewTable(t);
 	s.popCell_new(t, 1, 2);
