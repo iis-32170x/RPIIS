@@ -29,3 +29,5 @@ print(comb.contain(a))
 
 for i in comb:
     print(i, end=" ")
+
+print()
