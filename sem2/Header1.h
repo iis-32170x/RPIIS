@@ -112,7 +112,7 @@ struct JungTable {
 			}
 		}
 
-		cell* n = r->row;
+		cell* n = t->row;
 		while (n != p) {
 			if (n->nextCell == p) {
 				prev = n;
@@ -126,7 +126,12 @@ struct JungTable {
 			}
 		}
 
-		prev->nextCell = next;
+		if (prev) {
+			prev->nextCell = next;
+		}
+		else {
+			t->row = n->nextCell;
+		}
 	}
 
 	void popCell_new(int row, int col) {
@@ -153,24 +158,17 @@ struct JungTable {
 		}
 
 		popCell(row, col, JungTable_);
-		tableRow* q = JungTable_;
-		for (int i = row; i >= 1; --i) {
-			if (i == 1) {
-				break;
-			}
-			while (q) {
-				if (q->nextRow == t) {
-					t = q;
-					break;
-				}
-				else {
-					q = q->nextRow;
-				}
+		for (int i = row; i > 1; --i) {
+			tableRow* q = JungTable_;
+			int j = 1;
+			while (j<i-1) {
+				q = q->nextRow;
+				++j;
 			}
 			cell* k = q->row;
 			while (k) {
 				if (k->nextCell) {
-					if (k->val < p->val < k->nextCell->val) {
+					if (k->val < p->val && p->val < k->nextCell->val) {
 						std::swap(k->val, p->val);
 						break;
 					}
