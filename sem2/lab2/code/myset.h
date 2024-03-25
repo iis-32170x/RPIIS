@@ -19,7 +19,7 @@ struct Node {
     Node* right;
 };
 
-// Function to print the inorder traversal of the BST
+// обход
 template<typename T>
 void inorder(Node<T>* r)
 {
@@ -33,7 +33,7 @@ void inorder(Node<T>* r)
     inorder(r->right);
 }
 
-// Function to check if a node contains certain data
+//содержится ли
 template<typename T>
 int containsNode(Node<T>* r, T d)
 {
@@ -44,7 +44,7 @@ int containsNode(Node<T>* r, T d)
     return x + containsNode(r->left, d) + containsNode(r->right, d);
 }
 
-// Function to insert a node into the BST
+// вставка
 template<typename T>
 Node<T>* insert(Node<T>* r, T d)
 {
@@ -68,7 +68,7 @@ Node<T>* insert(Node<T>* r, T d)
     return r;
 }
 
-// Function to add elements from a file to a set
+// чтение из файла
 template<typename T>
 void addFromFile(Node<T>*& root, const string& filename)
 {
@@ -89,7 +89,7 @@ void addFromFile(Node<T>*& root, const string& filename)
     file.close();
 }
 
-// Function to get the size of the BST
+// размер
 template<typename T>
 int getSize(Node<T>* root)
 {
@@ -142,7 +142,7 @@ Node<T>* symmetricDifference(Node<T>* root1, Node<T>* root2)
     return diff;
 }
 
-// Function to display the contents of the BST
+// вывод
 template<typename T>
 void displaySet(Node<T>* root)
 {
