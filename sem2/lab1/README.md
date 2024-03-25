@@ -191,47 +191,53 @@ void YoungTableau::printToFile(std::string filename)
 	std::cout << "Таблица была выведена в " << filename << "\n";
 }
 
-void YoungTableau::add1(int element)
+void YoungTableau::add1(int element, int line_number)
 {
-    int target_row = -1;
-    int target_column = -1;
+	// Проверка допустимости номера строки
+	if (line_number <= table.size())
+	{
+		auto& row = table[line_number - 1];
 
-    // Поиск места вставки на всех строках
-    for (int i = 0; i < row_number; i++)
-    {
-        std::vector<int>& line = table[i];
+		// Проверка наличия элемента в строке
+		if (std::find(row.begin(), row.end(), element) != row.end())
+		{
+			std::cout << "Ошибка: Элемент уже присутствует в таблице.\n";
+			return;
+		}
 
-        // Проверка, есть ли элемент, больший вставляемого
-        auto it = std::lower_bound(line.begin(), line.end(), element);
-        if (it != line.end())
-        {
-            target_row = i;
-            target_column = it - line.begin();
-            break;
-        }
-    }
+		// Поиск позиции для вставки элемента
+		auto insert_pos = std::upper_bound(row.begin(), row.end(), element);
 
-    // Если не найдено место в предыдущих строках, вставка в найденную строку
-    if (target_row != -1)
-    {
-        std::vector<int>& target_line = table[target_row];
+		// Если элемент больше всех элементов строки, вставляем его в конец
+		if (insert_pos == row.end())
+		{
+			row.push_back(element);
+			std::cout << "Элемент " << element << " добавлен в конец строки.\n";
+		}
+		else
+		{
+			// Замена элемента в строке
+			int replaced_element = *insert_pos;
+			*insert_pos = element;
+			std::cout << "Элемент " << element << " заменяет элемент " << replaced_element << " в строке.\n";
 
-        // Проверка, не превышит ли вставка длину предыдущей строки
-        if (target_row > 0 && target_line.size() + 1 > table[target_row - 1].size())
-        {
-            std::cout << "Ошибка: Невозможно вставить элемент. Длина новой строки превышает длину предыдущей строки.\n";
-            return;
-        }
-
-        // Вставка элемента в найденное место
-        target_line.insert(target_line.begin() + target_column, element);
-
-        std::cout << "Элемент успешно добавлен в таблицу.\n";
-    }
-    else
-    {
-        std::cout << "Ошибка: Невозможно вставить элемент. Не найден элемент, больший вставляемого.\n";
-    }
+			// Вставка вытесненного элемента в следующую строку
+			if (line_number < table.size())
+			{
+				add1(replaced_element, line_number + 1);
+			}
+			else
+			{
+				std::vector<int> new_row = { replaced_element };
+				table.push_back(new_row);
+				std::cout << "Элемент " << replaced_element << " добавлен в новую строку.\n";
+			}
+		}
+	}
+	else
+	{
+		std::cout << "Ошибка: Недопустимый номер строки.\n";
+	}
 }
 ```
 
