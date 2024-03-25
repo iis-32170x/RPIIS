@@ -13,7 +13,7 @@ namespace N
 	};
 	class bst {
 	private:
-		Node* root;
+		Node* root = NULL;
 		Node* search(Node*, int val);
 		Node* Insert(Node* node, int val);
 		void bypass(Node*);
