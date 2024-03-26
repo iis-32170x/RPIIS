@@ -46,6 +46,7 @@ private:
 };
 
 
+
 ```
 
 Библиотека *YoungTableau.cpp*:
