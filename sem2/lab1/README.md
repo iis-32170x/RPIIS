@@ -21,6 +21,7 @@
 ```cpp
 
 
+
 #pragma once
 
 #include <vector>
@@ -44,6 +45,7 @@ private:
     std::vector<std::vector<int>> table;
     int row_number; // Добавлено поле для хранения количества элементов в строке
 };
+
 
 
 
@@ -219,12 +221,13 @@ void YoungTableau::add1(int element, int line_number)
 void YoungTableau::remove(int element, int line_number)
 {
 	// Проверка допустимости номера строки
-	if (line_number > table.size())
+	if (line_number > table.size() || line_number <= 0)
 	{
 		std::cout << "Ошибка: Недопустимый номер строки.\n";
 		return;
 	}
 
+	// Поиск элемента в указанной строке
 	auto& row = table[line_number - 1];
 	auto it = std::find(row.begin(), row.end(), element);
 
@@ -243,49 +246,43 @@ void YoungTableau::remove(int element, int line_number)
 	if (line_number > 1)
 	{
 		auto& previous_row = table[line_number - 2];
-		auto insert_pos = std::upper_bound(previous_row.begin(), previous_row.end(), element);
 
-		// Если элемент меньше всех элементов предыдущей строки, вставляем его в конец
-		if (insert_pos == previous_row.end())
+		// Проверка, является ли элемент наибольшим в предыдущей строке
+		if (previous_row.empty() || element > previous_row.back())
 		{
 			previous_row.push_back(element);
 			std::cout << "Элемент " << element << " добавлен в конец предыдущей строки.\n";
 		}
 		else
 		{
+			// Поиск первого элемента, меньшего заданного элемента, в предыдущей строке
+			auto insert_pos = std::find_if(previous_row.begin(), previous_row.end(), [&](int num) {
+				return num < element;
+				});
+
 			// Замена элемента в предыдущей строке
 			int replaced_element = *insert_pos;
 			*insert_pos = element;
 			std::cout << "Элемент " << element << " заменяет элемент " << replaced_element << " в предыдущей строке.\n";
 
-			// Вставка замененного элемента в предыдущую строку
+			// Вставка вытесненного элемента в предыдущую предыдущую строку (если есть)
 			if (line_number > 2)
 			{
 				auto& prev_previous_row = table[line_number - 3];
-				auto prev_insert_pos = std::upper_bound(prev_previous_row.begin(), prev_previous_row.end(), replaced_element);
 
-				// Если элемент меньше всех элементов предыдущей предыдущей строки, вставляем его в начало
-				if (prev_insert_pos == prev_previous_row.begin())
-				{
-					prev_previous_row.insert(prev_insert_pos, replaced_element);
-					std::cout << "Элемент " << replaced_element << " добавлен в начало предыдущей предыдущей строки.\n";
-				}
-				else
-				{
-					// Замена элемента в предыдущей предыдущей строке
-					int prev_replaced_element = *(prev_insert_pos - 1);
-					*(prev_insert_pos - 1) = replaced_element;
-					std::cout << "Элемент " << replaced_element << " заменяет элемент " << prev_replaced_element << " в предыдущей предыдущей строке.\n";
+				// Поиск первого элемента, меньшего вытесненного элемента, в предыдущей предыдущей строке
+				auto insert_prev_pos = std::find_if(prev_previous_row.begin(), prev_previous_row.end(), [&](int num) {
+					return num < replaced_element;
+					});
 
-					// Вставка замененного элемента в предыдущую предыдущую строку
-					remove(prev_replaced_element, line_number - 2);
-				}
+				// Замена элемента в предыдущей предыдущей строке
+				int replaced_prev_element = *insert_prev_pos;
+				*insert_prev_pos = replaced_element;
+				std::cout << "Элемент " << replaced_element << " заменяет элемент " << replaced_prev_element << " в предыдущей предыдущей строке.\n";
 			}
 			else
 			{
-				std::vector<int> new_row = { replaced_element };
-				table.insert(table.begin(), new_row);
-				std::cout << "Элемент " << replaced_element << " добавлен в новую строку.\n";
+				std::cout << "Элемент " << replaced_element << " удален из таблицы.\n";
 			}
 		}
 	}
@@ -413,7 +410,6 @@ int main()
 
     return 0;
 }
-
 ```
 ## Описание кода пользовательской библиотеки *YoungTableau.h*
 В этом коде определен класс YoungTableau, который имеет следующие члены:
