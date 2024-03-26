@@ -187,20 +187,21 @@ void ReadFile(Mnozh MultMn[], string path) {
                 }
             }
             else if (isdigit(ch)) {
-                if (KolSkob == 1) {
-                    if (MultMn[m].El[KolElemMnozh].kratn == 1) {
-                        MultMn[m].El[KolElemMnozh].kratn = (ch - 48);
-                    }
-                    else {
-                        MultMn[m].El[KolElemMnozh].kratn = MultMn[m].El[KolElemMnozh].kratn * 10 + (ch - 48);
-                    }
-                }
-                else {
-                    MultMn[m].El[KolElemMnozh].el.push_back(ch);
-                    if (MultMn[m].El[KolElemMnozh].NeorMN)
-                        MultMn[m].El[KolElemMnozh].razm += ch;
-                }
+    if (KolSkob == 1 ) {
+        if (MultMn[m].El[KolElemMnozh].kratn == 1 && !MultMn[m].El[KolElemMnozh].ProverkaNa1) {
+            MultMn[m].El[KolElemMnozh].kratn = (ch - 48);
+            MultMn[m].El[KolElemMnozh].ProverkaNa1 = true;
             }
+        else {
+            MultMn[m].El[KolElemMnozh].kratn = MultMn[m].El[KolElemMnozh].kratn * 10 + (ch - 48);
+            }
+                    }
+    else {
+        MultMn[m].El[KolElemMnozh].el.push_back(ch);
+        if (MultMn[m].El[KolElemMnozh].NeorMN)
+            MultMn[m].El[KolElemMnozh].razm += ch;
+            }
+                                }
             else if (ch == '<') {
                 KolSkob++;
                 KolSkobKort++;
