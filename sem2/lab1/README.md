@@ -17,42 +17,125 @@
 
 ## Полный код
 
-Библиотека *YoungTableau.h*:
-```cpp
-
-
-
-#pragma once
-
-#include <vector>
-#include <algorithm>
+```
+main.cpp:
+#include "YoungTableau.h"
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <sstream>
 
-class YoungTableau {
-public:
-    void initialize(int row_number);
-    size_t width();
-    void add(int line_number, int element);
-    void remove(int element, int line_number);
-    void removeAll(int element);
-    void print();
-    void printToFile(std::string filename);
-    void add1(int element, int line_number);
+int main()
+{   
+    setlocale(LC_ALL, "Ru");
+    YoungTableau t;
+    
 
-private:
-    std::vector<std::vector<int>> table;
-    int row_number; // Добавлено поле для хранения количества элементов в строке
-};
+    while (true)
+    {
+        std::cout << "\n1) Прочесть таблицу из файла";
+        std::cout << "\n2) Просмотреть таблицу";
+        std::cout << "\n3) Добавить элемент в таблицу";
+        std::cout << "\n4) Удалить элемент из таблицы";
+        std::cout << "\n5) Записать таблицу в файл";
+        std::cout << "\n6) Выйти из программы";
+        std::cout << "\nВыберите операцию: ";
+
+        int choice;
+        std::cin >> choice;
+
+        if (choice == 1)
+        {
+            std::string filename;
+            std::cout << "Введите имя файла: ";
+            std::cin >> filename;
+
+            std::ifstream fin(filename);
+            if (!fin)
+            {
+                std::cout << "Не удалось открыть файл.\n";
+                continue;
+            }
+
+            std::string line;
+            std::getline(fin, line);
+            std::istringstream iss(line);
+            int row_number;
+            if (!(iss >> row_number))
+            {
+                std::cout << "Некорректный формат файла.\n";
+                continue;
+            }
+
+            t.initialize(row_number);
+
+            for (int i = 0; i < row_number; i++)
+            {
+                std::getline(fin, line);
+                std::istringstream iss(line);
+                int element;
+                while (iss >> element)
+                {
+                    t.add(i + 1, element);
+                }
+            }
+
+            std::cout << "Таблица успешно загружена из файла.\n";
+        }
+        else if (choice == 2)
+        {
+            t.print();
+        }
+        else if (choice == 3)
+        {
+            int  element;
+
+           
+
+            std::cout << "Введите элемент: ";
+            std::cin >> element;
+
+            t.add1(element,1);
+        }
+
+        else if (choice == 4) {
+            int element, line_number;
+
+            std::cout << "Введите элемент: ";
+            std::cin >> element;
+            std::cout << "Введите номер строки: ";
+            std::cin >> line_number;
+
+
+           
+
+            t.remove(element,line_number);
+        }
+        else if (choice == 5)
+        {
+            std::string filename;
+            std::cout << "Введите имя файла: ";
+            std::cin >> filename;
+
+            t.printToFile(filename);
+        }
+        else if (choice == 6)
+        {
+            break;
+        }
+        else
+        {
+            std::cout << "Некорректный выбор операции. Попробуйте ещё раз.\n";
+        }
+    }
 
 
 
-
+    return 0;
+}
 ```
 
-Библиотека *YoungTableau.cpp*:
-```cpp
+```
+YoungTableau.cpp:
 #include "YoungTableau.h"
 #include <algorithm>
 #include <iostream>
@@ -169,8 +252,9 @@ void YoungTableau::printToFile(std::string filename)
 	std::cout << "Таблица была выведена в " << filename << "\n";
 }
 
-void YoungTableau::add1(int element, int line_number)
+void YoungTableau::add1(int element, int line_number = 1)
 {
+	
 	// Проверка допустимости номера строки
 	if (line_number <= table.size())
 	{
@@ -217,8 +301,7 @@ void YoungTableau::add1(int element, int line_number)
 		std::cout << "Ошибка: Недопустимый номер строки.\n";
 	}
 }
-
-void YoungTableau::remove(int element, int line_number)
+void YoungTableau::remove(int position, int line_number)
 {
 	// Проверка допустимости номера строки
 	if (line_number > table.size() || line_number <= 0)
@@ -227,19 +310,21 @@ void YoungTableau::remove(int element, int line_number)
 		return;
 	}
 
-	// Поиск элемента в указанной строке
+	// Получение ссылки на указанную строку
 	auto& row = table[line_number - 1];
-	auto it = std::find(row.begin(), row.end(), element);
 
-	// Проверка наличия элемента в строке
-	if (it == row.end())
+	// Проверка допустимости номера позиции
+	if (position > row.size() || position <= 0)
 	{
-		std::cout << "Ошибка: Элемент не найден в таблице.\n";
+		std::cout << "Ошибка: Недопустимая позиция в строке.\n";
 		return;
 	}
 
+	// Получение элемента по указанной позиции
+	int element = row[position - 1];
+
 	// Удаление элемента из строки
-	row.erase(it);
+	row.erase(row.begin() + position - 1);
 	std::cout << "Элемент " << element << " удален из строки " << line_number << ".\n";
 
 	// Поиск предыдущей строки
@@ -292,124 +377,35 @@ void YoungTableau::remove(int element, int line_number)
 	}
 }
 ```
+
 ```
-maim.cpp:
+ YoungTableau.h:
 
+#pragma once
 
-#include "YoungTableau.h"
+#include <vector>
+#include <algorithm>
 #include <iostream>
 #include <fstream>
-#include <sstream>
+#include <string>
 
-int main()
-{   
-    setlocale(LC_ALL, "Ru");
-    YoungTableau t;
-    
+class YoungTableau {
+public:
+    void initialize(int row_number);
+    size_t width();
+    void add(int line_number, int element);
+    void remove(int position, int line_number);
+    void removeAll(int element);
+    void print();
+    void printToFile(std::string filename);
+    void add1(int element, int line_number);
 
-    while (true)
-    {
-        std::cout << "\n1) Прочесть таблицу из файла";
-        std::cout << "\n2) Просмотреть таблицу";
-        std::cout << "\n3) Добавить элемент в таблицу";
-        std::cout << "\n4) Удалить элемент из таблицы";
-        std::cout << "\n5) Записать таблицу в файл";
-        std::cout << "\n6) Выйти из программы";
-        std::cout << "\nВыберите операцию: ";
-
-        int choice;
-        std::cin >> choice;
-
-        if (choice == 1)
-        {
-            std::string filename;
-            std::cout << "Введите имя файла: ";
-            std::cin >> filename;
-
-            std::ifstream fin(filename);
-            if (!fin)
-            {
-                std::cout << "Не удалось открыть файл.\n";
-                continue;
-            }
-
-            std::string line;
-            std::getline(fin, line);
-            std::istringstream iss(line);
-            int row_number;
-            if (!(iss >> row_number))
-            {
-                std::cout << "Некорректный формат файла.\n";
-                continue;
-            }
-
-            t.initialize(row_number);
-
-            for (int i = 0; i < row_number; i++)
-            {
-                std::getline(fin, line);
-                std::istringstream iss(line);
-                int element;
-                while (iss >> element)
-                {
-                    t.add(i + 1, element);
-                }
-            }
-
-            std::cout << "Таблица успешно загружена из файла.\n";
-        }
-        else if (choice == 2)
-        {
-            t.print();
-        }
-        else if (choice == 3)
-        {
-            int line_number, element;
-
-            std::cout << "Введите номер строки: ";
-            std::cin >> line_number;
-
-            std::cout << "Введите элемент: ";
-            std::cin >> element;
-
-            t.add1(element, line_number);
-        }
-
-        else if (choice == 4) {
-            int element, line_number;
-
-            std::cout << "Введите элемент: ";
-            std::cin >> element;
-            std::cout << "Введите номер строки: ";
-            std::cin >> line_number;
+private:
+    std::vector<std::vector<int>> table;
+    int row_number; // Добавлено поле для хранения количества элементов в строке
+};
 
 
-           
-
-            t.remove(element,line_number);
-        }
-        else if (choice == 5)
-        {
-            std::string filename;
-            std::cout << "Введите имя файла: ";
-            std::cin >> filename;
-
-            t.printToFile(filename);
-        }
-        else if (choice == 6)
-        {
-            break;
-        }
-        else
-        {
-            std::cout << "Некорректный выбор операции. Попробуйте ещё раз.\n";
-        }
-    }
-
-
-
-    return 0;
-}
 ```
 ## Описание кода пользовательской библиотеки *YoungTableau.h*
 В этом коде определен класс YoungTableau, который имеет следующие члены:
