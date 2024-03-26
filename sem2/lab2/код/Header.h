@@ -8,6 +8,7 @@ struct Mnozh {
         std::string el;
         int razm = 0;
         bool NeorMN = false;
+        bool ProverkaNa1 = false;
     };
     elem El[100];
     int MoshMn = 1;
