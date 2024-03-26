@@ -245,17 +245,17 @@ void YoungTableau::remove(int element, int line_number)
 		auto& previous_row = table[line_number - 2];
 		auto insert_pos = std::upper_bound(previous_row.begin(), previous_row.end(), element);
 
-		// Если элемент меньше всех элементов предыдущей строки, вставляем его в начало
-		if (insert_pos == previous_row.begin())
+		// Если элемент меньше всех элементов предыдущей строки, вставляем его в конец
+		if (insert_pos == previous_row.end())
 		{
-			previous_row.insert(insert_pos, element);
-			std::cout << "Элемент " << element << " добавлен в начало предыдущей строки.\n";
+			previous_row.push_back(element);
+			std::cout << "Элемент " << element << " добавлен в конец предыдущей строки.\n";
 		}
 		else
 		{
 			// Замена элемента в предыдущей строке
-			int replaced_element = *(insert_pos - 1);
-			*(insert_pos - 1) = element;
+			int replaced_element = *insert_pos;
+			*insert_pos = element;
 			std::cout << "Элемент " << element << " заменяет элемент " << replaced_element << " в предыдущей строке.\n";
 
 			// Вставка замененного элемента в предыдущую строку
