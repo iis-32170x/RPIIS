@@ -38,10 +38,9 @@ void ReadFile(Mnozh MultMn[], string path) {
 
     if (file.is_open()) {
         char ch;
-        int m = 0;
+        int m = -1;
         MultMn[0].KolMnoz = m + 1;
         int KolElemMnozh = 0;
-        bool permn = false;
         while (file.get(ch)) {
             if (ch == '{') {
                 if (KolSkob > 0) {
@@ -50,18 +49,12 @@ void ReadFile(Mnozh MultMn[], string path) {
                     MultMn[m].El[KolElemMnozh].razm += ch;
                     KolSkob++;
                 }
-                else {
-                    if (permn == false) {
-                        KolSkob++;
-                        permn = true;
-                    }
                     else {
                         m++;
                         MultMn[0].KolMnoz = m + 1;
                         KolElemMnozh = 0;
                         KolSkob++;
                     }
-                }
             }
             else if (ch == ',') {
                 if (KolSkob == 1) {
