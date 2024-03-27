@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-#include <deque>
+#include <stack>
 
 using namespace std;
 
@@ -288,28 +288,19 @@ vector<cell> intersection(vector<cell> first, vector<cell> second) {
 }
 
 bool validNotation(string p) {
-    int countTriangleBracesOpen = 0;
-    int countTriangleBracesClose = 0;
-    int countBracesOpen = 0;
-    int countBracesClose = 0;
-    for (int i = 0; i < p.size(); ++i) {
-        switch (p[i])
+    std::stack<char> st;
+    char  m[128];
+    m['}'] = '{';
+    m['>'] = '<';
+
+    for (const auto c : p)
+    {
+        if (c == '{' || c == '<')  st.push(c);
+        else if (c == '}' || c == '>')
         {
-        case '{':
-            ++countBracesOpen;
-            break;
-        case '}':
-            ++countBracesClose;
-            break;
-        case '<':
-            ++countTriangleBracesOpen;
-            break;
-        case '>':
-            ++countTriangleBracesClose;
-            break;
-        default:
-            break;
+            if (st.empty() || st.top() != m[c]) return false;
+            st.pop();
         }
     }
-    return countBracesClose == countBracesOpen && countTriangleBracesClose == countTriangleBracesOpen;
+    return st.empty();
 }
