@@ -14,7 +14,7 @@
 ```
 ## Описание алгоритма. Пример запуска и выполнения программы.(.bat)
 
-![image1](pictures/bat.png)
+![image1](picture/bat.png)
 
 ### Алгоритм программы
 
@@ -135,15 +135,15 @@ C:\Users\Asus> 1lab.bat 5 5 "C:\Users\Asus\Desktop\Lab1"
 ```
 Что мы имели до:
 
-![image2](pictures/Dirbef.png)
+![image2](picture/Dirbef.png)
 
 Что мы имеем после:
 
-![image3](pictures/Diraft.png)
+![image3](picture/Diraft.png)
 
 ## Описание алгоритма. Пример запуска и выполнения программы.(.sh)
 
-![image1](pictures/sh.png)
+![image1](picture/sh.png)
 
 ### Алгоритм программы
 
@@ -223,11 +223,11 @@ C:\Users\Asus> 1lab.bat 5 5 "C:\Users\Asus\Desktop\Lab1"
 ## Пример работы программы
 Что мы имели до:
 
-![image1](pictures/Dirbef_sh.png)
+![image1](picture/Dirbef_sh.png)
 
 Что мы имеем после:
 
-![image3](pictures/Diraft_sh.png)
+![image3](picture/Diraft_sh.png)
 
 # Вывод
 В ходе выполнения Лабораторной работы №1 были применены навыки работы с командной строкой в операционных системах Windows и Linux. Также разработал программы, которые реализовывали алгоритмы, соответствующие заданным условиям.
