@@ -132,6 +132,32 @@ struct JungTable {
 		else {
 			t->row = n->nextCell;
 		}
+
+		if (!t->row) {
+			tableRow* s = JungTable_;
+			tableRow* m = JungTable_;
+
+			while (s != t) {
+				if (s->nextRow == t) {
+					break;
+				}
+				else {
+					s = s->nextRow;
+				}
+			}
+
+			while (m) {
+				if (m->nextRow == t->nextRow) {
+					m = m->nextRow;
+					break;
+				}
+				else {
+					m = m->nextRow;
+				}
+			}
+
+			s->nextRow = m;
+		}
 	}
 
 	void popCell_new(int row, int col) {
@@ -273,6 +299,22 @@ struct JungTable {
 			else {
 				cell* p = t->row;
 				while (p) {
+					if (p->nextCell == NULL) {
+						int temp = p->val;
+						p->val = val;
+						if (t->nextRow == NULL) {
+							t->nextRow = addRow(t);
+							t->nextRow->row = createCell(temp, t->nextRow);
+							break;
+						}
+						else {
+							addCell_New(temp, row + 1, JungTable_);
+							break;
+						}
+					}
+					if (p->val == val) {
+						break;
+					}
 					if (p->nextCell && p->val < val && val < p->nextCell->val) {
 						int temp = p->nextCell->val;
 						p->nextCell->val = val;
