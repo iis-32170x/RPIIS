@@ -1,4 +1,4 @@
-```
+```cpp
 #pragma once
 struct stack;
 void create(stack*& begin, stack*& end, int value);
