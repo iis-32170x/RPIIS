@@ -1,4 +1,5 @@
-```cpp
+```c++
+  
 #pragma once
 struct stack;
 void create(stack*& begin, stack*& end, int value);
@@ -7,4 +8,5 @@ void view(stack* p);
 void del(stack*& p);
 void delStack(stack** p);
 void ftext();
+
 ```
