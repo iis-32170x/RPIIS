@@ -1,6 +1,7 @@
-﻿#include <vector>
+#include <vector>
 #include <iostream>
 #include <fstream>
+#include <deque>
 
 using namespace std;
 
@@ -8,6 +9,49 @@ struct cell {
     string name;
     int multiplicity = 0;
 };
+
+vector<cell> intersection(vector<cell> first, vector<cell> second);
+void print(vector<cell> p);
+int minimum(cell p, cell t);
+string reworkStr_n(cell* p);
+int reworkStr_m(cell* p);
+int parseCount(string str);
+void Parse(string str, vector<cell>* rez);
+bool equals(cell first, cell second);
+void refineSet(vector<cell>* p);
+vector<cell> intersection(vector<cell> first, vector<cell> second);
+bool validNotation(string p);
+
+int main(void) {
+    fstream file("textfile.txt");
+
+    string str;
+    string temp;
+
+    file >> str;
+    if (!validNotation(str)) {
+        cout << "Wrong input!" << endl;
+        return 0;
+    }
+    vector <cell> first(parseCount(str));
+    Parse(str, &first);
+    refineSet(&first);
+    while (file >> temp) {
+        file >> temp;
+        if (!validNotation(temp)) {
+            cout << "Wrong input!" << endl;
+            return 0;
+        }
+        vector<cell> second(parseCount(temp));
+        Parse(temp, &second);
+        refineSet(&second);
+        first = intersection(first, second);
+        print(first);
+        second.clear();
+    }
+    file.close();
+    return 0;
+}
 
 void print(vector<cell> p) {
     if (p.size() != 0) {
@@ -61,7 +105,7 @@ int reworkStr_m(cell* p) {
 
 int parseCount(string str)
 {
-    int amount_of_el = 0;
+    int amountOfEl = 0;
     int count = 0;
     for (int i = 0; i < str.size(); i++)
     {
@@ -70,7 +114,7 @@ int parseCount(string str)
             i++;
             int j = i;
             int unclosed_sets = 0;
-            amount_of_el++;
+            amountOfEl++;
             string found_elem;
             while (str[j] != ',' && str[j] != '}' && str[j] != '>')
             {
@@ -94,7 +138,7 @@ int parseCount(string str)
             i = j - 1;
         }
     }
-    return amount_of_el;
+    return amountOfEl;
 }
 
 void Parse(string str, vector<cell>* rez)
@@ -148,7 +192,10 @@ void Parse(string str, vector<cell>* rez)
 }
 
 bool equals(cell first, cell second) {
-    if (first.name[0] == '<' && second.name[0] == '<') {
+    if(first.name == second.name){
+        return first.name == second.name;
+    }
+    else if (first.name[0] == '<' && second.name[0] == '<') {
         vector<cell> p(parseCount(first.name)), t(parseCount(second.name));
         Parse(first.name, &p);
         Parse(second.name, &t);
@@ -184,20 +231,35 @@ bool equals(cell first, cell second) {
                     t.erase(t.begin() + k);
                     --k;
                     wasIntersectioned = true;
+                    break;
                 }
                 else if (equals(p[i], t[k])) {
                     p.erase(p.begin() + i);
                     t.erase(t.begin() + k);
                     --k;
                     wasIntersectioned = true;
+                    break;
                 }
-                if (wasIntersectioned == true)  --i;
             }
+            if (wasIntersectioned == true)  --i;
         }
         return p.size() == 0 && t.size() == 0;
     }
-    else {
-        return first.name == second.name;
+}
+
+void refineSet(vector<cell>* p) {
+    for (int i = 0; i < (*p).size(); ++i) {
+        bool wasIntersectioned = false;
+        for (int k = i+1; k < (*p).size(); ++i) {
+            if (equals((*p)[i], (*p)[k])) {
+                (*p)[i].multiplicity += (*p)[k].multiplicity;
+                (*p).erase((*p).begin() + k);
+                --k;
+                wasIntersectioned = true;
+                break;
+            }
+        }
+        if (wasIntersectioned == true) --i;
     }
 }
 
@@ -225,23 +287,29 @@ vector<cell> intersection(vector<cell> first, vector<cell> second) {
     return res;
 }
 
-int main(void) {
-    fstream file("textfile.txt");
-
-    string str;
-    string temp;
-
-    file >> str;
-    vector <cell> first(parseCount(str));
-    Parse(str, &first);
-    while (file >> temp) {
-        file >> temp;
-        vector<cell> second(parseCount(temp));
-        Parse(temp, &second);
-        first = intersection(first, second);
-        print(first);
-        second.clear();
+bool validNotation(string p) {
+    int countTriangleBracesOpen = 0;
+    int countTriangleBracesClose = 0;
+    int countBracesOpen = 0;
+    int countBracesClose = 0;
+    for (int i = 0; i < p.size(); ++i) {
+        switch (p[i])
+        {
+        case '{':
+            ++countBracesOpen;
+            break;
+        case '}':
+            ++countBracesClose;
+            break;
+        case '<':
+            ++countTriangleBracesOpen;
+            break;
+        case '>':
+            ++countTriangleBracesClose;
+            break;
+        default:
+            break;
+        }
     }
-    file.close();
-    return 0;
+    return countBracesClose == countBracesOpen && countTriangleBracesClose == countTriangleBracesOpen;
 }
