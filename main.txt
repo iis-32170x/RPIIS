@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include "Header.h"
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cout << "Введите размер массива: ";
+    cin >> n;
+
+    vector<int> arr(n);
+    cout << "Введите элементы массива: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    SumTree sumTree(arr);
+
+    int left, right, value;
+    cout << "Введите левую и правую границы отрезка: ";
+    cin >> left >> right;
+    cout << "Введите значение, на которое нужно изменить элементы: ";
+    cin >> value;
+
+    sumTree.modify(left, right, value);
+
+    cout << "Сумма чисел на отрезке [" << left << ", " << right << "]: " << sumTree.query(left, right) << endl;
+
+    return 0;
+}
