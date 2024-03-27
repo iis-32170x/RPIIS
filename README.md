@@ -86,11 +86,11 @@ return queryRange(root, left, right);
 
   ##  *Пример выполнения*
   #### 1
-  ![Img1](https://github.com/iis-32170x/RPIIS/blob/Пушко_М/images/Снимок экрана (35).png)
+ <img src="Снимок экрана (35).png">
   #### 2
-  ![Img2](https://github.com/iis-32170x/RPIIS/blob/Пушко_М/images/Снимок экрана (36).png)
+  <img src="Снимок экрана (36).png">
   #### 3
-   ![Img3](https://github.com/iis-32170x/RPIIS/blob/Пушко_М/images/Снимок экрана (37).png)
+  <img src="Снимок экрана (37).png">
   В результате выполнения данной работы были получены следующие практические навыки:
 
 + изучение структуры дерево суммы
