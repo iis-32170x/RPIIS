@@ -25,7 +25,7 @@
 
 #### Код функции:
    ```python
-  def read_set(filename):
+def read_set(filename):
     with open(filename, 'r') as file:
         Set = file.readline().strip()
         print(Set)
@@ -38,53 +38,65 @@
         Set = Set[1: -1]  #Обрезает крайние скобки у строки множества
         i = 0
         while(i < len(Set)):
-
             if ( Set[i] == ' '):
-                raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")   
-            
-            elif Set[i] == '{':
+                raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")        
+            elif Set[i] == '{':                
+                isInside = True
                 current_element += Set[i]
                 i += 1
+
                 while i < len(Set):
-                    if Set[i] == ' ':
+                    if Set[i] == ',' and not isInside:
+                        Set_elements.append(current_element)
+                        current_element = ""
+                        break
+                    elif Set[i] == ' ':
                         raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")   
                     current_element += Set[i] 
                     
                     if current_element.count('<') < current_element.count('>'):
                         raise ValueError("Некорректная запись элемента множества")
                             
-                    elif current_element.count('{') == current_element.count('}'):
+                    if current_element.count('{') == current_element.count('}'):
                         if current_element[0] != '{' or current_element[-1] != '}':
                             raise ValueError("Некорректная запись элемента множества")
-                        break                
+                        isInside = False    
                     i += 1
-
             elif Set[i] == '<':
+                isInside = True
                 current_element += Set[i]
                 i += 1
                 while i < len(Set):
+                    if Set[i] == ',' and not isInside:
+                        Set_elements.append(current_element)
+                        current_element = ""
+                        break
                     if Set[i] == ' ':
                         raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")   
                     current_element += Set[i] 
                     
                     if current_element.count('{') < current_element.count('}'):
                         raise ValueError("Некорректная запись элемента множества")
-                            
+                    
                     elif current_element.count('<') == current_element.count('>'):
                         if current_element[0] != '<' or current_element[-1] != '>':
                             raise ValueError("Некорректная запись элемента множества")
-                        break
+                        isInside = False
                     i += 1
-                
-            elif (Set[i] == ','):
+
+            elif (Set[i] == ','): 
                 Set_elements.append(current_element)
                 current_element = ""
-
             else:
                 current_element += Set[i]
             i += 1
         
         if (current_element != ""):
+            if (current_element[0] == '{' and current_element[-1] != '}') or (current_element.count('{') != current_element.count('}')):
+                raise ValueError("Некорректная запись элемента множества")
+            if (current_element[0] == '<' and current_element[-1] != '>') or (current_element.count('<') != current_element.count('>')):
+                raise ValueError("Некорректная запись элемента множества")
+
             Set_elements.append(current_element)
             current_element = ""
         return Set_elements
