@@ -3,17 +3,29 @@
 
 using namespace std;
 
-TEST(RunTestcaseTest, EmptyFileTest) {
+TEST(RunTestcaseTest, SubsetPermutation) {
     int num_sets = 0;
     vector<vector<string>> sets;
-    run_testcase("empty_file.txt", num_sets, sets);
+    run_testcase("permutation.txt", num_sets, sets);
+    vector<vector<string>> expected_sets = { {"{a b}", "{a b}"}, {"{a b}"} };
+    ASSERT_EQ(num_sets, expected_sets.size());
+
+    for (int i = 0; i < num_sets; ++i) {
+        ASSERT_EQ(sets[i], expected_sets[i]);
+    }
+}
+
+TEST(RunTestcaseTest, FileNotFoundTest) {
+    int num_sets = 0;
+    vector<vector<string>> sets;
+    run_testcase("non_existent_file.txt", num_sets, sets);
     ASSERT_EQ(num_sets, 0);
     ASSERT_TRUE(sets.empty());
 }
 
 TEST(CountMultiplicitiesTest, SingleSetTest) {
-    vector<vector<string>> sets = { {"a", "b", "b", "c"} };
-    vector<vector<pair<string, int>>> expected_counts = { {{"a", 1}, {"b", 2}, {"c", 1}} };
+    vector<vector<string>> sets = { {"aa", "b", "b", "{}"} };
+    vector<vector<pair<string, int>>> expected_counts = { {{"aa", 1}, {"b", 2}, {"{}", 1}} };
     ASSERT_EQ(CountMultiplicities(sets), expected_counts);
 }
 
