@@ -298,3 +298,26 @@ void Do_Symm_Diff(Set MultiSet[], string path) {
     SymmDiff(MultiSet);
 }
 ```
+## Примеры выполнения программы
+* Файл введен корректно
+  
+![Снимок экрана 2024-03-29 110624](https://github.com/iis-32170x/RPIIS/assets/145003765/3aa6db5f-2675-4209-a363-b3e383980f23)
+
+![Снимок экрана 2024-03-29 110531](https://github.com/iis-32170x/RPIIS/assets/145003765/2d5e5fa1-6b9b-40d6-afae-8cc5bc86d880)
+
+* Файл введен некорректно
+
+![Снимок экрана 2024-03-29 110735](https://github.com/iis-32170x/RPIIS/assets/145003765/cfdcb917-db82-47ca-b557-345d86be1dcc)
+  
+
+
+## Результат выполнения GTest
+
+![Снимок экрана 2024-03-28 231759](https://github.com/iis-32170x/RPIIS/assets/145003765/192545ae-8f9e-4bef-bb22-fed1d8e57845)
+
+##  Список использованных источников 
+
+* [Мультимножества](https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE)
+* Л. А. Гладков, В. В. Курейчик, В. М. Курейчик   "Дискретная математика"
+* [Обработка исключений](https://learn.microsoft.com/ru-ru/cpp/cpp/errors-and-exception-handling-modern-cpp?view=msvc-170)
+* [Считывание из файла](https://purecodecpp.com/archives/2751)
