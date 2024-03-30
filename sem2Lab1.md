@@ -185,7 +185,6 @@ void view(stack* begin)
 void del(stack*& begin)
 {
     stack* t = begin;
-    stack* del = t;
     t = t->next;
     delete del;
 
