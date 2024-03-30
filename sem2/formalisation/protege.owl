@@ -1,0 +1,203 @@
+Prefix(:=<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6>
+
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>))
+Declaration(Class(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex>))
+Declaration(DataProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#cos>))
+Declaration(DataProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasLength>))
+Declaration(DataProperty(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#D>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#OR>))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle>)
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point>)
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment>)
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point>)
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment>)
+
+# Object Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>)
+ObjectPropertyRange(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#cos> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#cos>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#cos> DataSomeValuesFrom(owl:topDataProperty xsd:double))
+
+# Data Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasLength> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasLength>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasLength> DataSomeValuesFrom(owl:topDataProperty xsd:double))
+
+# Data Property: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare>)
+
+DataPropertyDomain(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare> DataSomeValuesFrom(owl:topDataProperty xsd:double))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>)
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#circle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>)
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>)
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>)
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#shape>)
+
+# Class: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle>)
+
+SubClassOf(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#polygon>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C>)
+DataPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#ABC> "4S")
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasAngle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#A>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#angle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle>)
+DataPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#cos> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_angle> "0.5"^^xsd:double)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasMiddlePoint> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#AEB_side> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#B>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#triangle> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSide> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#C>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#D>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasVertex> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E>)
+DataPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasSquare> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#CDE> "S")
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#D> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#D>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#D>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#segment> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE>)
+DataPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasLength> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE> "5.0"^^xsd:double)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#E>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O>)
+
+ClassAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#point> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O>)
+
+# Individual: <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#OR> (<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#OR>)
+
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasCenter> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#OR> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#O>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#hasChord> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#OR> <http://www.semanticweb.org/kinad/ontologies/2024/2/untitled-ontology-6#DE>)
+
+
+)
