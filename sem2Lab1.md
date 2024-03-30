@@ -54,7 +54,6 @@ void add(stack*& begin, stack*& end, int value)
 void del(stack*& begin)
 {
     stack* t = begin;
-    stack* del = t;
     t = t->next;
     delete del;
 
