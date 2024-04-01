@@ -114,7 +114,7 @@ void printQueue(Node* front) {
 ```
 ## Тесты:
 
-
+![результат тестов](https://github.com/iis-32170x/RPIIS/blob/%D0%A1%D0%B2%D0%B8%D1%80%D0%B8%D0%B4%D0%BE_%D0%95/sem2/lab1/code/test.png)
 
 ## Вывод:
 В результате выполнения данной работы были получены следующие практические навыки:
