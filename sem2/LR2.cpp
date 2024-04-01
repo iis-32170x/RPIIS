@@ -18,7 +18,7 @@ int reworkStr_m(cell* p);
 int parseCount(string str);
 void Parse(string str, vector<cell>* rez);
 bool equals(cell first, cell second);
-void refineSet(vector<cell>* p);
+vector<cell> refineSet(vector<cell>& p);
 vector<cell> intersection(vector<cell> first, vector<cell> second);
 bool validNotation(string p);
 
@@ -35,7 +35,8 @@ int main(void) {
     }
     vector <cell> first(parseCount(str));
     Parse(str, &first);
-    refineSet(&first);
+    first = refineSet(first);
+    print(first);
     while (file >> temp) {
         file >> temp;
         if (!validNotation(temp)) {
@@ -44,7 +45,8 @@ int main(void) {
         }
         vector<cell> second(parseCount(temp));
         Parse(temp, &second);
-        refineSet(&second);
+        second = refineSet(second);
+        print(second);
         first = intersection(first, second);
         print(first);
         second.clear();
@@ -199,6 +201,8 @@ bool equals(cell first, cell second) {
         vector<cell> p(parseCount(first.name)), t(parseCount(second.name));
         Parse(first.name, &p);
         Parse(second.name, &t);
+        p = refineSet(p);
+        t = refineSet(t);
         for (int i = 0; i < p.size(); ++i) {
             bool wasIntersectioned = false;
             for (int k = 0; k < t.size(); ++k) {
@@ -245,22 +249,22 @@ bool equals(cell first, cell second) {
         }
         return p.size() == 0 && t.size() == 0;
     }
+    return false;
 }
 
-void refineSet(vector<cell>* p) {
-    for (int i = 0; i < (*p).size(); ++i) {
-        bool wasIntersectioned = false;
-        for (int k = i+1; k < (*p).size(); ++i) {
-            if (equals((*p)[i], (*p)[k])) {
-                (*p)[i].multiplicity += (*p)[k].multiplicity;
-                (*p).erase((*p).begin() + k);
+vector<cell> refineSet(vector<cell>& p) {
+    vector<cell> temp;
+    for (int i = 0; i < p.size(); ++i) {
+        temp.push_back(p[i]);
+        for (int k = i + 1; k < p.size(); ++k) {
+            if (equals(p[i], p[k])) {
+                temp[temp.size() - 1].multiplicity += p[k].multiplicity;
+                p.erase(p.begin() + k);
                 --k;
-                wasIntersectioned = true;
-                break;
             }
         }
-        if (wasIntersectioned == true) --i;
     }
+    return temp;
 }
 
 vector<cell> intersection(vector<cell> first, vector<cell> second) {
