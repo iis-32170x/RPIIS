@@ -17,6 +17,7 @@ def readtuple(Tuple):
 
 def readsubset(Set):
     Elements = readElements(Set)
+    Elements.sort()
     subset = "{"
     subset += ','.join(Elements)
     subset += '}'
@@ -68,12 +69,16 @@ def readElements(Set):
         if current_element.count('{') > 0:
             if (current_element[0] != '{' or current_element[-1] != '}'):
                 raise ValueError("Некорректная запись элемента множества.")
-            subset.append(readsubset(current_element))
+            current_element=readsubset(current_element)
+            if (subset.count(current_element) < 1):
+                subset.append(current_element)
             current_element = ""
         elif current_element.count('<') > 0:
             if (current_element[0] != '<' or current_element[-1] != '>'):
                 raise ValueError("Некорректная запись элемента множества.")
-            subset.append(readtuple(current_element))
+            current_element=readtuple(current_element)
+            if (subset.count(current_element) < 1):
+                subset.append(current_element)
             current_element = ""
 
         elif (subset.count(current_element) < 1):
