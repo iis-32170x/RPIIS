@@ -9,97 +9,81 @@
 ## Список ключевых понятий
 * ***Множество*** – простейшая информационная конструкция и математическая структура, позволяющая рассматривать какие-то объекты как целое, связывая их.
 * ***Булеан множества*** - множество, элементами которого являются все возможные подмножества исходного множества.
+* ***Кортеж*** - упорядоченный набор элементов фиксированной длины.
 
 ## Функции программы
-### 1. Функция `def read_set(filename)`. Создание исходного множества элементов из файла.
+### 1. Функция `def readElements(Set)`. Разбиение входящей строки-множества на элементы.
 
-* Принимает на вход имя файла в котором записано множество.
-* Считывает строку множества и файла, разбивает её на подстроки-элементы и записывает в массив строк - `Set_elements`.
-* Проверяет на корректность запись множества в файле и она запись неверная, то возвращает соответсвующую ошибку.
-* Реагирует на следующие возможные ошибки в записи множества:
-
-  * Исходное множество не заключено в фигурные скобки.
-  * Потеряна одна или несколько фигурных или угловых скобок в записи элемента.
-  * Наличие пробелов в записи множества.
-* Возвращает множество, состоящее из элементов прочитанного множества.
+* Принимает на вход строку-множество.
+* Разбивает входящую строку на элементы множества и возвращает в виде массива строк - элементов множества.
+* Если элементом множества оказывается другое множество или кортеж, то вызывает функции для обработки таких случаев: ```readsubset``` и ```readtuple``` соответственно.
+* Возвращает ошибку в случае некорректной записи множества.
 
 #### Код функции:
    ```python
-def read_set(filename):
-    with open(filename, 'r') as file:
-        Set = file.readline().strip()
-        print(Set)
+def readElements(Set):
+    Set = Set[1:-1]
+    isTuple = False
+    isSubset = False
+    subset = []
+    current_element = ""
+    for char in Set:
+        if ( char == ' '):
+            raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")
         
-        if (Set[0] != '{' or Set[-1] != '}'):
-            raise ValueError("Множество не заключено в фигурные скобки.")
-        
-        Set_elements = [] #Множество строк, в которое будут записываться элементы исходного множества
-        current_element = "" #Переменная для хранения обрабатываемого элемента
-        Set = Set[1: -1]  #Обрезает крайние скобки у строки множества
-        i = 0
-        while(i < len(Set)):
-            if ( Set[i] == ' '):
-                raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")        
-            elif Set[i] == '{':                
-                isInside = True
-                current_element += Set[i]
-                i += 1
+        if isSubset and current_element.count('{') == current_element.count('}'):
+            isSubset = False
+        elif isTuple and current_element.count('<') == current_element.count('>'):
+            isTuple = False
 
-                while i < len(Set):
-                    if Set[i] == ',' and not isInside:
-                        Set_elements.append(current_element)
-                        current_element = ""
-                        break
-                    elif Set[i] == ' ':
-                        raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")   
-                    current_element += Set[i] 
-                    
-                    if current_element.count('<') < current_element.count('>'):
-                        raise ValueError("Некорректная запись элемента множества")
-                            
-                    if current_element.count('{') == current_element.count('}'):
-                        if current_element[0] != '{' or current_element[-1] != '}':
-                            raise ValueError("Некорректная запись элемента множества")
-                        isInside = False    
-                    i += 1
-            elif Set[i] == '<':
-                isInside = True
-                current_element += Set[i]
-                i += 1
-                while i < len(Set):
-                    if Set[i] == ',' and not isInside:
-                        Set_elements.append(current_element)
-                        current_element = ""
-                        break
-                    if Set[i] == ' ':
-                        raise ValueError("Некорректная запись множества. Элементы множества не должны быть разделены пробелами.")   
-                    current_element += Set[i] 
-                    
-                    if current_element.count('{') < current_element.count('}'):
-                        raise ValueError("Некорректная запись элемента множества")
-                    
-                    elif current_element.count('<') == current_element.count('>'):
-                        if current_element[0] != '<' or current_element[-1] != '>':
-                            raise ValueError("Некорректная запись элемента множества")
-                        isInside = False
-                    i += 1
-
-            elif (Set[i] == ','): 
-                Set_elements.append(current_element)
+        if char == ',' and not (isTuple or isSubset):
+            if (current_element.count('{') > 0):
+                if current_element[0] != '{' or current_element[-1] != '}' or current_element.count('{') != current_element.count('}'):
+                    raise ValueError("Некорректная запись элемента множества.")
+                subset.append(readsubset(current_element))
+                current_element = ""
+            elif current_element.count('<') > 0:
+                if current_element[0] != '<' or current_element[-1] != '>' or current_element.count('<') != current_element('>'):
+                    raise ValueError("Некорректная запись элемента множества.")
+                subset.append(readtuple(current_element))
                 current_element = ""
             else:
-                current_element += Set[i]
-            i += 1
-        
-        if (current_element != ""):
-            if (current_element[0] == '{' and current_element[-1] != '}') or (current_element.count('{') != current_element.count('}')):
-                raise ValueError("Некорректная запись элемента множества")
-            if (current_element[0] == '<' and current_element[-1] != '>') or (current_element.count('<') != current_element.count('>')):
-                raise ValueError("Некорректная запись элемента множества")
+                subset.append(current_element)
+                current_element = ""
 
-            Set_elements.append(current_element)
+        elif char == '<':
+            isTuple = True
+            current_element += char  
+        elif char == '{':
+            isSubset = True
+            current_element += char       
+        else:
+            current_element += char
+    
+    if current_element != "":
+        if current_element.count('{') != current_element.count('}') or current_element.count('<') != current_element.count('>'):
+            raise ValueError("Некорректная запись элемента множества.")
+        
+        if current_element.count('{') > 0:
+            if (current_element[0] != '{' or current_element[-1] != '}'):
+                raise ValueError("Некорректная запись элемента множества.")
+            current_element=readsubset(current_element)
+            if (subset.count(current_element) < 1):
+                subset.append(current_element)
             current_element = ""
-        return Set_elements
+        elif current_element.count('<') > 0:
+            if (current_element[0] != '<' or current_element[-1] != '>'):
+                raise ValueError("Некорректная запись элемента множества.")
+            current_element=readtuple(current_element)
+            if (subset.count(current_element) < 1):
+                subset.append(current_element)
+            current_element = ""
+
+        elif (subset.count(current_element) < 1):
+            subset.append(current_element)
+            current_element = ""
+
+    return subset
    ```
 
 ### 2. Функция `def create_power_set(Set_elements)`. Создание булеана множества.
@@ -113,15 +97,48 @@ def read_set(filename):
 #### Код функции:
    ```python
    def create_power_set(Set_elements):
-    power_set = []
-    for i in range (1 << len(Set_elements)):
-        subset = []
-        for j in range (len(Set_elements)):
-            if i & (1 << j):
-                subset.append(Set_elements[j])
-        power_set.append(subset)
-    return power_set
+       power_set = []
+       for i in range (1 << len(Set_elements)):
+           subset = []
+           for j in range (len(Set_elements)):
+               if i & (1 << j):
+                   subset.append(Set_elements[j])
+           power_set.append(subset)
+       return power_set
    ```
+### 3. Функция `def readsubset(Set):`. Чтение подмножества.
+* Принимает на вход строку-множество.
+* Запускает фунцию ```readElements```.
+* Cчитывает элементы входящего множества.
+* Устраняет повторы во входящем множестве.
+* Сортирует и возвращает множество в виде строки.
 
+#### Код функции:
+```python
+def readsubset(Set):
+    Elements = readElements(Set)
+    Elements.sort()
+    subset = "{"
+    subset += ','.join(Elements)
+    subset += '}'
+    return subset
+```
+
+### 4. Функция `def readtuple(Tuple)`. Чтение кортежа.
+* Принимает на вход строку-множество.
+* Запускает фунцию ```readElements```.
+* Cчитывает элементы входящего множества.
+* Устраняет повторы во входящем множестве.
+* Сортирует и возвращает множество в виде кортежа.
+
+#### Код функции:
+```python
+def readtuple(Tuple):
+    Elements = readElements(Tuple)
+    result = "<"
+    result += ','.join(Elements)
+    result += '>'
+    return result
+```
 ## Вывод
 Написал программу для считывания множества из заданного файла, записи его в массив поэлементно и создания его булеана.
