@@ -1,123 +1,74 @@
-#include "branch.h"
-#include <iostream>
+#include "queue.h"
+#include<iostream>
+#include<string>
 
 using namespace std;
 
-void Add(Branch*& current, int value) {
-    if (!current) {
-        current = new Branch(value);
-        return;
-    }
-    else if (value < current->data) {
-        Add(current->left, value);
-    }
-    else if (value > current->data) {
-        Add(current->right, value);
-    }
-}
+void enqueue(Node*& front, Node*& rear, const string& value) {
+    Node* newNode = new Node;
+    newNode->data = value;
+    newNode->next = nullptr;
 
-Branch* findMinNode(Branch* node) {
-    if (node == nullptr) {
-        return nullptr;
-    }
-    else if (node->left == nullptr) {
-        return node;
+    if (rear == nullptr) {
+        front = rear = newNode;
     }
     else {
-        return findMinNode(node->left);
+        rear->next = newNode;
+        rear = newNode;
     }
+
+    cout << "Элемент '" << value << "' добавлен в очередь." << endl;
 }
 
-void removeNode(Branch*& current, int value) {
-    if (current == nullptr) {
+string dequeue(Node*& front, Node*& rear) {
+    if (front == nullptr) {
+        cout << "Очередь пуста." << endl;
+        return "";
+    }
+
+    string value = front->data;
+
+    Node* temp = front;
+    front = front->next;
+
+    if (front == nullptr) {
+        rear = nullptr;
+    }
+
+    delete temp;
+
+    return value;
+}
+
+bool isEmpty(Node* front) {
+    return front == nullptr;
+}
+
+void clearQueue(Node*& front, Node*& rear) {
+    while (front != nullptr) {
+        Node* temp = front;
+        front = front->next;
+        delete temp;
+    }
+
+    rear = nullptr;
+
+    cout << "Очередь очищена." << endl;
+}
+
+void printQueue(Node* front) {
+    if (isEmpty(front)) {
+        cout << "Очередь пуста." << endl;
         return;
     }
-    if (value < current->data) {
-        removeNode(current->left, value);
-    }
-    else if (value > current->data) {
-        removeNode(current->right, value);
-    }
-    else {
-        if (current->left == nullptr) {
-            Branch* temp = current;
-            current = current->right;
-            delete temp;
-        }
-        else if (current->right == nullptr) {
-            Branch* temp = current;
-            current = current->left;
-            delete temp;
-        }
-        else {
-            Branch* minRight = findMinNode(current->right);
-            current->data = minRight->data;
-            removeNode(current->right, minRight->data);
-        }
-    }
-}
 
-Branch* FindElem(Branch* node, int value) {
-    if (!node) {
-        cout << "Элемент не найден. ";
-        return nullptr;
-    }
-    if (node->data == value) {
-        cout << "Элемент найден. ";
-        return node;
-    }
-    if (node->data < value) {
-        return FindElem(node->right, value);
-    }
-    else {
-        return FindElem(node->left, value);
-    }
-}
+    cout << "Содержимое очереди: ";
 
-void print(Branch* node) {
-    if (!node) {
-        return;
+    Node* temp = front;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
     }
-    print(node->left);
-    std::cout << node->data << " ";
-    print(node->right);
-}
 
-void UnionAdd(Branch*& current, Branch*& mnozhC) {
-    if (!current) {
-        return;
-    }
-    Add(mnozhC, current->data);
-    UnionAdd(current->right, mnozhC);
-    UnionAdd(current->left, mnozhC);
-}
-
-void Union(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
-    if (mnozhA) {
-        UnionAdd(mnozhA, mnozhC);
-    }
-    if (mnozhB) {
-        UnionAdd(mnozhB, mnozhC);
-    }
-}
-
-void proverka(int value, Branch* node, Branch*& mnozhC) {
-    if (!node) {
-        return;
-    }
-    if (node->data == value) {
-        Add(mnozhC, value);
-        return;
-    }
-    proverka(value, node->left, mnozhC);
-    proverka(value, node->right, mnozhC);
-}
-
-void Intersection(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
-    if (!mnozhA) {
-        return;
-    }
-    proverka(mnozhA->data, mnozhB, mnozhC);
-    Intersection(mnozhA->left, mnozhB, mnozhC);
-    Intersection(mnozhA->right, mnozhB, mnozhC);
+    cout << endl;
 }
