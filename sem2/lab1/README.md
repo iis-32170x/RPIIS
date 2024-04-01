@@ -23,8 +23,95 @@
 
 ## Описание используемых алгоритмов:
 
+1. **Алгоритм добавления элемента**
+   
+   Этот алгоритм добавляет элемент в очередь.
+```cpp
+void enqueue(Node*& front, Node*& rear, const string& value) {
+    Node* newNode = new Node;
+    newNode->data = value;
+    newNode->next = nullptr;
 
+    if (rear == nullptr) {
+        front = rear = newNode;
+    }
+    else {
+        rear->next = newNode;
+        rear = newNode;
+    }
 
+    cout << "Элемент '" << value << "' добавлен в очередь." << endl;
+}
+```
+2. **Алгоритм удаления элемента**
+   
+   Этот алгоритм удаляет первый элемент очереди, если такой имеется. В противном случае ничего не произойдет.
+```cpp
+string dequeue(Node*& front, Node*& rear) {
+    if (front == nullptr) {
+        cout << "Очередь пуста." << endl;
+        return "";
+    }
+
+    string value = front->data;
+
+    Node* temp = front;
+    front = front->next;
+
+    if (front == nullptr) {
+        rear = nullptr;
+    }
+
+    delete temp;
+
+    return value;
+}
+```
+3. **Алгоритм проверки очереди**
+   
+   Этот алгоритм проверяет, пуста ли очередь.
+```cpp
+bool isEmpty(Node* front) {
+    return front == nullptr;
+}
+```
+4. **Алгоритм очистки очереди**
+   
+   Этот алгоритм очищает очередь, освобождая память, выделенную для каждого узла.
+```cpp
+void clearQueue(Node*& front, Node*& rear) {
+    while (front != nullptr) {
+        Node* temp = front;
+        front = front->next;
+        delete temp;
+    }
+
+    rear = nullptr;
+
+    cout << "Очередь очищена." << endl;
+}
+```
+5. **Алгоритм вывода содержимого на экран**
+   
+   Этот алгоритм выводит содержимое очереди.
+```cpp
+void printQueue(Node* front) {
+    if (isEmpty(front)) {
+        cout << "Очередь пуста." << endl;
+        return;
+    }
+
+    cout << "Содержимое очереди: ";
+
+    Node* temp = front;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+
+    cout << endl;
+}
+```
 ## Тесты:
 
 
