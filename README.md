@@ -1,1 +1,1 @@
-### ono vrode sobrano, a dalshe mne len'
+### Лосик Ярослав, группа 321701 
