@@ -5,37 +5,78 @@
 
 using namespace std;
 
-void run_testcase(const string& path, int& num_sets, vector<vector<string>>& sets) {
+void run_testcase(const string& path, int& num_sets, vector<vector<string>>& sets)
+{
     ifstream file;
     file.open(path);
-    if (!file.is_open()) {
+
+    if (!file.is_open())
+    {
         cout << "File is not open\n";
     }
-    else {
+    else
+    {
+
         file >> num_sets;
-        file.ignore();
+        char h;
+       
         sets.resize(num_sets);
-        for (int i = 0; i < num_sets; ++i) {
-            string line;
-            getline(file, line);
+        for (int i = 0; i < num_sets; ++i)
+        {
+           char line[100];
+           char ch;
+            
             string element;
-            for (char c : line) {
-                if (c == ' ') {
-                    if (!element.empty()) {
+            int j = 0, cl = 0,t=0;
+            file >> h;
+            
+                file.getline (line,100,'\n');
+
+                for (t; line[t] != '\0'; t++);
+            while ( line [j] != '{')
+                j++;
+            j++;
+            while (j< t) {
+                switch (line[j]) {
+
+                case '{':
+                    cl++;
+                    
+                    while (line[j] != '}')
+                        element += line[j++];
+                    element += line[j++];
+                    j++;
+                    if (!element.empty())
+                    {
                         sets[i].push_back(element);
                         element.clear();
                     }
+                    break;
+
+               
+                default:
+                    while ((line[j] != ',') && (line[j] != '}') && (line[j] != '\0')){
+                        element += line[j];
+                        j++;
+                    }
+                    if (!element.empty())
+                    {
+                        sets[i].push_back(element);
+                        element.clear();
+                    }
+                    j++;
+                    break;
+
                 }
-                else {
-                    element += c;
-                }
+                
+               
+
             }
-            if (!element.empty()) {
-                sets[i].push_back(element);
-            }
+  
+
         }
-        file.close();
     }
+    file.close();
 }
 
 void getcort (const vector<vector<string>>& sets, int cur, int& num_sets,  vector<vector<string>>& cortprod, vector<string>& el)
