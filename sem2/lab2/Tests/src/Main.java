@@ -9,3 +9,4 @@ public class Main {
         booleanFounder.findBoolean();
     }
 }
+//{A, B, <C, D>, {E, F}, G}
