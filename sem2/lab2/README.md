@@ -26,7 +26,51 @@
 
 ## Описание используемых алгоритмов:
 
+1. **Алгоритм формирования декартова произведения**
+   
+   Этот алгоритм выполняет декартово произведение множеств.
+```cpp
+vector<vector<string>> cartesianProduct(const vector<vector<string>>& sets) {
+    vector<vector<string>> result;
+    vector<string> currentSet;
 
+    cartesianProductRecursive(sets, result, currentSet, 0);
+
+    return result;
+}
+```
+2. **Алгоритм рекурсивного вычисления декартова произведения**
+   
+   Этот алгоритм рекурсивно перебирает элементы каждого множества для построения декартова произведения всех подмножеств.
+```cpp
+void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector<string>>& result, vector<string>& currentSet, int index) {
+    if (index == sets.size()) {
+        result.push_back(currentSet);
+        return;
+    }
+
+    for (const auto& element : sets[index]) {
+        currentSet.push_back(element);
+        cartesianProductRecursive(sets, result, currentSet, index + 1);
+        currentSet.pop_back();
+    }
+}
+```
+3. **Алгоритм вывода содержимого на экран**
+   
+   Этот алгоритм выводит содержимое декартова произведения.
+```cpp
+void printSet(const vector<string>& set) {
+    cout << "<";
+    for (size_t i = 0; i < set.size(); i++) {
+        cout << set[i];
+        if (i != set.size() - 1) {
+            cout << ", ";
+        }
+    }
+    cout << "> ";
+}
+```
 
 ## Тесты:
 
