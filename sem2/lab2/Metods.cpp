@@ -1,4 +1,5 @@
 #include "Header.h"
+ofstream fout;
 void Set::readSet(string set) {
     int n = size(set);
     if ((set[0] != '<' && set[0] != '{') || (set[n-1] != '>' && set[n-1] != '}'))
@@ -8,12 +9,12 @@ void Set::readSet(string set) {
     }
     for (int i = 1; i < n-1; i++)
     {
-        if ((set[i-1] == ',' || set[i-1] == '<' || set[i - 1] == '{') && (set[i] == '0' || set[i] == ','))
+        if ((set[i-1] == ',' || set[i-1] == '<' || set[i - 1] == '{') && set[i] == ',')
         {
             cout << "Error";
             return;
         }
-        if (set[i] != ',' && (set[i] > '9' || set[i] < '0'))
+        if (set[i] != ',' && (!isalnum(set[i])))
         {
             cout << "Error";
             return;
@@ -44,6 +45,7 @@ void Set::readSet(string set) {
     }
 }
 void Set::genSet() {
+    fout.open("test.txt");
     sort(inSet.begin(), inSet.end());
     do {
         for (int i = 0; i < size(inSet); i++) {
