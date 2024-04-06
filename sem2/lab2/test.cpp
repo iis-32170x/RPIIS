@@ -53,12 +53,12 @@ TEST(SetTest3, GenSet) {
 }
 Set set3;
 TEST(SetTest4, GenSet) {
-    string input = "<5,7,2>";
+    string input = "<5,17,2>";
     set3.readSet(input);
     testing::internal::CaptureStdout();
     set3.genSet();
     string output = testing::internal::GetCapturedStdout();
-    EXPECT_EQ(output, "2 5 7 \n2 7 5 \n5 2 7 \n5 7 2 \n7 2 5 \n7 5 2 \n");
+    EXPECT_EQ(output, "2 5 17 \n2 17 5 \n5 2 17 \n5 17 2 \n17 2 5 \n17 5 2 \n");
 }
 
 int main(int argc, char** argv) {
