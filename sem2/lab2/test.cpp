@@ -27,6 +27,9 @@ TEST(SetTest2, ReadSet) {
     input = "{,1,2,3}";
     cout.clear();
     EXPECT_EQ(set1.inSet.size(), 0);
+    input = "{1,,2,3}";
+    cout.clear();
+    EXPECT_EQ(set1.inSet.size(), 0);
 }
 TEST(SetTest2_5, ReadSet) {
     testing::internal::CaptureStdout();
@@ -36,9 +39,6 @@ TEST(SetTest2_5, ReadSet) {
     EXPECT_EQ(error, "Error");
     EXPECT_EQ(set1.inSet.size(), 0);
     input = "1,2,3}";
-    cout.clear();
-    EXPECT_EQ(set1.inSet.size(), 0);
-    input = "{1,,2,3}";
     cout.clear();
     EXPECT_EQ(set1.inSet.size(), 0);
 }
