@@ -28,12 +28,12 @@ void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector
 }
 
 void printSet(const vector<string>& set) {
-    cout << "{ ";
+    cout << "< ";
     for (size_t i = 0; i < set.size(); i++) {
         cout << set[i];
         if (i != set.size() - 1) {
             cout << ", ";
         }
     }
-    cout << " }";
+    cout << " >  ";
 }
