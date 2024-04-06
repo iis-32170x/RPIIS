@@ -22,25 +22,22 @@ int main() {
     int numSets;
     file >> numSets;
     string line;
-    getline(file, line); // Пропустить первую пустую строку
+    getline(file, line);
 
     vector<vector<string>> sets;
     for (int i = 0; i < numSets; i++) {
         getline(file, line);
 
-        // Извлечение имени множества и его элементов
         string setName;
         istringstream iss(line);
-        iss >> setName; // Считываем имя множества
+        iss >> setName; 
 
         vector<string> set;
         string element;
         while (iss >> element) {
             if (element.back() == '}') {
-                // Удаляем последний символ, если он является закрывающей скобкой
                 element.pop_back();
             }
-            // Удаляем пробелы из элемента множества
             element.erase(remove(element.begin(), element.end(), ','), element.end());
             if (!element.empty()) {
                 set.push_back(element);
