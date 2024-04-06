@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "C:/Всячина/Лаба2(Множества)/Project26/Header.h"
+#include "C:/Р’СЃСЏС‡РёРЅР°/Р›Р°Р±Р°2(РњРЅРѕР¶РµСЃС‚РІР°)/Project26/Header.h"
 
 int factorial(int i)
 {
@@ -25,6 +25,20 @@ TEST(SetTest2, ReadSet) {
     EXPECT_EQ(error, "Error");
     EXPECT_EQ(set1.inSet.size(), 0);
     input = "{,1,2,3}";
+    cout.clear();
+    EXPECT_EQ(set1.inSet.size(), 0);
+}
+TEST(SetTest2_5, ReadSet) {
+    testing::internal::CaptureStdout();
+    string input = "{1,2,3";
+    set1.readSet(input);
+    string error = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(error, "Error");
+    EXPECT_EQ(set1.inSet.size(), 0);
+    input = "1,2,3}";
+    cout.clear();
+    EXPECT_EQ(set1.inSet.size(), 0);
+    input = "{1,,2,3}";
     cout.clear();
     EXPECT_EQ(set1.inSet.size(), 0);
 }
