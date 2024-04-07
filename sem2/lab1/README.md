@@ -314,5 +314,5 @@ cout << "ТЕСТ 8 ПРОЙДЕН" << endl;
 
 ## <p align="center">Используемые источники:</p>
 1. https://habr.com/ru/sandbox/153128/ (Про односвязанные списки).
-2. https://chat.openai.com (помощь в освоении материала)
+2. https://poe.com/chat/1zs1n4v0oolllov6c1r (помощь в освоении материала)
 3. https://www.youtube.com/watch?v=SajrPhE6FoQ (объснение односвязанного списка)
