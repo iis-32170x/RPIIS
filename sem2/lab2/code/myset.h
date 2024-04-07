@@ -69,26 +69,89 @@ Node<T>* insert(Node<T>* r, T d)
 }
 
 // чтение из файла
+void sortSubset(string& subset) {
+    // Remove curly braces
+    subset = subset.substr(1, subset.size() - 2);
+
+    stringstream ss(subset);
+    string element;
+    vector<string> elements;
+
+    bool inBrackets = false;
+    string currentElement;
+    int openBracketsCount = 0;
+
+    while (getline(ss, element, ',')) {
+        // Count the number of opening and closing brackets
+        openBracketsCount += count(element.begin(), element.end(), '{');
+        openBracketsCount -= count(element.begin(), element.end(), '}');
+
+        if (!inBrackets && openBracketsCount > 0) {
+            currentElement = element;
+            inBrackets = true;
+        }
+        else if (inBrackets) {
+            currentElement += ',' + element;
+            if (openBracketsCount == 0) {
+                inBrackets = false;
+                elements.push_back(currentElement);
+                currentElement.clear();
+            }
+        }
+        else {
+            elements.push_back(element);
+        }
+    }
+
+    // сортировка
+    for (string& elem : elements) {
+        if (elem.front() == '{' && elem.back() == '}') {
+            sortSubset(elem); // рекурсивно запускаем если зашли в подмножество
+        }
+    }
+    sort(elements.begin(), elements.end());
+
+    // собираем заново
+    subset = "{";
+    for (size_t i = 0; i < elements.size(); ++i) {
+        subset += elements[i];
+        if (i != elements.size() - 1) {
+            subset += ",";
+        }
+    }
+    subset += "}";
+}
+
+
+
+
+
 template<typename T>
-void addFromFile(Node<T>*& root, const string& filename)
+void addFromFile(Node<T>*& root, const std::string& filename)
 {
-    ifstream file(filename);
+    std::ifstream file(filename);
     if (!file.is_open()) {
-        cerr << "Error opening file: " << filename <<endl;
+        cerr << "Error opening file: " << filename << std::endl;
         return;
     }
 
     T element;
     while (file >> element) {
-        // Removing trailing comma if present
+       
+       
+
         if (element[element.size() - 1] == ',')
             element = element.substr(0, element.size() - 1);
+
+        if (element.front() == '{' && element.back() == '}') {
+            sortSubset(element);
+        }
+
         root = insert(root, element);
     }
 
     file.close();
 }
-
 // размер
 template<typename T>
 int getSize(Node<T>* root)
