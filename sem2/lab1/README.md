@@ -123,4 +123,135 @@ void List<T>::push_front(T data)
 	Size++;
 }
 ```   
+8. **Метод вставки элемента по индексу (insert() )**:</p>
+```cpp
+template<typename T>
+void List<T>::insert(T data, int index)
+{
+	if (index == 0)
+	{
+		push_front(data);
+	}
+	else
+	{
+		Node<T>* previous = this->head;
+		for (int i = 0; i < index - 1; i++)
+		{
+			if (previous == nullptr) {
+				cout << "Недопустимый индекс" << endl << endl;
+				return;
+			}
+			else {
+				previous = previous->pNext;
+			}
+		}
+			Node<T>* newNode = new Node<T>(data, previous->pNext);
+			previous->pNext = newNode;
+			Size++;
+	}
+}
+```
+9. **Метод удаления элемента по индексу (removeAt() )**:</p>
+```cpp
+template<typename T>
+void List<T>::removeAt(int index)
+{
+	if (index == 0)
+	{
+		pop_front();
+	}
+	else
+	{
+		Node<T>* previous = this->head;
+		for (int i = 0; i < index - 1; i++)
+		{
+			if (previous == nullptr) {
+				cout << "Недопустимый индекс" << endl << endl;
+				return;
+			}
+			previous = previous->pNext;
+		}
 
+
+		Node<T>* toDelete = previous->pNext;
+
+		previous->pNext = toDelete->pNext;
+
+		delete toDelete;
+
+		Size--;
+	}
+
+}
+```   
+10. **Метод сортировки (bubbleSort() )**:</p>
+```cpp
+template<typename T>
+void List<T>::bubbleSort()
+{
+	if (Size <= 1) {
+		// Список пуст или содержит только один элемент, уже отсортирован
+		return;
+	}
+
+	bool swapped; // Флаг, указывающий наличие перестановок
+	Node<T>* current; // Указатель на текущий узел
+	Node<T>* nextNode; // Указатель на следующий узел
+
+	do {
+		swapped = false;
+		current = head;
+
+		while (current->pNext != nullptr) {
+			nextNode = current->pNext;
+
+			if (current->data < nextNode->data) {
+				// Обмен значениями между текущим и следующим узлом
+				T temp = current->data;
+				current->data = nextNode->data;
+				nextNode->data = temp;
+				swapped = true;
+			}
+
+			current = current->pNext;
+		}
+	} while (swapped);
+}
+```  
+11. **Метод объединения двух списков (unit() )**:</p>
+```cpp
+template<typename T>
+void List<T>::unit() {
+	int counter = 0;
+	for (int i = 0; i < lst.GetSize(); i++) {
+		lst_3.push_back(lst[i]);
+	}
+	for (int i = 0; i < lst_2.GetSize(); i++) {
+		for (int j = 0; j < lst_3.GetSize(); j++) {
+			if (lst_2[i] != lst_3[j]) {
+				counter++;
+			}
+			if (counter == lst_3.GetSize()) {
+				lst_3.push_back(lst_2[i]);
+			
+			}
+		}
+		counter = 0;
+	}
+}
+```
+11. **Метод пересечения двух списков (cross() )**:</p>
+```cpp
+template<typename T>
+void List<T>::cross() {
+	for (int i = 0; i < lst.GetSize(); i++) {
+		for (int j = 0; j < lst_2.GetSize(); j++) {
+			if (lst[i] == lst_2[j]) {
+				lst_3.push_back(lst[i]);
+				break;
+			}
+		}
+	}
+
+}
+```
