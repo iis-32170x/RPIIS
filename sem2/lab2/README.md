@@ -33,21 +33,18 @@ public:
 };
 ```
 ```c++ Metods.cpp
+#include "Header.h"
 void Set::readSet(string set) {
-    int n = size(set);
-    if ((set[0] != '<' && set[0] != '{') || (set[n-1] != '>' && set[n-1] != '}'))
+    inSet.clear();
+    int n = size(set), open = 1, close = 1;
+    if ((set[0] != '<' && set[0] != '{') || (set[n - 1] != '>' && set[n - 1] != '}'))
     {
         cout << "Error";
         return;
     }
-    for (int i = 1; i < n-1; i++)
+    for (int i = 1; i < n - 1; i++)
     {
-        if ((set[i-1] == ',' || set[i-1] == '<' || set[i - 1] == '{') && set[i] == ',')
-        {
-            cout << "Error";
-            return;
-        }
-        if (set[i] != ',' && (set[i] > '9' || set[i] < '0'))
+        if ((set[i - 1] == ',' || set[i - 1] == '<' || set[i - 1] == '{') && set[i] == ',')
         {
             cout << "Error";
             return;
@@ -57,31 +54,72 @@ void Set::readSet(string set) {
             cout << "Error";
             return;
         }
+        if (close > open)
+        {
+            cout << "Error";
+            return;
+        }
     }
-    int buff= 0;
-    for (int i = 1; i < n; i ++)
+    if (close != open)
     {
-        if (set[i - 1] == ',')
+        cout << "Error";
+        return;
+    }
+    vector<int> buff_vec;
+    int buff;
+    buff = 0;
+    for (int i = 1; i < n; ++i)
+    {
+        if (set[i] == '<' || set[i] == '{')
         {
-            buff = set[i] - '0';
+            i++;
+            while (set[i - 1] != '>' && set[i - 1] != '}')
+            {
+                int buff = 0;
+                while (isdigit(set[i]))
+                {
+                    buff = buff * 10 + (set[i] - '0');
+                    ++i;
+                }
+                buff_vec.push_back(buff);
+                i++;
+            }
+            inSet.push_back(buff_vec);
+            buff_vec.clear();
         }
-        else if (set[i] == ','|| set[i] == '>' || set[i] == '}')
+        else if (isdigit(set[i]))
         {
-            inSet.push_back(buff);
-            buff = 0;
-        }
-        else
-        {
-            buff *= 10;
-            buff += set[i]- '0';
+            int buff = 0;
+            while (isdigit(set[i]))
+            {
+                buff = buff * 10 + (set[i] - '0');
+                ++i;
+            }
+            buff_vec.push_back(buff);
+            inSet.push_back(buff_vec);
+            buff_vec.clear();
         }
     }
 }
+
 void Set::genSet() {
     sort(inSet.begin(), inSet.end());
     do {
         for (int i = 0; i < size(inSet); i++) {
-            cout << inSet[i] << " ";
+            if (inSet[i].size() == 1) {
+                cout << inSet[i][0] << " ";
+            }
+            else {
+                cout << "<";
+                for (int j = 0; j < inSet[i].size(); ++j)
+                {
+                    cout << inSet[i][j];
+                    if (j != inSet[i].size() - 1) {
+                        cout << ",";
+                    }
+                }
+                cout << "> ";
+            }
         }
         cout << endl;
     } while (next_permutation(inSet.begin(), inSet.end()));
