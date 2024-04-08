@@ -12,9 +12,9 @@ TEST(SetTest1, ReadSet) {
     set0.readSet(input);
 
     ASSERT_EQ(set0.inSet.size(), 3);
-    EXPECT_EQ(set0.inSet[0], 1);
-    EXPECT_EQ(set0.inSet[1], 2);
-    EXPECT_EQ(set0.inSet[2], 3);
+    EXPECT_EQ(set0.inSet[0][0], 1);
+    EXPECT_EQ(set0.inSet[1][0], 2);
+    EXPECT_EQ(set0.inSet[2][0], 3);
 }
 Set set1;
 TEST(SetTest2, ReadSet) {
@@ -59,6 +59,15 @@ TEST(SetTest4, GenSet) {
     set3.genSet();
     string output = testing::internal::GetCapturedStdout();
     EXPECT_EQ(output, "2 5 17 \n2 17 5 \n5 2 17 \n5 17 2 \n17 2 5 \n17 5 2 \n");
+}
+Set set4;
+TEST(SetTest5, GenSet) {
+    string input = "<1,2,<4,5>>";
+    set4.readSet(input);
+    testing::internal::CaptureStdout();
+    set4.genSet();
+    string output = testing::internal::GetCapturedStdout();
+    EXPECT_EQ(output, "1 2 <4,5> \n1 <4,5> 2 \n2 1 <4,5> \n2 <4,5> 1 \n<4,5> 1 2 \n<4,5> 2 1 \n");
 }
 
 int main(int argc, char** argv) {
