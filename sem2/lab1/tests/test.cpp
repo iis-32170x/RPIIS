@@ -14,14 +14,19 @@ TEST(EnqueueTest, EnqueueElement) {
 // Тестирование функции dequeue
 TEST(DequeueTest, DequeueElement) {
     Node* front = nullptr;
-    Node* rear = nullptr;
+    Node* rear = nullptr; 
     enqueue(front, rear, "Element 1");
-    enqueue(front, rear, "Element 2");
+    enqueue(front, rear, "Element 2"); 
 
-    string value = dequeue(front, rear);
+    string value1 = dequeue(front, rear);
+    string value2 = dequeue(front, rear); 
+    string value3 = dequeue(front, rear);
 
-    ASSERT_EQ(value, "Element 1");
-    ASSERT_EQ(front->data, "Element 2");
+    ASSERT_EQ(value1, "Element 1");
+    ASSERT_EQ(value2, "Element 2"); 
+    ASSERT_EQ(value3, "");
+    ASSERT_EQ(front, nullptr);
+    ASSERT_EQ(rear, nullptr);
 }
 
 // Тестирование функции isEmpty
