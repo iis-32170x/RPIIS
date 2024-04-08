@@ -55,6 +55,12 @@ void ReadFile(vector<string>& mnzh) {
         cout << "Файл не был открыт\n";
         return;
     }
+    for (auto& c : mnzh) {
+        for (auto& d : c) {
+            if (!isdigit(d))
+                mnzh.clear();
+        }
+    }
 }
 void generatePermutations(vector<string>& nums, vector< vector<string>>& result, int start) {
     if (start == nums.size() - 1) {
@@ -72,7 +78,7 @@ void generatePermutations(vector<string>& nums, vector< vector<string>>& result,
 int main() {
     setlocale(LC_ALL, "ru");
     vector<string>mnzh;
-    cout << "Множество должно иметь не больше 10 элементов\n";
+    cout << "Множество должно иметь не больше 10 элементов,элементы множества должны быть числами , элементы множества должны быть разделены пробелами \n";
     cout << "\nнажмите любую клавишу, чтобы продолжить  : ";
     while (!_kbhit()) {
     }
@@ -84,20 +90,22 @@ int main() {
         cout << "Множества прогружаются , подождите ... ";
         generatePermutations(mnzh, result, 0);
         //удаление реверсивных множеств
-        vector <vector<string>> tmp = result;
-        for (auto& c : tmp) {
-            reverse(c.begin(), c.end());
-        }
-        int count = 0;
-        for (auto& c : result) {
-            count = 0;
-            for (auto& b : tmp) {
-                if (c == b) {
-                    result.erase(result.begin() + count);
-                    tmp.erase(tmp.begin() + count);
-                    break;
+        if (mnzh.size() != 1) {
+            vector <vector<string>> tmp = result;
+            for (auto& c : tmp) {
+                reverse(c.begin(), c.end());
+            }
+            int count = 0;
+            for (auto& c : result) {
+                count = 0;
+                for (auto& b : tmp) {
+                    if (c == b) {
+                        result.erase(result.begin() + count);
+                        tmp.erase(tmp.begin() + count);
+                        break;
+                    }
+                    count++;
                 }
-                count++;
             }
         }
         system("cls");
@@ -113,7 +121,7 @@ int main() {
         return 0;
     }
     else {
-        cout << "Файл либо пустой либо в вашем множестве больше 10 элементов";
+        cout << "Файл либо пустой либо в вашем множестве больше 10 элементов либо в множестве присутсвуют не только числа";
         return 0;
     }
 }
