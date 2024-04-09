@@ -1,4 +1,4 @@
-#include "RBtree.h"
+п»ї#include "RBtree.h"
 
 using namespace std;
 
@@ -6,7 +6,7 @@ void InsertNode(Node*& root, int value) {
 
 	Node* nodetmp = root;
 
-	//Поиск места для вставки нового узла на основе его значения
+	//РџРѕРёСЃРє РјРµСЃС‚Р° РґР»СЏ РІСЃС‚Р°РІРєРё РЅРѕРІРѕРіРѕ СѓР·Р»Р° РЅР° РѕСЃРЅРѕРІРµ РµРіРѕ Р·РЅР°С‡РµРЅРёСЏ
 	while (true) {						
 		if (value < nodetmp->value) {
 
@@ -28,7 +28,7 @@ void InsertNode(Node*& root, int value) {
 			nodetmp = nodetmp->right;
 		}
 		else {
-			cout << "Узел с таким значением уже существует!";
+			cout << "РЈР·РµР» СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!";
 			return;
 		}
 	}
@@ -36,11 +36,11 @@ void InsertNode(Node*& root, int value) {
 
 void InsertFix(Node* node, Node*& root) {
 	while (node->parent->Red) {
-		//Если родитель - левый потомок
+		//Р•СЃР»Рё СЂРѕРґРёС‚РµР»СЊ - Р»РµРІС‹Р№ РїРѕС‚РѕРјРѕРє
 		if (node->parent == node->parent->parent->left) {
-			//Проверяем существует ли правый потомок
+			//РџСЂРѕРІРµСЂСЏРµРј СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё РїСЂР°РІС‹Р№ РїРѕС‚РѕРјРѕРє
 			if (node->parent->parent->right != nullptr) {
-				//Если правый потомок существует, то проверяем: красный ли он?
+				//Р•СЃР»Рё РїСЂР°РІС‹Р№ РїРѕС‚РѕРјРѕРє СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ РїСЂРѕРІРµСЂСЏРµРј: РєСЂР°СЃРЅС‹Р№ Р»Рё РѕРЅ?
 				if (node->parent->parent->right->Red) {
 					node->parent->Red = 0;
 					node->parent->parent->right->Red = 0;
@@ -48,12 +48,12 @@ void InsertFix(Node* node, Node*& root) {
 					node = node->parent->parent;
 				}
 				else
-					//Если правый потомок чёрный, необходимо выполнить поворот или даже два
+					//Р•СЃР»Рё РїСЂР°РІС‹Р№ РїРѕС‚РѕРјРѕРє С‡С‘СЂРЅС‹Р№, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹РїРѕР»РЅРёС‚СЊ РїРѕРІРѕСЂРѕС‚ РёР»Рё РґР°Р¶Рµ РґРІР°
 					goto p1;
 			}
 			else {
 			p1:
-				//Если узел находится СПРАВА от отца то выполняется поворот
+				//Р•СЃР»Рё СѓР·РµР» РЅР°С…РѕРґРёС‚СЃСЏ РЎРџР РђР’Рђ РѕС‚ РѕС‚С†Р° С‚Рѕ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РїРѕРІРѕСЂРѕС‚
 				if (node == node->parent->right) {
 					LeftRotate(root, node->parent->value);
 					node = node->left;
@@ -65,10 +65,10 @@ void InsertFix(Node* node, Node*& root) {
 			}
 		}
 
-		/*Если отец - правый потомок*/
+		/*Р•СЃР»Рё РѕС‚РµС† - РїСЂР°РІС‹Р№ РїРѕС‚РѕРјРѕРє*/
 		else {
 
-			//Проверяем существует ли левый потомок
+			//РџСЂРѕРІРµСЂСЏРµРј СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё Р»РµРІС‹Р№ РїРѕС‚РѕРјРѕРє
 			if (node->parent->parent->left != nullptr) {
 				if (node->parent->parent->left->Red) {
 					node->parent->Red = 0;
@@ -77,13 +77,13 @@ void InsertFix(Node* node, Node*& root) {
 					node = node->parent->parent;
 				}
 				else
-					//Если левый потомок чёрный, необходимо выполнить поворот или даже два
+					//Р•СЃР»Рё Р»РµРІС‹Р№ РїРѕС‚РѕРјРѕРє С‡С‘СЂРЅС‹Р№, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹РїРѕР»РЅРёС‚СЊ РїРѕРІРѕСЂРѕС‚ РёР»Рё РґР°Р¶Рµ РґРІР°
 					goto p2;
 			}
 			else {
 
 			p2:
-				//Если узел находится СЛЕВА от отца то выполняется поворот
+				//Р•СЃР»Рё СѓР·РµР» РЅР°С…РѕРґРёС‚СЃСЏ РЎР›Р•Р’Рђ РѕС‚ РѕС‚С†Р° С‚Рѕ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РїРѕРІРѕСЂРѕС‚
 				if (node == node->parent->left) {
 					RightRotate(root, node->parent->value);
 					node = node->right;
@@ -94,10 +94,10 @@ void InsertFix(Node* node, Node*& root) {
 				node = node->parent;
 			}
 		}
-		//Оставляем корень чёрным в любом случае
+		//РћСЃС‚Р°РІР»СЏРµРј РєРѕСЂРµРЅСЊ С‡С‘СЂРЅС‹Рј РІ Р»СЋР±РѕРј СЃР»СѓС‡Р°Рµ
 		root->Red = 0;
 
-		//Прерываем цикл если его значение станет nullptr
+		//РџСЂРµСЂС‹РІР°РµРј С†РёРєР» РµСЃР»Рё РµРіРѕ Р·РЅР°С‡РµРЅРёРµ СЃС‚Р°РЅРµС‚ nullptr
 		if (node->parent == nullptr)
 			break;
 	}
@@ -115,7 +115,7 @@ void DeleteNode(Node*& root, int value) {
 			break;
 
 	if (node == nullptr) {
-		cout << "Нет вершины с таким значением!";
+		cout << "РќРµС‚ РІРµСЂС€РёРЅС‹ СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј!";
 		return;
 	}
 
@@ -124,11 +124,11 @@ void DeleteNode(Node*& root, int value) {
 
 void Delete(Node*& root, Node* node) {
 
-	//Удаление красной вершины без потомков
+	//РЈРґР°Р»РµРЅРёРµ РєСЂР°СЃРЅРѕР№ РІРµСЂС€РёРЅС‹ Р±РµР· РїРѕС‚РѕРјРєРѕРІ
 	if (node->Red && node->left == nullptr && node->right == nullptr) {
 		ClearNode(node);
 	}
-	//Удаление вершины с правым потомком
+	//РЈРґР°Р»РµРЅРёРµ РІРµСЂС€РёРЅС‹ СЃ РїСЂР°РІС‹Рј РїРѕС‚РѕРјРєРѕРј
 	else if (node->right != nullptr) {
 		Node* nodetmp = node->right;
 
@@ -141,7 +141,7 @@ void Delete(Node*& root, Node* node) {
 
 		Delete(root, nodetmp);
 	}
-	//Удаление вершины с левым потомком
+	//РЈРґР°Р»РµРЅРёРµ РІРµСЂС€РёРЅС‹ СЃ Р»РµРІС‹Рј РїРѕС‚РѕРјРєРѕРј
 	else if (node->left != nullptr) {
 		Node* nodetmp = node->left;
 
@@ -155,14 +155,14 @@ void Delete(Node*& root, Node* node) {
 		Delete(root, nodetmp);
 	}
 
-	//Удаление чёрной вершины без потомков
+	//РЈРґР°Р»РµРЅРёРµ С‡С‘СЂРЅРѕР№ РІРµСЂС€РёРЅС‹ Р±РµР· РїРѕС‚РѕРјРєРѕРІ
 	else if (!node->Red && node->left == nullptr && node->right == nullptr) {
 
-		//Если родитель вершины - КРАСНЫЙ
+		//Р•СЃР»Рё СЂРѕРґРёС‚РµР»СЊ РІРµСЂС€РёРЅС‹ - РљР РђРЎРќР«Р™
 		if (node->parent->Red) {
-			//Если узел - ПРАВЫЙ потомок
+			//Р•СЃР»Рё СѓР·РµР» - РџР РђР’Р«Р™ РїРѕС‚РѕРјРѕРє
 			if (node == node->parent->right) {
-				//Если у "брата" узла есть хотя бы один КРАСНЫЙ потомок слева или справа
+				//Р•СЃР»Рё Сѓ "Р±СЂР°С‚Р°" СѓР·Р»Р° РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє СЃР»РµРІР° РёР»Рё СЃРїСЂР°РІР°
 				if (node->parent->left->right != nullptr && node->parent->left->right->Red) {
 					LeftRotate(root, node->parent->left->value);
 					RightRotate(root, node->parent->value);
@@ -180,7 +180,7 @@ void Delete(Node*& root, Node* node) {
 
 					ClearNode(node);
 				}
-				//Если у "брата" узла НЕТ красных потомков
+				//Р•СЃР»Рё Сѓ "Р±СЂР°С‚Р°" СѓР·Р»Р° РќР•Рў РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРєРѕРІ
 				else {
 					node->parent->left->Red = 1;
 					node->parent->Red = 0;
@@ -188,9 +188,9 @@ void Delete(Node*& root, Node* node) {
 					ClearNode(node);
 				}
 			}
-			//Если узел - ЛЕВЫЙ потомок
+			//Р•СЃР»Рё СѓР·РµР» - Р›Р•Р’Р«Р™ РїРѕС‚РѕРјРѕРє
 			else {
-				//Если у "брата" узла есть хотя бы один КРАСНЫЙ потомок слева или справа
+				//Р•СЃР»Рё Сѓ "Р±СЂР°С‚Р°" СѓР·Р»Р° РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє СЃР»РµРІР° РёР»Рё СЃРїСЂР°РІР°
 				if (node->parent->right->left != nullptr && node->parent->right->left->Red) {
 					RightRotate(root, node->parent->right->value);
 					LeftRotate(root, node->parent->value);
@@ -199,7 +199,7 @@ void Delete(Node*& root, Node* node) {
 
 					ClearNode(node);
 				}
-				//Если у "брата" есть только один красный потомок справа
+				//Р•СЃР»Рё Сѓ "Р±СЂР°С‚Р°" РµСЃС‚СЊ С‚РѕР»СЊРєРѕ РѕРґРёРЅ РєСЂР°СЃРЅС‹Р№ РїРѕС‚РѕРјРѕРє СЃРїСЂР°РІР°
 				else if (node->parent->right->right != nullptr && node->parent->right->right->Red) {
 					LeftRotate(root, node->parent->value);
 
@@ -209,7 +209,7 @@ void Delete(Node*& root, Node* node) {
 
 					ClearNode(node);
 				}
-				//Если у брата узла НЕТ красных потомков
+				//Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° СѓР·Р»Р° РќР•Рў РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРєРѕРІ
 				else {
 					node->parent->right->Red = 1;
 					node->parent->Red = 0;
@@ -218,13 +218,13 @@ void Delete(Node*& root, Node* node) {
 				}
 			}
 		}
-		//Если родитель узла - ЧЁРНЫЙ
+		//Р•СЃР»Рё СЂРѕРґРёС‚РµР»СЊ СѓР·Р»Р° - Р§РЃР РќР«Р™
 		else {
-			//Если узел - ПРАВЫЙ потомок
+			//Р•СЃР»Рё СѓР·РµР» - РџР РђР’Р«Р™ РїРѕС‚РѕРјРѕРє
 			if (node == node->parent->right) {
-				//Если "брат" узла - КРАСНЫЙ
+				//Р•СЃР»Рё "Р±СЂР°С‚" СѓР·Р»Р° - РљР РђРЎРќР«Р™
 				if (node->parent->left->Red) {
-					//Если у ПРАВОГО племянника вершины есть хотя бы один красный потомок*/
+					//Р•СЃР»Рё Сѓ РџР РђР’РћР“Рћ РїР»РµРјСЏРЅРЅРёРєР° РІРµСЂС€РёРЅС‹ РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РєСЂР°СЃРЅС‹Р№ РїРѕС‚РѕРјРѕРє*/
 					if ((node->parent->left->right->left != nullptr && node->parent->left->right->left->Red) ||
 						(node->parent->left->right->right != nullptr && node->parent->left->right->right->Red)) {
 						LeftRotate(root, node->parent->left->value);
@@ -237,7 +237,7 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у племянника вершины нет красных потомков*/
+					/*Р•СЃР»Рё Сѓ РїР»РµРјСЏРЅРЅРёРєР° РІРµСЂС€РёРЅС‹ РЅРµС‚ РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРєРѕРІ*/
 					else {
 						RightRotate(root, node->parent->value);
 						node->parent->parent->Red = 0;
@@ -246,9 +246,9 @@ void Delete(Node*& root, Node* node) {
 						ClearNode(node);
 					}
 				}
-				/*Если брат вершины - ЧЁРНЫЙ*/
+				/*Р•СЃР»Рё Р±СЂР°С‚ РІРµСЂС€РёРЅС‹ - Р§РЃР РќР«Р™*/
 				else {
-					/*Если у брата есть ПРАВЫЙ КРАСНЫЙ потомок*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РµСЃС‚СЊ РџР РђР’Р«Р™ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє*/
 					if (node->parent->left->right != nullptr && node->parent->left->right->Red) {
 						LeftRotate(root, node->parent->left->value);
 						RightRotate(root, node->parent->value);
@@ -257,7 +257,7 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у брата есть ЛЕВЫЙ КРАСНЫЙ потомок*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РµСЃС‚СЊ Р›Р•Р’Р«Р™ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє*/
 					else if (node->parent->left->left != nullptr && node->parent->left->left->Red) {
 						RightRotate(root, node->parent->value);
 
@@ -265,18 +265,18 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у брата нет красных потомоков*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РЅРµС‚ РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРѕРєРѕРІ*/
 					else {
 						node->parent->left->Red = 1;
 						ClearNode(node);
 					}
 				}
 			}
-			/*Если узел - ЛЕВЫЙ потомок*/
+			/*Р•СЃР»Рё СѓР·РµР» - Р›Р•Р’Р«Р™ РїРѕС‚РѕРјРѕРє*/
 			else {
-				/*Если брат вершины - КРАСНЫЙ*/
+				/*Р•СЃР»Рё Р±СЂР°С‚ РІРµСЂС€РёРЅС‹ - РљР РђРЎРќР«Р™*/
 				if (node->parent->right->Red) {
-					/*Если у левого племянника вершины есть хотя бы один красный потомок*/
+					/*Р•СЃР»Рё Сѓ Р»РµРІРѕРіРѕ РїР»РµРјСЏРЅРЅРёРєР° РІРµСЂС€РёРЅС‹ РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РєСЂР°СЃРЅС‹Р№ РїРѕС‚РѕРјРѕРє*/
 					if ((node->parent->right->left->right != nullptr && node->parent->right->left->right->Red) ||
 						(node->parent->right->left->left != nullptr && node->parent->right->left->left->Red)) {
 						RightRotate(root, node->parent->right->value);
@@ -289,7 +289,7 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у племянника вершины нет красных потомков*/
+					/*Р•СЃР»Рё Сѓ РїР»РµРјСЏРЅРЅРёРєР° РІРµСЂС€РёРЅС‹ РЅРµС‚ РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРєРѕРІ*/
 					else {
 						LeftRotate(root, node->parent->value);
 						node->parent->parent->Red = 0;
@@ -298,9 +298,9 @@ void Delete(Node*& root, Node* node) {
 						ClearNode(node);
 					}
 				}
-				/*Если брат вершины - ЧЁРНЫЙ*/
+				/*Р•СЃР»Рё Р±СЂР°С‚ РІРµСЂС€РёРЅС‹ - Р§РЃР РќР«Р™*/
 				else {
-					/*Если у брата есть ЛЕВЫЙ КРАСНЫЙ потомок*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РµСЃС‚СЊ Р›Р•Р’Р«Р™ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє*/
 					if (node->parent->right->left != nullptr && node->parent->right->left->Red) {
 						RightRotate(root, node->parent->right->value);
 						LeftRotate(root, node->parent->value);
@@ -309,7 +309,7 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у брата есть ПРАВЫЙ КРАСНЫЙ потомок*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РµСЃС‚СЊ РџР РђР’Р«Р™ РљР РђРЎРќР«Р™ РїРѕС‚РѕРјРѕРє*/
 					else if (node->parent->right->right != nullptr && node->parent->right->right->Red) {
 						RightRotate(root, node->parent->value);
 
@@ -317,7 +317,7 @@ void Delete(Node*& root, Node* node) {
 
 						ClearNode(node);
 					}
-					/*Если у брата нет красных потомков*/
+					/*Р•СЃР»Рё Сѓ Р±СЂР°С‚Р° РЅРµС‚ РєСЂР°СЃРЅС‹С… РїРѕС‚РѕРјРєРѕРІ*/
 					else {
 						node->parent->right->Red = 1;
 						ClearNode(node);
@@ -350,13 +350,13 @@ void Print(Node* root) {
 	Print(root->right);
 }
 
-void LeftRotate(Node*& root, int value) { //Левый поворот
+void LeftRotate(Node*& root, int value) { //Р›РµРІС‹Р№ РїРѕРІРѕСЂРѕС‚
 
 	Node* node = root;
 
 	while (true) {
 		if (node == nullptr) {
-			cout << "Нет узла с таким ключом!";
+			cout << "РќРµС‚ СѓР·Р»Р° СЃ С‚Р°РєРёРј РєР»СЋС‡РѕРј!";
 			return;
 		}
 		else if (value < node->value)
@@ -367,23 +367,23 @@ void LeftRotate(Node*& root, int value) { //Левый поворот
 			break;
 	}
 
-	Node* nodetmp = node->right; //устанавливаем y
+	Node* nodetmp = node->right; //СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј y
 
-	node->right = nodetmp->left; //левое поддерево y становится правым поддеревом x
+	node->right = nodetmp->left; //Р»РµРІРѕРµ РїРѕРґРґРµСЂРµРІРѕ y СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РїСЂР°РІС‹Рј РїРѕРґРґРµСЂРµРІРѕРј x
 
 	if (nodetmp->left != nullptr)
 		nodetmp->left->parent = node;
 
-	nodetmp->parent = node->parent; //Смена родителя Y
+	nodetmp->parent = node->parent; //РЎРјРµРЅР° СЂРѕРґРёС‚РµР»СЏ Y
 
-	if (node->parent == nullptr)    //Смена потомка у родителя узла
+	if (node->parent == nullptr)    //РЎРјРµРЅР° РїРѕС‚РѕРјРєР° Сѓ СЂРѕРґРёС‚РµР»СЏ СѓР·Р»Р°
 		root = nodetmp;
 	else if (node == node->parent->left)
 		node->parent->left = nodetmp;
 	else
 		node->parent->right = nodetmp;
 
-	nodetmp->left = node; //Смена левого потомка Y
+	nodetmp->left = node; //РЎРјРµРЅР° Р»РµРІРѕРіРѕ РїРѕС‚РѕРјРєР° Y
 
 	node->parent = nodetmp;
 }
@@ -395,7 +395,7 @@ void RightRotate(Node*& root, int value) {
 	while (true) {
 
 		if (node == nullptr) {
-			cout << "Нет узла с таким значением!";
+			cout << "РќРµС‚ СѓР·Р»Р° СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј!";
 			return;
 		}
 		else if (value < node->value)
@@ -406,33 +406,33 @@ void RightRotate(Node*& root, int value) {
 			break;
 	}
 
-	Node* nodetmp = node->left; //устанавливаем Y
+	Node* nodetmp = node->left; //СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј Y
 
-	node->left = nodetmp->right; //Правое поддерево Y становится левым поддеревом x
+	node->left = nodetmp->right; //РџСЂР°РІРѕРµ РїРѕРґРґРµСЂРµРІРѕ Y СЃС‚Р°РЅРѕРІРёС‚СЃСЏ Р»РµРІС‹Рј РїРѕРґРґРµСЂРµРІРѕРј x
 
 	if (nodetmp->right != nullptr)
 		nodetmp->right->parent = node;
 
-	nodetmp->parent = node->parent; //Смена родителя Y
+	nodetmp->parent = node->parent; //РЎРјРµРЅР° СЂРѕРґРёС‚РµР»СЏ Y
 
-	if (node->parent == nullptr)    //Смена потомка у родителя узла
+	if (node->parent == nullptr)    //РЎРјРµРЅР° РїРѕС‚РѕРјРєР° Сѓ СЂРѕРґРёС‚РµР»СЏ СѓР·Р»Р°
 		root = nodetmp;
 	else if (node == node->parent->left)
 		node->parent->left = nodetmp;
 	else
 		node->parent->right = nodetmp;
 
-	nodetmp->right = node; //Смена левого потомка Y
+	nodetmp->right = node; //РЎРјРµРЅР° Р»РµРІРѕРіРѕ РїРѕС‚РѕРјРєР° Y
 
 	node->parent = nodetmp;
 }
 
-//Функция поиска вершины в заданном дереве, с заданным значением
+//Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° РІРµСЂС€РёРЅС‹ РІ Р·Р°РґР°РЅРЅРѕРј РґРµСЂРµРІРµ, СЃ Р·Р°РґР°РЅРЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј
 Node* Find(Node* root, int value) {
 
 	while (true) {
 		if (root == nullptr) {
-			cout << "Нет узла с таким значением!\n";
+			cout << "РќРµС‚ СѓР·Р»Р° СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј!\n";
 			return nullptr;
 		}
 		else if (value < root->value)
@@ -443,7 +443,7 @@ Node* Find(Node* root, int value) {
 			return root;
 	}
 }
-//Поиск узла с максимальным значением в дереве
+//РџРѕРёСЃРє СѓР·Р»Р° СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј РІ РґРµСЂРµРІРµ
 int FindMax(Node* root) {
 	while (root->right != nullptr)
 		root = root->right;
@@ -451,7 +451,7 @@ int FindMax(Node* root) {
 	return root->value;
 }
 
-//Поиск узла с минимальным значением в дереве
+//РџРѕРёСЃРє СѓР·Р»Р° СЃ РјРёРЅРёРјР°Р»СЊРЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј РІ РґРµСЂРµРІРµ
 int FindMin(Node* root) {
 	while (root->left != nullptr)
 		root = root->left;
@@ -459,12 +459,12 @@ int FindMin(Node* root) {
 	return root->value;
 }
 
-//Функция находит ближайшее большее и возвращает его значение
+//Р¤СѓРЅРєС†РёСЏ РЅР°С…РѕРґРёС‚ Р±Р»РёР¶Р°Р№С€РµРµ Р±РѕР»СЊС€РµРµ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ Р·РЅР°С‡РµРЅРёРµ
 int FindNearestMax(Node* root, int value) {
 
 	while (true) {
 		if (root == nullptr) {
-			cout << "Нет узла с таким значением!";
+			cout << "РќРµС‚ СѓР·Р»Р° СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј!";
 			return 0;
 		}
 		else if (value < root->value)
@@ -482,17 +482,17 @@ int FindNearestMax(Node* root, int value) {
 		return root->value;
 	}
 	else {
-		cout << "Узел является максимальным";
+		cout << "РЈР·РµР» СЏРІР»СЏРµС‚СЃСЏ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј";
 		return value;
 	}
 }
 
-//Функция находит ближайшее меньшее и возвращает его значение
+//Р¤СѓРЅРєС†РёСЏ РЅР°С…РѕРґРёС‚ Р±Р»РёР¶Р°Р№С€РµРµ РјРµРЅСЊС€РµРµ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РµРіРѕ Р·РЅР°С‡РµРЅРёРµ
 int FindNearestMin(Node* root, int value) {
 
 	while (true) {
 		if (root == nullptr) {
-			cout << "Нет узла с таким значением!";
+			cout << "РќРµС‚ СѓР·Р»Р° СЃ С‚Р°РєРёРј Р·РЅР°С‡РµРЅРёРµРј!";
 			return 0;
 		}
 		else if (value < root->value)
@@ -510,7 +510,7 @@ int FindNearestMin(Node* root, int value) {
 		return root->value;
 	}
 	else {
-		cout << "Узел является минимальным";
+		cout << "РЈР·РµР» СЏРІР»СЏРµС‚СЃСЏ РјРёРЅРёРјР°Р»СЊРЅС‹Рј";
 		return value;
 	}
 }
