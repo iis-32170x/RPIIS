@@ -72,16 +72,33 @@ void Set::readSet(string set) {
     {
         if (set[i] == '<' || set[i] == '{')
         {
+            buff_vec.push_back(INT_MIN);
             i++;
-            while (set[i - 1] != '>' && set[i - 1] != '}')
+            int skob = 1;
+            while (skob!=0 )
             {
-                int buff = 0;
-                while (isdigit(set[i]))
+                if (isdigit(set[i]))
                 {
-                    buff = buff * 10 + (set[i] - '0');
-                    ++i;
+                    int buff = 0;
+                    while (isdigit(set[i]))
+                    {
+                        buff = buff * 10 + (set[i] - '0');
+                        ++i;
+                    }
+                    buff_vec.push_back(buff);
                 }
-                buff_vec.push_back(buff);
+                
+                    if (set[i] == '{' || set[i] == '<')
+                    {
+                        skob++;
+                        buff_vec.push_back(INT_MIN);
+                    }
+                    if (set[i] == '>' || set[i] == '}')
+                    {
+                        skob--;
+                        buff_vec.push_back(INT_MAX);
+                    }
+           
                 i++;
             }
             inSet.push_back(buff_vec);
@@ -110,15 +127,25 @@ void Set::genSet() {
                 cout << inSet[i][0] << " ";
             }
             else {
-                cout << "<";
+                //cout << " ";
                 for (int j = 0; j < inSet[i].size(); ++j)
                 {
-                    cout << inSet[i][j];
-                    if (j != inSet[i].size() - 1) {
-                        cout << ",";
+                    if (inSet[i][j] == INT_MAX)
+                    {
+                        cout << ">";
+                    }
+                    else if (inSet[i][j] == INT_MIN)
+                    {
+                        cout << "<";
+                    }
+                    else {
+                        cout << inSet[i][j];
+                        if (j != inSet[i].size() - 1&& inSet[i][j+1] != INT_MAX) {
+                            cout << ",";
+                        }
                     }
                 }
-                cout << "> ";
+                cout << " ";
             }
         }
         cout << endl;
