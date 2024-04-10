@@ -9,10 +9,12 @@ int main() {
 	suffix_array sf = suffix_array(str);
 	sf.view();
 
-
-	cout << "the smallest cyclic shift:" << endl;
+	cout << "The largest common prefix of two substrings:" << endl;
 	cout << endl;
-	cout << sf.get_scs() << endl;
+	cout << sf.get_lcp() << endl;
+	//cout << "the smallest cyclic shift:" << endl;
+	cout << endl;
+	//cout << sf.get_scs() << endl;
 
 	return 0;
 
@@ -22,7 +24,6 @@ int main() {
 
 
 
-	//cout << "The largest common prefix of two substrings:" << endl;
-	//cout << sf.get_lcp() << endl;
+	
 
 }
