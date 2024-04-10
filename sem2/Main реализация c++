@@ -1,0 +1,90 @@
+#include <iostream>
+#include <cstdio>
+#include"Header.h"
+
+int main() {
+    setlocale(LC_ALL, "RU");
+    std::cout << "введите размер массива: ";
+    std::cin >> n;
+
+    while (std::cin.fail() || n <= 0) {
+        std::cout << "неверный ввод, введите число: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin >> n;
+    }
+
+    std::cout << "введите элементы массива: ";
+    for (int i = 0; i < n; ++i) {
+        std::cin >> a[i];
+
+        while (std::cin.fail()) {
+            std::cout << "Invalid element. Enter a valid integer for the element: ";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin >> a[i];
+        }
+
+    }
+    build_tree(1, 0, n - 1, a);    
+
+    int choice;
+    do {
+        std::cout << "выберите операцию:\n";
+        std::cout << "1. увеличение элементов на интервале\n";
+        std::cout << "2. сумма на интервале\n";
+        std::cout << "3. выход\n";
+        std::cout << "введите цифру для выбора: ";
+        std::cin >> choice;
+
+        while (std::cin.fail() || choice < 1 || choice > 3) {
+            std::cout << "Неправильный ввод. Введите цифру 1,2,3: ";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin >> choice;
+        }
+
+        if (choice == 1) {
+            int l, r, val;
+            std::cout << "введите интервал (l, r): ";
+            std::cin >> l >> r;
+
+            while (std::cin.fail() || l < 0 || r >= n || l > r) {
+                std::cout << "Неправильный ввод. Введите цифровые значения интервала: ";
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin >> l >> r;
+            }
+
+            std::cout << "введите значение чтобы увеличить на интервале: ";
+            std::cin >> val;
+
+            while (std::cin.fail()) {
+                std::cout << "Неправильный ввод. Введите цифровое значение: ";
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin >> val;
+            }
+
+            update_range(l, r, val, 1, 0, n - 1);
+            std::cout << "Интервал обновлен.\n";
+        }
+        else if (choice == 2) {
+            int l, r;
+            std::cout << "введите интервал (l, r): ";
+            std::cin >> l >> r;
+
+            while (std::cin.fail() || l < 0 || r >= n || l > r) {
+                std::cout << "Неправильный ввод. Введите цифровые значения интервала: ";
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin >> l >> r;
+            }
+
+            int sum = get_sum(l, r, 1, 0, n - 1);
+            std::cout << "сумма на интервале: " << sum << "\n";
+        }
+    } while (choice != 3);
+
+    return 0;
+}
