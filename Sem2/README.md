@@ -20,10 +20,10 @@
 Пользователь вводит символы 
 
 ####Тест1
-![image]("C:\Users\yanar\OneDrive\Документы\ucheba univer\poiic\git.git\RPIIS\Sem2\tect 1.png")
+![image]test1.png)
 
 ####Тест2
-![image]("C:\Users\yanar\OneDrive\Документы\ucheba univer\poiic\git.git\RPIIS\Sem2\tect2.png")
+![image](test2.png)
 
 ####Тест3
-!"C:\Users\yanar\OneDrive\Документы\ucheba univer\poiic\git.git\RPIIS\Sem2\test3.png")
+![image](test3.png)
