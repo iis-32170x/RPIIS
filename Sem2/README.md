@@ -20,10 +20,13 @@
 Пользователь вводит символы 
 
 ####Тест1
-![image]test1.png)
+
+![image](test1.png)
 
 ####Тест2
+
 ![image](test2.png)
 
 ####Тест3
+
 ![image](test3.png)
