@@ -1,6 +1,3 @@
-//
-// Created by Катюша Рублевская on 19.01.24.
-//
 #include <string>
 
 #ifndef LABA1_SEM2_RBTREE_H
