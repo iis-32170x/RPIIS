@@ -1,4 +1,3 @@
-# Install script for directory: /Users/katusarublevsk/Desktop/BSUIR/пиво /laba1_sem2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
