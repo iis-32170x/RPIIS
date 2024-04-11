@@ -24,8 +24,8 @@ namespace N
 		void Insert(int val);
 		void bypass();
 		void Remove(int val);
-		Node* CreateBSTarr(int arr[], int start, int end);
-
+		Node* CreateBSTarr_NotSort(int arr[], int start, int end);
+		Node* CreateBSTarr(int arr[], int size);
 	};
 
 }

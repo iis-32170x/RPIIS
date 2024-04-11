@@ -113,18 +113,28 @@ Node* bst::Remove(Node* node, int val) {
 void bst::Remove(int val) {
     root = Remove(root, val);
 }
-Node* bst::CreateBSTarr(int arr[], int start, int end) {
+Node* bst::CreateBSTarr_NotSort(int arr[], int start, int end) {
     if (start > end) {
         return nullptr;
     }
 
     int mid = (start + end) / 2;
-    Node* root = new Node(arr[mid]);
+    root = new Node(arr[mid]);
 
-    root->left = CreateBSTarr(arr, start, mid - 1);
-    root->right = CreateBSTarr(arr, mid + 1, end);
+    root->left = CreateBSTarr_NotSort(arr, start, mid - 1);
+    root->right = CreateBSTarr_NotSort(arr, mid + 1, end);
 
     return root;
 }
+Node* bst::CreateBSTarr(int arr[], int size) {
+    if (size == 0)
+        return NULL;
 
+    root = new Node(arr[0]);
 
+    for (int i = 1; i < size; i++) {
+        Insert(root, arr[i]);
+    }
+
+    return root;
+}
