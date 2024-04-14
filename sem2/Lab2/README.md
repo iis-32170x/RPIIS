@@ -1,1 +1,268 @@
+# Лабораторная работа №2
+## Цель
+Выполнить приведённую задачу, учитывая требования к грамматике лабораторной работы
+## Задача
+Найти булеан заданного множества
+## Список используемых понятий
+'Множество всех подмножеств' (булеан, показательное множество) — множество, состоящее из всех подмножеств данного множества (включая пустое множество и само множество). (источник: https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%B2%D1%81%D0%B5%D1%85_%D0%BF%D0%BE%D0%B4%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2)
 
+'Множество' — это любое объединение в одно целое M определенных, вполне различимых объектов m из нашего восприятия или мысли, которые можно считать элементами из M. (Гладков Л.А., Курейчик В.В., Курейчик В.М. Дискретная математика)
+
+'Кортеж' — упорядоченный набор элементов.
+## Код с описанием алгоритмов
+### Функция Add
+```C++
+int Add(vector<string>& Set) // Ввод множества из файла, параллельно проверка грамматики и разделение его на элементы
+{
+    string str, input_str;
+    char s, c;
+    int i_f = 0, i_a = 0, i_s = 0, count_open = 0, count_close = 0, i, j, i_i = 0;
+    ifstream fin("Set.txt");
+    fin >> s;
+    if (s != '{')
+    {
+        cout << "Ввод множества должен начинаться с {" << endl;
+        return 1;
+    }
+    getline(fin, input_str);
+    fin.close();
+    if (input_str.back() != '}')
+    {
+        cout << "Ввод множества должен заканчиваться на }" << endl;
+        return 1;
+    }
+    input_str.pop_back();
+    s = input_str[0];
+    for (i = 0; i < input_str.size(); i++)
+    {
+        str.push_back(s);
+        if (s == '{' || s == '<') // Если встретился символ "{" или "<", повышаем счётчик соответствующего символа на единицу
+        {
+            if (s == '{')
+                i_f++;
+            if (s == '<')
+                i_a++;
+        }
+        if (s == '}' || s == '>')
+        {
+            if (s == '}') // Если встретился символ "}", проверяем всю запись до символа "{" на правильный ввод кортежей внутри (игнорируя вложенные подмножества)
+            {
+                c = s;
+                for (j = str.length() - 2; c != '{'; j--)
+                {
+                    c = str[j];
+                    if (c == '<')
+                        count_open++;
+                    if (c == '>')
+                        count_close++;
+                    if (j == 0)
+                        break;
+                    if (c == '}')
+                    {
+                        while (c != '{')
+                        {
+                            j--;
+                            c = str[j];
+                        }
+                        c = ' ';
+                    }
+                }
+                if ((count_open != count_close) || (c != '{'))
+                {
+                    cout << "Неправильный ввод элементов подмножеств" << endl;
+                    return 1;
+                }
+                i_f--; // Если все проверки пройдены, понижаем счётчик
+            }
+            if (s == '>') // Если вастречается символ ">", делаем то же самое для кортежа
+            {
+                c = s;
+                for (j = str.length() - 2; c != '<'; j--)
+                {
+                    c = str[j];
+                    if (c == '{')
+                        count_open++;
+                    if (c == '}')
+                        count_close++;
+                    if (j == 0)
+                        break;
+                    if (c == '>')
+                    {
+                        while (c != '<')
+                        {
+                            j--;
+                            c = str[j];
+                        }
+                        c = ' ';
+                    }
+                }
+                if (count_open != count_close)
+                {
+                    cout << "Неправильный ввод элементов кортежей" << endl;
+                    return 1;
+                }
+                i_a--; // Если все проверки пройдены, понижаем счётчик
+                count_open = 0;
+                count_close = 0;
+            }
+        }
+        if (i_f == 0 && i_a == 0 && s != ' ' && input_str[i + 1] == ' ')
+        {
+            Set.push_back(str);
+            i_s++;
+            str.clear();
+        }
+        s = input_str[i + 1];
+    }
+    if (i_f != 0 && i_a != 0) // Если в конце счётчик не равен нулю, множество введено некорректно
+    {
+        cout << "Неправильный ввод подмножеств и кортежей" << endl;
+        return 1;
+    }
+    if (i_f != 0)
+    {
+        cout << "Неправильный ввод подмножеств" << endl;
+        return 1;
+    }
+    if (i_a != 0)
+    {
+        cout << "Неправильный ввод кортежей" << endl;
+        return 1;
+    }
+    return 0;
+}
+```
+### Функция Check_Elements
+```C++
+int Check_Elements(vector<string> set) // Функция проверки вектора на одинаковые элементы (поэлементное сравнение)
+{
+    int i, j;
+    for (i = 0; i < set.size() - 1; i++)
+    {
+        for (j = i + 1; j < set.size(); j++)
+        {
+            if (set[i] == set[j])
+                return 1;
+        }
+    }
+    return 0;
+}
+```
+### Функция Check
+```C++
+int Check(vector<string>& Set) // Функция проверки множества и всех подмножеств на одинаковые элементы
+{
+    int i, j, k, check;
+    char s;
+    string str;
+    string l;
+    check = Check_Elements(Set); // Проверяем множество на одинаковые элементы
+    if (check == 1)
+    {
+        cout << "Mножествo содержат повторяющиеся элементы" << endl;
+        return 1;
+    }
+    for (i = 0; i < Set.size(); i++) // Берём каждый элемент множества, находим в них подмножества и проверяем их на повторяющиеся элементы
+    {
+        str = Set[i];
+        vector<string> el;
+        for (j = 0; j < str.length(); j++)
+        {
+            if (str[j] == '{')
+                for (k = j + 1; str[k + 1] != '}';)
+                {
+                    l.push_back(str[k]);
+                    if (str[k] == '{') // Подмножества и кортежи записываем как элементы
+                    {
+
+                        while (str[k] != '}')
+                        {
+                            k++;
+                            l.push_back(str[k]);
+                        }
+                    }
+                    if (str[k] == '<') // 
+                    {
+                        while (str[k] != '>')
+                        {
+                            k++;
+                            l.push_back(str[k]);
+                        }
+                    }
+                    if (str[k] != ' ' && str[k + 1] == ' ')
+                    {
+                        el.push_back(l);
+                        l.clear();
+                    }
+
+                    k++;
+                }
+            if (el.size() != 0)
+                check = Check_Elements(el);
+            if (check == 1)
+            {
+                cout << "Подмножества содержат повторяющиеся элементы" << endl;
+                return 1;
+            }
+            el.clear();
+        }
+    }
+    return 0;
+}
+```
+### Функция Generate_Boolean
+```C++
+void Generate_Boolean(vector<string>& set, vector<vector<string>>& boolean, vector<string>& el_of_boolean, int index) // Функция образования булеана
+{
+    boolean.push_back(el_of_boolean); // Сразу записываем элемент, поступивший в функцию
+    for (int i = index; i < set.size(); i++) // Цикл работает, пока текущая итерация функции не переберёт все элементы множества
+    {
+        el_of_boolean.push_back(set[i]); // Добавляем в элемент булеана i-ый элемент множества
+        Generate_Boolean(set, boolean, el_of_boolean, i + 1); // Вновь запускаем функцию, передавая в неё то, что есть у текущей итерации функции, повышая индекс
+        el_of_boolean.pop_back(); // Удаляем последний элемент элемента булеана, так как функция вернётся в предыдущую итерацию
+    }
+}
+```
+### Функция main
+int main() 
+{
+    setlocale(LC_ALL, "ru");
+    vector<string> set; 
+    vector<vector<string>> boolean;
+    vector<string> el_of_boolean;
+    int check_correct, i, check_repeat;
+    ifstream fin("Set.txt");
+    fin.close();
+    check_correct = Add(set);
+    if (check_correct == 1)
+        return 1;
+    check_repeat = Check(set);
+    if (check_repeat == 1)
+        return 1;
+    cout << "Введённое множество: {";
+    for (i = 0; i < set.size(); i++)
+        cout << set[i];
+    cout << " }" << endl;
+    Generate_Boolean(set, boolean, el_of_boolean, 0);
+
+    cout << "Булеан заданного множества:\n";
+    cout << "{ ";
+    for (vector<string> s : boolean) 
+    {
+        cout << "{";
+        for (string p : s)
+        {
+            cout << p << " ";
+        }
+        cout << "} ";
+    }
+    cout << "}";
+    return 0;
+}
+```
+## Тестирование
+1. Ввод: { 1 2 3 4 }
+   Вывод: Введённое множество: { 1 2 3 4 }
+Булеан заданного множества:
+{ {} { 1 } { 1  2 } { 1  2  3 } { 1  2  3  4 } { 1  2  4 } { 1  3 } { 1  3  4 } { 1  4 } { 2 } { 2  3 } { 2  3  4 } { 2  4 } { 3 } { 3  4 } { 4 } }
+2. Ввод: 
