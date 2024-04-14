@@ -320,7 +320,7 @@ int main() {
 ___
 
 ##  *Пример выполнения*
-//![Img1](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/Lab1/Images/c4.png)
+//![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/piv.png)
 ___
 В результате выполнения данной работы были получены следующие практические навыки:
 
