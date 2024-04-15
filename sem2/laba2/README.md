@@ -15,104 +15,122 @@
 ---
 
 ## Выполнение задания
-В случае с симметрической разностью довольно сложно экстраполировать имеющиеся для её нахождения навыки более чем для двух множеств, благо существует контейнер `set` из стандартной библиотеки C++, в котором сабж реализован и нам не придётся изобретать велосипед. Ко всему прочему этот контейнер обладает весьма полезной особенностью: он не учитывает кратные вхождения элемента.
 
+Данная работа описывает взаимодействие с множествами в большинстве своём представляет работу со строками, поэтому порядок действий следующий: считываем файл с множествами в вектор строк (функция `readSets`), проверяем баланс скобок (просто лишняя проверка на входные данные, функция `bracketsBalance`), разбираем каждую строку на элементы вектора, которые в свою очередь являются элементами множества (функция `parseString`), убираем кратные вхождения (в том числе и в подмножествах, функции `removeMultiOccurence` и `removeDuplicatesRecursive`), выполняем симметрическую разность посредством объединением двух разностей обоих множеств (`set_difference` и `set_union`).
+
+---
+В функции `parseString` происходит посимвольное считывание строки и её "разбивание" на элементы. Переменная `depth` следит за глубиной подмножества (0 - мы находимся на верхнем уровне), поэтому элемент не попадет в вектор до тех пор, пока не выйдет из подмножества.
 ```cpp
-set<int> symmetric_difference(const string& file_path) {
-    ifstream file(file_path);
-    if (!file.is_open()) {
-        cout << "Ошибка при открытии файла.";
-        exit(-1);
-    }
-    vector<set<int>> sets;
-    sets.emplace_back();
-    string number;
-    char ch;
-    while (file.get(ch)) {
-        if (isdigit(ch)) {
-            number += ch;
-        } else if (ch == ' ' || ch == ',' || ch == '\n') {
-            if (!number.empty()) {
-                sets.back().insert(stoi(number));
-                number.clear();
+vector<string> parseString(const string &str)
+{
+    vector<string> result;
+    if(str.empty()) return result;
+    string set = str.substr(1, str.length() - 2);
+    stringstream ss(set);
+    string elem;
+    char c;
+    int depth = 0;
+
+    while (ss.get(c))
+    {
+        if (c == ',' && depth == 0)
+        {
+            if (!elem.empty())
+            {   
+                result.push_back(elem);
+                elem.clear();
             }
-            if (ch == '\n') {
-                sets.emplace_back();
+        }
+        else
+        {
+            if (c == '<' || c == '{')
+            {
+                depth++;
             }
-        } else {
-            cout << "Ошибка при чтении файла: недопустимый символ." << endl;
-            exit(-1); 
+            else if (c == '>' || c == '}')
+            {
+                depth--;
+            }
+            elem += c;
         }
     }
-
-    if (!number.empty()) {
-        sets.back().insert(stoi(number));
+    if (!elem.empty())
+    {
+        result.push_back(elem);
     }
-
-    set<int> result = sets[0];
-    for (int i = 1; i < sets.size(); i++) {
-        set<int> temp;
-        set_symmetric_difference(result.begin(), result.end(),
-                                sets[i].begin(), sets[i].end(),
-                                inserter(temp, temp.begin()));
-        result = temp;
-    }
-    file.close();
     return result;
 }
 ```
-На вход подаётся путь к файлу, содержащим множества в виде чисел, разделенных пробелами или запятыми, а множества расположены на отдельных строках. Посимвольно читаем файл, инициализируем вектор множеств, временную строку, дальше три выхода:
 
-1. Если символ —  число -> закидываем его во временную строку
+---
 
-2. Если символ — пробел, запятая или символ переноса строки -> значит мы достигли конца числа, поэтому через `stoi` конвертируем строку в число и закидываем во множество.
-
-    2.1. Если был символ переноса строки -> значит достигли конца строки и по совместительству конец множества, поэтому добавляем новое множество в вектор.
-
-3. Если символ не является ничем из вышеперечисленного, значит в файле присутствует то, чего нам не надо -> выводим сообщением об ошибке и завершаем программу.
-
-После конца цикла `while` в строке должно остаться последнее число, поэтому по аналогии конвертируем его в число и закидываем во множество.
+Функция `stringsAreEqual` предназначена для проверки эквивалентности множеств в виде `{1,2}` и `{2,1}` (запись разная, но множества одинаковые). Сначала происходит считывание строк в вектор элементов, а дальше преобразование в `set` строк (поскольку контейнер `set` заведомо не учитывает кратные вхождения элементов).
 
 ```cpp
-set_symmetric_difference(result.begin(), result.end(),
-                                sets[i].begin(), sets[i].end(),
-                                inserter(temp, temp.begin()));
+bool stringsAreEqual(const string &str1, const string &str2) {
+    if (str1.front() == '{' && str2.front() == '{') {
+        vector<string> vec1 = parseString(str1);
+        vector<string> vec2 = parseString(str2);
+        set<string> set1(vec1.begin(), vec1.end());
+        set<string> set2(vec2.begin(), vec2.end());
+        return set1 == set2;
+    }
+    return str1 == str2;
+}
 ```
-С помощью функции `set_symmetric_difference` находим то, что нам надо:
-`result.begin(), result.end()` — первый диапазон, итераторы указывают на начало и конец множества `result` и по совместительству на первое множество из вектора
-`sets[i].begin(), sets[i].end()` — второй диапазон
-`inserter(temp, temp.begin())` — помещаем результат симметрической разности двух вышеупомянутых диапазонов во временное множество.
 
-В конце концов присваиваем временное множество конечному и повторяем до тех пор, пока не закончатся множества из вектора. Получили множество, равное симметрической разности заданных множеств.
+---
+
+Удаление кратных вхождений в первую очередь происходит на верхнем уровне множества, а далее рекурсивно в подмножествах. Для этого функция `removeMultiOccurence` будет рекурсивно вызываться до тех пор, пока по бокам строки будут находиться фигурные или угловые скобки.
+```cpp
+void removeDuplicatesRecursive(vector<string> &set) {
+    removeMultiOccurence(set);
+    for (string &elem : set) {
+        if ((elem.front() == '{' && elem.back() == '}') || (elem.front() == '<' && elem.back() == '>')) {
+            vector<string> subset = parseString(elem);
+            removeDuplicatesRecursive(subset);
+            string newElem(1, elem.front());
+            for (size_t i = 0; i < subset.size(); ++i) {
+                newElem += subset[i];
+                if (i != subset.size() - 1) {
+                    newElem += ",";
+                }
+            }
+            newElem += elem.back();
+            elem = newElem;
+        }
+    }  
+}
+```
 
 ---
 
 ## Тестирование
+Симметрическая разность основана на объединении разностей двух множеств
 
 Входные данные:
-
 ```
-1 2 3 4 5
-2 5 4 7 9 0
-7 1 3 4 5
-5 2 9 6
-0 1 9 8
+{o,{},A}
+{o,<1,2>,A2,c3,B,b3_A,{},{o,{},A}}
+{o,A2,b3,A,<1,2>,{}}
 ```
 
 Выходные данные:
 ```
-1 2 4 6 8 9
+Результат симметрической разности всех множеств: {c3, B, b3_A, {o,{},A}, o, b3, {}}
 ```
+
+
 Остальные тестовые программы расположены в директории `/tests`.
 
 ---
 
 ## Вывод
-Реализовал библиотеку для нахождения симметрической разности множеств.
+Была реализована библиотека для нахождения симметрической разности множеств.
 
 ---
 
 ## Источники
 1. https://www.youtube.com/watch?v=dQw4w9WgXcQ
-2. https://stackoverflow.com/questions/13448064/how-to-find-the-intersection-of-two-stl-sets
-3. https://www.geeksforgeeks.org/stdset_symmetric_difference-in-c/
+2. Благодарность Романчуку Ивану за [функцию `bracketsBalance`](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%87%D1%83%D0%BA_%D0%98/sem2/lab2/intersection.cpp#L5-L23
+)
