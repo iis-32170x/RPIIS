@@ -1,12 +1,11 @@
 #pragma once
 #include <iostream>
 #include <cstdio>
-#include"Header.h"
+#include "Header.h"
 
 int n;
 int a[100000];
 int tree[400004];
-
 
 void build_tree(int v, int tl, int tr, const int* a) {
     if (tl == tr) {
@@ -41,8 +40,8 @@ void update_range(int l, int r, int val, int v, int tl, int tr) {
         if (l <= tl && tr <= r) {
             tree[v] += val * (tr - tl + 1);
             if (tl != tr) {
-                tree[v * 2] += val;
-                tree[v * 2 + 1] += val;
+                update_range(l, r, val, v * 2, tl, (tl + tr) / 2);
+                update_range(l, r, val, v * 2 + 1, (tl + tr) / 2 + 1, tr);
             }
             return;
         }
