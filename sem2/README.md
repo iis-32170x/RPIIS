@@ -23,7 +23,7 @@
   ##  *Разбор алгоритмов основных функций*
   ### 1)
   ``` c++
-   void build_tree(int v, int tl, int tr, const int* a) {
+ void build_tree(int v, int tl, int tr, const int* a) {
     if (tl == tr) {
         tree[v] = a[tl];
     }
@@ -34,12 +34,12 @@
         tree[v] = tree[v * 2] + tree[v * 2 + 1];
     }
 }
-}
 ```
 Данная функция build_tree является рекурсивной функцией для построения дерева суммы
 ### 2)
 ``` c++
- int get_sum(int l, int r, int v, int tl, int tr) {
+
+int get_sum(int l, int r, int v, int tl, int tr) {
     if (v >= 0 && v < 400004) {
         if (l <= tl && tr <= r) {
             return tree[v];
@@ -75,8 +75,8 @@ void update_range(int l, int r, int val, int v, int tl, int tr) {
         if (l <= tl && tr <= r) {
             tree[v] += val * (tr - tl + 1);
             if (tl != tr) {
-                tree[v * 2] += val;
-                tree[v * 2 + 1] += val;
+                update_range(l, r, val, v * 2, tl, (tl + tr) / 2);
+                update_range(l, r, val, v * 2 + 1, (tl + tr) / 2 + 1, tr);
             }
             return;
         }
