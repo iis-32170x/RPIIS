@@ -8,6 +8,7 @@ string suffix_array::get_lcp() { // наибольший общий префикс. реальзация методов
     string lcp;
     for (int i = 1; i < suffixes.size(); i++) {
         lcp.clear();
+      
         for (int j = 0; j < (suffixes[i].size() > suffixes[i - 1].size() ? suffixes[i - 1].size() : suffixes[i].size()); j++) {
             if (suffixes[i - 1][j] == suffixes[i][j]) {
                 lcp += suffixes[i][j];
