@@ -1,60 +1,56 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <sstream>
-#include <algorithm>
+#include <vector>
+#include <string>
 #include "mnozh.h"
 
 using namespace std;
 
 int main() {
-    setlocale(0, "");
-    string fileName;
-    cout << "Введите имя файла: ";
-    cin >> fileName;
+    string filename;
+    cout << "Введите название файла: ";
+    cin >> filename;
 
-    ifstream file(fileName);
-    if (!file) {
-        cout << "Не удалось открыть файл.\n";
+    ifstream inputFile(filename);
+    if (!inputFile.is_open()) {
+        cout << "Не удалось открыть файл." << endl;
         return 1;
     }
 
-    int numSets;
-    file >> numSets;
     string line;
-    getline(file, line);
-
     vector<vector<string>> sets;
-    for (int i = 0; i < numSets; i++) {
-        getline(file, line);
+    while (getline(inputFile, line)) {
 
-        string setName;
-        istringstream iss(line);
-        iss >> setName; 
+        size_t firstOpeningBracket = line.find_first_of('{');
+        size_t lastClosingBracket = line.find_last_of('}');
 
-        vector<string> set;
-        string element;
-        while (iss >> element) {
-            if (element.back() == '}') {
-                element.pop_back();
-            }
-            element.erase(remove(element.begin(), element.end(), ','), element.end());
-            if (!element.empty()) {
-                set.push_back(element);
+        if (firstOpeningBracket != string::npos && lastClosingBracket != string::npos) {
+            line.erase(firstOpeningBracket, 1);
+            line.erase(lastClosingBracket - 1, 1);
+        }
+
+        if (isalpha(line[0])) {
+            line = line.substr(1);
+
+            if (line[0] == '=') {
+                line.erase(0, 1);
             }
         }
 
+        vector<string> set;
+        parseSet(line, set);
         sets.push_back(set);
     }
 
-    file.close();
+    inputFile.close();
 
     vector<vector<string>> cartesian = cartesianProduct(sets);
 
     cout << "Декартово произведение множеств:\n";
     cout << "{ ";
     for (const auto& set : cartesian) {
-        printSet(set);       
+        printSet(set);
     }
     cout << "}";
 
