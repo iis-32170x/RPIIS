@@ -184,34 +184,51 @@ void RemoveArr(Arr* arr) // Очистка множества
 	return;
 }
 
-void GetResult(Arr* arr1, Arr* arr2) // Получение результата
+void GetResult(Arr* arr1, Arr* arr2)
 {
-	if (isSubset(arr1, arr2) && isSubset(arr2, arr1)) cout << "множества A и B равны" << endl;
+	if (isSubset(arr1, arr2) && isSubset(arr2, arr1))
+	{
+		cout << "Множества A и B равны" << endl;
+	}
+	else if (isSubset(arr1, arr2))
+	{
+		cout << "A это подмножество множества B" << endl;
+	}
+	else if (isSubset(arr2, arr1))
+	{
+		cout << "B это подмножество множества A" << endl;
+	}
 	else
 	{
-		cout << "множества A и B НЕ равны" << endl;
-		if (isSubset(arr1, arr2)) cout << "A это подмножество множества В " << endl;
-		else if (isSubset(arr2, arr1)) cout << "В это подмножество множества А" << endl;
-		else
+		bool isConnected = false;
+
+		for (int i = 0; i < stoi(arr1->NumberOfItems); i++)
 		{
-			for (int i = 0; i < stoi(arr1->NumberOfItems); i++)
+			if (isSubset(arr1->InnerItems[i], arr2) && isSubset(arr2, arr1->InnerItems[i]))
 			{
-				if (isSubset(arr1->InnerItems[i], arr2) && isSubset(arr2, arr1->InnerItems[i]))
-				{
-					cout << "В это элемент множества А" << endl;
-					break;
-				}
+				cout << "B это элемент множества A" << endl;
+				isConnected = true;
+				break;
 			}
+		}
+
+		if (!isConnected)
+		{
 			for (int i = 0; i < stoi(arr2->NumberOfItems); i++)
 			{
 				if (isSubset(arr2->InnerItems[i], arr1) && isSubset(arr1, arr2->InnerItems[i]))
 				{
-					cout << "А это элемент множества В" << endl;
+					cout << "A это элемент множества B" << endl;
+					isConnected = true;
 					break;
 				}
 			}
 		}
 
+		if (!isConnected)
+		{
+			cout << "Множества не связаны" << endl;
+		}
 	}
 }
 
