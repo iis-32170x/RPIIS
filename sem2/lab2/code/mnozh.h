@@ -1,6 +1,9 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+#include<vector>
+#include<string>
+
 using namespace std;
 
 void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector<string>>& result, vector<string>& currentSet, int index);
