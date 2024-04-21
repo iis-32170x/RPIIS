@@ -257,16 +257,26 @@ int main()
 
 ## Пример файла txt из которого происходит чтение множеств
 ``` txt
- 9 3 5 2 6543 1 15
- 5 15 9 1
+{1,2,3,4}
+{2,4}
+{<1,2>,<2,3>}
+<1,2>
+{{1,2,3},<4,5>}
+<4,5>
+{a,b,c}
+{a,b,c}
+{<a,b>,<a,c>,<a,d>}
+<a,c>
+{{e,2,g}}
+{{<a,b,c>},{<1,2>},{{e,2,g}}}
 ```
 
 ## Пример запуска
-Вручную:
-<img width="694" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/0c3ee5bb-cc2e-4257-8868-a50317488b85">
 
-Из файла:
-<img width="384" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/e09ac480-fa9f-411d-a1bd-5b84c72f1900">
+<img width="245" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/86fc474e-47ab-4141-9f17-318b4a038102">
+
+
+
 
 
 ## Вывод
