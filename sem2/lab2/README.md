@@ -56,7 +56,37 @@ void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector
     }
 }
 ```
-3. **Алгоритм вывода содержимого на экран**
+3.**Алгоритм разбора строки**
+
+   Этот алгоритм позволяет разбирать строки для работы со вложенными множествами.
+```cpp
+void parseSet(const string& line, vector<string>& set) {
+    string element;
+    int nestedLevel = 0;
+
+    for (char c : line) {
+        if (c == '{') {
+            nestedLevel++;
+        }
+        else if (c == '}') {
+            nestedLevel--;
+        }
+
+        if (c == ',' && nestedLevel == 0) {
+            set.push_back(element);
+            element.clear();
+        }
+        else {
+            element += c;
+        }
+    }
+
+    if (!element.empty()) {
+        set.push_back(element);
+    }
+}
+```
+4. **Алгоритм вывода содержимого на экран**
    
    Этот алгоритм выводит содержимое декартова произведения.
 ```cpp
