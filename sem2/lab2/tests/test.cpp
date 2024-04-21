@@ -17,16 +17,32 @@ TEST(CartesianProductTest, TestCartesianProduct) {
     ASSERT_EQ(result, expected);
 }
 
-TEST(CartesianProductTest, TestPrintSet) {
-    std::vector<std::string> set = { "A", "B", "C" };
-    std::stringstream output;
-    std::streambuf* coutBuffer = std::cout.rdbuf();
+TEST(ParseSetTest, TestParseSet) {
+    std::string line = "element1,{element2,element3},element4";
+    std::vector<std::string> expectedSet = { "element1", "{element2,element3}", "element4" };
+    std::vector<std::string> actualSet;
+
+    parseSet(line, actualSet);
+
+    EXPECT_EQ(expectedSet, actualSet);
+}
+
+TEST(PrintSetTest, TestPrintSet) {
+    vector<string> set = {"a","b","c"};
+    stringstream output;
+
+    // Перенаправляем вывод в поток stringstream
+    std::streambuf* oldCoutBuffer = std::cout.rdbuf();
     std::cout.rdbuf(output.rdbuf());
 
     printSet(set);
 
-    std::cout.rdbuf(coutBuffer);
-    ASSERT_EQ(output.str(), "<A, B, C> ");
+    // Возвращаем вывод в стандартный поток
+    std::cout.rdbuf(oldCoutBuffer);
+
+    string expected = "<a,b,c> ";
+
+    ASSERT_EQ(output.str(), expected);
 }
 
 int main(int argc, char** argv) {
