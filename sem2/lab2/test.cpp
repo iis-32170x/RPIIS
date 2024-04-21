@@ -9,7 +9,7 @@ int main() {
     cout << "Введите название файла: ";
     getline(cin, filepath);
 
-    int result = print(filepath);  // Замените print на имя вашей функции вывода
+    int result = print(filepath); 
 
     return 0;
 }
