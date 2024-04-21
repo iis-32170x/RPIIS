@@ -24,7 +24,7 @@
 
 ## Код программы
 
-```
+```cpp
 #include <iostream>
 #include <string>
 #include <string.h>
