@@ -27,12 +27,38 @@ void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector
     }
 }
 
+void parseSet(const string& line, vector<string>& set) {
+    string element;
+    int nestedLevel = 0;
+
+    for (char c : line) {
+        if (c == '{') {
+            nestedLevel++;
+        }
+        else if (c == '}') {
+            nestedLevel--;
+        }
+
+        if (c == ',' && nestedLevel == 0) {
+            set.push_back(element);
+            element.clear();
+        }
+        else {
+            element += c;
+        }
+    }
+
+    if (!element.empty()) {
+        set.push_back(element);
+    }
+}
+
 void printSet(const vector<string>& set) {
     cout << "<";
     for (size_t i = 0; i < set.size(); i++) {
         cout << set[i];
         if (i != set.size() - 1) {
-            cout << ", ";
+            cout << ",";
         }
     }
     cout << "> ";
