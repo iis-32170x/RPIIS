@@ -56,7 +56,7 @@ void cartesianProductRecursive(const vector<vector<string>>& sets, vector<vector
     }
 }
 ```
-3.**Алгоритм разбора строки**
+3. **Алгоритм разбора строки**
 
    Этот алгоритм позволяет разбирать строки для работы со вложенными множествами.
 ```cpp
