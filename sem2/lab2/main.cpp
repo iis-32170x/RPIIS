@@ -3,7 +3,7 @@
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    string file_path = "1.txt";
+    string file_path = "input.txt";
     const auto result = intersection(file_path);
     cout << "Пересечение  множеств: ";
     cout << "{";
