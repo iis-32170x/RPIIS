@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#звезда"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#созвездия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#спиральная_галактика"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#альфа"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#бетта"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#делиться_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#крайняя_точка"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#находиться_в_2градусах_южнее_от"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#находиться_под"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#расположена_в"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#блеск"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#визуальня_звездная_величина"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_по-арабски"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#представляет_собой"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#угловой_диаметр"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#удален_на"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#является"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Альриша"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Андромеда"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ВанМаанена"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Водолей"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Звезда_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Звезда_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Звезда_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#М74"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Овен"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Пегас"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Рыбы"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Северная_рыба"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Южная_рыба"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#зодиакальные_созвездия"/>
+        <Class IRI="#созвездия"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#звезда"/>
+        <NamedIndividual IRI="#Альриша"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#созвездия"/>
+        <NamedIndividual IRI="#Андромеда"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#звезда"/>
+        <NamedIndividual IRI="#ВанМаанена"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#зодиакальные_созвездия"/>
+        <NamedIndividual IRI="#Водолей"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#созвездия"/>
+        <NamedIndividual IRI="#Водолей"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#звезда"/>
+        <NamedIndividual IRI="#Звезда_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#звезда"/>
+        <NamedIndividual IRI="#Звезда_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#звезда"/>
+        <NamedIndividual IRI="#Звезда_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#спиральная_галактика"/>
+        <NamedIndividual IRI="#М74"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#зодиакальные_созвездия"/>
+        <NamedIndividual IRI="#Овен"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#созвездия"/>
+        <NamedIndividual IRI="#Овен"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#созвездия"/>
+        <NamedIndividual IRI="#Пегас"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#зодиакальные_созвездия"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#созвездия"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#альфа"/>
+        <NamedIndividual IRI="#Альриша"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#бетта"/>
+        <NamedIndividual IRI="#ВанМаанена"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#находиться_в_2градусах_южнее_от"/>
+        <NamedIndividual IRI="#ВанМаанена"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#расположена_в"/>
+        <NamedIndividual IRI="#М74"/>
+        <NamedIndividual IRI="#Рыбы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#делиться_на"/>
+        <NamedIndividual IRI="#Рыбы"/>
+        <NamedIndividual IRI="#Северная_рыба"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#делиться_на"/>
+        <NamedIndividual IRI="#Рыбы"/>
+        <NamedIndividual IRI="#Южная_рыба"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <NamedIndividual IRI="#Рыбы"/>
+        <NamedIndividual IRI="#Водолей"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <NamedIndividual IRI="#Рыбы"/>
+        <NamedIndividual IRI="#Овен"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#находиться_под"/>
+        <NamedIndividual IRI="#Северная_рыба"/>
+        <NamedIndividual IRI="#Андромеда"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <NamedIndividual IRI="#Южная_рыба"/>
+        <NamedIndividual IRI="#Водолей"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <NamedIndividual IRI="#Южная_рыба"/>
+        <NamedIndividual IRI="#Пегас"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_по-арабски"/>
+        <NamedIndividual IRI="#Альриша"/>
+        <Literal>бечёвка</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#представляет_собой"/>
+        <NamedIndividual IRI="#Альриша"/>
+        <Literal>визуальная двойная</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#удален_на"/>
+        <NamedIndividual IRI="#ВанМаанена"/>
+        <Literal>13,8 световых лет</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#является"/>
+        <NamedIndividual IRI="#ВанМаанена"/>
+        <Literal>ближайшим к нам одиночным белым карликом</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#визуальня_звездная_величина"/>
+        <NamedIndividual IRI="#Звезда_1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">3.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#визуальня_звездная_величина"/>
+        <NamedIndividual IRI="#Звезда_2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">3.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#визуальня_звездная_величина"/>
+        <NamedIndividual IRI="#Звезда_3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">3.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#блеск"/>
+        <NamedIndividual IRI="#М74"/>
+        <Literal>9,4 зв. вел.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#угловой_диаметр"/>
+        <NamedIndividual IRI="#М74"/>
+        <Literal>10&apos;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#является"/>
+        <NamedIndividual IRI="#М74"/>
+        <Literal>крупнейшая из наблюдаемых плашмя</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#альфа"/>
+        <Class IRI="#звезда"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#бетта"/>
+        <Class IRI="#звезда"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#делиться_на"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#находиться_в_2градусах_южнее_от"/>
+        <Class IRI="#звезда"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#находиться_под"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#расположена_в"/>
+        <Class IRI="#спиральная_галактика"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#альфа"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#бетта"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#делиться_на"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#крайняя_точка"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#находиться_в_2градусах_южнее_от"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#находиться_под"/>
+        <Class IRI="#созвездия"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#расположена_в"/>
+        <Class IRI="#зодиакальные_созвездия"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
