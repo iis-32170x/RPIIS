@@ -73,8 +73,9 @@ vector<string> writeSets(vector<string> sets,int&number) {
     return FULLset;
 }
 
-vector<string> parseSet(const string& input, size_t pos) {
+vector<string> parseSet(const string& input) {
     vector<string> elements;
+    size_t pos = 1;
     string buffer;
     int openBraces = 1;
     int i = 0;
@@ -120,9 +121,8 @@ vector<string> parseSet(const string& input, size_t pos) {
 
 vector <vector<string>> subsets(vector <string> sets) {
     vector <vector<string>> subsets;
-    size_t pos = 1;
     for (int i = 0; i < sets.size(); i++) {
-        subsets.push_back(parseSet(sets[i], pos));
+        subsets.push_back(parseSet(sets[i]));
         for (const auto& element : subsets[i]) {
             cout << element << " ";
         }
@@ -174,11 +174,11 @@ string intersection(vector<string>& set1, vector<string>& set2) {
 
        
         for (const auto& element1 : set1) {
-            auto copy1 = parseSet(element1, 1);
+            auto copy1 = parseSet(element1);
        
        
             for (const auto& element2 : set2) {
-                auto copy2 = parseSet(element2, 1);
+                auto copy2 = parseSet(element2);
             
                 auto intersected = intersection(copy1, copy2);
                 if (intersected == element1) {
@@ -218,7 +218,7 @@ int main()
     string result = intersection(Subsets[0], Subsets[1]);
 
     for (int i = 2; i < sets_q; i++) {
-        auto help_intersec = parseSet(result, 1);
+        auto help_intersec = parseSet(result);
         result = intersection(help_intersec,Subsets[i]);
     }
    
