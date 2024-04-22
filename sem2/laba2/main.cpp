@@ -3,7 +3,17 @@ using namespace std;
 
 vector<string> symmetricDifference(const vector<string> &set1, const vector<string> &set2) {
     vector<string> diff1 = set_difference(set1, set2);
+    // cout << "Результат первой разности: ";
+    // for (const string &elem : diff1) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
     vector<string> diff2 = set_difference(set2, set1);
+    // cout << "Результат второй разности: ";
+    // for (const string &elem : diff2) {
+    //     cout << elem << " ";
+    // }
+    // cout << endl;
     return set_union(diff1, diff2);
 }
 
@@ -34,6 +44,10 @@ int main() {
         formattedSet += "}";
         set = formattedSet;
     }
+    
+    // for (size_t i = 0; i < sets.size(); ++i) {
+    //     cout << "Множество " << i + 1 << ": " << sets[i] << endl;
+    // }
 
     vector<string> result = parseString(sets[0]);
     for (size_t i = 1; i < sets.size(); ++i) {

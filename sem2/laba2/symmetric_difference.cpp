@@ -42,6 +42,22 @@ bool stringsAreEqual(const string &str1, const string &str2) {
         vector<string> vec2 = parseString(str2);
         set<string> set1(vec1.begin(), vec1.end());
         set<string> set2(vec2.begin(), vec2.end());
+        // cout << "Set 1: ";
+        // for (const string &elem : set1) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;
+        // cout << "Set 2: ";
+        // for (const string &elem : set2) {
+        //     cout << elem << " ";
+        // }
+        // cout << endl;
+        // if (set1 == set2) {
+        //     cout << "true" << endl;
+        // } else {
+        //     cout << "false" << endl;
+        // }
+        // cout << "---------------" << endl;
         return set1 == set2;
     }
     return str1 == str2;
@@ -91,7 +107,7 @@ bool elemInSet(const string &elem, vector<string> set)
 {
     for (size_t k = 0; k < set.size(); k++)
     {
-        if (set[k] == elem)
+        if (set[k] == elem || stringsAreEqual(set[k], elem))
         { 
             return true;
         }
@@ -117,7 +133,7 @@ void removeMultiOccurence(vector<string> &set)
 void removeDuplicatesRecursive(vector<string> &set) {
     removeMultiOccurence(set);
     for (string &elem : set) {
-        if ((elem.front() == '{' && elem.back() == '}') || (elem.front() == '<' && elem.back() == '>')) {
+        if ((elem.front() == '{' && elem.back() == '}')) {
             vector<string> subset = parseString(elem);
             removeDuplicatesRecursive(subset);
             string newElem(1, elem.front());
