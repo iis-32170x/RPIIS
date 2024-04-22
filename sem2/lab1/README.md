@@ -113,4 +113,43 @@ vector<vector<int>> RM_EDGE(int node1, int node2) {
 
 ### Построение дерева обхода графа в глубину
 
+Алгоритм построения дерева обхода графа в глубину:
 
+- Шаг 1: Перебираем все исходящие из рассматриваемой вершины рёбра.
+- Шаг 2: Если ребро ведёт в вершину, которая не была рассмотрена ранее, то запускаем алгоритм от этой нерассмотренной вершины, а после возвращаемся и продолжаем перебирать рёбра.
+- Шаг 3: Возврат происходит в том случае, если в рассматриваемой вершине не осталось рёбер, которые ведут в нерассмотренную вершину.
+- Шаг 4: Если после завершения алгоритма не все вершины были рассмотрены, то необходимо запустить алгоритм от одной из нерассмотренных вершин.
+
+В результате должен быть получен массив, отсортированный в порядке просмотра вершин.
+
+### Программная реализация и пример работы
+
+Реализация:
+
+```c++
+vector<int> DFS_TREE(int node_to_start) {
+    int current = node_to_start;
+    not_visited.insert(not_visited.begin(), current);
+    while (!not_visited.empty()) {
+        visited.push_back(current);
+        not_visited.erase(not_visited.begin());
+        for (int i = adjacent_m.size()-1; i >= 0;i--) {
+            if (adjacent_m[current][i] != 0 && i != current && find(not_visited.begin(), not_visited.end(), i) == not_visited.end() && find(visited.begin(), visited.end(), i) == visited.end()) {
+                not_visited.insert(not_visited.begin(), i);
+                
+            }
+        }
+        if (!not_visited.empty()) {
+            current = not_visited.front();
+        }
+    }
+    return visited;
+}
+```
+Программа выполняется в соответствии с описанным алгоритмом.
+
+#### Пример: 
+
+Обход графа в глубину, начиная с 1-ой вершины:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/332ab809-814a-4728-810d-fa811edd0122)
