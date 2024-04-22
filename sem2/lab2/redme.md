@@ -38,11 +38,7 @@ struct Arr // структура, описывающая множество
 	string NumberOfItems;
 	Arr** InnerItems;
 
-	Arr() // пустой конструктор для множества
-	{
-
-	}
-
+	
 	Arr(string type, string numberOfItems) // конструктор с параметрами
 	{
 		if (type == "array" || type == "cortege")
