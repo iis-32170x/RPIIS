@@ -123,8 +123,6 @@ void add(Node*& begin, Node*& end, const string value)
                 }
                 else
                 {
-                    // Если значение не содержит фигурные скобки, то разделяем
-                    // элементы запятыми и записываем со скобками
                     stringstream subSS(item);
                     string subItem;
                     string fullItem;
@@ -173,33 +171,7 @@ void view(Node* begin, Node* end)
     }
 }
 
-bool areSetsEqual(const string& set1, const string& set2)
-{
-    vector<char> sortedSet1;
-    vector<char> sortedSet2;
-
-    for (char c : set1)
-    {
-        if (c != '{' && c != '}' && c != ',')
-        {
-            sortedSet1.push_back(c);
-        }
-    }
-    sort(sortedSet1.begin(), sortedSet1.end());
-
-    for (char c : set2)
-    {
-        if (c != '{' && c != '}' && c != ',')
-        {
-            sortedSet2.push_back(c);
-        }
-    }
-    sort(sortedSet2.begin(), sortedSet2.end());
-
-    return sortedSet1 == sortedSet2;
-}
-
-string sortString(std::string str)
+string sortString(string str)
 {
     sort(str.begin() + 1, str.end() - 1);
     return str;
@@ -222,7 +194,6 @@ void raznost(Node* begin, Node* begin1)
     while (q != nullptr)
     {
         bool isSubset = false;
-        bool isNumber = false;
 
         if (q->data.substr(0, 1) == "{" && q->data.substr(q->data.length() - 1, 1) == "}")
         {
@@ -243,8 +214,8 @@ void raznost(Node* begin, Node* begin1)
                 }
             }
         }
-        else {
-            isNumber = true;
+        else 
+        {
             regularCount++;
 
             if (countMap[q->data] != 0)
@@ -260,16 +231,5 @@ void raznost(Node* begin, Node* begin1)
         }
 
         q = q->next;
-    }
-
-    for (const auto& pair : countMap)
-    {
-        if (pair.second == 0 && !pair.first.empty() && pair.first[0] != '{' && pair.first[pair.first.length() - 1] != '}')
-        {
-            for (int i = 0; i < pair.second; i++)
-            {
-                cout << pair.first << ", ";
-            }
-        }
     }
 }
