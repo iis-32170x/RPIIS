@@ -1,0 +1,69 @@
+#include <iostream>
+#include "Header.h"
+using namespace std;
+
+int main()
+{
+	string element, stroka, stroka1;
+	Node* begin = nullptr;
+	Node* end = nullptr;
+	Node* begin1 = nullptr;
+	Node* end1 = nullptr;
+
+    ifstream inputFile("input_A.txt");
+	if (!inputFile)
+	{
+		cout << "Ошибка открытия файла" << endl;
+		return 1;
+	}
+
+	while (inputFile >> element)
+	{
+		stroka += element;
+	}
+
+	add(begin, end, stroka);
+
+	inputFile.close();
+
+	Node* p = begin;
+	Node* v = end;
+
+	cout << "Множество A: ";
+	cout << "{";
+	view(p, v);
+	cout << "}" << endl;
+
+	ifstream inputFile1("input_B.txt");
+	if (!inputFile1)
+	{
+		cout << "Ошибка открытия файла" << endl;
+		return 1;
+	}
+
+	while (inputFile1 >> element)
+	{
+		stroka1 += element;
+	}
+
+	add(begin1, end1, stroka1);
+
+	inputFile1.close();
+
+	Node* p1 = begin1;
+	Node* v1 = end1;
+
+	cout << endl;
+	cout << "Множество B: ";
+	cout << "{";
+	view(p1, v1);
+	cout << "}" << endl;
+
+	cout << endl;
+	cout << "Множество C (разность множеств A и B): ";
+	cout << "{";
+	raznost(begin, begin1);
+	cout << "}" << endl;
+
+	return 0;
+}
