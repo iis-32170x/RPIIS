@@ -28,4 +28,89 @@
 - Шаг 3: Перенести соответствующие значения полей с единицами (1), в верхнюю освободившуюся строчку, для значений строк
 - Шаг 4: Перенеси соотвтетствующие значения полей с единицами (1), в левый освободившийся столбец, для значений столбцов
 - Шаг 5: Удалить последнюю строчку
-- Шаг 6: Удалить последний столбец 
+- Шаг 6: Удалить последний столбец
+
+### Программная реализация и пример работы
+
+Реализация:
+```c++
+vector<vector<int>> ADD_VERTICE() {
+    vector<vector<int>> matrix;
+    matrix = adjacent_m;
+    matrix.resize(adjacent_m.size() + 1);
+    for (int i = 0; i < matrix.size(); i++) {
+        matrix[i].resize(adjacent_m.size() + 1,0);
+    }
+    adjacent_m = matrix;
+    return adjacent_m;
+}
+vector<vector<int>> RM_VERTICE(int node_to_rm) {
+    vector<vector<int>> matrix;
+    matrix = adjacent_m;
+    if (!matrix.empty()) {
+        if (node_to_rm - 1 >= 0 && node_to_rm - 1 < matrix.size()) {
+            matrix.erase(matrix.begin() + node_to_rm - 1);
+            for (int i = 0; i < matrix.size(); i++) {
+                if (!matrix[i].empty() && node_to_rm - 1 >= 0 && node_to_rm - 1 < matrix[i].size()) {
+                    matrix[i].erase(matrix[i].begin() + node_to_rm - 1);
+                }
+            }
+        }
+    }
+```
+Программа выполняется в соответствии с описанным алгоритмом.
+
+#### Пример: 
+
+Изначально граф представлен такой матрицей смежности:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/aaceff66-7495-4d7a-916b-008118613a60)
+
+Добавление вершины:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/c0aa34de-6880-4928-bef6-80478170c763)
+
+Удаление 3 - ей вершины:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/814956d7-80ea-4159-a4a3-c675653bd04d)
+
+### Удаление/вставка дуги (ребра)
+
+Алгоритм удаления/вставки n-ой дуги (ребра) прост:
+- Шаг 1: Вписать 1(0) в соответствующую ячейку матрицы, находящуюся на пересечении 1-ой вершины по строкам и 2-ой вершины по столбцам
+- Шаг 2: Вписать 1(0) в соответствующую ячейку матрицы, находящуюся на пересечении 1-ой вершины по столбцам и 2-ой вершины по строкам
+
+### Программная реализация и пример работы
+
+Реализация:
+
+```c++
+vector<vector<int>> ADD_EDGE(int node1, int node2) {
+    adjacent_m[node1-1][node2-1] = 1;
+    adjacent_m[node2-1][node1-1] = 1;
+    return adjacent_m;
+
+}
+vector<vector<int>> RM_EDGE(int node1, int node2) {
+    adjacent_m[node1 - 1][node2 - 1] = 0;
+    adjacent_m[node2 - 1][node1 - 1] = 0;
+    return adjacent_m;
+}
+```
+Программа выполняется в соответствии с описанным алгоритмом.
+
+#### Пример: 
+
+Изначально граф представлен той же матрицей смежности
+
+Добавление дуги между 5-ой и 6-ой вершиной:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/22d563ed-03b1-4cdf-bd89-2dd634d3693b)
+
+Удаление дуги между 2-ой и 4-ой вершиной:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/135509020/38961065-9c81-42ee-a356-8df4398c52f6)
+
+### Построение дерева обхода графа в глубину
+
+
