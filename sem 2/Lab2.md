@@ -34,96 +34,184 @@
 ```cpp
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include<fstream>
-#include <conio.h>
-#include<utility>
-#include<string>
+#include <string>
+#include <fstream>
+#include<stack>
+#include<algorithm>
 
 using namespace std;
 
-void ReadFile(vector<string>& mnzh) {
-    ifstream file("mnzh.txt");
-    if (file.is_open()) {
-        string element;
-        while (file >> element) {
-            mnzh.push_back(element);
-        }
-        file.close();
-    }
-    else {
-        cout << "Файл не был открыт\n";
-        return;
-    }
-    for (auto& c : mnzh) {
-        for (auto& d : c) {
-            if (!isdigit(d))
-                mnzh.clear();
-        }
-    }
-}
-void generatePermutations(vector<string>& nums, vector< vector<string>>& result, int start) {
-    if (start == nums.size() - 1) {
-        result.push_back(nums);
-        return;
-    }
+bool read_file(vector<string>& mnzh) {
+	string tmp;
+	string tmp_mnzh;
+	stack<char> braket;
 
-    for (int i = start; i < nums.size(); ++i) {
-        std::swap(nums[start], nums[i]);
-        generatePermutations(nums, result, start + 1);
-        std::swap(nums[start], nums[i]);
-    }
+	ifstream file("mnzh.txt");
+
+	if (file.is_open()) {
+		while (getline(file, tmp)) {
+			tmp_mnzh += tmp;
+		}
+		file.close();
+		tmp.clear();
+	}
+	else {
+		cout << "Не удалось открыть файл";
+		return false;
+	}
+
+	tmp_mnzh.erase(remove(tmp_mnzh.begin(), tmp_mnzh.end(), ' '), tmp_mnzh.end());
+
+	char previous = '\0';
+	int count = 0;
+
+
+	for (auto& c : tmp_mnzh) {
+		if (isdigit(c) || c == '{' || c == '}' || c == ',') {
+			
+		}
+		else {
+			cout << "Не правильный формат множества";
+			return false;
+		}
+
+		if ((c == ',' && c == previous) || (c == '}' && previous == ',') || (previous == '\0' && c != '{') || (c == '}' && previous == '{')) {
+			cout << "Не правильный формат множества";
+			return false;
+		}
+
+		if (c == '{' || c == '}') { count++; }
+
+		previous = c;
+	}
+
+	if (count % 2 != 0) {
+		cout << "Не правильный формат множества";
+		return false;
+	}
+
+	tmp_mnzh.erase(0, 1);
+	tmp_mnzh.pop_back();
+
+	for (auto& c : tmp_mnzh) {
+		if (c == '{' || c == '}') { tmp+=c; }
+	}
+
+	for (int i = 0; i < tmp.size()-1; i++) {
+		if (tmp[i] == '{' && tmp[i + 1] == '}') {
+			tmp.erase(i, 2);
+			i = -1;
+		}
+		if (tmp.size() == 0) { break; }
+	}
+	
+	if (tmp.size() != 0) {
+		cout << "Не правильный формат множества";
+		return false;
+	}
+
+	for (auto& c : tmp_mnzh) {
+		if (c == '{') {
+			braket.push(c);
+			tmp += c;
+		}
+		else if (c == '}' && braket.size()!=0) {
+			tmp += c;
+			braket.pop();
+			if (braket.size() == 0) {
+				mnzh.push_back(tmp);
+				tmp.clear();
+			}
+		}
+		else if (braket.size() == 0 && c != ',') {
+			tmp += c;
+		}
+		else if (braket.size() == 0 && c == ',') {
+			if (tmp.size() != 0) {
+				mnzh.push_back(tmp);
+				tmp.clear();
+			}
+		}
+		else if (braket.size() != 0) {
+			tmp += c;
+		}
+	}
+	if (tmp.size() != 0) {
+		mnzh.push_back(tmp);
+	}
+
+	return true;
+}
+
+
+
+void generateCombinations(const std::vector<string>& elements, std::vector<std::vector<string>>& combinations, int k, int start, std::vector<string>& current) {
+	if (k == 0) {
+		combinations.push_back(current);
+		return;
+	}
+
+	for (int i = start; i <= elements.size() - k; ++i) {
+		current.push_back(elements[i]);
+		generateCombinations(elements, combinations, k - 1, i, current); // Используем i вместо i + 1
+		current.pop_back();
+	}
+}
+
+bool equal(vector<string>& vec1, vector<string>& vec2) {
+	vector<string> tmp1 = vec1;
+	vector<string> tmp2 = vec2;
+
+	sort(tmp1.begin(), tmp1.end());
+	sort(tmp2.begin(), tmp2.end());
+
+	return tmp1 == tmp2;
+
 }
 
 int main() {
-    setlocale(LC_ALL, "ru");
-    vector<string>mnzh;
-    cout << "Множество должно иметь не больше 10 элементов,элементы множества должны быть числами , элементы множества должны быть разделены пробелами \n";
-    cout << "\nнажмите любую клавишу, чтобы продолжить  : ";
-    while (!_kbhit()) {
-    }
-    _getch();
-    system("cls");
-    ReadFile(mnzh);
-    if (mnzh.size() != 0 && mnzh.size() <= 10) {
-        vector< vector<string>> result;
-        cout << "Множества прогружаются , подождите ... ";
-        generatePermutations(mnzh, result, 0);
-        //удаление реверсивных множеств
-        if (mnzh.size() != 1) {
-            vector <vector<string>> tmp = result;
-            for (auto& c : tmp) {
-                reverse(c.begin(), c.end());
-            }
-            int count = 0;
-            for (auto& c : result) {
-                count = 0;
-                for (auto& b : tmp) {
-                    if (c == b) {
-                        result.erase(result.begin() + count);
-                        tmp.erase(tmp.begin() + count);
-                        break;
-                    }
-                    count++;
-                }
-            }
-        }
-        system("cls");
-        // Вывод всех комбинаций
-        cout << "Всевозможные комбинации из исходного множества :\n\n";
-        for (const auto& permutation : result) {
-            cout << "{ ";
-            for (auto& num : permutation) {
-                cout << num << ",";
-            }
-            cout<<" }" << endl;
-        }
-        return 0;
-    }
-    else {
-        cout << "Файл либо пустой либо в вашем множестве больше 10 элементов либо в множестве присутсвуют не только числа";
-        return 0;
-    }
+	setlocale(LC_ALL, "ru");
+	vector<string>current;
+	vector<string> mnzh;
+	vector<vector<string>> permutations;
+	int size;
+
+	if (read_file(mnzh)) {
+		cout << "Введите размер будущих сформированных множеств: ";
+		do {
+			cin >> size;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cout << "Неправильный ввод, пожалуйста, введите еще раз: ";
+				cin >> size;
+			}
+		} while (size > mnzh.size() || size < 0);
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		system("cls");
+
+		generateCombinations(mnzh,permutations, size,0,current);
+
+		for (auto it = permutations.begin(); it != permutations.end(); ++it) {
+			for (auto it2 = it + 1; it2 != permutations.end();) {
+				if (equal(*it, *it2)) {
+					it2 = permutations.erase(it2);
+				}
+				else { ++it2; }
+			}
+		}
+
+		
+		for (auto& c : permutations) {
+			cout << "{";
+			for (auto& b : c) {
+				cout << b;
+					cout << " ";
+			}
+			cout << "}" << endl;
+		}
+
+	}
 }
 ```
 **Вывод:**
