@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/slavikovics/ontologies/2024/3/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/slavikovics/ontologies/2024/3/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/slavikovics/ontologies/2024/3/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#colour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#compound"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#hydrocarbon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#manufacturing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#oil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#organic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#smell"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comprise"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feedstock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#identification"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_synthesized_on_an_industrial_scale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_widely_used"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C6H6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aromatic_hydrocarbon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#benzene"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#carcinogenic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#colourless_colour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#drug_production"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#industry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#liquid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#manufacturing_of_different_plastics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#other_types_of_oil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#petrol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#production_of_dyes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#raw_oil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simpliest_hydrocarbon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#specific_smell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sweaty_smell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#synthetic_rubber_production"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#toxic"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#chemical"/>
+        <Class IRI="#compound"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#organic"/>
+        <Class IRI="#chemical"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#C6H6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#PhH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#hydrocarbon"/>
+        <NamedIndividual IRI="#aromatic_hydrocarbon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#organic"/>
+        <NamedIndividual IRI="#benzene"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#carcinogenic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#colour"/>
+        <NamedIndividual IRI="#colourless_colour"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#manufacturing"/>
+        <NamedIndividual IRI="#drug_production"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#industry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#liquid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#manufacturing"/>
+        <NamedIndividual IRI="#manufacturing_of_different_plastics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#oil"/>
+        <NamedIndividual IRI="#other_types_of_oil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#petrol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#manufacturing"/>
+        <NamedIndividual IRI="#production_of_dyes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#oil"/>
+        <NamedIndividual IRI="#raw_oil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#hydrocarbon"/>
+        <NamedIndividual IRI="#simpliest_hydrocarbon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#smell"/>
+        <NamedIndividual IRI="#specific_smell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#smell"/>
+        <NamedIndividual IRI="#sweaty_smell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#manufacturing"/>
+        <NamedIndividual IRI="#synthetic_rubber_production"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="#toxic"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#C6H6"/>
+        <NamedIndividual IRI="#PhH"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#C6H6"/>
+        <NamedIndividual IRI="#benzene"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#PhH"/>
+        <NamedIndividual IRI="#benzene"/>
+    </SameIndividual>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprise"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#petrol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprise"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#raw_oil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedstock"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#drug_production"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedstock"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#manufacturing_of_different_plastics"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedstock"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#production_of_dyes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedstock"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#synthetic_rubber_production"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#identification"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#C6H6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#identification"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#PhH"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#carcinogenic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#liquid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#simpliest_hydrocarbon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#specific_smell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#toxic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_synthesized_on_an_industrial_scale"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#other_types_of_oil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_widely_used"/>
+        <NamedIndividual IRI="#benzene"/>
+        <NamedIndividual IRI="#industry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#liquid"/>
+        <NamedIndividual IRI="#colourless_colour"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#liquid"/>
+        <NamedIndividual IRI="#specific_smell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#liquid"/>
+        <NamedIndividual IRI="#sweaty_smell"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <NamedIndividual IRI="#simpliest_hydrocarbon"/>
+        <NamedIndividual IRI="#aromatic_hydrocarbon"/>
+    </ObjectPropertyAssertion>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#feedstock"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#comprise"/>
+        <Class IRI="#compound"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#feedstock"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#identification"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_synthesized_on_an_industrial_scale"/>
+        <Class IRI="#compound"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_widely_used"/>
+        <Class IRI="#compound"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#comprise"/>
+        <Class IRI="#manufacturing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#feedstock"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#identification"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_an_element_of_a_set"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_synthesized_on_an_industrial_scale"/>
+        <Class IRI="#oil"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_widely_used"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
