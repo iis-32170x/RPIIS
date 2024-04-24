@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include "set.h"  // Подключите заголовочный файл с определением функции unionSets
+
+int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    string file_path = "info.txt";
+    const auto result = unionSets(file_path);  // Изменено: вызываем unionSets вместо intersection
+    cout << "Объединение множеств: ";  // Изменено: обновлено сообщение
+    cout << "{";
+    bool first = true;
+    for (const string& element : result) {
+        if (!first) {
+            cout << ", ";
+        }
+        cout << element;
+        first = false;
+    }
+    cout << "}";
+}
