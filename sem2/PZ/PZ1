@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ivan/ontologies/2024/3/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ivan/ontologies/2024/3/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/ivan/ontologies/2024/3/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#angle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#line_segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#polygon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#triangle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAngle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMedian"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMiddleLine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMiddlePoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSide"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVertex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inParallelWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#intersectsWith"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPerimeter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#K"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#O"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle_MBN"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#angle_ABC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#angle_ACB"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#polygon"/>
+        <Class IRI="#shape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#triangle"/>
+        <Class IRI="#polygon"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#AC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#AO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#BK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#K"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#MN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#point"/>
+        <NamedIndividual IRI="#O"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#line_segment"/>
+        <NamedIndividual IRI="#OC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#triangle"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#triangle"/>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#triangle"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#triangle"/>
+        <NamedIndividual IRI="#Triangle_MBN"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angle"/>
+        <NamedIndividual IRI="#angle_ABC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angle"/>
+        <NamedIndividual IRI="#angle_ACB"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMiddlePoint"/>
+        <NamedIndividual IRI="#AC"/>
+        <NamedIndividual IRI="#K"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPoint"/>
+        <NamedIndividual IRI="#AC"/>
+        <NamedIndividual IRI="#K"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AC"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AC"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inParallelWith"/>
+        <NamedIndividual IRI="#AC"/>
+        <NamedIndividual IRI="#MN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AO"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#AO"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPoint"/>
+        <NamedIndividual IRI="#BK"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#BK"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#BK"/>
+        <NamedIndividual IRI="#K"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#intersectsWith"/>
+        <NamedIndividual IRI="#BK"/>
+        <NamedIndividual IRI="#MN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPoint"/>
+        <NamedIndividual IRI="#MN"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inParallelWith"/>
+        <NamedIndividual IRI="#MN"/>
+        <NamedIndividual IRI="#AC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#intersectsWith"/>
+        <NamedIndividual IRI="#MN"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#OC"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#OC"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAngle"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#angle_ABC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAngle"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#angle_ACB"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMedian"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMiddleLine"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#MN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#AC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+        <NamedIndividual IRI="#BK"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_ABK"/>
+        <NamedIndividual IRI="#K"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#AC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#AO"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#OC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_AOC"/>
+        <NamedIndividual IRI="#O"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSide"/>
+        <NamedIndividual IRI="#Triangle_MBN"/>
+        <NamedIndividual IRI="#MN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#Triangle_MBN"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#angle_ABC"/>
+        <NamedIndividual IRI="#B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasVertex"/>
+        <NamedIndividual IRI="#angle_ACB"/>
+        <NamedIndividual IRI="#C"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLength"/>
+        <NamedIndividual IRI="#AO"/>
+        <Literal>L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLength"/>
+        <NamedIndividual IRI="#OC"/>
+        <Literal>L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPerimeter"/>
+        <NamedIndividual IRI="#Triangle_ABC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAngle"/>
+        <NamedIndividual IRI="#angle_ABC"/>
+        <Literal>alpha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAngle"/>
+        <NamedIndividual IRI="#angle_ACB"/>
+        <Literal>2*alpha</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasVertex"/>
+        <ObjectProperty IRI="#hasPoint"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAngle"/>
+        <Class IRI="#angle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMedian"/>
+        <Class IRI="#triangle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMiddleLine"/>
+        <Class IRI="#triangle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMiddlePoint"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSide"/>
+        <Class IRI="#triangle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVertex"/>
+        <Class IRI="#triangle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inParallelWith"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#intersectsWith"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAngle"/>
+        <Class IRI="#point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedian"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMiddleLine"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMiddlePoint"/>
+        <Class IRI="#point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSide"/>
+        <Class IRI="#line_segment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVertex"/>
+        <Class IRI="#point"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
