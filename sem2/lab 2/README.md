@@ -244,11 +244,11 @@ multiset<string> unionSets(const string& file_path) {
 
  ##  *Пример выполнения*
   #### 1
- <img src="images/Снимок экрана (39).png">
+  ![image](test2.png)
   #### 2
-  <img src="images/Снимок экрана (40).png">
+   ![image](test2.png)
   #### 3
-  <img src="images/Снимок экрана (41).png">
+  ![image](test2.png)
   В результате выполнения данной работы были получены следующие практические навыки:
 
 + повторение теории множеств
