@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#иметь_основные_особенности -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#иметь_основные_особенности">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#используемый_состав -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#используемый_состав">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#признанный_король -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#признанный_король">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#автор_песен"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#певец"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страна_формирования -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страна_формирования">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страны"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#дата_распространения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#дата_распространения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#дата_формирования -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#дата_формирования"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#автор_песен -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#автор_песен"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#акценты_в_аккомпанементе -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#акценты_в_аккомпанементе"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#брейки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#брейки"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#певец -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#певец"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страны -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страны"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Бас-гитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Бас-гитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Боб_Марли -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Боб_Марли">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#автор_песен"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#певец"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Группа_духовых_инструментов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Группа_духовых_инструментов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Регги -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Регги">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#направление_современной_музыки"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Синкопированный_рисунок_баса"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Умеренный_темп"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_2-й_доле"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_4-й_доле"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_высоких_тонах"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_тимбалах"/>
+        <untitled-ontology-3:иметь_основные_особенности rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Размер_4/4"/>
+        <untitled-ontology-3:используемый_состав rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Бас-гитара"/>
+        <untitled-ontology-3:используемый_состав rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Группа_духовых_инструментов"/>
+        <untitled-ontology-3:используемый_состав rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Ударные"/>
+        <untitled-ontology-3:используемый_состав rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электрогитара"/>
+        <untitled-ontology-3:используемый_состав rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электроорган"/>
+        <untitled-ontology-3:признанный_король rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Боб_Марли"/>
+        <untitled-ontology-3:дата_распространения>начало 1970-х</untitled-ontology-3:дата_распространения>
+        <untitled-ontology-3:дата_формирования>конец 1960-х</untitled-ontology-3:дата_формирования>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Синкопированный_рисунок_баса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Синкопированный_рисунок_баса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Ударные -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Ударные">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Умеренный_темп -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Умеренный_темп">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электрогитара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электрогитара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электроорган -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Электроорган">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#музыкальные_инструменты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Ямайка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Ямайка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#страны"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_2-й_доле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_2-й_доле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#акценты_в_аккомпанементе"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_4-й_доле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_4-й_доле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#акценты_в_аккомпанементе"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_высоких_тонах -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_высоких_тонах">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#брейки"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_тимбалах -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#на_тимбалах">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#брейки"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Размер_4/4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#Размер_4/4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pekav/ontologies/2024/3/untitled-ontology-3#основные_особенности"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

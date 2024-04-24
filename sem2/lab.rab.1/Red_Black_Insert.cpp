@@ -128,7 +128,7 @@ void Delete(Node*& root, Node* node) {
 	if (node->Red && node->left == nullptr && node->right == nullptr) {
 		ClearNode(node);
 	}
-	//Удаление вершины с правым потомком
+	//Удаление красной вершины с правым потомком
 	else if (node->right != nullptr) {
 		Node* nodetmp = node->right;
 
@@ -141,7 +141,7 @@ void Delete(Node*& root, Node* node) {
 
 		Delete(root, nodetmp);
 	}
-	//Удаление вершины с левым потомком
+	//Удаление красной вершины с левым потомком
 	else if (node->left != nullptr) {
 		Node* nodetmp = node->left;
 
