@@ -47,3 +47,27 @@
 
 текст
 ******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/01838c9e-f85f-4f66-9954-f072654dfeb2)
+
+текст
+******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/2db70e9a-9f8c-409a-a28a-747a11e3e2f9)
+
+текст
+******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/6287fdea-4d70-4fbb-b4d9-cf05a992a76f)
+
+текст
+******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/93ca615e-1e23-4369-8b29-8dea182c91d8)
+
+текст
+******
+
+
+
+
