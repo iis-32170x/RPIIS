@@ -37,3 +37,13 @@
 
 текст
 ******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4411882c-0734-4bbe-8340-45cab00cb49a)
+
+текст
+******
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/2780710d-8ea4-4023-913a-dcc88b2092ed)
+
+текст
+******
