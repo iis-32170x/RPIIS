@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "cortprod.h"
 #include <iomanip>
 #include <iostream>
 #include <sstream>
@@ -51,6 +51,14 @@ void setData(const string& filepath, int& num_sets, vector<vector<string>>& sets
             {
                 sets[i].push_back(element);
             }
+        }
+
+        //для запятых
+        size_t pos = line.find(",,");
+        if (pos != string::npos)
+        {
+            cout << "Ошибка формата файла" << endl;
+            break;
         }
     }
 
