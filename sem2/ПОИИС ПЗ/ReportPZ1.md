@@ -16,19 +16,19 @@
 
 ## Реализация в КБЕ:
 
-![image](imgs/ПЗ116КБЕ.png)
+![image](Lab1/imgs/ПЗ116КБЕ.png)
 
 ## Реализация Protege:
 
-![image](imgs/ClassesProtege.png)
+![image](Lab1/imgs/ClassesProtege.png)
 
-![image](imgs/ObjectPropProtege.png)
+![image](Lab1/imgs/ObjectPropProtege.png)
 
-![image](imgs/IndividualsProtege.png)
+![image](Lab1/imgs/IndividualsProtege.png)
 
-![image](imgs/SozhProtege.png)
+![image](Lab1/imgs/SozhProtege.png)
 
-![image](imgs/SystemProtege.png)
+![image](Lab1/imgs/SystemProtege.png)
 
 # Вывод 
 
