@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/polina/ontologies/2024/3/untitled-ontology-11/"
+     xml:base="http://www.semanticweb.org/polina/ontologies/2024/3/untitled-ontology-11/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mountain="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasDistance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasDistance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasHeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasHeight"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasInscription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasInscription"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasLanguage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#locatedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#madeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#madeOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#partOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#hasDistance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#distanceFromMinsk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#distanceFromMinsk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#heightAboveSeaLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#heightAboveSeaLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#installedYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#installedYear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#previousName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#previousName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#renamedYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#renamedYear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#theHighest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#theHighest"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Kilometre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Kilometre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#UnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Material -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Material"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Metre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Metre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#UnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Monument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Monument"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Mountain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Mountain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#PartOfTheWord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#PartOfTheWord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Peak -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Peak"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Text -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Text"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#UnitOfMeasure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Upland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Upland">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Village -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Village">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#UnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Belarus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Belarus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianLanguage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianLanguage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianRidge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianRidge"/>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Dzerzhinsk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Dzerzhinsk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#DzerzhinskayaMountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#DzerzhinskayaMountain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Mountain"/>
+        <mountain:hasHeight rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#345"/>
+        <mountain:locatedIn rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#MinskUpland"/>
+        <mountain:locatedIn rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#SkirmantovoVillage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Minsk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Minsk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#MinskUpland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#MinskUpland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Upland"/>
+        <mountain:partOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianRidge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#SkirmantovoVillage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#SkirmantovoVillage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Village"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#SvyatayaMountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#SvyatayaMountain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Mountain"/>
+        <mountain:previousName></mountain:previousName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#granite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#granite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Material"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#pointOfMountain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#pointOfMountain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Peak"/>
+        <mountain:theHighest></mountain:theHighest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#stove -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#stove">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Monument"/>
+        <mountain:hasInscription rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#«Gora__Dzerzhinskaya._Vysshaya_tochka_Belorussii._Vysota_345_metrov_nad_urovnem_morya»."/>
+        <mountain:madeOf rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#granite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#western -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#western">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#PartOfTheWord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#1958 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#1958">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Year"/>
+        <mountain:renamedYear></mountain:renamedYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#1990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#1990">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number"/>
+        <mountain:installedYear></mountain:installedYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number"/>
+        <mountain:distanceFromMinsk></mountain:distanceFromMinsk>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#345 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#345">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Metre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Number"/>
+        <mountain:heightAboveSeaLevel></mountain:heightAboveSeaLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/polina/ontologies/2024/3/mountain#«Gora__Dzerzhinskaya._Vysshaya_tochka_Belorussii._Vysota_345_metrov_nad_urovnem_morya». -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#«Gora__Dzerzhinskaya._Vysshaya_tochka_Belorussii._Vysota_345_metrov_nad_urovnem_morya».">
+        <rdf:type rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#Text"/>
+        <mountain:hasLanguage rdf:resource="http://www.semanticweb.org/polina/ontologies/2024/3/mountain#BelarusianLanguage"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
