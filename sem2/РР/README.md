@@ -31,4 +31,7 @@
 текст
 ******
 
-   
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ad145413-1f07-430b-80d5-4fa28bf4f25f)
+
+текст
+******
