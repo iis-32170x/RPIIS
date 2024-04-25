@@ -26,12 +26,14 @@
 текст
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/c6f15c79-91d1-409d-9b3b-a6bf233202fb)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/30f0bdd3-9d71-4a5a-8e89-ccf0bc9b71a1)
+
 
 текст
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ad145413-1f07-430b-80d5-4fa28bf4f25f)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/43116f6d-4371-4a64-bb6e-a4f466d6b4ad)
+
 
 текст
 ******
