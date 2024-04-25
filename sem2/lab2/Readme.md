@@ -52,6 +52,7 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c73ad847-6b8c-413b-9cb0-a231ab7b1c59)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/bf5a1fbd-2135-4f95-910c-6d10595fe89e)
 
 
 ## <p align="center">Используемые источники:</p>
