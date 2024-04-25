@@ -45,14 +45,13 @@
 
 
 **Тесты:**
-
-**Тест баланса скобок**
  
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/ee7396fe-018f-4726-9710-fcb276fbdd52)
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/adefa863-2226-4892-85be-28da5820dcfd)
 
-  - Проверяет корректность баланса скобок в строках.
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c73ad847-6b8c-413b-9cb0-a231ab7b1c59)
+
 
 
 ## <p align="center">Используемые источники:</p>
