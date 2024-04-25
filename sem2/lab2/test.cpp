@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "..\StaticLib\pch.h"
+#include "..\CortProd\cortprod.h"
 using namespace std;
 
 int main() {
