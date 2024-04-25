@@ -48,7 +48,7 @@
 
 1. **`BracketsBalanceTest` - Тест баланса скобок**
    - Проверяет корректность баланса скобок в строках.
-
+https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%87_%D0%92/sem2/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-22%20220826.png
 
 
 ## <p align="center">Используемые источники:</p>
