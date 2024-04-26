@@ -72,7 +72,8 @@
 * Переменная _waves_list_tail получает в качестве значения созданный элемент списка, а переменная _new_wave – созданную волну.
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/b7ffc02f-d6a6-4101-a666-d48a3a483d2e)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f053aed7-012e-419c-95b1-2ffb4977bfe4)
+
 
 
 
