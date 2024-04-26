@@ -25,7 +25,8 @@
 
 ## Демонстрация алгоритма:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ba4255b0-6f74-4313-9406-4ded2d89ff49)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/20bc312b-ef15-42ec-bcc6-a5e5e6e84457)
+
 
 * _graph получит в качестве значения sc-узел неориентированного графа;
 ******
