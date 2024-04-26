@@ -57,8 +57,8 @@
 * Так как мы запустили новую волну, увеличиваем количество вершинных связностей на 1
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/2b9b3ef0-2bfd-40f6-bdc0-c6804be60a8c)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/bcf75e3c-98ba-4d92-b20a-7866f8ee6d5c)
 
 
 
