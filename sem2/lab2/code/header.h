@@ -1,235 +1,232 @@
 #pragma once
 #include <iostream>
-#include <cstring>
-#include <fstream>
-#include <sstream>
+#include <algorithm>
+#include <string>
 #include <unordered_map>
 #include <algorithm>
+#include <string>
+#include <vector>
+#include <unordered_set>
+#include <sstream>
 
-using namespace std;
-
-struct Node
+namespace setl
 {
-    string data;
-    Node* next;
-    Node* prev;
+
+    std::vector<std::string> parseString(std::string str, int start = 0, int finish = -1);
+
+    std::string vectorToString(std::vector<std::string> set);
+
 };
 
-Node* createNode(const string value)
+bool isEqual(std::string e1, std::string e2)
 {
-    Node* newNode = new Node;
-    newNode->data = value;
-    newNode->next = nullptr;
-    newNode->prev = nullptr;
-    return newNode;
+    if (e1[0] == '{' ^ e2[0] == '{')
+    {
+        return false;
+    }
+
+    if (e1[0] == '{') 
+    {
+        auto pe1 = setl::parseString(e1);
+        auto pe2 = setl::parseString(e2);
+        sort(pe1.begin(), pe1.end());
+        sort(pe2.begin(), pe2.end());
+        return pe1 == pe2;
+    }
+    return e1 == e2;
 }
 
-string trim(const string& str)
+void checkForBrackets(const std::string& str) 
 {
-    size_t start = str.find_first_not_of(" \t\n");
-    size_t end = str.find_last_not_of(" \t\n");
-    if (start == string::npos)
-        return "";
-    return str.substr(start, end - start + 1);
+    int curlyB = 0;
+    int tupleB = 0;
+    for (char ch : str) 
+    {
+        if (ch == '{') curlyB++;
+        else if (ch == '}') curlyB--;
+        else if (ch == '<') tupleB++;
+        else if (ch == '>') tupleB--;
+    }
+
+    if (curlyB > 0 || tupleB > 0)
+    {
+        throw std::runtime_error("Не удалось разобрать: есть незакрытые скобки");
+    }
+
+    if (curlyB < 0 || tupleB < 0)
+    {
+        throw std::runtime_error("Не удалось разобрать: есть нераскрытые скобки");
+    }
 }
 
-void add(Node*& begin, Node*& end, const string value)
+std::vector<std::string> setl::parseString(std::string str, const int start, int finish) 
 {
-    stringstream ss(value);
-    string item;
-    bool isCurlyBrace = false;
-    bool isAngleBracket = false;
+    if (finish == -1)
+    {
+        finish = str.size() - 1;
+    }
 
-        while (getline(ss, item, ','))
+    if (str[start] != '{')
+    {
+        throw std::runtime_error("Не удалось проанализировать: нет открывающейся скобки в " + std::to_string(start));
+    }
+
+    if (str[finish] != '}')
+    {
+        throw std::runtime_error("Не удалось проанализировать: нет закрывающей скобки в " + std::to_string(finish));
+    }
+
+    checkForBrackets(str);
+
+    // Удаляем пробелы
+    str.erase(
+        std::remove_if(
+            str.begin(), str.end(), [](char ch) { return ch == ' '; }
+        ), str.end()
+    );
+
+    // Удаляем внешние скобки из строки
+    str = str.substr(1, str.size() - 2);
+
+    std::string content;
+    std::vector<std::string> elements;
+    int depth = 0;
+    for (int i = 0; i <= str.size(); i++) 
+    {
+        if (str[i] == '<' || str[i] == '{') 
         {
-            item = trim(item);
-            isCurlyBrace = false;
-            isAngleBracket = false;
-
-            if (item.substr(0, 1) == "{")
-            {
-                string fullItem = item;
-
-                while (item.substr(item.length() - 1, 1) != "}")
-                {
-                    if (!getline(ss, item, ','))
-                    {
-                        // Если достигнут конец строки без закрывающей скобки,
-                        // считаем текущий элемент полным элементом
-                        break;
-                    }
-                    fullItem += ", " + trim(item);
-                }
-
-                item = fullItem;
-                isCurlyBrace = true;
-            }
-
-            if (item.substr(0, 1) == "<")
-            {
-                string fullItem1 = item;
-
-                while (item.substr(item.length() - 1, 1) != ">")
-                {
-                    if (!getline(ss, item, ','))
-                    {
-                        // Если достигнут конец строки без закрывающей скобки,
-                        // считаем текущий элемент полным элементом
-                        break;
-                    }
-                    fullItem1 += ", " + trim(item);
-                }
-
-                item = fullItem1;
-                isAngleBracket = true;
-            }
-
-            if (!item.empty())
-            {
-                if (item.front() == '{' && item.back() == '}' && !isCurlyBrace)
-                {
-                    // Если значение начинается и заканчивается фигурными скобками,
-                    // записываем его без изменений
-                    Node* newNode = createNode(item);
-                    if (end == nullptr)
-                    {
-                        begin = newNode;
-                        end = newNode;
-                    }
-                    else
-                    {
-                        end->next = newNode;
-                        newNode->prev = end;
-                        end = newNode;
-                    }
-                }
-
-                if (item.front() == '<' && item.back() == '>' && !isAngleBracket)
-                {
-                    // Если значение начинается и заканчивается скобками,
-                    // записываем его без изменений
-                    Node* newNode = createNode(item);
-                    if (end == nullptr)
-                    {
-                        begin = newNode;
-                        end = newNode;
-                    }
-                    else
-                    {
-                        end->next = newNode;
-                        newNode->prev = end;
-                        end = newNode;
-                    }
-                }
-                else
-                {
-                    stringstream subSS(item);
-                    string subItem;
-                    string fullItem;
-                    bool firstItem = true;
-
-                    while (getline(subSS, subItem, ','))
-                    {
-                        subItem = trim(subItem);
-                        if (!firstItem)
-                        {
-                            fullItem += ", ";
-                        }
-                        fullItem += subItem;
-                        firstItem = false;
-                    }
-
-                    Node* newNode = createNode(fullItem);
-                    if (end == nullptr)
-                    {
-                        begin = newNode;
-                        end = newNode;
-                    }
-                    else
-                    {
-                        end->next = newNode;
-                        newNode->prev = end;
-                        end = newNode;
-                    }
-                }
-            }
+            depth++;
+            content += str[i];
         }
-}
-
-void view(Node* begin, Node* end)
-{
-    Node* t = begin;
-    while (t != end)
-    {
-        cout << t->data << ", ";
-        t = t->next;
+        else if (str[i] == '>' || str[i] == '}') 
+        {
+            depth--;
+            content += str[i];
+        }
+        else if (depth != 0 || (str[i] != ',' && str[i] != '\0')) 
+        {
+            content += str[i];
+        }
+        else 
+        {
+            elements.emplace_back(content);
+            content = "";
+        }
     }
 
-    if (end)
-    {
-        cout << t->data;
-    }
+    return elements;
 }
 
-string sortString(string str)
+std::string setl::vectorToString(std::vector<std::string> set) 
 {
-    sort(str.begin() + 1, str.end() - 1);
+    std::string str = "{";
+
+    for (int i = 0; i < set.size(); i++) 
+    {
+        str += set[i];
+        if (i != set.size() - 1) 
+        {
+            str += ", ";
+        }
+    }
+    str += "}";
     return str;
 }
 
-void raznost(Node* begin, Node* begin1)
+std::string sortNestedSets(const std::string& nestedSet) 
 {
-    Node* q = begin;
-    Node* q1 = begin1;
-    unordered_map<string, int> countMap;
+    std::string sortedSet = nestedSet;
+    sortedSet.erase(std::remove(sortedSet.begin(), sortedSet.end(), '{'), sortedSet.end());
+    sortedSet.erase(std::remove(sortedSet.begin(), sortedSet.end(), '}'), sortedSet.end());
 
-    while (q1 != nullptr)
+    std::vector<std::string> elements;
+    std::stringstream ss(sortedSet);
+    std::string item;
+    while (std::getline(ss, item, ',')) 
     {
-        countMap[q1->data]++;
-        q1 = q1->next;
+        elements.push_back(item);
     }
 
-    int regularCount = 0;
-
-    while (q != nullptr)
+    // Рекурсивная сортировка элементов вложенных множеств
+    for (auto& element : elements) 
     {
-        bool isSubset = false;
-
-        if (q->data.substr(0, 1) == "{" && q->data.substr(q->data.length() - 1, 1) == "}")
+        if (element.substr(0, 1) == "{" && element.substr(element.length() - 1, 1) == "}") 
         {
-            string sortedQ = sortString(q->data);
+            element = sortNestedSets(element);
+        }
+    }
 
-            for (Node* subsetNode = begin1; subsetNode != nullptr; subsetNode = subsetNode->next)
+    // Удаляем пустые множества из элементов
+    elements.erase(std::remove_if(elements.begin(), elements.end(),
+        [](const std::string& element) 
+        {
+            return element.empty();
+        }),
+        elements.end());
+
+    std::sort(elements.begin(), elements.end());
+
+    sortedSet = "{";
+    for (const auto& element : elements) 
+    {
+        sortedSet += element + ",";
+    }
+    sortedSet.pop_back();
+    sortedSet += "}";
+
+    return sortedSet;
+}
+
+std::vector<std::string> setDifference(const std::vector<std::string>& set1, const std::vector<std::string>& set2) 
+{
+    std::unordered_map<std::string, int> countMap;
+
+    for (const auto& elem : set2) 
+    {
+        countMap[elem]++;
+    }
+
+    std::vector<std::string> difference;
+
+    for (const auto& elem : set1) 
+    {
+        if (elem.substr(0, 1) == "{" && elem.substr(elem.length() - 1, 1) == "}") 
+        {
+            bool isSubset = false;
+            std::string sortedElem = sortNestedSets(elem);
+
+            for (const auto& subsetElem : set2) 
             {
-                if (subsetNode->data.substr(0, 1) == "{" && subsetNode->data.substr(subsetNode->data.length() - 1, 1) == "}")
+                if (subsetElem.substr(0, 1) == "{" && subsetElem.substr(subsetElem.length() - 1, 1) == "}") 
                 {
-                    string sortedSubset = sortString(subsetNode->data);
+                    std::string sortedSubsetElem = sortNestedSets(subsetElem);
 
-                    if (sortedQ == sortedSubset && countMap[subsetNode->data] != 0)
+                    if (sortedElem == sortedSubsetElem && countMap[subsetElem] > 0) 
                     {
+                        countMap[subsetElem]--;
                         isSubset = true;
-                        countMap[subsetNode->data]--;
                         break;
                     }
                 }
+            }
+
+            if (!isSubset) 
+            {
+                difference.push_back(elem);
             }
         }
         else 
         {
-            regularCount++;
-
-            if (countMap[q->data] != 0)
+            if (countMap[elem] > 0) 
             {
-                countMap[q->data]--;
-                isSubset = true;
+                countMap[elem]--;
+            }
+            else 
+            {
+                difference.push_back(elem);
             }
         }
-
-        if (!isSubset)
-        {
-            cout << q->data << ", ";
-        }
-
-        q = q->next;
     }
+
+    return difference;
 }
