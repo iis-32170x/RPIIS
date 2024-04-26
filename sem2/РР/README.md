@@ -39,7 +39,8 @@
 вершин обрабатываемого графа.
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/bd544409-e559-436a-bc48-661f3bbc84cf)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/bb8815ae-4d1a-4542-ac32-4e25fb129028)
+
 
 
 
