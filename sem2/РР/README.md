@@ -32,7 +32,8 @@
 ******
 
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/c299ad3c-fdcd-4003-9532-c0f952175693)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/c4f7fa00-2eeb-4d66-bf4f-dc0ab9993154)
+
 
 
 * Переменная _not_checked_vertexes получит в качестве значения множество непроверенных
