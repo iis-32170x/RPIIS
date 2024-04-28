@@ -61,24 +61,6 @@ namespace setl
 
 };
 
-bool isEqual(std::string e1, std::string e2)
-{
-    if (e1[0] == '{' ^ e2[0] == '{')
-    {
-        return false;
-    }
-
-    if (e1[0] == '{') 
-    {
-        auto pe1 = setl::parseString(e1);
-        auto pe2 = setl::parseString(e2);
-        sort(pe1.begin(), pe1.end());
-        sort(pe2.begin(), pe2.end());
-        return pe1 == pe2;
-    }
-    return e1 == e2;
-}
-
 void checkForBrackets(const std::string& str) 
 {
     int curlyB = 0;
