@@ -119,7 +119,6 @@ public class BooleanFounder {
                 count++;
             }
 
-
             if (fileSet.charAt(i) == '>') {
                 count--;
             }
@@ -127,15 +126,54 @@ public class BooleanFounder {
         if (count != 0)
             return false;
 
-
-        for (int i = 1; i < fileSet.length() - 1; i++) {
+        for (int i = 0; i < fileSet.length(); i++) {
             if (fileSet.charAt(i) == '{') {
                 count++;
             }
 
-
             if (fileSet.charAt(i) == '}') {
                 count--;
+            }
+
+            if (count == 0 && i + 1 < fileSet.length() && i > 0) {
+                return false;
+            }
+
+        }
+        if (count != 0)
+            return false;
+
+        for (int i = 0; i < fileSet.length(); i++) {
+            if (fileSet.charAt(i) == '{' && fileSet.charAt(i + 1) == '}' && i == 0) {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == '>') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == ',' && fileSet.charAt(i + 1) == ',') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == ',') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == ',' && fileSet.charAt(i + 1) == '>') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == '{' && fileSet.charAt(i + 1) == '>') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == '}' && fileSet.charAt(i + 1) == '<') {
+                return false;
+            }
+
+            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == '}'){
+                return false;
             }
         }
         return count == 0;
