@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#beEqual -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#beEqual">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#beSimilar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#beSimilar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasSide -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasSide">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasVertex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasVertex">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#hasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#quadrangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#quadrangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#square -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#square">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#quadrangle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AB"/>
+        <untitled-ontology-2:hasLength>L/2</untitled-ontology-2:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#ABCD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#ABCD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#quadrangle"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#square"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AB"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BC"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BT"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CE"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#DP"/>
+        <untitled-ontology-2:hasLength>L</untitled-ontology-2:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AF"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CE"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#DP"/>
+        <untitled-ontology-2:hasLength>L</untitled-ontology-2:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:hasSide rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#AF"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#BT"/>
+        <untitled-ontology-2:beEqual rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#DP"/>
+        <untitled-ontology-2:hasLength>L</untitled-ontology-2:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CET -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CET">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle"/>
+        <untitled-ontology-2:beSimilar rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#FAP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#DP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#DP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#segment"/>
+        <untitled-ontology-2:hasLength>L</untitled-ontology-2:hasLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point"/>
+        <untitled-ontology-2:hasPoint rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#E"/>
+        <untitled-ontology-2:hasVertex rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#E"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#FAP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#FAP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#triangle"/>
+        <untitled-ontology-2:beSimilar rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#CET"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#FTEP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#FTEP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#polygon"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#quadrangle"/>
+        <untitled-ontology-2:hasVertex rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#E"/>
+        <untitled-ontology-2:hasVertex rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#T"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#T -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#T">
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Geometric_Figure"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#Point"/>
+        <untitled-ontology-2:hasPoint rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#T"/>
+        <untitled-ontology-2:hasVertex rdf:resource="http://www.semanticweb.org/максим/ontologies/2024/2/untitled-ontology-2#T"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
