@@ -1,0 +1,42 @@
+### Практическое занятие
+
+## 1-я Часть: формализация текста
+# Вариант 29
+
+Opel Astra G — компактный автомобиль фирмы Adam Opel GmbH сменивший Astra F в 1998 
+году. В Российской Федерации фирма GM-АВТОВАЗ начала производство Opel Astra G в 
+версии седан в 2004 году под названием Chevrolet Viva. В марте 2004 года производство было 
+прекращено из-за низкого спроса. В Украине автомобиль собирали на заводе АвтоЗАЗ с 2004 
+по конец 2008 года под названием Opel Astra Classic. Производство было остановлено из-за 
+нехватки мощностей на конвейере под другие модели. Автомобиль снабжён трёхточечными 
+ремнями безопасности, четырьмя подушками безопасности (две фронтальные и две боковые, 
+спрятанные в спинках передних сидений).
+
+# Формализация в редакторе баз знаний Protégé:
+- Классы
+  
+![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_48_40](https://github.com/iis-32170x/RPIIS/assets/144374775/ca38d144-2a76-4263-a886-2da309c8401e)
+
+- Отношение объектов
+
+![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_52_50](https://github.com/iis-32170x/RPIIS/assets/144374775/307a2e26-123c-477b-987e-5944e2a98746)
+
+- Отношение данных
+
+  ![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_54_01](https://github.com/iis-32170x/RPIIS/assets/144374775/151ace6b-54fe-4ca7-ac5d-021f00c5c62c)
+
+- Сущности
+
+![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_55_13](https://github.com/iis-32170x/RPIIS/assets/144374775/e391c7f0-274c-4654-861b-9336e0762e8d)
+
+
+# Формализация в редакторе KBE:
+
+![Opel gwf - KBE version 0 3 1  (integrator) 02 05 2024 18_56_55](https://github.com/iis-32170x/RPIIS/assets/144374775/1b621f86-d5b5-4ea8-a424-5be7a423451e)
+
+## 2-я Часть: формализация выражения
+# Вариант 12
+
+![Задание СР pdf и еще 1 страница — Личный_ Microsoft​ Edge 02 05 2024 19_00_21](https://github.com/iis-32170x/RPIIS/assets/144374775/aa1a6944-2581-42ac-b983-f616a73f855f)
+
+![Math_12 gwf - KBE version 0 3 1  (integrator) 02 05 2024 19_01_40](https://github.com/iis-32170x/RPIIS/assets/144374775/2a553913-9ba9-4588-a06c-61660c50a510)
