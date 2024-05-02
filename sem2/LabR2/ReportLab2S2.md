@@ -37,11 +37,11 @@
 
 ## Начальные значения тестов:
 
-![image](imgs/Test1Value.png)
+![image](imgs/Test1Values.png)
 
-![image](imgs/Test2Value.png)
+![image](imgs/Test2Values.png)
 
-![image](imgs/Test3Value.png)
+![image](imgs/Test3Values.png)
 
 ## Результаты:
 
