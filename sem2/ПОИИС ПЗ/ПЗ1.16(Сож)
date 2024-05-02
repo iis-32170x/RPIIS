@@ -22,9 +22,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#БытьРазрушенной -->
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ДатаРазрушения -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#БытьРазрушенной"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ДатаРазрушения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Система"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Война"/>
+    </owl:ObjectProperty>
     
 
 
@@ -64,20 +67,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПричинаРазрушения -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПричинаРазрушения">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Система"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Война"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПротекатьВ -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПротекатьВ">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Река_в_Европе"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Страна"/>
     </owl:ObjectProperty>
     
 
@@ -91,11 +86,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПротекатьПоТерритории -->
+    <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ШлюзоваяСистема -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ПротекатьПоТерритории">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#ШлюзоваяСистема">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Река_в_Европе"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Страна"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Система"/>
     </owl:ObjectProperty>
     
 
@@ -125,9 +120,7 @@
 
     <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Длина -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Длина">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Река_в_Европе"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Длина"/>
     
 
 
@@ -274,7 +267,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Сож">
         <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Река_в_Европе"/>
-        <untitled-ontology-2:БытьРазрушенной rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Шлюзовая_система"/>
         <untitled-ontology-2:Длина rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#648_км"/>
         <untitled-ontology-2:ДлинаПоБеларуси rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#493_км"/>
         <untitled-ontology-2:ИметьПриток rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Беседь"/>
@@ -283,15 +275,16 @@
         <untitled-ontology-2:ИметьПриток rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Остер"/>
         <untitled-ontology-2:ИметьПриток rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Проня"/>
         <untitled-ontology-2:ПлощадьВодосборногоБассейна rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#42100_км2"/>
+        <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Беларусь"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Ветка"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Гомель"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Кричев"/>
+        <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Россия"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Славгород"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Чериков"/>
         <untitled-ontology-2:ПротекатьВ rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Чечерск"/>
         <untitled-ontology-2:ПротекатьПоГранице rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Украина"/>
-        <untitled-ontology-2:ПротекатьПоТерритории rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Беларусь"/>
-        <untitled-ontology-2:ПротекатьПоТерритории rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Россия"/>
+        <untitled-ontology-2:ШлюзоваяСистема rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Шлюзовая_система"/>
     </owl:NamedIndividual>
     
 
@@ -299,7 +292,7 @@
     <!-- http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Украина -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Украина">
-        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Город"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Страна"/>
     </owl:NamedIndividual>
     
 
@@ -324,7 +317,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Шлюзовая_система">
         <rdf:type rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Система"/>
-        <untitled-ontology-2:ПричинаРазрушения rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Великая_Отечественная_война"/>
+        <untitled-ontology-2:ДатаРазрушения rdf:resource="http://www.semanticweb.org/josep/ontologies/2024/3/untitled-ontology-2#Великая_Отечественная_война"/>
     </owl:NamedIndividual>
     
 
