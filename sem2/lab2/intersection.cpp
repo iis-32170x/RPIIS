@@ -25,7 +25,7 @@ void spacetest(string first_set, string second_set) {
 		}
 	}
 }
-void setÑhecking(string first_set, string second_set) {
+void setÃ‘hecking(string first_set, string second_set) {
 	if (first_set[0] != '{' || first_set[first_set.length()-1] != '}') {
 		cout << "Set 1 is not one";
 		exit(0);
@@ -55,7 +55,6 @@ string intersection(string first_set, string second_set) {
 				element = "";
 			}
 		}
-		// ìîææíî äîáàâèòü if(temp1==0 && first_set[i] == '<') { temp2++; è òî æå ñàìîå ÷òî ñ ïåğâûì}
 		if (temp == 0 && first_set[i] != ',' && first_set[i] != '}' && first_set[i] != '>') {
 			element += first_set[i];
 		}
