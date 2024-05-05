@@ -63,4 +63,110 @@ void setСhecking(string first_set, string second_set) {
 ```
 
 Проводим операцию пересечения по следующему алгоритму:
-1.
+<br> 1. Записываем каждый элемент двух множеств в разные векторы.
+<br> 2. Сравниваем элементы этих векторов для дальнейшего записи в новое множество.
+
+```C++
+string intersection(string first_set, string second_set) {
+	string result = "{";
+	int temp = 0; //временная переменная для подсчета скобок
+	string element = ""; // элемент который бы будем пушить в векторы (временная переменная)
+	vector<string> first_set_element; 
+	vector<string> second_set_element;
+	for (int i = 1; i < first_set.length() - 1; i++) {
+		if (first_set[i] == '{' || first_set[i] == '<') {
+			temp++;
+		}  //если встречаем скобку прибовляем счетчик и пока счетчик не опустится до 0 все это будет считатся одной переменной
+		if (temp > 0) {
+			element += first_set[i];
+		}
+		if (first_set[i] == '}' || first_set[i] == '>') {
+			temp--;
+			if (temp == 0) {
+				first_set_element.push_back(element);
+				element = ""; //когда счетчик опускается пушим элемент в вектор
+			}
+		}
+		if (temp == 0 && first_set[i] != ',' && first_set[i] != '}' && first_set[i] != '>') {
+			element += first_set[i];
+		} //записываем эллементы в переменную пока не встретим запятую, потом пушим и очищаем
+		if (temp == 0 && (first_set[i] == ',' || first_set[i] == '}' || first_set[i] == '>')) {
+			if (!element.empty()) {
+				first_set_element.push_back(element);
+				element = "";
+			}
+		}
+		if (temp < 0) { //проверка на лишнюю закрывающуюся скобку
+			cout << "First set is incorrect, extra closing parenthesis" << endl;
+			cout << "Crossing is impossible" << endl;
+			exit(0);
+		}
+		if (i == first_set.length() - 1 && temp > 0) { //проверка на лишнюю открывающуюся скобку
+			cout << "First set is incorrect, extra opening parenthesis" << endl;
+			cout << "Crossing is impossible";
+			exit;
+		}
+	}
+
+	element = ""; //проделываем тоже самое для второго множества
+	for (int i = 1; i < second_set.length() - 1; i++) {
+		if (second_set[i] == '{' || second_set[i] == '<') {
+			temp++;
+		}
+		if (temp > 0) {
+			element += second_set[i];
+		}
+		if (second_set[i] == '}' || second_set[i] == '>') {
+			temp--;
+			if (temp == 0) {
+				second_set_element.push_back(element);
+				element = "";
+			}
+		}
+		if (temp == 0 && second_set[i] != ',' && second_set[i] != '}' && second_set[i] != '>') {
+			element += second_set[i];
+		}
+		if (temp == 0 && (second_set[i] == ',' || second_set[i] == '}' || second_set[i] == '>')) {
+			if (!element.empty()) {
+				second_set_element.push_back(element);
+				element = "";
+			}
+		}
+		if (temp < 0) {
+			cout << "Second set is incorrect, extra closing parenthesis" << endl;
+			cout << "Crossing is impossible" << endl;
+			exit(0);
+		}
+		if (i == second_set.length() - 1 && temp > 0) {
+			cout << "Second set is incorrect, extra opening parenthesis" << endl;
+			cout << "Crossing is impossible";
+		}
+	}
+	for (int i = 0; i < first_set_element.size(); i++) { //обычное прямое сравнивание эллемнтов и если раны то записываем в результирующую переменную
+		for (int j = 0; j < second_set_element.size(); j++) {
+			if (first_set_element[i] == second_set_element[j]) {
+				result = result + first_set_element[i] + ',';
+			}
+		}
+	}
+	result.pop_back();
+	result += '}';
+	return result; // возвращаем результирующее множество
+}
+```
+
+<h2>Тесты:</h2>
+Тест 1:
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/lab2/img/image.png?raw=true"></image>
+Tecn 2:
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/lab2/img/image%20(1).png?raw=true"></image>
+Tecт 3:
+<br> Set 1: {{1,a,b}{}}} (лишняя закрывающая скобка)
+<br> Set 2: {<a,b,c>,{a,b,c}}
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/lab2/img/image%20(2).png?raw=true"></image>
+Tecт 4: 
+<br> Set 1: {<a,b>, } (лишний пробел)
+<br> Set 2: <a,b>,a,0}
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/lab2/img/image%20(3).png?raw=true"></image>
+<h2>Вывод:</h2>
+<h4>Реализовали программу для выполнения пересечения множеств на языке С++</h4>
