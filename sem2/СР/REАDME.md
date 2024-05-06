@@ -36,6 +36,4 @@ Opel Astra G — компактный автомобиль фирмы Adam Opel 
 ## 2-я Часть: формализация выражения
 # Вариант 12
 
-![Задание СР pdf и еще 1 страница — Личный_ Microsoft​ Edge 02 05 2024 19_00_21](https://github.com/iis-32170x/RPIIS/assets/144374775/aa1a6944-2581-42ac-b983-f616a73f855f)
-
-![Math_12 gwf - KBE version 0 3 1  (integrator) 02 05 2024 19_01_40](https://github.com/iis-32170x/RPIIS/assets/144374775/2a553913-9ba9-4588-a06c-61660c50a510)
+![Math_12 gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_35_18](https://github.com/iis-32170x/RPIIS/assets/144374775/58d55d86-6cad-4611-ba89-5d0e3edcf953)
