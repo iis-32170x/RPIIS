@@ -21,37 +21,33 @@
 ![image.png](media/image.png)
 
 ### Демонстрация работы программы в семантической памяти
-1. Задаём граф, переменные `path`, `times`, `current` и `initial`
-![image-1.png](media/image-1.png)
+1. Задаём граф, переменные `path`, `_visited_vertexes_count`, `current` и `initial`
+![alt text](media/image-0.png)
 
 
 2. Создаём первую волну, указывающую на вершину графа.
-![image-2.png](media/image-2.png)
-
+![alt text](media/image-1.png)
 
 3. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `times`.
-![image-3.png](media/image-3.png)
-
+![alt text](media/image-2.png)
 
 4. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `times`.
-![image-4.png](media/image-4.png)
-
+![alt text](media/image-3.png)
 
 5. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `times`.
-![image-5.png](media/image-5.png)
-
+![alt text](media/image-4.png)
 
 6. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `times`.
-![image-6.png](media/image-6.png)
-
+![alt text](media/image-5.png)
 
 7. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `times`.
-![image-7.png](media/image-7.png)
+![alt text](media/image-6.png)
 
+8. Генерация пути:
+![alt text](media/image-7.png)
 
-8. `current` = `initial`, значит удаляем список волн. `_path` = `times`, алгоритм выполнен.
-![image-8.png](media/image-8.png)
-
+9. `current` = `initial`, а также `_path` = `_visited_vertexes_count`, значит мы прошли по всем вершинам и вернулись в изначальную, алгоритм выполнен.
+![alt text](media/image-8.png)
 
 
 # Вывод
