@@ -27,12 +27,11 @@ Opel Astra G — компактный автомобиль фирмы Adam Opel 
 
 - Сущности
 
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_55_13](https://github.com/iis-32170x/RPIIS/assets/144374775/e391c7f0-274c-4654-861b-9336e0762e8d)
-
+![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  06 05 2024 11_33_44](https://github.com/iis-32170x/RPIIS/assets/144374775/ae31b044-4056-4c08-8b9d-e319faed68b5)
 
 # Формализация в редакторе KBE:
 
-![Opel gwf - KBE version 0 3 1  (integrator) 02 05 2024 18_56_55](https://github.com/iis-32170x/RPIIS/assets/144374775/1b621f86-d5b5-4ea8-a424-5be7a423451e)
+![Opel gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_26_43](https://github.com/iis-32170x/RPIIS/assets/144374775/f0285366-89d1-4905-ad8f-17d59c375a64)
 
 ## 2-я Часть: формализация выражения
 # Вариант 12
