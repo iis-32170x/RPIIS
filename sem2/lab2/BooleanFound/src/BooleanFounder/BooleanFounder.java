@@ -114,6 +114,7 @@ public class BooleanFounder {
 
         if (fileSet.isEmpty() || fileSet.charAt(0) != '{' || fileSet.charAt(fileSet.length() - 1) != '}')
             return false;
+
         for (int i = 1; i < fileSet.length() - 1; i++) {
             if (fileSet.charAt(i) == '<') {
                 count++;
@@ -143,39 +144,54 @@ public class BooleanFounder {
         if (count != 0)
             return false;
 
-        for (int i = 0; i < fileSet.length(); i++) {
-            if (fileSet.charAt(i) == '{' && fileSet.charAt(i + 1) == '}' && i == 0) {
+        for (int i = 1; i < fileSet.length(); i++) {
+
+            if (fileSet.charAt(i) == '>' && fileSet.charAt(i - 1) == '<') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == '>') {
+            if (fileSet.charAt(i) == ',' && fileSet.charAt(i - 1) == ',') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == ',' && fileSet.charAt(i + 1) == ',') {
+            if (fileSet.charAt(i) == ',' && fileSet.charAt(i - 1) == '<') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == ',') {
+            if (fileSet.charAt(i) == '>' && fileSet.charAt(i - 1) == ',') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == ',' && fileSet.charAt(i + 1) == '>') {
+            if (fileSet.charAt(i) == '>' && fileSet.charAt(i - 1) == '{') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == '{' && fileSet.charAt(i + 1) == '>') {
+            if (fileSet.charAt(i) == '<' && fileSet.charAt(i - 1) == '}') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == '}' && fileSet.charAt(i + 1) == '<') {
+            if (fileSet.charAt(i) == '}' && fileSet.charAt(i - 1) == '<') {
                 return false;
             }
 
-            if (fileSet.charAt(i) == '<' && fileSet.charAt(i + 1) == '}'){
+            if ((fileSet.charAt(i) != '}' && fileSet.charAt(i) != ',') && fileSet.charAt(i - 1) == '}') {
                 return false;
+            }
+
+            if (fileSet.charAt(i) != ',' && fileSet.charAt(i - 1) == '>') {
+                return false;
+            }
+
+            if (i >= 2) {
+                if (fileSet.charAt(i) == ' ' && Character.isLetter(fileSet.charAt(i - 1))) {
+                    return false;
+                }
+            } else {
+                if (Character.isLetter(fileSet.charAt(i)) && fileSet.charAt(0) != '{' ) {
+                    return false;
+                }
             }
         }
-        return count == 0;
+        return true;
     }
 }
