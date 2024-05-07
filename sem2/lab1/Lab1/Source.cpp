@@ -1,5 +1,8 @@
 #include "Header.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 using namespace Y;
 using namespace std;
 
@@ -129,4 +132,30 @@ bool Deck::check() {
 	else {
 		return false;
 	}
+}
+
+Deck* Y::Deck::file()
+{
+	std::ifstream file("tests.txt");
+	if (!file) {
+		std::cerr << "Файл не найден." << std::endl;
+		exit(0);
+	}
+	std::string line;
+	std::getline(file, line);
+	std::istringstream iss(line);
+	Y::Deck* deck = this; Deck* buff = nullptr;
+	int number;
+	deck->prev = nullptr;
+	while (iss >> number) {
+		deck->val = number;
+		buff = new Deck;
+		buff->prev = deck;
+		deck->next = buff;
+		deck = buff;
+	}
+	deck = deck->prev; deck->next = nullptr;
+	return deck;
+
+
 }

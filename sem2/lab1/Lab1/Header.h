@@ -9,6 +9,7 @@ namespace Y {
 		 Deck* delback();
 		 Deck* crtdeck();
 		 bool check();
+		 Deck* file();
 	private:
 		int val;
 		Deck* next;
