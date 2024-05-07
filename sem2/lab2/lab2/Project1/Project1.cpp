@@ -4,7 +4,7 @@
 #include <fstream>
 using namespace Y;
 std::string set::check(std::string mnvo) {
-	bool inword = false; stack* skob = nullptr; stack* buf = new stack; int ind1 = 0; int ind2 = 0;
+	bool inword = false;  int ind1 = 0; int ind2 = 0; int skb = 0;
 	for (size_t i = 0; i < mnvo.length(); ++i) {
 		if ((mnvo[i] == '{' || mnvo[i] == ',') && inword == true) {
 			inword = false;
@@ -37,25 +37,14 @@ std::string set::check(std::string mnvo) {
 	if (mnvo[0] != '{') {
 		return "";
 	}
-	skob = new stack;
-	skob->next = nullptr;
-	skob->znak = '{';
-	buf = new stack;
-	buf->next = skob;
-	skob = buf;
+	skb++;
 	for (int i = 1; i < mnvo.length(); i++) {
 		if (mnvo[i] == '}') {
-			skob = skob->next;
-			delete buf;
-			buf = skob;
-			if (skob == nullptr)
-				return "";
+			skb--;
+			
 		}
 		else if (mnvo[i] == '{') {
-			skob->znak = '{';
-			buf = new stack;
-			buf->next = skob;
-			skob = buf;
+			skb++;
 		}
 		if (mnvo[i - 1] == '}' && mnvo[i] == '{')
 			return "";
@@ -72,10 +61,18 @@ std::string set::check(std::string mnvo) {
 		else if (mnvo[i] != '{' && mnvo[i] != '}' && mnvo[i] != ',' && i + 2 < mnvo.length()) {
 			if (mnvo[i + 2] == '{' && mnvo[i + 1] == ' ')
 				return "";
-		}
+		}else
+			if (mnvo[i] == '}' && i + 2 < mnvo.length()) {
+				if (mnvo[i + 1] == ' ' && mnvo[i + 2] != ',' && mnvo[i + 2] != '{' && mnvo[i + 2] != '}'&&mnvo[i+2]!=' ')
+					return "";
+			}
 	}
 	if (mnvo[strlen(mnvo.c_str()) - 1] != '}')
 		return "";
+	if (skb != 0)
+		return"";
+
+
 	return mnvo;
 }
 element* set::Insert(element* node,std::string a) {
@@ -199,6 +196,9 @@ void set:: input() {
 agn:
 		std::cout << "Введите множество:";
 		std::getline(std::cin, mnvo);
+		if (mnvo.empty()) {
+			goto agn;
+		}
 		mnvo = check(mnvo);
 		if (mnvo == "") {
 			goto agn;
@@ -433,16 +433,18 @@ bool set::subset(element* A, element* B) {
 			if (A->field == B->field && A->side==nullptr&&B->side==nullptr&&A->mult==B->mult) {
 				goto next;
 			}
-			else if (A->field == B->field && A->side != nullptr && B->side != nullptr && A->mult == B->mult) {
+			else if (A->field == B->field && A->side != nullptr && B->side != nullptr) {
 				buff1 = A;
 				buff2 = B;
 				if (subset(A, B) == false) {
 					A = buff1; B = buff2;
-					return false;
 				}
 				else {
 					A = buff1; B = buff2;
-					goto next;
+					if (A->mult == B->mult)
+						goto next;
+					else
+						return false;
 				}
 			}
 			B = B->next;
@@ -450,16 +452,18 @@ bool set::subset(element* A, element* B) {
 		if (A->field == B->field && A->side == nullptr && B->side == nullptr && A->mult == B->mult) {
 			goto next;
 		}
-		else if (A->field == B->field && A->side != nullptr && B->side != nullptr && A->mult == B->mult) {
+		else if (A->field == B->field && A->side != nullptr && B->side != nullptr ) {
 			buff1 = A;
 			buff2 = B;
 			if (subset(A, B) == false) {
 				A = buff1; B = buff2;
-				return false;
 			}
 			else {
 				A = buff1; B = buff2;
-				goto next;
+				if (A->mult == B->mult)
+					goto next;
+				else
+					return false;
 			}
 		}
 		return false;
@@ -471,16 +475,18 @@ bool set::subset(element* A, element* B) {
 			if (A->field == B->field && A->side == nullptr && B->side == nullptr && A->mult == B->mult) {
 				return true;
 			}
-			else if (A->field == B->field && A->side != nullptr && B->side != nullptr && A->mult == B->mult) {
+			else if (A->field == B->field && A->side != nullptr && B->side != nullptr ) {
 				buff1 = A;
 				buff2 = B;
 				if (subset(A, B) == false) {
 					A = buff1; B = buff2;
-					return false;
 				}
 				else {
 					A = buff1; B = buff2;
-					return true;
+					if (A->mult == B->mult)
+						return true;
+					else
+						return false;
 				}
 			}
 			B = B->next;
@@ -496,7 +502,10 @@ bool set::subset(element* A, element* B) {
 			}
 			else {
 				A = buff1; B = buff2;
-				return true;
+				if (A->mult == B->mult)
+					return true;
+				else
+					return false;
 			}
 		}
 		else {

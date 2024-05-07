@@ -1,10 +1,7 @@
 #pragma once
 #include <string>
 namespace Y {
-	struct stack {
-		char znak;
-		stack* next;
-	};
+	
 	struct element {
 		element* next = nullptr;
 		element* prev = nullptr;
