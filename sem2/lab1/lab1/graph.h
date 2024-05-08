@@ -83,7 +83,7 @@ public:
         }
 
         numVertex--;
-        if (numVertex >= 0 && numVertex <= n)
+        if (numVertex >= 0 && numVertex < n)
         {
             for (int i = matrix[0].size() - 1; i >= 0 ; i--)
             {
@@ -209,8 +209,9 @@ public:
         }
         queue<int> q;
         q.push(firstVertex);
-        vector<int> d(n, -1);
-        vector<int> count(n, 0);
+        vector<int> d(n, -1); //посещенность вершины
+        vector<int> arcs(m, -1); // посещенность дуги
+        vector<int> count(n, 0); // счетчик для количества посещений каждой вершины
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
@@ -233,6 +234,7 @@ public:
         d[firstVertex] = -1;
         while(!q.empty())
         {
+
             int v = q.front();
             q.pop();
             for (int u = 0; u < m; u++) //u является индексом дуги в данной вершине
@@ -243,21 +245,26 @@ public:
                     {
                         if (matrix[k][u] == -1) //поиск вершины у которой в данном индексе u значение -1
                         {
-                           if (d[k] == -1)
-                           {
-                               q.push(k);
-                               if (count[k] == 0)
-                               {
+                            if (arcs[u] == -1)
+                            {
+                                arcs[u]++;
+                                if (d[k] == -1)
+                                {
+                                    q.push(k);
+                                    if (count[k] == 0)
+                                    {
 
-                                   d[k]++;
-                               }
-                               else
-                               {
-                                   count[k]--;
-                                   cout << "Из вершины " << v + 1 << " в вершину " << k + 1 << endl;
-                               }
+                                        d[k]++;
+                                    }
+                                    else
+                                    {
+                                        count[k]--;
+                                        cout << "Из вершины " << v + 1 << " в вершину " << k + 1 << endl;
+                                    }
 
-                           }
+                                }
+                            }
+                           
                         }
                     }
                 }
