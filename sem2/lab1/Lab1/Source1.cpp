@@ -20,8 +20,12 @@ int main() {
 		break;
 	case 2:
 		exmpl->crtdeck();
+
 	}
 	exmpl->output();
+	Deck* end = exmpl;
+	while (end->next != nullptr)
+		end = end->next;
 	again:
 	cout <<endl<< "1.Удалить с конца" << endl << "2.Удалить с начала" << endl << "3.Добавить в конец" << endl << "4.Добавить в начало" << endl << "5.Просмотреть" << endl << "6.Закончить";
 	cin >> choice;
@@ -33,22 +37,24 @@ int main() {
 	}
 	switch (choice) {
 	case 1:
-		exmpl->delback();
-		if (exmpl->check() == true) {
+		exmpl->delback(end,exmpl);
+		if (end == nullptr) {
+			exmpl = nullptr;
 			break;
 		}
 		goto again;
 	case 2:
-		exmpl->delfront();
-		if (exmpl->check()==true) {
+		exmpl->delfront(exmpl);
+		if (exmpl==nullptr)
+		{
 			break;
 		}
 		goto again;
 	case 3:
-		exmpl->addback();
+		exmpl->addback(end);
 		goto again;
 	case 4:
-		exmpl->addfront();
+		exmpl->addfront(exmpl);
 		goto again;
 	case 5:
 		exmpl->output();
@@ -56,10 +62,8 @@ int main() {
 	case 6:
 		break;
 	}
-	while (exmpl->check() == false) {
-		exmpl->delfront();
-		exmpl->output();
+	while (exmpl!=nullptr&&end!=nullptr) {
+		exmpl->delfront(exmpl);
 	}
-	delete exmpl;
 	return 0;
 }

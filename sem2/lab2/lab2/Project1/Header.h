@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 namespace Y {
-	
 	struct element {
 		element* next = nullptr;
 		element* prev = nullptr;
@@ -24,6 +23,5 @@ namespace Y {
 		element* multiplicity(element* mnvo);
 		set** file(set**& mnvo,int& countr);
 		element* root = nullptr;
-
 	};
 }

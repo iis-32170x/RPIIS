@@ -29,19 +29,22 @@ std::string set::check(std::string mnvo) {
 			i += -2;
 		}
 	}
-	if (mnvo[strlen(mnvo.c_str()) - 1] == ' ')
-		mnvo.erase(strlen(mnvo.c_str()) - 1, 1);
+	if (mnvo[mnvo.length() - 1] == ' ')
+		mnvo.erase(mnvo.length() - 1, 1);
 	if (mnvo[0] == ' ')
 		mnvo.erase(0, 1);
-	//std::cout << mnvo;
 	if (mnvo[0] != '{') {
 		return "";
 	}
+	if (mnvo[mnvo.length()-1] != '}')
+		return "";
 	skb++;
 	for (int i = 1; i < mnvo.length(); i++) {
 		if (mnvo[i] == '}') {
 			skb--;
-			
+			if (skb == 0 && i != mnvo.length() - 1) {
+				return "";
+			}
 		}
 		else if (mnvo[i] == '{') {
 			skb++;
@@ -67,12 +70,8 @@ std::string set::check(std::string mnvo) {
 					return "";
 			}
 	}
-	if (mnvo[strlen(mnvo.c_str()) - 1] != '}')
-		return "";
 	if (skb != 0)
 		return"";
-
-
 	return mnvo;
 }
 element* set::Insert(element* node,std::string a) {
@@ -162,7 +161,7 @@ element* set::Insert(element* node,std::string a) {
 				if (a.length() == 2) {
 					return buff;
 				}
-				a = a.substr(1, a.length() - 2);//hgjg
+				a = a.substr(1, a.length() - 2);
 			}
 			else
 				if (a[0] == '{' && node == nullptr && a[1] == '}') {
@@ -175,7 +174,6 @@ cycle:
 		if (a[a.length() - i] == '}') {
 			while (buff->prevside == nullptr && buff->prev != nullptr) {
 				buff = buff->prev;
-				//std::cout << buff->field<<std::endl;
 			}
 			if (buff->prevside != nullptr)
 				buff = buff->prevside;
@@ -223,7 +221,6 @@ agn:
 							ind2--;
 						}
 					root = Insert(root, mnvo.substr(ind1, ind2));
-					//std::cout << mnvo[ind]->root->field << std::endl;
 				}
 			}
 			while (root->prev != nullptr)
@@ -301,7 +298,6 @@ element* Y::set::multiplicity(element* mnvo){
 			}
 		}
 		buff = mnvo; 
-		//std::cout << mnvo->field<<std::endl;
 		while (mnvo != nullptr) {
 			buff1 = mnvo;
 			if (mnvo->side!=nullptr) {
@@ -329,25 +325,13 @@ element* Y::set::multiplicity(element* mnvo){
 			if(buff->next!=nullptr)
 			buff = buff->next;
 		}
-	
-	/*
-	for (int i = 0; i < n; i++) {
-		while(mnvo[i]->root->prev!=nullptr)
-		mnvo[i]->root = mnvo[i]->root->prev;
-		while (mnvo[i]->root->next != nullptr) {
-			std::cout << mnvo[i]->root->mult << "   " << mnvo[i]->root->field << std::endl;
-			mnvo[i]->root = mnvo[i]->root->next;
-		}
-		std::cout << mnvo[i]->root->mult << "   " << mnvo[i]->root->field << std::endl;
-	}
-	*/
 	return mnvo;
 }
 set** Y::set::file(set**& mnvo,int& countr)
 {
 	std::string mnv; 
 	 int ind = 0; int ind1 = 0; int ind2 = 0;
-	std::ifstream file("sets7.txt");
+	std::ifstream file("sets6.txt");
 	if (file.is_open()) {
 		while (std::getline(file, mnv)) {
 			if (!mnv.empty()) { 
@@ -388,7 +372,6 @@ set** Y::set::file(set**& mnvo,int& countr)
 								}
 
 								mnvo[ind]->root = Insert(mnvo[ind]->root, mnv.substr(ind1, ind2));
-								//std::cout << mnvo[ind]->root->field << std::endl;
 							}
 						}
 						while (mnvo[ind]->root->prev != nullptr)
@@ -554,13 +537,13 @@ set** set::Obed(set** mnvo,int n) {
 				goto next;
 			}
 			//insert in mnvo[0],remove in mnvo[i]
-			if(mnvo[i]->root->prev!=nullptr)
-			mnvo[i]->root->prev->next = mnvo[i]->root->next;
+			if (mnvo[i]->root->prev != nullptr) 
+			   mnvo[i]->root->prev->next = mnvo[i]->root->next;
 			if(mnvo[i]->root->next!=nullptr)
-			mnvo[i]->root->next->prev = mnvo[i]->root->prev;
+			   mnvo[i]->root->next->prev = mnvo[i]->root->prev;
 			mnvo[0]->root->next = mnvo[i]->root;
 			if(mnvo[i]->root->prev!=nullptr)
-			mnvo[i]->root = mnvo[i]->root->prev;
+			   mnvo[i]->root = mnvo[i]->root->prev;
 			else {
 				mnvo[i]->root = mnvo[i]->root->next;
 				mnvo[0]->root->next->prev = mnvo[0]->root;
