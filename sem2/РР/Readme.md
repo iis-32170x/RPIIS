@@ -19,5 +19,5 @@
 2. Пользователь выбирает вершину для нахождения смежности (предположим, A), заносим ее в переменную vertex.
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/16a3a7fb-f7bf-4679-8b0d-6cb79737c0be)
 
-3. Запмсывем смежные вершины в переменную vertexNeigbourhood.
+3. Записывем смежные вершины в переменную vertexNeigbourhood.
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/7f741bdf-ce2d-4d97-9f14-8633a866f14d)
