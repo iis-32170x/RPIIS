@@ -145,14 +145,12 @@ multiset<string> unionSets(const string& file_path) {
     }
 
     string line;
-    multiset<string> result;  
-    bool firstSet = true;
+    set<string> tempSet;  // Use a set to automatically remove duplicates
 
     while (getline(file, line)) {
         line = trim(line);
         line = line.substr(3, line.length() - 4);
 
-        multiset<string> currentSet;
         string element;
         line += ',';
         for (int i = 0; i < line.size(); i++) {
@@ -160,7 +158,7 @@ multiset<string> unionSets(const string& file_path) {
                 int end = find_next_bracker(line, i) - 1;
                 i++;
                 string str = line.substr(i, end - i + 1);
-                currentSet.insert(sets(str));
+                tempSet.insert(sets(str));
                 i = end + 2;
                 element = "";
                 continue;
@@ -169,7 +167,7 @@ multiset<string> unionSets(const string& file_path) {
                 int end = find_next_bracker(line, i) - 1;
                 i++;
                 string str = line.substr(i, end - i + 1);
-                currentSet.insert(corteges(str));
+                tempSet.insert(corteges(str));
                 i = end + 2;
                 element = "";
                 continue;
@@ -179,23 +177,14 @@ multiset<string> unionSets(const string& file_path) {
                 element += line[i];
             }
             else {
-                currentSet.insert(element);
+                tempSet.insert(element);
                 element = "";
-            }
-        }
-
-        if (firstSet) {
-            result = currentSet;
-            firstSet = false;
-        }
-        else {
-           
-            for (const string& elem : currentSet) {
-                result.insert(elem);
             }
         }
     }
 
     file.close();
-    return result;
+
+    // Convert the set to a multiset and return
+    return multiset<string>(tempSet.begin(), tempSet.end());
 }
