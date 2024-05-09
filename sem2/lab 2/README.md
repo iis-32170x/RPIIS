@@ -135,8 +135,10 @@ string corteges(string s) {
 string sets(string s) {
     s += ',';
     string result;
-    multiset <string> elements;
+    multiset<string> elements;
     string element;
+    bool isCommaExpected = false;  // Flag to track if a comma is expected between elements
+
     for (int i = 0; i < s.size(); i++) {
         if (s[i] == '{') {
             int end = find_next_bracker(s, i) - 1;
@@ -145,6 +147,7 @@ string sets(string s) {
             elements.insert(sets(str));
             i = end + 2;
             element = "";
+            isCommaExpected = true;  // After a nested set, a comma is expected
             continue;
         }
         if (s[i] == '<') {
@@ -154,22 +157,33 @@ string sets(string s) {
             elements.insert(corteges(str));
             i = end + 2;
             element = "";
+            isCommaExpected = true;  // After a nested tuple, a comma is expected
             continue;
         }
 
         if (s[i] != ',') {
             element += s[i];
-        }
-        else {
+        } else {
+            if (element.empty()) {
+                cout << "Ошибка: неправильно написаны множества." << endl;
+                return "";
+            }
+            if (isCommaExpected) {
+                cout << "Ошибка: неправильно написаны множества." << endl;
+                return "";
+            }
             elements.insert(element);
             element = "";
+            isCommaExpected = true;  // After an element, a comma is expected
         }
     }
 
-    for (string i : elements) {
+    for (const string& i : elements) {
         result += i + ", ";
     }
-    result.erase(result.size() - 2, 2);
+    if (!result.empty()) {
+        result.erase(result.size() - 2, 2);
+    }
     result = '{' + result + '}';
     return result;
 }
@@ -185,59 +199,65 @@ multiset<string> unionSets(const string& file_path) {
     }
 
     string line;
-    multiset<string> result;  
-    bool firstSet = true;
+    set<string> tempSet;  // Use a set to automatically remove duplicates
 
     while (getline(file, line)) {
         line = trim(line);
         line = line.substr(3, line.length() - 4);
 
-        multiset<string> currentSet;
         string element;
-        line += ',';
+        bool isCommaExpected = false;  // Flag to track if a comma is expected between elements
+
         for (int i = 0; i < line.size(); i++) {
             if (line[i] == '{') {
                 int end = find_next_bracker(line, i) - 1;
                 i++;
                 string str = line.substr(i, end - i + 1);
-                currentSet.insert(sets(str));
+                string setElement = sets(str);
+                if (!setElement.empty()) {
+                    tempSet.insert(setElement);
+                }
                 i = end + 2;
                 element = "";
+                isCommaExpected = true;  // After a nested set, a comma is expected
                 continue;
             }
             if (line[i] == '<') {
                 int end = find_next_bracker(line, i) - 1;
                 i++;
                 string str = line.substr(i, end - i + 1);
-                currentSet.insert(corteges(str));
+                string setElement = corteges(str);
+                if (!setElement.empty()) {
+                    tempSet.insert(setElement);
+                }
                 i = end + 2;
                 element = "";
+                isCommaExpected = true;  // After a nested tuple, a comma is expected
                 continue;
             }
 
             if (line[i] != ',') {
                 element += line[i];
-            }
-            else {
-                currentSet.insert(element);
+            } else {
+                if (element.empty()) {
+                    cout << "Ошибка: неправильно написаны множества." << endl;
+                    continue;
+                }
+                if (isCommaExpected) {
+                    cout << "Ошибка: неправильно написаны множества." << endl;
+                    continue;
+                }
+                tempSet.insert(element);
                 element = "";
-            }
-        }
-
-        if (firstSet) {
-            result = currentSet;
-            firstSet = false;
-        }
-        else {
-           
-            for (const string& elem : currentSet) {
-                result.insert(elem);
+                isCommaExpected = true;  // After an element, a comma is expected
             }
         }
     }
 
     file.close();
-    return result;
+
+    // Convert the set to a multiset and return
+    return multiset<string>(tempSet.begin(), tempSet.end());
 }
 ```
 Функция unionSets считывает содержимое файла по указанному пути file_path и выполняет объединение множеств, представленных в файле. Она возвращает объединенное множество в виде multiset.
