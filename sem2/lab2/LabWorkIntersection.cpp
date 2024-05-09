@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
@@ -45,18 +45,32 @@ vector<string> readSets(string path) {
                     close++;
             }
             if (open != close) {
-                cout << "Check input for correctness!" << endl;
-                cout << "Number of '{' is not equal to number of '}'" << endl;
+                cout << "Проверьте правильность ввода!" << endl;
+                cout << "Количество '{' не равно количеству '}'" << endl;
                 exit(0);
             }
             sets.push_back(dataAfterEqualSign);
             if (line == 0) {
 
-                cout << "Check input for correctness!" << endl;
+                cout << "Проверьте правильность ввода!" << endl;
                 exit(0);
                 break;
             }
+
+            for (int i = 0; i < dataAfterEqualSign.length(); i++) {
+
+                if ((dataAfterEqualSign[i] == '}' && dataAfterEqualSign[i-1] == ',')|| (dataAfterEqualSign[i] == ',' && dataAfterEqualSign[i-1] == ',')) {
+                    cout << "Проверьте правильность ввода!" << endl;
+                    exit(0);
+                }
+                if ((dataAfterEqualSign[i] == '}' && dataAfterEqualSign[i + 1] != ',') && (dataAfterEqualSign[i] == '}' && dataAfterEqualSign[i + 1] != '}')&& (i != dataAfterEqualSign.size() - 1)) {
+                    cout << "Проверьте правильность ввода!" << endl;
+                    exit(0);
+                }
+            }
         }
+
+
     }
     return sets;
 }
@@ -135,23 +149,35 @@ vector <vector<string>> subsets(vector <string> sets) {
 
 string intersection(vector<string>& set1, vector<string>& set2) {
     string result;
-    int count = 1;
+    int count = 0;
     vector<string> copy;
     vector<string> copy1;
     vector<string> copy2;
     bool isFirstElement = true;
     auto iter = set1.begin();
     auto iter2 = set2.begin();
-    while (iter != set1.end()) {
-        if ((find(set2.begin(), set2.end(), *iter) != set2.end())) {
-            if (!isFirstElement) {
-                result += ",";
+    while (iter != set1.end()&&!set1.empty()&& !set2.empty()) {
+        while (iter2 != set2.end()) {
+            if (*iter == *iter2) {
+                if (!isFirstElement) {
+                    result += ",";
+                }
+                result += *iter;
+                isFirstElement = false;
+
+                iter2 = set2.erase(iter2);
+                break;
             }
-            result += *iter;
-            isFirstElement = false;
-            iter = set1.erase(iter);
+            if ((*iter2).size() == 1 || (*iter2)[0] == '<') {
+                iter2 = set2.erase(iter2);
+            }
+            else {
+                iter2++;
+            }
+            
         }
-        else if ((*iter).size() == 1 || (*iter)[0] == '<') {
+        
+        if ((*iter).size() == 1 || (*iter)[0] == '<') {
             iter = set1.erase(iter);
         }
         else {
@@ -159,27 +185,21 @@ string intersection(vector<string>& set1, vector<string>& set2) {
         }
     }
 
-    while (iter2 != set2.end()) {
-        
-        if ((*iter2).size() == 1 || (*iter2)[0] == '<') {
-            iter2 = set2.erase(iter2);
-        }
-        else {
-            iter2++;
-        }
+    if (set1.empty() || set2.empty()) {
+        return result;
     }
 
 
-    if (!set1.empty()) {
+
+    if (!set1.empty()&&!set2.empty()) {
 
        
         for (const auto& element1 : set1) {
             auto copy1 = parseSet(element1);
-       
-       
-            for (const auto& element2 : set2) {
-                auto copy2 = parseSet(element2);
-            
+
+            for (auto it = set2.begin(); it != set2.end();) {
+                auto copy2 = parseSet(*it);
+
                 auto intersected = intersection(copy1, copy2);
                 if (intersected == element1) {
                     if (intersected == "{}") {
@@ -190,13 +210,16 @@ string intersection(vector<string>& set1, vector<string>& set2) {
                     }
                     result += intersected;
 
+                    it = set2.erase(it); 
                 }
-                copy2.clear();
+                else {
+                    ++it;
+                }
 
-      
+            
             }
-            copy1.clear();
 
+            copy1.clear();
         }
 
     }
@@ -208,6 +231,7 @@ string intersection(vector<string>& set1, vector<string>& set2) {
 }
 
 int main()
+
 {   size_t pos = 1;
     int sets_q = 0;
     string path = "C:\\Users\\golov\\source\\repos\\LabWorkIntersection\\LabWorkIntersection\\set.txt";
@@ -227,4 +251,3 @@ int main()
     cout << " - РЕЗУЛЬТАТ" << endl;
 
 }
-
