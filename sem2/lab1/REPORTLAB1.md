@@ -1,0 +1,297 @@
+### План:
+- цель;
+- задачу;
+- список используемых понятий с указанием источников;
+- описание алгоритмов с указанием источников;
+- результаты тестирования (изображения входных и выходных данных, с кратким описанием);
+- вывод.
+
+### Цель
+---
+Целью моей лабораторной работы была разработка библиотеки для работы со структурой данных на ЯП C++.
+
+### Задача
+---
+Моей задачей было создание следующих функций для работы с ориентированным графом: вставка и удаление вершины, вставка и удаление дуги, построение дерева обхода в ширину.
+
+### Список используемых понятий
+---
+- [Граф](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) -- это структура, состоящая из набора объектов, в котором некоторые пары объектов в некотором смысле «связаны».
+- [Ориентированный граф](https://en.wikipedia.org/wiki/Directed_graph) -- это граф, состоящий из набора вершин, соединенных направленными ребрами, часто называемыми дугами.
+- [Функция обхода в ширину - BFS](https://neerc.ifmo.ru/wiki/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83#:~:text=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4%20%D0%B2%20%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83%20(%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%20%D0%B2,%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%BE%D0%B2%20%D0%B4%D0%BB%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%81%20%D0%B3%D1%80%D0%B0%D1%84%D0%B0%D0%BC%D0%B8.) -- один из простейших алгоритмов обхода графа, являющийся основой для многих важных алгоритмов для работы с графами.
+- [Матрица инцидентности](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%B8%D0%BD%D1%86%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B8) -- одна из форм представления графа, в которой указываются связи между инцидентными элементами графа (ребро(дуга) и вершина). Столбцы матрицы соответствуют ребрам, строки — вершинам. Ненулевое значение в ячейке матрицы указывает связь между вершиной и ребром (их инцидентность).
+- [Вершина графа(узел)](https://en.wikipedia.org/wiki/Vertex_(graph_theory)) -- фундаментальная единица, из которой формируются графы.
+- [Ребро](https://ru.hexlet.io/courses/graphs/lessons/notation/theory_unit#:~:text=%D0%A0%D0%B5%D0%B1%D1%80%D0%B0%20%D0%B3%D1%80%D0%B0%D1%84%D0%B0.,%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D1%82%20%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%BA%D0%BE%D0%BE%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%BD%D0%BE%2D%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D1%8B%D1%85%20%D0%B2%D0%B5%D1%80%D1%88%D0%B8%D0%BD.) -- это то, что соединяет две вершины.
+- [Дуга](https://habr.com/ru/companies/otus/articles/568026/#:~:text=%D0%94%D1%83%D0%B3%D0%B0%20%2D%20%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D1%91%D0%B1%D1%80%D0%B0%20%D0%B2%20%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%BC,%D0%B4%D1%83%D0%B3%2C%20%D0%B7%D0%B0%D1%85%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D1%85%20%D0%B2%20%D1%8D%D1%82%D1%83%20%D0%B2%D0%B5%D1%80%D1%88%D0%B8%D0%BD%D1%83.) -- направленное ребро в ориентированном графе.
+### Описание алгоритмов
+---
+1. Первая функция берет из выбранного файла матрицу инцидентности. Функция запрашивает ввести название файла в котором хранится матрица, далее она открывает этот файл и из первой строки берет 2 параметра -- количество вершин и количество дуг, меняет размеры существующего стартового вектора, после посимвольно вводит в матрицу все значения. Имеется проверка на существование файла в проекте.
+```cpp
+ void InputMatrix() {
+        string s;
+        string namefile;
+        bool b = true;
+        while (b)
+        {
+            cout << "Напишите файл из которого открыть" << endl;;
+            cin >> namefile;
+
+            ifstream in(namefile);
+
+            if (in.is_open())
+            {
+                getline(in, s);
+                n = stoi(s.substr(0, s.size() - s.find(" ") - 1));
+                m = stoi(s.substr(s.find(" ") + 1, s.size() - s.find(" ") - 1));
+
+                matrix.resize(n, vector<int>(m, 0));
+                for (int i = 0; i < n; i++) {
+                    for (int j = 0; j < m; j++) {
+                        in >> matrix[i][j];
+                    }
+                }
+                in.close();
+                b = false;
+            }
+            else
+            {
+                cout << "Файл не найден." << endl;
+            }
+
+        }
+        return;
+    }```
+2. Функция вывода матрицы в консоль. 
+```cpp
+void PrintMatrix()
+    {
+        cout << endl << "Матрица инцидентности:" << endl;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                cout << matrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+```
+3. Функция добавления вершины в граф. В матрицу добавляется пустая строка.
+```cpp
+    void AddVertex()
+    {
+        vector<int> newVertex(m, 0);
+        matrix.push_back(newVertex);
+        n++;
+        cout << "Вершина добавлена." << endl << endl;
+    }
+```
+4. Функция удаления вершины. Удаляет строку нужной вершины и все столбцы дуг, которые связаны с удаляемой вершиной
+```cpp
+ void DelVertex()
+    {
+
+        int numVertex;
+        cout << endl << "Выберите вершину, которую хотите удалить: " << endl;
+        cin >> numVertex;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Некорректный ввод." << endl;
+        }
+
+        numVertex--;
+        if (numVertex >= 0 && numVertex < n)
+        {
+            for (int i = matrix[0].size() - 1; i >= 0 ; i--)
+            {
+                if (matrix[numVertex][i] != 0)
+                {
+                    for (int k = 0; k < n; k++)
+                    {
+                        matrix[k].erase(matrix[k].begin() + i);
+                    }
+                    m--;
+                }
+            }
+            matrix.erase(matrix.begin() + numVertex);
+            cout << "Вершина " << ++numVertex << " удалена." << endl;
+            n--;
+        }
+        else
+        {
+            cout << "Недопустимый индекс для удаления элемента." << endl;
+            return;
+        }
+    }
+```
+5. Функция добавления дуги. Добавляет столбец дуги.
+```cpp
+void AddArc()
+    {
+        int fromVertex, toVertex;
+        cout << endl << "Введите 2 вершины, от которой и до которой будет проведена дуга: " << endl;
+        cin >> fromVertex >> toVertex;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Некорректный ввод." << endl;
+        }
+
+        fromVertex--;
+        toVertex--;
+        if (fromVertex == toVertex)
+        {
+            cout << "Невозможно создать петлю. Введите 2 корректных индекса." << endl;
+            return;
+        }
+        if ((fromVertex >= 0 && fromVertex < matrix.size()) && (toVertex >= 0 && toVertex < matrix.size()))
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if (i == fromVertex)
+                {
+                    matrix[i].push_back(1);
+                }
+                else if (i == toVertex)
+                {
+                    matrix[i].push_back(-1);
+                }
+                else
+                {
+                    matrix[i].push_back(0);
+                }
+            }
+            m++;
+        }
+        else
+        {
+            cout << "Недопустимый индекс." << endl;
+            return;
+        }
+        cout << "Дуга от вершины " << fromVertex + 1 << " до вершины " << toVertex + 1 << " добавлена." << endl;
+    }
+```
+6. Функция удаления дуги. Удаляет столбец в матрице.
+```cpp
+ void DelArc()
+    {
+        int numArc;
+        cout << endl << "Введите номер дуги, которую хотите удалить: " << endl;
+        cin >> numArc;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Некорректный ввод." << endl;
+            return;
+        }
+
+        if (numArc >= 0 && numArc <= matrix[0].size())
+        {
+            for (int i = 0; i < n; i++)
+            {
+                matrix[i].erase(matrix[i].begin() + numArc - 1);
+            }
+            m--;
+            cout << "Дуга удалена." << endl;
+        }
+        else
+        {
+            cout << "Недопустимый индекс." << endl;
+            return;
+        }
+    }
+```
+8. Функция обхода в ширину графа. Обходит граф в ширину и выводит дерево обхода с указанием из какой вершины в какую мы попали. 
+```cpp
+void BFS() 
+    {
+        int firstVertex;
+        cout << "Введите номер вершины, с которой начать обход в ширину." << endl;
+        cin >> firstVertex;
+
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Некорректный ввод." << endl;
+            return;
+        }
+
+        firstVertex--;
+        if ((firstVertex < 0) || (firstVertex > n))
+        {
+            cout << "Некорректный индекс." << endl;
+            return;
+        }
+        queue<int> q;
+        q.push(firstVertex);
+        vector<int> d(n, -1); //посещенность вершины
+        vector<int> arcs(m, -1); // посещенность дуги
+        vector<int> count(n, 0); // счетчик для количества посещений каждой вершины
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                if (matrix[i][j] == -1)
+                {
+                    count[i]++;
+                }
+            }
+        }
+        //-----------вывод
+        cout << "Количество дуг направленных в каждую вершину:" << endl;
+        for (int i = 0; i < n; i++)
+        {
+            cout << count[i] << "  ";
+        }
+        cout << endl;
+        //-----------
+        cout << "Дерево обхода в ширину:" << endl;
+        d[firstVertex] = -1;
+        while(!q.empty())
+        {
+
+            int v = q.front();
+            q.pop();
+            for (int u = 0; u < m; u++) //u является индексом дуги в данной вершине
+            {
+                if (matrix[v][u] == 1) //поиск начала дуги
+                { 
+                    for (int k = 0; k < n; k++) //k является строкой в которой ищется конец дуги
+                    {
+                        if (matrix[k][u] == -1) //поиск вершины у которой в данном индексе u значение -1
+                        {
+                            if (arcs[u] == -1)
+                            {
+                                arcs[u]++;
+                                if (d[k] == -1)
+                                {
+                                    q.push(k);
+                                    if (count[k] == 0)
+                                    {
+
+                                        d[k]++;
+                                    }
+                                    else
+                                    {
+                                        count[k]--;
+                                        cout << "Из вершины " << v + 1 << " в вершину " << k + 1 << endl;
+                                    }
+
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+        cout << "Обход в ширину окончен." << endl;
+    }
+```
