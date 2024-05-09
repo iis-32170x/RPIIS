@@ -2,7 +2,7 @@
 
 Презентация с обзором семестра доступна [по ссылке](https://docs.google.com/presentation/d/1Pe7_sMhdOYMRU1PgU8F-CNSgpaiJfcJn5fQOXTUrBxk/edit?usp=sharing). Там же будут указаны сроки выполнения работ.
 
-Все материалы для выполнения работ доступны [по ссылке](https://drive.google.com/drive/folders/1J3JfipKGQDhuQWhVdWZrQm62_Fdn7K8E?usp=share_link).
+Все материалы для выполнения работ доступны [по ссылке](https://drive.google.com/drive/folders/1Lte76B6TTWHNOtO7m_WsU7xJ1StBmp2F?usp=sharing).
 
 Про грамматику для второй лабораторной работы можно почитать [по ссылке](https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0_%D0%91%D1%8D%D0%BA%D1%83%D1%81%D0%B0_%E2%80%94_%D0%9D%D0%B0%D1%83%D1%80%D0%B0).
 
