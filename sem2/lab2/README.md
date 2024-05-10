@@ -32,7 +32,7 @@ void generatePermutations(int* nums, bool* used, int* current, int currentIndex,
 - cout << current[i] << " "; - вывод значения current[i].
 - current[currentIndex] = nums[i]; - присваивает значение nums[i] элементу current[currentIndex].
 - generatePermutations(nums, used, current, currentIndex + 1, n); - является рекурсивным вызовом функции generatePermutations.
-###Функция generateAllPermutations.
+### Функция generateAllPermutations.
 ```cpp
 void generateAllPermutations(int n) {
     int* nums = new int[n];
