@@ -1,1 +1,53 @@
+```cpp
+#include <iostream>
+#include <algorithm>
 
+using namespace std;
+
+void generatePermutations(int* nums, bool* used, int* current, int currentIndex, int n) {
+    if (currentIndex == n) {
+        for (int i = 0; i < n; i++) {
+            cout << current[i] << " ";
+        }
+        cout << endl;
+        return;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (!used[i]) {
+            used[i] = true;
+            current[currentIndex] = nums[i];
+            generatePermutations(nums, used, current, currentIndex + 1, n);
+            used[i] = false;
+        }
+    }
+}
+
+void generateAllPermutations(int n) {
+    int* nums = new int[n];
+    bool* used = new bool[n];
+    int* current = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        nums[i] = i + 1;
+        used[i] = false;
+    }
+
+    generatePermutations(nums, used, current, 0, n);
+
+    delete[] nums;
+    delete[] used;
+    delete[] current;
+}
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n;
+    cout << "Введите количество элементов в множестве: ";
+    cin >> n;
+
+    generateAllPermutations(n);
+
+    return 0;
+}
+```
