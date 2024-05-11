@@ -25,29 +25,29 @@
 
 1.Задается неориентированный граф.
 
-![alt text](1..png)
+![alt text](https://github.com/iluxa313/iluxa313)(1..png)
 
 2.Начинаем обход графа с вершины 1.
 
-![alt text](2..png)
+![alt text](https://github.com/iluxa313/iluxa313)(2..png)
 
 3.Помечаем вершину 1 как посещенную.
 
-![alt text](3..png)
+![alt text](https://github.com/iluxa313/iluxa313)(3..png)
 
 4.Переходим к соседним вершинам 2 и 3, и записываем их в посещенные вершины.
 
-![alt text](4..png)
+![alt text](https://github.com/iluxa313/iluxa313)(4..png)
 
 5.Посещаем соседей вершины 2 - вершины 4 и 5, если они еще не посещены, и записываем их в посещенные вершины.
 
-![alt text](5..png)
+![alt text](https://github.com/iluxa313/iluxa313)(5..png)
 
 6.Посещаем соседей вершины 3 – вершину 6, если она еще не посещена, и записываем её в посещенные вершины.
 
-![alt text](6..png)
+![alt text](https://github.com/iluxa313/iluxa313)(6..png)
 
 7.Все вершины посещены. Обход графа в ширину завершен.
 Таким образом, мы посетили все вершины графа и не обнаружили циклов. Граф является деревом.
 
-![alt text](7..png)
+![alt text](https://github.com/iluxa313/iluxa313)(7..png)
