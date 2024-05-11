@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/marat/ontologies/2024/2/untitled-ontology-14"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/marat/ontologies/2024/2/untitled-ontology-14">
+    <Prefix name="" IRI="http://www.semanticweb.org/marat/ontologies/2024/2/untitled-ontology-14/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Pipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#angleRotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#innerRadius"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#meterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#outerRadius"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#undefinedValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAngleRotation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInnerRadius"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOuterRadius"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUndefinedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#angleRotation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#innerRadius"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#outerRadius"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#undefinedValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Внешний_радиус"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Внутренний_радиус"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Длина"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Материал"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Неизвестная_переменная"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Труба"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Угол_поворота"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#outerRadius"/>
+        <NamedIndividual IRI="#Внешний_радиус"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#innerRadius"/>
+        <NamedIndividual IRI="#Внутренний_радиус"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#length"/>
+        <NamedIndividual IRI="#Длина"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#meterial"/>
+        <NamedIndividual IRI="#Материал"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#undefinedValue"/>
+        <NamedIndividual IRI="#Неизвестная_переменная"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pipe"/>
+        <NamedIndividual IRI="#Труба"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#angleRotation"/>
+        <NamedIndividual IRI="#Угол_поворота"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAngleRotation"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Угол_поворота"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInnerRadius"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Внутренний_радиус"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLength"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Длина"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Материал"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOuterRadius"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Внешний_радиус"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasUndefinedValue"/>
+        <NamedIndividual IRI="#Труба"/>
+        <NamedIndividual IRI="#Неизвестная_переменная"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#angleRotation"/>
+        <NamedIndividual IRI="#Труба"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#innerRadius"/>
+        <NamedIndividual IRI="#Труба"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#length"/>
+        <NamedIndividual IRI="#Труба"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#material"/>
+        <NamedIndividual IRI="#Труба"/>
+        <Literal>Сталь</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#outerRadius"/>
+        <NamedIndividual IRI="#Труба"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">50.0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAngleRotation"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInnerRadius"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLength"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOuterRadius"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUndefinedValue"/>
+        <Class IRI="#Pipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAngleRotation"/>
+        <Class IRI="#angleRotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInnerRadius"/>
+        <Class IRI="#innerRadius"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLength"/>
+        <Class IRI="#length"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaterial"/>
+        <Class IRI="#meterial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOuterRadius"/>
+        <Class IRI="#outerRadius"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUndefinedValue"/>
+        <Class IRI="#undefinedValue"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#angleRotation"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#innerRadius"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#length"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#outerRadius"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#undefinedValue"/>
+        <Class IRI="#Pipe"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#angleRotation"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#innerRadius"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#length"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#material"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#outerRadius"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#undefinedValue"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
