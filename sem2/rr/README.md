@@ -25,28 +25,28 @@
 
 1.Задается неориентированный граф.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/1..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/1...png)
 
 2.Начинаем обход графа с вершины 1.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/2..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/2...png)
 
 3.Помечаем вершину 1 как посещенную.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/3..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/3...png)
 4.Переходим к соседним вершинам 2 и 3, и записываем их в посещенные вершины.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/4..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/4...png)
 
 5.Посещаем соседей вершины 2 - вершины 4 и 5, если они еще не посещены, и записываем их в посещенные вершины.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/5..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/5...png)
 
 6.Посещаем соседей вершины 3 – вершину 6, если она еще не посещена, и записываем её в посещенные вершины.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/6..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/6...png)
 
 7.Все вершины посещены. Обход графа в ширину завершен.
 Таким образом, мы посетили все вершины графа и не обнаружили циклов. Граф является деревом.
 
-![Image alt](https://github.com/iluxa313/iluxa313/blob/main/7..png)
+![Image alt](https://github.com/iluxa313/iluxa313/blob/main/7...png)
