@@ -24,59 +24,154 @@
 
 ## Код
 
-### [header.h](https://github.com/iis-32170x/RPIIS/blob/53d567ba180f1db4b2b2db0e7ffe0d809fbe8346/sem_2/lab_2/funk.cpp).файл)
+### [main.h](sem_2/lab_2/main.cpp).файл)
 
 ``` C++
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <limits>
-#include <string>
-
-#ifndef PIOIVIS_HEADER_H
-#define PIOIVIS_HEADER_H
+#include <sstream>
+#include <cctype>
 
 using namespace std;
 
-int input(const string& message);
-void ADD(vector<int>& vec, int size);
-void read(vector<int>& V, ifstream& file);
-bool check(const vector<int>& one, const vector<int>& two);
-void print(const vector<int>& V);
+int input(const string& message) {
+    int num;
+    cout << message;
+    while (!(cin >> num)) {
+        cout << "\033[1;31mОшибка ввода! Введите число: \033[0m";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    return num;
+}
 
-#endif //PIOIVIS_HEADER_H
-```
+void ADD(vector<vector<int>>& V) {
+    string inputStr;
+    cout << "Введите множество в виде {{A1, A2, ...}, {B1, B2, ...}, ...}: ";
+    getline(cin, inputStr);
 
-### [pioivis.cpp](https://github.com/iis-32170x/RPIIS/blob/53d567ba180f1db4b2b2db0e7ffe0d809fbe8346/sem_2/lab_2/pioivis.cpp).файл)
+    inputStr = inputStr.substr(1, inputStr.size() - 2);
 
-``` c++
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include "header.h"
-#include <string>
-using namespace std;
+    vector<int> innerVector;
+    stringstream ss(inputStr);
+    char ch;
+    bool Brackets = false;
+    while (ss >> ch) {
+        if (ch == '{') {
+            innerVector.clear();
+            Brackets = true;
+        } else if (ch == '}') {
+            V.push_back(innerVector);
+            Brackets = false;
+        } else if (isdigit(ch)) {
+            ss.putback(ch);
+            int num;
+            ss >> num;
+            if (Brackets) {
+                innerVector.push_back(num);
+            } else {
+                V.push_back(vector<int>{num});
+                if (ss.peek() == ',')
+                    ss.ignore();
+            }
+        }
+    }
+}
+
+void File(const string& filename) {
+    ifstream file(filename); // Открываем файл для чтения
+
+    if (!file.is_open()) {
+        cerr << "Невозможно открыть файл." << endl;
+        return;
+    }
+
+    string line;
+    cout << "Содержимое файла " << filename << ":" << endl;
+    while (getline(file, line)) { // Читаем файл построчно и выводим на экран
+        cout << line << endl;
+    }
+
+    file.close();
+}
+
+void read(vector<vector<int>>& V, const string& filename) {
+    ifstream file(filename);
+    string inputStr;
+    cout << "Введите множество в виде {{A1, A2, ...}, {B1, B2, ...}, ...}: ";
+    getline(cin, inputStr);
+
+    inputStr = inputStr.substr(1, inputStr.size() - 2);
+
+    vector<int> innerVector;
+    stringstream ss(inputStr);
+    char ch;
+    bool Brackets = false;
+
+
+    cout << "Чтение данных из файла: " << filename << endl;
+
+    string line;
+    while (getline(file, line)) {
+        inputStr = inputStr.substr(1, inputStr.size() - 2);
+
+        while (ss >> ch) {
+            if (ch == '{') {
+                innerVector.clear();
+                Brackets = true;
+            } else if (ch == '}') {
+                V.push_back(innerVector);
+                Brackets = false;
+            } else if (isdigit(ch)) {
+                ss.putback(ch);
+                int num;
+                ss >> num;
+                if (Brackets) {
+                    innerVector.push_back(num);
+                } else {
+                    V.push_back(vector<int>{num});
+                    if (ss.peek() == ',')
+                        ss.ignore();
+                }
+            }
+        }
+    }
+    cout << "Чтение данных из файла завершено." << endl;
+    file.close();
+}
+
+bool Check(const vector<int>& A, const vector<int>& B) {
+    vector<int> copyA = A;
+    vector<int> copyB = B;
+    sort(copyA.begin(), copyA.end());
+    sort(copyB.begin(), copyB.end());
+
+    return includes(copyA.begin(), copyA.end(), copyB.begin(), copyB.end());
+}
+
 
 int main() {
     setlocale(LC_ALL, "RU");
-    int a, b, c;
-    vector<int> A;
-    vector<int> B;
+    int c;
+    vector<vector<int>> A;
+    vector<vector<int>> B;
 
     do {
-        c = input("Выберите способ ввода(1 - вручную)(2 - из файла): ");
+        c = input("Выберите способ ввода (1 - вручную)(2 - из файла): ");
         if (!(c == 1 || c == 2)) {
             cout << "\033[1;31mПовторите ввод: \033[0m";
         }
     } while (!(c == 1 || c == 2));
 
+    cin.ignore();
     if (c == 1) {
-        a = input("Введите количество элементов множества A: ");
-        ADD(A, a);
-        b = input("Введите количество элементов множества B: ");
-        ADD(B, b);
-    }
-    else if (c == 2) {
+        cout << "Ввод множества A:" << endl;
+        ADD(A);
+        cout << "Ввод множества B:" << endl;
+        ADD(B);
+    } else if (c == 2) {
         string filename;
         ifstream file;
         bool fileOpened = false;
@@ -86,127 +181,54 @@ int main() {
             file.open(filename);
             if (!file.is_open()) {
                 cout << "\033[1;31mОшибка открытия файла\033[0m" << endl;
-            }
-            else {
+            } else {
                 fileOpened = true;
             }
         } while (!fileOpened);
-        read(A, file);
-        read(B, file);
+
+        File(filename);
+        //read(A, filename);
+        //read(B, filename);
         file.close();
     }
 
-    cout << "Множество A: ";
-    print(A);
-    cout << "Множество B: ";
-    print(B);
-
-    cout << endl;
-
-    if (check(A, B) && check(B, A)) {
-        cout << "Множества A и B равны" << endl;
-    }
-    else if (check(B, A)) {
-        cout << "Все элементы множества B присутствуют в множестве A" << endl;
-    }
-    else if (check(A, B)) {
-        cout << "Все элементы множества A присутствуют в множестве B" << endl;
-    }
-    else {
-        cout << "Множества A и B не связаны" << endl;
-    }
-    return 0;
-}
-```
-
-### [funk.cpp](https://github.com/iis-32170x/RPIIS/blob/53d567ba180f1db4b2b2db0e7ffe0d809fbe8346/sem_2/lab_2/funk.cpp).файл)
-
-
-``` c++
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <limits>
-#include <string>
-
-using namespace std;
-
-// Функция для ввода целого числа с обработкой ошибок
-int input(const string& message) {
-    int num;
-    cout << message;
-    // Пока не удалось прочитать число
-    while (!(cin >> num)) {
-        // Выводим сообщение об ошибке и просим ввести число снова
-        cout << "\033[1;31mОшибка ввода! Введите число: \033[0m";
-        cin.clear(); // Сбрасываем флаги ошибок
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очищаем буфер ввода
-    }
-    return num;
-}
-
-// Функция для добавления элементов в вектор
-void ADD(vector<int>& V, int size) {
-    int num;
-    for (int i = 0; i < size; i++) {
-        // Вызываем функцию input для ввода числа с проверкой
-        num = input("Введите элемент №" + to_string(i + 1) + ": ");
-        V.push_back(num);
-    }
-}
-
-// Функция для чтения данных из файла
-void read(vector<int>& V, ifstream& file) {
-    int size;
-    // Считываем размер вектора
-    if (!(file >> size)) {
-        cout << "\033[1;31mОшибка чтения файла: неверный формат данных\033[0m" << endl;
-        exit(EXIT_FAILURE);
-    }
-
-    int num;
-    // Считываем элементы вектора из файла
-    for (int i = 0; i < size; ++i) {
-        if (!(file >> num)) {
-            cout << "\033[1;31mОшибка чтения файла: неверный формат данных\033[0m" << endl;
-            exit(EXIT_FAILURE);
+    cout << "Результат:" << endl;
+    for (const auto& innerVec : A) {
+        cout << "{ ";
+        for (const auto& num : innerVec) {
+            cout << num << " ";
         }
-        V.push_back(num);
+        cout << "}" << endl;
     }
-}
 
-// Функция для проверки, является ли один вектор подмножеством другого
-bool check(const vector<int>& one, const vector<int>& two) {
-    for (int i = 0; i < one.size(); i++) {
-        bool m = false;
-        for (int s = 0; s < two.size(); s++) {
-            // Если элемент из первого вектора есть во втором, устанавливаем флаг
-            if (one[i] == two[s]) {
-                m = true;
-                break;
+    cout << "Результат:" << endl;
+    for (const auto& innerVec : B) {
+        cout << "{ ";
+        for (const auto& num : innerVec) {
+            cout << num << " ";
+        }
+        cout << "}" << endl;
+    }
+
+    bool check = false;
+    for (const auto& bVector : B) {
+        for (const auto& aVector : A) {
+            if (aVector.size() == bVector.size()) {
+                if (Check(aVector, bVector) || Check(bVector, aVector)) {
+                    check = true;
+                }
             }
         }
-        // Если хотя бы один элемент первого вектора отсутствует во втором, возвращаем false
-        if (!m) {
-            return false;
-        }
     }
-    // Если все элементы первого вектора присутствуют во втором, возвращаем true
-    return true;
-}
 
-// Функция для вывода элементов вектора на экран
-void print(const vector<int>& V) {
-    for (int i = 0; i < V.size(); i++) {
-        cout << V[i] << " ";
+    if (check) {
+        cout << "Множество B является подмножеством множества A" << endl;
+    } else {
+        cout << "Множество B не является подмножеством множества A" << endl;
     }
-    cout << endl;
+
+    return 0;
 }
-```
-## [tt.txt](https://github.com/iis-32170x/RPIIS/blob/7065d3a347d2e8a2b721c0c560aa9c14d88f6f6c/sem_2/lab_2/tt.txt).Пример файла txt из которого происходит чтение множеств
-``` txt
-7 6 3 8 1 33 4 5
-3 6 4 1
 ```
 
 ## Пример запуска
