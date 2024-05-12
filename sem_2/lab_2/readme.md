@@ -24,7 +24,7 @@
 
 ## Код
 
-### [main.h](sem_2/lab_2/main.cpp).файл)
+### [main.h]([sem_2/lab_2/main.cpp](https://github.com/iis-32170x/RPIIS/blob/479d3bb5163d7e517ead744b4b1ac4d1d54c994a/sem_2/lab_2/main.cpp)).файл)
 
 ``` C++
 #include <iostream>
