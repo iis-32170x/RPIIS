@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/elisey/ontologies/2024/4/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/elisey/ontologies/2024/4/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.semanticweb.org/elisey/ontologies/2024/4/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Географическая_зона"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Город"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Государство"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Миниатюрная_гитара"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Музыкальный_инструмент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Остров"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Публичная_выставка"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Публичное_выступление"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Щипковый_инструмент"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#происходит_из"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#проходит_в"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#проходит_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#распространен_на"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#распространен_со_времен"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#является_развитием"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#является_родственным"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#геометрическая_форма"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#год_прохождения"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#количество_струн"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#название"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#переводится_как"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#появился_в"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Португалия"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Сан-Франциско"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Тихоокеанская_выставка"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Тихоокеанские_острова"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#брагинья"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#гастроли_гавайских_музыкантов"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#кавакиньо"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#остров_Мадейра"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#укулеле"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Город"/>
+        <Class IRI="#Географическая_зона"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Государство"/>
+        <Class IRI="#Географическая_зона"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Миниатюрная_гитара"/>
+        <Class IRI="#Музыкальный_инструмент"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Остров"/>
+        <Class IRI="#Географическая_зона"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Публичное_выступление"/>
+        <Class IRI="#Публичная_выставка"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Щипковый_инструмент"/>
+        <Class IRI="#Музыкальный_инструмент"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Государство"/>
+        <NamedIndividual IRI="#Португалия"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Город"/>
+        <NamedIndividual IRI="#Сан-Франциско"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Публичная_выставка"/>
+        <NamedIndividual IRI="#Тихоокеанская_выставка"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Остров"/>
+        <NamedIndividual IRI="#Тихоокеанские_острова"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Миниатюрная_гитара"/>
+        <NamedIndividual IRI="#брагинья"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Музыкальный_инструмент"/>
+        <NamedIndividual IRI="#брагинья"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Публичное_выступление"/>
+        <NamedIndividual IRI="#гастроли_гавайских_музыкантов"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Миниатюрная_гитара"/>
+        <NamedIndividual IRI="#кавакиньо"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Музыкальный_инструмент"/>
+        <NamedIndividual IRI="#кавакиньо"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Остров"/>
+        <NamedIndividual IRI="#остров_Мадейра"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Музыкальный_инструмент"/>
+        <NamedIndividual IRI="#укулеле"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Щипковый_инструмент"/>
+        <NamedIndividual IRI="#укулеле"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#проходит_в"/>
+        <NamedIndividual IRI="#Тихоокеанская_выставка"/>
+        <NamedIndividual IRI="#Сан-Франциско"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#происходит_из"/>
+        <NamedIndividual IRI="#брагинья"/>
+        <NamedIndividual IRI="#остров_Мадейра"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#является_родственным"/>
+        <NamedIndividual IRI="#брагинья"/>
+        <NamedIndividual IRI="#кавакиньо"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#проходит_в"/>
+        <NamedIndividual IRI="#гастроли_гавайских_музыкантов"/>
+        <NamedIndividual IRI="#Тихоокеанская_выставка"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#происходит_из"/>
+        <NamedIndividual IRI="#кавакиньо"/>
+        <NamedIndividual IRI="#Португалия"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#является_родственным"/>
+        <NamedIndividual IRI="#кавакиньо"/>
+        <NamedIndividual IRI="#брагинья"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#распространен_на"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <NamedIndividual IRI="#Тихоокеанские_острова"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#распространен_со_времен"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <NamedIndividual IRI="#гастроли_гавайских_музыкантов"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#является_развитием"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <NamedIndividual IRI="#брагинья"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#год_прохождения"/>
+        <NamedIndividual IRI="#Тихоокеанская_выставка"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1915</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>ананас</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>весло</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>гитарообразная</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>квадратная</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>стандартная</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#геометрическая_форма"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>треугольная</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#количество_струн"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#количество_струн"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#переводится_как"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>подарок, который пришел сюда</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#переводится_как"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>прыгающая блоха</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#появился_в"/>
+        <NamedIndividual IRI="#укулеле"/>
+        <Literal>1880-e</Literal>
+    </DataPropertyAssertion>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#является_родственным"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#происходит_из"/>
+        <Class IRI="#Миниатюрная_гитара"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#проходит_в"/>
+        <Class IRI="#Публичная_выставка"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#проходит_на"/>
+        <Class IRI="#Публичное_выступление"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#распространен_на"/>
+        <Class IRI="#Щипковый_инструмент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#распространен_со_времен"/>
+        <Class IRI="#Щипковый_инструмент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#является_развитием"/>
+        <Class IRI="#Щипковый_инструмент"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#является_родственным"/>
+        <Class IRI="#Миниатюрная_гитара"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#происходит_из"/>
+        <Class IRI="#Государство"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#происходит_из"/>
+        <Class IRI="#Остров"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#проходит_в"/>
+        <Class IRI="#Город"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#проходит_на"/>
+        <Class IRI="#Публичная_выставка"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#распространен_на"/>
+        <Class IRI="#Остров"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#распространен_со_времен"/>
+        <Class IRI="#Публичное_выступление"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#является_развитием"/>
+        <Class IRI="#Миниатюрная_гитара"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#является_родственным"/>
+        <Class IRI="#Миниатюрная_гитара"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#переводится_как"/>
+        <DataProperty IRI="#название"/>
+    </SubDataPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
