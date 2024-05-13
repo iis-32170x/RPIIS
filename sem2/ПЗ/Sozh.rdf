@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#flowsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#flowsIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasGatewaySystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasGatewaySystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#gateway_system"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasLeftTributary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasLeftTributary">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTributary"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasRightTributary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasRightTributary">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTributary"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasRiver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasRiver">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTributary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTributary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#onContinent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#onContinent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#dateOfDeconstruction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#dateOfDeconstruction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasArea">
+        <rdfs:comment>42100km^2</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasLength">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">648</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTradeWayLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#hasTradeWayLength"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#gateway_system -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#gateway_system"/>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Belarus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Belarus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+        <untitled-ontology-2:hasRiver rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh"/>
+        <untitled-ontology-2:onContinent rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Europe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Besed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Besed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Chechersk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Chechersk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Cherikov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Cherikov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Dnepr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Dnepr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Europe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Europe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#continent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Gomel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Gomel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Iput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Iput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Krichev -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Krichev">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Oster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Oster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Pronya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Pronya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Russia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Russia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+        <untitled-ontology-2:hasRiver rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh"/>
+        <untitled-ontology-2:onContinent rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Europe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Slavgorod -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Slavgorod">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Chechersk"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Cherikov"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Gomel"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Krichev"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Slavgorod"/>
+        <untitled-ontology-2:flowsIn rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vetka"/>
+        <untitled-ontology-2:hasGatewaySystem rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh&apos;s_GatewaySystem"/>
+        <untitled-ontology-2:hasTributary rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Besed"/>
+        <untitled-ontology-2:hasTributary rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Iput"/>
+        <untitled-ontology-2:hasTributary rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Oster"/>
+        <untitled-ontology-2:hasTributary rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Pronya"/>
+        <untitled-ontology-2:hasTributary rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vihra"/>
+        <untitled-ontology-2:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42100</untitled-ontology-2:hasArea>
+        <untitled-ontology-2:hasLength>648km</untitled-ontology-2:hasLength>
+        <untitled-ontology-2:hasTradeWayLength>373km</untitled-ontology-2:hasTradeWayLength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#country"/>
+        <untitled-ontology-2:hasRiver rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vetka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vetka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vihra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vihra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#river"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh&apos;s_GatewaySystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Sozh&apos;s_GatewaySystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#gateway_system"/>
+        <untitled-ontology-2:dateOfDeconstruction>Великая Отечественная война</untitled-ontology-2:dateOfDeconstruction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/danil/ontologies/2024/3/untitled-ontology-2#Vihra"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
