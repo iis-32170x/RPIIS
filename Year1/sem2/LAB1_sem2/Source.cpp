@@ -50,7 +50,7 @@ int main() {
     else std::cout << "not found" << std::endl;
     
     // Добавление элемента
-    std::cout << "insert 7";
+    std::cout << "insert 7" << std::endl;
     tree->Insert(7);
     
     // поиск элемента
