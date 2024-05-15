@@ -25,15 +25,25 @@
 
 Функции:
 
-`int CountStr(const string& file_name)` - считает количество множеств в файле file_name.
+`int CountStr(string& file_name)` - считает количество множеств в файле file_name.
 
-`void MakeSet(const string & file_name,vector<vector<string>> & Set)` - создает множество из каждой строки файла, записывая элементы каждого множества в вектор `Set` в отсортированном порядке.
+`bool IsCorrect(string& str)` - проверяет вводимую строку на корректность.
 
-`vector<vector<pair<string, int>>> MultiplCount(const vector<vector<string>>& Set)`- считает количество каждого элемента в каждом множестве.
+`void MakeUnion(string file_name)`- создает из строк вектор из элементов множества, которые используются в других функциях
 
-`vector<pair<string, int>> Union(const vector<vector<pair<string, int>>>& multipl_count)` - находит объединение всех исходных множеств с учетом кратных вхождений.
+`void MakeElement(vector<vector<Element>>& arr)` - создает элемент множества из иго частей в векторе создаваемом `MakeUnion`
 
-`Result` - выводит на экран объединение всех исходных множеств.
+`void Swap(char& a, char& b)`- меняет местами необходимые элементы (используется в методе `Sort`)
+
+`string Sort(string str)` - возвращает отсортированную строку, не изменяя исходную.
+
+`void Union(vector<vector<Element>>& arr)` - формирует объединение в виде вектора пар и выводит результат(объединение множеств)
+
+`bool IsEqual(vector<vector<Element>>& arr, int pos1, int pos2)`- проверяет поэлементно равны ли элементы множества, сравнивая их значения в отсортированном виде и "глубину"
+
+`int SymbolNumber(vector<vector<Element>>& arr, int i)` - подсчитывает количество элементов которые не являются скобками в элементе множества.
+
+`int ElemNumber(vector<vector<Element>>& arr, int j)` - подсчитывает количество каждого элемента и возвращает максимальное количество данного элемента во всех множествах.
 
 ## Начальные значения тестов:
 
