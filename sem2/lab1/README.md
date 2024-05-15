@@ -100,11 +100,29 @@ Node* AVLTree::balance(Node* node) {
 
 **rotateLeft**
 
-![Alt text](flowchart_rotateLeft.png)
-
+```cpp
+// Левое вращение вокруг узла
+Node* AVLTree::rotateLeft(Node* node) {
+    Node* leftNode = node->left;
+    node->left = leftNode->right;
+    leftNode->right = node;
+    fixHeight(node);
+    fixHeight(leftNode);
+    return leftNode;
+}
+```
 **rotateRight**
-
-![Alt text](flowchart_rotateRight.png)
+```cpp
+// Правое вращение вокруг узла
+Node* AVLTree::rotateRight(Node* node) {
+    Node* rightNode = node->right;
+    node->right = rightNode->left;
+    rightNode->left = node;
+    fixHeight(node);
+    fixHeight(rightNode);
+    return rightNode;
+}
+```
 ### Удаление ключа
 Алгоритм удаления узла из AVL-дерева начинается с поиска узла по ключу, при этом спускаясь влево или вправо в зависимости от сравнения ключей. При нахождении узла, если у него нет потомков, он просто удаляется. Если у узла один потомок, он заменяет удаляемый узел. При наличии двух потомков удаляемый узел заменяется минимальным узлом из его правого поддерева, который затем удаляется методом removeMin. В любом случае, после удаления узла проводится балансировка для поддержания свойств AVL-дерева.
 [[Источник: habr.com]](https://habr.com/ru/articles/150732/)
