@@ -25,6 +25,7 @@
 - **Рекурсия** — метод в программировании, при котором функция вызывает саму себя. Широко используется в операциях с AVL-деревом, таких как вставка, удаление и балансировка. **[Источник: Дискретная математика для программистов / Ф.А. Новиков – СПб:Питер, 2000.]**
 - [**Лист дерева**](https://ru.hexlet.io/qna/glossary/questions/chto-takoe-avl-derevo) — узел дерева, не имеющий потомков.
 [Источник: ru.hexlet.io]
+
 ## Описание алгоритмов
 
 ### Вставка ключа
@@ -163,24 +164,140 @@ Node* AVLTree::remove(Node* node, int key) {
 **[Источник: Фундаментальные алгоритмы на C++. Анализ / Структуры данных /
 Сортировка / Поиск: Пер. с англ. / Роберт Седжвик. – К.
 Издательство «ДиаСофт», 2001.]**
-![Alt text](flowchart_find.png)
+```cpp
+// Публичный метод
+Node* AVLTree::find(int key) const {
+    return find(root, key);
+}
+
+
+// Вспомогательный приватный метод
+Node* AVLTree::find(Node* node, int key) const {
+    if (node == nullptr) {
+        return nullptr; // Ключ не найден
+    }
+    if (key < node->key) {
+        return find(node->left, key);
+    }
+    else if (key > node->key) {
+        return find(node->right, key);
+    }
+    else {
+        return node; // Ключ найден
+    }
+}
+```
 ### Поиск минимума и максимума
 Методы findMin и findMax в AVL-дереве идентифицируют минимальный и максимальный элементы соответственно, путем последовательного перехода в самые крайние левые или правые узлы дерева начиная от корня. Минимальный элемент находится путем движения влево до тех пор, пока не будет достигнут узел без левого потомка, а максимальный — движением вправо до узла без правого потомка.
 **[Источник: Фундаментальные алгоритмы на C++. Анализ / Структуры данных /
 Сортировка / Поиск: Пер. с англ. / Роберт Седжвик. – К.
 Издательство «ДиаСофт», 2001.]**
-![Alt text](flowchart_findMin.png)
 
-![Alt text](flowchart_findMax.png)
+**findMin**
+
+```cpp
+Node* AVLTree::findMin(Node* node) {
+    return node->left ? findMin(node->left) : node;
+}
+
+Node* AVLTree::removeMin(Node* node) {
+    if (node->left == nullptr) return node->right;
+    node->left = removeMin(node->left);
+    return balance(node);
+}
+
+// Находит минимальный элемент в дереве
+Node* AVLTree::findMin() const {
+    Node* current = root;
+    while (current && current->left != nullptr) {
+        current = current->left;
+    }
+    return current;
+}
+```
+**findMax**
+```cpp
+// Находит максимальный элемент в дереве
+Node* AVLTree::findMax() const {
+    Node* current = root;
+    while (current && current->right != nullptr) {
+        current = current->right;
+    }
+    return current;
+}
+```
 ### Поиск ближайшего меньшего и ближайшего большего
 Алгоритмы findSuccessor и findPredecessor в AVL-дереве начинают с поиска узла по заданному ключу. Если узел найден, findSuccessor ищет минимальный элемент в правом поддереве этого узла, если оно существует, для определения ближайшего большего значения. В отсутствие правого поддерева, алгоритм идет вверх к корню дерева, пока не найдет переход, где текущий узел был бы левым потомком, определяя таким образом ближайший больший узел. Аналогично, findPredecessor ищет максимальный элемент в левом поддереве для определения ближайшего меньшего значения. Если левое поддерево отсутствует, алгоритм поднимается к корню, пока не обнаружит ситуацию, где текущий узел является правым потомком, что указывает на ближайший меньший узел.
 **[Источник: Фундаментальные алгоритмы на C++. Анализ / Структуры данных /
 Сортировка / Поиск: Пер. с англ. / Роберт Седжвик. – К.
 Издательство «ДиаСофт», 2001.]**
 
-![Alt text](flowchart_findSuccessor.png)
+**findSuccessor**
 
-![Alt text](flowchart_findPredecessor.png)
+```cpp
+Node* AVLTree::findSuccessor(int key) const {
+    Node* current = find(root, key); // Сначала находим узел с данным ключом
+    if (current == nullptr) return nullptr; // Если такого узла нет, возвращаем nullptr
+
+    // Если у узла есть правое поддерево, то ищем минимальный элемент в этом поддереве
+    if (current->right != nullptr) {
+        Node* temp = current->right;
+        while (temp->left != nullptr) {
+            temp = temp->left;
+        }
+        return temp;
+    }
+
+    // Если правого поддерева нет, поднимаемся вверх к корню,
+    // пока не найдем переход от левого к правому поддереву
+    Node* successor = nullptr;
+    Node* ancestor = root;
+    while (ancestor != current) {
+        if (current->key < ancestor->key) {
+            successor = ancestor; // Нашли потенциального successor
+            ancestor = ancestor->left;
+        }
+        else {
+            ancestor = ancestor->right;
+        }
+    }
+
+    return successor;
+}
+```
+**findPredecessor**
+```cpp
+Node* AVLTree::findPredecessor(int key) const {
+    Node* current = find(root, key); // Сначала находим узел с данным ключом
+    if (current == nullptr) return nullptr; // Если такого узла нет, возвращаем nullptr
+
+    // Если у узла есть левое поддерево, то ищем максимальный элемент в этом поддереве
+    if (current->left != nullptr) {
+        Node* temp = current->left;
+        while (temp->right != nullptr) {
+            temp = temp->right;
+        }
+        return temp;
+    }
+
+    // Если левого поддерева нет, поднимаемся вверх к корню,
+    // пока не найдем переход от правого к левому поддереву
+    Node* predecessor = nullptr;
+    Node* ancestor = root;
+    while (ancestor != current) {
+        if (current->key > ancestor->key) {
+            predecessor = ancestor; // Нашли потенциального predecessor
+            ancestor = ancestor->right;
+        }
+        else {
+            ancestor = ancestor->left;
+        }
+    }
+
+    return predecessor;
+}
+```
+
 
 ## Результаты тестирования
 ### Тестирование визуализации структуры дерева
