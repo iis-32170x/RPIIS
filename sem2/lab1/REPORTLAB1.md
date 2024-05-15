@@ -313,15 +313,15 @@ void BFS()
 ### Тесты
 ---
 1. Вводим название файла и просматриваем матрицу инцидентности:
-![PrintMatrix](/img/PrintMatrix.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/138297605/de4cbe1a-36b8-4df8-af89-bb3d0bbddc52)
 2. Добавим вершину:
-![AddVertex]()
+![image](https://github.com/iis-32170x/RPIIS/assets/138297605/7069e1b6-c11c-4b62-86ad-13dc21f15ccc)
 3. Удалим вершину 1:
-![DelVertex]()
+![image](https://github.com/iis-32170x/RPIIS/assets/138297605/9f94ea01-d209-4283-b09e-eeeba1d6ba72)
 4. Добавим дугу от 3 к 5 вершине:
 ![image](https://github.com/iis-32170x/RPIIS/assets/138297605/4733aa64-676d-40d5-91e3-06481060eaa6)
-
 5. Удалим дугу 3:
-![DelArc]()
+![image](https://github.com/iis-32170x/RPIIS/assets/138297605/b43730b9-1377-48e0-98ae-bb1765ccf31a)
 6. Выведем дерево обхода в ширину:
-![BFS]()
+![image](https://github.com/iis-32170x/RPIIS/assets/138297605/8ff8d626-64b3-4fcc-9917-92b0701f1d37)
+
