@@ -1,4 +1,4 @@
-﻿#include "avl_tree.h"
+#include "avl_tree.h"
 #include <string>
 #include <iostream>
 
@@ -104,8 +104,8 @@ int AVLTree::getBalanceFactor(Node* node) {
     return heightRight - heightLeft;
 }
 
-// Правое вращение вокруг узла
-Node* AVLTree::rotateRight(Node* node) {
+// Левое вращение вокруг узла
+Node* AVLTree::rotateLeft(Node* node) {
     Node* leftNode = node->left;
     node->left = leftNode->right;
     leftNode->right = node;
@@ -114,8 +114,8 @@ Node* AVLTree::rotateRight(Node* node) {
     return leftNode;
 }
 
-// Левое вращение вокруг узла
-Node* AVLTree::rotateLeft(Node* node) {
+// Правое вращение вокруг узла
+Node* AVLTree::rotateRight(Node* node) {
     Node* rightNode = node->right;
     node->right = rightNode->left;
     rightNode->left = node;
