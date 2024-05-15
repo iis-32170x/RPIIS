@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2">
+        <rdfs:comment>Онтология созвездия Рыб</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#SouthEast -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#SouthEast">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesInTheConstellation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#contains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#fromArabic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#fromArabic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesAtAnAngle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesAtAnAngle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesBetween -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesBetween">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesInTheConstellation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesInTheConstellation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesToTheSouthOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesToTheSouthOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesUnder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#liesUnder">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#located"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#mostStriking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#mostStriking"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasAngleRelativeToLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasAngleRelativeToLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasAngularDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasAngularDiameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasDistance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasGloss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasGloss"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasVisualMagnitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#hasVisualMagnitude"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#sizeOfObservedFlat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#sizeOfObservedFlat"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#constellation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#constellation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#doubleStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#doubleStar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#dwarfStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#dwarfStar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#galaxy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#galaxy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#greatZodiacСonstellation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#greatZodiacСonstellation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#singleWhiteDwarfStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#singleWhiteDwarfStar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#whiteDwarfStar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#spiralGalaxy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#spiralGalaxy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#galaxy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#star -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#star"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#whiteDwarfStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#whiteDwarfStar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#dwarfStar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#constellation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#AndromedaGalaxy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#AndromedaGalaxy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#galaxy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aquarius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aquarius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation"/>
+        <rdfs:comment>Овен</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#NorthernFish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#NorthernFish">
+        <untitled-ontology-2:liesUnder rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#AndromedaGalaxy"/>
+        <untitled-ontology-2:partOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pegasus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pegasus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#zodiacСonstellation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#greatZodiacСonstellation"/>
+        <untitled-ontology-2:contains rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#NorthernFish"/>
+        <untitled-ontology-2:contains rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#WesternFish"/>
+        <untitled-ontology-2:liesBetween rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aquarius"/>
+        <untitled-ontology-2:liesBetween rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aries"/>
+        <rdfs:comment>Рыбы</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Twine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Twine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#VanMaanenStar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#VanMaanenStar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#singleWhiteDwarfStar"/>
+        <untitled-ontology-2:liesToTheSouthOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#δ-Pisces"/>
+        <untitled-ontology-2:located rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+        <untitled-ontology-2:hasAngleRelativeToLocation>2 degre</untitled-ontology-2:hasAngleRelativeToLocation>
+        <untitled-ontology-2:hasDistance>13 l.y.</untitled-ontology-2:hasDistance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#WesternFish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#WesternFish">
+        <untitled-ontology-2:liesBetween rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Aquarius"/>
+        <untitled-ontology-2:liesBetween rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pegasus"/>
+        <untitled-ontology-2:partOf rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#α-Pisces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#α-Pisces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#doubleStar"/>
+        <untitled-ontology-2:SouthEast rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+        <untitled-ontology-2:fromArabic rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Twine"/>
+        <untitled-ontology-2:located rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#δ-Pisces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#δ-Pisces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#star"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#М74Galaxy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#М74Galaxy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#spiralGalaxy"/>
+        <untitled-ontology-2:located rdf:resource="http://www.semanticweb.org/adli/ontologies/2024/3/untitled-ontology-2#Pisces"/>
+        <untitled-ontology-2:hasAngularDiameter>10&apos;</untitled-ontology-2:hasAngularDiameter>
+        <untitled-ontology-2:hasGloss>&quot;9.3 зв.вел&quot;</untitled-ontology-2:hasGloss>
+        <untitled-ontology-2:sizeOfObservedFlat>largest</untitled-ontology-2:sizeOfObservedFlat>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
