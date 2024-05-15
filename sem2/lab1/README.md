@@ -71,7 +71,29 @@ void AVLTree::fixHeight(Node* node) {
 ### Балансировка узла
 Особенность АВЛ-деревьев тут в том, что после вставки надо проверить соотношение длин поддеревьев и, если нужно, провести балансировку. Причем балансировку может понадобиться проводить для нескольких уровней дерева — это нормально. Алгоритм для балансирования может спускаться вниз из начального узла или подниматься вверх от свежедобавленного, по ходу движения пересчитывать разницу высот и совершать повороты, если где-то обнаружилась разница в два уровня. Балансировка продолжается, пока все значения высот не пересчитаются, а дисбаланс не будет устранен.
 [[Источник: skillfactory.ru]](https://blog.skillfactory.ru/glossary/avl-derevo/)
-![Alt text](flowchart_balance.png)
+```cpp
+// Метод для балансировки узла
+Node* AVLTree::balance(Node* node) {
+    fixHeight(node);
+
+    int balanceFactor = getBalanceFactor(node);
+
+    if (balanceFactor == 2) {
+        if (getBalanceFactor(node->right) < 0) {
+            node->right = rotateRight(node->right);
+        }
+        return rotateLeft(node);
+    }
+    if (balanceFactor == -2) {
+        if (getBalanceFactor(node->left) > 0) {
+            node->left = rotateLeft(node->left);
+        }
+        return rotateRight(node);
+    }
+
+    return node; // Балансировка не требуется
+}
+```
 ### Поворот влево и вправо
 Программная реализация поворота сводится к перестановке ссылок, соединяющих между собой элементы дерева. После этого пересчитываются числовые значения, которые показывают разницу между высотами.
 [[Источник: skillfactory.ru]](https://blog.skillfactory.ru/glossary/avl-derevo/)
