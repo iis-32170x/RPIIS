@@ -73,7 +73,8 @@
 
         }
         return;
-    }```
+    }
+```
 2. Функция вывода матрицы в консоль. 
 ```cpp
 void PrintMatrix()
@@ -237,7 +238,7 @@ void BFS()
         }
 
         firstVertex--;
-        if ((firstVertex < 0) || (firstVertex > n))
+        if ((firstVertex < 0) || (firstVertex >= n))
         {
             cout << "Некорректный индекс." << endl;
             return;
