@@ -126,7 +126,38 @@ Node* AVLTree::rotateRight(Node* node) {
 ### Удаление ключа
 Алгоритм удаления узла из AVL-дерева начинается с поиска узла по ключу, при этом спускаясь влево или вправо в зависимости от сравнения ключей. При нахождении узла, если у него нет потомков, он просто удаляется. Если у узла один потомок, он заменяет удаляемый узел. При наличии двух потомков удаляемый узел заменяется минимальным узлом из его правого поддерева, который затем удаляется методом removeMin. В любом случае, после удаления узла проводится балансировка для поддержания свойств AVL-дерева.
 [[Источник: habr.com]](https://habr.com/ru/articles/150732/)
-![Alt text](flowchart_remove.png)
+```cpp
+void AVLTree::remove(int key) {
+    root = remove(root, key);
+}
+
+Node* AVLTree::remove(Node* node, int key) {
+    if (node == nullptr) return nullptr;
+
+    if (key < node->key) {
+        node->left = remove(node->left, key);
+    }
+    else if (key > node->key) {
+        node->right = remove(node->right, key);
+    }
+    else { // Удаление узла, когда ключ найден
+        Node* left = node->left;
+        Node* right = node->right;
+
+        delete node; // Удаление текущего узла
+
+        if (right == nullptr) return left;
+
+        Node* min = findMin(right);
+        min->right = removeMin(right);
+        min->left = left;
+
+        return balance(min);
+    }
+
+    return balance(node);
+}
+```
 ### Поиск ключа
 Алгоритм поиска узла в AVL-дереве рекурсивно проверяет каждый узел, сравнивая искомый ключ с ключом текущего узла. Если искомый ключ меньше, продолжает поиск в левом поддереве; если больше — в правом. Поиск завершается возвратом узла, если ключ найден, или nullptr, если такого ключа в дереве нет.
 **[Источник: Фундаментальные алгоритмы на C++. Анализ / Структуры данных /
@@ -153,8 +184,8 @@ Node* AVLTree::rotateRight(Node* node) {
 
 ## Результаты тестирования
 ### Тестирование визуализации структуры дерева
-
 **Входные узлы [3,1,4,2,5]**
+
 <img width="443" alt="test1" src="https://github.com/iis-32170x/RPIIS/assets/144939061/4f8b864f-1f93-4488-9e33-547de7940cec">
 
 ### Тестирование вставки узлов
