@@ -312,16 +312,33 @@ void BFS()
 
 ### Тесты
 ---
-1. Вводим название файла и просматриваем матрицу инцидентности:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/de4cbe1a-36b8-4df8-af89-bb3d0bbddc52)
-2. Добавим вершину:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/7069e1b6-c11c-4b62-86ad-13dc21f15ccc)
-3. Удалим вершину 1:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/9f94ea01-d209-4283-b09e-eeeba1d6ba72)
-4. Добавим дугу от 3 к 5 вершине:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/4733aa64-676d-40d5-91e3-06481060eaa6)
-5. Удалим дугу 3:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/b43730b9-1377-48e0-98ae-bb1765ccf31a)
-6. Выведем дерево обхода в ширину:
-![image](https://github.com/iis-32170x/RPIIS/assets/138297605/8ff8d626-64b3-4fcc-9917-92b0701f1d37)
 
+1. Вводим название файла и просматриваем матрицу инцидентности:
+   
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/PrintMatrix.png)
+
+2. Добавим вершину:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/AddVertex.png)
+
+3. Удалим вершину 1:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/DelVertex.png)
+
+4. Добавим дугу от 3 к 5 вершине:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/AddArc.png)
+
+5. Удалим дугу 3:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/DelArc.png)
+
+6. Выведем дерево обхода в ширину:
+
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%B0%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%92/sem2/lab1/img/BFS.png)
+
+Как видно, все функции работают корректно.
+
+### Вывод
+---
+В данной лабалаторной работе я подкрепил свои знания об ориентированных графах и функции обхода в ширину, так же научился добавлять собственную библиотеку в с++.
