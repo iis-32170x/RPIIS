@@ -37,7 +37,7 @@ int AVLTree::height(Node* node) const {
         return 0;
     }
     // Высота узла равна максимальной высоте его поддеревьев плюс один
-    return 1 + std::max(height(node->left), height(node->right));
+    return 1 + max(height(node->left), height(node->right));
 }
 
 
@@ -79,16 +79,17 @@ void AVLTree::fixHeight(Node* node) {
     node->height = (heightLeft > heightRight ? heightLeft : heightRight) + 1;
 }
 
-void AVLTree::printTreeHelper(const Node* node, std::string indent, bool last) const {
+void AVLTree::printTreeHelper(const Node* node, string indent, bool last) const {
     // Проверяем, существует ли узел
     if (node != nullptr) {
-        std::cout << indent;
-        std::cout << (last ? "└── " : "├── ");
+        cout << indent;
+        cout << (last ? "└── " : "├── ");
 
         // Вывод информации об узле
-        std::cout << "key: " << node->key;
+        cout << "key: " << node->key;
 
-        std::cout << std::endl;
+        cout << 
+endl;
 
         // Рекурсивный вызов для левого и правого поддерева, обновляем indent для поддеревьев
         indent += last ? "    " : "│   ";
