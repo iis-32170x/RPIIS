@@ -3,5 +3,6 @@
 int main() {
     setlocale(0, "");
     runAllTests();
+    system("pause");
     return 0;
 }
