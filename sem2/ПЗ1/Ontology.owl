@@ -257,7 +257,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;10">
         <rdf:type rdf:resource="&untitled-ontology-5;Number"/>
-        <Number_of_allotropic_modifications_of_an_element rdf:resource="&untitled-ontology-5;Bor"/>
     </owl:NamedIndividual>
     
 
@@ -275,7 +274,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Amorphous">
         <rdf:type rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
-        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Bor"/>
         <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Dark"/>
     </owl:NamedIndividual>
     
@@ -285,7 +283,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;B">
         <rdf:type rdf:resource="&untitled-ontology-5;Symbol"/>
-        <Indicated_by_the_symbol rdf:resource="&untitled-ontology-5;Bor"/>
     </owl:NamedIndividual>
     
 
@@ -312,16 +309,13 @@
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Bor">
         <rdf:type rdf:resource="&untitled-ontology-5;Chemical_element"/>
         <Group_in_the_periodic_table>13</Group_in_the_periodic_table>
-        <Period_in_the_periodic_table>2</Period_in_the_periodic_table>
         <has_an_atomic_number>5</has_an_atomic_number>
+        <Period_in_the_periodic_table>2</Period_in_the_periodic_table>
         <Number_of_allotropic_modifications_of_an_element rdf:resource="&untitled-ontology-5;10"/>
-        <Year_of_the_discovery rdf:resource="&untitled-ontology-5;1808"/>
         <Possible_internal_structures rdf:resource="&untitled-ontology-5;Amorphous"/>
         <Indicated_by_the_symbol rdf:resource="&untitled-ontology-5;B"/>
         <The_method_by_which_it_was_first_obtained rdf:resource="&untitled-ontology-5;Bor_production_method"/>
         <Possible_internal_structures rdf:resource="&untitled-ontology-5;Crystalline"/>
-        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;J._Gay-Lussac"/>
-        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;L._Thenard"/>
     </owl:NamedIndividual>
     
 
@@ -330,7 +324,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Bor_production_method">
         <rdf:type rdf:resource="&untitled-ontology-5;Chemical_reaction_(preparation_method)"/>
-        <Heating rdf:resource="&untitled-ontology-5;B2O3+Potassium_metal"/>
         <The_method_by_which_it_was_first_obtained rdf:resource="&untitled-ontology-5;Bor"/>
     </owl:NamedIndividual>
     
@@ -340,7 +333,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Colorless">
         <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
-        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
     </owl:NamedIndividual>
     
 
@@ -349,7 +341,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Crystalline">
         <rdf:type rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
-        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Bor"/>
         <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Colorless"/>
         <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Grey"/>
         <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Red"/>
@@ -361,7 +352,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Dark">
         <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
-        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Amorphous"/>
     </owl:NamedIndividual>
     
 
@@ -370,7 +360,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Grey">
         <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
-        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
     </owl:NamedIndividual>
     
 
@@ -405,7 +394,6 @@
 
     <owl:NamedIndividual rdf:about="&untitled-ontology-5;Red">
         <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
-        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
