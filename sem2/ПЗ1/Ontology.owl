@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-5 "http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Heating -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Heating">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Chemical_reaction_(preparation_method)"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_substance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Indicated_by_the_symbol -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Indicated_by_the_symbol">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&untitled-ontology-5;Symbol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Number_of_allotropic_modifications_of_an_element -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Number_of_allotropic_modifications_of_an_element">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&untitled-ontology-5;Number"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Possible_Bor_colors_for_a_certain_internal_structure -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Possible_Bor_colors_for_a_certain_internal_structure">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Colour"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Possible_internal_structures -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Possible_internal_structures">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Relation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Relation">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Allotropic_modification"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Temperature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Scientists_who_discovered -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Scientists_who_discovered">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemist"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#The_method_by_which_it_was_first_obtained -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;The_method_by_which_it_was_first_obtained">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_reaction_(preparation_method)"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Year_of_the_discovery -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-5;Year_of_the_discovery">
+        <rdfs:range rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Group_in_the_periodic_table -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-5;Group_in_the_periodic_table">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Period_in_the_periodic_table -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-5;Period_in_the_periodic_table">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#has_an_atomic_number -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-5;has_an_atomic_number">
+        <rdfs:domain rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Allotropic_modification -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Allotropic_modification">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-5;Chemical_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Chemical_element -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Chemical_element">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-5;Chemical_substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Chemical_reaction_(preparation_method) -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Chemical_reaction_(preparation_method)"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Chemical_substance -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Chemical_substance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Chemist -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Chemist">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-5;Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Colour -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Colour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Human -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Human"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Internal_structure_of_matter -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Internal_structure_of_matter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Number -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Number"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Symbol -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Symbol"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Temperature -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Temperature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Year -->
+
+    <owl:Class rdf:about="&untitled-ontology-5;Year"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#10 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;10">
+        <rdf:type rdf:resource="&untitled-ontology-5;Number"/>
+        <Number_of_allotropic_modifications_of_an_element rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#1808 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;1808">
+        <rdf:type rdf:resource="&untitled-ontology-5;Year"/>
+        <Year_of_the_discovery rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Amorphous -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Amorphous">
+        <rdf:type rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
+        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Bor"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Dark"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#B -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;B">
+        <rdf:type rdf:resource="&untitled-ontology-5;Symbol"/>
+        <Indicated_by_the_symbol rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#B2O3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;B2O3">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemical_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#B2O3+Potassium_metal -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;B2O3+Potassium_metal">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemical_substance"/>
+        <Heating rdf:resource="&untitled-ontology-5;Bor_production_method"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Bor -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Bor">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemical_element"/>
+        <Group_in_the_periodic_table>13</Group_in_the_periodic_table>
+        <Period_in_the_periodic_table>2</Period_in_the_periodic_table>
+        <has_an_atomic_number>5</has_an_atomic_number>
+        <Number_of_allotropic_modifications_of_an_element rdf:resource="&untitled-ontology-5;10"/>
+        <Year_of_the_discovery rdf:resource="&untitled-ontology-5;1808"/>
+        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Amorphous"/>
+        <Indicated_by_the_symbol rdf:resource="&untitled-ontology-5;B"/>
+        <The_method_by_which_it_was_first_obtained rdf:resource="&untitled-ontology-5;Bor_production_method"/>
+        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Crystalline"/>
+        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;J._Gay-Lussac"/>
+        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;L._Thenard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Bor_production_method -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Bor_production_method">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemical_reaction_(preparation_method)"/>
+        <Heating rdf:resource="&untitled-ontology-5;B2O3+Potassium_metal"/>
+        <The_method_by_which_it_was_first_obtained rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Colorless -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Colorless">
+        <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Crystalline -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Crystalline">
+        <rdf:type rdf:resource="&untitled-ontology-5;Internal_structure_of_matter"/>
+        <Possible_internal_structures rdf:resource="&untitled-ontology-5;Bor"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Colorless"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Grey"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Dark -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Dark">
+        <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Amorphous"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Grey -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Grey">
+        <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#J._Gay-Lussac -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;J._Gay-Lussac">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemist"/>
+        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#L._Thenard -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;L._Thenard">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemist"/>
+        <Scientists_who_discovered rdf:resource="&untitled-ontology-5;Bor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Potassium_metal -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Potassium_metal">
+        <rdf:type rdf:resource="&untitled-ontology-5;Chemical_substance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/aliak/ontologies/2024/4/untitled-ontology-5#Red -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-5;Red">
+        <rdf:type rdf:resource="&untitled-ontology-5;Colour"/>
+        <Possible_Bor_colors_for_a_certain_internal_structure rdf:resource="&untitled-ontology-5;Crystalline"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
