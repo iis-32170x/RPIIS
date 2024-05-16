@@ -80,8 +80,8 @@ void testFindMinAndMax() {
     // Находим и выводим минимальный и максимальный элементы
     Node* minNode = tree.findMin();
     Node* maxNode = tree.findMax();
-    cout << "Минимальный элемент в дереве: " << (minNode ? std::to_string(minNode->key) : "Дерево пусто") << "\n";
-    cout << "Максимальный элемент в дереве: " << (maxNode ? std::to_string(maxNode->key) : "Дерево пусто") << "\n";
+    cout << "Минимальный элемент в дереве: " << (minNode ? to_string(minNode->key) : "Дерево пусто") << "\n";
+    cout << "Максимальный элемент в дереве: " << (maxNode ? to_string(maxNode->key) : "Дерево пусто") << "\n";
 }
 
 void testFindPredecessorAndSuccessor() {
