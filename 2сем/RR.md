@@ -89,3 +89,19 @@
 
 - Завершение алгоритма.
 
+
+
+
+# Тесты:
+
+# Пример 1
+
+Вход 
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144939284/0be9d9a5-08a9-42fb-93b8-9a0d12df068d)
+
+Выход
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144939284/6f5b08f4-63f9-4aa9-bb4a-928a3dcb541b)
+
+
