@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведено_в_степень -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведено_в_степень">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведено_в_степень"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычтено -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычтено">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычтено"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычитание"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Поделено_на -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Поделено_на">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Поделено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Деление"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведено_в_степень"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычтено"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Поделено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложено_с"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложено_с -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложено_с">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложено_с"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложение"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножение"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на_возведённое_в_третью_степень -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на_возведённое_в_третью_степень">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножение"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на_возведённое_во_вторую_степень -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на_возведённое_во_вторую_степень">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножено_на"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножение"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Результат"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Значение -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Значение"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Возведение_в_степень">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычитание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Вычитание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Деление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Деление">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Сложение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Умножение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Операции_над_численными_величинами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Числа -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Числа">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Численные_величины"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#a">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#b">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#c">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#d">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#z"/>
+        <untitled-ontology-7:Умножено_на rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#27"/>
+        <untitled-ontology-7:Умножено_на_возведённое_во_вторую_степень rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#a"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#l -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#l">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#m -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#m">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Поделено_на rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#c"/>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#q"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#q -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#q">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#r -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#r">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#x -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#x">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Вычтено rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#y"/>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#r"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#y -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#y">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#z -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#z">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Переменные"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#m"/>
+        <untitled-ontology-7:Сложено_с rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#r"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Числа"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#x"/>
+        <untitled-ontology-7:Умножено_на_возведённое_в_третью_степень rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#27">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Числа"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#l"/>
+        <untitled-ontology-7:Умножено_на_возведённое_в_третью_степень rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#a"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#9">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#Числа"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-7:Результат rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#y"/>
+        <untitled-ontology-7:Умножено_на rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#a"/>
+        <untitled-ontology-7:Умножено_на rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#b"/>
+        <untitled-ontology-7:Умножено_на rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-7#c"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
