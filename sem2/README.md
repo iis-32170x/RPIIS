@@ -63,7 +63,7 @@ README-файл должен содержать:
 - Преподаватель самостоятельно проверит вашу работу и сообщит вам о результате проверки отдельным письмом.
 
 Материалы для выполнения практики:
-- Шаблон для практики доступен [по ссылке](https://www.overleaf.com/read/zdxvwzgnwbzw). 
+- Шаблон для практики доступен [по ссылке](https://www.overleaf.com/read/fwgrqmfrycnb#e5000a). 
 - Мануал по установке Стандарта OSTIS из исходников доступен [по ссылке](https://docs.google.com/document/d/167ZeRKsdFtGN3R4tvT6svBQLF9YFaPZvjNHZcSAyZ1U/edit?usp=sharing). 
 - Уже собранный Стандарт OSTIS на момент 09.12.2022 доступен [по ссылке](https://drive.google.com/file/d/1iOB-XHD1Fu6KBANWJZLJJ4nT7aZzOw-G/view?usp=share_link). 
 - Опубликованная версия 2021 года также доступна [по ссылке](https://libeldoc.bsuir.by/handle/123456789/45813).
