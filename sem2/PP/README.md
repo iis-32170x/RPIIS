@@ -33,17 +33,17 @@
 
 Удалить вешину из множества непосещенных вершин.
 ![image](https://github.com/iis-32170x/RPIIS/assets/146937124/6bb690c1-27fc-464d-8dea-748dd3bfa36b)
-![image](https://github.com/iis-32170x/RPIIS/assets/146937124/664fe95b-0091-4a9f-bceb-5d2aca654ccf)
+
 
  
 
 5.	Если есть еще вершины, вернуться к шагу 3.
-![image](https://github.com/iis-32170x/RPIIS/assets/146937124/ec75e104-fddc-4ab2-8523-94f46f5f39a1)
+![image](https://github.com/iis-32170x/RPIIS/assets/146937124/664fe95b-0091-4a9f-bceb-5d2aca654ccf)
 
  
 
 6.	Подсчитать общее количество ребер в графе.
- ![Uploading image.png…]()
+![image](https://github.com/iis-32170x/RPIIS/assets/146937124/ec75e104-fddc-4ab2-8523-94f46f5f39a1)
 
 7.	Определить вид графа:
 •	Если все ребра симметричные, то граф является симметричным.
