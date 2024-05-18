@@ -317,3 +317,18 @@ int main() {
 }
 
 <h3>Тестирование программы</h3>
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/4dd2584d-621d-47be-ac47-14a1d51cb0b3)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/cfd39f9d-d0f2-4312-a682-d651136648b2)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/e825ca86-9447-444e-8ccf-8976d571f6b0)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/d3b150ee-272c-4846-abad-afb41151b846)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/ece7b49a-925f-46ea-9b54-26f6a68495a7)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/69913766/2d262f72-cc79-48ee-b715-eed45f6c3f2b)
+
+
+
