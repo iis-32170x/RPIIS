@@ -1,0 +1,319 @@
+<h1>Лабораторная работа №1</h1>
+<h2>Вариант 3</h2>
+Цель - Одномерный массив. Сортировка массива. Вставка элемента в
+отсортированный массив. Поиск элемента в отсортированном массиве.
+Объединение двух отсортированных массивов. Пересечение двух
+отсортированных массивов. <br/>
+Задача - Реализовать библиотеку для работы с одномерными массивами;<br/>
+<hr/>
+<h3>Список ключевых понятий и определений</h3>
+- <b><em>Массив — структура данных, хранящая набор значений, идентифицируемых по индексу или набору индексов, принимающих целые значения из некоторого заданного непрерывного диапазона.<br/>
+- <b><em>Одномерный массив — это линейная структура данных на языке программирования C, состоящая из фиксированного числа элементов одного типа данных, хранящихся в смежных ячейках памяти.<br/>
+- <b><em>Бинарный поиск — тип поискового алгоритма, который последовательно делит пополам заранее отсортированный массив данных, чтобы обнаружить нужный элемент.<br/>
+- <b><em>Сортировка пузырьком (Bubble Sort) — это простой алгоритм сортировки, который последовательно сравнивает соседние элементы списка и меняет их местами, если они находятся в неправильном порядке. Он продолжает проходить по списку, сравнивая и меняя элементы, пока весь список не будет отсортирован.<br/>
+<hr/>
+<h3>Алгоритм выполнения</h3>
+  
+Вначале расписываем каждую функцию для работы с массивом: bubbleSort, insertElement, searchElement, mergeArrays, intersectArrays.
+  
+1.Используем сортировку пузырьком для работы с массивом
+
+void bubbleSort(int* arr, int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Обмен значениями
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+2.Далее создаём функцию для вставки элемента в любое место в массиве
+
+void insertElement(int*& arr, int& size, int element, int position) {
+    int* newArr = new int[size + 1];
+    int i = 0;
+    int j = 0;
+
+    // Копирование элементов из исходного массива до указанной позиции
+    while (i < position) {
+        newArr[j] = arr[i];
+        i++;
+        j++;
+    }
+
+    // Вставка нового элемента
+    newArr[j] = element;
+    j++;
+
+    // Копирование оставшихся элементов из исходного массива
+    while (i < size) {
+        newArr[j] = arr[i];
+        i++;
+        j++;
+    }
+
+    delete[] arr;
+    arr = newArr;
+    size++;
+}
+
+3.Далее создаём функцию для поиска элемента в отсортированном массиве методом бинарного поиска
+
+bool searchElement(const int* arr, int size, int element) {
+    int left = 0;
+    int right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == element) {
+            return true;
+        }
+        else if (arr[mid] < element) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
+    }
+    return false;
+}
+
+4.Дальше мы добавляем функцию объединения двух отсортированных массивов
+
+int* mergeArrays(const int* arr1, int size1, const int* arr2, int size2, int& mergedSize) {
+    int* mergedArr = new int[size1 + size2];
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    while (i < size1 && j < size2) {
+        if (arr1[i] <= arr2[j]) {
+            mergedArr[k] = arr1[i];
+            i++;
+        }
+        else {
+            mergedArr[k] = arr2[j];
+            j++;
+        }
+        k++;
+    }
+    while (i < size1) {
+        mergedArr[k] = arr1[i];
+        i++;
+        k++;
+    }
+    while (j < size2) {
+        mergedArr[k] = arr2[j];
+        j++;
+        k++;
+    }
+    mergedSize = size1 + size2;
+    return mergedArr;
+}
+
+5.Далее добавляем метод для пересечения двух отсортированных массивов
+
+int* intersectArrays(const int* arr1, int size1, const int* arr2, int size2, int& intersectSize) {
+    int* intersectedArr = new int[size1];
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    while (i < size1 && j < size2) {
+        if (arr1[i] < arr2[j]) {
+            i++;
+        }
+        else if (arr1[i] > arr2[j]) {
+            j++;
+        }
+        else {
+            intersectedArr[k] = arr1[i];
+            i++;
+            j++;
+            k++;
+        }
+    }
+    intersectSize = k;
+    return intersectedArr;
+}
+
+6.Реализуем интерфейс программы через выбор варианта функции через меню
+
+int main() {
+
+    setlocale(LC_ALL, "Russian");
+    
+    int choice;
+
+    std::cout << "Выберите операцию:" << std::endl;
+    std::cout << "1. Сортировка массива" << std::endl;
+    std::cout << "2. Вставка элемента" << std::endl;
+    std::cout << "3. Поиск элемента" << std::endl;
+    std::cout << "4. Объединение массивов" << std::endl;
+    std::cout << "5. Пересечение массивов" << std::endl;
+    std::cout << "Ваш выбор: ";
+    std::cin >> choice;
+    
+7.Распишем отдельно каждый вариант выбора (1-5).
+
+    switch (choice) {
+    case 1: {
+        int size;
+        std::cout << "Введите размер массива: ";
+        std::cin >> size;
+
+        int* arr = new int[size];
+        std::cout << "Введите элементы массива: ";
+        for (int i = 0; i < size; ++i) {
+            std::cin >> arr[i];
+        }
+
+        bubbleSort(arr, size);
+
+        std::cout << "Отсортированный массив: ";
+        for (int i = 0; i < size; ++i) {
+            std::cout << arr[i] << " ";
+        }
+        std::cout << std::endl;
+
+        delete[] arr;
+        break;
+    }
+    case 2: {
+        int size;
+        std::cout << "Введите размер массива: ";
+        std::cin >> size;
+
+        int* arr = new int[size];
+        std::cout << "Введите элементы массива: ";
+        for (int i = 0; i < size; ++i) {
+            std::cin >> arr[i];
+        }
+
+        int element;
+        std::cout << "Введите элемент для вставки: ";
+        std::cin >> element;
+
+        int position;
+        std::cout << "Введите позицию для вставки (начиная с 0): ";
+        std::cin >> position;
+
+        insertElement(arr, size, element, position);
+
+        std::cout << "Массив после вставки элемента: ";
+        for (int i = 0; i < size; ++i) {
+            std::cout << arr[i] << " ";
+        }
+        std::cout << std::endl;
+
+        delete[] arr;
+
+        return 0;
+    }
+    case 3: {
+        int size;
+        std::cout << "Введите размер массива: ";
+        std::cin >> size;
+
+        int* arr = new int[size];
+        std::cout << "Введите элементы массива: ";
+        for (int i = 0; i < size; ++i) {
+            std::cin >> arr[i];
+        }
+
+        int element;
+        std::cout << "Введите элемент для поиска: ";
+        std::cin >> element;
+
+        bool found = searchElement(arr, size, element);
+
+        if (found) {
+            std::cout << "Элемент найден." << std::endl;
+        }
+        else {
+            std::cout << "Элемент не найден." << std::endl;
+        }
+
+        delete[] arr;
+        break;
+    }
+    case 4: {
+        int size1;
+        std::cout << "Введите размер первого массива: ";
+        std::cin >> size1;
+
+        int* arr1 = new int[size1];
+        std::cout << "Введите элементы первого массива: ";
+        for (int i = 0; i < size1; ++i) {
+            std::cin >> arr1[i];
+        }
+
+        int size2;
+        std::cout << "Введите размер второго массива: ";
+        std::cin >> size2;
+
+        int* arr2 = new int[size2];
+        std::cout << "Введите элементы второго массива: ";
+            for (int i = 0; i < size2; ++i) {
+                std::cin >> arr2[i];
+            }
+
+        int mergedSize = size1 + size2;
+            int* mergedArr = mergeArrays(arr1, size1, arr2, size2, mergedSize);
+
+            std::cout << "Результат объединения массивов: ";
+            for (int i = 0; i < mergedSize; ++i) {
+                std::cout << mergedArr[i] << " ";
+            }
+        std::cout << std::endl;
+
+        delete[] arr1;
+        delete[] arr2;
+        delete[] mergedArr;
+        break;
+    }
+    case 5: {
+        int size1;
+        std::cout << "Введите размер первого массива: ";
+        std::cin >> size1;
+
+        int* arr1 = new int[size1];
+        std::cout << "Введите элементы первого массива: ";
+        for (int i = 0; i < size1; ++i) {
+            std::cin >> arr1[i];
+        }
+
+        int size2;
+        std::cout << "Введите размер второго массива: ";
+        std::cin >> size2;
+
+        int* arr2 = new int[size2];
+        std::cout << "Введите элементы второго массива: ";
+        for (int i = 0; i < size2; ++i) {
+            std::cin >> arr2[i];
+        }
+
+        int intersectSize = 0;
+        int* intersectedArr = intersectArrays(arr1, size1, arr2, size2, intersectSize);
+
+        std::cout << "Результат пересечения массивов: ";
+        for (int i = 0; i < intersectSize; ++i) {
+            std::cout << intersectedArr[i] << " ";
+        }
+        std::cout << std::endl;
+
+        delete[] arr1;
+        delete[] arr2;
+        delete[] intersectedArr;
+        break;
+    }
+    default:
+        std::cout << "Неверный выбор операции." << std::endl;
+        break;
+    }
+
+    return 0;
+}
+
+<h3>Тестирование программы</h3>
