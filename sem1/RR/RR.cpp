@@ -9,6 +9,7 @@ int** matrix;
 int** reformedMatrix;
 
 
+//Заканчивает реформирование матрицы, если каркас был создан
 bool AllVertexesAreConnected(int numberOfRelations)
 {
 	if (numberOfRelations == amountOfStrings - 1)
@@ -18,7 +19,8 @@ bool AllVertexesAreConnected(int numberOfRelations)
 	return false;
 }
 
-bool TheRealtionsWereAlreadyCreated(int row, int column)
+//Проверяет было ли создана связь между вершинами
+bool TheRelationsWereAlreadyCreated(int row, int column)
 {
 	if (reformedMatrix[row][column] == 1)
 	{
@@ -27,11 +29,12 @@ bool TheRealtionsWereAlreadyCreated(int row, int column)
 	return false;
 }
 
-bool TheVertexDoesntHaveAnyOtherEdge(int row, int column)
+//Проверяет тупиковая ли вершина (остались ли от неё маршруты до ещё не исследованных вершин)
+bool TheVertexDoesntHaveAnyOtherEdges(int row, int column)
 {
 	if (column == amountOfStrings - 1)
 	{
-		if (TheRealtionsWereAlreadyCreated(row, column) == true)
+		if (TheRelationsWereAlreadyCreated(row, column) == true)
 		{
 			return true;
 		}
@@ -43,7 +46,7 @@ bool TheVertexDoesntHaveAnyOtherEdge(int row, int column)
 	return false;
 }
 
-
+//Проверяет была ли установлена хотя бы 1-а связь с данной вершиной
 bool TheVertexIsClear(int row)
 {
 	for (int i = 0; i < amountOfStrings; ++i)
@@ -57,7 +60,7 @@ bool TheVertexIsClear(int row)
 }
 
 
-
+//Убирает кратные связи и петли
 void PrepareMatrix()
 {
 	for (int i = 0; i < amountOfStrings; i++)
@@ -65,18 +68,20 @@ void PrepareMatrix()
 		if (matrix[i][i] != 0) matrix[i][i] = 0;
 		for (int j = 0; j < amountOfStrings; j++)
 		{
-			if (matrix[i][j] != 0 && matrix[i][j] != 1) matrix[i][j] = 1;
+			if (matrix[i][j] != 0 && matrix[i][j] != 1) 
+				matrix[i][j] = 1;
 		}
 	}
 }
 
+//Читает матрицу из файла
 void TakeMatrix()
 {
 	
 	int elementOfMatrix;
 	ifstream matrixFile;
 
-	matrixFile.open("tasks\\matrixFile10.txt");
+	matrixFile.open("tasks\\matrixFile1.txt");
 	matrixFile >> amountOfStrings;
 	cout << amountOfStrings << endl;
 	matrix = new int* [amountOfStrings];
@@ -113,7 +118,7 @@ void TakeMatrix()
 
 }
 
-
+//Реформирует матрицу
 void ReformMatrix()
 {
 	vector<int> VertexPath;
@@ -121,25 +126,23 @@ void ReformMatrix()
 	int resetLevel = 1;
 
 	reformedMatrix = new int* [amountOfStrings];
-	for (int k = 0; k < amountOfStrings; k++)
+	for (int i = 0; i < amountOfStrings; i++)
 	{
-		reformedMatrix[k] = new int[amountOfStrings];
+		reformedMatrix[i] = new int[amountOfStrings];
 	}
-
-	
 
 	for (int i = 0; i < amountOfStrings; i++)
 	{
-		for (int l = 0; l < amountOfStrings; l++)
+		for (int j = 0; j < amountOfStrings; j++)
 		{
-			reformedMatrix[i][l] = 0;
+			reformedMatrix[i][j] = 0;
 		}
 	}
 
 
-	for (int k = 0; k < amountOfStrings; k++)
+	for (int row = 0; row < amountOfStrings; row++)
 	{
-		for (int l = 0; l < amountOfStrings; l++)
+		for (int column = 0; column < amountOfStrings; column++)
 		{
 			if (AllVertexesAreConnected(numberOfEdges) == true)
 			{
@@ -147,27 +150,26 @@ void ReformMatrix()
 			}
 
 
-			if (TheVertexDoesntHaveAnyOtherEdge(k, l) == true)
+			if (TheVertexDoesntHaveAnyOtherEdges(row, column) == true)
 			{
-				k = VertexPath[numberOfEdges - resetLevel] - 1;
+				row = VertexPath[numberOfEdges - resetLevel] - 1;
 				++resetLevel;
 				break;
 			}
 
 
-			if (matrix[k][l] == 1)
+			if (matrix[row][column] == 1)
 			{
-				if (TheRealtionsWereAlreadyCreated(k, l) == false)
+				if (TheRelationsWereAlreadyCreated(row, column) == false)
 				{
-					if (TheVertexIsClear(l) == true)
+					if (TheVertexIsClear(column) == true)
 					{
-						reformedMatrix[k][l] = 1;
-						reformedMatrix[l][k] = 1;
+						reformedMatrix[row][column] = 1;
+						reformedMatrix[column][row] = 1;
 						resetLevel = 1;
-						VertexPath.push_back(k);
+						VertexPath.push_back(row);
 						++numberOfEdges;
-						//cout << endl << numberOfEdges << endl;
-						k = l - 1;
+						row = column - 1;
 						break;
 
 					}
@@ -185,6 +187,7 @@ void ReformMatrix()
 	}
 }
 
+//Выводит матрицу
 void ShowMatrix()
 {
 
@@ -199,6 +202,7 @@ void ShowMatrix()
 	}
 }
 
+//Очищает память
 void CleanMemory()
 {
 	for (int k = 0; k < amountOfStrings; k++)
