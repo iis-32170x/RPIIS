@@ -16,6 +16,11 @@ public:
     }
     void RecordGraph(string line) {
         vector<int> rebra;
+        if (line.size() == 1 || line.size() == 2)
+        {
+            graph.push_back(rebra);
+            return;
+        }
         int startPos = 2;
         int spacePos = line.find(' ', startPos);
         while (spacePos != string::npos) {
@@ -25,16 +30,17 @@ public:
             spacePos = line.find(' ', startPos);
             rebra.push_back(el);
         }
+
         string elstr = line.substr(startPos, spacePos - startPos);
         int el = stoi(elstr);
         rebra.push_back(el);
         graph.push_back(rebra);
 
-        /*for (auto i = rebra.begin(); i != rebra.end(); i++)
+        for (auto i = rebra.begin(); i != rebra.end(); i++)
         {
             cout << *i << " ";
         }
-        cout << endl;*/
+        cout << endl;
     }
     void SetRecord(string rec) {
         this->rec = rec;
@@ -85,7 +91,7 @@ public:
             }
         }
         fill(visit.begin(), visit.end(), false);
-        dfs(visit, 0);
+        visit = dfstr(transosegraph, visit, 0);
         for (int i = 0; i < length; i++)
         {
             if (!visit[i])
@@ -94,13 +100,22 @@ public:
         return true;
     }
 
+    vector<bool> dfstr(vector<vector<int>> transosegraph, vector<bool>& visit, int current_top) {
+        visit[current_top] = true;
+        for (int neighbour : transosegraph[current_top])
+        {
+            if (!visit[neighbour])
+                dfstr(transosegraph, visit, neighbour);
+        }
+        return visit;
+    }
+
     void dfs(vector<bool>& visit, int current_top) {
         visit[current_top] = true;
         for (int neighbour : graph[current_top])
         {
             if (!visit[neighbour])
                 dfs(visit, neighbour);
-
         }
     }
 
@@ -131,6 +146,7 @@ void NeedsToBeWrittenInSomeoneNotebook(string rec) {
 }
 int main()
 {
+    system("chcp 1251");
     setlocale(LC_ALL, "RU");
     string choise;
     string rec;
@@ -146,5 +162,10 @@ int main()
     cout << gr.StronglyСonnectivityСheck();
     return 0;
 }
-//D:\\labaPi1\\RR.txt
+//D:\\labaPi1\\RRka.txt
 //D:\\labaPi1\\RRwritten.txt
+//0	2	3	4
+//1	1	4	0
+//2	4	0	1
+//3	0	3
+//4	2
