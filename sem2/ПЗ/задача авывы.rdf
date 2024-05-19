@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#время -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#время">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#неизвестная -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#неизвестная">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#неизвестная"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#объект_наблюдения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#объект_наблюдения">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#стальной_шар"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#отличаться -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#отличаться"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#скорость -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#скорость">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#среда_обитания -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#среда_обитания">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#наблюдение"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#прованское_масло"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вязкость -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вязкость">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#параметр"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#диаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#диаметр">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#параметр"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#параметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#параметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#прованское_масло -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#прованское_масло"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#стальной_шар -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#стальной_шар"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#3мм -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#3мм">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#диаметр"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#90_мПА -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#90_мПА">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вязкость"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос_задачи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос_задачи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос"/>
+        <untitled-ontology-9:неизвестная rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разница_времени"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечная_скорость -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечная_скорость">
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#0"/>
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#1_процент"/>
+        <untitled-ontology-9:скорость rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечное_время -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечное_время">
+        <untitled-ontology-9:время rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+        <untitled-ontology-9:разность rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#начальное_время"/>
+        <untitled-ontology-9:разность rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разница_времени"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#масло -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#масло">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#прованское_масло"/>
+        <untitled-ontology-9:среда_обитания rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#начальное_время -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#начальное_время">
+        <untitled-ontology-9:время rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+        <untitled-ontology-9:разность rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечное_время"/>
+        <untitled-ontology-9:разность rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разница_времени"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение">
+        <untitled-ontology-9:время rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечное_время"/>
+        <untitled-ontology-9:время rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#начальное_время"/>
+        <untitled-ontology-9:объект_наблюдения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#шар"/>
+        <untitled-ontology-9:скорость rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечная_скорость"/>
+        <untitled-ontology-9:скорость rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#0"/>
+        <untitled-ontology-9:среда_обитания rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#масло"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разница_времени -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разница_времени">
+        <untitled-ontology-9:неизвестная rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#вопрос_задачи"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#шар -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#шар">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#стальной_шар"/>
+        <untitled-ontology-9:объект_наблюдения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#0">
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечная_скорость"/>
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#1_процент"/>
+        <untitled-ontology-9:скорость rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#разбиение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#1_процент -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#1_процент">
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#конечная_скорость"/>
+        <untitled-ontology-9:отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-9#0"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
