@@ -43,7 +43,7 @@
 | 1 | 4 |   |   |
 | 2 |   |   |   |
 | 3 | 1 | 4 |   |
-| 4 |   |   |   |
+| 4 | 3 |   |   |
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/6ebe2cb9-e847-42a0-998c-e59828c0da34)
 
