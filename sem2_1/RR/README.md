@@ -109,5 +109,12 @@
 
 
 ---
+## TO ᗷE ᑕOᑎTIᑎᑌEᗪ...
+**≋А≋ ≋с≋е≋й≋ч≋а≋с≋ ≋а≋н≋е≋к≋д≋о≋т≋**
+
+---
+ <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&size=35&pause=1000&color=661E1E&center=&vCenter=&multiline=true&repeat=&random=&width=435&lines=%D0%97%D0%B0%D1%81%D0%BB%D1%83%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%B0%D0%BD%D0%B5%D0%BA%D0%B4%D0%BE%D1%82)" alt="Typing SVG" /></a>
+ 
+<img src="https://readme-jokes.vercel.app/api" alt="Jokes Card" />
 ---
 
