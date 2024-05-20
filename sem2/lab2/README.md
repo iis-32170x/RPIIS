@@ -382,6 +382,13 @@ int main()
 
 
 ## Тесты
+![Näyttökuva 2024-05-20 113237](https://github.com/iis-32170x/RPIIS/assets/144227421/78fe3770-2981-40d5-ade8-e688968fced9)
+
+![Näyttökuva 2024-05-20 113454](https://github.com/iis-32170x/RPIIS/assets/144227421/858a10a6-2c6b-4936-80df-9d72f2c842ff)
+
+![Screenshot 2024-05-20 114539](https://github.com/iis-32170x/RPIIS/assets/144227421/b3214883-65a0-41e3-b434-351881c4d095)
+
+![Screenshot 2024-05-20 114614](https://github.com/iis-32170x/RPIIS/assets/144227421/5358550c-f93c-4833-a281-17e8f3f19ffa)
 
 ## Вывод
 В рамках данной лабораторной работы были изучена и разработана программа для реализации пересечения множеств.
