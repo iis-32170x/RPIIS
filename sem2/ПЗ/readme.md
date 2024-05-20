@@ -24,7 +24,8 @@ b. при помощи стандартов технологии OSTIS, испо
 
 Результат в КВЕ: 
 
-![5](https://github.com/iis-32170x/RPIIS/assets/146451109/88e9d9cc-7033-4df7-9639-418612e3dffb)
+![5](https://github.com/iis-32170x/RPIIS/assets/146451109/e220f940-81c2-43f2-a5c3-7a09a7e4aede)
+
 
 ### Часть 2
 Z = ((T-n(n-1)/4)/(n(n+1)(2n+1))/24)^1/2
