@@ -117,10 +117,10 @@ public:
         {
             for (int i = 0; i < n; i++)
             {
-                if (matrix[i][numArc] != 0)
-                {
+                //if (matrix[i][numArc] != 0)
+                //{
                     matrix[i].erase(matrix[i].begin() + numArc);
-                }
+                //}
             }
             m--;
             cout << "Дуга удалена." << endl;
