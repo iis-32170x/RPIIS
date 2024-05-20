@@ -50,3 +50,24 @@
 Таким образом, мы посетили все вершины графа и не обнаружили циклов. Граф является деревом.
 
 ![https://github.com/iluxa313/iluxa313/blob/main/7rr.png](https://github.com/iluxa313/iluxa313/blob/main/7rr.png)
+
+*Завершаем программу
+
+## Вывод
+Формализовал алгоритм нахождения минимального разреза графа графа.
+
+## Тесты
+### Тест 1
+![https://github.com/iluxa313/iluxa313/blob/main/t1.png](https://github.com/iluxa313/iluxa313/blob/main/t1.png)
+
+Результат: граф не является деревом
+
+### Тест 2
+![https://github.com/iluxa313/iluxa313/blob/main/t2.png](https://github.com/iluxa313/iluxa313/blob/main/t2.png)
+
+Результат: граф не является деревом
+
+### Тест 3
+![https://github.com/iluxa313/iluxa313/blob/main/t3.png](https://github.com/iluxa313/iluxa313/blob/main/t3.png)
+
+Результат: граф является деревом
