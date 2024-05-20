@@ -159,5 +159,33 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4fe913b0-221f-487f-8e75-6bae5ee18241)
 
+***
 
+### Пример 2
+**Вход:**
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/a7020340-c42e-4050-859c-ff1e34fad597)
+
+**Выход:**
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4ed4719c-4b01-4255-b6d0-e8535d2f863e)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/2163ba20-c0da-4979-86de-43a05472a951)
+
+***
+
+### Пример 3
+
+
+**Вход:**
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/d344d34c-99a3-43dd-9c1e-6b57555ea216)
+
+
+**Выход:**
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/0043975a-ca5e-4dd5-aa17-0fc73a39b7f3)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/fa9cbf4b-d3f5-42b7-a257-4372396ae3a6)
 
