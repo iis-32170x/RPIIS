@@ -91,10 +91,14 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/5666c7ce-27b7-4ca8-bf37-09e7e8331b9c)
 
-##[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Italic&size=30&pause=1000&color=6B0D73&random=false&width=435&lines=%D0%92%D1%8B%D0%B2%D0%BE%D0%B4)](https://git.io/typing-svg)
-
-☆🎅 １.❼определил вид ориентированного графа ♪🍩
 ---
+
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Italic&size=30&pause=1000&color=6B0D73&random=false&width=435&lines=%D0%92%D1%8B%D0%B2%D0%BE%D0%B4)](https://git.io/typing-svg)
+
+☆ Определил вид ориентированного графа 🍩
+
+---
+
 ## TO ᗷE ᑕOᑎTIᑎᑌEᗪ...
 **≋А≋ ≋с≋е≋й≋ч≋а≋с≋ ≋а≋н≋е≋к≋д≋о≋т≋**
 
