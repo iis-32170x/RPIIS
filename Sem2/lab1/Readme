@@ -1,0 +1,198 @@
+# <p align="center">Лабораторная работа №1</p>
+
+Вариант 6. B-Дерево. Поиск. Вставка. Удаление.
+
+## <p align="center">Цели лабораторной работы:</p>
+1.Изучить структуру данных B-дерево и его принципы работы.
+2.Понять, как B-дерево обеспечивает эффективный поиск, вставку и удаление данных.
+
+## <p align="center">Задачи лабораторной работы:</p>
+1.Ознакомиться с основными понятиями B-дерева: порядок, степень, высота.
+2.Изучить правила вставки, поиска и удаления в B-дереве.
+3.Написать код для создания B-дерева.
+4.Реализовать операции поиска, вставки и удаления элементов в B-дереве.
+
+## <p align="center">Список используемых понятий и алгоритмов:</p>
+1. Бинарное дерево (или двоичное дерево) — это иерархическая структура данных, в которой каждый узел имеет не более двух потомков (детей). В общем случае, первый узел называется родительским, а его дети — левым и правым наследниками. Двоичное дерево может быть пустым (null) или состоять из данных и двух поддеревьев (каждое из которых также может быть пустым). Если узел имеет оба пустых поддерева, он называется листовым узлом или конечным узлом
+
+## <p align="center">Описание используемых алгоритмов:</p>
+1. **Бинарное дерево**
+
+  b_tree представляет собой структуру данных, которая может использоваться для создания бинарных деревьев. В этой структуре z — это значение узла, left и right — указатели на его детей (левого и правого наследника), а height — высота узла в дереве
+
+```cpp
+typedef struct b_tree {
+    int z;
+    struct b_tree* left;
+    struct b_tree* right;
+    int height;
+}b_tree;
+```
+2. **Создание бинарного узла**
+
+   функция el создает новый узел с заданным значением i
+
+```cpp
+       b_tree* el(int i) {
+    b_tree* elem = new b_tree;
+    elem->z = i;
+    elem->left = NULL;
+    elem->right = NULL;
+    elem->height = 1;
+    return elem;
+}
+```
+3. **Вычисление высоты B-узла**
+    
+```cpp
+int getH(b_tree* root) {
+    return (root == NULL) ? 0 : root->height;
+}
+```
+**Вычисление высоты B-дерева**
+
+```cpp
+void updateH(b_tree* root) {
+    root->height = 1 + max(getH(root->left), getH(root->right));
+}
+```
+
+4. **Функция для вращения влево**
+
+```cpp
+b_tree* left(b_tree* root) {
+    b_tree* newroot = root->right;
+    root->right = newroot->left;
+    newroot->left = root;
+    updateH(root);
+    updateH(newroot);
+    return newroot;
+}
+```
+ **Функция для вращения вправо**
+```cpp
+b_tree* right(b_tree* root) {
+    b_tree* newroot = root->left;
+    root->left = newroot->right;
+    newroot->right = root;
+    updateH(root);
+    updateH(newroot);
+    return newroot;
+}
+```
+
+5. **Функция для вставки элемента в B-дерево**
+
+```cpp
+b_tree* vst(b_tree* root, int n) {
+    
+        if (root == NULL) {
+            return el(n);
+        }
+        if (n < root->z) {
+            root->left = vst(root->left, n);
+        }
+        else { 
+            if (n > root->z) {
+                root->right = vst(root->right, n);
+            }
+        }
+        updateH(root);
+}
+```
+
+6. **Функция для поиска элемента в В-дереве**
+
+```cpp
+void find(int a, b_tree* root) {
+    if (a == root->z)
+        cout << "число ", a, " найдено";
+    if (a < root->z) {
+        //лево
+        if (root->left != NULL) {
+            find(a, root->left);
+        }
+        else cout << "число " << a << " не найдено";
+    }
+    else {
+        if (a > root->z) {
+            //право
+            if (root->right != NULL) {
+                find(a, root->right);
+            }
+            else cout << "число " << a << " не найдено";
+        }
+    }
+
+}
+```
+
+7. **Функция для удаления элемента из В-дерева**
+
+```cpp
+b_tree* udalit(b_tree* root, int a) {
+    {
+        if (root == NULL) {
+            return root;
+        }
+        if (a < root->z) {
+            root->left = udalit (root->left, a);
+        }
+        else if (a > root->z) {
+            root->right = udalit(root->right, a);
+        }
+        else {
+            // Найден узел для удаления
+            if (root->left == NULL || root->right == NULL) {
+                b_tree* temp = root->left ? root->left : root->right;
+                delete root;
+                return temp;
+            }
+            b_tree* temp = root->right;
+            while (temp->left != NULL) {
+                temp = temp->left;
+            }
+            root->z = temp->z;
+            root->right = udalit(root->right, temp->z);
+        }
+        updateH(root);
+```
+
+8. **Балансировка дерева**
+
+```cpp
+int balance = getH(root->left) - getH(root->right);
+if (balance > 1) {
+    if (getH(root->left->left) >= getH(root->left->right)) {
+        return right(root);
+    }
+    else {
+        root->left = left(root->left);
+        return right(root);
+    }
+}
+if (balance < -1) {
+    if (getH(root->right->right) >= getH(root->right->left)) {
+        return left(root);
+    }
+    else {
+        root->right = right(root->right);
+        return left(root);
+    }
+}
+```
+
+9. **Функция для вывода В-дерева**
+
+```cpp
+void print(b_tree* root) {
+    if (root != NULL) {
+        print(root->left);
+        cout << root->z << " ";
+        print(root->right);
+    }
+}
+```
+## <p align="center">Вывод:</p>
+В рамках данной лабораторной работы были изучены бинарные деревья и их базовые операции. 
+
