@@ -131,4 +131,33 @@
 ## Вывод
 Формализовал алгоритм поиска количества вершинных связностей графа.
 
+## Дополнение
+
+### Неориентированный граф
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/5dfc2bb9-d1c2-4ff0-9926-799b4df2d08c)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/62ff3e7d-ba29-4fa9-bd27-c4d8fd31a62c)
+
+
+***
+
+### Ориентированный граф
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f7d9d9f3-fef7-4892-b8a6-60cc9d81d3e3)
+
+
+
+
+***
+
+### Вершинная связность
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/7a88d705-20f3-4d06-9cab-c52f65d93a71)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4fe913b0-221f-487f-8e75-6bae5ee18241)
+
+
 
