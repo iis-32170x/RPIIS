@@ -29,11 +29,16 @@ int main() {
 		exit(0);
 
 	}
-	setÑhecking(set1, set2);
+	setĞ¡hecking(set1, set2);
 	spacetest(set1, set2);
-	
+
 	string res = intersection(set1, set2);
 	cout << "Initial set 1: " << set1 << endl;
 	cout << "Initial set 2: " << set2 << endl;
-	cout << "Intersection set: " << res;
+	if (res.empty()) {
+		cout << "No intersection";
+	}
+	else {
+		cout << "Intersection set: " << res;
+	}
 }
