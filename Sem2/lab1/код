@@ -1,0 +1,149 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+typedef struct b_tree {
+    int z;
+    struct b_tree* left;
+    struct b_tree* right;
+}b_tree;
+
+b_tree* el(int i) {
+    b_tree* elem = new b_tree;
+    elem->z = i;
+    elem->left = NULL;
+    elem->right = NULL;
+    return elem;
+}
+
+void vst(b_tree* root, b_tree* elem) {
+    if (elem->z < root->z) {
+        //право
+        if (root->left == NULL) {
+            root->left = elem;
+        }
+        else {
+            vst(root->left, elem);
+        }
+    }
+    else {
+        if (elem->z > root->z) {
+            //лево
+            if (root->right == NULL) {
+                root->right = elem;
+            }
+            else {
+                vst(root->right, elem);
+            }
+        }
+    }
+}
+
+void find(int a, b_tree* root) {
+    if (a == root->z)
+        cout << "число ", a, " найдено";
+        if (a < root->z) {
+            //лево
+            if (root->left != NULL) {
+                find(a, root->left);
+            }
+            else cout << "число "<< a<<" не найдено";
+        }
+        else {
+            if (a > root->z) {
+                //право
+                if (root->right != NULL) {
+                    find(a, root->right);
+                }
+                else cout << "число "<< a<< " не найдено";
+            }
+        }
+
+}
+
+void udalit(int a, b_tree*& root) {
+    if (root!=NULL) {
+        if (a == root->z) {
+            b_tree* t = root;
+            if (root->left == NULL) {
+                root = root->right;
+            }
+            else if (root->right == NULL) {
+                root = root->left;
+            }
+            else {
+                b_tree* g = root->right; //поиск замены
+                while (g->left != NULL) {
+                    g = g->left;
+                }
+                g->left = root->left;
+                root = root->right;
+            }
+            delete t;
+        }
+        else if (a < root->z) {
+            udalit(a, root->left);
+        }
+        else {
+            udalit(a, root->right);
+        }
+    }
+}
+
+void print(b_tree* root) {
+    if (root) {
+        print(root->left);
+        cout << root->z << " ";
+        print(root->right);
+    }
+}
+
+int main()
+{
+    setlocale(LC_ALL, "RU");
+  
+    int f[14], n;
+
+    b_tree* root = el(0);
+
+    for (int i = 0; i < 14; i++) {
+        cin >> f[i];
+    }
+    for (int i = 0; i < 14; i++) {
+        vst(root, el(f[i]));
+    }
+    
+START:
+    cout << "Выберите действие:\n"
+        "\t1. Вставить элемент\n"
+        "\t2. Удалить элемент\n"
+        "\t3. Найти элемент\n"
+        "\t4. Вывести дерево\n"
+        "\t5. Завершить программу\n";
+    int choose;
+    cin >> choose;
+
+    switch (choose) {
+    case 1: {
+        cin >> n;
+        vst(root, el(n));
+        goto START;
+    }
+    case 2: {
+        cin >> n;
+        udalit(n, root);
+        goto START;
+    };
+    case 3: {
+        cin >> n;
+        find(n, root);
+        goto START;
+    };
+    case 4: {
+        print(root);
+        goto START;
+    };
+    }
+    return 0;
+}
+
