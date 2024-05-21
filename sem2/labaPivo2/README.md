@@ -67,7 +67,7 @@ string trim(const string& str) {
 ### Функция ntersection(const string& file_path) :
 
 ```c++
-set<string> intersection(const string& file_path) {
+multiset<string> intersection(const string& file_path) {
     ifstream file(file_path);
     if (!file.is_open()) {
         cout << "Не удалось открыть файл.";
@@ -75,39 +75,42 @@ set<string> intersection(const string& file_path) {
     }
 
     string line;
-    set<string> result;
+    multiset<string> result;
     bool firstSet = true;
 
     while (getline(file, line)) {
-
         line = trim(line);
-        line = line.substr(1, line.length() - 2);
+        line = line.substr(3, line.length() - 4);
 
-        stringstream ss(line);
-        set<string> currentSet;
+        multiset<string> currentSet;
         string element;
+        line += ',';
+        for (int i = 0; i < line.size(); i++) {
+            if (line[i] == '{') {
+                int end = find_next_bracker(line, i) - 1;
+                i++;
+                string str = line.substr(i, end - i + 1);
+                currentSet.insert(sets(str));
+                i = end + 2;
+                element = "";
+                continue;
+            }
+            if (line[i] == '<') {
+                int end = find_next_bracker(line, i) - 1;
+                i++;
+                string str = line.substr(i, end - i + 1);
+                currentSet.insert(corteges(str));
+                i = end + 2;
+                element = "";
+                continue;
+            }
 
-        while (getline(ss, element, ',')) {
-
-            element = trim(element);
-
-
-            if (element.find('<') != string::npos) {
-                string tuple;
-                while (element.find('>') == string::npos) {
-
-                    tuple += element + ",";
-                    getline(ss, element, ',');
-                    element = trim(element);
-                }
-                tuple += element;
-                currentSet.insert(tuple);
+            if (line[i] != ',') {
+                element += line[i];
             }
             else {
-
-                if (!element.empty()) {
-                    currentSet.insert(element);
-                }
+                currentSet.insert(element);
+                element = "";
             }
         }
 
@@ -116,7 +119,7 @@ set<string> intersection(const string& file_path) {
             firstSet = false;
         }
         else {
-            set<string> intersectionSet;
+            multiset<string> intersectionSet;
             for (const string& elem : currentSet) {
                 if (result.find(elem) != result.end()) {
                     intersectionSet.insert(elem);
