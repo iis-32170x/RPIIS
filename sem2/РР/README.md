@@ -101,4 +101,3 @@
 
 ![photo_2024-05-21_14-07-07](https://github.com/iis-32170x/RPIIS/assets/147064507/1db0bd27-9a87-4aae-89d9-68703de625c6)
 
-******
