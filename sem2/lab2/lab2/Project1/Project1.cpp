@@ -4,7 +4,7 @@
 #include <fstream>
 using namespace Y;
 std::string set::check(std::string mnvo) {
-	bool inword = false;  int ind1 = 0; int ind2 = 0; int skb = 0;
+	bool inword = false;  int ind1 = 0; int ind2 = 0; int skb = 0; 
 	for (size_t i = 0; i < mnvo.length(); ++i) {
 		if ((mnvo[i] == '{' || mnvo[i] == ',') && inword == true) {
 			inword = false;

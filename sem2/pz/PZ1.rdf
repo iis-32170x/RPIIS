@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2">
+        <rdfs:label></rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Известность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Известность">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Образование -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Образование">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Жидкость"/>
+        <rdfs:label>Образование</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Открыл -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Открыл">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Человек"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:label>Открыл</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Отличаться -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Отличаться">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения"/>
+        <rdfs:label>Отличаться</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Реагент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Продукт_реакции"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Способ_открытия -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Способ_открытия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Исследование"/>
+        <rdfs:label>Способ открытия</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Традиционное_название -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Традиционное_название">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:label>Традиционное название</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#бродит -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#бродит">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение"/>
+        <rdfs:label>Бродит</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#объект_исследования -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#объект_исследования">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Исследование"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение"/>
+        <rdfs:label>Объект исследования</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#получение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#получение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdfs:label>Получение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#содержание -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#содержание">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Жидкость"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Растение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <rdfs:label>Содержание</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Дата -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Дата">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Год открытия</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Биохимический_процесс -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Биохимический_процесс"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Биохимический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Жидкость -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Жидкость"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Исследование -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Исследование"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Моносахарид -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Моносахарид">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Продукт_реакции -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Продукт_реакции">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Растение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Растение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Реагент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Реагент">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическая_реакция"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Смесь_сахаров -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Смесь_сахаров">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Число"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическая_реакция -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическая_реакция"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Человек -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Человек"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Число"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#alpha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#alpha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения"/>
+        <untitled-ontology-2:Отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#beta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#beta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#beta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения"/>
+        <untitled-ontology-2:Отличаться rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#alpha"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Бутлеров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Бутлеров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Человек"/>
+        <untitled-ontology-2:Открыл rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Глюкоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Глюкоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Моносахарид"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Угол_вращения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#beta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Дюбрунфо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Дюбрунфо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Человек"/>
+        <untitled-ontology-2:Открыл rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Фруктоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Конденсация -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Конденсация">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Молочнокислое -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Молочнокислое">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение"/>
+        <untitled-ontology-2:Образование rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ферментационная_жидкость"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Муравьиный_альдегид -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Муравьиный_альдегид">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахар -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахар">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Угол_вращения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#alpha"/>
+        <untitled-ontology-2:бродит rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Молочнокислое"/>
+        <untitled-ontology-2:бродит rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Спиртовое"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахарный_тростник -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахарный_тростник">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Растение"/>
+        <untitled-ontology-2:содержание rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахароза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахароза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахароза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:получение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахар"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Спиртовое -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Спиртовое">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Брожение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сравнительное_исследование -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сравнительное_исследование">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Исследование"/>
+        <untitled-ontology-2:объект_исследования rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Молочнокислое"/>
+        <untitled-ontology-2:объект_исследования rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Спиртовое"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ферментационная_жидкость -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ферментационная_жидкость">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Жидкость"/>
+        <untitled-ontology-2:содержание rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сахар"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формальдегид -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формальдегид">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Реагент"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Синтезирование rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза"/>
+        <untitled-ontology-2:Традиционное_название rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Муравьиный_альдегид"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Продукт_реакции"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Смесь_сахаров"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Год_открытия rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1861"/>
+        <untitled-ontology-2:Синтезирование rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Конденсация"/>
+        <untitled-ontology-2:Дата rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1861</untitled-ontology-2:Дата>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Фруктоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Фруктоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Моносахарид"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Органическое_соеденение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Год_открытия rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1847"/>
+        <untitled-ontology-2:Способ_открытия rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Сравнительное_исследование"/>
+        <untitled-ontology-2:Дата rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1847</untitled-ontology-2:Дата>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1847 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1847">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1861 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#1861">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ba(OH)2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ba(OH)2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Катализатор rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ca(OH)2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Ca(OH)2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Химическое_соеденение"/>
+        <untitled-ontology-2:Катализатор rdf:resource="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Формоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Год_открытия">
+        <rdfs:label>Год открытия</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Катализатор">
+        <rdfs:label>Катализатор</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Метод">
+        <rdfs:label>Метод</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Синтезирование">
+        <rdfs:label>Синтезирование</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/4/untitled-ontology-2#Угол_вращения">
+        <rdfs:label>Угол вращения</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
