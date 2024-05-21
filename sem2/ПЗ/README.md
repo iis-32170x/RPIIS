@@ -29,6 +29,9 @@ b. при помощи стандартов технологии OSTIS, испо
 
 ### Формализация в редакторе баз знаний Protégé:
 ![photo_2024-05-21_14-44-48](https://github.com/iis-32170x/RPIIS/assets/147064507/3f95a60f-65e9-4346-a06e-40c172523145)
+
 ![photo_2024-05-21_14-44-49](https://github.com/iis-32170x/RPIIS/assets/147064507/be457ba6-ceec-4e19-b4f9-aed976c2df77)
+
 ![photo_2024-05-21_14-44-56](https://github.com/iis-32170x/RPIIS/assets/147064507/771624dc-7e49-4108-bf87-447695613b79)
+
 ![photo_2024-05-21_14-44-57](https://github.com/iis-32170x/RPIIS/assets/147064507/95285eac-13ee-433f-a444-245f589a06a3)
