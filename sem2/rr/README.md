@@ -17,39 +17,52 @@
 
 ## Описание алгоритма:
 
-1.Задается неориентированный граф
+1. Задается неориентированный граф
 
-2.С помощью алгоритма DFS определяем, является ли граф деревом или нет
+2. С помощью алгоритма DFS определяем, является ли граф деревом или нет
 
 ### Результат формализации алгоримта РР
 
-1.Задается неориентированный граф.
+1. Задается неориентированный граф.
 
 ![https://github.com/iluxa313/iluxa313/blob/main/rr1.png](https://github.com/iluxa313/iluxa313/blob/main/rr1.png)
 
-2.Начинаем обход графа с вершины 1.
+2. Начинаем обход графа с вершины 1.
 
 ![https://github.com/iluxa313/iluxa313/blob/main/rr2.png](https://github.com/iluxa313/iluxa313/blob/main/rr2.png)
 
-3.Помечаем вершину 1 как посещенную.
+3. Помечаем вершину 1 как посещенную.
 
 ![https://github.com/iluxa313/iluxa313/blob/main/3rr.png](https://github.com/iluxa313/iluxa313/blob/main/3rr.png)
-4.Переходим к соседним вершинам 2 и 3, и записываем их в посещенные вершины.
 
-![https://github.com/iluxa313/iluxa313/blob/main/4rr.png](https://github.com/iluxa313/iluxa313/blob/main/4rr.png)
+4. Текущая вершина: 1. Добавляем ее соседей 2 и 3 в очередь. Очередь: [2, 3]. Посещенные вершины: {1}
 
-5.Посещаем соседей вершины 2 - вершины 4 и 5, если они еще не посещены, и записываем их в посещенные вершины.
+![https://github.com/iluxa313/iluxa313/blob/main/4'.png](https://github.com/iluxa313/iluxa313/blob/main/4'.png)
 
-![https://github.com/iluxa313/iluxa313/blob/main/5rr.png](https://github.com/iluxa313/iluxa313/blob/main/5rr.png)
+5. Извлекаем вершину 2 из очереди. Очередь: [3]. Текущая вершина: 2. Посещаем 2 и добавляем ее соседей 4 и 5 в очередь (сосед 1 уже посещен). Очередь: [3, 4, 5]. Посещенные вершины: {1, 2}
 
-6.Посещаем соседей вершины 3 – вершину 6, если она еще не посещена, и записываем её в посещенные вершины.
+![https://github.com/iluxa313/iluxa313/blob/main/5'.png](https://github.com/iluxa313/iluxa313/blob/main/5'.png)
 
-![https://github.com/iluxa313/iluxa313/blob/main/6rr.png](https://github.com/iluxa313/iluxa313/blob/main/6rr.png)
+6. Извлекаем вершину 3 из очереди. Очередь: [4, 5]. Текущая вершина: 3. Посещаем 3 и добавляем ее соседа 6 в очередь (сосед A уже посещен). Очередь: [4, 5, 6]. Посещенные вершины: {1, 2, 3}
 
-7.Все вершины посещены. Обход графа в ширину завершен.
+![https://github.com/iluxa313/iluxa313/blob/main/6'.png](https://github.com/iluxa313/iluxa313/blob/main/6'.png)
+
+7. Извлекаем вершину 4 из очереди. Очередь: [5, 6]. Текущая вершина: 4. Посещаем 4 (сосед 2 уже посещен). Очередь: [5, 6]. Посещенные вершины: {1, 2, 3, 4}.
+
+![https://github.com/iluxa313/iluxa313/blob/main/7'.png](https://github.com/iluxa313/iluxa313/blob/main/7'.png)
+
+8. Извлекаем вершину 5 из очереди. Очередь: [6]. Текущая вершина: 5. Посещаем 5 (сосед 2 уже посещен). Очередь: [6]. Посещенные вершины: {1, 2, 3, 4, 5}
+
+![https://github.com/iluxa313/iluxa313/blob/main/8'.png](https://github.com/iluxa313/iluxa313/blob/main/8'.png)
+
+9. Извлекаем вершину 6 из очереди. Очередь: []. Текущая вершина: 6. Посещаем 6 (соседи 3 уже посещен). Очередь: []. Посещенные вершины: {1, 2, 3, 4, 5, 6}
+
+![https://github.com/iluxa313/iluxa313/blob/main/9'.png](https://github.com/iluxa313/iluxa313/blob/main/9'.png)
+
+10. Все вершины посещены. Обход графа в ширину завершен.
 Таким образом, мы посетили все вершины графа и не обнаружили циклов. Граф является деревом.
 
-![https://github.com/iluxa313/iluxa313/blob/main/7rr.png](https://github.com/iluxa313/iluxa313/blob/main/7rr.png)
+![https://github.com/iluxa313/iluxa313/blob/main/10'.png](https://github.com/iluxa313/iluxa313/blob/main/10'.png)
 
 *Завершаем программу
 
