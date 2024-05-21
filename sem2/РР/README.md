@@ -74,25 +74,31 @@
 ## Пример входных и выходных конструкций:
 
 1. Входная:
+
 ![photo_2024-05-21_14-07-01](https://github.com/iis-32170x/RPIIS/assets/147064507/334153ca-2699-4b76-9296-3fc7e1f3525b)
 
 Выходная:
+
 ![photo_2024-05-21_14-07-02](https://github.com/iis-32170x/RPIIS/assets/147064507/ec78a948-f3df-49f1-9654-cb91b4456a9b)
 
 ******
 
 2. Входная:
+
 ![photo_2024-05-21_14-07-03](https://github.com/iis-32170x/RPIIS/assets/147064507/7f18e21a-866d-4ebc-b8bb-542ce28118a8)
 
 Выходная:
+
 ![photo_2024-05-21_14-07-05](https://github.com/iis-32170x/RPIIS/assets/147064507/07bccbd8-2843-414f-afd2-8b89199d3227)
 
 ******
 
 3. Входная:
+
 ![photo_2024-05-21_14-07-06](https://github.com/iis-32170x/RPIIS/assets/147064507/16730f12-7f34-483f-9c3d-5edda93704ad)
 
 Выходная:
+
 ![photo_2024-05-21_14-07-07](https://github.com/iis-32170x/RPIIS/assets/147064507/1db0bd27-9a87-4aae-89d9-68703de625c6)
 
 ******
