@@ -15,11 +15,12 @@ b. при помощи стандартов технологии OSTIS, испо
 ## Вариант 26
 
 ## Текст для формализации:
-![photo_2024-05-21_14-38-04](https://github.com/iis-32170x/RPIIS/assets/147064507/aec7ef6d-c9f0-48f2-ace7-fbe31fab7720)
+![photo_2024-05-21_14-46-27](https://github.com/iis-32170x/RPIIS/assets/147064507/16fe3627-9f2d-4347-bd5d-b322197d8e2c)
 
 ## Математичекское выражение для формализации: 
-![photo_2024-05-21_14-38-02](https://github.com/iis-32170x/RPIIS/assets/147064507/03438f0b-5054-4e1a-86d4-a3958e59dfda)
+![photo_2024-05-21_14-46-29](https://github.com/iis-32170x/RPIIS/assets/147064507/a83738f6-16c7-4c6f-a5da-1026cac103a3)
 ******
+
 ### Формализация текста:
 ![photo_2024-05-21_14-40-42](https://github.com/iis-32170x/RPIIS/assets/147064507/07c4cf9e-ad0c-4b21-8930-1e902571ff23)
 ![photo_2024-05-21_14-40-43](https://github.com/iis-32170x/RPIIS/assets/147064507/2b639e9c-bab4-4018-8b5a-116708d5e268)
