@@ -107,13 +107,37 @@
 
 Запишем в переменную `visited` - вершину `0`, а в `neighbour` - `2`, исключим из множества `not_visit` - вершину `0`.
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/3b76ffc9-2a33-43a5-82fe-c5362aae2452)
 
+Запишем в переменную `visited` - вершину `2`, а в `neighbour` - `4`, исключим из множества `not_visit` - вершину `2`.
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/68b2c9f5-46df-436c-928f-c669264aa635)
 
+Запишем в переменную `visited` - вершину `4`, исключим из множества `not_visit` - вершину `4`,  `neighbour` - будет пустым, поэтому возвращаемся на к предыдущей вершине `2`
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/117c4571-dd89-4d2f-a092-7f63e7fa30d6)
 
+Запишем в переменную `visited` - вершину `2`, а в `neighbour` - `1`
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/266f7c28-1f9c-47e9-ab8d-1f2bd0912131)
 
+Запишем в переменную `visited` - вершину `1`, исключим из множества `not_visit` - вершину `1`,  `neighbour` - будет пустым, поэтому возвращаемся на к предыдущей вершине `2`
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/148f3221-9521-4b74-a2c8-111316ff6b03)
+
+Запишем в переменную `visited` - вершину `2`, `neighbour` - будет пустым, поэтому возвращаемся на к предыдущей вершине `0`
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/5a708a73-84de-408c-9942-f2b5a06e84c0)
+
+Запишем в переменную `visited` - вершину `0`, а в `neighbour` - `3`.
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/f1335d51-aece-4e27-84b5-ff7ff8a8bd6f)
+
+Запишем в переменную `visited` - вершину `3`, исключим из множества `not_visit` - вершину `3`.
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/44843bc7-9e08-4d30-8d13-4439e043e0a6)
+
+Завершаем поиск в глубину.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/6e5e5085-0693-4168-91ac-a57fb00bdf3a)
 
