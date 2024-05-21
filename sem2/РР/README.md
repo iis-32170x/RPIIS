@@ -154,7 +154,8 @@
 
 ### Вершинная связность
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/7a88d705-20f3-4d06-9cab-c52f65d93a71)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/7075d623-18c6-4e20-9595-aa5a84919d2b)
+
 
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4fe913b0-221f-487f-8e75-6bae5ee18241)
