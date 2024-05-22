@@ -1,0 +1,184 @@
+Prefix(:=<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12>
+
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_ЧАЭС>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Город>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Мероприятие>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Пуща>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Страна>))
+Declaration(Class(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#год>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#имеют_статус>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#место_проведения>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#по_состоянию_на_год>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#подверглась_частичному_радиоактивному_заражению_от>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_до>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_от>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#этимология_происхождения>))
+Declaration(DataProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#год_начала>))
+Declaration(DataProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#направление>))
+Declaration(DataProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#площадь>))
+Declaration(DataProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус>))
+Declaration(DataProperty(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#частота>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_Чернобыльской_АЭС>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Беларусь>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ивенец>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Множество_деревень>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибоки>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#с_паравом__на_отселение>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#2013>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_ЧАЭС> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_ЧАЭС>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_ЧАЭС> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Страна>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Город> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Город>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Город> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Мероприятие>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Пуща> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Пуща>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Район> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Страна>)
+
+# Class: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река>)
+
+SubClassOf(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Географический_объект>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_Чернобыльской_АЭС> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_Чернобыльской_АЭС>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_ЧАЭС> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_Чернобыльской_АЭС>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана>)
+SameIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Беларусь> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Беларусь>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Страна> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Беларусь>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ивенец> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ивенец>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Город> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ивенец>)
+SameIndividual(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ивенец> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#место_проведения> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща>)
+DataPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#год_начала> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки> "2009"^^xsd:decimal)
+DataPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#частота> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Марафон_Налибоки> "Ежегодно")
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность>)
+DataPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#направление> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность> "восток")
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Множество_деревень> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Множество_деревень>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Множество_деревень>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#имеют_статус> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Множество_деревень> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибоки> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибоки>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Деревня> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибоки>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#подверглась_частичному_радиоактивному_заражению_от> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Авария_на_Чернобыльской_АЭС>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_до> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Западная_Березина>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_до> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Минская_возвышенность>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_до> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_от> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Бассейн_правых_притоков_Немана>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#расположен_от> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#этимология_происхождения> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибоки>)
+DataPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#площадь> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Налибокская_пуща> "96 тыс. га")
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность>)
+DataPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#направление> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Ошмянская_возвышенность> "север")
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Уса>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус>)
+
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#имеют_статус> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#с_паравом__на_отселение>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#по_состоянию_на_год> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#статус> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#2013>)
+
+# Individual: <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#2013> (<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#2013>)
+
+ClassAssertion(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#год> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#2013>)
+
+
+DisjointClasses(<http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Возвышенность> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Лесной_массив> <http://www.semanticweb.org/iroma/ontologies/2024/3/untitled-ontology-12#Река>)
+)
