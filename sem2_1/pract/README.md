@@ -13,7 +13,11 @@
 
 ## Решение в KBE
 
+Уравнение:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/567dbf2b-8d99-41e6-bd87-3d14c805b00f)
+
+Текст:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/226bd3ca-063d-493a-bb1e-aaaff8ece7ec)
 
@@ -29,6 +33,12 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/977f3d25-e576-4d55-8393-62b8e2f7f976)
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/a80ac157-cc9d-44c8-8b27-edc06649027e)
+
+
+---
+## Вывод:
+
+Научился формализовать текст, математические уравнения и работать в KBE, Protege
 
 
 ---
