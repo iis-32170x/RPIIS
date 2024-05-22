@@ -10,23 +10,23 @@
 сапропелем.
 ```
 Формализация данного текста в приложении КБЕ
-![https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/1.png)](image-1.png)
+![https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/1.png)](images-1.png)
 ### Вариант 1
-![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/3.png)](image-3.png)
+![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/3.png)](images-3.png)
 Формализация Варианта 12 первой части в приложении protege
 
 Классы
 
-![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/4.png)](image-4.png)
+![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/4.png)](images-4.png)
 
 
 Отношения 
 
-![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/5.png)](image-5.png)
+![(https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/5.png)](images-5.png)
 
 Сущности
 
-![[alt text](https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/6.png)](image-6.png)
+![[alt text](https://github.com/iis-32170x/RPIIS/blob/%D0%91%D0%B5%D0%B4%D0%B0%D1%80%D0%B8%D0%BA_%D0%97/Sem2/images/6.png)](images-6.png)
 
 # <p align="center">Вывод</p>
 Были изучены методы формализации текста и выражений
