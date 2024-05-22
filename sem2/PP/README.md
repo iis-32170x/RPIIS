@@ -23,6 +23,8 @@
 ### Демонстрация работы программы в семантической памяти
 1. Задаём граф, переменные `path`, `_visited_vertexes_count`, `current` и `initial`
 ![alt text](media/image-0.png)
+Демонстрация погрузки в базу знаний:
+![alt text](media/image-11.png)
 
 
 2. Создаём первую волну, указывающую на вершину графа.
@@ -45,9 +47,13 @@
 
 8. Генерация пути:
 ![alt text](media/image-7.png)
+Демонстрация погрузки в базу знаний:
+![alt text](media/image-10.png)
 
 9. `current` = `initial`, а также `_path` = `_visited_vertexes_count`, значит мы прошли по всем вершинам и вернулись в изначальную, алгоритм выполнен.
 ![alt text](media/image-8.png)
+Демонстрация погрузки в базу знаний:
+![alt text](media/image-9.png)
 
 
 # Вывод
