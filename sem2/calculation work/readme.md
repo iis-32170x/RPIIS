@@ -44,3 +44,6 @@
    
 ![7](stepsPNG/7.png)
 
+### Примеры работы (вход/выход)
+1. ![1example](stepsPNG/6.png)
+
