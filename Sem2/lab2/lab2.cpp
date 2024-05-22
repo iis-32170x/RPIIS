@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<string> readSets(string path) {
+vector<string> Read(string path) {
     ifstream f;
     f.open(path);
     if (!f.is_open()) {
@@ -37,7 +37,7 @@ vector<string> readSets(string path) {
     return sets;
 }
 
-vector<string> writeSets(vector<string> sets, int& number) {
+vector<string> Write(vector<string> sets, int& number) {
     vector<string> FULLset(sets.size());
     for (int i = 0; i < sets.size(); i++) {
         FULLset[i] = sets[i];
@@ -46,7 +46,7 @@ vector<string> writeSets(vector<string> sets, int& number) {
     return FULLset;
 }
 
-vector<string> parseSet(const string& input) {
+vector<string> Analys(const string& input) {
     vector<string> elements;
     size_t pos = 1;
     string buffer;
@@ -90,7 +90,7 @@ vector<string> parseSet(const string& input) {
 vector<vector<string>> subsets(vector<string> sets) {
     vector<vector<string>> subsets;
     for (int i = 0; i < sets.size(); i++) {
-        subsets.push_back(parseSet(sets[i]));
+        subsets.push_back(Analys(sets[i]));
         for (const auto& element : subsets[i]) {
             cout << element << " ";
         }
@@ -140,7 +140,7 @@ int main() {
     setlocale(LC_ALL, "Russian");
     int sets_q = 0;
     string path = "set.txt";
-    auto Sets = writeSets(readSets(path), sets_q);
+    auto Sets = Write(Read(path), sets_q);
     auto Subsets = subsets(Sets);
 
     if (Subsets.size() < 2) {
@@ -151,7 +151,7 @@ int main() {
     string result = intersection(Subsets[0], Subsets[1]);
 
     for (int i = 2; i < sets_q; i++) {
-        auto help_intersec = parseSet(result);
+        auto help_intersec = Analys(result);
         result = intersection(help_intersec, Subsets[i]);
     }
 
