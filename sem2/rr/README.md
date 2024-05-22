@@ -83,7 +83,7 @@
 
 ![https://github.com/iluxa313/iluxa313/blob/main/t3.png](https://github.com/iluxa313/iluxa313/blob/main/t3.png)
 
-На протяжении обхода графа не обнаружилось наличие циклов цикл.
+На протяжении обхода графа не обнаружилось наличие циклов.
 
 ![https://github.com/iluxa313/iluxa313/blob/main/t3''.png](https://github.com/iluxa313/iluxa313/blob/main/t3''.png)
 
