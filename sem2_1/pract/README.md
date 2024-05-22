@@ -3,7 +3,7 @@
 
 ## Задания
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/23973215-cf25-40ef-ab60-42998e6d49c5)
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/792b743c-fa43-4a96-8315-6397dcdfa11f)
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144555463/f1f7c940-7701-47e0-8075-53192883ae78)
 
