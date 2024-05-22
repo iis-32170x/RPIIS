@@ -7,6 +7,9 @@
 
 Граф представляется в виде матрицы смежности.
 
+### Формализация используемых понятий
+
+
 ### Алгоритм РР
 
 1. Пользователь задает неориентированный граф.
@@ -45,5 +48,28 @@
 ![7](stepsPNG/7.png)
 
 ### Примеры работы (вход/выход)
-1. ![1example](stepsPNG/6.png)
+Пример 1.
+
+![1examplein](Examples/вход1.jpeg)
+![1exampleout](Examples/выход1.jpeg)
+
+Пример 2.
+
+![2examplein](Examples/вход2.jpeg)
+![2exampleout](Examples/выход2.jpg)
+
+Пример 3.
+
+![3examplein](Examples/вход3.jpg)
+![3exampleout](Examples/выход3.jpg)
+
+Пример 4.
+
+![4examplein](Examples/вход4.jpg)
+![4exampleout](Examples/выход4.jpg)
+
+Пример 5.
+
+![5examplein](Examples/вход5.jpg)
+![5exampleout](Examples/выход5.jpg)
 
