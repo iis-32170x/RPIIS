@@ -17,15 +17,19 @@ b. при помощи стандартов технологии OSTIS, испо
 
 Результат в protege:
 
-![1](https://github.com/iis-32170x/RPIIS/assets/146451109/12d201f1-d6fe-4660-adda-04f477892df7)
-![2](https://github.com/iis-32170x/RPIIS/assets/146451109/9cd452bb-eb0a-4edf-854b-a90c5773e7dc)
-![3](https://github.com/iis-32170x/RPIIS/assets/146451109/ae890981-6414-46f3-b3d4-9e6cb7164ae0)
-![4](https://github.com/iis-32170x/RPIIS/assets/146451109/7355757b-862f-48da-b6c8-959f297e87e8)
+![1](https://github.com/iis-32170x/RPIIS/assets/146451109/1c8931cf-1556-4fdc-929e-d5627231337f)
+![2](https://github.com/iis-32170x/RPIIS/assets/146451109/e024becf-df39-4c4b-9778-0b1c91392ed8)
+![3](https://github.com/iis-32170x/RPIIS/assets/146451109/598159ef-a74c-43e4-9bd8-08723b4bf1ad)
+![4](https://github.com/iis-32170x/RPIIS/assets/146451109/810748ae-8697-44e9-ad89-c58968da6487)
+![5](https://github.com/iis-32170x/RPIIS/assets/146451109/af99c35d-5d03-4591-95d0-cdc1e4e36dc9)
+![7](https://github.com/iis-32170x/RPIIS/assets/146451109/09a58946-3f54-40c4-8640-4d6d83e83877)
+![8](https://github.com/iis-32170x/RPIIS/assets/146451109/b9fc7df3-a2e1-451c-8459-8414c22759a7)
+![9](https://github.com/iis-32170x/RPIIS/assets/146451109/8645b812-5c13-48ea-9104-1fd8ad589467)
+![10](https://github.com/iis-32170x/RPIIS/assets/146451109/4985eb60-08b0-4d2b-8c1a-47a39616152b)
 
 Результат в КВЕ: 
 
-![5](https://github.com/iis-32170x/RPIIS/assets/146451109/e220f940-81c2-43f2-a5c3-7a09a7e4aede)
-
+![11](https://github.com/iis-32170x/RPIIS/assets/146451109/4a178b57-063f-4957-a79b-f909e269fc03)
 
 ### Часть 2
 Z = ((T-n(n-1)/4)/(n(n+1)(2n+1))/24)^1/2
