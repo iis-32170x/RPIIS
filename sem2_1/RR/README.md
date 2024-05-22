@@ -1,4 +1,3 @@
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/42e86c69-8fb6-4177-a3c8-c51f5fb1721f)
 ![](https://komarev.com/ghpvc/?username=Kukrynitza)
 
 # <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Italic&weight=500&size=33&pause=1000&color=5B1182&random=false&width=435&lines=%D0%A0%D0%B0%D1%81%D1%87%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" alt="Typing SVG" /></a>
