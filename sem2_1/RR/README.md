@@ -97,13 +97,12 @@
 
 Записываем в множество `not_visit` все вершины графа
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/23ea3b09-6c72-4394-95f6-ef680be8bec0)
-
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/4282daf0-c29a-448c-8ced-0e2ce6fb6e47)
 
 Запускаем поиск в глубину(двигаясь по направлению ребер), при посещении вершины выписываем из множества `not_visit`. 
 Посещаемая вершина - переменная `visited`, вершина-сосед посещаемой, связанная с посещаемой ребром(от посещаемой к соседу) - переменная `neighbour` 
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144555463/c5463f4d-9339-4dd1-b08c-5ea5a30441cc)
+![image](https://github.com/iis-32170x/RPIIS/assets/144555463/7cae7a1b-d66a-458c-8014-47ea81ea9095)
 
 Запишем в переменную `visited` - вершину `0`, а в `neighbour` - `2`, исключим из множества `not_visit` - вершину `0`.
 
