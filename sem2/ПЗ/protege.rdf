@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#быть_вокруг -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#быть_вокруг"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#вызов -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#вызов"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#диаметр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#диаметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#длина -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#длина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#значение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#значение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#совершает_действие -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#совершает_действие"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#угол -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#угол"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#м -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#м"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#мм -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#мм"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#о -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#о"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внешний_диаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внешний_диаметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внутренний_диаметр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внутренний_диаметр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#момент_сил -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#момент_сил"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#труба -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#труба"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#N -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#N">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#момент_сил"/>
+        <untitled-ontology-6:вызов rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#закручивание"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внутренний_диаметр"/>
+        <untitled-ontology-6:мм rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</untitled-ontology-6:мм>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#внешний_диаметр"/>
+        <untitled-ontology-6:мм rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</untitled-ontology-6:мм>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#l -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#l">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина"/>
+        <untitled-ontology-6:м rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</untitled-ontology-6:м>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#закручивание -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#закручивание">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <untitled-ontology-6:быть_вокруг rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ось_трубы"/>
+        <untitled-ontology-6:угол rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ф"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ось_трубы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ось_трубы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#труба"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#стальная_труба -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#стальная_труба">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#труба"/>
+        <untitled-ontology-6:диаметр rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d1"/>
+        <untitled-ontology-6:диаметр rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d2"/>
+        <untitled-ontology-6:длина rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#l"/>
+        <untitled-ontology-6:совершает_действие rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#закручивание"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ф -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ф">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#величина"/>
+        <untitled-ontology-6:о rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-6:о>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число"/>
+        <untitled-ontology-6:значение rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#ф"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число"/>
+        <untitled-ontology-6:значение rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число"/>
+        <untitled-ontology-6:значение rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#l"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#число"/>
+        <untitled-ontology-6:значение rdf:resource="http://www.semanticweb.org/nina/ontologies/2024/4/untitled-ontology-6#d2"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
