@@ -86,10 +86,5 @@ with open('file.txt', 'r') as file:
             spis_mnozestv.append(x_per)
         spis_mnozestv = delete_povtory(spis_mnozestv)
         novoe = list()
-        novoe = spis_mnozestv[0]
-        
-        for i in range(len(lines)-1):
-
-            novoe = raznost(novoe, spis_mnozestv[i + 1])
-            
+        novoe =  raznost(spis_mnozestv[0], spis_mnozestv[1])
         print('Разность',len(lines),'множеств',novoe)
