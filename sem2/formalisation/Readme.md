@@ -8,13 +8,14 @@
 Формализация в редакторе баз знаний Protégé:
 - Описание классов:
 
-![alt text](media/image.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/9b1c7b90-72ad-45ae-871b-f259a0bb8ef9)
+
 - Описание отношений, связывающих между собой экземпляры классов
 
 ![alt text](media/image-1.png)
 - Описание отношений, связывающих между собой экземпляры классов и некоторые свойства:
 
-![alt text](media/image-2.png)
+![alt text](sem2/img/Data properties.png)
 - Экземпляры классов:
 
 ![alt text](media/image-3.png)
