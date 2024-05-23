@@ -27,22 +27,23 @@
 
 
 2. Создаём переменную `_visited`, указывающую на посещённую вершину графа.
-![4 gwf - KBE version 0 4 0  (integrator) 22 05 2024 12_14_55](https://github.com/iis-32170x/RPIIS/assets/144374775/d07fa8ef-4462-4450-aef5-792325ac10a7)
+![4 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_02_30](https://github.com/iis-32170x/RPIIS/assets/144374775/6e14ea52-47e6-41de-a03f-60de48430ea1)
 
 3.Добавляем ближайшую вершину в переменную `_visited` к тем, которые уже добавлены. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных).
-![5 gwf - KBE version 0 4 0  (integrator) 23 05 2024 09_29_29](https://github.com/iis-32170x/RPIIS/assets/144374775/a5e3eb8e-ca22-42b3-8b6d-5219af831bfd)
+![5 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_03_30](https://github.com/iis-32170x/RPIIS/assets/144374775/fd41fbf3-1a92-45c6-bc67-feb78a9da89e)
 
 4. Продолжаем до тех пор, пока не будут добавлены все вершины.
-![6 gwf - KBE version 0 4 0  (integrator) 23 05 2024 09_31_00](https://github.com/iis-32170x/RPIIS/assets/144374775/15918239-e0ab-415c-b1f9-2c1203f5df59)
+![6 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_05_21](https://github.com/iis-32170x/RPIIS/assets/144374775/cab131ae-6050-4797-b555-7e6061519fde)
 
 
-![6 gwf - KBE version 0 4 0  (integrator) 23 05 2024 09_31_03](https://github.com/iis-32170x/RPIIS/assets/144374775/9ef33eb9-e53e-4cf3-8109-06c99cabae32)
+![7 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_05_55](https://github.com/iis-32170x/RPIIS/assets/144374775/c21d340e-9212-4712-a8f4-5231b61b4546)
 
 
-![6 gwf - KBE version 0 4 0  (integrator) 23 05 2024 09_31_06](https://github.com/iis-32170x/RPIIS/assets/144374775/8cdf3721-f50e-416b-8dec-88ee0ebc6c6c)
+![9 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_06_23](https://github.com/iis-32170x/RPIIS/assets/144374775/a23b2ac7-b289-4503-b1c3-bcc478b7e687)
 
-5. Создаем граф, оставляя только добавленные вершины.
-![10 gwf - KBE version 0 4 0  (integrator) 23 05 2024 09_34_03](https://github.com/iis-32170x/RPIIS/assets/144374775/3d6b20cd-505f-4d79-8fa6-2c8042bf7f53)
+5. Создаем граф, оставляя только добавленные ребра.
+![10 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_07_11](https://github.com/iis-32170x/RPIIS/assets/144374775/8179aff1-d751-4166-b197-4fcf49dabc3a)
+
 
 # Вывод
 Был построен фрагмент онтологии, продемонстрирована работа программы решения теоретико-графовой задачи по нахождению дерева кратчайших путей в неориентированном графе в семантической памяти.
