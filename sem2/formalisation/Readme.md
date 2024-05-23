@@ -15,7 +15,7 @@
 ![alt text](media/image-1.png)
 - Описание отношений, связывающих между собой экземпляры классов и некоторые свойства:
 
-![alt text](sem2/img/Data properties.png)
+![alt text](media/Data properties.png)
 - Экземпляры классов:
 
 ![alt text](media/image-3.png)
