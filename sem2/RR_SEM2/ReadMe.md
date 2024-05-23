@@ -80,14 +80,19 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/145581766/6d8ac914-776f-4b9b-9247-91bd298e9519)
 ### Тест 3
 Вход
+![image](https://github.com/iis-32170x/RPIIS/assets/145581766/027d95d0-abc3-4c1b-bb6f-f11518eb55d2)
 
 Выход
+![image](https://github.com/iis-32170x/RPIIS/assets/145581766/ccfbbb5c-7daf-40f6-b099-db81fe95cbcd)
+
 ### Тест 4
 Вход
+![image](https://github.com/iis-32170x/RPIIS/assets/145581766/ffda344c-90cc-4ef9-b573-3f9c89cf39ca)
 
 Выход
+![image](https://github.com/iis-32170x/RPIIS/assets/145581766/f88e3558-64ea-4008-a78b-69ef9582f02e)
 
-### Тест 5
+
 
 
 
