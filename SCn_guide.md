@@ -28,3 +28,17 @@
 ## Что делать после нахождения понятия?
 
 После нахождения понятия, которого нет в стандарте вам нужно формализовать его на LaTeX
+
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f7fac312-3ebc-4dc6-8001-826aff8aba3c)
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ea4506b7-5a51-45e0-a340-0c51fc621a9b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/94d87139-746e-4eed-a032-da308d27cacb)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ba88dc22-a367-44b4-9b9e-ef2141f14fca)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/846d82b0-6f47-4ae6-a7f6-1eaf28747573)
+
