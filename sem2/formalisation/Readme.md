@@ -12,13 +12,16 @@
 
 - Описание отношений, связывающих между собой экземпляры классов
 
-![alt text](media/image-1.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/cb1feaa7-b80b-4b32-b3b5-3412f4d177e3)
+
 - Описание отношений, связывающих между собой экземпляры классов и некоторые свойства:
 
-![alt text](media/Data properties.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/07ad1e94-c72f-4aa9-be74-e96e48b2bf58)
+
 - Экземпляры классов:
 
-![alt text](media/image-3.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/a095428e-e1b4-4ce9-acb0-174c78a3ad92)
+
 
 Для каждого экземпляра указывается класс, к которому он принадлежит, а также описываются их свойства с использованием введённых отношений. К примеру:
 
