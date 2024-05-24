@@ -70,7 +70,6 @@ int main()
 	}
 	delete[] A;
 	delete[] C;
-	delete[] K;
 	system("pause");
 	return 0;
 }
