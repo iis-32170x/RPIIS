@@ -36,35 +36,40 @@
 ******
 
 
-![photo_2024-05-21_13-12-24](https://github.com/iis-32170x/RPIIS/assets/147064507/28465c02-353e-4b51-a9f9-1a8271c75056)
+![photo_2024-05-24_19-04-36](https://github.com/iis-32170x/RPIIS/assets/147064507/6f190641-3fbb-47ee-8384-681c6f4ed9a3)
 
 
 * Начинаем находить кратчайшее расстояние между вершинами и записывать их в перемунную _distance.
-* Также создаем переменную _eccentricity_A, в которой в дальнейшем будем сохраняться ексцентриситет вершины А.
 ******
 
 
-![photo_2024-05-21_13-12-25](https://github.com/iis-32170x/RPIIS/assets/147064507/7bd891a7-09e0-4706-9220-f9abd3ace044)
+![photo_2024-05-24_19-04-34](https://github.com/iis-32170x/RPIIS/assets/147064507/31e1f40e-67f6-44be-84a4-869e8a203f6a)
 
 
-* После нахождения всех расстояний от вершины А, выбираем наибольшее расстояние и записываем в переменную _eccentricity_A
+* После нахождения всех расстояний от вершины А, выбираем наибольшее расстояние и создаем переменную _eccentricity и записываем в неё результат
 ******
 
 
-![photo_2024-05-21_13-12-29](https://github.com/iis-32170x/RPIIS/assets/147064507/3bab80db-9674-4441-aac2-0a93a9d5a449)
-![photo_2024-05-21_13-12-38](https://github.com/iis-32170x/RPIIS/assets/147064507/2334ad01-dc52-4fc8-ad05-9699a175b63a)
-![photo_2024-05-21_13-12-40](https://github.com/iis-32170x/RPIIS/assets/147064507/1f25a43f-f863-4373-ab9a-d19e25bb5c70)
+![photo_2024-05-24_19-04-32](https://github.com/iis-32170x/RPIIS/assets/147064507/b47737f0-f470-42a5-8766-38891c566ed3)
+![photo_2024-05-24_19-04-30](https://github.com/iis-32170x/RPIIS/assets/147064507/9f4b22ab-0985-46ba-841b-14f8aaf690ab)
+![photo_2024-05-24_19-04-25](https://github.com/iis-32170x/RPIIS/assets/147064507/f71d47b1-3376-4d03-8367-f6862234d57a)
 
 
 * Повторяем те же действия для следующих вершин.
 ******
   
   
-![photo_2024-05-21_13-12-41](https://github.com/iis-32170x/RPIIS/assets/147064507/3d4e9916-86b7-4146-8250-997ff111aa2d)
+![photo_2024-05-24_19-04-24](https://github.com/iis-32170x/RPIIS/assets/147064507/6dbdd9df-8767-4a14-b08a-6ff3f78a5a76)
 
 
 * После нахождения всех эксцентриситетов создаём переменную _radius и записываем в неё наименьший эксцентриситет.
-* Завершаем программу
+******
+
+
+![photo_2024-05-24_19-10-29](https://github.com/iis-32170x/RPIIS/assets/147064507/dee0c68b-b796-4355-9f2a-20ac9ad7b208)
+
+
+* Получаем результат и завершаем программу
 
 
 ## Вывод
@@ -75,29 +80,31 @@
 
 1. Входная:
 
-![photo_2024-05-21_14-07-01](https://github.com/iis-32170x/RPIIS/assets/147064507/334153ca-2699-4b76-9296-3fc7e1f3525b)
+![photo_2024-05-24_19-23-59](https://github.com/iis-32170x/RPIIS/assets/147064507/28c81261-c63d-49bb-b043-a096db3fea02)
+
 
 Выходная:
 
-![photo_2024-05-21_14-07-02](https://github.com/iis-32170x/RPIIS/assets/147064507/ec78a948-f3df-49f1-9654-cb91b4456a9b)
+![photo_2024-05-24_19-24-04](https://github.com/iis-32170x/RPIIS/assets/147064507/5f2f1ba5-d382-4f95-b613-3ab63fc75b4f)
 
 ******
 
 2. Входная:
 
-![photo_2024-05-21_14-07-03](https://github.com/iis-32170x/RPIIS/assets/147064507/7f18e21a-866d-4ebc-b8bb-542ce28118a8)
+![photo_2024-05-24_19-24-17](https://github.com/iis-32170x/RPIIS/assets/147064507/ff095d08-7886-495e-a841-496f3b458154)
+
 
 Выходная:
 
-![photo_2024-05-21_14-07-05](https://github.com/iis-32170x/RPIIS/assets/147064507/07bccbd8-2843-414f-afd2-8b89199d3227)
+![photo_2024-05-24_19-24-22](https://github.com/iis-32170x/RPIIS/assets/147064507/ecb9e51c-57b8-4081-9aa9-8f5b7a2c90d0)
 
 ******
 
 3. Входная:
 
-![photo_2024-05-21_14-07-06](https://github.com/iis-32170x/RPIIS/assets/147064507/16730f12-7f34-483f-9c3d-5edda93704ad)
+![photo_2024-05-24_19-24-25](https://github.com/iis-32170x/RPIIS/assets/147064507/c53fe1c0-e664-41bf-b99f-4cd81aaf858d)
 
 Выходная:
 
-![photo_2024-05-21_14-07-07](https://github.com/iis-32170x/RPIIS/assets/147064507/1db0bd27-9a87-4aae-89d9-68703de625c6)
+![photo_2024-05-24_19-24-28](https://github.com/iis-32170x/RPIIS/assets/147064507/38373a53-f19c-4976-83e6-c7d74fa0ec49)
 
