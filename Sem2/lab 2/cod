@@ -1,0 +1,76 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	int i, j, n, m, k = 0, c = 0, r = 0, f = 0, j1, i1;
+
+	cout << "введите количество множеств: ";
+	cin >> n;
+
+	int** A = new int* [n];
+	int* C = new int[n];
+	int K[200];
+
+	for (i = 0; i < n; i++) {
+		cout << "введите количество элементов " << i + 1 << " множества : ";
+		cin >> m;
+		cout << endl;
+		C[i] = m;
+		A[i] = new int[m];
+		for (j = 0; j < m; j++) {
+			cout << "Ведите " << j + 1 << " элемент множества: ";
+			cin >> A[i][j];
+			cout << endl;
+		}
+	}
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < C[i]; j++) {
+			int t = 0;
+			for (i1 = 0; i1 < n; i1++) {
+				if (i == i1) i1++;
+				if (i1 != n) {
+					for (j1 = 0; j1 < C[i1]; j1++) {
+						if (A[i][j] == A[i1][j1]) {
+							t = 1;
+						}
+						if (i != (n-1)) {
+							if (i1 == (n - 1) && j1 == (C[i1] - 1)) {
+								if (t == 0) {
+									K[k] = A[i][j];
+									k++;
+								}
+							}
+						}
+						else {
+							if (i1 == (n - 2) && j1 == (C[i1] - 1)) {
+								if (t == 0) {
+									K[k] = A[i][j];
+									k++;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	cout << " Симметрическая разность множеств: ";
+
+	for (int y = 0; y < k; y++) {
+		cout << K[y]<<" ";
+	}
+
+	for (i = 0; i < n; i++) {
+		delete[] A[i];
+	}
+	delete[] A;
+	delete[] C;
+	delete[] K;
+	system("pause");
+	return 0;
+}
