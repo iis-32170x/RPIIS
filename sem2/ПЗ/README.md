@@ -22,16 +22,19 @@ b. при помощи стандартов технологии OSTIS, испо
 ******
 
 ### Формализация текста:
-![photo_2024-05-21_14-40-42](https://github.com/iis-32170x/RPIIS/assets/147064507/07c4cf9e-ad0c-4b21-8930-1e902571ff23)
-![photo_2024-05-21_14-40-43](https://github.com/iis-32170x/RPIIS/assets/147064507/2b639e9c-bab4-4018-8b5a-116708d5e268)
+![photo_2024-05-24_14-33-35](https://github.com/iis-32170x/RPIIS/assets/147064507/da7cbd6d-0653-4cf4-9e1e-b0beb09853fa)
+
+![photo_2024-05-24_14-33-37](https://github.com/iis-32170x/RPIIS/assets/147064507/635de8d0-42ad-42ee-b421-cdfdc4cde382)
+
+![photo_2024-05-24_14-33-43](https://github.com/iis-32170x/RPIIS/assets/147064507/60bb296e-83b2-4717-8ecd-08dd5cec53c2)
 
 ### Формализация математичекского выражения:
-![photo_2024-05-21_14-40-44](https://github.com/iis-32170x/RPIIS/assets/147064507/1c2f6cba-cff8-401c-8950-97b988916eea)
+![photo_2024-05-24_14-34-05](https://github.com/iis-32170x/RPIIS/assets/147064507/b6e434a7-0317-4c11-987b-5cb4516d9837)
 
 ### Формализация в редакторе баз знаний Protégé:
-![photo_2024-05-21_14-44-48](https://github.com/iis-32170x/RPIIS/assets/147064507/3f95a60f-65e9-4346-a06e-40c172523145)
+![photo_2024-05-24_14-34-16](https://github.com/iis-32170x/RPIIS/assets/147064507/71b8d53b-91fb-450f-8a73-5b5654549a50)
 
-![photo_2024-05-21_14-44-49](https://github.com/iis-32170x/RPIIS/assets/147064507/be457ba6-ceec-4e19-b4f9-aed976c2df77)
+![photo_2024-05-24_14-34-14](https://github.com/iis-32170x/RPIIS/assets/147064507/e7e4c808-8ce5-486b-afff-58e402ce99af)
 
 ![photo_2024-05-21_14-44-56](https://github.com/iis-32170x/RPIIS/assets/147064507/771624dc-7e49-4108-bf87-447695613b79)
 
