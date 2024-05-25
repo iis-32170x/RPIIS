@@ -126,3 +126,8 @@
     \scnitem{   }
 \end{scnrelfromlist}
 ```
+
+### В нашем случае придется использовать второй вариант
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ae0666c0-feec-4d7b-9880-b830fe6926a1)
+
+***
