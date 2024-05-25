@@ -40,4 +40,10 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9051f3d-0bf3-4acf-923c-bd1ccc677665)
 
+Пример 3.
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/2d02cc79-d0a8-482f-80ba-95c74b87a01c)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e011077d-9d1f-4d63-8038-60bb1f6c11f0)
+
 
