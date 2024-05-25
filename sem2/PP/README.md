@@ -61,4 +61,33 @@
 
 
 
+### Тесты 
+<img width="635" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/2fb64f1e-9b18-43b4-84a7-59c0255048b8">
+
+Результат:
+
+<img width="871" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/83e5be31-e7c0-48dd-80a6-b3d8dc61f651">
+
+
+
+
+
+<img width="663" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/239424ed-3f22-42f9-a913-aec23e9357c3">
+
+
+
+Результат:
+
+
+
+
+
+<img width="892" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/73e7140f-bc5f-475a-a795-57ca893308df">
+
+
+
+
+
+
+
 
