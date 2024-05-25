@@ -136,5 +136,19 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/466b334b-8c06-41ff-b82a-2bdd2c8c5d69)
 
+***
+
 ### Описываем для него синонимы и разбиения, относящиеся к этому понятию
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f4020d42-9824-429d-8121-478fc1be2db2)
+
+***
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f18fa1ea-ad08-4dc8-8920-9b84f2418b2c)
+
+***
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/786b0af2-1bcb-4e8a-bf5a-fad5973565f3)
+
+***
+
 
