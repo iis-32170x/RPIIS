@@ -82,8 +82,10 @@
 \end{scnindent}
 ```
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/3da30a56-e45e-41a1-b3a3-467bd29904f0)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/48a70a82-e4a4-42f6-a3f9-a033bfada0f2)
+
 
 ***
+### В нашем случае в статье для каждого элемента этой декомпозиции есть свое описание/пояснение/примечание
 
 
