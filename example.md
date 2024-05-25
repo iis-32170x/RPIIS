@@ -94,5 +94,9 @@
 ```
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/b9b21ac4-36fe-498c-9a9f-b60d3bad1ba6)
+***
+### Добавим для остальных:
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/9086e5b3-42b5-4e61-8e3b-f2af886cf4a6)
 
+***
