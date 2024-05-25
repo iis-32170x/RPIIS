@@ -20,14 +20,14 @@
 ## Демонстрация алгоритма:
 
 
-![photo_2024-05-21_13-12-21](https://github.com/iis-32170x/RPIIS/assets/147064507/6e4164c0-9a01-424f-a719-454a621d6543)
+![photo_2024-05-25_12-19-50](https://github.com/iis-32170x/RPIIS/assets/147064507/f50239a4-a7cd-417b-9f2a-70b0ba131aff)
 
 
 * _graph получит в качестве значения sc-узел взвешенного ориентированного графа.
 ******
 
 
-![photo_2024-05-21_13-12-23](https://github.com/iis-32170x/RPIIS/assets/147064507/5249362b-2df2-4767-8955-3d74a1f22c1f)
+![photo_2024-05-25_12-19-48](https://github.com/iis-32170x/RPIIS/assets/147064507/99cba0d4-e56d-4ebc-b44b-91368aeffe2a)
 
 
 * Переменная _not_checked_vertexes получит в качестве значения множество непроверенных
