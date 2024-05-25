@@ -26,5 +26,15 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9052927-b7e5-4a5c-a982-4d283623a05f)
 
+### Примеры работы (вход/выход)
+Пример 1.
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/d30997d8-ffbc-41da-aa8f-c39865467e9b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9052927-b7e5-4a5c-a982-4d283623a05f)
+
+Пример 2.
+
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9051f3d-0bf3-4acf-923c-bd1ccc677665)
 
 
