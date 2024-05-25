@@ -15,7 +15,9 @@
 ***
 
 ### Пример запроса
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/62aa1bc8-0897-4bfb-a0b0-8892b9205f5b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/6f14141b-8843-4397-ab8a-f5797740863f)
+
 
 ***
 
