@@ -8,7 +8,7 @@
 
 ## Шаг 1. 
 Запишем название понятия с помощью \scnheader{понятие}
-![diagram (1)](https://github.com/iis-32170x/RPIIS/assets/146937124/d80d3bb5-f339-4ab2-a287-817a97104db8)
+
 
 
 ![image](https://github.com/Dashulik10/1-/assets/144939580/c56e372b-89ee-4abe-a7bf-a4df5cd495eb))
