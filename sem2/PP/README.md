@@ -62,13 +62,14 @@
 
 
 ### Тесты 
+1)
 <img width="635" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/2fb64f1e-9b18-43b4-84a7-59c0255048b8">
 
 Результат:
 
 <img width="871" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/83e5be31-e7c0-48dd-80a6-b3d8dc61f651">
 
-
+2)
 
 
 
