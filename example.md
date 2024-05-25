@@ -93,5 +93,6 @@
 \scntext{пояснение}{текст пояснения)
 ```
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/3ec6a9f5-ba34-467d-aef1-7d332878cccf)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/b9b21ac4-36fe-498c-9a9f-b60d3bad1ba6)
+
 
