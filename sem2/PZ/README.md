@@ -4,7 +4,7 @@
 
 
 Задание 1. 
- <img src="images\task1.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/6fc63c02399c5eb503764e02bb2abc4625cebd03/images/task1.png)
 
 Результат:
 
