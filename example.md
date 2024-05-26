@@ -95,7 +95,7 @@
 \end{scnindent}
 ```
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/14e51bf3-9cba-48d2-8aa5-de0399ff5c14)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/64138dd8-ae19-45f2-b5b8-5d26edef8fff)
 
 ***
 ### Добавим для остальных:
