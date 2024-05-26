@@ -90,10 +90,13 @@
 ### Опишем её при помощи такой команды:
 
 ```
+\begin{scnindent}
 \scntext{пояснение}{текст пояснения)
+\end{scnindent}
 ```
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/b9b21ac4-36fe-498c-9a9f-b60d3bad1ba6)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/14e51bf3-9cba-48d2-8aa5-de0399ff5c14)
+
 ***
 ### Добавим для остальных:
 
