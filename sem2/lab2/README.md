@@ -14,103 +14,74 @@
 
 В данном коде используется алгоритм объединения множеств. Он выполняется следующим образом:
 
--Открывается файл с указанным путем.
+Этот код сначала считывает данные из файла input.txt, представляющие различные множества. Затем он разбирает каждое множество на его отдельные элементы, учитывая вложенные множества и кортежи. После этого он выполняет операцию объединения для каждой пары множеств, используя хэш-таблицу для хранения уникальных элементов. Результатом является строка, представляющая объединение всех множеств, которая выводится на экран.
 
--Инициализируются переменные, включая пустое множество result, алгоритм определяет является ли данное множество первым, проверяя, пуст ли result в момент обработки каждого нового множества:
-
--Читается каждая строка из файла.
-
--Строка подвергается обрезке пробельных символов с помощью функции trim().
-
--Если строка содержит символ <, то она представляет собой кортеж множества. Внутри цикла происходит сборка элементов кортежа до тех пор, пока не встретится символ >. Затем собранный кортеж добавляется в текущее множество currentSet.
-
--Если строка не является кортежем, то элементы разделяются по запятой и добавляются в currentSet.
-
--Если это первое множество, оно становится результатом result.
-
--Если это не первое множество, происходит объединение текущего множества currentSet с предыдущим результатом result. Результат объединения сохраняется в union_sets.
-
--После обработки всех строк в файле, результат пересечения union_sets становится новым значением result.
-
--Файл закрывается, и возвращается итоговое объединение множеств в виде result.
-
-### Функция trim(const string& str):
+### Функция vector<string> readSets(const string& path):
 
 ```c++
-string trim(const string& str) {
-    string result = str;
-
-    size_t start = result.find_first_not_of(" \t\n\r");
-    size_t end = result.find_last_not_of(" \t\n\r");
-    if (start == string::npos || end == string::npos) {
-        return "";
-    }
-    result = result.substr(start, end - start + 1);
-
-    size_t pos = result.find(" ");
-    while (pos != string::npos) {
-        result.erase(pos, 1);
-        pos = result.find(" ", pos);
+vector<string> readSets(const string& path) {
+    ifstream f(path);
+    if (!f.is_open()) {
+        cout << "Error while opening file!" << endl;
+        exit(EXIT_FAILURE);
     }
 
-    return result;
-}
+    vector<string> sets;
+    string buff;
+
+    while (getline(f, buff)) {
+        size_t found = buff.find('=');
+        if (found != string::npos) {
+            string dataAfterEqualSign = buff.substr(found + 1);
+            int open = 0, close = 0;
+
+            for (char c : dataAfterEqualSign) {
+                if (c == '{' || c == '<') open++;
+                if (c == '}' || c == '>') close++;
+            }
+
+            if (open != close) {
+                cout << "Code is wrong" << endl;
+                cout << "Count of '{' not = '}'" << endl;
+                exit(EXIT_FAILURE);
+            }
+
+            sets.push_back(dataAfterEqualSign);
+        }
+    }
+
+    return sets;
 }
 ```
 
-### Функция union_sets(const string& file_path) :
+### Функция string unionSets(vector<string>& set1, vector<string>& set2)  :
 
 ```c++
-set<string> union_sets(const string& file_path) {
-    ifstream file(file_path);
-    if (!file.is_open()) {
-        cout << "Не удалось открыть файл.";
-        exit(-1);
+string unionSets(vector<string>& set1, vector<string>& set2) {
+    unordered_set<string> unionSet;
+
+    for (const auto& element : set1) {
+        unionSet.insert(element);
     }
 
-    string line;
-    set<string> result;
-
-    while (getline(file, line)) {
-        line = trim(line);
-        line = line.substr(3, line.length() - 4);
-
-        set<string> currentSet;
-        string element;
-        line += ',';
-        for (int i = 0; i < line.size(); i++) {
-            if (line[i] == '{') {
-                int end = find_next_bracker(line, i) - 1;
-                i++;
-                string str = line.substr(i, end - i + 1);
-                currentSet.insert(sets(str));
-                i = end + 2;
-                element = "";
-                continue;
-            }
-            if (line[i] == '<') {
-                int end = find_next_bracker(line, i) - 1;
-                i++;
-                string str = line.substr(i, end - i + 1);
-                currentSet.insert(corteges(str));
-                i = end + 2;
-                element = "";
-                continue;
-            }
-
-            if (line[i] != ',') {
-                element += line[i];
-            }
-            else {
-                currentSet.insert(element);
-                element = "";
-            }
-        }
-
-        for (const string& elem : currentSet) {
-            result.insert(elem);
-        }
+    for (const auto& element : set2) {
+        unionSet.insert(element);
     }
+
+    string result = "{";
+    bool isFirstElement = true;
+
+    for (const auto& element : unionSet) {
+        if (!isFirstElement) {
+            result += ",";
+        }
+        result += element;
+        isFirstElement = false;
+    }
+
+    result += "}";
+    return result;
+}
 ```
 
 ## Вывод
