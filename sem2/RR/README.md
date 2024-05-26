@@ -35,16 +35,19 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/3a758f43-cc66-49e6-94b4-05c54a8c8dbb)
 
 3. Начинаем обход с вершины A, заносим ее в список visited.
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/bbca95e2-71c5-4b19-8d78-1b14856715ad)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/77a86907-5913-4659-bee7-1440bcfe5b5f)
+
 
 4. Идем к cмежной непосещенной вершине B, убирая ребро AB и записывая B в список visited.
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/f8e83688-e0d3-4db6-a28c-269cbe8ce33f)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/16f57c3d-1fc7-4e9c-bb3a-605ec22c09d1)
+
 
 5. Повторяем это, пока не доходим до вершины для которой нету смежной. Увеличиваем значение count на 1, т.к найдена компонента связности.
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/23dace2e-43bc-4987-a342-bb96585baa5e)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/7187eed6-ed37-41ee-a6b3-d8fd41276620)
+
 
 6. Продолжаем наш алгоритм, переходим к следующей непосещенной вершине и ищем к ней смежные. Когда смежных вершин не остается вновь увеличиваем значение count на 1, в связи с нахождением второй компоненты. 
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/486607dc-37e1-45cc-9792-353c0ed9d425)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/305ca881-4e19-4258-a1d4-1e1516cab614)
 
 
 
