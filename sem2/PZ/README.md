@@ -4,70 +4,70 @@
 
 
 Задание 1. 
- <img src="C:\Users\pinkk\RPIIS\images\task1.PNG">
+ <img src="images\task1.PNG">
 
 Результат:
 
-<img src="C:\Users\pinkk\RPIIS\images\task1_answer.PNG">
+<img src="images\task1_answer.PNG">
 
 Задание 2.
 
- <img src="C:\Users\pinkk\RPIIS\images\task2.PNG">
+ <img src="images\task2.PNG">
 
 Результат:
 
-<img src="C:\Users\pinkk\RPIIS\images\task2_answer.PNG">
+<img src="images\task2_answer.PNG">
 
 ## Условие задания для Protege
 
-<img src="C:\Users\pinkk\RPIIS\images\task1.PNG">
+<img src="images\task1.PNG">
 
 Результат:
 
 Classes:
-<img src="C:\Users\pinkk\RPIIS\images\classes.PNG">
+<img src="images\classes.PNG">
 
 Data properties:
-<img src="C:\Users\pinkk\RPIIS\images\data_properties.PNG">
+<img src="images\data_properties.PNG">
 
 Object properties:
-<img src="C:\Users\pinkk\RPIIS\images\object_properties.PNG">
+<img src="images\object_properties.PNG">
 
 Individuals:
-<img src="C:\Users\pinkk\RPIIS\images\individuals.PNG">
+<img src="images\individuals.PNG">
 
 Барановичи:
-<img src="C:\Users\pinkk\RPIIS\images\ind_baranovichi.PNG">
+<img src="images\ind_baranovichi.PNG">
 
 Беларусь:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_belarus.PNG">
+<img src="images\indiv_belarus.PNG">
 
 Волковыск:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_volkovisk.PNG">
+<img src="images\indiv_volkovisk.PNG">
 
 Герб "Лев":
-<img src="C:\Users\pinkk\RPIIS\images\indiv_gerb.PNG">
+<img src="images\indiv_gerb.PNG">
 
 Гродненская область:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_grodnenskaya.PNG">
+<img src="images\indiv_grodnenskaya.PNG">
 
 Гродно:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_grodno.PNG">
+<img src="images\indiv_grodno.PNG">
 
 Жировичский православный монастырь:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_monastir.PNG">
+<img src="images\indiv_monastir.PNG">
 
 Река Исса:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_issa.PNG">
+<img src="images\indiv_issa.PNG">
 
 Минск:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_minsk.PNG">
+<img src="images\indiv_minsk.PNG">
 
 Слоним:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_slonim.PNG">
+<img src="images\indiv_slonim.PNG">
 
 Слонимский район:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_slonimski.PNG">
+<img src="images\indiv_slonimski.PNG">
 
 Река Щара:
-<img src="C:\Users\pinkk\RPIIS\images\indiv_shara.PNG">
+<img src="images\indiv_shara.PNG">
