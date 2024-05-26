@@ -119,5 +119,5 @@ for element in results:
 
 ## Источники
 
-- [Генерация перестановок](https://prog-cpp.ru/permutation/)
+- [Алгоритмы комбинаций]([https://prog-cpp.ru/permutation/](https://thecode.media/all-combo/))
 - [Условие работы](https://drive.google.com/drive/folders/1SLcF9njDTaNUacXMA9Nrqm7FUS7MnNsI)
