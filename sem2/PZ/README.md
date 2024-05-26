@@ -8,66 +8,65 @@
 
 Результат:
 
-<img src="images\task1_answer.PNG">
+![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/task1_answer.png)
 
 Задание 2.
 
- <img src="images\task2.PNG">
+![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/task2.png)
 
 Результат:
 
-<img src="images\task2_answer.PNG">
+![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/task2_answer.png)
 
 ## Условие задания для Protege
 
-<img src="images\task1.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/6fc63c02399c5eb503764e02bb2abc4625cebd03/images/task1.png)
 
 Результат:
 
 Classes:
-<img src="images\classes.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/classes.png)
 
 Data properties:
-<img src="images\data_properties.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/data_properties.png)
 
 Object properties:
-<img src="images\object_properties.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/object_properties.png)
 
 Individuals:
-<img src="images\individuals.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/individuals.png)
 
 Барановичи:
-<img src="images\ind_baranovichi.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/ind_baranovichi.png)
 
 Беларусь:
-<img src="images\indiv_belarus.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_belarus.png)
 
 Волковыск:
-<img src="images\indiv_volkovisk.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_volkovisk.png)
 
 Герб "Лев":
-<img src="images\indiv_gerb.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_gerb.png)
 
 Гродненская область:
-<img src="images\indiv_grodnenskaya.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_grodnenskaya.png)
 
 Гродно:
-<img src="images\indiv_grodno.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_grodno.png)
 
 Жировичский православный монастырь:
-<img src="images\indiv_monastir.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_monastir.png)
 
 Река Исса:
-<img src="images\indiv_issa.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_issa.png)
 
 Минск:
-<img src="images\indiv_minsk.PNG">
-
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_minsk.png)
 Слоним:
-<img src="images\indiv_slonim.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_slonim.png)
 
 Слонимский район:
-<img src="images\indiv_slonimski.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_slonimski.png)
 
 Река Щара:
-<img src="images\indiv_shara.PNG">
+ ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/indiv_shara.png)
