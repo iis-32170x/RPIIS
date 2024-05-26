@@ -100,7 +100,7 @@
 ***
 ### Добавим для остальных:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/0ac2e569-c442-45ab-a210-17213c874395)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/eb55d687-d2a8-4a44-9636-150750a08b55)
 
 
 ***
