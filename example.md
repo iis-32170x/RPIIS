@@ -183,6 +183,15 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/c5f57195-7801-4424-aa13-d454040f0b6c)
 
+***
+### После создания, переходим в папку и нажимаем Upload. Затем загружаем изображение.
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/859b00a2-c53f-49a4-9e1b-17d04d072863)
+
+***
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/b5c17b9f-94a8-4663-901d-9ad2dcb86e72)
+
+***
+
 
 
 
