@@ -192,12 +192,17 @@
 
 ***
 
+### Далее добавляем изображение в формализацию
 
+```
+\scnrelfrom{пример}{\scnfileimage[35em]{путь к файлу изображения}}
+```
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ba684de0-6fc9-43e2-b837-626f18278760)
 
+### [ЧИСЛОem] отвечает за размер изображения
 
-
-
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/2ea78f89-fc83-43f1-afd5-2134c79597de)
 
 
 
