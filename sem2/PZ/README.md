@@ -4,6 +4,7 @@
 
 
 Задание 1. 
+
  ![image](https://github.com/iis-32170x/RPIIS/blob/6fc63c02399c5eb503764e02bb2abc4625cebd03/images/task1.png)
 
 Результат:
@@ -25,15 +26,19 @@
 Результат:
 
 Classes:
+
  ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/classes.png)
 
 Data properties:
+
  ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/data_properties.png)
 
 Object properties:
+
  ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/object_properties.png)
 
 Individuals:
+
  ![image](https://github.com/iis-32170x/RPIIS/blob/99669dd9dba37f710b1fb1cf8b5175f0841929bd/images/individuals.png)
 
 Барановичи:
