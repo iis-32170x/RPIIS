@@ -99,9 +99,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_в_годах -->
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#дата -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_в_годах"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#дата"/>
     
 
 
@@ -131,6 +131,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#высказывание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#высказывание"/>
     
 
 
@@ -288,9 +294,8 @@
         <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродненская"/>
         <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Исса"/>
         <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Щара"/>
-        <untitled-ontology-5:измерение_в_годах rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013</untitled-ontology-5:измерение_в_годах>
+        <untitled-ontology-5:дата rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">01012013</untitled-ontology-5:дата>
         <untitled-ontology-5:население rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48977</untitled-ontology-5:население>
-        <untitled-ontology-5:число_января rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-5:число_января>
     </owl:NamedIndividual>
     
 
@@ -316,33 +321,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#герб_Лев">
         <untitled-ontology-5:показывание rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Лев_Сапега"/>
         <untitled-ontology-5:утверждение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#герб_Лев"/>
-        <untitled-ontology-5:измерение_в_годах rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1591</untitled-ontology-5:измерение_в_годах>
-        <untitled-ontology-5:число_января rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</untitled-ontology-5:число_января>
+        <untitled-ontology-5:дата rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">04011591</untitled-ontology-5:дата>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#1"/>
-    
-
-
-    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#1_января -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#1_января"/>
-    
-
-
-    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#2013 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#2013"/>
-    
-
-
-    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#2013_год -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#2013_год"/>
 </rdf:RDF>
 
 
