@@ -91,7 +91,7 @@
 
 ```
 \begin{scnindent}
-\scntext{пояснение}{текст пояснения)
+\scntext{пояснение}{текст пояснения}
 \end{scnindent}
 ```
 
