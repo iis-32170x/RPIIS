@@ -331,5 +331,3 @@ string* Symmetric_difference(string path) {
 
 ## Источники
 1. https://www.youtube.com/watch?v=dQw4w9WgXcQ
-
-)
