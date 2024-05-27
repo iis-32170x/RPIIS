@@ -121,3 +121,4 @@ for element in results:
 
 - [Алгоритмы комбинаций](https://thecode.media/all-combo/)
 - [Условие работы](https://drive.google.com/drive/folders/1SLcF9njDTaNUacXMA9Nrqm7FUS7MnNsI)
+- https://github.com/iis-32170x/RPIIS/tree/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D1%8B%D0%BA%D0%BE_%D0%98/sem2_1/laba2
