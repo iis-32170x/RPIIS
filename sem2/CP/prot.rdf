@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#агрегатное_состояние -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#агрегатное_состояние"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#возможные_смешивания -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#возможные_смешивания"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#другое_название -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#другое_название"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#неабходимая_концентрация -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#неабходимая_концентрация"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#результат_реакции -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#результат_реакции"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#результат_смешивания -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#результат_смешивания"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#характеристика -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#характеристика"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#химическая_формула -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#химическая_формула"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#интервал -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#интервал"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#температура -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#температура"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#интервальная_величина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#интервальная_величина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#контаминант -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#контаминант"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#простейший_одноатомный_спирт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#простейший_одноатомный_спирт"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#химическое_вещество -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#химическое_вещество"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#СН3ОН -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#СН3ОН">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#химическое_вещество"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#бесцветный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#бесцветный"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#взрывоопасная_смесь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#взрывоопасная_смесь">
+        <untitled-ontology-5:результат_реакции rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вспышка"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вода -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вода"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#воздух -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#воздух">
+        <untitled-ontology-5:неабходимая_концентрация rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#процентное_соотношение"/>
+        <untitled-ontology-5:результат_смешивания rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#взрывоопасная_смесь"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вспышка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вспышка">
+        <untitled-ontology-5:температура rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</untitled-ontology-5:температура>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#гидроксид_метила -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#гидроксид_метила">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#древесный_спирт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#древесный_спирт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#жидкость -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#жидкость"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#карбинол -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#карбинол">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метанол -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метанол">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#контаминант"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#простейший_одноатомный_спирт"/>
+        <untitled-ontology-5:агрегатное_состояние rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#жидкость"/>
+        <untitled-ontology-5:возможные_смешивания rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#вода"/>
+        <untitled-ontology-5:возможные_смешивания rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#органичексий_растворитель"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#гидроксид_метила"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#древесный_спирт"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#карбинол"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метилгидрат"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метиловый_спирт"/>
+        <untitled-ontology-5:результат_смешивания rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#взрывоопасная_смесь"/>
+        <untitled-ontology-5:результат_смешивания rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#воздух"/>
+        <untitled-ontology-5:характеристика rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#бесцветный"/>
+        <untitled-ontology-5:химическая_формула rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#СН3ОН"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метилгидрат -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метилгидрат">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+        <untitled-ontology-5:другое_название rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метанол"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метиловый_спирт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#метиловый_спирт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#спирт"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#органичексий_растворитель -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#органичексий_растворитель"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#процентное_соотношение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#процентное_соотношение">
+        <untitled-ontology-5:интервал>6,98% - 35,5%</untitled-ontology-5:интервал>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#ядовитый -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-5#ядовитый"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
