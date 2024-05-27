@@ -246,6 +246,7 @@
 
 ### Добавляем авторов и источники:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/64987ff7-873d-4ec3-935a-6892e305402f)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/7e701097-1fda-48bd-aea4-cfbfb99b0139)
+
 
 ***
