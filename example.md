@@ -221,21 +221,26 @@
 
 ### Описываем для него синонимы и разбиения, относящиеся к этому понятию:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f4020d42-9824-429d-8121-478fc1be2db2)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ed08a6b9-78b8-4443-bb2c-89ef27a3274b)
+
 
 ***
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/f18fa1ea-ad08-4dc8-8920-9b84f2418b2c)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/56afa398-2d63-4ac0-bd40-8ccc2107c8cc)
+
 
 ***
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/786b0af2-1bcb-4e8a-bf5a-fad5973565f3)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ea5181e9-0dac-4b8c-a850-7a92ac5f3c7d)
 
 ***
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/a731d427-9b0f-4ede-9393-8bcbdfd421fa)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4603b646-072f-47a9-972c-5b47163211ed)
+
 
 ***
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/8db70a89-1e0a-4be9-8366-629d631af167)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/e64e9658-4a2b-4adc-b6d7-3d0441cd8019)
+
 
 ***
 
