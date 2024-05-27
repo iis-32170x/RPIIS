@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/pc/ontologies/2024/4/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/pc/ontologies/2024/4/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/pc/ontologies/2024/4/untitled-ontology-6/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Наблюдатель"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Плерион"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Сверхновая"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Созвездие"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Туманность"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Наблюдалась"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Находится_в"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Остаток_от"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Год_наблюдения"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Диаметр"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Расстояние_от_Земли"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Скорость_расширения"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SN_1054"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Арабские_астрономы"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Джон_Бевис"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Китайские_астрономы"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Телец"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Плерион"/>
+        <Class IRI="#Туманность"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Сверхновая"/>
+        <NamedIndividual IRI="#SN_1054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Наблюдатель"/>
+        <NamedIndividual IRI="#Арабские_астрономы"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Наблюдатель"/>
+        <NamedIndividual IRI="#Джон_Бевис"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Наблюдатель"/>
+        <NamedIndividual IRI="#Китайские_астрономы"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Плерион"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Созвездие"/>
+        <NamedIndividual IRI="#Телец"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <NamedIndividual IRI="#SN_1054"/>
+        <NamedIndividual IRI="#Арабские_астрономы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <NamedIndividual IRI="#SN_1054"/>
+        <NamedIndividual IRI="#Китайские_астрономы"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <NamedIndividual IRI="#Джон_Бевис"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Находится_в"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <NamedIndividual IRI="#Телец"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Остаток_от"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <NamedIndividual IRI="#SN_1054"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Год_наблюдения"/>
+        <NamedIndividual IRI="#SN_1054"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1054</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Год_наблюдения"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1731</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Диаметр"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal>11 световых лет</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Диаметр"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal>3,4 пк</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Расстояние_от_Земли"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal>2 кпк</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Расстояние_от_Земли"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal>6500 световых лет</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Скорость_расширения"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+        <Literal>1500 км/с</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <Class IRI="#Сверхновая"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <Class IRI="#Туманность"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Находится_в"/>
+        <Class IRI="#Туманность"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Остаток_от"/>
+        <Class IRI="#Туманность"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Наблюдалась"/>
+        <Class IRI="#Наблюдатель"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Находится_в"/>
+        <Class IRI="#Созвездие"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Остаток_от"/>
+        <Class IRI="#Сверхновая"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Год_наблюдения"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Диаметр"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Расстояние_от_Земли"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Скорость_расширения"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
