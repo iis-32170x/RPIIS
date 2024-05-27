@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/filip/ontologies/2024/4/untitled-ontology-12"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/filip/ontologies/2024/4/untitled-ontology-12"
+     versionIRI="urn:absolute:протеже_задача">
+    <Prefix name="" IRI="http://www.semanticweb.org/filip/ontologies/2024/4/untitled-ontology-12/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Время"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Значение_требующее_вычисления"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Прованское_масло"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Скорость"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Стальной_шар"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#двигаться_со_скоростью"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#изменение_скорости"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#иметь_скорость"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#опускаться_вниз"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#отличаться"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ускорение"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_на_сколько_отличается"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#значение_скорости"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#иметь_вязкость(в_мПа*с)"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#иметь_диаметр(в_мм)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Время"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Масло"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Шар"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#скорость_потом"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#скорость_сначала"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Время"/>
+        <Class IRI="#Значение_требующее_вычисления"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Время"/>
+        <NamedIndividual IRI="#Время"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Прованское_масло"/>
+        <NamedIndividual IRI="#Масло"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Стальной_шар"/>
+        <NamedIndividual IRI="#Шар"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Скорость"/>
+        <NamedIndividual IRI="#скорость_потом"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Скорость"/>
+        <NamedIndividual IRI="#скорость_сначала"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ускорение"/>
+        <NamedIndividual IRI="#Время"/>
+        <NamedIndividual IRI="#Шар"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#двигаться_со_скоростью"/>
+        <NamedIndividual IRI="#Шар"/>
+        <NamedIndividual IRI="#Масло"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_скорость"/>
+        <NamedIndividual IRI="#Шар"/>
+        <NamedIndividual IRI="#скорость_потом"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#иметь_скорость"/>
+        <NamedIndividual IRI="#Шар"/>
+        <NamedIndividual IRI="#скорость_сначала"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#опускаться_вниз"/>
+        <NamedIndividual IRI="#Шар"/>
+        <NamedIndividual IRI="#Масло"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#отличаться"/>
+        <NamedIndividual IRI="#скорость_потом"/>
+        <NamedIndividual IRI="#скорость_сначала"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#иметь_вязкость(в_мПа*с)"/>
+        <NamedIndividual IRI="#Масло"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">90.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#иметь_диаметр(в_мм)"/>
+        <NamedIndividual IRI="#Шар"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_на_сколько_отличается"/>
+        <NamedIndividual IRI="#скорость_потом"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_скорости"/>
+        <NamedIndividual IRI="#скорость_потом"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#значение_скорости"/>
+        <NamedIndividual IRI="#скорость_сначала"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
