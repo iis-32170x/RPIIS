@@ -47,6 +47,29 @@
 - Формализация понятий
 ![понятия gwf - KBE version 0 4 0  (integrator) 24 05 2024 01_46_55](https://github.com/iis-32170x/RPIIS/assets/144374775/ca7771ed-5c26-4f33-b0a0-c4f9a00f9b66)
 
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_29_43](https://github.com/iis-32170x/RPIIS/assets/144374775/2637c996-3baf-4ffa-8f20-6d41c8a53bde)
+
+## Примеры:
+1. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_24_12](https://github.com/iis-32170x/RPIIS/assets/144374775/80bb93c0-3ec9-43ee-9442-86fd4b9cb969)
+   
+   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_01](https://github.com/iis-32170x/RPIIS/assets/144374775/1db33c09-f1ad-4984-94c1-60741e636fa2)
+   
+2. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_20](https://github.com/iis-32170x/RPIIS/assets/144374775/8d3bb1a2-08e4-4de4-bc4c-da979ae70fe7)
+
+   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_27](https://github.com/iis-32170x/RPIIS/assets/144374775/a90b6099-c7e5-4739-9e06-4d35f84dad4a)
+
+3. ![Uploading Ubuntu [Работает] - Oracle VM VirtualBox 27.05.2024 16_27_57.png…]()
+
+   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_13](https://github.com/iis-32170x/RPIIS/assets/144374775/b9029881-1e3a-45c5-adb8-2e4bca1a59aa)
+
+4. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_26](https://github.com/iis-32170x/RPIIS/assets/144374775/82afc932-1451-4571-ab96-77596d0a6d0b)
+
+   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_37](https://github.com/iis-32170x/RPIIS/assets/144374775/08000a20-2152-47c7-88c8-4ed55ba0e25e)
+
+5. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_47](https://github.com/iis-32170x/RPIIS/assets/144374775/f36224e6-e591-4b43-9a61-af1d09345028)
+
+   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_58](https://github.com/iis-32170x/RPIIS/assets/144374775/32d989a0-1d1e-4367-9bbf-c21bba659c53)
+
 # Вывод
 Был построен фрагмент онтологии, продемонстрирована работа программы решения теоретико-графовой задачи по нахождению дерева кратчайших путей в неориентированном графе в семантической памяти.
 
