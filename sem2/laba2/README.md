@@ -19,26 +19,47 @@
 Данная работа описывает взаимодействие с множествами в большинстве своём в виду работы со строками, поэтому порядок действий следующий: считываем файл с множествами в вектор строк (функция `readSets`), проверяем баланс скобок (просто лишняя проверка на входные данные, функция `bracketsBalance`), разбираем каждую строку на элементы вектора, которые в свою очередь являются элементами множества (функция `parseString`), убираем кратные вхождения (в том числе и в подмножествах, функции `removeMultiOccurence` и `removeDuplicatesRecursive`), выполняем симметрическую разность посредством объединением двух разностей обоих множеств (`set_difference` и `set_union`).
 
 ---
-file_size(string path):
-Эта функция принимает путь к файлу в качестве входных данных и возвращает количество строк в файле.
-Она открывает файл с помощью ifstream, читает каждую строку с помощью getline() и увеличивает счетчик для отслеживания количества строк.
-Если не удается открыть файл, она выводит сообщение об ошибке и не возвращает никакого значения.
+В функции `parseString` происходит посимвольное считывание строки и её "разбивание" на элементы. Переменная `depth` следит за глубиной подмножества (0 - мы находимся на верхнем уровне), поэтому элемент не попадет в вектор до тех пор, пока не выйдет из подмножества.
 ```cpp
-int file_size(string path) {
-	int numLines = 0;
-	ifstream fin(path);
-	string unused;
-	if (fin.is_open()) {
-		while (getline(fin, unused)) {
-			++numLines;
-		}
-		return numLines;
-	}
-	else {
-		cout << "Ошибка открытия файла" << endl;
-	}
-}
+vector<string> parseString(const string &str)
+{
+    vector<string> result;
+    if(str.empty()) return result;
+    string set = str.substr(1, str.length() - 2);
+    stringstream ss(set);
+    string elem;
+    char c;
+    int depth = 0;
 
+    while (ss.get(c))
+    {
+        if (c == ',' && depth == 0)
+        {
+            if (!elem.empty())
+            {   
+                result.push_back(elem);
+                elem.clear();
+            }
+        }
+        else
+        {
+            if (c == '<' || c == '{')
+            {
+                depth++;
+            }
+            else if (c == '>' || c == '}')
+            {
+                depth--;
+            }
+            elem += c;
+        }
+    }
+    if (!elem.empty())
+    {
+        result.push_back(elem);
+    }
+    return result;
+}
 ```
 
 ---
@@ -60,239 +81,26 @@ bool stringsAreEqual(const string &str1, const string &str2) {
 
 ---
 
-get_line(int count, string path):
-Эта функция принимает количество строк и путь к файлу в качестве входных данных и возвращает указанную строку из файла.
-Она открывает файл с помощью ifstream, читает строки до указанного количества с помощью цикла, а затем читает и возвращает строку на этом счетчике.
-Она также проверяет, равно ли количество открывающих и закрывающих фигурных/угловых скобок, и возвращает сообщение об ошибке, если это не так.
-Если не удается открыть файл, она выводит сообщение об ошибке и не возвращает никакого значения.
+Удаление кратных вхождений в первую очередь происходит на верхнем уровне множества, а далее рекурсивно в подмножествах. Для этого функция `removeMultiOccurence` будет рекурсивно вызываться до тех пор, пока по бокам строки будут находиться фигурные или угловые скобки.
 ```cpp
-string get_line(int count, string path) {
-	string line;
-	int count_left = 0;
-	int count_right = 0;
-	ifstream fin;
-	fin.open(path);
-	if (fin.is_open()) {
-		for (int i = 0; i < count; i++)
-		{
-			fin >> line;
-		}
-		for (int i = 0; i < line.size(); i++)
-		{
-			if ((line[i] == '{') or (line[i] == '<')) {
-				count_left++;
-			}
-			if ((line[i] == '}') or (line[i] == '>')) {
-				count_right++;
-			}
-		}
-		if (count_left != count_right) {
-			return "Ошибка в записи множества";
-		}
-		return line;
-	}
-	else {
-		cout << "Ошибка открытия файла" << endl;
-	}
+void removeDuplicatesRecursive(vector<string> &set) {
+    removeMultiOccurence(set);
+    for (string &elem : set) {
+        if ((elem.front() == '{' && elem.back() == '}') || (elem.front() == '<' && elem.back() == '>')) {
+            vector<string> subset = parseString(elem);
+            removeDuplicatesRecursive(subset);
+            string newElem(1, elem.front());
+            for (size_t i = 0; i < subset.size(); ++i) {
+                newElem += subset[i];
+                if (i != subset.size() - 1) {
+                    newElem += ",";
+                }
+            }
+            newElem += elem.back();
+            elem = newElem;
+        }
+    }  
 }
-```
-get_line(int count, string path):
-Эта функция принимает количество строк и путь к файлу в качестве входных данных и возвращает указанную строку из файла.
-Она открывает файл с помощью ifstream, читает строки до указанного количества с помощью цикла, а затем читает и возвращает строку на этом счетчике.
-Она также проверяет, равно ли количество открывающих и закрывающих фигурных/угловых скобок, и возвращает сообщение об ошибке, если это не так.
-Если не удается открыть файл, она выводит сообщение об ошибке и не возвращает никакого значения.
-```cpp
-string get_line(int count, string path) {
-	string line;
-	int count_left = 0;
-	int count_right = 0;
-	ifstream fin;
-	fin.open(path);
-	if (fin.is_open()) {
-		for (int i = 0; i < count; i++)
-		{
-			fin >> line;
-		}
-		for (int i = 0; i < line.size(); i++)
-		{
-			if ((line[i] == '{') or (line[i] == '<')) {
-				count_left++;
-			}
-			if ((line[i] == '}') or (line[i] == '>')) {
-				count_right++;
-			}
-		}
-		if (count_left != count_right) {
-			return "Ошибка в записи множества";
-		}
-		return line;
-	}
-	else {
-		cout << "Ошибка открытия файла" << endl;
-	}
-}
-```
----
-massive_size(string mass[100]):
-Эта функция принимает массив строк в качестве входных данных и возвращает количество непустых элементов в массиве.
-Она проходит по массиву и считает количество элементов, пока не достигнет пустой строки.
-```cpp
-int massive_size(string mass[100]) {
-	int count = 0;
-	for (int i = 0; i < 100; i++) {
-		if (mass[i] == "") {
-			return count;
-		}
-		count++;
-	}
-}
-```
-
----
-check(string mass[100], string key):
-Эта функция принимает массив строк и ключевую строку в качестве входных данных и возвращает 1, если ключ найден в массиве, или 0, если он не найден.
-Она проходит по массиву и сравнивает каждый элемент с ключом.
-```cpp
-int check(string mass[100], string key) {
-	for (int i = 0; i < 100; i++)
-	{
-		if (key == mass[i]) {
-			return 1;
-		}
-	}
-	return 0;
-}
-
-```
-
----
-
-Symmetric_difference(string path):
-Эта функция принимает путь к файлу в качестве входных данных и возвращает массив строк, содержащих симметричную разность между двумя множествами, представленными в файле.
-Она читает файл построчно, извлекает элементы двух множеств и сохраняет их в отдельных массивах (plenty_1 и plenty_2).
-Затем она сравнивает элементы в двух множествах и добавляет элементы, которые не являются общими для обоих множеств, в массив plenty_result.
-Наконец, она возвращает массив plenty_1, который содержит симметричную разность.
-```cpp
-string* Symmetric_difference(string path) {
-	int pov = 0;
-	int ch = 0;
-	int count = 1;
-	int number_mass = 0;
-	string* plenty_1 = new string[100];
-	string* plenty_2 = new string[100];
-	string* plenty_result = new string[100];
-	char temp_p;
-	bool flag_struct = false;
-	string line = "";
-	string temp = "";
-	for (int i = 0; i < file_size(path); i++) {
-		line = get_line(count, path);
-		flag_struct = false;
-		ch = 0;
-		for (int j = 1; j < (line.size() - 1); j++)
-		{
-			if (((line[j] == '{') or (line[j] == '<')) and (flag_struct == true)) {
-				ch++;
-			}
-			if ((line[j] == '{') or (line[j] == '<')) {
-				flag_struct = true;
-			}
-			if (((line[j] == '>') or (line[j] == '}')) and (ch == 0)) {
-				flag_struct = false;
-			}
-			if (((line[j] == '>') or (line[j] == '}')) and (ch > 0)) {
-				ch--;
-			}
-			if ((line[j] == ',') && (count == 1) && (flag_struct == false)) {
-				plenty_1[number_mass] = temp;
-				temp = "";
-				number_mass++;
-				continue;
-			}
-			if ((line[j] == ',') && (count > 1) && (flag_struct == false)) {
-				plenty_2[number_mass] = temp;
-				temp = "";
-				number_mass++;
-				continue;
-			}
-			temp_p = line[j];
-			temp += temp_p;
-			if ((j == (line.size() - 2)) and (count == 1)) {
-				plenty_1[number_mass] = temp;
-				temp = "";
-				number_mass++;
-				break;
-			}
-			if ((j == (line.size() - 2)) and (count > 1)) {
-				plenty_2[number_mass] = temp;
-				temp = "";
-				number_mass++;
-				break;
-
-			}
-		}
-
-
-
-		number_mass = 0;
-		if (count == 1) {
-			count++;
-			continue;
-		}
-		else {
-			for (int j = 0; j < massive_size(plenty_1);j++) {
-				for (int k = 0; k < massive_size(plenty_2); k++) {
-					if (plenty_1[j] == plenty_2[k]) {
-						pov = 1;
-						continue;
-					}
-				}
-				if (pov == 0) {
-					plenty_result[number_mass] = plenty_1[j];
-					number_mass++;
-				}
-				pov = 0;
-			}
-			pov = 0;
-			for (int j = 0; j < massive_size(plenty_2);j++) {
-				for (int k = 0; k < massive_size(plenty_1); k++) {
-					if (plenty_1[k] == plenty_2[j]) {
-						pov = 1;
-						continue;
-					}
-				}
-				if (pov == 0) {
-					plenty_result[number_mass] = plenty_2[j];
-					number_mass++;
-				}
-				pov = 0;
-			}
-		}
-		if (massive_size(plenty_1) > massive_size(plenty_result)) {
-			for (int j = 0; j < massive_size(plenty_1); j++) {
-				plenty_1[j] = plenty_result[j];
-			}
-		}
-		if (massive_size(plenty_1) <= massive_size(plenty_result)) {
-			for (int j = 0; j < massive_size(plenty_result); j++) {
-				plenty_1[j] = plenty_result[j];
-			}
-		}
-		for (int j = 0; j < massive_size(plenty_result); j++)
-		{
-			plenty_result[j] = " ";
-		}
-		for (int j = 0; j < massive_size(plenty_2); j++)
-		{
-			plenty_2[j] = " ";
-		}
-		number_mass = 0;
-		temp = "";
-		count++;
-	}
-	return plenty_1;
-}
-
 ```
 
 ---
@@ -311,17 +119,10 @@ string* Symmetric_difference(string path) {
 ```
 Результат симметрической разности всех множеств: {c3, B, b3_A, {o,{},A}, o, b3, {}}
 ```
----
-Входные данные:
-```
-{1,{{{1},2},3},{{2,<{1},{1}>,2},3}}
-{{{{1},2},3}}
-{1,{{{1},2},3},{{2,<{1},{1}>,2},3}}
-```
-Выходные данные:
-```
-Результат симметрической разности всех множеств: {{{{1},2},3}}
-```
+
+
+Остальные тестовые программы расположены в директории `/tests`.
+
 ---
 
 ## Вывод
@@ -331,5 +132,5 @@ string* Symmetric_difference(string path) {
 
 ## Источники
 1. https://www.youtube.com/watch?v=dQw4w9WgXcQ
-
+2. Благодарность Романчуку Ивану за [функцию `bracketsBalance`](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%87%D1%83%D0%BA_%D0%98/sem2/lab2/intersection.cpp#L5-L23
 )
