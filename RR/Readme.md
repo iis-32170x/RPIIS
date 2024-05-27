@@ -78,7 +78,7 @@
 Код, выполняющий наш алгоритм:
 
 ```c++
-Напиши алгоритм решения для этого кода:#include <iostream>
+#include <iostream>
 #include <vector>
 #include <limits>
 
