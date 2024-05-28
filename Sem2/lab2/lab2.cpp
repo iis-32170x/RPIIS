@@ -38,7 +38,7 @@ vector<string> Read(string path) {
 }
 
 vector<string> Write(vector<string> sets, int& number) { // вектор счетчика
-    vector<string> FULLset(sets.size());
+    vector<string> FULLset(sets.size());  // Создаем новый вектор строк FULLset, который будет хранить копию переданного вектора sets
     for (int i = 0; i < sets.size(); i++) {
         FULLset[i] = sets[i];
         number++;
