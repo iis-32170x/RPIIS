@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kirill/ontologies/task_1_protege/"
+     xml:base="http://www.semanticweb.org/kirill/ontologies/task_1_protege/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#был_выпущен -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#был_выпущен">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#в_РФ -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#в_РФ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#в_Украине -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#в_Украине">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#продукт -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#продукт">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#сменил -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#сменил">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#снабжен -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#снабжен">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#подушки_безопасности"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#конец_производства -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#конец_производства">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#начало_производства -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#начало_производства">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#год -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#год"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#месяц -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#месяц"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#подушки_безопасности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#подушки_безопасности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#причина -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#причина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#Adam_Opel_GmbH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#Adam_Opel_GmbH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#Astra_F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#Astra_F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#Astra_G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#Astra_G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#Chevrolet_Viva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#Chevrolet_Viva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#автомобиль"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#GM-АВТОВАЗ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#GM-АВТОВАЗ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#АвтоЗАЗ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#АвтоЗАЗ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#фирма"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#две_боковые -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#две_боковые">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#подушки_безопасности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#две_фронтальные -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#две_фронтальные">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#подушки_безопасности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#март -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#март">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#месяц"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#нехватка_мощностей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#нехватка_мощностей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#причина"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#низкий_спрос -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#низкий_спрос">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#причина"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#1998 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#1998">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#год"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#год"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kirill/ontologies/task_1_protege#2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kirill/ontologies/task_1_protege#2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kirill/ontologies/task_1_protege#год"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
