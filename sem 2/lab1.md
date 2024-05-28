@@ -85,6 +85,8 @@ int main() {
     return 0;
 }
 ```
+Это результат примера:
+[![Screenshot-2024-05-28-144750.png](https://i.postimg.cc/858gDkQr/Screenshot-2024-05-28-144750.png)](https://postimg.cc/kVypvm5n)
 
 
 # Заключение
