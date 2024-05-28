@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#гастроли -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#гастроли">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Выстовка"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Событие"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#где -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#где">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Событие"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#дата -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#дата">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#кто -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#кто">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#место -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#место">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_острова -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_острова">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_различия -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_различия">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_распростронения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#объект_распростронения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#перевод -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#перевод">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Перевод"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#появление -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#появление">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#прохождение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#прохождение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#распростронение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#распростронение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#родственная_связь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#родственная_связь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#состоялась -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#состоялась">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Выстовка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#форма -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#форма">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Выстовка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Выстовка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Перевод -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Перевод"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Событие -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Событие"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Ананас -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Ананас">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Бракинья -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Бракинья">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Миниатюрая_гитара"/>
+        <untitled-ontology-6:объект_острова rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Майдера"/>
+        <untitled-ontology-6:объект_различия rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление"/>
+        <untitled-ontology-6:родственная_связь rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Кавакинья"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Весло -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Весло">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Гастроли -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Гастроли">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Событие"/>
+        <untitled-ontology-6:гастроли rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Тихоокеанская_выстовка"/>
+        <untitled-ontology-6:где rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Музыканты"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Гитарообразная -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Гитарообразная">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Кавакинья -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Кавакинья">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Квадрат -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Квадрат">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Майдера -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Майдера">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Музыканты -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Музыканты">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Профессия"/>
+        <untitled-ontology-6:кто rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление"/>
+        <untitled-ontology-6:появление rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+        <untitled-ontology-6:прохождение rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прыгающая_блоха -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прыгающая_блоха">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Перевод"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+        <untitled-ontology-6:распростронение rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Сан-Франциско -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Сан-Франциско">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Город"/>
+        <untitled-ontology-6:место rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Стандарт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Стандарт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Тихоокеанская_выстовка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Тихоокеанская_выстовка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Выстовка"/>
+        <untitled-ontology-6:состоялась rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Тихоокеанске_острова -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Тихоокеанске_острова">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Острова"/>
+        <untitled-ontology-6:место rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Треугольная -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Треугольная">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Формы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Укулеле -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Укулеле">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Восьмиструнный_муз._инструмент"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Четырехструнный_муз._инструмент"/>
+        <untitled-ontology-6:объект_распростронения rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Распростронение"/>
+        <untitled-ontology-6:перевод rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прыгающая_блоха"/>
+        <untitled-ontology-6:перевод rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Подарок,_который_пришел_туда"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Ананас"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Весло"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Гитарообразная"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Квадрат"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Стандарт"/>
+        <untitled-ontology-6:форма rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Треугольная"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#1880-е_годы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#1880-е_годы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <untitled-ontology-6:дата rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Появление"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#1915 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#1915">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Дата"/>
+        <untitled-ontology-6:дата rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Прохождение"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Подарок,_который_пришел_туда -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Подарок,_который_пришел_туда">
+        <rdf:type rdf:resource="http://www.semanticweb.org/yanar/ontologies/2024/3/untitled-ontology-6#Перевод"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
