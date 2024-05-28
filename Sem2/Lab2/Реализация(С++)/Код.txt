@@ -1,0 +1,547 @@
+#include<iostream>
+#include <fstream>
+#include <vector>
+#include<string>
+using namespace std;
+string sortk(string str);
+string sort(string str)
+{
+	int j = 1;
+	int a = 0;
+	int b = 0;
+	vector<string> temp1;
+	vector<string> temp2;
+	while (j < str.size()) {
+		if (j == 0 || str[j] == ',' || j == str[str.size() - 1]) {
+			j++;
+			continue;
+		}
+		else if (str[j] == '<')
+		{
+			string timp;
+			if (str[j - 1] == ',')
+				j--;
+			else
+				timp += ",";
+			string d;
+			int k = j, a = 0, b = 0;
+
+			do
+			{
+				if (str[k] == '<')
+					a++;
+				if (str[k] == '>')
+					b++;
+				timp += str[k];
+				d += str[k];
+				k++;
+			} while (str[k - 1] != '>' || a != b);
+
+
+
+			temp2.push_back(timp);
+
+			size_t pos = str.find(d);
+			if (pos != string::npos) {
+				// Удаляем подстроку
+				str.erase(pos, d.length());
+			}
+			j = 0;
+		}
+		else if (str[j] == '{')
+		{
+			string temp;
+			if (str[j - 1] == ',')
+				j--;
+			else
+				temp += ",";
+			int k = j, a = 0, b = 0;
+			string d;
+			do
+			{
+				if (str[k] == '{')
+					a++;
+				if (str[k] == '}')
+					b++;
+				temp += str[k];
+				d += str[k];
+				k++;
+			} while (str[k - 1] != '}' || a != b);
+
+
+			temp1.push_back(temp);
+
+			size_t pos = str.find(d);
+			if (pos != string::npos) {
+				// Удаляем подстроку
+				str.erase(pos, d.length());
+			}
+			j = 0;
+		}
+		j++;
+	}
+	for (int i = temp2.size() - 1; i >= 0; i--)
+	{
+		str.insert(str.size() - 1, temp2[i]);
+	}
+	for (int i = temp1.size() - 1; i >= 0; i--)
+	{
+		str.insert(str.size() - 1, temp1[i]);
+	}
+	if (str[1] == ',')
+		str.erase(1, 1);
+
+	
+	j = 0;
+	while (j < str.size())
+	{
+		if (j == 0 || str[j] == ',' || j == str[str.size() - 1]) {
+			j++;
+			continue;
+		}
+		else if (str[j] == '{' || str[j] == '<')
+		{
+			break;
+		}
+		else
+		{
+			for (int i = 1; str[i] != '{' && i < str.size() && str[i] != '<'; i++)
+			{
+				if ((int)str[j] < (int)str[i] && str[i] != ',') {
+
+					char temp = str[j];
+					str[j] = str[i];
+					str[i] = temp;
+				}
+			}
+		}
+		j++;
+	}
+
+	for (int i = 1; i < str.size(); i++)
+	{
+		if (str[i] == '{')
+		{
+			int a = 0, b = 0;
+			string temp2;
+			do
+			{
+				if (str[i] == '{')
+					a++;
+				if (str[i] == '}')
+					b++;
+				temp2 += str[i];
+				i++;
+			} while (str[i - 1] != '}' || a != b);
+			size_t pos = str.find(temp2);
+			temp2 = sort(temp2);
+			if (pos != std::string::npos) {
+				str.replace(pos, temp2.length(), temp2);
+			}
+		}
+	}
+	return str;
+}
+
+string sortm(string str)
+{
+
+	bool flag1 = false, flag2 = false;
+	for (int i = 1; i < str.size(); i++)
+	{
+		string temp2;
+		if (str[i] == ',' || (str[i] != '{' && str[i] != '<'))
+			continue;
+		else if (str[i] == '<')
+		{
+			
+			int a = 0, b = 0;
+			do
+			{
+				if (str[i] == '{')
+				{
+					string l;
+					int k = i;
+					int x = 0, y = 0;
+
+					do
+					{
+						if (str[i] == '{') {
+							x++;
+						}
+						if (str[i] == '}')
+							y++;
+						l += str[i];
+						i++;
+					} while (str[i - 1] != '}' || x != y);
+
+					l = sortm(l);
+					l = sortk(l);
+					str.replace(k, l.length(), l);
+
+
+				}
+				if (str[i] == '<') {
+					a++;
+				}
+				if (str[i] == '>')
+					b++;
+				i++;
+			} while (str[i - 1] != '>' || a != b);
+		}
+		else {
+			if (str[i] == '{')
+			{
+				int a = 0, b = 0;
+
+				do
+				{
+					if (str[i] == '{') {
+						a++;
+						if (a != 1) {
+
+							flag1 = true;
+
+						}
+					}
+					if (str[i] == '}')
+						b++;
+					temp2 += str[i];
+					i++;
+				} while (str[i - 1] != '}' || a != b);
+
+				if (flag1) {
+					size_t pos = str.find(temp2);
+
+					temp2 = sortm(temp2);
+
+					if (pos != std::string::npos)
+						str.replace(pos, temp2.length(), temp2);
+				}
+
+			}
+
+			for (int j = i; j < str.size(); j++)
+			{
+				string temp3;
+				if (str[j] == ',')
+					continue;
+				if (str[j] == '{')
+				{
+					int x = 0, y = 0;
+					do
+					{
+						if (str[j] == '{') {
+							x++;
+							if (x != 1) {
+
+								flag2 = true;
+							}
+						}
+						if (str[j] == '}')
+							y++;
+						temp3 += str[j];
+						j++;
+
+					} while (str[j - 1] != '}' || x != y);
+
+					if (flag2 && temp2 != temp3) {
+
+						size_t pos2 = str.find(temp3);
+						temp3 = sortm(temp3);
+
+						if (pos2 != std::string::npos)
+							str.replace(pos2, temp3.length(), temp3);
+					}
+
+				}
+
+				if (!temp2.empty() && !temp3.empty() && temp2 != temp3)
+				{
+					for (int o = 0; o < temp2.size() && o < temp3.size(); o++) {
+
+
+						if (temp2[o] > temp3[o])
+						{
+							i += temp2.size() - temp3.size();
+							size_t start_pos1 = str.find(temp2);
+							str.erase(start_pos1, temp2.length());
+							size_t start_pos2 = str.find(temp3);
+							str.erase(start_pos2, temp3.length());
+
+							start_pos1 = str.find(",,") + 1;
+							if (start_pos1 == 0)
+								start_pos1 = 1;
+							str.insert(start_pos1, temp3);
+							start_pos2 = str.find(",,") + 1;
+							if (start_pos2 == 0)
+								start_pos2 = str.find(",}") + 1;
+							str.insert(start_pos2, temp2);
+
+							break;
+
+						}
+						else if (temp2[o] < temp3[o])
+							break;
+						else
+							continue;
+					}
+				}
+			}
+		}
+	}
+
+	return str;
+}
+string sortk(string str)
+{
+	for (int i = 1; i < str.size(); i++)
+	{
+		string temp2;
+		if (str[i] == ',' && str[i] != '<')
+			continue;
+		else if (str[i] == '{')
+			break;
+		else {
+			if (str[i] == '<')
+			{
+				int a = 0, b = 0;
+
+				do
+				{
+					if (str[i] == '<') {
+						a++;
+					}
+					if (str[i] == '>')
+						b++;
+					temp2 += str[i];
+					i++;
+				} while (str[i - 1] != '>' || a != b);
+			}
+
+			for (int j = i; j < str.size(); j++)
+			{
+				string temp3;
+				if (str[j] == ',')
+					continue;
+				if (str[j] == '{')
+					break;
+				if (str[j] == '<')
+				{
+					int x = 0, y = 0;
+					do
+					{
+						if (str[j] == '<') {
+							x++;
+						}
+						if (str[j] == '>')
+							y++;
+						temp3 += str[j];
+						j++;
+
+					} while (str[j - 1] != '>' || x != y);
+
+				}
+
+				if (!temp2.empty() && !temp3.empty() && temp2 != temp3)
+				{
+					for (int o = 0; o < temp2.size() && o < temp3.size(); o++) {
+						if (temp2[o] > temp3[o])
+						{
+							i += temp2.size() - temp3.size();
+							size_t start_pos1 = str.find(temp2);
+							str.erase(start_pos1, temp2.length());
+							size_t start_pos2 = str.find(temp3);
+							str.erase(start_pos2, temp3.length());
+							start_pos1 = str.find(",,") + 1;
+							if (start_pos1 == 0 || str[1] == ',')
+								start_pos1 = 1;
+							str.insert(start_pos1, temp3);
+							start_pos2 = str.find(",,") + 1;
+							if (start_pos2 == 0)
+								start_pos2 = str.find(",}") + 1;
+							str.insert(start_pos2, temp2);
+							break;
+
+						}
+						else if (temp2[o] < temp3[o])
+							break;
+						else
+							continue;
+					}
+				}
+			}
+		}
+	}
+
+	return str;
+
+}
+string modify(string str)
+{
+	if (str[0] != '{' && str[0] != '<')
+		return str;
+	else if (str[0] == '<')
+	{
+		for (int i = 0; i < str.length(); i++)
+		{	
+			int k;
+			if (str[i] == '{')
+			{
+				string temp3;
+				k = i;
+				int x = 0, y = 0;
+				do
+				{
+					if (str[i] == '{') {
+						x++;
+					}
+					if (str[i] == '}')
+						y++;
+					temp3 += str[i];
+					i++;
+
+				} while (str[i - 1] != '}' || x != y);
+				temp3 = sort(temp3);
+				temp3 = sortm(temp3);
+				temp3 = sortk(temp3);
+				
+				
+				
+				str.replace(k, temp3.length(), temp3);
+			}
+			
+		}
+		return str;
+	}
+	else if (str[0] == '{')
+	{
+		str = sort(str);
+		str = sortm(str);
+		str = sortk(str);
+		return str;
+	}
+}
+
+
+
+vector<string> peresech(vector<string> a1, vector<string> a2)
+{
+	vector<string> rez;
+	for (int i = 0; i < a1.size(); i++)
+	{
+		string temp1a = a1[i];
+		temp1a = modify(temp1a);
+		for (int j = 0; j < a2.size(); j++)
+		{
+			string temp2a = a2[j];
+			temp2a = modify(temp2a);
+			if (temp1a == temp2a)
+				rez.push_back(a1[i]);
+		}
+	}
+	return rez;
+}
+
+
+vector<vector<string>> razb(string str, int n)
+{
+	string rez;
+	vector<vector<string>> all;
+	for (int i = 0, j = 1; i < n; i++)
+	{
+		int k = 0;
+		vector<string> z;
+		while (j < str.size() &&  str[j] != '!' && str[j - 1] != '}')
+		{
+			string temp;
+			if (str[j] == '{')
+			{
+				int a = 0, b = 0;
+				do {
+					if (str[j] == '}')
+						b++;
+					if (str[j] == '{')
+						a++;
+					if (str[j] == ' ') {
+						j++;
+						continue;
+					}
+					temp += str[j];
+					j++;
+				} while (j < str.size() && ((str[j] != ',' && a != b) || (str[j] != '}' && a != b)));
+			}
+			else if (str[j] == '<')
+			{
+				int a = 0, b = 0;
+				do {
+					if (str[j] == '>')
+						b++;
+					if (str[j] == '<')
+						a++;
+					if (str[j] == ' ') {
+						j++;
+						continue;
+					}
+					temp += str[j];
+					j++;
+				} while (j < str.size() && ((str[j] != ',' && a != b) || (str[j] != '}' && a != b)));
+			}
+			else 
+			{
+				while (j < str.size() && (str[j] != ',' && str[j] != '}'))
+				{
+					if (str[j] == ' ') {
+						j++;
+						continue;
+					}
+					temp += str[j];
+					j++;
+				}
+			}
+			z.push_back(temp);
+			
+			j++;
+		}
+		all.push_back(z);
+		j += 2;
+	}
+	return all;
+}
+int main()
+{
+	fstream f ("File.txt");
+	if (!f.is_open()) { // вызов метода is_open()
+		cout << "Ne\n\n" << endl;
+		return -1;
+	}
+	string str;
+	string temp;
+	int size = 1;
+	while (getline(f, temp) && !temp.empty())
+	{
+		str += temp;
+		str += '!';
+		
+	}
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '!' && str[i - 1] == '}' && str[i + 1] == '{')
+			size++;
+	}
+	vector<vector<string>> all = razb(str, size);
+	vector<string> rez = all[0];
+	for (int i = 1; i < all.size(); i++)
+	{
+		rez = peresech(rez, all[i]);
+	}
+	cout << "Peresechenie: {";
+	for (int i = 0; i < rez.size(); i++)
+	{
+		cout << rez[i];
+		if (i != rez.size() - 1)
+			cout << ",";
+	}
+	cout << "}";
+	return 0;
+}
