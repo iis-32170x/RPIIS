@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вершина -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вершина">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центральный_угол"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#точка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#круг"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#произведение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#произведение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#сантиметры_квадратные"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равенство -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равенство">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#сантиметры_квадратные"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#размер -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#размер">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вписанный_угол"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#градусы"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центр">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#круг"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#точка"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вписанный_угол -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вписанный_угол"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#градусы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#градусы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#круг -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#круг"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#сантиметры_квадратные -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#сантиметры_квадратные"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#точка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#точка"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центральный_угол -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центральный_угол"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#ABC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#ABC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#вписанный_угол"/>
+        <untitled-ontology-3:размер rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#36"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#AOB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#AOB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центральный_угол"/>
+        <untitled-ontology-3:вершина rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#O"/>
+        <untitled-ontology-3:площадь rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_AOB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#O -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#O">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#точка"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#Данный_круг -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#Данный_круг">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#круг"/>
+        <untitled-ontology-3:площадь rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_данного_круга"/>
+        <untitled-ontology-3:центр rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#O"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#П -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#П">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_AOB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_AOB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_данного_круга -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_данного_круга">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+        <untitled-ontology-3:равенство rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5П"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#градусы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5П -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5П">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#сантиметры_квадратные"/>
+        <untitled-ontology-3:равенство rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_данного_круга"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
