@@ -330,3 +330,6 @@ void GetResult(Array* arr1, Array* arr2) // Получение результа�
 https://drive.google.com/file/d/1j-PsJSuN9RiMik3-pWwBjYyqLicLuCfG/view - задание и теория
 
 https://aistudio.google.com/app/?hl=ru - помощь с дебагом кода 
+
+https://github.com/iis-32170x/RPIIS/blob/Самович_В/sem2/lab2/lr2.md - идея реализации
+
