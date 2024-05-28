@@ -1,0 +1,79 @@
+# Отчет: Вставка и удаление узлов в N-арном дереве
+
+## Описание
+В данном отчете представлена реализация операций вставки и удаления узлов в N-арном дереве на языке программирования C++. Для этого был создан класс Node, представляющий узел дерева, а также функции insertNode и removeNode, выполняющие соответствующие операции.
+
+## Реализация
+
+### Класс Node
+
+```c++
+#include <iostream>
+#include <vector>
+
+class Node {
+public:
+    int value;
+    std::vector<Node*> children;
+
+    Node(int val) : value(val) {}
+};
+
+
+### Функция вставки узла
+```c++
+void insertNode(Node* root, int parentValue, int newValue) {
+    if (root == nullptr) {
+        return;
+    }
+
+    if (root->value == parentValue) {
+        Node* newNode = new Node(newValue);
+        root->children.push_back(newNode);
+        return;
+    }
+
+    for (Node* child : root->children) {
+        insertNode(child, parentValue, newValue);
+    }
+}
+
+
+### Функция удаления узла
+```c++
+void removeNode(Node* root, int value) {
+    if (root == nullptr) {
+        return;
+    }
+
+    for (auto it = root->children.begin(); it != root->children.end(); ++it) {
+        if ((*it)->value == value) {
+            root->children.erase(it);
+            return;
+        }
+        removeNode(*it, value);
+    }
+}
+
+
+### Пример использования
+```c++
+int main() {
+    Node* root = new Node(1);
+    
+    insertNode(root, 1, 2);
+    insertNode(root, 1, 3);
+    insertNode(root, 2, 4);
+    insertNode(root, 2, 5);
+
+    removeNode(root, 4);
+
+    // Clean up memory by deleting the entire tree
+    deleteTree(root);
+
+    return 0;
+}
+
+
+## Заключение
+Реализованные функции позволяют эффективно вставлять и удалять узлы в N-арном дереве. Для более сложных операций или оптимизаций можно расширить функциональность класса Node и добавить дополнительные методы.
