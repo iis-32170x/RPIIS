@@ -23,7 +23,7 @@ b) при помощи стандартов технологии OSTIS, испо
 ## Формализация в Protégé (1.a)
 - Классы:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144939061/3027963e-c7df-43c4-ac78-8d32b28e685c)
+![image](https://github.com/iis-32170x/RPIIS/assets/144939061/9ecd1b7a-3d0c-4aa6-931a-672858ec43bd)
 - Свойства, значениями которых являются экземпляры классов:
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144939061/f31ab278-97f7-41fc-b9ec-757aa642ff45)
