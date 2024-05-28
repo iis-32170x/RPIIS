@@ -12,12 +12,12 @@
 
 `Граф` — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
 
-![image](UsualGraph.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/UsualGraph.png)
 ***
 
 `Неориентированный граф` —  это математическая структура, представляющая собой набор вершин и рёбер, где рёбра не имеют направления.
 
-![image](NonOrientedGraph.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/NonOrientedGraph.png)
 ***
 
 `Множество` — простейшая информационная конструкция и математическая структура,
@@ -29,21 +29,21 @@
 1. Создаём множество неориентированных графов (в данном случае множество состоит из двух неориентированных графов `_gragh_1` и `_gragh_2`).
 2. Создаём счётчик количества рёбер и вершин каждого графа (`num_edges1`, `num_edges2`, `num_vertex1`, `num_vertex2`).
       
-![image](RR.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR.png)
 ***
 
 3. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины и рёбра графа `_gragh_1`. Создаём связку отношения `Путь`
      
-![image](RR1.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)
 ***    
-![image](RR2.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR2.png)
 ***      
-![image](RR3.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR3.png)
 ***
 
 4. Создаём переменную `not_checked_v`, где будут храниться непосещённые вершины, и `_checked_v`, где будут храниться посещённые вершины.
          
-![image](RR4.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR4.png)
 ***
 
 5. Создаём волну в произвольной вершине и добавляем её в список волн, исключая вершину из множества непосещённых вершин.
@@ -55,11 +55,11 @@
 
     8.2. Если это волна включает вершину, из которой можно перейти к смежной непосещённой вершине, то переходим к пункту (6), если нет - к пункту (8.1).
           
-![image](RR5.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR5.png)
 ***   
-![image](RR6.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR6.png)
 ***      
-![image](RR7.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR7.png)
 ***
 
 9.  Из графа `_graph_2` берём начальную вершину обхода (в данном случаем вершина B).
@@ -72,14 +72,14 @@
 11. Если в графе `_gragh_2` остались ещё вершины, которые не сравнивались,то берём следующую такую и переходим к пункту 10.
 12. Если в графе `_gragh_2` не осталось вершин, которые не сравнивались,то переходим к пункту 13.
       
-![image](RR8.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR8.png)
 ***
-![image](RR9.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR9.png)
 ***
 
 13.  Выводим результат.
       
-![image](RR10.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR10.png)
 ***
 
 ### Вывод
