@@ -12,16 +12,21 @@
 с металлическим калием.
 
 # Формализация в редакторе баз знаний Protégé:
+
 - Классы
+
+
   <img width="274" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/26b96381-7f49-4d57-b8c3-879247985f2f">
 
 
 - Отношение объектов
+  
 
 <img width="266" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/f5373eaa-af6d-4bd5-92e7-311ec019ec25">
 
 
 - Сущности
+  
 
 <img width="260" alt="image" src="https://github.com/iis-32170x/RPIIS/assets/146937124/df5913a4-ac22-4d3b-91d7-76df76e77d91">
 
