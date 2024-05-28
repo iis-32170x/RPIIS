@@ -1,11 +1,10 @@
-# Отчет: Вставка и удаление узлов в N-арном дереве
+Отчет: Вставка и удаление узлов в N-арном дереве
 
-## Описание
+Описание
 В данном отчете представлена реализация операций вставки и удаления узлов в N-арном дереве на языке программирования C++. Для этого был создан класс Node, представляющий узел дерева, а также функции insertNode и removeNode, выполняющие соответствующие операции.
 
-## Реализация
-
-### Класс Node
+Реализация
+Класс Node
 
 ```c++
 #include <iostream>
@@ -20,7 +19,7 @@ public:
 };
 ```
 
-### Функция вставки узла
+Функция вставки узла
 ```c++
 void insertNode(Node* root, int parentValue, int newValue) {
     if (root == nullptr) {
@@ -39,7 +38,7 @@ void insertNode(Node* root, int parentValue, int newValue) {
 }
 ```
 
-### Функция удаления узла
+Функция удаления узла
 ```c++
 void removeNode(Node* root, int value) {
     if (root == nullptr) {
@@ -56,7 +55,7 @@ void removeNode(Node* root, int value) {
 }
 ```
 
-### Пример использования
+Пример использования
 ```c++
 int main() {
     Node* root = new Node(1);
