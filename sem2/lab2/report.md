@@ -12,7 +12,7 @@
 `Множество` — простейшая информационная конструкция и математическая структура, позволяющая рассматривать какие-то объекты как целое, связывая их.
 ***
 ## Структура
-```
+```c++
 namespace Y {
 	struct element {
 		element* next = nullptr;
@@ -42,7 +42,7 @@ namespace Y {
 ***
 ## Реализация на C++
 `Функция проверки на корректность ввода`
-```
+```c++
 std::string set::check(std::string mnvo) {
 	bool inword = false;  int ind1 = 0; int ind2 = 0; int skb = 0; 
 	for (size_t i = 0; i < mnvo.length(); ++i) {
@@ -116,7 +116,7 @@ std::string set::check(std::string mnvo) {
 }
 ```
 `Функция вставки нового элемента в структуру`
-```
+```c++
 element* set::Insert(element* node,std::string a) {
 	element* buff; int ind = 1;
 	again:
@@ -230,7 +230,7 @@ cycle:
 }
 ```
 `Функция ввода и парсинга с клавиатуры`
-```
+```c++
 void set:: input() {
 	std::string mnvo; int ind1 = 0; int ind2 = 0;
 	std::cin.ignore();
@@ -273,7 +273,7 @@ agn:
 }
 ```
 `Функция вывода`
-```
+```c++
 void Y::set::output(element* mnvo)
 {
 	element* buff = new element;
@@ -334,7 +334,7 @@ void Y::set::output(element* mnvo)
 }
 ```
 `Функция подсчета кратных вхождений`
-```
+```c++
 element* Y::set::multiplicity(element* mnvo){
 	element* buff = new element; element* buff1 = new element;
 		if (mnvo == nullptr) {
@@ -378,7 +378,7 @@ element* Y::set::multiplicity(element* mnvo){
 }
 ```
 `Функция чтения и парсинга из файла`
-```
+```c++
 set** Y::set::file(set**& mnvo,int& countr)
 {
 	std::string mnv; 
@@ -444,7 +444,7 @@ set** Y::set::file(set**& mnvo,int& countr)
 }
 ```
 `Функция проверки равенства подмножества`
-```
+```c++
 bool set::subset(element* A, element* B) {
 	element* buff1 = new element; element* buff2 = new element; element* buff3 = new element;
 	A = A->side;	B = B->side; buff3 = B; int amnta = 1; int amntb = 1; buff2 = A;
@@ -551,7 +551,7 @@ bool set::subset(element* A, element* B) {
 }
 ```
 `Функция объединения`
-```
+```c++
 set** set::Obed(set** mnvo,int n) {
 	element* buff = new element;
 	while (mnvo[0]->root == nullptr) {
