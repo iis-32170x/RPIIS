@@ -18,7 +18,7 @@ public:
 
     Node(int val) : value(val) {}
 };
-
+```
 
 ### Функция вставки узла
 ```c++
@@ -37,7 +37,7 @@ void insertNode(Node* root, int parentValue, int newValue) {
         insertNode(child, parentValue, newValue);
     }
 }
-
+```
 
 ### Функция удаления узла
 ```c++
@@ -54,7 +54,7 @@ void removeNode(Node* root, int value) {
         removeNode(*it, value);
     }
 }
-
+```
 
 ### Пример использования
 ```c++
@@ -73,6 +73,7 @@ int main() {
 
     return 0;
 }
+```
 
 
 ## Заключение
