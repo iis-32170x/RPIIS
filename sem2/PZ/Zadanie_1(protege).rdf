@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10/"
+     xml:base="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-10="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#входить_в_состав -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#входить_в_состав"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#записывается_формулой -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#записывается_формулой">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#используется_для_производства -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#используется_для_производства"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#каков -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#каков"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#какой_углеводород -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#какой_углеводород"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#agregatnoe_sostoianie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#agregatnoe_sostoianie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#svoistva"/>
+        <rdfs:label>Агрегатное состояние</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#bescvetni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#bescvetni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#cvet"/>
+        <rdfs:label>Бесцветный</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#cvet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#cvet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#svoistva"/>
+        <rdfs:label>Цвет</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#agregatnoe_sostoianie"/>
+        <rdfs:label>Жидкий</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#xim_vestch"/>
+        <rdfs:label>Органическое соединение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#svoistva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#svoistva">
+        <rdfs:label>Свойства</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#xim_vestch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#xim_vestch">
+        <rdfs:label>Химическое соединение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapah_sladkovati_specifichiski -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapah_sladkovati_specifichiski">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapax"/>
+        <rdfs:label>Специфический слаковатый</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#svoistva"/>
+        <rdfs:label>Запах</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#PhH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#PhH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Бензин -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Бензин">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Бензол -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Бензол">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#bescvetni"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#zapah_sladkovati_specifichiski"/>
+        <untitled-ontology-10:входить_в_состав rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Бензин"/>
+        <untitled-ontology-10:входить_в_состав rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Сырая_нефть"/>
+        <untitled-ontology-10:записывается_формулой rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#PhH"/>
+        <untitled-ontology-10:записывается_формулой rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#С6Н6"/>
+        <untitled-ontology-10:используется_для_производства rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Красители"/>
+        <untitled-ontology-10:используется_для_производства rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Лекарства"/>
+        <untitled-ontology-10:используется_для_производства rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Пластмасса"/>
+        <untitled-ontology-10:используется_для_производства rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Синтеческая_резина"/>
+        <untitled-ontology-10:какой_углеводород>простейший ароматический</untitled-ontology-10:какой_углеводород>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Канцерогенен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Канцерогенен"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Красители -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Красители">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Лекарства -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Лекарства">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Пластмасса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Пластмасса"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#С6Н6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#С6Н6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#organ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Синтеческая_резина -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Синтеческая_резина"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Сырая_нефть -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Сырая_нефть">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#jidkost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Токсичен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artur/ontologies/2024/4/untitled-ontology-10#Токсичен"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
