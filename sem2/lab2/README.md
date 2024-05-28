@@ -71,4 +71,4 @@ C = {1, 2} + {3, 4} + {4, 5}  # Эта строка вызовет ошибку
 
 ## примеры запуска
 
-![[images/Screenshot_1.png]]
+![images/Screenshot_1.png](images/Screenshot_1.png)
