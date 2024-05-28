@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasCenterPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasCenterPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasExtremePoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasExtremePoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Segment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasNaturalSatellite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#HasNaturalSatellite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#TheClosestPlanetSatelite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#TheClosestPlanetSatelite">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Star"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Visited -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Visited">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Human"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#ApparentMagnitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#ApparentMagnitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#ByBrightnessInEarthSky -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#ByBrightnessInEarthSky">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Illumination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Illumination">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#LengthOfSegment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#LengthOfSegment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Segment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#SateliteSunSystemPlanetBySize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#SateliteSunSystemPlanetBySize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Human">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Number -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Number">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Segment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Segment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Star -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Star">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#CosmosObject"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Earth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Planet"/>
+        <untitled-ontology-6:HasCenterPoint rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenter"/>
+        <untitled-ontology-6:HasNaturalSatellite rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Moon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenterAndMoonCenter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenterAndMoonCenter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Segment"/>
+        <untitled-ontology-6:HasExtremePoint rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#EarthCenter"/>
+        <untitled-ontology-6:HasExtremePoint rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#MoonCenter"/>
+        <untitled-ontology-6:LengthOfSegment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.00257 а.е.</untitled-ontology-6:LengthOfSegment>
+        <untitled-ontology-6:LengthOfSegment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30 диаметров Земли</untitled-ontology-6:LengthOfSegment>
+        <untitled-ontology-6:LengthOfSegment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">384 467 км</untitled-ontology-6:LengthOfSegment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Moon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Moon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Satelite"/>
+        <untitled-ontology-6:HasCenterPoint rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#MoonCenter"/>
+        <untitled-ontology-6:TheClosestPlanetSatelite rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Sun"/>
+        <untitled-ontology-6:ApparentMagnitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.71m</untitled-ontology-6:ApparentMagnitude>
+        <untitled-ontology-6:ByBrightnessInEarthSky rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-6:ByBrightnessInEarthSky>
+        <untitled-ontology-6:Illumination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25-1 лк</untitled-ontology-6:Illumination>
+        <untitled-ontology-6:SateliteSunSystemPlanetBySize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</untitled-ontology-6:SateliteSunSystemPlanetBySize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#MoonCenter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#MoonCenter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Point"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Person -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Person">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Human"/>
+        <untitled-ontology-6:Visited rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Moon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Sun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Sun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ruslan/ontologies/2024/3/untitled-ontology-6#Star"/>
+        <untitled-ontology-6:ByBrightnessInEarthSky rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-6:ByBrightnessInEarthSky>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
