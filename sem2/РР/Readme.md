@@ -23,52 +23,56 @@
 
 ### Демонстрация работы программы в семантической памяти
 1. Задаём граф, задаём одну начальную вершину. 
-![1 gwf - KBE version 0 4 0  (integrator) 22 05 2024 11_48_14](https://github.com/iis-32170x/RPIIS/assets/144374775/6a4b38eb-518d-4192-883f-76bfde422900)
+![2 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_03_24](https://github.com/iis-32170x/RPIIS/assets/144374775/dac0bff4-134c-44fe-9830-f2a111a44dfa)
 
 
 2. Создаём переменную `_visited`, указывающую на посещённую вершину графа.
-![4 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_02_30](https://github.com/iis-32170x/RPIIS/assets/144374775/6e14ea52-47e6-41de-a03f-60de48430ea1)
+![4 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_04_13](https://github.com/iis-32170x/RPIIS/assets/144374775/316c3e78-5d8e-44d2-aac6-4c12fae20dcf)
 
-3.Добавляем ближайшую вершину в переменную `_visited` к тем, которые уже добавлены. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных).
-![5 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_03_30](https://github.com/iis-32170x/RPIIS/assets/144374775/fd41fbf3-1a92-45c6-bc67-feb78a9da89e)
+3.Добавляем ближайшую вершину в переменную `_visited`. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных) в переменную `added_edges`. Создаём переменную `previous_edge` которой присваиваем предудущую добавленную вершину.
+![5 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_06_28](https://github.com/iis-32170x/RPIIS/assets/144374775/d11d7e27-ac9b-48fe-9163-f642cf5ce22c)
 
-4. Продолжаем до тех пор, пока не будут добавлены все вершины.
-![6 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_05_21](https://github.com/iis-32170x/RPIIS/assets/144374775/cab131ae-6050-4797-b555-7e6061519fde)
+4.Смотрим, не является ли текущая ближайшая вершина смежной вершине в переменной `previous_edge`, в таком случае добавляем ее в переменную `_visited`, добавляем ребро, смежное добавленной вершине и вершине в переменной `previous_edge` в переменную `added_edges`. В противном случае добавляем ближайшую вершину в переменную `_visited`. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных) в переменную `added_edges`. Заменяем значение `previous_edge` вершиной ближайшей к последней добавленной в `_visited`,находящейся в этой же переменной.
 
+![6 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_30_52](https://github.com/iis-32170x/RPIIS/assets/144374775/2ee71761-8d59-44d8-9905-2d013272eaf0)
 
-![7 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_05_55](https://github.com/iis-32170x/RPIIS/assets/144374775/c21d340e-9212-4712-a8f4-5231b61b4546)
+5. Повторяем, пока не будут добавлены все вершины
+![7 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_32_07](https://github.com/iis-32170x/RPIIS/assets/144374775/ded340a9-449a-4677-9e38-3fa47cbca104)
 
+![9 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_32_56](https://github.com/iis-32170x/RPIIS/assets/144374775/54974300-ccb4-43c2-af91-445caa93ae54)
 
-![9 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_06_23](https://github.com/iis-32170x/RPIIS/assets/144374775/a23b2ac7-b289-4503-b1c3-bcc478b7e687)
-
-5. Создаем граф, оставляя только добавленные ребра.
+5. Создаем граф из вершин переменной `_visited` и рёбер переменной `added_edges`.
 ![10 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_07_11](https://github.com/iis-32170x/RPIIS/assets/144374775/8179aff1-d751-4166-b197-4fcf49dabc3a)
 
 - Формализация понятий
-![понятия gwf - KBE version 0 4 0  (integrator) 24 05 2024 01_46_55](https://github.com/iis-32170x/RPIIS/assets/144374775/ca7771ed-5c26-4f33-b0a0-c4f9a00f9b66)
+	![понятия gwf - KBE version 0 4 0  (integrator) 28 05 2024 10_15_53](https://github.com/iis-32170x/RPIIS/assets/144374775/48ccaaef-5005-43eb-a8b1-0593463b890d)
 
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_29_43](https://github.com/iis-32170x/RPIIS/assets/144374775/2637c996-3baf-4ffa-8f20-6d41c8a53bde)
 
 ## Примеры:
-1. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_24_12](https://github.com/iis-32170x/RPIIS/assets/144374775/80bb93c0-3ec9-43ee-9442-86fd4b9cb969)
+1.
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_24_12](https://github.com/iis-32170x/RPIIS/assets/144374775/80bb93c0-3ec9-43ee-9442-86fd4b9cb969)
    
-   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_01](https://github.com/iis-32170x/RPIIS/assets/144374775/1db33c09-f1ad-4984-94c1-60741e636fa2)
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_01](https://github.com/iis-32170x/RPIIS/assets/144374775/1db33c09-f1ad-4984-94c1-60741e636fa2)
    
-2. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_20](https://github.com/iis-32170x/RPIIS/assets/144374775/8d3bb1a2-08e4-4de4-bc4c-da979ae70fe7)
+2.
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_20](https://github.com/iis-32170x/RPIIS/assets/144374775/8d3bb1a2-08e4-4de4-bc4c-da979ae70fe7)
 
-   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_27](https://github.com/iis-32170x/RPIIS/assets/144374775/a90b6099-c7e5-4739-9e06-4d35f84dad4a)
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_27](https://github.com/iis-32170x/RPIIS/assets/144374775/a90b6099-c7e5-4739-9e06-4d35f84dad4a)
 
-3. ![Uploading Ubuntu [Работает] - Oracle VM VirtualBox 27.05.2024 16_27_57.png…]()
+3. 
+![Ubuntu  Работает  - Oracle VM VirtualBox 28 05 2024 14_58_57](https://github.com/iis-32170x/RPIIS/assets/144374775/bac8d62b-a929-4595-812d-2a70ed12a4dd)
 
-   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_13](https://github.com/iis-32170x/RPIIS/assets/144374775/b9029881-1e3a-45c5-adb8-2e4bca1a59aa)
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_13](https://github.com/iis-32170x/RPIIS/assets/144374775/b9029881-1e3a-45c5-adb8-2e4bca1a59aa)
 
-4. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_26](https://github.com/iis-32170x/RPIIS/assets/144374775/82afc932-1451-4571-ab96-77596d0a6d0b)
+4.
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_26](https://github.com/iis-32170x/RPIIS/assets/144374775/82afc932-1451-4571-ab96-77596d0a6d0b)
 
-   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_37](https://github.com/iis-32170x/RPIIS/assets/144374775/08000a20-2152-47c7-88c8-4ed55ba0e25e)
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_37](https://github.com/iis-32170x/RPIIS/assets/144374775/08000a20-2152-47c7-88c8-4ed55ba0e25e)
 
-5. ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_47](https://github.com/iis-32170x/RPIIS/assets/144374775/f36224e6-e591-4b43-9a61-af1d09345028)
+5.
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_47](https://github.com/iis-32170x/RPIIS/assets/144374775/f36224e6-e591-4b43-9a61-af1d09345028)
 
-   ![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_58](https://github.com/iis-32170x/RPIIS/assets/144374775/32d989a0-1d1e-4367-9bbf-c21bba659c53)
+![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_58](https://github.com/iis-32170x/RPIIS/assets/144374775/32d989a0-1d1e-4367-9bbf-c21bba659c53)
 
 # Вывод
 Был построен фрагмент онтологии, продемонстрирована работа программы решения теоретико-графовой задачи по нахождению дерева кратчайших путей в неориентированном графе в семантической памяти.
