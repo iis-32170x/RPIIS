@@ -27,17 +27,14 @@
 ### Алгоритм решения 
 
 1. Создаём множество неориентированных графов (в данном случае множество состоит из двух неориентированных графов `_gragh_1` и `_gragh_2`).
-2. Создаём счётчик количества рёбер и вершин каждого графа (`num_edges1`, `num_edges2`, `num_vertex1`, `num_vertex2`).
       
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR.png)
 ***
 
-3. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины и рёбра графа `_gragh_1`. Создаём связку отношения `Путь`
+2. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины графа `_gragh_1`.
      
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)
-***    
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR2.png)
-***      
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)   
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR2.png)     
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR3.png)
 ***
 
@@ -55,10 +52,8 @@
 
     8.2. Если это волна включает вершину, из которой можно перейти к смежной непосещённой вершине, то переходим к пункту (6), если нет - к пункту (8.1).
           
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR5.png)
-***   
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR6.png)
-***      
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR5.png)  
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR6.png)      
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR7.png)
 ***
 
@@ -73,14 +68,50 @@
 12. Если в графе `_gragh_2` не осталось вершин, которые не сравнивались,то переходим к пункту 13.
       
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR8.png)
-***
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR9.png)
 ***
-
-13.  Выводим результат.
-      
+Объединение всех вершин множества неориентированных графов `_graph_1` и `_graph_2`
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR10.png)
 ***
+
+13. Переносим все рёбра графа `_graph_1`.
+    
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR11.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR12.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR13.png)
+***
+
+14. Создаём переменную `not_checked_e`, где будут храниться непосещённые рёбра, и `_checked_е`, где будут храниться посещённые рёбра.
+         
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR14.png)
+***
+
+15. Создаём волну в произвольном ребре и добавляем его в список волн, исключая ребро из множества непосещённых рёбер.
+16. Пока это возможно, создаём следующую волну на следующем непосещённом ребре, удаляя его из множества непосещённых рёбер. 
+          
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR15.png)   
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR16.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR17.png)
+***
+
+17.  Из графа `_graph_2` берём начальное ребро обхода (в данном случаем вершина BА).
+18. Сравниваем с каждым ребром графа `_graph_1`:
+
+   18.1. Если в результате сравнение было найдено совпадение ребра второго графа с ребром первого, то берём следующее ребро графа `_graph_2` и переходим к пункту (18)
+
+   18.2 Если в результате сравнение не было найдено совпадение ребра второго графа с ребром первого, то добавляем ребро графа `_gragh_2` к `_gragh_3`.
+
+19. Если в графе `_gragh_2` остались ещё рёбра, которые не сравнивались,то берём следующее такое и переходим к пункту 18.
+20. Если в графе `_gragh_2` не осталось рёбер, которые не сравнивались,то переходим к пункту 21.
+      
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR19.png)
+***
+
+20. Выводим получившееся объединение множества неориентированных графов.
+      
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RRresult.png)
+***      
+
 
 ### Вывод
 
