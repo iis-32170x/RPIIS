@@ -46,15 +46,20 @@
 
 8. Если в solution оказалась каждая вершина и алгоритм вернулся в изначальную позицию, значит цикл эйлера найден, если программа не смогла дойти до конца, она будет поочередно удалять каждую вершину и искать другой путь, если путь не будет найдет solution полностью очиститься.
 ![image](https://github.com/iis-32170x/RPIIS/assets/146393417/d071c8c3-389c-4170-af83-61b97d3d1434)
+![image](https://github.com/iis-32170x/RPIIS/assets/146393417/6d14911d-e2c6-44eb-ab82-2aaa6320fab6)
 
 ### Тесты
 1.
 ![image](https://github.com/iis-32170x/RPIIS/assets/146393417/7250d32e-2a65-4b3c-902c-223e5e852fde)
 ![image](https://github.com/iis-32170x/RPIIS/assets/146393417/d5d39f89-875f-4c68-8846-9d023a6aebd8)
+![image](https://github.com/iis-32170x/RPIIS/assets/146393417/eb39a5a3-5faa-48e4-b90e-909ebe0bb3aa)
 
 2.
 ![image](https://github.com/iis-32170x/RPIIS/assets/146393417/0171e7bd-7d65-45fc-bf8a-cb28fe1fa369)
 ![image](https://github.com/iis-32170x/RPIIS/assets/146393417/595b3fde-d68a-481d-b090-93d728a5d40f)
+![image](https://github.com/iis-32170x/RPIIS/assets/146393417/77a42716-073d-4ade-8c0e-c511a0948be1)
+
+
 алгоритм прошел в порядке 1->2->3->4->5->3. ОТ 3 уже нету связей, алгоритм пришел не в изначальную позицую, следовательно этот граф не представляет собой цикл эйлера.
 
 ### Вывод
