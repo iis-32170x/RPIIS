@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/max/ontologies/2024/4/car.owl/"
+     xml:base="http://www.semanticweb.org/max/ontologies/2024/4/car.owl/"
+     xmlns:car="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#change -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#change">
+        <rdfs:label>сменил</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#equipped_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#equipped_with">
+        <rdfs:label>снабжен</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#hasCompany -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#hasCompany">
+        <rdfs:label>имеет фирму</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#hasVersion">
+        <rdfs:label>имеет версию</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#in_quantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#in_quantity">
+        <rdfs:label>в количестве</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#locate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#locate">
+        <rdfs:label>расположен</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#start_of_production -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#start_of_production">
+        <rdfs:label>начало производства</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#termination_of_production -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#termination_of_production">
+        <rdfs:label>прекращение производства</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#compact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#compact">
+        <rdfs:label>компактный</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#createdYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#createdYear">
+        <rdfs:label>год создания</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#name">
+        <rdfs:label>название</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#new_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#new_name">
+        <rdfs:label>новое название</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Airbag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Airbag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Security_tool"/>
+        <rdfs:label>Подушка безопасности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Company">
+        <rdfs:label>Фирма</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Location"/>
+        <rdfs:label>Страна</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Location">
+        <rdfs:label>Месторасположение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Month -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Month">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#UnitOfMeasure"/>
+        <rdfs:label>Месяц</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number">
+        <rdfs:label>Число</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Reason -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Reason">
+        <rdfs:label>Причина</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Seat_belt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Seat_belt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Security_tool"/>
+        <rdfs:label>Ремень безопасности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Security_tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Security_tool">
+        <rdfs:label>Средство безопасности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#UnitOfMeasure">
+        <rdfs:label>Единица измерения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Version -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Version">
+        <rdfs:label>Версия</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Year">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#UnitOfMeasure"/>
+        <rdfs:label>Год</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car">
+        <rdfs:label>Автомобиль</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Adam_Opel_GmbH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Adam_Opel_GmbH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Astra_F -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Astra_F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#AvtoZAZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#AvtoZAZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Company"/>
+        <car:locate rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Ukraine"/>
+        <rdfs:label>АвтоЗАЗ</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Chevrolet_Viva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Chevrolet_Viva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car"/>
+        <car:hasCompany rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#GM-AVTOVAZ"/>
+        <car:start_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2004"/>
+        <car:termination_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#low_demand"/>
+        <car:new_name></car:new_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#GM-AVTOVAZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#GM-AVTOVAZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Company"/>
+        <car:locate rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Russian_Federation"/>
+        <rdfs:label>GM-АВТОВАЗ</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Opel_Astra_Classic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Opel_Astra_Classic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car"/>
+        <car:hasCompany rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#AvtoZAZ"/>
+        <car:start_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2004"/>
+        <car:termination_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#lack_of_capacity_on_the_conveyor_for_other_models"/>
+        <car:termination_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2008"/>
+        <car:new_name></car:new_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Opel_Astra_G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Opel_Astra_G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#car"/>
+        <car:change rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Astra_F"/>
+        <car:equipped_with rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Side"/>
+        <car:equipped_with rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#front-facing"/>
+        <car:equipped_with rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#three-point_safety_belts"/>
+        <car:hasCompany rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Adam_Opel_GmbH"/>
+        <car:hasVersion rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#sedan"/>
+        <car:start_of_production rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#1998"/>
+        <car:compact></car:compact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Russian_Federation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Russian_Federation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Country"/>
+        <rdfs:label>Российская Федерация</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Side -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Side">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Airbag"/>
+        <car:in_quantity rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2"/>
+        <rdfs:label>боковая подушка безопасности</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Country"/>
+        <rdfs:label>Украина</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#front-facing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#front-facing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Airbag"/>
+        <car:in_quantity rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2"/>
+        <rdfs:label>фронтальная подушка безопасности</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#lack_of_capacity_on_the_conveyor_for_other_models -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#lack_of_capacity_on_the_conveyor_for_other_models">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Reason"/>
+        <rdfs:label>нехватка мощностей на конвейере под другие модели</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#low_demand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#low_demand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Reason"/>
+        <rdfs:label>низкий спрос</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#sedan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#sedan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Version"/>
+        <rdfs:label>седан</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#three-point_safety_belts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#three-point_safety_belts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Seat_belt"/>
+        <rdfs:label>трёхточечный ремень безопасности</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#1998 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#1998">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Year"/>
+        <car:createdYear></car:createdYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2004">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Year"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Month"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/max/ontologies/2024/4/car.owl#4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/max/ontologies/2024/4/car.owl#Number"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
