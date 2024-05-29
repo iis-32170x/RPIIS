@@ -92,15 +92,6 @@ def get_list(branch):
         new_branch.extend(kor1)
     return new_branch
 
-def zamena_skobok(a:list):
-    x_new = a.replace('{', '[')
-    x_got = x_new.replace('}', ']')
-    x_new_1 = x_got.replace('<', '(')
-    x_got_2 = x_new_1.replace('>', ')')
-    return x_got_2
-
-
-
 x = input("Введите множество\n")
 x_new = x.replace('{', '[')
 x_got = x_new.replace('}', ']')
