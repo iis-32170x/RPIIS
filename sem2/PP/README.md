@@ -134,3 +134,45 @@
 ![шаг 15](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/15.png)
 ## Вывод
 Формализовал алгоритма поиска мостов в неоринетированном графе.
+
+## Дополнение с примерами и загрузкой в метасистему
+Определение неориентированного графа:
+
+![Определение неориентированного графа в KBE](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/%D0%BD%D0%B5%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B3%D1%80%D0%B0%D1%84.png)
+![Определение неориентированного графа в метасистеме](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%20%D0%BD%D0%B5%D0%BE%D1%80%D0%B8%D0%BD%D0%B5%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B3%D1%80%D0%B0%D1%84.jpg)
+
+Определение моста в графе:
+
+![Определение моста в графе в KBE](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/%D0%BC%D0%BE%D1%81%D1%82.png)
+![Определение моста в графе в метасистеме](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%20%D0%BC%D0%BE%D1%81%D1%82.jpg)
+
+Пример 2:
+Входящие данные (в KBE и метасистеме соответственно):
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/2.1.png)
+
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/2.1.jpg)
+
+Выходящие данные (в KBE и метасистеме соответственно):
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/2.2.png)
+
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/2.2.jpg)
+
+Пример 3:
+Входящие данные (в KBE и метасистеме соответственно):
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/3.1.png)
+
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/3.1.jpg)
+
+Выходящие данные (в KBE и метасистеме соответственно):
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/kbe/3.2.png)
+
+
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/PP/screenshots/metasystem/3.2.jpg)
+
