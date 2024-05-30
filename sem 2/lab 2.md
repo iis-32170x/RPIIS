@@ -27,7 +27,7 @@
 4.Программа выведет результат объединения всех введенных множеств.
 
 ### Пример использования:
-```
+```c++
 Enter sets, each enclosed in curly braces {} and separated by a new line (press Ctrl+Z or Ctrl+D to end input):
 {1, 2, 3}
 {3, 4, 5}
@@ -36,6 +36,8 @@ Enter sets, each enclosed in curly braces {} and separated by a new line (press 
 Union of the sets:
 {1,2,3,4,5,6,7}
 ```
+
+[![Screenshot-2024-05-30-114615.png](https://i.postimg.cc/hvnvjxgM/Screenshot-2024-05-30-114615.png)](https://postimg.cc/DJCnpSSb)
 
 ## Особенности реализации:
 * Программа поддерживает вложенные множества, то есть элементами множеств могут быть другие множества.
