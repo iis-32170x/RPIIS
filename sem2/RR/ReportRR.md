@@ -6,6 +6,52 @@
 
 Формализовать алгоритм выполнения задачи. Определить является ли граф сильно связным.
 
+## Используемые понятия
+
+## Граф
+
+### Реализация в КБЕ:
+
+![image](imgsRR/GraphKBE.png)
+
+### Представление в OSTIS:
+
+![image](imgsRR/Graph.png)
+
+## Ориентированный граф
+
+### Реализация в КБЕ:
+
+![image](imgsRR/OrientedGraphKBE.png)
+
+### Представление в OSTIS:
+
+![image](imgsRR/OrientedGraph.png)
+
+## Сильносвязный граф
+
+### Реализация в КБЕ:
+
+![image](imgsRR/StrongKBE.png)
+
+### Представление в OSTIS:
+
+![image](imgsRR/Strong.png)
+
+## Путь
+
+### Реализация в КБЕ:
+
+![image](imgsRR/WayKBE.png)
+
+### Представление в OSTIS:
+
+![image](imgsRR/Way1.png)
+
+![image](imgsRR/Way2.png)
+
+![image](imgsRR/Way3.png)
+
 ## Формализация алгоритма:
 
 1 Задаем ориентированный граф
