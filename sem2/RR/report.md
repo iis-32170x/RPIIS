@@ -152,12 +152,13 @@
 #### Тест №1
 
 ##### Входные данные
-![test1input](https://github.com/iis-32170x/RPIIS/assets/144935038/7c23fe89-28bc-4d51-b81f-47d5d83ca42b)
+![test1input](https://github.com/iis-32170x/RPIIS/assets/144935038/f5711b8e-388b-440e-a44c-b9af1dcd4b18)
 
 ***
 
 ##### Выходные данные
-![image](тест1.png)
+![test1output](https://github.com/iis-32170x/RPIIS/assets/144935038/bab65b04-3990-41b1-b2db-547bb9309298)
+
 ***
 ![test1kb](https://github.com/iis-32170x/RPIIS/assets/144935038/9d726d86-0594-4497-8459-8093baefa193)
 
@@ -170,7 +171,9 @@
 ***
 
 ##### Выходные данные
-![image](тест2.png)
+![test2output](https://github.com/iis-32170x/RPIIS/assets/144935038/1c6ddfd6-5e71-450c-9cf3-f5efc84078b9)
+
+
 ***
 ![test2kb](https://github.com/iis-32170x/RPIIS/assets/144935038/88f7f65e-723d-459e-8b78-ed080aec814d)
 
@@ -178,12 +181,12 @@
 #### Тест №3
 
 ##### Входные данные
-![test3input](https://github.com/iis-32170x/RPIIS/assets/144935038/75a1fb48-7229-46b4-8bfa-9aeed12e2998)
+![test3input](https://github.com/iis-32170x/RPIIS/assets/144935038/792bc3d6-19ef-45ad-b351-fbde76817557)
 
 ***
 
 ##### Выходные данные
-![image](тест3.png)
+![test3output](https://github.com/iis-32170x/RPIIS/assets/144935038/7fe54538-91ae-4fc4-b4c2-cfd121691be1)
 ***
 ![test3kb](https://github.com/iis-32170x/RPIIS/assets/144935038/d701b2ea-7d45-4438-b710-34e1c3e2a475)
 
@@ -191,11 +194,11 @@
 #### Тест №4
 
 ##### Входные данные
-![test4input](https://github.com/iis-32170x/RPIIS/assets/144935038/81b8284e-dfd4-4c0c-adf8-5c4ae0e7d488)
+![test4input](https://github.com/iis-32170x/RPIIS/assets/144935038/cbe98ae4-b433-4f5f-b348-a306eb9b1928)
 
 ***
 ##### Выходные данные
-![image](тест4.png)
+![test4output](https://github.com/iis-32170x/RPIIS/assets/144935038/ad82b771-3417-46da-a9b4-b768d0056a09)
 
 ***
 ![test4kb](https://github.com/iis-32170x/RPIIS/assets/144935038/66435978-d1b5-4667-952a-e1372181429b)
