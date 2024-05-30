@@ -26,13 +26,16 @@
 
 
 Затем происходит проверка степени каждой вершины. Если хотя бы одна вершина имеет степень больше трех, граф считается непланарным и возвращается значение false. Иначе функция возвращает true.
-![image](https://github.com/iis-32170x/RPIIS/assets/149104399/d0ae100a-158c-4759-8b8e-d32b374a7254)
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/ba352e8e-5b22-4ebe-9037-ea6782e7c245)
+
+
 
 
 
  цикл данного алгоритма:
 
- ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/aac61650-6e49-4051-8162-59a215bd58c4)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/fe90fa32-96a5-4647-861e-3809db94df87)
+
 
 
    
