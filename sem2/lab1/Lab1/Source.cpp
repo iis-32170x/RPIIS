@@ -162,8 +162,4 @@ Deck* Y::Deck::file()
 		deck->next = nullptr;
 	}
 	return this;
-
-
 }
-
-

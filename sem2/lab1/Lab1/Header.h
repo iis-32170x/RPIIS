@@ -14,8 +14,5 @@ namespace Y {
 		 int val=0;
 		 Deck* next = nullptr;
 		 Deck* prev = nullptr;
-	
-		
-	
 	};
 }
