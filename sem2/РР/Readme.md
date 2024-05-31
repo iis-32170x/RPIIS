@@ -27,21 +27,22 @@
 
 
 2. Создаём переменную `_visited`, указывающую на посещённую вершину графа.
-![4 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_04_13](https://github.com/iis-32170x/RPIIS/assets/144374775/316c3e78-5d8e-44d2-aac6-4c12fae20dcf)
+![4 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_44_09](https://github.com/iis-32170x/RPIIS/assets/144374775/261e22c5-929f-425d-981e-b2fa4966f7c2)
 
 3.Добавляем ближайшую вершину в переменную `_visited`. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных) в переменную `added_edges`. Создаём переменную `previous_edge` которой присваиваем предудущую добавленную вершину.
-![5 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_06_28](https://github.com/iis-32170x/RPIIS/assets/144374775/d11d7e27-ac9b-48fe-9163-f642cf5ce22c)
+![5 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_50_01](https://github.com/iis-32170x/RPIIS/assets/144374775/026e6fed-2aba-4bae-a075-10b3f895435a)
+
 
 4.Смотрим, не является ли текущая ближайшая вершина смежной вершине в переменной `previous_edge`, в таком случае добавляем ее в переменную `_visited`, добавляем ребро, смежное добавленной вершине и вершине в переменной `previous_edge` в переменную `added_edges`. В противном случае добавляем ближайшую вершину в переменную `_visited`. Добавляем ребро, смежное добавленной вершине, и вершине, ближайшей к ней (из уже добавленных) в переменную `added_edges`. Заменяем значение `previous_edge` вершиной ближайшей к последней добавленной в `_visited`,находящейся в этой же переменной.
+![6 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_50_35](https://github.com/iis-32170x/RPIIS/assets/144374775/747df6ef-6a9d-4b2d-a2d5-dc8660e30a39)
 
-![6 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_30_52](https://github.com/iis-32170x/RPIIS/assets/144374775/2ee71761-8d59-44d8-9905-2d013272eaf0)
 
 5. Повторяем, пока не будут добавлены все вершины
-![7 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_32_07](https://github.com/iis-32170x/RPIIS/assets/144374775/ded340a9-449a-4677-9e38-3fa47cbca104)
+![7 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_51_10](https://github.com/iis-32170x/RPIIS/assets/144374775/b7bfc95b-cdc3-43b3-9875-c845cc9f7cf7)
 
-![9 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_32_56](https://github.com/iis-32170x/RPIIS/assets/144374775/54974300-ccb4-43c2-af91-445caa93ae54)
+![9 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_51_40](https://github.com/iis-32170x/RPIIS/assets/144374775/ec2b82df-ea8e-4c41-8e02-e93540977a35)
 
-5. Создаем граф из вершин переменной `_visited` и рёбер переменной `added_edges`.
+6. Создаем граф из вершин переменной `_visited` и рёбер переменной `added_edges`.
 ![10 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_07_11](https://github.com/iis-32170x/RPIIS/assets/144374775/8179aff1-d751-4166-b197-4fcf49dabc3a)
 
 - Формализация понятий
