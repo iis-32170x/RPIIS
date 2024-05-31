@@ -3,21 +3,16 @@
 #include <algorithm>
 #include <string>
 #include <unordered_map>
-#include <algorithm>
-#include <string>
 #include <vector>
 #include <unordered_set>
 #include <sstream>
 
+using namespace std;
 
+vector<string> parseString(string str, int start = 0, int finish = -1);
+string vectorToString(vector<string> set);
 
-std::vector<std::string> parseString(std::string str, int start = 0, int finish = -1);
-
-std::string vectorToString(std::vector<std::string> set);
-
-
-
-void checkForBrackets(const std::string& str)
+void checkForBrackets(const string& str)
 {
     int curlyB = 0;
     int tupleB = 0;
@@ -31,16 +26,16 @@ void checkForBrackets(const std::string& str)
 
     if (curlyB > 0 || tupleB > 0)
     {
-        throw std::runtime_error("Не удалось разобрать: есть незакрытые скобки");
+        throw runtime_error("Не удалось разобрать: есть незакрытые скобки");
     }
 
     if (curlyB < 0 || tupleB < 0)
     {
-        throw std::runtime_error("Не удалось разобрать: есть нераскрытые скобки");
+        throw runtime_error("Не удалось разобрать: есть нераскрытые скобки");
     }
 }
 
-std::vector<std::string> parseString(std::string str, const int start, int finish)
+vector<string> parseString(string str, const int start, int finish)
 {
     if (finish == -1)
     {
@@ -49,19 +44,19 @@ std::vector<std::string> parseString(std::string str, const int start, int finis
 
     if (str[start] != '{')
     {
-        throw std::runtime_error("Не удалось проанализировать: нет открывающейся скобки в " + std::to_string(start));
+        throw runtime_error("Не удалось проанализировать: нет открывающейся скобки в " + to_string(start));
     }
 
     if (str[finish] != '}')
     {
-        throw std::runtime_error("Не удалось проанализировать: нет закрывающей скобки в " + std::to_string(finish));
+        throw runtime_error("Не удалось проанализировать: нет закрывающей скобки в " + to_string(finish));
     }
 
     checkForBrackets(str);
 
     // Удаляем пробелы
     str.erase(
-        std::remove_if(
+        remove_if(
             str.begin(), str.end(), [](char ch) { return ch == ' '; }
         ), str.end()
     );
@@ -69,8 +64,8 @@ std::vector<std::string> parseString(std::string str, const int start, int finis
     // Удаляем внешние скобки из строки
     str = str.substr(1, str.size() - 2);
 
-    std::string content;
-    std::vector<std::string> elements;
+    string content;
+    vector<string> elements;
     int depth = 0;
     for (int i = 0; i <= str.size(); i++)
     {
@@ -98,9 +93,9 @@ std::vector<std::string> parseString(std::string str, const int start, int finis
     return elements;
 }
 
-std::string vectorToString(std::vector<std::string> set)
+string vectorToString(vector<string> set)
 {
-    std::string str = "{";
+    string str = "{";
 
     for (int i = 0; i < set.size(); i++)
     {
@@ -114,16 +109,16 @@ std::string vectorToString(std::vector<std::string> set)
     return str;
 }
 
-std::string sortNestedSets(const std::string& nestedSet)
+string sortNestedSets(const string& nestedSet)
 {
-    std::string sortedSet = nestedSet;
-    sortedSet.erase(std::remove(sortedSet.begin(), sortedSet.end(), '{'), sortedSet.end());
-    sortedSet.erase(std::remove(sortedSet.begin(), sortedSet.end(), '}'), sortedSet.end());
+    string sortedSet = nestedSet;
+    sortedSet.erase(remove(sortedSet.begin(), sortedSet.end(), '{'), sortedSet.end());
+    sortedSet.erase(remove(sortedSet.begin(), sortedSet.end(), '}'), sortedSet.end());
 
-    std::vector<std::string> elements;
-    std::stringstream ss(sortedSet);
-    std::string item;
-    while (std::getline(ss, item, ','))
+    vector<string> elements;
+    stringstream ss(sortedSet);
+    string item;
+    while (getline(ss, item, ','))
     {
         elements.push_back(item);
     }
@@ -138,14 +133,14 @@ std::string sortNestedSets(const std::string& nestedSet)
     }
 
     // Удаляем пустые множества из элементов
-    elements.erase(std::remove_if(elements.begin(), elements.end(),
-        [](const std::string& element)
+    elements.erase(remove_if(elements.begin(), elements.end(),
+        [](const string& element)
         {
             return element.empty();
         }),
         elements.end());
 
-    std::sort(elements.begin(), elements.end());
+    sort(elements.begin(), elements.end());
 
     sortedSet = "{";
     for (const auto& element : elements)
@@ -158,29 +153,29 @@ std::string sortNestedSets(const std::string& nestedSet)
     return sortedSet;
 }
 
-std::vector<std::string> setDifference(const std::vector<std::string>& set1, const std::vector<std::string>& set2)
+vector<string> setDifference(const vector<string>& set1, const vector<string>& set2)
 {
-    std::unordered_map<std::string, int> countMap;
+    unordered_map<string, int> countMap;
 
     for (const auto& elem : set2)
     {
         countMap[elem]++;
     }
 
-    std::vector<std::string> difference;
+    vector<string> difference;
 
     for (const auto& elem : set1)
     {
         if (elem.substr(0, 1) == "{" && elem.substr(elem.length() - 1, 1) == "}")
         {
             bool isSubset = false;
-            std::string sortedElem = sortNestedSets(elem);
+            string sortedElem = sortNestedSets(elem);
 
             for (const auto& subsetElem : set2)
             {
                 if (subsetElem.substr(0, 1) == "{" && subsetElem.substr(subsetElem.length() - 1, 1) == "}")
                 {
-                    std::string sortedSubsetElem = sortNestedSets(subsetElem);
+                    string sortedSubsetElem = sortNestedSets(subsetElem);
 
                     if (sortedElem == sortedSubsetElem && countMap[subsetElem] > 0)
                     {
