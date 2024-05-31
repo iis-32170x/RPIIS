@@ -9,7 +9,8 @@
 ## Шаг 1. 
 Запишем название понятия с помощью \scnheader{понятие}
 
-![image](https://github.com/Dashulik10/1-/assets/144939580/c56e372b-89ee-4abe-a7bf-a4df5cd495eb)
+![image](https://github.com/iis-32170x/RPIIS/assets/144939580/af3faedb-0514-4017-bd9f-bb43829f392f)
+
 
 
 ## Шаг 2. 
