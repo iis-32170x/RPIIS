@@ -12,7 +12,7 @@
 
 (ВНИМАНИЕ! Выбираете клетку и оставляете в ней комметарий с вашей фамилией и группой, ибо просто отредактировать таблицу уже не разрешают. Ваши комметарии видны всем, не переживайте)
 
-![](https://github.com/sourist/guide/blob/main/assets/table.gif)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/table.gif)
 
 ## Поиск понятий
 
@@ -20,7 +20,7 @@
 
 Вставляем в строку поиска тему и ищем что-то интересное.
 
-![](https://github.com/sourist/guide/blob/main/assets/finding.gif)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/finding.gif)
 
 (Рекомендую зарегистрироваться на сайте [elibrary](https://www.elibrary.ru/defaultx.asp?), так как там лежит много полезных статей).
 
@@ -36,7 +36,7 @@
 2. Переходим на главную страницу и делаем личную копию примера отчёта.
 3. Заходим в скопированный проект и начинаем редактировать его под себя.
 
-![](https://github.com/sourist/guide/blob/main/assets/copy%20project.gif)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/copy%20project.gif)
 
 Тут лучше создать свой собственный файл с вашими определениями, чтобы не возникало путаницы с тем, что было в примере отчёта.
 
@@ -44,7 +44,7 @@
 
 Создадим файл *practice*.
 
-![](https://github.com/sourist/guide/blob/main/assets/added%20file.gif)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/added%20file.gif)
 
 Важно, в начале и конце файла для корректной работы команд SCn-кода необходимо прописать следующее:
 ```LaTex
@@ -65,7 +65,7 @@
 \input{practice}
 ```
 
-![](https://github.com/sourist/guide/blob/main/assets/added.gif)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/added.gif)
 
 (похоже на подключение библиотек на C++)
 
@@ -95,53 +95,51 @@
 
 С этими знаниями уже можно выполнить 90% работы.
 
-![](https://github.com/sourist/guide/blob/main/assets/%D0%A1%D0%9C%D0%90%D0%99%D0%9B%D0%98%D0%9A%20%D0%A1%D0%98%D0%94%D0%98%D0%A2%20%D0%97%D0%90%20%D0%9A%D0%9E%D0%9C%D0%9F%D0%AC%D0%AE%D0%A2%D0%95%D0%A0%D0%9E%D0%9C.gif)
-
 ### Пример формализации понятия
 
 1. Читаем статью, находим понятие. Как пример возьмём "вопросно-ответная система". Оно является одним из ключевых в данной статье, его более-менее подробно описали и привели несколько конкретных примеров этой системы.
 
-![](https://github.com/sourist/guide/blob/main/assets/%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D0%B5.png)
 
 2. Сразу можем добавить найденное понятие в наш отчёт. И тут же добавляем в качестве определения его перевод на английский. Начало положено.
    
 (Обратите внимание, что понятие записывается с маленькой буквы, так как это не конкретная сущность, а что-то более общее)
 
-![](https://github.com/sourist/guide/blob/main/assets/1.jpg)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/1.jpg)
 
 3. Возвращаемся к статье. Перечитаваем абзац с понятием, формулируем для него определение и записываем определение в отчёт. Мы уже получили основу нашего понятия.
 
-![](https://github.com/sourist/guide/blob/main/assets/2.jpg)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/2.jpg)
 
 Можем ещё добавить примечание для подробного раскрытия определения.
 
-![](https://github.com/sourist/guide/blob/main/assets/2.1.jpg)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/2.1.jpg)
 
 4. Снова возвращаемся к статье, опускаемся ниже, здесь нам представляют несколько конкретных примеров вопросно-ответных систем.
 
-![](https://github.com/sourist/guide/blob/main/assets/4.1.png)
-![](https://github.com/sourist/guide/blob/main/assets/4.2.png)
-![](https://github.com/sourist/guide/blob/main/assets/4.3.png)
-![](https://github.com/sourist/guide/blob/main/assets/4.4.png)
-![](https://github.com/sourist/guide/blob/main/assets/4.5.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.1.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.2.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.3.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.4.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.5.png)
 
 Нам следует добавить их в отчёт.
 
 (Добавим в конце нашего списка "...", чтобы дать понять, что есть и другие вопросно-ответные системы)
 
-![](https://github.com/sourist/guide/blob/main/assets/3.jpg)
+![](![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/3.jpg)
 
 5. Наконец, укажем библиографический источник для понятия. Для этого вернёмся на страницу со статьёй, возьмём её название, автора и добавим в отчёт.
 
-![](https://github.com/sourist/guide/blob/main/assets/4.jpg)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/4.jpg)
 
 Так как статья лежит в интернете, то можем добавить ещё и её URL. Финальный штрих.
 
-![](https://github.com/sourist/guide/blob/main/assets/5.jpg)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/5.jpg)
 
 Таким образом мы формализовали понятие "вопросно-ответная система" из [этой статьи](https://www.elibrary.ru/item.asp?id=34887564).
 
-![](https://github.com/sourist/guide/blob/main/assets/result.png)
+![](https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D0%BC%D0%B0%D0%BD_%D0%94/sem2/practice/guide/assets/result.png)
 
 Код:
 
@@ -167,5 +165,3 @@
 ```
 
 Одно понятие есть, осталось всего девять, алгоритм такой же. Удачи.
-
-![](https://github.com/sourist/guide/blob/main/assets/scweb.gif)
