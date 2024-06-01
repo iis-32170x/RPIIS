@@ -231,7 +231,8 @@
 
 ### Добавим авторов и источники, из которых была взята информация
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/73ed25bf-1bc1-4bcc-b4de-e75ffbd6cd56)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/153ccaef-79da-43de-96a7-66c364186848)
+
 
 ***
 
