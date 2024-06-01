@@ -34,30 +34,18 @@ void generatePermutations(int* nums, bool* used, int* current, int currentIndex,
 - generatePermutations(nums, used, current, currentIndex + 1, n); - является рекурсивным вызовом функции generatePermutations.
 ### Функция generateAllPermutations.
 ```cpp
-void generateAllPermutations(int n) {
-    int* nums = new int[n];
-    bool* used = new bool[n];
-    int* current = new int[n];
+void generateAllPermutations(vector<char>& symbols) {
+    int n = symbols.size();
+    vector<bool> used(n, false);
+    vector<char> current(n);
 
-    for (int i = 0; i < n; i++) {
-        nums[i] = i + 1;
-        used[i] = false;
-    }
-
-    generatePermutations(nums, used, current, 0, n);
-
-    delete[] nums;
-    delete[] used;
-    delete[] current;
+    generatePermutations(symbols, used, current, 0, n);
 }
 ```
-- void generateAllPermutations(int n) { - принимает один аргумент n, который представляет общее количество чисел для генерации перестановок.
--  int* nums = new int[n]; - создает динамический массив nums типа int размером n.
-- bool* used = new bool[n]; - создает динамический массив used типа bool размером n.
-- int* current = new int[n]; - создает динамический массив current типа int размером n.
-- generatePermutations(nums, used, current, 0, n); - является вызовом функции generatePermutations с передачей аргументов.
-- delete[] nums; - используется для освобождения памяти, выделенной для динамического массива nums.
-- delete[] used; - используется для освобождения памяти, выделенной для динамического массива used.
-- delete[] current; - используется для освобождения памяти, выделенной для динамического массива current.
+- void generateAllPermutations(vector<char>& symbols): Функция принимает вектор символов symbols. Это значит, что функция будет работать напрямую с исходным вектором.
+- int n = symbols.size();: Эта строка получает размер вектора symbols и сохраняет его в переменную n. Переменная n будет использоваться в дальнейшем для отслеживания количества элементов в множестве.
+- vector<bool> used(n, false);: Создает вектор булевых значений used размером n (количество символов).
+- vector<char> current(n);: Создает вектор символов current размером n.
+- generatePermutations(symbols, used, current, 0, n);: Вызывает рекурсивную функцию generatePermutations.
 ## Вывод 
 Реализовал программу поиска всевозможных ориентированных множеств без повторений.
