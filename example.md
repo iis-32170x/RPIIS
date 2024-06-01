@@ -221,7 +221,7 @@
 
 ### Добавляем в описание
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/1b9a5e77-24f6-4aaf-8a36-15f50b2a90a2)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ea1abc35-ce86-400e-aa44-1e40413e7145)
 
 ***
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/feece627-d6a3-4a06-83a7-b8e53d51e6c8)
