@@ -37,4 +37,6 @@
 
 ### Выполнение задания:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144334182/75666d29-d807-4955-98bb-7665239f1a37)
+![image](https://github.com/iis-32170x/RPIIS/assets/144334182/70e396aa-506b-432c-8124-c79429d6fa52)
+
+P.s. Спасибо Роману Гринь за помощь с работой в KBE.
