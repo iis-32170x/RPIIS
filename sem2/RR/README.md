@@ -23,7 +23,8 @@
 
 5. Полный алгоритм:
 
-![Screenshot 2024-06-01 193610](https://github.com/iis-32170x/RPIIS/assets/144227421/49f5f505-3903-4202-b71f-4076398395ad)
+
+![Screenshot 2024-06-01 203847](https://github.com/iis-32170x/RPIIS/assets/144227421/2b2b996c-83de-409d-ac36-7b112db3c8bf)
 
 
 
@@ -53,8 +54,9 @@
 
 ## Примеры тестов
 
-![Screenshot 2024-06-01 195812](https://github.com/iis-32170x/RPIIS/assets/144227421/92d07e58-f143-4f2a-a035-a800011854f8)
+![Screenshot 2024-06-01 203939](https://github.com/iis-32170x/RPIIS/assets/144227421/68e7acce-d236-4503-9a85-8fbc7f076017)
 
 
-![Screenshot 2024-06-01 200031](https://github.com/iis-32170x/RPIIS/assets/144227421/0576aef4-cfd2-478d-8753-4ab39132f0a8)
+![Screenshot 2024-06-01 204034](https://github.com/iis-32170x/RPIIS/assets/144227421/7810823a-8548-4561-82d7-4bb4dbb309cd)
+
 
