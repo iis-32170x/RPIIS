@@ -30,10 +30,12 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/150240210/09de57e5-e34d-4dbb-801e-40a3411578f2)
 
 Формализация в KBE:
-![image](https://github.com/iis-32170x/RPIIS/assets/150240210/53616a14-9769-4dab-b39a-b444d2d71c42)
+![image](https://github.com/iis-32170x/RPIIS/assets/150240210/a745b53b-568b-4240-ac64-0b4787635545)
+
 
 ## Задание №2: Формализация математическаго выражения
 Вариант 12. ![image](https://github.com/iis-32170x/RPIIS/assets/150240210/43b0aafc-269d-4b7a-9092-be0d26f41707)
 ### Выполнение
-![image](https://github.com/iis-32170x/RPIIS/assets/150240210/522a1b6e-1a4b-4d75-9bde-34fb4825af1d)
+![image](https://github.com/iis-32170x/RPIIS/assets/150240210/b5ffd115-e133-4cae-a446-04f9d540c57c)
+
 
