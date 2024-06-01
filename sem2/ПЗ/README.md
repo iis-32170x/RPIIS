@@ -36,3 +36,5 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/144334182/b0b4a75f-9297-4a60-8d47-65c3828e5aa6)
 
 ### Выполнение задания:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/144334182/75666d29-d807-4955-98bb-7665239f1a37)
