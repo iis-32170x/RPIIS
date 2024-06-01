@@ -1,0 +1,126 @@
+Prefix(:=<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2>
+
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#CentralAngle>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Circle>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#EquilateralTriangle>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#InscribedAngle>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Shape>))
+Declaration(Class(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Triangle>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasArea>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasCentre>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasMeasure>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#isCentralAngleOf>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#isInscribedIn>))
+Declaration(DataProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#cos>))
+Declaration(DataProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasLength>))
+Declaration(DataProperty(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasSquare>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#C>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Shape>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#CentralAngle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#CentralAngle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#CentralAngle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Circle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Circle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Circle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#EquilateralTriangle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#EquilateralTriangle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#EquilateralTriangle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#InscribedAngle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#InscribedAngle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#InscribedAngle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Angle>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Shape>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Shape>)
+
+# Class: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Triangle> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Triangle>)
+
+SubClassOf(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Triangle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Polygon>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A>)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B>)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#C> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#C>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#C>)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Point> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O>)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#InscribedAngle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#isInscribedIn> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+DataPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasSquare> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleABC> "36"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#CentralAngle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#isCentralAngleOf> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#angleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#Circle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasArea> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasCentre> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1>)
+DataPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasSquare> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#circle1> "15.707963267948966"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB> (<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB>)
+
+ClassAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#EquilateralTriangle> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#A>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#B>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#hasVertex> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#triangleAOB> <http://www.semanticweb.org/zetsu/ontologies/2024/5/untitled-ontology-2#O>)
+
+
+)
