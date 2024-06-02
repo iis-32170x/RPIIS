@@ -103,7 +103,7 @@ ostis-субъект //сущность разбиения
 pdf-файл статьи:
 [АНАЛИЗ И ДЕКОМПОЗИЦИЯ АРХИТЕКТУРЫ ТРАНСФОРМЕРА В
 РАМКАХ РАЗВИТИЯ ГЕНЕРАТИВНО ПАРАМЕТРИЧЕСКИХ МОДЕЛЕЙ
-НЕЙРОННЫХ СЕТЕЙ](https://github.com/TikhonKhod/iis-32170x/RPIIS/SEM2/PZ/elibrary_60030480_22931954.pdf)
+НЕЙРОННЫХ СЕТЕЙ]([https://github.com/TikhonKhod/iis-32170x/RPIIS/SEM2/PZ/elibrary_60030480_22931954.pdf](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/PZ/elibrary_60030480_22931954.pdf))
 
 рассмотрим то, что есть в статье
 
