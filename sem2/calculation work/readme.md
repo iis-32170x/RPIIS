@@ -50,26 +50,21 @@
 ### Примеры работы (вход/выход)
 Пример 1.
 
-![1examplein](Examples/вход1.jpeg)
-![1exampleout](Examples/выход1.jpeg)
+![1example](examples/ex1.png)
 
 Пример 2.
 
-![2examplein](Examples/вход2.jpeg)
-![2exampleout](Examples/выход2.jpg)
+![2example](examples/ex2.png)
 
 Пример 3.
 
-![3examplein](Examples/вход3.jpg)
-![3exampleout](Examples/выход3.jpg)
+![3example](examples/ex3.png)
 
 Пример 4.
 
-![4examplein](Examples/вход4.jpg)
-![4exampleout](Examples/выход4.jpg)
+![4example](examples/ex4.png)
 
 Пример 5.
 
-![5examplein](Examples/вход5.jpg)
-![5exampleout](Examples/выход5.jpg)
+![5example](examples/ex1.png)
 
