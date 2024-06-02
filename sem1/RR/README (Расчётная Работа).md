@@ -21,6 +21,7 @@
 #include <vector>
 #include <fstream>
 using namespace std;
+
 class Graph {
 private:
     vector<vector<int>> Matrix_smezh;
@@ -28,12 +29,14 @@ public:
     Graph(int razmer = 0) {
         Matrix_smezh.resize(razmer, vector<int>(razmer, 0));
     }
+
     void addRebro(int v1, int v2, int ves) {
         if (v1 < Matrix_smezh.size() && v2 < Matrix_smezh.size()) {
             Matrix_smezh[v1][v2] = ves;
             Matrix_smezh[v2][v1] = ves; // Для неориентированного графа
         }
     }
+
     void UnionGraphs(const Graph& drugoy) {
         int maxSize = max(Matrix_smezh.size(), drugoy.Matrix_smezh.size());
         resizeMatrix(maxSize);
@@ -45,6 +48,7 @@ public:
             }
         }
     }
+
     void displayGraph() const {
         cout << "Матрица смежности:" << endl;
         for (const auto& row : Matrix_smezh) {
@@ -54,16 +58,19 @@ public:
             cout << endl;
         }
     }
+
     void resizeMatrix(int newSize) {
         Matrix_smezh.resize(newSize);
         for (auto& row : Matrix_smezh) {
             row.resize(newSize, 0);
         }
     }
+
     const vector<vector<int>>& getMatrix_smezh() const {
         return Matrix_smezh;
     }
 };
+
 void writeGraphToFile(const Graph& graph, const string& filename) {
     ofstream file(filename);
     if (!file.is_open()) {
@@ -81,6 +88,7 @@ void writeGraphToFile(const Graph& graph, const string& filename) {
     file.close();
     cout << "Граф записан в файл " << filename << endl;
 }
+
 void readGraphFromFile(Graph& graph, const string& filename) {
     ifstream file(filename);
     if (!file.is_open()) {
@@ -100,6 +108,7 @@ void readGraphFromFile(Graph& graph, const string& filename) {
     graph.UnionGraphs(tempGraph);
     file.close();
 }
+
 Graph inputGraph() {
     int size;
     cout << "Введите размер матрицы смежности: ";
@@ -115,6 +124,7 @@ Graph inputGraph() {
     }
     return graph;
 }
+
 int main() {
     Graph unionGraph;
     char vybor;
@@ -147,7 +157,6 @@ int main() {
             cin >> filename;
             if (filename.substr(filename.size() - 4) != ".txt") {
                 filename += ".txt";
-                filename += ".txt";
             }
             writeGraphToFile(g2, filename);
         }
@@ -161,7 +170,7 @@ int main() {
         readGraphFromFile(unionGraph, "graph2.txt");
     }
     cout << "Объединенный граф:" << endl;
-    unionGraph. displayGraph();
+    unionGraph.displayGraph();
     return 0;
 }
 ```
