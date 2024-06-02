@@ -10,43 +10,94 @@
 
 1 Задаем ориентированный граф(в нем мы будем искать путь длиной 3 начиная с вершины 0)
 
-![image](imgsRR/step1.png)
+![image](imgsRR/2.png)
 
+# <p align="center">!!! ВАЖНАЯ ПОМЕТКА !!!</p>
+### ДАЛЕЕ В ЭТОМ ГРАФЕ РЕБРА НАРИСОВАНЫ НЕПРАВИЛЬНЫМИ ДУГАМИ, ПРАВИЛЬНЫЙ ВАРИАНТ ПРЕДСТАВЛЕН В ФИНАЛЬНОМ ГРАФЕ (последнее изображение перед началом тестов)
+# <p align="center">Продолжение</p>
 2 Берем за начальную вершину 0 и в ней же задаем первую волну, создаем переменную, которая определяет непосещенные вершины из начальной вершины
 
-![image](imgsRR/step2.png)
+![image](imgsRR/3.png)
 
 3 Проходим волнами по всему графу 
 
-![image](imgsRR/step3.png)
+![image](imgsRR/4.png)
 
-![image](imgsRR/step4.png)
+![image](imgsRR/5.png)
 
-![image](imgsRR/step5.png)
+![image](imgsRR/6.png)
 
-![image](imgsRR/step6.png)
 
 4 После посещения каждой вершины мы проверяем условие 
 
-![image](imgsRR/step17.png)
+![image](imgsRR/11.png)
 
-5 Далее, если условие выполняется, начинаем построение оринтированного графа, для построения пути заданной длины по графу. 
+5 Далее начинаем построение оринтированного графа, для построения пути заданной длины по графу. 
 
-![image](imgsRR/step7.png)
+![image](imgsRR/7.png)
 
-![image](imgsRR/step8.png)
+![image](imgsRR/8.png)
 
-![image](imgsRR/step9.png)
-
-![image](imgsRR/step15.png)
+![image](imgsRR/9.png)
 
 Удалим несущественные части для читаемости
 
-![image](imgsRR/step16.png)
+![image](imgsRR/10.png)
 
 В результате получаем следующий граф
 
-![image](imgsRR/finstep.png)
+![image](imgsRR/final.png)
+
+## Тесты
+### №2
+Входной граф (начало с 0 путь длиной 3)
+
+![image](imgsRR/test1.1.png)
+
+Выход
+
+![image](imgsRR/test1.2.png)
+
+### №3
+
+Входной граф (начало с 3 путь длиной 2)
+
+![image](imgsRR/test2.1.png)
+
+Выход
+
+![image](imgsRR/test2.2.png)
+
+### №4
+
+Входной граф (начало с 1 путь длиной 3)
+
+![image](imgsRR/test3.1.png)
+
+Выход
+
+![image](imgsRR/test3.2.png)
+
+### №5
+
+Входной граф (начало с 0 путь длиной 3)
+
+![image](imgsRR/test4.1.png)
+
+Выход
+
+![image](imgsRR/test4.2.png)
+
+
+## <p align="center">Формализованные понятие в КБЕ</p>
+    Граф
+![image](imgsRR/pon1.png)
+
+    Неориентированный граф
+![image](imgsRR/pon2.png)
+
+    Путь
+![image](imgsRR/pon3.png)
 
 ## Вывод 
 
