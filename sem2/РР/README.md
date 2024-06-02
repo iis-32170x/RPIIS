@@ -28,7 +28,7 @@
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/2.png?raw=true"></image>
 <ul>
 <li>Переменная _not_checked_vertexes_1 получит в качестве значения множество непроверенных вершин обрабатываемого графа 1;</li>
-<li>>Переменная _not_checked_vertexes_2 получит в качестве значения множество непроверенных вершин обрабатываемого графа 2;</li>
+<li>Переменная _not_checked_vertexes_2 получит в качестве значения множество непроверенных вершин обрабатываемого графа 2;</li>
 </ul>
 <hr>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/3.png?raw=true"></image>
