@@ -28,7 +28,7 @@
 
 1. Создаём множество неориентированных графов (в данном случае множество состоит из двух неориентированных графов `_gragh_1` и `_gragh_2`).
       
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR.png)
+![image]([https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR.png](https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%92/sem2/RR/RR_gwf/RR.gwf))
 ***
 
 2. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины графа `_gragh_1`.
