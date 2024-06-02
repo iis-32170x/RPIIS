@@ -33,8 +33,9 @@
 
 2. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины графа `_gragh_1`.
      
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)   
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR2.png)     
+![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)  
+
+![image](https://github.com/iis-32170x/RPIIS/blob/38c770fa4621f99ed5e494c9a8752cc29be69794/images/RR2.png)     
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR3.png)
 ***
 
