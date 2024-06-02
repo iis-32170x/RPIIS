@@ -160,10 +160,8 @@
     <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#AOB -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#AOB">
-        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#центральный_угол"/>
         <untitled-ontology-3:вершина rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#O"/>
-        <untitled-ontology-3:площадь rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_AOB"/>
     </owl:NamedIndividual>
     
 
@@ -207,6 +205,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_данного_круга">
         <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#число"/>
         <untitled-ontology-3:равенство rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#5П"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#треугольникAOB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#треугольникAOB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#равносторонний_треугольник"/>
+        <untitled-ontology-3:площадь rdf:resource="http://www.semanticweb.org/roma0/ontologies/2024/4/untitled-ontology-3#площадь_AOB"/>
     </owl:NamedIndividual>
     
 
