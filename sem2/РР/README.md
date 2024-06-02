@@ -98,6 +98,7 @@
 <h2>Дополнение:</h2>
 <h4>Неориентированный граф</h4>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/neo.png?raw=true"></image>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/neo2.png?raw=true"></image>
 <h2>Примеры:</h2>
 <h4>Пример 1</h4>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/pr1.png?raw=true"></image>
