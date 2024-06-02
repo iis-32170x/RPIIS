@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9/"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-9="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#в_присутствии -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#в_присутствии">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#конденсировался_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#конденсировался_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#обнаружил_что_в_ходе -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#обнаружил_что_в_ходе">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#образование -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#образование">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#один_из_компонентов -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#один_из_компонентов">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#получается_из -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#получается_из">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#присутствует_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#присутствует_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#провел_сравнительное_исследование -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#провел_сравнительное_исследование">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#равенство -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#равенство">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#синтезировал -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#синтезировал">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#угол_вращения_которого_отличается_от -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#угол_вращения_которого_отличается_от">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#открыта_в -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#открыта_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#синтезирована_в -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#синтезирована_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>альдегид</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry">
+        <rdfs:label>вещества</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ddd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ddd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>смесь_сахаров</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#period -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#period">
+        <rdfs:label>год</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sciencist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sciencist">
+        <rdfs:label>учёный</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugar_fermention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugar_fermention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>брожение сахара</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>сахары</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкое_состояние -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкое_состояние">
+        <rdfs:label>жидкое_состояние</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкость -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкость">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкое_состояние"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ррр -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ррр">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>катализаторы</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#chemistry"/>
+        <rdfs:label>химическое_соединение</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ba_O_H -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ba_O_H">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ррр"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ca_O_H -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ca_O_H">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ррр"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Бутлеров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Бутлеров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sciencist"/>
+        <untitled-ontology-9:синтезировал rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Дюбрюнфо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Дюбрюнфо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sciencist"/>
+        <untitled-ontology-9:обнаружил_что_в_ходе rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#молочное_брожение"/>
+        <untitled-ontology-9:провел_сравнительное_исследование rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#фруктоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#глюкоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#глюкоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#молочное_брожение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#молочное_брожение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugar_fermention"/>
+        <untitled-ontology-9:образование rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ферментационная_жидкость"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#муравьиный_альдегид -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#муравьиный_альдегид">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid"/>
+        <untitled-ontology-9:равенство rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формальдегид"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#сахар -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#сахар">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение"/>
+        <untitled-ontology-9:присутствует_в rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ферментационная_жидкость"/>
+        <untitled-ontology-9:угол_вращения_которого_отличается_от rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#глюкоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#сахароза_сахарного_тростника -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#сахароза_сахарного_тростника">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#спиртовое_брожение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#спиртовое_брожение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#sugar_fermention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ферментационная_жидкость -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ферментационная_жидкость">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#жидкость"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формальдегид -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формальдегид">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#aldegid"/>
+        <untitled-ontology-9:конденсировался_в rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формоза"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#ddd"/>
+        <untitled-ontology-9:в_присутствии rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ba_O_H"/>
+        <untitled-ontology-9:в_присутствии rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#Ca_O_H"/>
+        <untitled-ontology-9:синтезирована_в rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1861</untitled-ontology-9:синтезирована_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#фруктоза -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#фруктоза">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#химическое_соединение"/>
+        <untitled-ontology-9:один_из_компонентов rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#формоза"/>
+        <untitled-ontology-9:получается_из rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#молочное_брожение"/>
+        <untitled-ontology-9:получается_из rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#спиртовое_брожение"/>
+        <untitled-ontology-9:открыта_в rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1847</untitled-ontology-9:открыта_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#1847 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#1847">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#period"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#1861 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#1861">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-9#period"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
