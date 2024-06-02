@@ -12,17 +12,17 @@
 
 `Граф` — математическая абстракция реальной системы любой природы, объекты которой обладают парными связями.
 
-![image](UsualGraph.png)
+![image](terms/UsualGraph.png)
 ***
 
 `Неориентированный граф` —  это математическая структура, представляющая собой набор вершин и рёбер, где рёбра не имеют направления.
 
-![image](NonOrientedGraph.png)
+![image](terms/NonOrientedGraph.png)
 ***
 
 `Каркасом` графа называется связный подграф этого графа, содержащий все вершины графа и не имеющий циклов. Количество ребер в каркасе связного графа всегда на единицу меньше количества вершин графа.
 
-![image](GraphFrame.png)
+![image](terms/GraphFrame.png)
 ***
 
 ### Алгоритм решения
@@ -50,107 +50,107 @@
 
 
 ##### Переменная `graph` получает в качестве значения sc-узел неориентированного графа
-![image](RR1.png)
+![image](algorithm/RR1.png)
 ***
 
 ##### Переменная `not_checked_vertexes` получит в качестве значения множество непроверенных вершин обрабатываемого графа
-![image](RR2.png)
+![image](algorithm/RR2.png)
 ***
 
 ##### Создаём счётчик `number_of_edges`
-![image](RR3.png)
+![image](algorithm/RR3.png)
 ***
 
 ##### Создание волны, включающей вершину *1*
-![image](RR4.png)
+![image](algorithm/RR4.png)
 ***
 
 ##### Создание волны, включающей вершину *3*
-![image](RR5.png)
+![image](algorithm/RR5.png)
 ***
 
 ##### Создание волны, включающей вершину *2*
-![image](RR6.png)
+![image](algorithm/RR6.png)
 ***
 
 ##### Создание волны, включающей вершину *8*
-![image](RR7.png)
+![image](algorithm/RR7.png)
 ***
 
 ##### Создание волны, включающей вершину *6*
-![image](RR8.png)
+![image](algorithm/RR8.png)
 ***
 
 ##### Создание волны, включающей вершину *7*
-![image](RR9.png)
+![image](algorithm/RR9.png)
 ***
 
 ##### Создание волны, включающей вершину *4*
-![image](RR10.png)
+![image](algorithm/RR10.png)
 ***
 
 ##### Создание волны, включающей вершину *5*
-![image](RR11.png)
+![image](algorithm/RR11.png)
 ***
 
 ##### Создание волны, включающей вершину *9*
-![image](RR12.png)
+![image](algorithm/RR12.png)
 ***
 
 ##### Создание волны, включающей вершину *10*, и удаление множества непосещённых вершин
-![image](RR13.png)
+![image](algorithm/RR13.png)
 ***
 
 ##### Создание связки отношения `Путь`
-![image](RR14.png)
+![image](algorithm/RR14.png)
 ***
 
 ##### Добавление в структуру пути начальной вершины
-![image](RR15.png)
+![image](algorithm/RR15.png)
 ***
 
 ##### Установка переменных `curr_wave`, `list_it` и `curr_vertex` для первой итерации цикла генерации структуры пути
-![image](RR16.png)
+![image](algorithm/RR16.png)
 ***
 
 ##### Добавление вершины в структуру пути
-![image](RR17.png)
+![image](algorithm/RR17.png)
 ***
 
 ##### Переход ко 2-ой итерации цикла генерации структуры пути
-![image](RR18.png)
+![image](algorithm/RR18.png)
 ***
 
 ##### Переход ко 3-ей итерации цикла генерации структуры пути
-![image](RR19.png)
+![image](algorithm/RR19.png)
 ***
 
 ##### Переход ко 4-ой итерации цикла генерации структуры пути
-![image](RR20.png)
+![image](algorithm/RR20.png)
 ***
 
 ##### Переход ко 5-ой итерации цикла генерации структуры пути
-![image](RR21.png)
+![image](algorithm/RR21.png)
 ***
 
 ##### Переход ко 6-ой итерации цикла генерации структуры пути
-![image](RR22.png)
+![image](algorithm/RR22.png)
 ***
 
 ##### Переход ко 7-ой итерации цикла генерации структуры пути
-![image](RR23.png)
+![image](algorithm/RR23.png)
 ***
 
 ##### Переход ко 8-ой итерации цикла генерации структуры пути
-![image](RR24.png)
+![image](algorithm/RR24.png)
 ***
 
 ##### Переход ко 9-ой итерации цикла генерации структуры пути и удаление списка волн
-![image](RR25.png)
+![image](algorithm/RR25.png)
 ***
 
 ##### Результат работы алгоритма
-![image](RR26.png)
+![image](algorithm/RR26.png)
 ***
 
 
@@ -159,51 +159,69 @@
 #### Тест №1
 
 ##### Входные данные
-![image](test_1_input.png)
+![image](tests/test_1_input.png)
 
 
 ##### Выходные данные
-![image](test_1_output.png)
+![image](tests/test_1_output.png)
 ***
 
 #### Тест №2
 
 ##### Входные данные
-![image](test_2_input.png)
+![image](tests/test_2_input.png)
 
 
 ##### Выходные данные
-![image](test_2_output.png)
+![image](tests/test_2_output.png)
 ***
 
 #### Тест №3
 
 ##### Входные данные
-![image](test_3_input.png)
+![image](tests/test_3_input.png)
 
 
 ##### Выходные данные
-![image](test_3_output.png)
+![image](tests/test_3_output.png)
 ***
 
 #### Тест №4
 
 ##### Входные данные
-![image](test_4_input.png)
+![image](tests/test_4_input.png)
 
 
 ##### Выходные данные
-![image](test_4_output.png)
+![image](tests/test_4_output.png)
 ***
 
 #### Тест №5
 
 ##### Входные данные
-![image](test_5_input.png)
+![image](tests/test_5_input.png)
 
 
 ##### Выходные данные
-![image](test_5_output.png)
+![image](tests/test_5_output.png)
+***
+
+
+### Понятия погруженные в базу знаний интеллектуальной системы на основе Технологии OSTIS.
+
+##### Граф
+![image](terms/UsualGraphOSTIS.jpg)
+***
+
+##### Неориентированный граф
+![image](terms/NonOrientedGraphOSTIS.jpg)
+***
+
+##### Каркас графа
+![image](terms/GraphFrameOSTIS-0.jpg)
+![image](terms/GraphFrameOSTIS-1.jpg)
+![image](terms/GraphFrameOSTIS-2.jpg)
+![image](terms/GraphFrameOSTIS-3.jpg)
 ***
 
 ### Вывод
