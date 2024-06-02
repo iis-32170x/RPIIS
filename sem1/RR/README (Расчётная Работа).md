@@ -1,6 +1,6 @@
 ## Расчётная работа
 
-cpp`
+```cpp
 #include <iostream>
 #include <vector>
 #include <fstream>
