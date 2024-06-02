@@ -36,3 +36,72 @@
 <li>Создаем _graph_3, который в качестве начального значения скопирует значения графа 1;</li>
 </ul>
 <hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/4.png?raw=true"></image>
+<ul>
+<li>На этом этапе программа создает две первые волны из списка волн дял графов 1 и 2. Первая волна содержит только начальную вершину пути A . Переменные _new_wave_1 и _new_wave_2 получат в качестве значения созданную волну, и в будущем будут всегда указывать на вновь созданные волны.</li>
+<li>Переменная _waves_list_head_1 и _waves_list_head_2 указывают на начальный элемент списка волн соответствующих графов, а переменная _waves_list_tail_1 и _waves_list_tail_2 сейчас и в последующих шагах – на концевой элемент списка волн соответствующих графов.</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/5.png?raw=true"></image>
+<ul>
+  <li>На данном этапе мы стравниваем две вершины созданных волн(Так как они обе A), но не найдя дополнительных ребер в графе 2 ничего не добавляем и создаем следующую волну для графа 2 со следующей непосещенной вершиной, так как у вершина A в графе 2 нет смежных вершин</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/6.png?raw=true"></image>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/7.png?raw=true"></image>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/8.png?raw=true"></image>
+<ul>
+  <li>Создаем новые волны ища вершину в графе 1 равну вершине 2 волны графа 2</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/9.png?raw=true"></image>
+<ul>
+  <li>Найдя нужную вершину сравниваем ее с вершиной графа 2 на наличие в графе 2 ребер связанных с этой вершиной, которых нет в графе 1. После чего добавляем эти недостающие ребра этой вершине в результирующем графе. А дальше создаем следующую волну на непосещенной вершине графа 2 смежной с вершиной D </li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/10.png?raw=true"></image>
+<ul>
+  <li>Очищаем волны в графе 1 и добавляем все вершины графа 1 обратно во множество непосещенных вершин</li>
+  <li>Создаем новые волны в графе один и ищем вершину равную вершине 3 волны графа 2</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/11.png?raw=true"></image>
+<ul>
+  <li>Сравниваем вершины двух графов и добавляем недостающие ребра из графа 2 в результирующий граф. Переходим к следующей смежной вершине в графе 2.</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/12.png?raw=true"></image>
+<ul>
+  <li>Опять очищаем волны в графе 1 и производим поиск вершины в графе 1 равной врешине текущей волны из графа 2.</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/13.png?raw=true"></image>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/14.png?raw=true"></image>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/15.png?raw=true"></image>
+<ul>
+  <li>Продолжаем поиск вершины. Дойдя до вершины D у нас не осталось смежных ребер, но есть вершина во множестве не посещенных вершин графа 1, поэтому переходим к ней.</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/16.png?raw=true"></image>
+<ul>
+  <li>Это оказалась нужная нам вершина, пожтому сравниваем и добавляем недостающие ребра из графа 2 в результирующий граф.</li>
+</ul>
+<hr>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/17.png?raw=true"></image>
+<ul>
+  <li>Непосещенные вершины в графе 2 закончились, поэтому чистим память, удалив множество непосещенных вершин и удаляем волны.</li>
+  <li>Выводим результирующий граф.</li>
+  <li>Завершаем программу</li>
+</ul>
+<h2>Вывод:</h2>
+<h4>Формализовал алгоритм объединения множества неориентированных графов.</h4>
+<h2>Дополнение:</h2>
+<h4>Неориентированный граф</h4>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/neo.png?raw=true"></image>
+<h2>Примеры:</h2>
+<h4>Пример 1</h4>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/pr1.png?raw=true"></image>
+<h4>Пример 2</h4>
+<image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/pr2.png?raw=true"></image>
+
+
