@@ -33,7 +33,7 @@
 <hr>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/3.png?raw=true"></image>
 <ul>
-<li>Создаем _graph_3, который в качестве начального значения скопирует значения графа 1;</li>
+<li>_graph_3 получит в качестве значения скопирует sc-узел первого неориентированного графа;</li>
 </ul>
 <hr>
 <image src="https://github.com/iis-32170x/RPIIS/blob/%D0%9A%D1%83%D1%87%D1%83%D0%BA_%D0%A2/sem2/%D0%A0%D0%A0/image/4.png?raw=true"></image>
