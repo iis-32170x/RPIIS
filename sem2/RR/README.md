@@ -33,7 +33,8 @@
 
 
 2. Программа начинает обход по вершинам, начиная с первой заданной пользователем(предположим А)
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/3a758f43-cc66-49e6-94b4-05c54a8c8dbb)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/123ef147-a0f1-46c7-ab6c-d05dd575a034)
+
 
 3. Начинаем обход с вершины A, заносим ее в список visited.
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/77a86907-5913-4659-bee7-1440bcfe5b5f)
