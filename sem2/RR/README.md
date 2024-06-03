@@ -37,7 +37,8 @@
 
 
 3. Начинаем обход с вершины A, заносим ее в список visited.
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/77a86907-5913-4659-bee7-1440bcfe5b5f)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/023db1e6-0c4a-4e6b-906e-516802158633)
+
 
 
 4. Идем к cмежной непосещенной вершине B, убирая ребро AB и записывая B в список visited.
