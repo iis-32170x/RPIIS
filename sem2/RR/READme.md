@@ -22,6 +22,7 @@
 
 `Множество` — простейшая информационная конструкция и математическая структура,
 позволяющая рассматривать какие-то объекты как целое, связывая их.
+***
 
 `Объединение графов` — операция над графами, в результате которой получается граф, множества вершин и рёбер которого являются объединениями множеств вершин и рёбер исходных графов.
 
@@ -116,7 +117,7 @@
 
 23. Выводим получившееся объединение множества неориентированных графов.
       
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/RRresult.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/93f681bde2e2875d0e8638a18202a83cc2881530/images/RRres.png)
 ***
 
 ### Тестовые примеры
@@ -128,7 +129,7 @@
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test1res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/93f681bde2e2875d0e8638a18202a83cc2881530/images/test1result.png)
 ***
 
 #### Тест №2
@@ -138,7 +139,7 @@
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test2res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/93f681bde2e2875d0e8638a18202a83cc2881530/images/test2result.png)
 ***
 
 #### Тест №3
@@ -148,7 +149,7 @@
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test3res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/93f681bde2e2875d0e8638a18202a83cc2881530/images/test3result.png)
 ***
 
 ### Понятия погруженные в базу знаний интеллектуальной системы на основе Технологии OSTIS.
