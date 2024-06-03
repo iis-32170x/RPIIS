@@ -122,14 +122,17 @@
 
 
 #### Граф  
-
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/33ceeb70-d486-4fc5-9abd-acb60ed73921)
 
 
 #### Неориентированный граф  
 
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/d20f14f8-189d-43fd-ac46-8ea1db39149d)
 
 
 #### Неориентированный взвешенный граф  
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/378489e5-602e-4219-9820-4178a5db42e0)
 
 
 ### Вывод  
