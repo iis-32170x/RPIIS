@@ -35,7 +35,7 @@
 Тестирование проводилось с помощью заготовленных тестов
 
 <p align="center">
-  <img src="" alt="Тесты библиотеки">
+  <img src="https://github.com/iis-32170x/RPIIS/blob/%D0%93%D1%80%D0%B8%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2_%D0%95/sem2/lab2/image.png" alt="Тесты библиотеки">
 </p>
 
 
