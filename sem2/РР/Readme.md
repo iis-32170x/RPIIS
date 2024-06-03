@@ -56,5 +56,13 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/643cba2e-f620-4976-9fb5-42c538ef9761)
 
+## Примеры погрузки в БЗ.
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/7e9f235c-4ea1-4c55-adda-8b954f6878fa)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/dd12b3eb-b1b5-4a75-90c1-2f0c8a9a4d7b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/5cd9908f-3686-42dc-a5f7-63a6ae9d9478)
+
 ## Вывод
 Формализовал алгоритм определения смежности вершины графа. Улучшил навыки работыы с KBE и метасистемой.
