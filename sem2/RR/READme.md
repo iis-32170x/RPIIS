@@ -35,13 +35,13 @@
      
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)  
 
-![image](https://github.com/iis-32170x/RPIIS/blob/38c770fa4621f99ed5e494c9a8752cc29be69794/images/RR2.png)     
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR3.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR2.png)     
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR3.png)
 ***
 
 4. Создаём переменную `not_checked_v`, где будут храниться непосещённые вершины, и `_checked_v`, где будут храниться посещённые вершины.
          
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR4.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR4.png)
 ***
 
 5. Создаём волну в произвольной вершине и добавляем её в список волн, исключая вершину из множества непосещённых вершин.
@@ -53,9 +53,9 @@
 
     8.2. Если это волна включает вершину, из которой можно перейти к смежной непосещённой вершине, то переходим к пункту (6), если нет - к пункту (8.1).
           
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR5.png)  
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR6.png)      
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR7.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR5.png)  
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR6.png)      
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR7.png)
 ***
 
 9.  Из графа `_graph_2` берём начальную вершину обхода (в данном случаем вершина B).
@@ -68,8 +68,8 @@
 11. Если в графе `_gragh_2` остались ещё вершины, которые не сравнивались,то берём следующую такую и переходим к пункту 10.
 12. Если в графе `_gragh_2` не осталось вершин, которые не сравнивались,то переходим к пункту 13.
       
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR8.png)
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR9.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR8.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR9.png)
 ***
 Объединение всех вершин множества неориентированных графов `_graph_1` и `_graph_2`
 ![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR10.png)
@@ -77,22 +77,22 @@
 
 13. Переносим все рёбра графа `_graph_1`.
     
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR11.png)
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR12.png)
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR13.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR11.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR12.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR13.png)
 ***
 
 14. Создаём переменную `not_checked_e`, где будут храниться непосещённые рёбра, и `_checked_е`, где будут храниться посещённые рёбра.
          
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR14.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR14.png)
 ***
 
 15. Создаём волну в произвольном ребре и добавляем его в список волн, исключая ребро из множества непосещённых рёбер.
 16. Пока это возможно, создаём следующую волну на следующем непосещённом ребре, удаляя его из множества непосещённых рёбер. 
           
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR15.png)   
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR16.png)
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR17.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR15.png)   
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR16.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR17.png)
 ***
 
 17.  Из графа `_graph_2` берём начальное ребро обхода (в данном случаем вершина BА).
@@ -105,7 +105,7 @@
 19. Если в графе `_gragh_2` остались ещё рёбра, которые не сравнивались,то берём следующее такое и переходим к пункту (18).
 20. Если в графе `_gragh_2` не осталось рёбер, которые не сравнивались,то переходим к пункту (21).
       
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR19.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR19.png)
 ***
 
 21. Если есть ещё неориентированный граф в исходном множестве,то переходим к этому графу и переходим к пункту (4).
