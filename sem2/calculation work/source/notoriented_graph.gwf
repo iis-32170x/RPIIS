@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/general" idtf="A" shapeColor="0" id="104392425356432" parent="104392418926624" left="0" top="0" right="22.0469" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="361.233" y="353.928" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="C" shapeColor="0" id="104392424642224" parent="104392418926624" left="0" top="0" right="20.5313" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="418.864" y="212.246" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="B" shapeColor="0" id="104392418595760" parent="104392418926624" left="0" top="0" right="20.9063" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="455.694" y="297.834" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="D" shapeColor="0" id="104392426970240" parent="104392418926624" left="0" top="0" right="22.7813" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="574.207" y="196.073" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="E" shapeColor="0" id="104392419131984" parent="104392418926624" left="0" top="0" right="19.875" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="669.122" y="334.381" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/const/-/perm/noorien" idtf="" shapeColor="0" id="104392429680128" parent="104392418926624" id_b="104392425356432" id_e="104392418595760" b_x="361.233" b_y="353.928" e_x="455.694" e_y="297.834" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/-/perm/noorien" idtf="" shapeColor="0" id="104392430420752" parent="104392418926624" id_b="104392418595760" id_e="104392424642224" b_x="455.694" b_y="297.834" e_x="418.864" e_y="212.246" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/-/perm/noorien" idtf="" shapeColor="0" id="104392418517488" parent="104392418926624" id_b="104392426970240" id_e="104392419131984" b_x="574.207" b_y="196.073" e_x="669.122" e_y="334.381" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <contour type="contour/const/perm" idtf="" shapeColor="0" id="104392418926624" parent="0">
+            <points>
+                <point x="245.679" y="102.379"/>
+                <point x="783.951" y="104.231"/>
+                <point x="746.914" y="506.7"/>
+                <point x="235.802" y="494.972"/>
+                <point x="174.074" y="310.404"/>
+            </points>
+        </contour>
+        <node type="node/const/perm/group" idtf="неориентированный граф" shapeColor="0" id="104392425607584" parent="0" left="0" top="0" right="207.734" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="26.4901" y="417.881" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="104392429597344" parent="0" id_b="104392425607584" id_e="104392418926624" b_x="26.4901" b_y="417.881" e_x="479.012" e_y="304.539" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+    </staticSector>
+</GWF>
