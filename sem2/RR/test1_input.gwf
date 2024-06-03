@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GWF version="2.0">
     <staticSector>
-        <node type="node/const/perm/general" idtf="C" shapeColor="193" id="2825707149728" parent="2825706768368" left="0" top="0" right="18" bottom="24" textColor="244" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="542.5" y="300.5" haveBus="false" idtf_pos="0">
+        <node type="node/const/perm/general" idtf="C" shapeColor="0" id="2840905006320" parent="2840903353856" left="0" top="0" right="18" bottom="24" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="542.5" y="300.5" haveBus="false" idtf_pos="0">
             <content type="0" mime_type="" content_visibility="false" file_name=""/>
         </node>
-        <node type="node/const/perm/general" idtf="B" shapeColor="193" id="2825707145152" parent="2825706768368" left="0" top="0" right="18" bottom="24" textColor="244" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="350.5" y="300.5" haveBus="false" idtf_pos="0">
+        <node type="node/const/perm/general" idtf="B" shapeColor="0" id="2840906680112" parent="2840903353856" left="0" top="0" right="18" bottom="24" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="350.5" y="300.5" haveBus="false" idtf_pos="0">
             <content type="0" mime_type="" content_visibility="false" file_name=""/>
         </node>
-        <pair type="pair/const/-/perm/noorien" idtf="" shapeColor="193" id="2825709398592" parent="2825706768368" id_b="2825707145152" id_e="2825707149728" b_x="350.5" b_y="300.5" e_x="542.5" e_y="300.5" dotBBalance="0" dotEBalance="0">
+        <pair type="pair/const/-/perm/noorien" idtf="" shapeColor="0" id="2840903480608" parent="2840903353856" id_b="2840906680112" id_e="2840905006320" b_x="350.5" b_y="300.5" e_x="542.5" e_y="300.5" dotBBalance="0" dotEBalance="0">
             <points/>
         </pair>
-        <contour type="contour/const/perm" idtf="" shapeColor="193" id="2825706768368" parent="0">
+        <contour type="contour/const/perm" idtf="" shapeColor="0" id="2840903353856" parent="0">
             <points>
                 <point x="230.5" y="228.5"/>
                 <point x="230.5" y="393.5"/>
@@ -18,5 +18,23 @@
                 <point x="680.5" y="228.5"/>
             </points>
         </contour>
+        <node type="node/const/perm/group" idtf="unoriented_graph" shapeColor="0" id="2840972896896" parent="0" left="0" top="0" right="129" bottom="24" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="249" y="117" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/relation" idtf="vlaue*" shapeColor="0" id="2840972894608" parent="0" left="0" top="0" right="52" bottom="24" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="130" y="124" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/var/perm/general" idtf="_a.txt" shapeColor="0" id="2840972898352" parent="0" left="0" top="0" right="44" bottom="24" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="29" y="191" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <pair type="pair/const/-/perm/orient" idtf="" shapeColor="0" id="2840905177440" parent="0" id_b="2840972898352" id_e="2840903353856" b_x="29" b_y="191" e_x="455.5" e_y="311" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2840905175040" parent="0" id_b="2840972894608" id_e="2840905177440" b_x="130" b_y="124" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.353965">
+            <points/>
+        </pair>
+        <pair type="pair/const/pos/perm/orient/membership" idtf="" shapeColor="0" id="2840905177200" parent="0" id_b="2840972896896" id_e="2840903353856" b_x="249" b_y="117" e_x="455.5" e_y="311" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </pair>
     </staticSector>
 </GWF>
