@@ -41,7 +41,7 @@
 
 4. Создаём переменную `not_checked_v`, где будут храниться непосещённые вершины, и `_checked_v`, где будут храниться посещённые вершины.
          
-![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR4.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/d40e5881155c5d4fd5dfc6ccbc7fcacc4e9a03ee/images/RR44.png)
 ***
 
 5. Создаём волну в произвольной вершине и добавляем её в список волн, исключая вершину из множества непосещённых вершин.
@@ -152,11 +152,11 @@
 ### Понятия погруженные в базу знаний интеллектуальной системы на основе Технологии OSTIS.
 
 ##### Граф
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/UsualGraphOSTIS.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/d40e5881155c5d4fd5dfc6ccbc7fcacc4e9a03ee/images/ostis1.jpg)
 ***
 
 ##### Неориентированный граф
-![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/NonOrientedGraphOSTIS.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/d40e5881155c5d4fd5dfc6ccbc7fcacc4e9a03ee/images/ostis2.jpg)
 ***
 
 ### Вывод
