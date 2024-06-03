@@ -32,11 +32,10 @@ AEB относится к классу треугольников, которы�
 ---
 
 Формализация текста на SCg коде в редакторе KBE:
-![alt text](media/image-6.png)
-Описание доменов отношений:
-![alt text](media/image-7.png)
-Иерархия классов:
-![alt text](media/image-8.png)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/9c363465-cff1-40cd-adb9-b2c2d3fa41dc)
+
 ## 2-ая часть задания: формализация математического выражения (вариант №15):
-![alt text](media/image-9.png)
-![image](https://github.com/iis-32170x/RPIIS/assets/66639629/2a5a66a9-d449-49ff-894f-aee16c168ac4)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/75840e34-2fab-4efb-93be-fe49f76efd13)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/b6d63673-bfbc-4d46-b25e-fa17ef3a757f)
+
