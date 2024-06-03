@@ -129,6 +129,19 @@
  ---
  ![Img29](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/РР/Images/r29.png)
  ---
+ ## Дополнение
+Ориентированный граф
 
+![Img29](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/РР/Images/rr1.png)
+---
+Компонента сильной связности
+
+![Img29](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/РР/Images/rr2.png)
+---
+Граф конденсации
+
+![Img29](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/РР/Images/rr3.png)
+## Тест1 
+![Img29](https://github.com/iis-32170x/RPIIS/blob/Войшнис_Г/Sem2/РР/Images/rr4.png)
 ## Вывод
 Формализовал один из алгоритмов работы с графами.
