@@ -44,8 +44,7 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/a5f0a4a8-134f-4da9-a14f-4787c2fc0d3e)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c0674921-122c-49c7-a5ab-fdcf36fff67e)
-
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/879bca90-9768-41b3-8625-faf95f41420d)
 
 ## Формализованные понятия.
 ### Ориентированный граф
