@@ -55,28 +55,11 @@
 ![7](steps/9.png)
 ![7](steps/10.png)
 ![7](steps/11.png)
+
+8. Обойдя все ребра, подсчитывает количество, которое нужно удалить по формуле M - vis + k.
+
 ![7](steps/12.png)
 
-### Примеры работы (вход/выход)
-Пример 1.
-
-![1example](examples/ex1.png)
-
-Пример 2.
-
-![2example](examples/ex2.png)
-
-Пример 3.
-
-![3example](examples/ex3.png)
-
-Пример 4.
-
-![4example](examples/ex4.png)
-
-Пример 5.
-
-![5example](examples/ex1.png)
 
 ### Результат погружения в метасистему OSTIS
 
@@ -84,24 +67,6 @@
 
 ![1meta](metasystem/1met.png)
 
-2. Существует 5 примеров.
 
-![2meta](metasystem/2met.png)
-
-3. У каждого примера есть граф вход и выход. Рассмотрим один из примеров.
-
-![3meta](metasystem/3met.png)
-
-4. Вход.
-
-![4meta](metasystem/4met.png)
-
-5. Выход.
-   
-![5meta](metasystem/5met.png)
-
-6. Также погружен алгоритм выполнения РР, который оформлен также.
-
-![6meta](metasystem/6met.png)
 
 7. Присутствует понятие неориентированный граф.
