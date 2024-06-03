@@ -12,68 +12,84 @@
 
 *Неориентированный граф*  — граф, рёбра которого направления не имеют.
 
-*Список смежности* – один из способов представления графа в виде коллекции списков вершин. Каждой вершине графа соответствует список, состоящий из «соседей» этой вершины.
+*Матрица инцедентности* - одна из форм представления графа, в которой указываются связи между инцидентными элементами графа (ребро(дуга) и вершина).
 
 *Компонента связности* - набор вершин графа, между любой парой которых существует путь.
 
 ## Выполнение задания
 ### Фрагмент онтологии
-![1](https://github.com/iis-32170x/RPIIS/assets/144374775/5e80d538-fbc6-411f-8259-007fac20051d)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/0e75bde5-c718-4d9c-8174-8226bd64a74f)
+
 
 
 ### Демонстрация работы программы в семантической памяти
 1. Задаём граф, задаём одну начальную вершину. 
-![2 gwf - KBE version 0 4 0  (integrator) 28 05 2024 14_03_24](https://github.com/iis-32170x/RPIIS/assets/144374775/dac0bff4-134c-44fe-9830-f2a111a44dfa)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a67765a3-f9ed-439e-8be8-ecaa1530caea)
+
 
 
 2. Создаём переменную `_visited`, указывающую на посещённую вершину графа и переменную `_subgraph`.
-![4 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_44_09](https://github.com/iis-32170x/RPIIS/assets/144374775/261e22c5-929f-425d-981e-b2fa4966f7c2)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/f3c82703-d9a7-4c95-a134-767666d8d831)
+
 
 3. Создаём переменную `added_edges`. Добавляем рёбра, инцедентные начальной вершине, в переменную `added_edges`. Добавляем все вершины, инцедентные с добавленными ребрами, в переменную в `_visited`.
-![5 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_50_01](https://github.com/iis-32170x/RPIIS/assets/144374775/026e6fed-2aba-4bae-a075-10b3f895435a)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a8129bca-622d-43c0-85f7-0986ea9ae43e)
+
 
 
 4. Переходим к следующей вершине, которая имеет хотя бы одно, инцедентное с ней рёбро, уже добавленное в `added_edges`. Добавляем все остальные её рёбра в `added_edges` и все вершины, инцедентные с этими рёбрами в `_visited`, если они раньше не были добавлены. Если нет вершины, которая имеет хотя бы одно, инцедентное с ней рёбро, уже добавленное в `added_edge`, то создаём подграф в переменной `_subgraph` из вершин `_visited` и рёбер `added_edges` и очищаем эти переменные. Переходим к следующей вершине и считаем её как новую стартовую, добавляем её в `_visited` Добавляем рёбра, инцедентные начальной вершине, в переменную added_edges. Добавляем все вершины, инцедентные с добавленными ребрами, в переменную в `_visited`.
-![6 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_50_35](https://github.com/iis-32170x/RPIIS/assets/144374775/747df6ef-6a9d-4b2d-a2d5-dc8660e30a39)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/8395ea8e-8fff-485b-a357-307c7601f3e7)
+
 
 
 5. Повторяем, пока не будут добавлены все вершины и рёбра
-![7 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_51_10](https://github.com/iis-32170x/RPIIS/assets/144374775/b7bfc95b-cdc3-43b3-9875-c845cc9f7cf7)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/2707f294-f44b-4c33-b966-23d2a4fb9d37)
 
-![9 gwf - KBE version 0 4 0  (integrator) 31 05 2024 09_51_40](https://github.com/iis-32170x/RPIIS/assets/144374775/ec2b82df-ea8e-4c41-8e02-e93540977a35)
 
 6. Выводим все подграфы `_subgraph`
-![10 gwf - KBE version 0 4 0  (integrator) 23 05 2024 10_07_11](https://github.com/iis-32170x/RPIIS/assets/144374775/8179aff1-d751-4166-b197-4fcf49dabc3a)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/17bead9b-43be-4344-ac7f-73ad3fb6a85e)
+
 
 - Формализация понятий
-	![понятия gwf - KBE version 0 4 0  (integrator) 28 05 2024 10_15_53](https://github.com/iis-32170x/RPIIS/assets/144374775/48ccaaef-5005-43eb-a8b1-0593463b890d)
+	![Снимок экрана от 2024-06-03 11-27-32](https://github.com/iis-32170x/RPIIS/assets/147256759/867032df-5710-4273-ae8a-c928be500a2c)
+
 
 
 ## Примеры:
 1.
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_24_12](https://github.com/iis-32170x/RPIIS/assets/144374775/80bb93c0-3ec9-43ee-9442-86fd4b9cb969)
+![пример1](https://github.com/iis-32170x/RPIIS/assets/147256759/56d17e5c-c54b-411e-94ee-47a1b49ef700)
+
    
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_01](https://github.com/iis-32170x/RPIIS/assets/144374775/1db33c09-f1ad-4984-94c1-60741e636fa2)
+![пример1_результат](https://github.com/iis-32170x/RPIIS/assets/147256759/a7c8aaf4-f04d-4aee-9d3a-a32417f8be9a)
+
    
 2.
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_20](https://github.com/iis-32170x/RPIIS/assets/144374775/8d3bb1a2-08e4-4de4-bc4c-da979ae70fe7)
+![пример2](https://github.com/iis-32170x/RPIIS/assets/147256759/f5dae1b1-1874-48a7-8d09-26ce53f8ebe6)
 
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_25_27](https://github.com/iis-32170x/RPIIS/assets/144374775/a90b6099-c7e5-4739-9e06-4d35f84dad4a)
+
+![пример2_результат](https://github.com/iis-32170x/RPIIS/assets/147256759/d97b5e20-ec49-42b0-a58c-055ac1605f4a)
+
 
 3. 
-![Ubuntu  Работает  - Oracle VM VirtualBox 28 05 2024 14_58_57](https://github.com/iis-32170x/RPIIS/assets/144374775/bac8d62b-a929-4595-812d-2a70ed12a4dd)
+![пример3](https://github.com/iis-32170x/RPIIS/assets/147256759/5d2df2e8-4cf6-41d0-bf1c-688e21667288)
 
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_13](https://github.com/iis-32170x/RPIIS/assets/144374775/b9029881-1e3a-45c5-adb8-2e4bca1a59aa)
+
+![пример3_результат](https://github.com/iis-32170x/RPIIS/assets/147256759/e7f9fd90-3884-44b2-a71c-953bdbeebc52)
+
 
 4.
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_26](https://github.com/iis-32170x/RPIIS/assets/144374775/82afc932-1451-4571-ab96-77596d0a6d0b)
+![пример4](https://github.com/iis-32170x/RPIIS/assets/147256759/8bf4faeb-a207-4557-a171-fe62609cb452)
 
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_37](https://github.com/iis-32170x/RPIIS/assets/144374775/08000a20-2152-47c7-88c8-4ed55ba0e25e)
+
+![пример4_результат](https://github.com/iis-32170x/RPIIS/assets/147256759/b0da39c1-24c9-4a4e-8975-f946e7b68c6e)
+
 
 5.
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_47](https://github.com/iis-32170x/RPIIS/assets/144374775/f36224e6-e591-4b43-9a61-af1d09345028)
+![пример5](https://github.com/iis-32170x/RPIIS/assets/147256759/ad3f6243-a89a-4b72-bba7-e8ae582cc479)
 
-![Ubuntu  Работает  - Oracle VM VirtualBox 27 05 2024 16_28_58](https://github.com/iis-32170x/RPIIS/assets/144374775/32d989a0-1d1e-4367-9bbf-c21bba659c53)
+
+![пример5_результат](https://github.com/iis-32170x/RPIIS/assets/147256759/49370d19-695e-48f9-b389-3dc6a9365059)
+
 
 # Вывод
 Был построен фрагмент онтологии, продемонстрирована работа программы решения теоретико-графовой задачи по нахождению компонент связности в неориентированном графе в семантической памяти.
