@@ -28,12 +28,12 @@
 
 1. Создаём множество неориентированных графов (в данном случае множество состоит из двух неориентированных графов `_gragh_1` и `_gragh_2`).
       
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/RR.png)
 ***
 
 2. Создаём пустой `_gragh_3`, который будет отражать результат объединения множества неориентированных графов. В него сразу переносим все вершины графа `_gragh_1`.
      
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR1.png)  
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/RR1.png)  
 
 ![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR2.png)     
 ![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR3.png)
@@ -72,7 +72,7 @@
 ![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR9.png)
 ***
 Объединение всех вершин множества неориентированных графов `_graph_1` и `_graph_2`
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RR10.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/bf7f1dfbc6def2260f6418b8b9b922a53cf56556/images/RR10.png)
 ***
 
 13. Переносим все рёбра графа `_graph_1`.
@@ -114,7 +114,7 @@
 
 23. Выводим получившееся объединение множества неориентированных графов.
       
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/RRresult.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/RRresult.png)
 ***
 
 ### Тестовые примеры
@@ -122,41 +122,41 @@
 #### Тест №1
 
 ##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test1.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test1.png)
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test1res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test1res.png)
 ***
 
 #### Тест №2
 
 ##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test2.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test2.png)
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test2res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test2res.png)
 ***
 
 #### Тест №3
 
 ##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test3.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test3.png)
 
 
 ##### Выходные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/test3res.png)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/test3res.png)
 ***
 
 ### Понятия погруженные в базу знаний интеллектуальной системы на основе Технологии OSTIS.
 
 ##### Граф
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/UsualGraphOSTIS.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/UsualGraphOSTIS.jpg)
 ***
 
 ##### Неориентированный граф
-![image](https://github.com/iis-32170x/RPIIS/blob/d995a1d835d442689442e042789aae0cc76c114f/images/NonOrientedGraphOSTIS.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/4ef4a095c87d3d258b48648c2d0e5ea04339e255/images/NonOrientedGraphOSTIS.jpg)
 ***
 
 ### Вывод
