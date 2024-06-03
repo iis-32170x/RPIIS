@@ -47,14 +47,19 @@
 
 
 5. Повторяем это, пока не доходим до вершины для которой нету смежной. Увеличиваем значение count на 1, т.к найдена компонента связности.
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/7187eed6-ed37-41ee-a6b3-d8fd41276620)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/0b5ee7ec-7eb2-4dfa-9fb3-e0f831bcde6d)
+
 
 
 6. Продолжаем наш алгоритм, переходим к следующей непосещенной вершине и ищем к ней смежные. Когда смежных вершин не остается вновь увеличиваем значение count на 1, в связи с нахождением второй компоненты. 
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/305ca881-4e19-4258-a1d4-1e1516cab614)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/dde23b31-d895-41bf-9ccd-f393817fb822)
+
 
 Формализация понятия "количество компонент связности":
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/cb8a791f-c29d-4925-a13e-535af4966f36)
+Формализацяи понятия "неориентированный граф":
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/0a05ead9-85a0-4486-a262-4fe6f790ac6c)
+
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/e54b17bd-bb97-4a1a-93fb-77108238dc9c)
 
