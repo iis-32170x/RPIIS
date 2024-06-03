@@ -163,7 +163,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#Корцитивная_сила"/>
             </owl:Restriction>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -172,7 +172,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#Величина_силы_тока">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -371,7 +371,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#Электрический_ток"/>
             </owl:Restriction>
         </rdf:type>
-        <untitled-ontology-4:Величина_силы_тока rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</untitled-ontology-4:Величина_силы_тока>
+        <untitled-ontology-4:Величина_силы_тока>3 А</untitled-ontology-4:Величина_силы_тока>
     </owl:NamedIndividual>
     
 
@@ -415,8 +415,8 @@
         <untitled-ontology-4:Имеет_магнитное_поле rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#внутреннее_магнитное_поле"/>
         <untitled-ontology-4:Намотан_витками rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#Провод"/>
         <untitled-ontology-4:форма rdf:resource="http://www.semanticweb.org/artem/ontologies/2024/4/untitled-ontology-4#Тонкий_цилиндр"/>
-        <untitled-ontology-4:Величина_коэрцитивной_силы rdf:datatype="http://www.w3.org/2001/XMLSchema#double"></untitled-ontology-4:Величина_коэрцитивной_силы>
-        <untitled-ontology-4:Длина rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0</untitled-ontology-4:Длина>
+        <untitled-ontology-4:Величина_коэрцитивной_силы>Н</untitled-ontology-4:Величина_коэрцитивной_силы>
+        <untitled-ontology-4:Длина>15 см</untitled-ontology-4:Длина>
     </owl:NamedIndividual>
 </rdf:RDF>
 
