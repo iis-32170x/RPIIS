@@ -20,18 +20,18 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/16a3a7fb-f7bf-4679-8b0d-6cb79737c0be)
 
 3. Записывем смежные вершины по очереди в переменную vertexNeigbourhood.
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/d58b752b-4e61-4c1d-9caa-de47197d96c1)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/6e2400bb-3998-49a2-abc2-50086a84e4a9)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c4f4db6d-67eb-4a39-ac3c-c22fa9d99f47)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/745918c4-ec0e-4648-a2a9-92beca429df7)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9052927-b7e5-4a5c-a982-4d283623a05f)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/19f7020a-591c-4e86-9428-616593285e63)
 
 ## Примеры работы (вход/выход)
 Пример 1.
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/d30997d8-ffbc-41da-aa8f-c39865467e9b)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9052927-b7e5-4a5c-a982-4d283623a05f)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/b208da8b-9b52-4819-b1d6-8ab4de2eb228)
 
 Пример 2.
 
