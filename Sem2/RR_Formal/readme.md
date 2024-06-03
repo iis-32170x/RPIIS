@@ -69,7 +69,7 @@
 
 ### Результат погружения в метасистему OSTIS
 Граф
-<img src="p_ostis.PNG">
+<img src="p_ostis.png">
 
 Неориентированный граф
-<img src="p_ostis1.PNG">
+<img src="p_ostis1.png">
