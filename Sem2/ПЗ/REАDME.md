@@ -14,25 +14,31 @@
 # Формализация в редакторе баз знаний Protégé:
 - Классы
   
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_48_40](https://github.com/iis-32170x/RPIIS/assets/144374775/ca38d144-2a76-4263-a886-2da309c8401e)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/925ef3cb-1884-475c-8edf-810e0a86fcb0)
+
 
 - Отношение объектов
 
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_52_50](https://github.com/iis-32170x/RPIIS/assets/144374775/307a2e26-123c-477b-987e-5944e2a98746)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/ff3c5bd3-52ae-4819-847c-6055a8ba5bcd)
+
 
 - Отношение данных
 
-  ![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_54_01](https://github.com/iis-32170x/RPIIS/assets/144374775/151ace6b-54fe-4ca7-ac5d-021f00c5c62c)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/ca1f519a-a39b-4554-8191-605592e806fc)
+
 
 - Сущности
 
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  06 05 2024 11_33_44](https://github.com/iis-32170x/RPIIS/assets/144374775/ae31b044-4056-4c08-8b9d-e319faed68b5)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a2be33f4-518b-4527-a1e4-256d8963ecd9)
+
 
 # Формализация в редакторе KBE:
 
-![Opel gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_26_43](https://github.com/iis-32170x/RPIIS/assets/144374775/f0285366-89d1-4905-ad8f-17d59c375a64)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/dfde648a-67cb-4436-bf1d-8b066994b41c)
+
 
 ## 2-я Часть: формализация выражения
 # Вариант 14
 
-![Math_12 gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_35_18](https://github.com/iis-32170x/RPIIS/assets/144374775/58d55d86-6cad-4611-ba89-5d0e3edcf953)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/36c0b103-ed76-4073-a11c-b27ac0c0c3bc)
+
