@@ -59,12 +59,22 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ce483dd4-ffd3-4858-91a2-c17aef56f9a7)
 
 #### Второй тест
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/d9fcb4cf-3231-44d1-873c-04fbb84796a6)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/4b75599d-de84-4a8e-a525-9d12b2444cf1)
+
+
 
 #### Третий тест
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/a0b64d79-5704-4a3c-963f-54234d0398a1)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/55d3fd76-d208-4bd6-b294-7191de46da4d)
 
 #### Четвертый тест
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/63d4c743-1d0d-48b8-b6b0-0a7a6ffd22ed)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/8d715a04-4c55-4782-900f-ea6531a23fab)
 
 #### Пятый тест
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/d2918eb4-eb5d-4b27-b160-48994654d0ca)
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/72cd47d3-19a4-44b8-b10d-dd00149909d2)
 
 Формализация понятия "количество компонент связности":
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/cb8a791f-c29d-4925-a13e-535af4966f36)
