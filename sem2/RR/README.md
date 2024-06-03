@@ -24,7 +24,7 @@
 5. Полный алгоритм:
 
 
-![Screenshot 2024-06-01 203847](https://github.com/iis-32170x/RPIIS/assets/144227421/2b2b996c-83de-409d-ac36-7b112db3c8bf)
+![Screenshot 2024-06-03 095312](https://github.com/iis-32170x/RPIIS/assets/144227421/172b7f98-afcb-45ee-bcff-ce07cee03297)
 
 
 
@@ -54,9 +54,7 @@
 
 ## Примеры тестов
 
-![Screenshot 2024-06-01 203939](https://github.com/iis-32170x/RPIIS/assets/144227421/68e7acce-d236-4503-9a85-8fbc7f076017)
+![Screenshot 2024-06-03 095438](https://github.com/iis-32170x/RPIIS/assets/144227421/4b0ceefe-aba8-4ba6-ba5a-df9267326c9d)
 
 
-![Screenshot 2024-06-01 204034](https://github.com/iis-32170x/RPIIS/assets/144227421/7810823a-8548-4561-82d7-4bb4dbb309cd)
-
-
+![Screenshot 2024-06-03 095500](https://github.com/iis-32170x/RPIIS/assets/144227421/3290879b-7b3c-49f7-a5a1-eaf6aa6f1b9d)
