@@ -38,7 +38,8 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/ed4ed12f-f83d-4964-aca7-e89a33248434)
 
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e9051f3d-0bf3-4acf-923c-bd1ccc677665)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c0e0cd0f-9bcb-40bd-b097-dfe55238c68e)
+
 
 Пример 3.
 
