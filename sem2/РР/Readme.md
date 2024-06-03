@@ -44,13 +44,7 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147048129/a5f0a4a8-134f-4da9-a14f-4787c2fc0d3e)
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/e011077d-9d1f-4d63-8038-60bb1f6c11f0)
-
-Пример 4.
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/6a25d4a0-4951-4a53-b195-e02a98c6e45e)
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147048129/7e451f64-792f-4688-b21c-1bddc70e730d)
+![image](https://github.com/iis-32170x/RPIIS/assets/147048129/c0674921-122c-49c7-a5ab-fdcf36fff67e)
 
 
 ## Формализованные понятия.
