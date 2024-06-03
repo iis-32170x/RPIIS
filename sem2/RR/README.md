@@ -98,31 +98,23 @@
 ### Тесты  
 
 
-#### Тест1  
+#### Тест2
 Входные данные  
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/b663eebd-14f7-4706-aeb9-890e53f1f6be)
 
- 
+Выходные данные  
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/4ef85553-cff4-4554-a2ac-5c074d02ccfc)
+
+
+
+#### Тест 3 
+Входные данные  
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/e28d6082-0385-4aff-8c09-13a18cbb7b28)
+
  
 Выходные данные  
 
-
-
-#### Тест2  
-Входные данные  
-
- 
- 
-Выходные данные  
-
-
-
-#### Тест3  
-Входные данные  
-
- 
- 
-Выходные данные  
-
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/9f14a615-90e9-4648-a9df-83b5cb85367b)
 
 
 
