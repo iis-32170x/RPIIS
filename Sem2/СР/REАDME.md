@@ -13,26 +13,31 @@
 
 # Формализация в редакторе баз знаний Protégé:
 - Классы
-  
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_48_40](https://github.com/iis-32170x/RPIIS/assets/144374775/ca38d144-2a76-4263-a886-2da309c8401e)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/147256759/450a73f4-b7a1-4b67-b67e-682fc804e083)
+
 
 - Отношение объектов
 
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_52_50](https://github.com/iis-32170x/RPIIS/assets/144374775/307a2e26-123c-477b-987e-5944e2a98746)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/bbcea757-a514-4dea-bd0f-2da9b710578c)
+
 
 - Отношение данных
 
-  ![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  02 05 2024 18_54_01](https://github.com/iis-32170x/RPIIS/assets/144374775/151ace6b-54fe-4ca7-ac5d-021f00c5c62c)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a8bdd67b-bd6f-4f90-8a5c-72a2e92d0e42)
+
 
 - Сущности
 
-![Opel (http___www semanticweb org_ilyad_ontologies_2024_3_Opel)  _  C__Всячина_БГУИР_ПиОИвИС_Sem_2_СР_Opel rdf  06 05 2024 11_33_44](https://github.com/iis-32170x/RPIIS/assets/144374775/ae31b044-4056-4c08-8b9d-e319faed68b5)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/77453d00-3d22-482c-90e3-524f9e2c043e)
+
 
 # Формализация в редакторе KBE:
 
-![Opel gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_26_43](https://github.com/iis-32170x/RPIIS/assets/144374775/f0285366-89d1-4905-ad8f-17d59c375a64)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/952dc3a7-354a-4aba-8860-83cc7e905302)
+
 
 ## 2-я Часть: формализация выражения
 # Вариант 14
 
-![Math_12 gwf - KBE version 0 3 1  (integrator) 06 05 2024 11_35_18](https://github.com/iis-32170x/RPIIS/assets/144374775/58d55d86-6cad-4611-ba89-5d0e3edcf953)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/8932c0b4-e7cd-4100-a163-c5a809e63017)
+
