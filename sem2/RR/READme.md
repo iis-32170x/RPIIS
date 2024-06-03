@@ -25,7 +25,7 @@
 ***
 
 `Объединение графов` — операция над графами, в результате которой получается граф, множества вершин и рёбер которого являются объединениями множеств вершин и рёбер исходных графов.
-
+***
 
 ### Алгоритм решения 
 
@@ -160,6 +160,13 @@
 
 ##### Неориентированный граф
 ![image](https://github.com/iis-32170x/RPIIS/blob/d40e5881155c5d4fd5dfc6ccbc7fcacc4e9a03ee/images/ostis2.jpg)
+***
+
+##### Объединение графов
+![image](https://github.com/iis-32170x/RPIIS/blob/5ef23d09144fb3bbe592e9dba0dedf09087634d7/images/ostis3_1.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/5ef23d09144fb3bbe592e9dba0dedf09087634d7/images/ostis3_2.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/5ef23d09144fb3bbe592e9dba0dedf09087634d7/images/ostis3_3.jpg)
+![image](https://github.com/iis-32170x/RPIIS/blob/5ef23d09144fb3bbe592e9dba0dedf09087634d7/images/ostis3_4.jpg)
 ***
 
 ### Вывод
