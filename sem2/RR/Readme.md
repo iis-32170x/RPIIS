@@ -84,3 +84,29 @@
 
 ![4examplein](Examples/4thTestEnt.jpeg)
 ![4exampleout](Examples/4thTestEx.jpeg)
+
+### Пример 5
+
+![5examplein](stepsPNG/1st.jpeg)
+![5examplout](stepsPNG/7th.jpeg)
+## Результат погружения в метосистему OSTIS
+
+1. В метасистему были погружены примеры алгоритма, а также тесты (вход/выход).
+
+![1meta](metasystem/algorithm.png)
+один из них
+![2meta](metasystem/algorithm1.png)
+2. Существует 5 примеров.
+
+![2meta](metasystem/examples.png)
+![3meta](metasystem/examples1.png)
+
+3.  Присутствует понятие граф
+
+![4meta](metasystem/graf.png)
+
+4. Присутствует понятие неориентированный граф.
+
+![5meta](metasystem/neorientedGraf.png)
+ 
+ВСЕ ИСХОДНЫЕ GWF-ФАЙЛЫ ТАКЖЕ ПРИСУТСТВУЮТ В РЕПОЗИТОРИИ!
