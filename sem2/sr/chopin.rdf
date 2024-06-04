@@ -1,0 +1,622 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#возродить_на_романтической_основе -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#возродить_на_романтической_основе">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#дата_рождения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#дата_рождения">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#дата_смерти -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#дата_смерти">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#драматизировать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#драматизировать">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#идентификация -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#идентификация">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#место_рождения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#место_рождения">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#место_смерти -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#место_смерти">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#написано_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#написано_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#находиться_вблизи -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#находиться_вблизи">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#опоэтизировать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#опоэтизировать">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#превратить_в_самостоятельное_произведение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#превратить_в_самостоятельное_произведение">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#истолковать_по-новому"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#сочинение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#сочинение">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#страна_происхождения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#страна_происхождения">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#год -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#год"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#год_написания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#год_написания">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#день -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#день"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#количество -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#количество">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#конец_периода -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#конец_периода"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#месяц -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#месяц"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#начало_периода -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#начало_периода"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#город">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#населённый_пункт"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#деревня"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#деревня -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#деревня">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#населённый_пункт"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#месяц -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#месяц"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#населённый_пункт -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#населённый_пункт"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#польский_язык -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#польский_язык"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#страна"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#французский_язык -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#французский_язык"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#число"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Варшава -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Варшава">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#город"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_рождения -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_рождения">
+        <untitled-ontology-2:год rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1810</untitled-ontology-2:год>
+        <untitled-ontology-2:день rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</untitled-ontology-2:день>
+        <untitled-ontology-2:месяц>февраль</untitled-ontology-2:месяц>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_смерти -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_смерти">
+        <untitled-ontology-2:год rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1849</untitled-ontology-2:год>
+        <untitled-ontology-2:день rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17</untitled-ontology-2:день>
+        <untitled-ontology-2:месяц>октябрь</untitled-ontology-2:месяц>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Желязова-Воля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Желязова-Воля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#деревня"/>
+        <untitled-ontology-2:находиться_вблизи rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Варшава"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Париж -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Париж">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#город"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Польша -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Польша">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#страна"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Фредерик_Франсуа_Шопен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Фредерик_Франсуа_Шопен">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#французский_язык"/>
+        <untitled-ontology-2:идентификация rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Шопен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Фредерик_Францишек_Шопен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Фредерик_Францишек_Шопен">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#польский_язык"/>
+        <untitled-ontology-2:идентификация rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Шопен"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Шопен -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Шопен">
+        <untitled-ontology-2:возродить_на_романтической_основе rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#прелюдия"/>
+        <untitled-ontology-2:дата_рождения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_рождения"/>
+        <untitled-ontology-2:дата_смерти rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Дата_смерти"/>
+        <untitled-ontology-2:драматизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#вальс"/>
+        <untitled-ontology-2:драматизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#мазурка"/>
+        <untitled-ontology-2:драматизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#полонез"/>
+        <untitled-ontology-2:место_рождения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Желязова-Воля"/>
+        <untitled-ontology-2:место_смерти rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Париж"/>
+        <untitled-ontology-2:опоэтизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#вальс"/>
+        <untitled-ontology-2:опоэтизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#мазурка"/>
+        <untitled-ontology-2:опоэтизировать rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#полонез"/>
+        <untitled-ontology-2:превратить_в_самостоятельное_произведение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#скерцо"/>
+        <untitled-ontology-2:род_деятельности rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#композитор"/>
+        <untitled-ontology-2:род_деятельности rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#педагог"/>
+        <untitled-ontology-2:род_деятельности rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#пианист-виртуоз"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#баллада"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#вальс"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#концерт"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#мазурка"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#ноктюрн"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#песня"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#полонез"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#прелюдия"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#скерцо"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#соната"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#фантазия"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#экспромт"/>
+        <untitled-ontology-2:сочинение rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#этюд"/>
+        <untitled-ontology-2:страна_происхождения rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#Польша"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#баллада -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#баллада">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <untitled-ontology-2:написано_в rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_баллад"/>
+        <untitled-ontology-2:количество rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</untitled-ontology-2:количество>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#вальс -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#вальс">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#композитор -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#композитор">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#концерт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#концерт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <untitled-ontology-2:написано_в rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_концертов"/>
+        <untitled-ontology-2:количество rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-2:количество>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#мазурка -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#мазурка">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#ноктюрн -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#ноктюрн">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#педагог -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#педагог">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_баллад -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_баллад">
+        <untitled-ontology-2:конец_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1842</untitled-ontology-2:конец_периода>
+        <untitled-ontology-2:начало_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1835</untitled-ontology-2:начало_периода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_концертов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_концертов">
+        <untitled-ontology-2:конец_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1830</untitled-ontology-2:конец_периода>
+        <untitled-ontology-2:начало_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1829</untitled-ontology-2:начало_периода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_скерцо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_скерцо">
+        <untitled-ontology-2:конец_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1842</untitled-ontology-2:конец_периода>
+        <untitled-ontology-2:начало_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1832</untitled-ontology-2:начало_периода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_сонат -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_сонат">
+        <untitled-ontology-2:конец_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1844</untitled-ontology-2:конец_периода>
+        <untitled-ontology-2:начало_периода rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1828</untitled-ontology-2:начало_периода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#песня -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#песня">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#пианист -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#пианист">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#пианист-виртуоз -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#пианист-виртуоз">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#полонез -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#полонез">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#прелюдия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#прелюдия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#скерцо -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#скерцо">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <untitled-ontology-2:написано_в rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_скерцо"/>
+        <untitled-ontology-2:количество rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</untitled-ontology-2:количество>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#соната -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#соната">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <untitled-ontology-2:написано_в rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#период_написания_сонат"/>
+        <untitled-ontology-2:количество rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</untitled-ontology-2:количество>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#фантазия -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#фантазия">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+        <untitled-ontology-2:год_написания rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1841</untitled-ontology-2:год_написания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#экспромт -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#экспромт">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#этюд -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#этюд">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#произведение_для_фортепиано"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#месяц"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#музыкальное_произведение"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#населённый_пункт"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#польский_язык"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#род_деятельности"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#танец"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#французский_язык"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2024/3/untitled-ontology-2#число"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
