@@ -39,6 +39,8 @@ b) при помощи стандартов технологии OSTIS, испо
 
 ## Формализация в KBE (1.b)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/144939061/2eb1eb79-e4cf-4fc3-86ae-c600b956404b)
+
 ## Формализация в KBE (2)
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/144939061/f0a60b0a-e583-470e-99c8-5906a9cb4ee5)
