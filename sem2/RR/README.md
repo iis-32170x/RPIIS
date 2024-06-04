@@ -56,10 +56,51 @@
 6. Проводим те же действия но не учитывая ребро BC.
 ![image](https://github.com/iis-32170x/RPIIS/assets/147653635/fa751204-3673-40b3-bf38-567976f2ea8c)
 Получаем количество компанент равное 2. 2>1, следовательно BC - мост.
-
-
-
 ![image](https://github.com/iis-32170x/RPIIS/assets/147653635/66b6a858-05cd-470e-a2bb-eae395970df0)
+
+## Результат погружения в метасистему OSTIS
+В метасистему были погружены алгоритм, а также примеры(вход/выход).
+
+- Алгоритм
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/46ecd86b-4cf3-42ce-b833-ec689ed2189f)
+- Примеры
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/77911d73-78b9-43ad-b18a-45b5e2d412c6)
+Всего 5 примеров, у каждого примера есть граф вход и выход.
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/4c470a77-33c3-40d8-be8d-34f631c8792a)
+### Вход
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/61256013-8a06-4fdd-aad5-9d0adb236cfb)
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/d21ebc03-aeb5-47b8-b57c-b6021a8a95fe)
+### Выход
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/ec891daa-6844-49d0-812b-089f3f462e31)
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/b698a189-f713-427c-8f49-4030a323465f)
+
+Формализованы понятия:
+- Граф
+  
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/b16d9f37-bce2-423b-96e1-7e3347deac0e)
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/0e6722e6-25bc-4ad2-88bb-fcf57280fbb3)
+- Неориентированный граф
+  
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/e3416f48-6f5d-48e6-90e9-2a8b7ff11d7f)
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/b1734a7c-102f-48f5-8606-78f8bfdc1b6d)
+- Компанента связности
+
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/9e2fbe28-796c-4eca-b179-e50d99cee065)
+![image](https://github.com/iis-32170x/RPIIS/assets/147653635/37cf4cd1-2f09-47c0-accf-1ca55c4f1d65)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
