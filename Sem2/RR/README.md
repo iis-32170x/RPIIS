@@ -10,4 +10,4 @@
 
 ### Ключевые понятия
 
-![image]("C:\Users\yanar\OneDrive\Документы\ucheba univer\poiic\git.git\RPIIS\Sem2\RR\Новая папка\граф.png")
+![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D0%B3%D1%80%D0%B0%D1%84.png)
