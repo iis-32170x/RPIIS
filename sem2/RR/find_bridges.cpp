@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
 void DFS(vector<vector<int>>& matrix, int node, vector<int>& component, vector<bool>& visited) {
