@@ -160,7 +160,7 @@
 ![test1output](https://github.com/iis-32170x/RPIIS/assets/144935038/bab65b04-3990-41b1-b2db-547bb9309298)
 
 ***
-![test1kb](https://github.com/iis-32170x/RPIIS/assets/144935038/9d726d86-0594-4497-8459-8093baefa193)
+![Снимок экрана (110)](https://github.com/iis-32170x/RPIIS/assets/144935038/580d6cbe-7fc9-4515-8164-5148c6194086)
 
 ***
 #### Тест №2
@@ -175,7 +175,7 @@
 
 
 ***
-![test2kb](https://github.com/iis-32170x/RPIIS/assets/144935038/88f7f65e-723d-459e-8b78-ed080aec814d)
+![Снимок экрана (109)](https://github.com/iis-32170x/RPIIS/assets/144935038/efb5bd45-caac-47a2-ba40-0c49d68bc332)
 
 ***
 #### Тест №3
@@ -188,7 +188,7 @@
 ##### Выходные данные
 ![test3output](https://github.com/iis-32170x/RPIIS/assets/144935038/7fe54538-91ae-4fc4-b4c2-cfd121691be1)
 ***
-![test3kb](https://github.com/iis-32170x/RPIIS/assets/144935038/d701b2ea-7d45-4438-b710-34e1c3e2a475)
+![Снимок экрана (108)](https://github.com/iis-32170x/RPIIS/assets/144935038/940b5f66-5933-4fc7-8e1b-0439f4e01f54)
 
 ***
 #### Тест №4
@@ -201,7 +201,7 @@
 ![test4output](https://github.com/iis-32170x/RPIIS/assets/144935038/ad82b771-3417-46da-a9b4-b768d0056a09)
 
 ***
-![test4kb](https://github.com/iis-32170x/RPIIS/assets/144935038/66435978-d1b5-4667-952a-e1372181429b)
+![Снимок экрана (107)](https://github.com/iis-32170x/RPIIS/assets/144935038/aefa7146-b373-4e10-939d-cc756f97dabb)
 
 ***
 ### Вывод
