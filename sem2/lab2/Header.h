@@ -12,44 +12,44 @@
 #include <algorithm> 
 using namespace std;
 
-constexpr auto OPENSET_SYMBOL = '{'; //ôèãóðíàÿ îòêðûâàþùàÿñÿ ñêîáêà
-constexpr auto CLOSESET_SYMBOL = '}'; //ôèãóðíàÿ çàêðûâàþùàÿñÿ ñêîáêà
-constexpr auto DELIMITER_SYMBOL = ','; //çàïÿòàÿ (ðàçäåëèòåëü)
+constexpr auto OPENSET_SYMBOL = '{'; //фигурная открывающаяся скобка
+constexpr auto CLOSESET_SYMBOL = '}'; //фигурная закрывающаяся скобка
+constexpr auto DELIMITER_SYMBOL = ','; //запятая (разделитель)
 
 string inputpath = "input.txt";
 
 ifstream fin;
 
-//ñ÷èòûâàíèå èç ôàéëà
+//считывание из файла
 vector<string> getSets(string inputpath) {
     fin.open(inputpath);
     if (!fin.is_open())
-        cout << "Ïðîèçîøëà îøèáêà ïðè îòêðûòèè ôàéëà (" + inputpath + ")!" << endl;
-    vector<string> sets; //â íåãî äîáàâëÿþòñÿ ñòðîêè, ïðåäñòàâëÿþùèå ìíîæåñòâà
-    int line = 0; //line äëÿ îòñëåæèâàíèÿ íîìåðà ñòðîêè â ôàéëå
-    while (!fin.eof()) { //öèêë ðàáîòàåò, ïîêà íå ïîëó÷èò îøèáêó
+        cout << "Произошла ошибка при открытии файла (" + inputpath + ")!" << endl;
+    vector<string> sets; //в него добавляются строки, представляющие множества
+    int line = 0; //line для отслеживания номера строки в файле
+    while (!fin.eof()) { //цикл работает, пока не получит ошибку
         line++;
         string buff;
-        getline(fin, buff); //ñ÷èòûâàåò ñòðîêó èç ôàéëà è ñîõðàíÿåò åå â ïåðåìåííîé buff
+        getline(fin, buff); //считывает строку из файла и сохраняет ее в переменной buff
         cout << buff << endl;
         if ((buff[2] == '{') && (buff[1] == '=') && (buff[buff.length() - 1] == '}')) {
             int opens = 0;
             int closes = 0;
-            for (int i = 0; i < buff.length(); i++) { //ïîäñ÷èòûâàåòñÿ, ÷òîáû êîë-âî ñêîáîê áûëî ïðàâèëüíîå
+            for (int i = 0; i < buff.length(); i++) { //подсчитывается, чтобы кол-во скобок было правильное
                 if (buff[i] == OPENSET_SYMBOL)
                     opens++;
                 if (buff[i] == CLOSESET_SYMBOL)
                     closes++;
             }
-            if (opens != closes) { //ïðîâåðÿåò, ñîâïàäàåò ëè êîëè÷åñòâî îòêðûâàþùèõ è çàêðûâàþùèõ ñêîáîê â ñòðîêå. Åñëè íåò, âûâîäèòñÿ ñîîáùåíèå îá îøèáêå
-                cout << "Ïðîâåðüòå ïðàâèëüíîñòü ââîäà! Ñòðîêà: " + to_string(line) + ", Ôàéë: " + inputpath << endl; //ïëþñû èñïîëüçóþòñÿ äëÿ ñîåäèíåíèÿ ñòðîê è ÷èñåë
-                cout << "Êîëè÷åñòâî '{' íå ðàâíî êîëè÷åñòâó '}'" << endl;
+            if (opens != closes) { //проверяет, совпадает ли количество открывающих и закрывающих скобок в строке. Если нет, выводится сообщение об ошибке
+                cout << "Проверьте правильность ввода! Строка: " + to_string(line) + ", Файл: " + inputpath << endl; //плюсы используются для соединения строк и чисел
+                cout << "Количество '{' не равно количеству '}'" << endl;
                 exit(0);
             }
-            sets.push_back(buff); //èñïîëüçóåòñÿ äëÿ äîáàâëåíèÿ ñòðîêè buff â êîíåö âåêòîðà sets
+            sets.push_back(buff); //используется для добавления строки buff в конец вектора sets
         }
         else {
-            cout << "Ïðîâåðüòå ïðàâèëüíîñòü ââîäà! Ñòðîêà: " + to_string(line) + ", Ôàéë: " + inputpath << endl;
+            cout << "Проверьте правильность ввода! Строка: " + to_string(line) + ", Файл: " + inputpath << endl;
             exit(0);
             break;
         }
@@ -57,27 +57,27 @@ vector<string> getSets(string inputpath) {
     return sets;
 }
 
-//ñîäåðæèò èìåíà âåêòîðîâ
+//содержит имена векторов
 vector<string> getNamePlenty(vector<string> sets) {
-    int numSets = sets.size(); //ðàâíî êîëè÷åñòâó íàéäåííûõ ìíîæåñòâ (ñòðîê â âåêòîðå sets) 
-    vector<string> namePlenty(numSets); //âåêòîð ñòðîê ñ ðàçìåðîì, ðàâíûì êîëè÷åñòâó ìíîæåñòâ
+    int numSets = sets.size(); //равно количеству найденных множеств (строк в векторе sets) 
+    vector<string> namePlenty(numSets); //вектор строк с размером, равным количеству множеств
     for (int i = 0; i < numSets; i++) {
         namePlenty[i] = sets[i][0];
     }
     return namePlenty;
 }
 
-//èçâëå÷åíèå ñîäåðæèìîãî êàæäîãî ìíîæåñòâà èç âåêòîðà sets è ñîõðàíåíèå ýòîãî ñîäåðæèìîãî
+//извлечение содержимого каждого множества из вектора sets и сохранение этого содержимого
 vector<string> saveFillPlenty(vector<string> sets) {
-    int numSets = sets.size(); //ðàâíî êîëè÷åñòâó íàéäåííûõ ìíîæåñòâ (ñòðîê â âåêòîðå sets)
-    vector<string> fillPlenty(numSets); //õðàíèò ñîäåðæèìîå êàæäîãî ìíîæåñòâà
+    int numSets = sets.size(); //равно количеству найденных множеств (строк в векторе sets)
+    vector<string> fillPlenty(numSets); //хранит содержимое каждого множества
     for (int i = 0; i < numSets; i++) {
-        fillPlenty[i] = sets[i].substr(2, sets[i].length() - 3); //äîáàâëÿåò â fillPlenty ñòðîêó èç (sets[i].length() - 3) ñèìâîëîâ, íà÷èíàÿ ñî âòîðîãî ýëåìåíòà èç sets
+        fillPlenty[i] = sets[i].substr(2, sets[i].length() - 3); //добавляет в fillPlenty строку из (sets[i].length() - 3) символов, начиная со второго элемента из sets
     }
     return fillPlenty;
 }
 
-//ðàçäåëåíèå ìíîæåñòâ íà îòäåëüíûå ýëåìåíòû
+//разделение множеств на отдельные элементы
 vector<vector<string>> splitSets(vector<string> sets, char delimiter) {
     int numSets = sets.size();
     vector<vector<string>> elements(numSets);
@@ -128,14 +128,14 @@ vector<vector<string>> splitSets(vector<string> sets, char delimiter) {
     return elements;
 }
 
-//âû÷èñëåíèå ðàçíîñòè
+//вычисление разности
 vector<string> setDifference(const vector<string>& set1, const vector<string>& set2) {
-    vector<string> result; //çíà÷åíèå ðàçíîñòè
+    vector<string> result; //значение разности
 
-    //êîïèðóåì âñå ýëåìåíòû èç ïåðâîãî ìíîæåñòâà
+    //копируем все элементы из первого множества
     result = set1;
 
-    //óäàëÿåì ýëåìåíòû âòîðîãî ìíîæåñòâà èç ðåçóëüòàòà   
+    //удаляем элементы второго множества из результата   
     for (const auto& elem : set2) {
         auto it = find(result.begin(), result.end(), elem);
         if (it != result.end()) {
@@ -145,7 +145,7 @@ vector<string> setDifference(const vector<string>& set1, const vector<string>& s
     return result;
 }
 
-//äåëàåì ïðèÿòíûé äëÿ âîñïðèÿòèÿ ôîðìàò
+//делаем приятный для восприятия формат
 string prettify(const vector<string>& set) {
     string result = "";
     result += OPENSET_SYMBOL;
@@ -159,23 +159,23 @@ string prettify(const vector<string>& set) {
     return result;
 }
 
-//çàïóñê âñåãî ïðîöåññà
+//запуск всего процесса
 string Start(vector<string> sets) {
     getNamePlenty(sets);
 
     vector<vector<string>> elements;
     elements = splitSets(sets, DELIMITER_SYMBOL);
     
-    //ïðîâåðêà, ÷òî åñòü äâà ìíîæåñòâà äëÿ âû÷èñëåíèÿ ðàçíîñòè
+    //проверка, что есть два множества для вычисления разности
     if (elements.size() < 2) {
-        cout << "Îøèáêà: äëÿ âû÷èñëåíèÿ ðàçíîñòè íóæíî äâà ìíîæåñòâà!" << endl;
+        cout << "Ошибка: для вычисления разности нужно два множества!" << endl;
         return "";
     }
 
-    //ðàçíîñòü ìåæäó ïåðâûìè äâóìÿ ìíîæåñòâàìè
+    //разность между первыми двумя множествами
     vector<string> result = setDifference(elements[0], elements[1]);
 
-    cout << "\nÐàçíîñòü: ";
+    cout << "\nРазность: ";
     cout << prettify(result) << endl;
     return prettify(result);
 }
