@@ -10,4 +10,4 @@
 
 ### Ключевые понятия
 
-![image](Тест3.png)
+![image]("C:\Users\yanar\OneDrive\Документы\ucheba univer\poiic\git.git\RPIIS\Sem2\RR\Новая папка\граф.png")
