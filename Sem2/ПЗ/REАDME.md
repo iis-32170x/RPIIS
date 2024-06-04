@@ -29,7 +29,7 @@
 
 - Сущности
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a2be33f4-518b-4527-a1e4-256d8963ecd9)
+![image](https://github.com/iis-32170x/RPIIS/assets/147256759/a2be33f4-518b-4527-a1e4-256d8963ecd9
 
 
 # Формализация в редакторе KBE:
@@ -41,4 +41,4 @@
 # Вариант 14
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/147256759/36c0b103-ed76-4073-a11c-b27ac0c0c3bc)
-
+Благодарность Романову Кириллу за материалы взятые как вдохновение в создании моей работы
