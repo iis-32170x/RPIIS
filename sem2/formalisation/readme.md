@@ -9,8 +9,29 @@
 компонентов. Токсичен, канцерогенен.
 ### Выполнение задания
 Формализация в редакторе баз знаний Protégé:
-![image](https://github.com/iis-32170x/RPIIS/assets/148707516/26b66f45-3e37-4c3d-9c1a-6d69c14367fa)
 
+Описание классов:
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/201ac8ca-f917-4071-b9ec-986745c637e4)
+
+Описание отношений, связывающих между собой экземпляры классов:
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ca03b0d2-d80c-4846-8d67-2359530ee8e0)
+
+Экземпляры классов:
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/24c04b47-5dee-4fcf-8f1f-d9626c41877a)
+
+Связывание экземпляров классов с отношениями и классами:
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/a6a99216-d3e2-4233-9f84-7a30d09d8959)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/4079b206-05b3-4e35-97c1-871ebd88638d)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/9eda8d51-27f7-49ed-b68f-ead1a224bc99)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/cad53a61-6a97-41a5-8e58-70298912ef1b)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/25e460fc-c2a1-4da5-804b-9b86e6395e71)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/3f7f43d0-14d1-4486-9415-cf7a33b0781f)
 
 ---
 
