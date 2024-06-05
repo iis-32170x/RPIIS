@@ -38,4 +38,4 @@
 ## Задание №2: Формализация математическаго выражения
 Вариант 12. ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/sem2/%D0%A1%D0%A0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(66).png)
 ### Выполнение
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/sem2/%D0%A1%D0%A0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(67).png)
+![image]([https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/sem2/%D0%A1%D0%A0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(67).png](https://github.com/iis-32170x/RPIIS/blob/%D0%9F%D1%83%D1%88%D0%BA%D0%BE_%D0%9C/sem2/%D0%A1%D0%A0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(87).png))
