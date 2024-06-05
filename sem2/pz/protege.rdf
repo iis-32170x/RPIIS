@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nikit/ontologies/2024/4/kater/"
+     xml:base="http://www.semanticweb.org/nikit/ontologies/2024/4/kater/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kater="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#afterOvertakes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#afterOvertakes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>после обгона</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#find -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#find">
+        <rdfs:label>найти значение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#hasValue">
+        <rdfs:label>имеет значение</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#isBelow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#isBelow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>встретил ниже</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#later -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#later">
+        <rdfs:label>через</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#met -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#met">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>встретил</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#metAtA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#metAtA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>встретил на</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#movingDownThe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#movingDownThe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>двигаясь вниз по</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#overtakes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#overtakes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>обогнал</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#overtakesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#overtakesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>обогнал в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#turnsIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#turnsIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>повернул в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#workedInOneMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#workedInOneMode">
+        <rdfs:label>работал в одном режиме в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#встретил_в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#встретил_в">
+        <rdfs:label>встретил в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Directions_of_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Directions_of_movement">
+        <rdfs:label>направления движения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Location">
+        <rdfs:label>локация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Physical_quantities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Physical_quantities">
+        <rdfs:label>физические величины</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Boat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Boat">
+        <kater:afterOvertakes rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Raft"/>
+        <kater:isBelow rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Point_A"/>
+        <kater:later rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Time"/>
+        <kater:met rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Raft"/>
+        <kater:metAtA rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#расстояние"/>
+        <kater:movingDownThe rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River"/>
+        <kater:overtakes rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Raft"/>
+        <kater:overtakesIn rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Point_A"/>
+        <kater:turnsIn rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Reverse_direction"/>
+        <kater:workedInOneMode rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Forward_direction"/>
+        <kater:workedInOneMode rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Reverse_direction"/>
+        <rdfs:label>катер</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Forward_direction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Forward_direction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Directions_of_movement"/>
+        <rdfs:label>прямое направление</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Intelligent_system -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Intelligent_system">
+        <kater:find rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River_flow_speed"/>
+        <rdfs:label>интеллектуальная система</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Point_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Point_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Location"/>
+        <rdfs:label>пункт а</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Raft -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Raft">
+        <rdfs:label>плот</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Reverse_direction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Reverse_direction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Directions_of_movement"/>
+        <rdfs:label>обратное направление</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River">
+        <rdfs:label>река</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River_flow_speed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#River_flow_speed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Physical_quantities"/>
+        <rdfs:label>скорость течения реки</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Physical_quantities"/>
+        <kater:hasValue rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#60_мин"/>
+        <rdfs:label>время</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#расстояние -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#расстояние">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#Physical_quantities"/>
+        <kater:hasValue rdf:resource="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#6_км"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#6_км -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#6_км"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nikit/ontologies/2024/4/kater#60_мин -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nikit/ontologies/2024/4/kater#60_мин"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
