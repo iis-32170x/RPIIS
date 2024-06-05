@@ -17,53 +17,52 @@
 ## Формализация алгоритма
 После задания пользователем графа он задаёт степень (переменная deg), вершины с которой будут искаться. Далее эта степень будет называться указанной степенью.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147268285/f14441ee-965a-4bdf-8618-63a5411b0197)
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/0eacf57c-45cf-4469-8df7-ba11c00c1c58)
 
 Затем осматривается первая вершина графа, считается её степень.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147268285/6fed42cd-b548-49c8-bc00-550cbfa3c9f0)
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/73d865b3-264d-4759-8f7f-5b4a27ddcd9a)
 
 Точно так же делается и с другими вершинами.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147268285/f789f404-8537-4c81-9dcb-95360d7dad68)
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/479a6383-efa5-4c90-99e5-5a57e5fa7d35)
 
 После этого смотрится, какие вершины имеют степень, равную указанной. Эти вершины и будут являться ответом задачи.
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147268285/0fbc8a4a-b949-4ccd-b640-59f0a9914f90)
+![image](https://github.com/iis-32170x/RPIIS/assets/147268285/cc5313a1-6be1-4731-bcc6-b0a7eb1f3afa)
 
 ## Тесты
 1. Ввод:
    
-   ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/eec57935-4797-4f99-92f5-b3af9596033b)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/1b008890-9ef3-4069-baa8-3874b4aa7b3f)
 
    Вывод:
    
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/ab931611-3ed3-4249-95b8-332f3623ffa5)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/317e589b-71ef-429f-9820-f145ea537ec0)
 
 2. Ввод:
    
-   ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/00f4f43f-54c6-4b8f-81fa-b22463e6e927)
+   ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/77d20a0d-fb4d-4356-b286-f071f194952c)
    
    Вывод:
    
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/c15e3009-d074-499c-a987-135fc55de5c8)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/efc8f6fb-ad34-42ad-9dbf-ab95c7386b9f)
    
 3. Ввод:
    
-   ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/0a3605e1-2e17-4b37-b86e-71ecc4516cb1)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/1056499f-1b0a-4383-a830-29f588c2641f)
 
    Вывод:
    
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/78903402-c0a4-4b42-a531-348eb5caddb8)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/6d6244c7-1dc4-4d59-be78-993d83b557bc)
 
-   
 4. Ввод:
     
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/90aadd0a-b51c-42c9-8f5f-83b1ef653482)
+  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/0b7a7b65-aefc-4934-bf34-499147ecbbaa)
 
    Вывод:
    
-  ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/9ad33768-7be7-4af1-94d7-93ef2c0b3f02)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/147268285/abc16f2b-4415-44f7-9a11-375a2705bfaa)
 ## Вывод
 В результате работы формализоал понятия и алгоритмы расчётной работы, улучшил навыки работы с базами данных.
 ## Список использованных источников
