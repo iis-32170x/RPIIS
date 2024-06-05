@@ -36,6 +36,25 @@
 
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/3f7f43d0-14d1-4486-9415-cf7a33b0781f)
 
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/8ce8439e-910c-4237-b54e-37042f95e487)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/081a6a3f-4c8e-45b1-97b0-db4c689411b8)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/32ac270f-2933-4706-b798-b87b3a7706ca)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/f2642a9e-7882-42bb-98b2-4f7bd6d63125)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/cb806b0c-6d53-41ea-ac2a-c5e44535480e)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/b2294d51-febc-4740-a611-ba85e39796fc)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/6993e293-2f6c-4084-9943-4cb237e61d3f)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ceb21677-6a6f-4d65-8b05-8c5b895d004e)
+
+![image](https://github.com/iis-32170x/RPIIS/assets/148707516/33c457f1-4aef-4744-b3be-38c0fd4152df)
+
+
 ---
 
 Формализация текста на SCg коде в редакторе KBE:
