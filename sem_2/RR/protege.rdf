@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-6="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_видимую_звездную_величину_12.71_m -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_видимую_звездную_величину_12.71_m"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_освещенность_при_ясной_погоде_0.25-1_лк -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_освещенность_при_ясной_погоде_0.25-1_лк"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_расстояние_384_467_км_до_центра -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#имеет_расстояние_384_467_км_до_центра">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#бывал_ли_человек -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#бывал_ли_человек">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_близости_к_солнцу -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_близости_к_солнцу">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_величине_в_солнечной_системе -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_величине_в_солнечной_системе"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_яркости_на_земном_небосводе -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#номер_по_яркости_на_земном_небосводе"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Естественный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Естественный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Спутник"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Звезда -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Звезда">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнечная_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Искуственный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Искуственный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Спутник"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Планета -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Планета">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнечная_система"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнечная_система -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнечная_система"/>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Спутник -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Спутник">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнечная_система"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Земля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Земля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Планета"/>
+        <untitled-ontology-6:имеет_видимую_звездную_величину_12.71_m rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Луна"/>
+        <untitled-ontology-6:имеет_освещенность_при_ясной_погоде_0.25-1_лк rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Луна"/>
+        <untitled-ontology-6:имеет_расстояние_384_467_км_до_центра rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Луна"/>
+        <untitled-ontology-6:бывал_ли_человек>да</untitled-ontology-6:бывал_ли_человек>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Луна -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Луна">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Естественный"/>
+        <untitled-ontology-6:имеет_расстояние_384_467_км_до_центра rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Земля"/>
+        <untitled-ontology-6:бывал_ли_человек>да</untitled-ontology-6:бывал_ли_человек>
+        <untitled-ontology-6:номер_по_близости_к_солнцу rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-6:номер_по_близости_к_солнцу>
+        <untitled-ontology-6:номер_по_величине_в_солнечной_системе rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</untitled-ontology-6:номер_по_величине_в_солнечной_системе>
+        <untitled-ontology-6:номер_по_яркости_на_земном_небосводе rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-6:номер_по_яркости_на_земном_небосводе>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнце -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Солнце">
+        <rdf:type rdf:resource="http://www.semanticweb.org/artemsotnikov/ontologies/2024/4/untitled-ontology-6#Звезда"/>
+        <untitled-ontology-6:номер_по_яркости_на_земном_небосводе rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-6:номер_по_яркости_на_земном_небосводе>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
