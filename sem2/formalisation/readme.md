@@ -15,9 +15,11 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/201ac8ca-f917-4071-b9ec-986745c637e4)
 
 Описание отношений, связывающих между собой экземпляры классов:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/ca03b0d2-d80c-4846-8d67-2359530ee8e0)
 
 Экземпляры классов:
+
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/24c04b47-5dee-4fcf-8f1f-d9626c41877a)
 
 Связывание экземпляров классов с отношениями и классами:
