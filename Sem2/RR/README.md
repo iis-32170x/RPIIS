@@ -136,31 +136,16 @@
 
 #### Тест №1
 
-##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D0%A2%D0%B5%D1%81%D1%821.png)
-
-
-##### Выходные данные
 ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%821.png)
 ---
 
 #### Тест №2
 
-##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D0%A2%D0%B5%D1%81%D1%822.png)
-
-
-##### Выходные данные
 ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%822.png)
 ---
 
 #### Тест №3
 
-##### Входные данные
-![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D0%A2%D0%B5%D1%81%D1%823.png)
-
-
-##### Выходные данные
 ![image](https://github.com/iis-32170x/RPIIS/blob/%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D0%B0_%D0%AF/Sem2/images/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%823.png)
 ---
 
