@@ -186,6 +186,16 @@ _min_cut = 4
 
 _min_cut = 3
 
+## Формализованный понятия на OSTIS
+
+![граф ostis](/sem2/images/graph_ostis.png)
+
+![неориентированный граф ostis](/sem2/images/not_oriented_ostis.png)
+
+![разрез ostis](/sem2/images/razrez_ostis.png)
+
+![минимальный разрез ostis](/sem2/images/min_razrez_ostis.png)
+
 ## Вывод
 
 В результате выполнения данной расчётной работы был формализован алгоритм нахождения минимального разреза графа.
