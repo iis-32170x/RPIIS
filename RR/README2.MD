@@ -73,4 +73,4 @@
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/cb8a791f-c29d-4925-a13e-535af4966f36)
 Формализацяи понятия "неориентированный граф":
 ![image](https://github.com/iis-32170x/RPIIS/assets/148707516/0a05ead9-85a0-4486-a262-4fe6f790ac6c)
-![8](stepts/ostis.png)
+![8](steps/ostis.png)
