@@ -360,32 +360,19 @@
 
 ### Описываем для него синонимы и разбиения, относящиеся к этому понятию:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ed08a6b9-78b8-4443-bb2c-89ef27a3274b)
+### Для описания характеристик понятия, основных преимуществ, недостатков и т.д. нужно использовать:
 
+```
+\begin{scnrelfromlist}{основные характеристики}
+    \scnfileitem{}
+\end{scnrelfromlist}
+```
 
-***
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/56afa398-2d63-4ac0-bd40-8ccc2107c8cc)
-
-
-***
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/ea5181e9-0dac-4b8c-a850-7a92ac5f3c7d)
-
-***
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4603b646-072f-47a9-972c-5b47163211ed)
-
-
-***
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/e64e9658-4a2b-4adc-b6d7-3d0441cd8019)
-
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/9e7716fd-4fe2-4a3d-8ef5-42605136707b)
 
 ***
 
 ### Добавляем авторов и источники:
-
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/7e701097-1fda-48bd-aea4-cfbfb99b0139)
 
 
 ***
