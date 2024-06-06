@@ -35,7 +35,9 @@
 ## Тесты 
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/one.png)
-
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/two.png)
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/thr.png)
+![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/fou.png)
 ## Код программы
 
 '''
