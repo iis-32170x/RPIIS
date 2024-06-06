@@ -66,6 +66,28 @@
 1. В метасистему были погружены примеры алгоритма, а также тесты (вход/выход).
 
 ![1meta](metasystem/1met.png)
+![1](steps/test11.png)
+![1](steps/test12.png)
+
+Тест 2
+
+![1](steps/test21.png)
+![1](steps/test22.png)
+
+Тест 3
+
+![1](steps/test31.png)
+![1](steps/test32.png)
+
+Тест 4
+
+![1](steps/test41.png)
+![1](steps/test42.png)
+
+Тест 5
+
+![1](steps/test51.png)
+![1](steps/test52.png)
 
 
 
