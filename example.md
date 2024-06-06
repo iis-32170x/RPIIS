@@ -367,12 +367,20 @@
     \scnfileitem{}
 \end{scnrelfromlist}
 ```
-
+***
 ![image](https://github.com/iis-32170x/RPIIS/assets/147609793/9e7716fd-4fe2-4a3d-8ef5-42605136707b)
 
 ***
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/4c9a0ae5-dc8c-4825-9f65-3ef3bc64a370)
+***
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/72c32b2f-c9d2-460b-a334-26aff42796eb)
+***
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/213669f0-a61f-4edb-b90c-31f02b046f30)
+
+***
 ### Добавляем авторов и источники:
 
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/bf3f58bb-78f1-4153-9d02-3b7cc2a9f57b)
 
 ***
