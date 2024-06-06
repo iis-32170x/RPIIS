@@ -39,7 +39,7 @@
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/thr.png)
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/Ходосов_Т/SEM2/fou.png)
 ## Код программы
-
+```
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -292,6 +292,6 @@ int main(void) {
     return 0;
 }
 
-
+```
 ##Вывод
 Реализовал программу, которая находит пересечение множеств и возвращает итоговое пересечение.
