@@ -247,7 +247,7 @@
 
 ### В нашем случае придется использовать второй вариант:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/147609793/43c924c5-6ed3-4a59-b1f5-ba9370423409)
+![image](https://github.com/iis-32170x/RPIIS/assets/147609793/41a73e4f-8f09-4f4d-943f-79b7807f1840)
 
 
 ***
