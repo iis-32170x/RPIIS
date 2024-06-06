@@ -1,4 +1,4 @@
-# Расчётная работа
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/aa6b1ade-8286-4572-8cea-20bb2e8fadab)# Расчётная работа
 
 ### Цель
 
@@ -83,7 +83,7 @@
 * Переменная _waves_list_tail получает в качестве значения созданный элемент списка, а переменная _new_wave – созданную волну.
 ******
 
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/b46159d9-3b86-4a8c-953b-b1cc679c8712)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/b2c2a8b5-2002-4c06-95da-4eea2dca4c77)
 
 * Для вершины из предыдущей волны является смежной и входящей во множество непосещенных вершин только вершина H . Из нее формируем следующую волну. Обратите внимание на то, что эта вершина исключается из множества непроверенных вершин (см. значение переменной _not_checked_vertexes).
 
@@ -100,22 +100,22 @@
 
 #### Тест2
 Входные данные  
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/b663eebd-14f7-4706-aeb9-890e53f1f6be)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/3c9d0aa4-17c6-4132-81ff-90f6e933d0e9)
 
 Выходные данные  
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/4ef85553-cff4-4554-a2ac-5c074d02ccfc)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/6e412d34-9ca6-4daa-b3b1-bd8e818b7975)
+
 
 
 
 #### Тест 3 
 Входные данные  
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/e28d6082-0385-4aff-8c09-13a18cbb7b28)
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/7ce0fb3e-5888-4f4a-b7dd-ca6402b8ab0f)
 
- 
+
 Выходные данные  
 
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/9f14a615-90e9-4648-a9df-83b5cb85367b)
-
+![image](https://github.com/iis-32170x/RPIIS/assets/148442454/3a7a8e0f-769d-4f40-baa4-2fdc57d7a2ad)
 
 
 ### Формализованные понятия в базе знаний интеллектуальной системы на основе Технологии OSTIS  
