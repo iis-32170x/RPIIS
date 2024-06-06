@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-8="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8"/>
     
 
@@ -21,9 +22,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#По-новому_истолковал_многие_жанры -->
+    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#По-новому_истолковал_многие -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#По-новому_истолковал_многие_жанры">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#По-новому_истолковал_многие">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#жанры"/>
@@ -31,9 +32,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Превратил_скерцо_в_самостоятельное_произведение -->
+    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Превратил_в_самостоятельное_произведение -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Превратил_скерцо_в_самостоятельное_произведение">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Превратил_в_самостоятельное_произведение">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#скерцо"/>
@@ -41,9 +42,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#возродил_на_романтической_основе_прелюдию -->
+    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#возродил_на_романтической_основе -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#возродил_на_романтической_основе_прелюдию">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#возродил_на_романтической_основе">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#прелюдия"/>
@@ -111,9 +112,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#опоэтизировал_и_драматизировал_танцы -->
+    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#опоэтизировал_и_драматизировал -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#опоэтизировал_и_драматизировал_танцы">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#опоэтизировал_и_драматизировал">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#танцы"/>
@@ -274,6 +275,27 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Фредерик_Франсуа_Шопен">
         <rdf:type rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#person"/>
+        <untitled-ontology-8:есть_дата_рождения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#22.02.1810"/>
+        <untitled-ontology-8:есть_дата_смерти rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#17.10.1849"/>
+        <untitled-ontology-8:есть_место_рождения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#деревня_Желязова-Воля,_близ_Варшавы"/>
+        <untitled-ontology-8:есть_место_смерти rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#Париж"/>
+        <untitled-ontology-8:есть_нация rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#поляк"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#вальсы"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#другие_произведения_для__фортепиано"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#мазурки"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#ноктюрны"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#песни"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#полонезы"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#прелюдии"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#экспромты"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#этюды"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#3_сонаты(1828-1844)"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#4_баллады_(1835—1842)"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#4_скерцо_(1832—1842)"/>
+        <untitled-ontology-8:есть_сочинения rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#фантазия_(1841)"/>
+        <untitled-ontology-8:опоэтизировал_и_драматизировал rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#вальс"/>
+        <untitled-ontology-8:опоэтизировал_и_драматизировал rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#мазурка"/>
+        <untitled-ontology-8:опоэтизировал_и_драматизировал rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#полонез"/>
     </owl:NamedIndividual>
     
 
@@ -362,6 +384,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#полонезы">
         <rdf:type rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#сочинения"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#поляк -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#поляк">
+        <rdf:type rdf:resource="http://www.semanticweb.org/germa/ontologies/2024/4/untitled-ontology-8#нация"/>
     </owl:NamedIndividual>
     
 
