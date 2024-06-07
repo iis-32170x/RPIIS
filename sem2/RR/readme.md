@@ -73,3 +73,10 @@ ___
 ### Выход:
 ![image](https://github.com/iis-32170x/RPIIS/assets/144333910/fe374a1d-eb1a-490a-b7a5-2573721305a2)
 ___
+### Загруженные в метасистему понятия:
+___
+![photo_2024-06-07_21-08-06](https://github.com/iis-32170x/RPIIS/assets/144333910/98c9e12e-ed2f-4009-b049-5f41e346114f)
+___
+![photo_2024-06-07_21-05-01](https://github.com/iis-32170x/RPIIS/assets/144333910/ac51b75c-0a90-441e-8424-0e90cac95da7)
+___
+![photo_2024-06-07_21-08-19](https://github.com/iis-32170x/RPIIS/assets/144333910/62534045-de95-431f-a7ff-2d82ea7b2449)
