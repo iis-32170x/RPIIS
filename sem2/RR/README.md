@@ -1,4 +1,4 @@
-![image](https://github.com/iis-32170x/RPIIS/assets/148442454/aa6b1ade-8286-4572-8cea-20bb2e8fadab)# Расчётная работа
+# Расчётная работа
 
 ### Цель
 
