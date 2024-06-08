@@ -42,7 +42,8 @@
 
 
 Затем происходит проверка степени каждой вершины. Если хотя бы одна вершина имеет степень больше трех, граф считается непланарным и возвращается значение false. Иначе функция возвращает true.
-![image](https://github.com/iis-32170x/RPIIS/assets/149104399/ba352e8e-5b22-4ebe-9037-ea6782e7c245)
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/38872a58-6b37-4afb-831b-23425551c5e0)
+
 
 
 
@@ -50,18 +51,21 @@
 
  цикл данного алгоритма:
 
- ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/fe90fa32-96a5-4647-861e-3809db94df87)
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/bcae0b8e-16d5-46b6-a7bb-c9daf642603d)
 
 
 примеры планарного графа:
-1. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/234e52a7-119e-4c6c-995c-b3eaaca505dc)
+1. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/50857058-4e0e-442e-8696-cb1abc773a5d)
 
 
 
- 2. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/510a0a94-794d-4277-b838-79d603582e25)
+
+ 2. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/41cdc70f-6b20-4f11-a90a-4a8e55be5b42)
+
 пример не планарного графа:
 
- ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/a5f21abe-d710-4ea8-91a9-d12169f72279)
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/5208f902-d0bd-41d7-947e-db93216f0240)
+
 
 
    
