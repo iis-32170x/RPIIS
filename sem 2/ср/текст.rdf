@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <!-- Определение индивидуумов -->
+  <owl:NamedIndividual rdf:about="#A"/>
+  <owl:NamedIndividual rdf:about="#B"/>
+  <owl:NamedIndividual rdf:about="#C"/>
+  <owl:NamedIndividual rdf:about="#D"/>
+  <owl:NamedIndividual rdf:about="#E"/>
+  <owl:NamedIndividual rdf:about="#F"/>
+  <owl:NamedIndividual rdf:about="#P"/>
+  <owl:NamedIndividual rdf:about="#T"/>
+
+  <!-- Определение свойств -->
+  <owl:ObjectProperty rdf:about="#onSide"/>
+  <owl:DatatypeProperty rdf:about="#hasLength"/>
+
+  <!-- Отношение "на стороне" для вершин Т и Е -->
+  <rdf:Description rdf:about="#T">
+    <onSide rdf:resource="#BC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#E">
+    <onSide rdf:resource="#CD"/>
+  </rdf:Description>
+
+  <!-- Задание длин сторон, заданных как половина длины стороны AB -->
+  <rdf:Description rdf:about="#AB">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</hasLength>
+  </rdf:Description>
+  <!-- ВТ = CE = DP = AF = ½ АВ -->
+  <rdf:Description rdf:about="#VT">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CE">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DP">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="#AF">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasLength>
+  </rdf:Description>
+
+  <!-- Сумма ВС + ВТ = 12 -->
+  <rdf:Description rdf:about="#BC">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.0</hasLength>
+  </rdf:Description>
+  <rdf:Description rdf:about="#VT">
+    <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</hasLength>
+  </rdf:Description>
+
+  <!-- Отношение подобия треугольников СЕТ и FAP с коэффициентом 2 -->
+  <rdf:Description>
+    <owl:sameAs rdf:resource="#SET"/>
+    <owl:sameAs rdf:resource="#FAP"/>
+    <owl:sameAs rdf:resource="#triangle_similarity"/>
+    <owl:sameAs rdf:resource="#similarity_coefficient"/>
+    <rdf:Description rdf:about="#similarity_coefficient">
+      <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</hasValue>
+    </rdf:Description>
+  </rdf:Description>
+
+</rdf:RDF>
