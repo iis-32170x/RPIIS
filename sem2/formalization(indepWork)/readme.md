@@ -17,4 +17,4 @@
 ![](img/text_ind_prot.png)
 
 # Формализация формулы (KBE)
-![](img/formule_kbe)
+![](img/formule_kbe.png)
