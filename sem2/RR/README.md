@@ -35,7 +35,8 @@
 
 пример планарного графа:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/149104399/fba688b6-3549-42c0-b87a-c472433e3318)
+![image](https://github.com/iis-32170x/RPIIS/assets/149104399/3030dcc6-adaf-43bf-b28a-02d3de4201d8)
+
 
 
 
