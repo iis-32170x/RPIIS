@@ -28,22 +28,24 @@ n - m + k
 1.Задается неориентированный граф
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g1.jpg)
+
 2. создание переменной k для подсчета компонентов связности, выбор начальной вершины для обхода
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g2.jpg)
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g3.jpg)
+
 3.обход, увеличение счетчика
 
-////
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g6.jpg)
 
 5.подсчет ребер, увеличение счетчика
 
-/////
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g7.jpg)
 
 6.подсчет минимального количества вершин, 
 
-//////
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g8.jpg)
 
 7.Затем по формуле1 вычисляется количествогде m - количество ребер, а n - количество вершин.
 
-///////
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g8.jpg)
