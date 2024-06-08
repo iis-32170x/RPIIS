@@ -46,4 +46,4 @@
 
 Декартово произведение:
 
-![image](proiz_noer.png)
+![image](proiz_neor.png)
