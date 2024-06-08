@@ -52,13 +52,14 @@
 
 
 примеры планарного графа:
-![image](https://github.com/iis-32170x/RPIIS/assets/149104399/234e52a7-119e-4c6c-995c-b3eaaca505dc)
+1. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/234e52a7-119e-4c6c-995c-b3eaaca505dc)
 
 
+
+ 2. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/510a0a94-794d-4277-b838-79d603582e25)
 пример не планарного графа:
-1. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/510a0a94-794d-4277-b838-79d603582e25)
 
-2. ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/a5f21abe-d710-4ea8-91a9-d12169f72279)
+ ![image](https://github.com/iis-32170x/RPIIS/assets/149104399/a5f21abe-d710-4ea8-91a9-d12169f72279)
 
 
    
