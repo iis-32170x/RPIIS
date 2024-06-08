@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kamanol/ontologies/2024/4/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kamanol/ontologies/2024/4/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/kamanol/ontologies/2024/4/untitled-ontology-2/"/>
+    <Prefix name="Км" IRI="http://www.semanticweb.org/kamanol/ontologies/2024/4/untitled-ontology-2#Км/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-2" IRI="http://www.semanticweb.org/kamanol/ontologies/2024/4/untitled-ontology-2#"/>
+    <Declaration>
+        <Class IRI="#Астрономический_объект"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Астрономы"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Величина"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Зодиакальное_созвездие"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Объект"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Планета"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Расстояние"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Сверхновая_звезда"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Термин"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Человек"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Число"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Явление"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Включение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Дата_наблюдения"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Диаметр"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Значение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Наблюдение"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Остаток"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Отождествление"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Равенство"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Скорость_расширения"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Часть"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Кпк"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Номер_года_в_Григореанском_календаре"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Пк"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Световой_год"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Км/с"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SN_1054"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Арабские"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Взрыв_сверхновой_звезды"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Джон_Бевис"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Земля"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Китайские"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Первый"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Плерион"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Созвездие_Тельца"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1054"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1500"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1731"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3.4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#6500"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Сверхновая_звезда"/>
+        <NamedIndividual IRI="#SN_1054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Астрономы"/>
+        <NamedIndividual IRI="#Арабские"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Явление"/>
+        <NamedIndividual IRI="#Взрыв_сверхновой_звезды"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Человек"/>
+        <NamedIndividual IRI="#Джон_Бевис"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Планета"/>
+        <NamedIndividual IRI="#Земля"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Астрономы"/>
+        <NamedIndividual IRI="#Китайские"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Астрономический_объект"/>
+        <NamedIndividual IRI="#Крабовидная_туманность"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Объект"/>
+        <NamedIndividual IRI="#Первый"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Термин"/>
+        <NamedIndividual IRI="#Плерион"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Зодиакальное_созвездие"/>
+        <NamedIndividual IRI="#Созвездие_Тельца"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#1054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#1054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#1500"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#1500"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#1731"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#1731"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Расстояние"/>
+        <NamedIndividual IRI="#2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#3.4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#3.4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Величина"/>
+        <NamedIndividual IRI="#6500"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Расстояние"/>
+        <NamedIndividual IRI="#6500"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Число"/>
+        <NamedIndividual IRI="#6500"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Номер_года_в_Григореанском_календаре"/>
+        <NamedIndividual IRI="#1054"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Световой_год"/>
+        <NamedIndividual IRI="#11"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Км/с"/>
+        <NamedIndividual IRI="#1500"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Номер_года_в_Григореанском_календаре"/>
+        <NamedIndividual IRI="#1731"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Кпк"/>
+        <NamedIndividual IRI="#2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Пк"/>
+        <NamedIndividual IRI="#3.4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Световой_год"/>
+        <NamedIndividual IRI="#6500"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal"></Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
