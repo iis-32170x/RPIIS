@@ -34,7 +34,7 @@ n - m + k
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g2.jpg)
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g3.jpg)
 
-3.обход, увеличение счетчика
+3.обход вершиин, увеличение счетчика вершин и связки
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g6.jpg)
 
