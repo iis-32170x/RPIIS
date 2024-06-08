@@ -37,14 +37,15 @@ n - m + k
 3.обход вершиин, увеличение счетчика вершин и связки
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g6.jpg)
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g7.jpg)
 
 5.подсчет ребер, увеличение счетчика
 
-![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g7.jpg)
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g8.jpg)
 
 6.подсчет минимального количества вершин, 
 
-![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g8.jpg)
+
 
 7.Затем по формуле1 вычисляется количествогде m - количество ребер, а n - количество вершин.
 
