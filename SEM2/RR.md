@@ -31,7 +31,7 @@ n - m + k
 2. создание переменной k для подсчета компонентов связности, выбор начальной вершины для обхода
 
 ![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g2.jpg)
-
+![Img1](https://github.com/iis-32170x/RPIIS/blob/%D0%A5%D0%BE%D0%B4%D0%BE%D1%81%D0%BE%D0%B2_%D0%A2/SEM2/g3.jpg)
 3.обход, увеличение счетчика
 
 ////
