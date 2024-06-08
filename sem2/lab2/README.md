@@ -39,16 +39,14 @@
 1) **Вход:**  
 ![](photos/test1_input.png)  
 **Выход:**  
-![](photos/test1.output.png)  
+![](photos/test1_output.png)  
 2) **Вход:**  
 ![](photos/test2_input.png)  
 **Выход:**  
-![](photos/test2.output.png)  
+![](photos/test2_output.png)  
 3) **Вход:**  
 ![](photos/test3_input.png)  
 **Выход:**  
-![](photos/test3.output.png)  
-**Выход:**  
-![](photos/test5.output.png)  
+![](photos/test3_output.png)  
 # Вывод:
 В результате работы была изучена теория множеств, а также реализована программа на языке С++, находящая множество, равное объединению произвольного количества исходных множеств(с учетом кратных вхождений элементов).
