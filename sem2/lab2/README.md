@@ -47,13 +47,7 @@
 3) **Вход:**  
 ![](photos/test3_input.png)  
 **Выход:**  
-![](photos/test3.output.png)
-4) **Вход:**  
-![](photos/test4_input.png)  
-**Выход:**  
-![](photos/test4.output.png)  
-5) **Вход:**  
-![](photos/test5_input.png)  
+![](photos/test3.output.png)  
 **Выход:**  
 ![](photos/test5.output.png)  
 # Вывод:
