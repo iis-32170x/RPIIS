@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/katusarublevsk/ontologies/2024/3/untitled-ontology-4"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/katusarublevsk/ontologies/2024/3/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.semanticweb.org/katusarublevsk/ontologies/2024/3/untitled-ontology-4/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Органические_соединения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Химические_соединения"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Шестиатомный_гидроксиальдегид"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#гексоза"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#дисахариды"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#моносахарид"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#полисахариды"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#сахариды"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Альтернативное_название"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Виноград"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Входит_в_состав"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Источник_энергии"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Химическая_формула"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Является_компонентом"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Глюкоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#гликоген"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#крахмал"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#лактоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#мальтоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#сахароза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#фруктоза"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#целлюлоза"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Шестиатомный_гидроксиальдегид"/>
+        <Class IRI="#гексоза"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Органические_соединения"/>
+        <Class IRI="#Химические_соединения"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Шестиатомный_гидроксиальдегид"/>
+        <Class IRI="#моносахарид"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#гексоза"/>
+        <Class IRI="#моносахарид"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#дисахариды"/>
+        <Class IRI="#сахариды"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#моносахарид"/>
+        <Class IRI="#сахариды"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#полисахариды"/>
+        <Class IRI="#сахариды"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#сахариды"/>
+        <Class IRI="#Органические_соединения"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Шестиатомный_гидроксиальдегид"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#моносахарид"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#гликоген"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#гликоген"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#полисахариды"/>
+        <NamedIndividual IRI="#гликоген"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#крахмал"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#крахмал"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#полисахариды"/>
+        <NamedIndividual IRI="#крахмал"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахариды"/>
+        <NamedIndividual IRI="#крахмал"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#лактоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#лактоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#дисахариды"/>
+        <NamedIndividual IRI="#лактоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахариды"/>
+        <NamedIndividual IRI="#лактоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#мальтоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#мальтоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#дисахариды"/>
+        <NamedIndividual IRI="#мальтоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахариды"/>
+        <NamedIndividual IRI="#мальтоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#сахароза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#сахароза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#дисахариды"/>
+        <NamedIndividual IRI="#сахароза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахариды"/>
+        <NamedIndividual IRI="#сахароза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#фруктоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#фруктоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Шестиатомный_гидроксиальдегид"/>
+        <NamedIndividual IRI="#фруктоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#моносахарид"/>
+        <NamedIndividual IRI="#фруктоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Органические_соединения"/>
+        <NamedIndividual IRI="#целлюлоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Химические_соединения"/>
+        <NamedIndividual IRI="#целлюлоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#полисахариды"/>
+        <NamedIndividual IRI="#целлюлоза"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#сахариды"/>
+        <NamedIndividual IRI="#целлюлоза"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Альтернативное_название"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>D-глюкоза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Альтернативное_название"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>Виноградный_сахар</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Альтернативное_название"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>декстроза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Виноград"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>произошло название этого вида
+сахара</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>гликоген</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>крахмал</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>лактоза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>мальтоза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>сахароза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Входит_в_состав"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>целлюлоза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Источник_энергии"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>Распространенный в живых организмах</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Химическая_формула"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>С6Н12О6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Является_компонентом"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>сока из фруктов и ягод</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>гликоген</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>крахмал</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#Глюкоза"/>
+        <Literal>целлюлоза</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <Literal>гликоген</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <Literal>крахмал</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#продукт_расщепления_в_пищеварительном_тракте"/>
+        <NamedIndividual IRI="#фруктоза"/>
+        <Literal>целюлоза</Literal>
+    </DataPropertyAssertion>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Виноград"/>
+        <DataProperty IRI="#Является_компонентом"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Глюкоза</IRI>
+        <Literal>Глюкоза</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
