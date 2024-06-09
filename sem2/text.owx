@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/nikit/ontologies/2024/4/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/nikit/ontologies/2024/4/untitled-ontology-3">
+    <Prefix name="" IRI="http://www.semanticweb.org/nikit/ontologies/2024/4/untitled-ontology-3/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Атомность"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Вещество"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Гомологические_ряды"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Загрязняющий_агент"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Контаминант"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Концентрация"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Названия"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Параметр"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Простейшие_спирты"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Реакция"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Смеси"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Спирт"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Температура"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Токсикометрический_показатель"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Цвет"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Имеет_синонимы"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Смешивание_с"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Агрегатное_состояние"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Атомная_характеристика"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Концентрация"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Первый_представитель"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Структурный_тип"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Температура"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Характеристика"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Цветовая_характеристика"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Бесцветный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Взрывоопасные_смеси"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вода"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Воздух"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Вспышка"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гидроксид_метила"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Гомологический_ряд"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Древесный_спирт"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Жидкость"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Карбинол"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Метанол"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Метилгидрат"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Метиловый_спирт"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Одноатомный"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Органические_растворители"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ядовитый"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#6.98-35.5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#8"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Атомность"/>
+        <Class IRI="#Параметр"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Контаминант"/>
+        <Class IRI="#Загрязняющий_агент"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Концентрация"/>
+        <Class IRI="#Параметр"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Простейшие_спирты"/>
+        <Class IRI="#Спирт"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Температура"/>
+        <Class IRI="#Параметр"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Токсикометрический_показатель"/>
+        <Class IRI="#Параметр"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Цвет"/>
+        <NamedIndividual IRI="#Бесцветный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Смеси"/>
+        <NamedIndividual IRI="#Взрывоопасные_смеси"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#Вода"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#Воздух"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Реакция"/>
+        <NamedIndividual IRI="#Вспышка"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Названия"/>
+        <NamedIndividual IRI="#Гидроксид_метила"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Гомологические_ряды"/>
+        <NamedIndividual IRI="#Гомологический_ряд"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Названия"/>
+        <NamedIndividual IRI="#Древесный_спирт"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#Жидкость"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Названия"/>
+        <NamedIndividual IRI="#Карбинол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#Метанол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Контаминант"/>
+        <NamedIndividual IRI="#Метанол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Простейшие_спирты"/>
+        <NamedIndividual IRI="#Метанол"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Названия"/>
+        <NamedIndividual IRI="#Метилгидрат"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Названия"/>
+        <NamedIndividual IRI="#Метиловый_спирт"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Атомность"/>
+        <NamedIndividual IRI="#Одноатомный"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Вещество"/>
+        <NamedIndividual IRI="#Органические_растворители"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Токсикометрический_показатель"/>
+        <NamedIndividual IRI="#Ядовитый"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Концентрация"/>
+        <NamedIndividual IRI="#6.98-35.5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Температура"/>
+        <NamedIndividual IRI="#8"/>
+    </ClassAssertion>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Атомная_характеристика"/>
+        <DataProperty IRI="#Характеристика"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Цветовая_характеристика"/>
+        <DataProperty IRI="#Характеристика"/>
+    </SubDataPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
