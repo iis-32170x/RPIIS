@@ -16,27 +16,15 @@
 ## Реализация алгоритма
 1. Функция readSetsFromUser запрашивает у пользователя количество множеств и их содержимое. Пользователю предлагается ввести количество множеств, затем для каждого множества вводится его мощность (количество элементов) и сами элементы. Введенные множества сохраняются в векторе множеств и возвращаются из функции.
 
-2. Функция calculateSetDifference вычисляет разность между множествами. Она принимает вектор множеств и находит разность между первым множеством и остальными. Для этого она создает копию первого множества и удаляет из него элементы, которые присутствуют в остальных множествах. Результат сохраняется в виде множества и возвращается из функции.
-
-3. Основная функция main вызывает readSetsFromUser для получения множеств от пользователя. Затем она проверяет, что было введено как минимум два множества, и если это не так, выводит сообщение об ошибке. Если все в порядке, основная функция вызывает calculateSetDifference для вычисления разности между множествами и выводит результат в консоль.
-
-## Код
-#include <iostream>
-#include <vector>
-#include <set>
-using namespace std;
-// Function to read sets from user input
 vector<std::set<int>> readSetsFromUser() {
     int numSets;
     cout << "Количество множеств: ";
     cin >> numSets;
-
     vector<set<int>> sets;
     for (int i = 0; i < numSets; ++i) {
         int setSize;
         cout << "Мощность множества " << (i + 1) << ": ";
         cin >> setSize;
-
         set<int> s;
         int num;
         cout << "Введите элементы множества " << (i + 1) << " разделенные пробелами: ";
@@ -46,44 +34,41 @@ vector<std::set<int>> readSetsFromUser() {
         }
         sets.push_back(s);
     }
-
     return sets;
 }
 
-// Function to calculate set difference
+
+2. Функция calculateSetDifference вычисляет разность между множествами. Она принимает вектор множеств и находит разность между первым множеством и остальными. Для этого она создает копию первого множества и удаляет из него элементы, которые присутствуют в остальных множествах. Результат сохраняется в виде множества и возвращается из функции.
+
 std::set<int> calculateSetDifference(const vector<set<int>>& sets) {
     if (sets.empty()) {
         return {};
     }
-
     std::set<int> result = sets[0];
-
     for (size_t i = 1; i < sets.size(); ++i) {
         for (int num : sets[i]) {
             result.erase(num);
         }
     }
-
     return result;
 }
+
+
+3. Основная функция main вызывает readSetsFromUser для получения множеств от пользователя. Затем она проверяет, что было введено как минимум два множества, и если это не так, выводит сообщение об ошибке. Если все в порядке, основная функция вызывает calculateSetDifference для вычисления разности между множествами и выводит результат в консоль.
 
 int main() {
     setlocale(LC_ALL, "Russian");
     vector<set<int>> sets = readSetsFromUser();
-
     if (sets.size() < 2) {
         cerr << "Необходимо минимум два множества" << endl;
         return 1;
     }
-
     set<int> difference = calculateSetDifference(sets);
-
     cout << "Разность множеств: ";
     for (int num : difference) {
         cout << num << " ";
     }
     cout << endl;
-
     return 0;
 }
 
