@@ -3,29 +3,28 @@
 
 Задание 1. 
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5%2014.png
+![условие 14](https://github.com/iis-32170x/RPIIS/assets/148959714/0576b99c-3cc2-420e-9722-894bf35e2186)
 
 Результат:
 
 ## Protege
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D0%B6%D0%B5%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B.png
+![протежеклассы](https://github.com/iis-32170x/RPIIS/assets/148959714/84f87636-c7b9-469a-8f08-35275580abc1)
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/%D0%BF%D1%80%D0%BE%D1%82%D0%B5%D0%B6%D0%B52.png
+![протеже2](https://github.com/iis-32170x/RPIIS/assets/148959714/ede321d9-5b5b-4502-ba22-ba0d5eb34683)
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/3.png
+![3](https://github.com/iis-32170x/RPIIS/assets/148959714/8000026a-a54a-4fc7-a434-77292e3c3738)
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/4.png
+![4](https://github.com/iis-32170x/RPIIS/assets/148959714/57cd85dc-76e1-406a-934e-7e64d47d8ee5)
 
 ## KBE
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/KBE%2014.png
+![KBE 14](https://github.com/iis-32170x/RPIIS/assets/148959714/602cc84e-ce6e-425b-b394-fbf9f505c203)
 
 Задание 2.
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5%203.png
+![условие 3](https://github.com/iis-32170x/RPIIS/assets/148959714/522c6fb2-6280-49f4-9c18-615c6f6e3a27)
 
 Результат:
 
-https://github.com/iis-32170x/RPIIS/blob/%D0%93%D0%B5%D1%82%D1%83%D0%BD_%D0%AF/Sem2/pz/KBE%203.png
-
+![KBE 3](https://github.com/iis-32170x/RPIIS/assets/148959714/089ae19b-7936-4367-953a-e3c3d1f2e638)
