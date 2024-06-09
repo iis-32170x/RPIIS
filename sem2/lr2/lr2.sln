@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+vector<set<int>> readSetsFromUser() {
+    int numSets;
+    cout << "Количество множеств: ";
+    cin >> numSets;
+
+    vector<set<int>> sets;
+    for (int i = 0; i < numSets; ++i) {
+        int setSize;
+        cout << "Мощность множества " << (i + 1) << ": ";
+        cin >> setSize;
+
+        set<int> s;
+        int num;
+        cout << "Введите элементы множества " << (i + 1) << " разделенные пробелами: ";
+        for (int j = 0; j < setSize; ++j) {
+            cin >> num;
+            s.insert(num);
+        }
+        sets.push_back(s);
+    }
+
+    return sets;
+}
+
+
+set<int> calculateSetDifference(const vector<set<int>>& sets) {
+    if (sets.empty()) {
+        return {};
+    }
+
+    set<int> result = sets[0];
+
+    for (size_t i = 1; i < sets.size(); ++i) {
+        for (int num : sets[i]) {
+            result.erase(num);
+        }
+    }
+
+    return result;
+}
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    vector<set<int>> sets = readSetsFromUser();
+
+    if (sets.size() < 2) {
+        cerr << "Необходимо минимум два множества" << endl;
+        return 1;
+    }
+
+    set<int> difference = calculateSetDifference(sets);
+
+    cout << "Разность множеств: ";
+    for (int num : difference) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
