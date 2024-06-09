@@ -1,0 +1,25 @@
+/*vector<int> IFile(string filename) {
+    vector<int> nums;
+    ifstream ifile(filename);
+
+    if (!ifile.is_open()) {
+        cout << "Ошибка открытия файла" << endl;
+    }
+    if (ifile.is_open()) {
+        ifile.ignore();
+
+        int line;
+        while (!ifile.eof()) {
+            ifile >> line;
+            ifile.ignore();
+            nums.push_back(line);
+        }
+        
+    }
+
+    nums.pop_back();
+    ifile.close();
+    return nums;
+}*/
+
+        //IFile("Mnozhestvo.txt");
