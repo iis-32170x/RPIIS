@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/bankevich/ontologies/2024/3/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/bankevich/ontologies/2024/3/untitled-ontology-9">
+    <Prefix name="" IRI="http://www.semanticweb.org/bankevich/ontologies/2024/3/untitled-ontology-9/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Онтология текста про Освейское озеро</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#District"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Island"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LakePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LandObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PartOfEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#River"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Silt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Watershed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#RelatedToWatershed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#flowInto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#покрыто"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#почтиГраница"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CoveredPercentage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Depth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DrySeason"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Measurements"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PlaceBySquare"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#areaSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#characteristics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#covering"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Depths"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FlowingStreams"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Island"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LakeBottom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LakeCenter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Latvia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OsveyaLake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PskovRegion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RepublicOfBelarus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VerkhnedvinskyDistrict"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VityebskRegion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WesternDvina"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FinedendriticSapropele"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Naroch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ClayeySilt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SiliceousSapropel"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#District"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Island"/>
+        <Class IRI="#LandObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lake"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LakePart"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PartOfEntity"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Region"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#River"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stream"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Watershed"/>
+        <Class IRI="#LandObject"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Silt"/>
+        <NamedIndividual IRI="#ClayeySilt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LakePart"/>
+        <NamedIndividual IRI="#Depths"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Silt"/>
+        <NamedIndividual IRI="#FinedendriticSapropele"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Stream"/>
+        <NamedIndividual IRI="#FlowingStreams"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Island"/>
+        <NamedIndividual IRI="#Island"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PartOfEntity"/>
+        <NamedIndividual IRI="#LakeCenter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Latvia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lake"/>
+        <NamedIndividual IRI="#Naroch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lake"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#PskovRegion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#RepublicOfBelarus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Silt"/>
+        <NamedIndividual IRI="#SiliceousSapropel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#District"/>
+        <NamedIndividual IRI="#VerkhnedvinskyDistrict"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Region"/>
+        <NamedIndividual IRI="#VityebskRegion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Watershed"/>
+        <NamedIndividual IRI="#WesternDvina"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#flowInto"/>
+        <NamedIndividual IRI="#FlowingStreams"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Island"/>
+        <NamedIndividual IRI="#LakeCenter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#покрыто"/>
+        <NamedIndividual IRI="#LakeBottom"/>
+        <NamedIndividual IRI="#ClayeySilt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#покрыто"/>
+        <NamedIndividual IRI="#LakeBottom"/>
+        <NamedIndividual IRI="#FinedendriticSapropele"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#покрыто"/>
+        <NamedIndividual IRI="#LakeBottom"/>
+        <NamedIndividual IRI="#SiliceousSapropel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#RelatedToWatershed"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#WesternDvina"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#RepublicOfBelarus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#VerkhnedvinskyDistrict"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#VityebskRegion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#Latvia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <NamedIndividual IRI="#PskovRegion"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Depth"/>
+        <NamedIndividual IRI="#Depths"/>
+        <Literal>до 2 м</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#covering"/>
+        <NamedIndividual IRI="#Depths"/>
+        <Literal>более 70 % площади озера</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DrySeason"/>
+        <NamedIndividual IRI="#FlowingStreams"/>
+        <Literal>лето</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#areaSize"/>
+        <NamedIndividual IRI="#Island"/>
+        <Literal>4,85 км²</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#size"/>
+        <NamedIndividual IRI="#Island"/>
+        <Literal>большой</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#CoveredPercentage"/>
+        <NamedIndividual IRI="#LakeBottom"/>
+        <Literal>около 70%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PlaceBySquare"/>
+        <NamedIndividual IRI="#Naroch"/>
+        <Literal>первое</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PlaceBySquare"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <Literal>второе</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#characteristics"/>
+        <NamedIndividual IRI="#OsveyaLake"/>
+        <Literal>слабопроточное</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <ObjectProperty IRI="#locatedIn"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#RelatedToWatershed"/>
+        <Class IRI="#Lake"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#flowInto"/>
+        <Class IRI="#Stream"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Lake"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#покрыто"/>
+        <Class IRI="#LakePart"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <Class IRI="#Lake"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#RelatedToWatershed"/>
+        <Class IRI="#Watershed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#flowInto"/>
+        <Class IRI="#Lake"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#покрыто"/>
+        <Class IRI="#Silt"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#почтиГраница"/>
+        <Class IRI="#Region"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Depth"/>
+        <DataProperty IRI="#Measurements"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#areaSize"/>
+        <DataProperty IRI="#Measurements"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClayeySilt</IRI>
+        <Literal>ГлинистыйИл</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal>Страна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoveredPercentage</IRI>
+        <Literal>процентПокрытия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Depth</IRI>
+        <Literal>глубина</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Depths</IRI>
+        <Literal>Глубины</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#District</IRI>
+        <Literal>Район</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DrySeason</IRI>
+        <Literal>сезонЗасухи</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FinedendriticSapropele</IRI>
+        <Literal>ТонкодендритовыйСапропель</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FlowingStreams</IRI>
+        <Literal>ВпадающиеРучьи</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Island</IRI>
+        <Literal>Остров</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lake</IRI>
+        <Literal>Озеро</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LakeBottom</IRI>
+        <Literal>ДноОзера</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LakeCenter</IRI>
+        <Literal>ЦентрОзера</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LakePart</IRI>
+        <Literal>ЧастьОзера</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LandObject</IRI>
+        <Literal>ОбъектСуши</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Latvia</IRI>
+        <Literal>Латвия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Location</IRI>
+        <Literal>Местоположение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Measurements</IRI>
+        <Literal>измерения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Naroch</IRI>
+        <Literal>Нарочь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OsveyaLake</IRI>
+        <Literal>ОсвейскоеОзеро</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PartOfEntity</IRI>
+        <Literal>ЧастьОзера</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PlaceBySquare</IRI>
+        <Literal>местоПоПлощади</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PskovRegion</IRI>
+        <Literal>ПсковскаяОбласть</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Region</IRI>
+        <Literal>Область</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelatedToWatershed</IRI>
+        <Literal>относится_к</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RepublicOfBelarus</IRI>
+        <Literal>РеспубликаБеларусь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#River</IRI>
+        <Literal>Река</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SiliceousSapropel</IRI>
+        <Literal>КремнеземистыйСапропель</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Silt</IRI>
+        <Literal>Ил</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stream</IRI>
+        <Literal>Ручей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VerkhnedvinskyDistrict</IRI>
+        <Literal>ВерхнедвинскийРайон</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VityebskRegion</IRI>
+        <Literal>ВитебскаяОбласть</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WaterObject</IRI>
+        <Literal>ВодныйОбъект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Watershed</IRI>
+        <Literal>РечнойБассейн</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WesternDvina</IRI>
+        <Literal>Бассейн_ЗападнойДвины</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#areaSize</IRI>
+        <Literal>площадь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#characteristics</IRI>
+        <Literal>свойствоОзера</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#covering</IRI>
+        <Literal>занимают</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#flowInto</IRI>
+        <Literal>впадают_в</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#locatedIn</IRI>
+        <Literal>расположено_в</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#size</IRI>
+        <Literal>размерОтносительный</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
