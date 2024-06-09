@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Время -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Время">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дата"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Выше -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Выше">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Место -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Место">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Плита"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Наивысшая_точка -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Наивысшая_точка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Страна"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Возвышенность"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Деревня"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Деревня"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Неподалеку -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Неподалеку">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Новое_название -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Новое_название">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Объект_нахождения -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Объект_нахождения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Объект_переименования -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Объект_переименования">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Ориентир -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Ориентир">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Старое_название -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Старое_название">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Устанавливаемый_объект -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Устанавливаемый_объект">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Плита"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Часть -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Часть">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гряда"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Возвышенность"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Возвышенность -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Возвышенность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гряда -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гряда"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дата -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дата"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Деревня -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Деревня"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Плита -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Плита"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Страна"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Беларусь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Беларусь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Страна"/>
+        <untitled-ontology-2:Наивысшая_точка rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Белорусская_гряда -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Белорусская_гряда">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гряда"/>
+        <untitled-ontology-2:Часть rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минская_возвышенность"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Белорусский_язык -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Белорусский_язык">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Язык"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора"/>
+        <untitled-ontology-2:Высота rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#345_метров"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская._Высшая_точка_Белоруссии._Высота_345_над_уровнем_моря -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская._Высшая_точка_Белоруссии._Высота_345_над_уровнем_моря">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Надпись"/>
+        <untitled-ontology-2:Язык rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Белорусский_язык"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гранитная_плита -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гранитная_плита">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Плита"/>
+        <untitled-ontology-2:Надпись rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская._Высшая_точка_Белоруссии._Высота_345_над_уровнем_моря"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дзержинск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дзержинск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город"/>
+        <untitled-ontology-2:Неподалеку rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дзержинская -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дзержинская">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Запад -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Запад">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Направление"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Конец_1990-х_годов -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Конец_1990-х_годов">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дата"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Город"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минская_возвышенность -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минская_возвышенность">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Возвышенность"/>
+        <untitled-ontology-2:Нахождение rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Скримантово"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Нахождение"/>
+        <untitled-ontology-2:Направление rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Запад"/>
+        <untitled-ontology-2:Объект_нахождения rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+        <untitled-ontology-2:Ориентир rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Минск"/>
+        <untitled-ontology-2:Расстояние rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#30_км"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Переименование"/>
+        <untitled-ontology-2:Время rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#1958_год"/>
+        <untitled-ontology-2:Новое_название rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дзержинская"/>
+        <untitled-ontology-2:Объект_переименования rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+        <untitled-ontology-2:Старое_название rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Святая_Гора"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Святая_Гора -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Святая_Гора">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Название"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Скримантово -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Скримантово">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Деревня"/>
+        <untitled-ontology-2:Нахождение rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Уровень_моря -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Уровень_моря">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+        <untitled-ontology-2:Выше rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#345_метров"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Установление"/>
+        <untitled-ontology-2:Время rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Конец_1990-х_годов"/>
+        <untitled-ontology-2:Место rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гора_Дзержинская"/>
+        <untitled-ontology-2:Устанавливаемый_объект rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Гранитная_плита"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#1958_год -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#1958_год">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Дата"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#30_км -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#30_км">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Расстояние"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#345_метров -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#345_метров">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vlad/ontologies/2024/5/untitled-ontology-2#Высота"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
