@@ -22,25 +22,47 @@
 cout << "введите количество множеств: ";
 cin >> n;
 
-int** A = new int* [n];
+string** A = new string* [n];
 int* C = new int[n];
-int K[200];
+string K[200], p=",",v, v1;
 ```
 
 2. **Задаём элементы множеств**
 
 ```cpp
     for (i = 0; i < n; i++) {
-	cout << "введите количество элементов " << i + 1 << " множества : ";
-	cin >> m;
-	cout << endl;
-	C[i] = m;
-	A[i] = new int[m];
-	for (j = 0; j < m; j++) {
-		cout << "Ведите " << j + 1 << " элемент множества: ";
-		cin >> A[i][j];
-		cout << endl;
+	cout << "Ведите элементы"<<i+1<<" множества через запятую: ";
+	cin >>line;
+	L = line.length();
+	count = 0;
+	for (ii = 0; ii < L; ii++) {
+		v = line[ii];
+		if (v.compare(p) == 0) {
+			count++;
+		}
 	}
+	w = 0;
+	C[i] = count+1;
+	ct = 0;
+	A[i] = new string[count+1];
+	for (ii = 0; ii < L; ii++) {
+		v = line[ii];
+		if (v.compare(p) == 0) {
+			line2 = line;
+			line2.erase(ii, L-ii);
+			A[i][w] = line2;
+			line = line.erase(0, ii+1);
+			ct++;
+			w++;
+			L = line.length();
+			ii = 0;
+		}
+		if (ct == count) {
+			A[i][w] = line;
+			break;
+		}
+	}
+
 }
 ```
 
@@ -54,7 +76,7 @@ for (i = 0; i < n; i++) {
 			if (i == i1) i1++;
 			if (i1 != n) {
 				for (j1 = 0; j1 < C[i1]; j1++) {
-					if (A[i][j] == A[i1][j1]) {
+					if (A[i][j].compare(A[i1][j1]) == 0) { //(A[i][j] == A[i1][j1])
 						t = 1;
 					}
 					if (i != (n-1)) {
@@ -83,6 +105,8 @@ for (i = 0; i < n; i++) {
 4. **Вывод ответа**
 
 ```cpp
+cout << " Симметрическая разность множеств: ";
+
 for (int y = 0; y < k; y++) {
 	cout << K[y]<<" ";
 }
