@@ -12,7 +12,7 @@ bool readInputFile(const string& filename, vector<multiset<int>>& sets) {
     if (!infile.is_open()) 
     
     {
-        cerr << "Îøèáêà: íå óäàëîñü îòêðûòü ôàéë " << filename << endl;
+        cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ Ã³Ã¤Ã Ã«Ã®Ã±Ã¼ Ã®Ã²ÃªÃ°Ã»Ã²Ã¼ Ã´Ã Ã©Ã« " << filename << endl;
         return false;
     }
 
@@ -20,7 +20,7 @@ bool readInputFile(const string& filename, vector<multiset<int>>& sets) {
     int n;
 
     if (!getline(infile, line) || !(istringstream(line) >> n) || n <= 0) {
-        cerr << "Îøèáêà: íåêîððåêòíîå êîëè÷åñòâî ìíîæåñòâ." << endl;
+        cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢." << endl;
         return false;
     }
 
@@ -29,12 +29,12 @@ bool readInputFile(const string& filename, vector<multiset<int>>& sets) {
     for (int i = 0; i < n; ++i) {
         int m;
         if (!getline(infile, line) || !(istringstream(line) >> m) || m < 0) {
-            cerr << "Îøèáêà: íåêîððåêòíîå êîëè÷åñòâî ýëåìåíòîâ â ìíîæåñòâå " << i + 1 << "." << endl;
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã¥ " << i + 1 << "." << endl;
             return false;
         }
 
         if (!getline(infile, line)) {
-            cerr << "Îøèáêà: íåäîñòàòî÷íî ñòðîê äëÿ ìíîæåñòâà " << i + 1 << "." << endl;
+            cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥Ã¤Ã®Ã±Ã²Ã Ã²Ã®Ã·Ã­Ã® Ã±Ã²Ã°Ã®Ãª Ã¤Ã«Ã¿ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã  " << i + 1 << "." << endl;
             return false;
         }
 
@@ -42,7 +42,7 @@ bool readInputFile(const string& filename, vector<multiset<int>>& sets) {
         for (int j = 0; j < m; ++j) {
             int elem;
             if (!(elemStream >> elem)) {
-                cerr << "Îøèáêà: íåêîððåêòíûå ýëåìåíòû â ìíîæåñòâå " << i + 1 << "." << endl;
+                cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã» Ã¢ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã¥ " << i + 1 << "." << endl;
                 return false;
             }
             sets[i].insert(elem);
@@ -65,16 +65,16 @@ int main() {
     vector<string> filenames = { "test1.txt", "test2.txt", "test3.txt", "test4.txt", "test5.txt" };
     int choice;
 
-    cout << "Âûáåðèòå ôàéë äëÿ ÷òåíèÿ äàííûõ:" << endl;
+    cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã´Ã Ã©Ã« Ã¤Ã«Ã¿ Ã·Ã²Ã¥Ã­Ã¨Ã¿ Ã¤Ã Ã­Ã­Ã»Ãµ:" << endl;
     for (size_t i = 0; i < filenames.size(); ++i) {
         cout << i + 1 << ": " << filenames[i] << endl;
     }
 
-    cout << "Ââåäèòå íîìåð ôàéëà (1-5): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã´Ã Ã©Ã«Ã  (1-5): ";
     cin >> choice;
 
     if (choice < 1 || choice > 5) {
-        cerr << "Îøèáêà: íåêîððåêòíûé âûáîð." << endl;
+        cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã»Ã¡Ã®Ã°." << endl;
         return 1;
     }
 
@@ -87,7 +87,7 @@ int main() {
 
     multiset<int> result = unionMultisets(sets);
 
-    cout << "Îáúåäèíåííîå ìíîæåñòâî: ";
+    cout << "ÃŽÃ¡ÃºÃ¥Ã¤Ã¨Ã­Ã¥Ã­Ã­Ã®Ã¥ Ã¬Ã­Ã®Ã¦Ã¥Ã±Ã²Ã¢Ã®: ";
     for (const auto& elem : result) {
         cout << elem << " ";
     }
