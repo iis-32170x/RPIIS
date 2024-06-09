@@ -172,10 +172,6 @@ void Peresechenie(vetka* mnozhA, vetka* mnozhB, vetka*& mnozhC) {
 	Peresechenie(mnozhA->right, mnozhB, mnozhC);
 }
    ```
-*****
-## <p align="center">Тесты:</p>
-![результат тестов](https://github.com/iis-32170x/RPIIS/blob/a1e9b18d66d97691475edbe514a4ce13e9b0220f/sem2/lab1/tests/testresult.png)
-******
 ## <p align="center">Вывод:</p>
 В ходе выполнения работы познакомился созданием библиотек в С++, реализоавал библиотеку работы с массивами,а также создал систему тестов,которая проверяет корректность созданной библиотеки, отточил свои навыки в создании структур и функций.
 ## <p align="center">Используемые источники:</p>
