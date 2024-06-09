@@ -31,13 +31,13 @@
    
    Этот алгоритм добавляет элемент в множество. Добавление сделано так, чтобы элементы множества не повторялись и были различны
 ```cpp
-void Add(Branch*& current, int value) {
+void Add(vetka*& current, int value) {
 	if (!current) {
-		current = new Branch(value); //добавляем/создаем элемент
+		current = new vetka(value);
 		return;
 	}
 	else
-		if (value < current->data) { 
+		if (value < current->data) {
 			Add(current->left, value);
 		}
 		else if (value > current->data)
@@ -46,54 +46,53 @@ void Add(Branch*& current, int value) {
 		}
 		else 	return;
 }
-}
+
 ```
 2. **Алгоритм удаления элемента**
    
    Этот алгоритм удаляет заданный элемент, если такой имеется. В противном случае ничего не произойдет
 ```cpp
-Branch* findMinNode(Branch* node) {
+vetka* findMinNode(vetka* node) {
 	if (node == nullptr) {
-		return nullptr; // Не найден минимальный узел
+		return nullptr; 
 	}
 	else if (node->left == nullptr) {
-		return node; // Мы достигли самого левого узла в дереве
+		return node; 
 	}
 	else {
-		return findMinNode(node->left); // Рекурсивно ищем в левом поддереве
+		return findMinNode(node->left); 
 	}
 }
 
-
-void removeNode(Branch*& current, int value) {
+void removeNode(vetka*& current, int value) {
 	if (current == nullptr) {
-		return; // Узел не найден
+		return; 
 	}
 	if (value < current->data) {
-		// Ищем в левом поддереве
+		
 		removeNode(current->left, value);
 	}
 	else if (value > current->data) {
-		// Ищем в правом поддереве
+		
 		removeNode(current->right, value);
 	}
 	else {
-		// Нашли узел
+		
 		if (current->left == nullptr) {
-			// Узел имеет только правого потомка
-			Branch* temp = current;
+			
+			vetka* temp = current;
 			current = current->right;
 			delete temp;
 		}
 		else if (current->right == nullptr) {
-			// Узел имеет только левого потомка
-			Branch* temp = current;
+			
+			vetka* temp = current;
 			current = current->left;
 			delete temp;
 		}
 		else {
-			// Узел имеет двух потомков, находим и удаляем узел с минимальным значением в правом поддереве
-			Branch* minRight = findMinNode(current->right);
+			
+			vetka* minRight = findMinNode(current->right);
 			current->data = minRight->data;
 			removeNode(current->right, minRight->data);
 		}
@@ -104,28 +103,31 @@ void removeNode(Branch*& current, int value) {
 
    Данный алгоритм ищет заданный элемент и возвращает ссылку, если элемент найден
 ```cpp
-Branch* FindElem(Branch* node, int value) {
-	if (!node){
-		std::cout << "Элемент не найден";
+vetka* FindElem(vetka* node, int value) {
+	setlocale(LC_ALL, "Russian");
+	if (!node) {
+		cout << "Элемент не найден";
 		return NULL;
-}
+	}
 	if (node->data == value) {
-		std::cout << "Элемент найден";
+		cout << "Элемент найден";
 		return node;
 	}
-	if (node->data<value)
+	if (node->data < value)
 		FindElem(node->right, value);
-	else 
+	else
 		FindElem(node->left, value);
 }
+
 ```
 
 4. **Вывод множества на экран**
 ```cpp
-void print(Branch* node) {
+void print(vetka* node) {
 	if (!node) return;
+
 	print(node->left);
-	std::cout << node->data << " ";
+	cout << node->data << " ";
 	print(node->right);
 }
 ```
@@ -133,16 +135,16 @@ void print(Branch* node) {
  5. **Алгоритм объединения**
 
    ```cpp
-void add1(Branch*& current, Branch*& mnozhC) {
+void add1(vetka*& current, vetka*& mnozhC) {
 	if (!current) return;
 	Add(mnozhC, current->data);
 	add1(current->right, mnozhC);
 	add1(current->left, mnozhC);
 }
 
-void Objedinenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
-	add1(mnozhA, mnozhC); //добавляем элементы множества А
-	add1(mnozhB, mnozhC); //добавляем элементы множества В
+void Objedinenie(vetka* mnozhA, vetka* mnozhB, vetka*& mnozhC) {
+	add1(mnozhA, mnozhC);
+	add1(mnozhB, mnozhC);
 }
    ```
 
@@ -150,7 +152,7 @@ void Objedinenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
 	
       В данном алгоритме каждый элемент множества А сравнивается с каждым элементом множества В. При совпадении элемент добавляется в пересечение
    ```cpp
-void proverka(int value, Branch* node, Branch*& mnozhC) { 
+void proverka(int value, vetka* node, vetka*& mnozhC) {
 	if (!node) return;
 	if (node->data == value) {
 		Add(mnozhC, value);
@@ -162,7 +164,7 @@ void proverka(int value, Branch* node, Branch*& mnozhC) {
 
 
 
-void Peresechenie(Branch* mnozhA, Branch* mnozhB, Branch*& mnozhC) {
+void Peresechenie(vetka* mnozhA, vetka* mnozhB, vetka*& mnozhC) {
 	if (!mnozhA) return;
 	proverka(mnozhA->data, mnozhB, mnozhC);
 
