@@ -43,11 +43,11 @@ int radius(vector<vector<int>>& adjMatrix, int V) {
 int main() {
     setlocale(LC_ALL, "RUS");
     int V;
-    cout << "Ââåäèòå ÷èñëî âåðøèí: ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã¢Ã¥Ã°Ã¸Ã¨Ã­: ";
     cin >> V;
 
     vector<vector<int>> adjMatrix(V, vector<int>(V));
-    cout << "Ââåäèòå ìàòðèöó ñìåæíîñòè (åñëè íåò ðåáðà, ââåäèòå INF):" << endl;
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¬Ã Ã²Ã°Ã¨Ã¶Ã³ Ã±Ã¬Ã¥Ã¦Ã­Ã®Ã±Ã²Ã¨ (Ã¥Ã±Ã«Ã¨ Ã­Ã¥Ã² Ã°Ã¥Ã¡Ã°Ã , Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ INF):" << endl;
     for (int i = 0; i < V; i++) {
         for (int j = 0; j < V; j++) {
             cin >> adjMatrix[i][j];
@@ -55,7 +55,7 @@ int main() {
     }
 
     int rad = radius(adjMatrix, V);
-    cout << "Ðàäèóñ âçâåøåííîãî îðèåíòèðîâàííîãî ãðàôà: " << rad << endl;
+    cout << "ÃÃ Ã¤Ã¨Ã³Ã± Ã¢Ã§Ã¢Ã¥Ã¸Ã¥Ã­Ã­Ã®Ã£Ã® Ã®Ã°Ã¨Ã¥Ã­Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã­Ã®Ã£Ã® Ã£Ã°Ã Ã´Ã : " << rad << endl;
 
     return 0;
 }
