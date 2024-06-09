@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/bankevich/ontologies/2024/4/untitled-ontology-19"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/bankevich/ontologies/2024/4/untitled-ontology-19">
+    <Prefix name="" IRI="http://www.semanticweb.org/bankevich/ontologies/2024/4/untitled-ontology-19/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Онтология текста про реку Сож</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Continent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HystoricalEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#River"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TerritoryUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Town"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tributaries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#acted_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#destroyed_during"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#flows_through"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#flows_through_partly_broad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#flows_through_territory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_situated_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#left_tributary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#main_tributaries"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#stands_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#493km_of_length_in_Belarus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#catchment_area"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lengh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#length_of_shipping_section"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Belarus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Besed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chechersk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cheryckov"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dniepr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Europe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GatewaySystem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gomel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GreatPatrioticWar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Krychev"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oster"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pronya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Russia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Slavgorod"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sozh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ukraine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vetka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vikhra"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Continent"/>
+        <Class IRI="#TerritoryUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="#TerritoryUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#River"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Town"/>
+        <Class IRI="#TerritoryUnit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tributaries"/>
+        <Class IRI="#WaterObject"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Belarus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tributaries"/>
+        <NamedIndividual IRI="#Besed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Chechersk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Cheryckov"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#Dniepr"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Continent"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Object"/>
+        <NamedIndividual IRI="#GatewaySystem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Gomel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HystoricalEvent"/>
+        <NamedIndividual IRI="#GreatPatrioticWar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tributaries"/>
+        <NamedIndividual IRI="#Iput"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Krychev"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tributaries"/>
+        <NamedIndividual IRI="#Oster"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tributaries"/>
+        <NamedIndividual IRI="#Pronya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Russia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Slavgorod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#River"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Ukraine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town"/>
+        <NamedIndividual IRI="#Vetka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tributaries"/>
+        <NamedIndividual IRI="#Vikhra"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Chechersk"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Cheryckov"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#acted_on"/>
+        <NamedIndividual IRI="#GatewaySystem"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#destroyed_during"/>
+        <NamedIndividual IRI="#GatewaySystem"/>
+        <NamedIndividual IRI="#GreatPatrioticWar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Gomel"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Krychev"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Slavgorod"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#flows_through_partly_broad"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Ukraine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#flows_through_territory"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Belarus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#flows_through_territory"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Russia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is_situated_in"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Europe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#left_tributary"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Dniepr"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#main_tributaries"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Besed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#main_tributaries"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Iput"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#main_tributaries"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Oster"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#main_tributaries"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Pronya"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#main_tributaries"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Vikhra"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#493km_of_length_in_Belarus"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <NamedIndividual IRI="#Belarus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#stands_on"/>
+        <NamedIndividual IRI="#Vetka"/>
+        <NamedIndividual IRI="#Sozh"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Chechersk"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Cheryckov"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Gomel"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Krychev"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Slavgorod"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#catchment_area"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <Literal>42 100 км²</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lengh"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <Literal>648 км</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#length_of_shipping_section"/>
+        <NamedIndividual IRI="#Sozh"/>
+        <Literal>373 км</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location_relative_to_the_river_flow"/>
+        <NamedIndividual IRI="#Vetka"/>
+        <Literal>вниз по течению</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#flows_through_partly_broad"/>
+        <ObjectProperty IRI="#flows_through"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#flows_through_territory"/>
+        <ObjectProperty IRI="#flows_through"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Belarus</IRI>
+        <Literal>Беларусь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Besed</IRI>
+        <Literal>Беседь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Chechersk</IRI>
+        <Literal>Чечерск</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cheryckov</IRI>
+        <Literal>Чериков</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Continent</IRI>
+        <Literal>Континент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal>Страна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dniepr</IRI>
+        <Literal>Днепр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Europe</IRI>
+        <Literal>Европа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GatewaySystem</IRI>
+        <Literal>ШлюзованнаяСистема</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Gomel</IRI>
+        <Literal>Гомель</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GreatPatrioticWar</IRI>
+        <Literal>ВеликаяОтечественнаяВойна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HystoricalEvent</IRI>
+        <Literal>ИсторическоеСобытие</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Iput</IRI>
+        <Literal>Ипуть</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Krychev</IRI>
+        <Literal>Кричев</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Object</IRI>
+        <Literal>Объект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oster</IRI>
+        <Literal>Остёр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pronya</IRI>
+        <Literal>Проня</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#River</IRI>
+        <Literal>Река</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Russia</IRI>
+        <Literal>Россия</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Slavgorod</IRI>
+        <Literal>Славгород</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sozh</IRI>
+        <Literal>Сож</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TerritoryUnit</IRI>
+        <Literal>ТерриториальнаяЕдиница</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Town</IRI>
+        <Literal>Город</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ukraine</IRI>
+        <Literal>Украина</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vetka</IRI>
+        <Literal>Ветка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vikhra</IRI>
+        <Literal>Вихра</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WaterObject</IRI>
+        <Literal>ВодныйОбъект</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acted_on</IRI>
+        <Literal>ранее_действовала_на</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#catchment_area</IRI>
+        <Literal>площадь_водосборного_бассейна</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#destroyed_during</IRI>
+        <Literal>разрушена_во_время</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#flows_through</IRI>
+        <Literal>протекает_по</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#flows_through_partly_broad</IRI>
+        <Literal>протекает_частично_по_границе_с</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#flows_through_territory</IRI>
+        <Literal>протекает_по_территории</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_situated_in</IRI>
+        <Literal>расположен_в</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#left_tributary</IRI>
+        <Literal>левый_приток</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lengh</IRI>
+        <Literal>длина</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#length_of_shipping_section</IRI>
+        <Literal>длина_судоходного_участка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#location_relative_to_the_river_flow</IRI>
+        <Literal>расположение_относительно_течения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#main_tributaries</IRI>
+        <Literal>основные_притоки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stands_on</IRI>
+        <Literal>стоит_на</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tributaries</IRI>
+        <Literal>Приток</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#493km_of_length_in_Belarus</IRI>
+        <Literal>485_км_длины_реки_по</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
