@@ -68,7 +68,7 @@ ___
 ![IMG_37](Images/img37.png)
 ___
 
-## Загрузка понятий в ostis-example_app
+## Загрузка понятий в ostis-example-app
 ![IMG_38](Images/img38.png)
 ![IMG_39](Images/img39.png)
 
