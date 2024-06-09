@@ -7,7 +7,7 @@
 
 Результат:
 
-# Protege
+#### Protege
 
 ![протежеклассы](https://github.com/iis-32170x/RPIIS/assets/148959714/84f87636-c7b9-469a-8f08-35275580abc1)
 
@@ -17,7 +17,7 @@
 
 ![4](https://github.com/iis-32170x/RPIIS/assets/148959714/57cd85dc-76e1-406a-934e-7e64d47d8ee5)
 
-# KBE
+#### KBE
 
 ![KBE 14](https://github.com/iis-32170x/RPIIS/assets/148959714/602cc84e-ce6e-425b-b394-fbf9f505c203)
 
