@@ -16,7 +16,7 @@
 ## Реализация алгоритма
 1. Функция readSetsFromUser запрашивает у пользователя количество множеств и их содержимое. Пользователю предлагается ввести количество множеств, затем для каждого множества вводится его мощность (количество элементов) и сами элементы. Введенные множества сохраняются в векторе множеств и возвращаются из функции.
 ``` C++
-vector<std::set<int>> readSetsFromUser() {
+vector<set<int>> readSetsFromUser() {
     int numSets;
     cout << "Количество множеств: ";
     cin >> numSets;
@@ -40,11 +40,11 @@ vector<std::set<int>> readSetsFromUser() {
 
 2. Функция calculateSetDifference вычисляет разность между множествами. Она принимает вектор множеств и находит разность между первым множеством и остальными. Для этого она создает копию первого множества и удаляет из него элементы, которые присутствуют в остальных множествах. Результат сохраняется в виде множества и возвращается из функции.
 ``` C++
-std::set<int> calculateSetDifference(const vector<set<int>>& sets) {
+set<int> calculateSetDifference(const vector<set<int>>& sets) {
     if (sets.empty()) {
         return {};
     }
-    std::set<int> result = sets[0];
+    set<int> result = sets[0];
     for (size_t i = 1; i < sets.size(); ++i) {
         for (int num : sets[i]) {
             result.erase(num);
