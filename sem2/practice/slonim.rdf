@@ -1,0 +1,580 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15/"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-15="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#в -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#к -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#к">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лежит_на_слиянии_рек -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лежит_на_слиянии_рек">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#на_пути -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#на_пути">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#наиболее_древний -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#наиболее_древний">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится_между -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится_между">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#от -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#от">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#относится -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#относится">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#показывает_принадлежность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#показывает_принадлежность">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#принадлежит -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#принадлежит">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#районный_центр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#районный_центр">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#составило_человек -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#составило_человек">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#является -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#является">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#был_официально_утвержден -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#был_официально_утвержден">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лежит_в -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лежит_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится_в -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#находится_в">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#по_данным_на -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#по_данным_на">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo">
+        <rdfs:label>число</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#country">
+        <rdfs:label>страны</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#data">
+        <rdfs:label>даты</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#gerb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#gerb">
+        <rdfs:label>герб</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda">
+        <rdfs:label>города</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#lakes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#lakes">
+        <rdfs:label>реки</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#oblast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#oblast">
+        <rdfs:label>область</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#rayon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#rayon">
+        <rdfs:label>район</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#storoni_sveta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#storoni_sveta">
+        <rdfs:label>стороны_света</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#velichina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#velichina">
+        <rdfs:label>величина</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#zhd_stanciya -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#zhd_stanciya">
+        <rdfs:label>железнодородная_станция</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#гипук -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#гипук">
+        <rdfs:label>население</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лыв -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лыв">
+        <rdfs:label>личности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#монастырь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#монастырь">
+        <rdfs:label>монастырь</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Барановичи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Барановичи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Волковыск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Волковыск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродненская_область -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродненская_область">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#oblast"/>
+        <untitled-ontology-15:в rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#РБ"/>
+        <untitled-ontology-15:лежит_на_слиянии_рек rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Щара"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродно -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродно">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+        <rdfs:label>монастырь</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Жировичиский_православный_монастырь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Жировичиский_православный_монастырь">
+        <untitled-ontology-15:находится_в>10км</untitled-ontology-15:находится_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Жировичский_православный_монастырь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Жировичский_православный_монастырь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#монастырь"/>
+        <untitled-ontology-15:находится_в>10км</untitled-ontology-15:находится_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Исса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Исса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#lakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Лев -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Лев">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#gerb"/>
+        <untitled-ontology-15:является rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#герб"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Лев_Сопега -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Лев_Сопега">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#лыв"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Минск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Минск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#РБ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#РБ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слоним -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слоним">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+        <untitled-ontology-15:в rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродненская_область"/>
+        <untitled-ontology-15:в rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#РБ"/>
+        <untitled-ontology-15:лежит_на_слиянии_рек rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Исса"/>
+        <untitled-ontology-15:лежит_на_слиянии_рек rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Щара"/>
+        <untitled-ontology-15:наиболее_древний rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#город"/>
+        <untitled-ontology-15:районный_центр rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слонимский_район"/>
+        <untitled-ontology-15:лежит_в>143км</untitled-ontology-15:лежит_в>
+        <untitled-ontology-15:лежит_в>195км</untitled-ontology-15:лежит_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слонимская_станция -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слонимская_станция">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#zhd_stanciya"/>
+        <untitled-ontology-15:находится_между rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Барановичи"/>
+        <untitled-ontology-15:находится_между rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Волковыск"/>
+        <untitled-ontology-15:находится_в>10км</untitled-ontology-15:находится_в>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слонимский_район -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слонимский_район">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#rayon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Щара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Щара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#lakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#герб -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#герб">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#gerb"/>
+        <untitled-ontology-15:принадлежит rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слоним"/>
+        <untitled-ontology-15:был_официально_утвержден>04.01.1591</untitled-ontology-15:был_официально_утвержден>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#герб"/>
+        <owl:assertionProperty rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#показывает_принадлежность"/>
+        <owl:targetIndividual rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#город"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#город -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#город">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#goroda"/>
+        <untitled-ontology-15:относится rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Лев_Сопега"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#население -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#население">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#гипук"/>
+        <untitled-ontology-15:составило_человек rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#48977"/>
+        <untitled-ontology-15:по_данным_на>01.01.2013</untitled-ontology-15:по_данным_на>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-восток -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-восток">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#storoni_sveta"/>
+        <untitled-ontology-15:от rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Гродно"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-запад -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-запад">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#storoni_sveta"/>
+        <untitled-ontology-15:от rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Минск"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#01.01.2013 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#01.01.2013">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#04.01.1591 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#04.01.1591">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#data"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#10км -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#10км">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#velichina"/>
+        <untitled-ontology-15:от rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#Слоним"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#143 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#143">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#143км -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#143км">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#velichina"/>
+        <untitled-ontology-15:к rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-восток"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#195 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#195">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#195км -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#195км">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#velichina"/>
+        <untitled-ontology-15:к rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#юго-запад"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#48977 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#48977">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/4/untitled-ontology-15#chislo"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
