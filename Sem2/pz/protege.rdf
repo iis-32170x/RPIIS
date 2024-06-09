@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#железнодорожная_станция -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#железнодорожная_станция"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#наиболее_древний -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#наиболее_древний"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#показывание -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#показывание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#принадлежность -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#принадлежность"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#районный_центр -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#районный_центр"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#расположение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#расположение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#утверждение -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#утверждение"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#юго-восток -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#юго-восток">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#сторона_света"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#юго-запад -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#юго-запад">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#сторона_света"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#январь -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#январь">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#месяц"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#дата -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#дата"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_в_километрахх -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_в_километрахх"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#население -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#население"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#число_января -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#число_января"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#высказывание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#высказывание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_с_фиксированной_единицей_измерения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#измерение_с_фиксированной_единицей_измерения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#месяц -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#месяц"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#область_Беларуси -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#область_Беларуси"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#район_Беларуси -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#район_Беларуси"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#река -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#река"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#сторона_света -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#сторона_света"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#страна -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#страна"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#число -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#число"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Барановичи -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Барановичи">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Беларусь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Беларусь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#страна"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Волковыск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Волковыск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродненская -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродненская">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#область_Беларуси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродно -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродно">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним"/>
+        <untitled-ontology-5:юго-восток rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним"/>
+        <untitled-ontology-5:измерение_в_километрахх rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">143</untitled-ontology-5:измерение_в_километрахх>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Жировичский_православный_монастырь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Жировичский_православный_монастырь">
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним"/>
+        <untitled-ontology-5:измерение_в_километрахх rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</untitled-ontology-5:измерение_в_километрахх>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Исса -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Исса">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#река"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Лев_Сапега -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Лев_Сапега"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Минск -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Минск">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним"/>
+        <untitled-ontology-5:юго-запад rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним"/>
+        <untitled-ontology-5:измерение_в_километрахх rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">195</untitled-ontology-5:измерение_в_километрахх>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слоним">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#город_Беларуси"/>
+        <untitled-ontology-5:железнодорожная_станция rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Барановичи"/>
+        <untitled-ontology-5:железнодорожная_станция rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Волковыск"/>
+        <untitled-ontology-5:наиболее_древний rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Беларусь"/>
+        <untitled-ontology-5:принадлежность rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Лев_Сапега"/>
+        <untitled-ontology-5:районный_центр rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слонимский_район"/>
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Гродненская"/>
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Исса"/>
+        <untitled-ontology-5:расположение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Щара"/>
+        <untitled-ontology-5:дата rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">01012013</untitled-ontology-5:дата>
+        <untitled-ontology-5:население rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48977</untitled-ontology-5:население>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слонимский_район -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Слонимский_район">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#район_Беларуси"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Щара -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Щара">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#река"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#герб_Лев -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#герб_Лев">
+        <untitled-ontology-5:показывание rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#Лев_Сапега"/>
+        <untitled-ontology-5:утверждение rdf:resource="http://www.semanticweb.org/pinkk/ontologies/2024/4/untitled-ontology-5#герб_Лев"/>
+        <untitled-ontology-5:дата rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">04011591</untitled-ontology-5:дата>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
