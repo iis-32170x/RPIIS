@@ -1,0 +1,105 @@
+Prefix(:=<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5>
+
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Коэрцитивная_сила>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Сила_тока>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тело>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тонкий_цилиндр>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Форма>))
+Declaration(Class(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Электрический_ток>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Быть_намотаным>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Имеет_магнитное_поле>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Имеет_форму>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Пропускает_ток>))
+Declaration(DataProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Величина_силы_тока>))
+Declaration(DataProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Иметь_длину>))
+Declaration(DataProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Иметь_коэрцитивную_силу>))
+Declaration(DataProperty(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Количество_витков>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>))
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Быть_намотаным> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Быть_намотаным>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Быть_намотаным> owl:topObjectProperty)
+
+# Object Property: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Пропускает_ток> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Пропускает_ток>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Пропускает_ток> owl:topObjectProperty)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Коэрцитивная_сила> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Коэрцитивная_сила>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Коэрцитивная_сила> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тело>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тело>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Сила_тока> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Сила_тока>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Сила_тока> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тонкий_цилиндр> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тонкий_цилиндр>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тонкий_цилиндр> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Форма>)
+
+# Class: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Электрический_ток> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Электрический_ток>)
+
+SubClassOf(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Электрический_ток> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>)
+
+ClassAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тело> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Имеет_магнитное_поле> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Имеет_форму> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит>)
+DataPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Иметь_длину> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> "15"^^xsd:decimal)
+DataPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Иметь_коэрцитивную_силу> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнит> "H")
+
+# Individual: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле>)
+
+ClassAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Физическое_явление> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Магнитное_поле>)
+
+# Individual: <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> (<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>)
+
+ClassAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Тело> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Быть_намотаным> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Пропускает_ток> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод>)
+DataPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Величина_силы_тока> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> "3"^^xsd:decimal)
+DataPropertyAssertion(<http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Количество_витков> <http://www.semanticweb.org/xsan/ontologies/2024/4/untitled-ontology-5#Провод> "300"^^xsd:decimal)
+
+
+)
