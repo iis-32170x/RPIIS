@@ -93,11 +93,11 @@ e. Для каждого столбца `j` в матрице `matrix`:
 
 ## Результат погружения примеров расчётной работы и формализации понятий в базу знаний метасистемы OSTIS:
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144383538/e2dd4e51-1a95-4dd2-80ea-400806c783e4)
+![image]()
 
 
 
-![image](https://github.com/iis-32170x/RPIIS/assets/144383538/51aad28b-d788-4f0d-88d3-9e7d75826ade)
+![image]()
 
 
   
