@@ -1,0 +1,113 @@
+Prefix(:=<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4>
+
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Автор_песен>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Географическое_местоположение>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Направление_современной_музыки>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Острова>))
+Declaration(Class(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Певец>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Сформировался_в>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_королем>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_особенностью_в>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Акценты_в_аккомпанементе>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Бас-гитара>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Брейки_на_высоких_тонах>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Группа_духовых_инструментов>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Синкопированный_рисунок_баса>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ударные>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Умеренный_темп>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электрогитара>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электроорган>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ямайка>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Размер_4/4>))
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Острова> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Острова>)
+
+SubClassOf(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Острова> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Географическое_местоположение>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Акценты_в_аккомпанементе> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Акценты_в_аккомпанементе>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Акценты_в_аккомпанементе>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_особенностью_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Акценты_в_аккомпанементе> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Бас-гитара> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Бас-гитара>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Бас-гитара>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Бас-гитара> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Автор_песен> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли>)
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Певец> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_королем> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Боб_Марли> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Брейки_на_высоких_тонах> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Брейки_на_высоких_тонах>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Брейки_на_высоких_тонах>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_особенностью_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Брейки_на_высоких_тонах> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Группа_духовых_инструментов> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Группа_духовых_инструментов>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Группа_духовых_инструментов>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Группа_духовых_инструментов> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Направление_современной_музыки> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Сформировался_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ямайка>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Синкопированный_рисунок_баса> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Синкопированный_рисунок_баса>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Синкопированный_рисунок_баса>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ударные> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ударные>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ударные>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ударные> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Умеренный_темп> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Умеренный_темп>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Умеренный_темп>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электрогитара> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электрогитара>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электрогитара>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электрогитара> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электроорган> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электроорган>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Музыкальные_инструменты> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электроорган>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Используется_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Электроорган> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ямайка> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ямайка>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Острова> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Ямайка>)
+
+# Individual: <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Размер_4/4> (<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Размер_4/4>)
+
+ClassAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Особенности_в_музыке> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Размер_4/4>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Является_особенностью_в> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Размер_4/4> <http://www.semanticweb.org/kostya/ontologies/2024/5/untitled-ontology-4#Регги>)
+
+
+)
