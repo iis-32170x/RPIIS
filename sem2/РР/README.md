@@ -20,40 +20,35 @@
 
 ## Выполнение задания
 ### Демонстрация работы программы в семантической памяти
-1. Задаём граф, переменные `path`, `_visited_vertexes_count`, `current` и `initial`
+Входные данные: `graph`
 ![alt text](images/Вход.png)
-Демонстрация погрузки в базу знаний:
-![alt text](media/image-11.png)
 
+1. Задаём переменные `path`, `visited_nodes_count`, `current` и `initial`
+![alt text](images/1.png)
 
-2. Создаём первую волну, указывающую на вершину графа.
-![alt text](media/image-1.png)
-
-3. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
-![alt text](media/image-2.png)
+3. Создаём первую волну, указывающую на вершину графа.
+![alt text](images/Вход.png)
 
 4. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
-![alt text](media/image-3.png)
+![alt text](images/Вход.png)
 
 5. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
-![alt text](media/image-4.png)
+![alt text](images/Вход.png)
 
 6. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
-![alt text](media/image-5.png)
+![alt text](images/Вход.png)
 
 7. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
-![alt text](media/image-6.png)
+![alt text](images/Вход.png)
 
-8. Генерация пути:
-![alt text](media/image-7.png)
-Демонстрация погрузки в базу знаний:
-![alt text](media/image-10.png)
+8. Создаём следующую волну, перемещаем указатель current на следующую вершину, обновляем переменную `_visited_vertexes_count`.
+![alt text](images/Вход.png)
 
-9. `current` = `initial`, а также `_path` = `_visited_vertexes_count`, значит мы прошли по всем вершинам и вернулись в изначальную, алгоритм выполнен.
-![alt text](media/image-8.png)
-Демонстрация погрузки в базу знаний:
-![alt text](media/image-9.png)
+9. Генерация пути:
+![alt text](images/Вход.png)
 
+10. `current` = `initial`, а также `_path` = `_visited_vertexes_count`, значит мы прошли по всем вершинам и вернулись в изначальную, алгоритм выполнен.
+![alt text](images/Вход.png)
 
 # Вывод
 
