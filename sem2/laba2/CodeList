@@ -1,0 +1,91 @@
+\\Библиотека
+#include "C:\Users\Kostya\source\repos\лаба 2 пивас\Header.h\Header.h.cpp"
+#include "pch.h"
+#include "framework.h"
+#include <iostream>
+#include <vector>
+
+namespace SetLib
+{
+    std::vector<char> CreateSets() {
+
+        std::cout << "Заполните множество\n";
+
+        std::cout << "Введите размер множества " << ": ";
+        int size;
+        std::cin >> size;
+        std::vector<char> set;
+
+        std::cout << "Задайте элементы этого множества:\n";
+        for (int j = 0; j < size; j++) {
+            char element;
+            std::cin >> element;
+            set.push_back(element);
+        }
+        std::cout << std::endl;
+
+        return set;
+    }
+
+    void permute( std::vector<char>& sets, int l, int r) {
+            if (l == r)
+            {
+                std::cout << "{ ";
+                for (char num : sets)
+                {
+                    std::cout << num << " ";
+                }
+                std::cout << "}";
+                std::cout << std::endl;
+            }
+            else
+            {
+                for (int i = l; i <= r; i++)
+                {
+                    std::swap(sets[l], sets[i]);
+                    permute(sets, l + 1, r);
+                    std::swap(sets[l], sets[i]);
+                }
+            }
+        }
+    }
+\\Заголовочный файл
+#pragma once
+#include <vector>
+
+namespace SetLib
+{
+    
+    void permute( std::vector<char>& sets,int l,int r);
+
+   
+    std::vector<char> CreateSets();
+}
+\\Исполняемая программа
+#include <iostream>
+#include <vector>
+#include "C:\Users\Kostya\source\repos\лаба 2 пивас\Header.h\Header.h.cpp"
+
+using namespace std;
+using namespace SetLib;
+
+int main() {
+    setlocale(LC_ALL, "rus");
+
+    vector<char> set = CreateSets();
+    permute(set,0,set.size()-1);
+
+    return 0;
+}
+\\Тестовая программа
+#include "pch.h"
+
+#include "C:\Users\Kostya\source\repos\лаба 2 пивас\Header.h\Header.h.cpp"
+using namespace SetLib;
+TEST(TestSetLib, TestCreateSets) {
+  using namespace SetLib;
+  setlocale(LC_ALL, "ru");
+  std::vector<char> set = CreateSets();
+  //При введении размера 3
+  EXPECT_EQ(set.size(), 3);
+}
