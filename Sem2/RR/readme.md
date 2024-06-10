@@ -81,6 +81,29 @@
 
 ## Примеры:
 
+###1:
+
+![test 1 вход](https://github.com/iis-32170x/RPIIS/assets/148959714/8c0a3521-4e8b-42f5-bd20-d29269a87c86)
+
+![test1 выход (2)](https://github.com/iis-32170x/RPIIS/assets/148959714/a3ea00f5-d242-4847-a6b2-d691e18c32bd)
+
+###2:
+
+![test2 вход](https://github.com/iis-32170x/RPIIS/assets/148959714/d4b2551b-8db4-4aff-b138-f29f73229a14)
+
+![test2 выход](https://github.com/iis-32170x/RPIIS/assets/148959714/af876915-8c96-40f7-bf6f-b55172164789)
+
+###3:
+
+![test 3 вход](https://github.com/iis-32170x/RPIIS/assets/148959714/71591d70-19c3-4ccc-a24b-2f8fabb89778)
+
+![test 3 выход](https://github.com/iis-32170x/RPIIS/assets/148959714/6fc43139-0580-4440-b49d-77f81f93653a)
+
+###4:
+
+![test4 вход](https://github.com/iis-32170x/RPIIS/assets/148959714/7dab1140-5e75-411b-af12-198ff00f6cd8)
+
+![test2 выход](https://github.com/iis-32170x/RPIIS/assets/148959714/eb7bc77b-8a8d-471a-8d96-f52aecf26baf)
 
 # Вывод
 Был найден обхват графа, были рассмотрены ключевые аспекты формализации и обработки информации с использованием семантических сетей,
