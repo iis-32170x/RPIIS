@@ -1,4 +1,14 @@
 ## Условие 
+https://pan.baidu.com/s/1irda4jVysvZW3Tlyo-G-1A?pwd=q3b8
+
+https://physionet.org/content/challenge-2020/1.0.2/
+
+https://moody-challenge.physionet.org/2021/
+
+https://ieeexplore.ieee.org/abstract/document/9662741
+
+https://pan.baidu.com/s/1sbEKP-sgykmIakYsR8IZlg?pwd=fbpl
+
 86 Создать файл sh и bat, который выполняет следующее: 
 На вход пакетному файлу приходит значение порта (число) (как параметр пакетного файла). Если на данном порте запущен процесс, то вывести информацию о нем.
 Далее вывести сообщение, “Хотите завершить процесс? [Y/n]”, если после этого пользователь ввел Y, то 
