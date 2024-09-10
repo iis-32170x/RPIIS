@@ -8,19 +8,19 @@
 входит в состав сырой нефти, в промышленных масштабах он синтезируется из других её
 компонентов. Токсичен, канцерогенен.*
 **Задание №2** 
-![alt text](image-1.png)
+![1](img/image-1.png)
 
 
 ## Выполнение:
 
 ### Задание №1 (*KBE*):
-![alt text](image-2.png)
+![2](img/image-2.png)
 ### Задание №1 (*Protege*):
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+![3](img/image-3.png)
+![4](img/image-4.png)
+![5](img/image-5.png)
 ### Задание №2 (*KBE*):
-![alt text](image-6.png)
+![6](img/image-6.png)
 
 ## Вывод:
 Научился формализовать текст, математические уравнения и работать в KBE, Protege
