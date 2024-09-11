@@ -102,7 +102,7 @@ def read_sets_from_file(file_path):
     return sets
 
 # Пример использования
-sets = read_sets_from_file('sets.txt')
+sets = read_sets_from_file('/Users/vivi/LAB_1/sem2/LAB_2/sets.txt')
 
 result = union_with_multiplicity(*sets)
 
