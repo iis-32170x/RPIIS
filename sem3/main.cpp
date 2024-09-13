@@ -6,16 +6,16 @@
 using namespace std;
 
 // метод для вывода поля
-void TicTacToe::print_board() {
+void print_board(const std::vector<std::vector<char>>& board) {
     cout << "  ";
-    for (size_t i = 0; i < board_size; ++i) {
+    for (size_t i = 0; i < board.size(); ++i) {
         cout << i + 1 << " ";
     }
     cout << endl;
 
-    for (size_t i = 0; i < board_size; ++i) {
+    for (size_t i = 0; i < board.size(); ++i) {
         cout << i + 1 << " ";
-        for (size_t j = 0; j < board_size; ++j) {
+        for (size_t j = 0; j < board.size(); ++j) {
             cout << board[i][j] << " ";
         }
         cout << endl;
@@ -69,7 +69,7 @@ int main() {
                 char player;
                 player = rand() % 2 == 0 ? 'X' : 'O';
                 cout << "Игра началась! Сейчас ходит игрок " << player << endl;
-                game.print_board();
+                print_board(game.get_board());
 
                 while (true) {
                     pair<int, int> move = type_move(player);
@@ -84,17 +84,17 @@ int main() {
                     if (game.check_winner(player) || game.moves_count() == game.get_board_size() * game.get_board_size()) {
                         break;
                     }
-                    game.print_board();
+                    print_board(game.get_board());
                     player = player == 'X' ? 'O' : 'X';
                 }
     
                 if (game.check_winner(player)) {
                     cout << "Игра окончена. Победил игрок " << player << "!" << endl;
-                    game.print_board();
+                    print_board(game.get_board());
                 }
                 else if (game.moves_count() == game.get_board_size() * game.get_board_size()) { 
                     cout << "Игра окончена. Ничья!" << endl;
-                    game.print_board();
+                    print_board(game.get_board());
                 }
                 break;
             }
