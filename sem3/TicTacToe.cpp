@@ -21,6 +21,10 @@ void TicTacToe::create_board(size_t size) {
     }
 }
 
+const std::vector<std::vector<char>>& TicTacToe::get_board() {
+    return board;
+}
+
 // метод для проверки валидности хода
 bool TicTacToe::is_move_valid(int row, int col) {
     if (row >= board_size || col >= board_size || board[row][col] != '-' ||

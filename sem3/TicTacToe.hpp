@@ -13,7 +13,7 @@ public:
     TicTacToe();
     std::vector<char> &operator[](size_t i);
     void create_board(size_t size);
-    void print_board();
+    const std::vector<std::vector<char>>& get_board();
     bool is_move_valid(int row, int col);   
     bool check_winner(char player);
     bool make_move(int row, int col, char &player);
