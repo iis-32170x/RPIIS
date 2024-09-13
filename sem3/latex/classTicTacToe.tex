@@ -1,0 +1,116 @@
+\hypertarget{classTicTacToe}{}\doxysection{Tic\+Tac\+Toe Class Reference}
+\label{classTicTacToe}\index{TicTacToe@{TicTacToe}}
+
+
+{\ttfamily \#include $<$Tic\+Tac\+Toe.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{Tic\+Tac\+Toe}} ()
+\item 
+std\+::vector$<$ char $>$ \& \mbox{\hyperlink{classTicTacToe_a4faeaf48db5689f667b6472186dcedf0}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\item 
+void \mbox{\hyperlink{classTicTacToe_a063f0ef8a3bd66c65a4112eab9cb3357}{create\+\_\+board}} (size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{classTicTacToe_a6cf992789852fccdc82c02f184509e6f}{print\+\_\+board}} ()
+\item 
+bool \mbox{\hyperlink{classTicTacToe_a1a1ead056dc3902fba402702bd888d50}{is\+\_\+move\+\_\+valid}} (int row, int col)
+\item 
+bool \mbox{\hyperlink{classTicTacToe_a1bb12625f30efc1e94841e9609417d50}{check\+\_\+winner}} (char player)
+\item 
+bool \mbox{\hyperlink{classTicTacToe_a1c627683f1580e012d32b1d7ec181aa5}{make\+\_\+move}} (int row, int col, char \&player)
+\item 
+int \mbox{\hyperlink{classTicTacToe_a437817a623fd03c384e4328ce5c096ad}{moves\+\_\+count}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classTicTacToe_aae50741d97771d9d5fb9fe0f7a084063}{get\+\_\+board\+\_\+size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{classTicTacToe_a9dfe2341ae601004a0c660f1365d9336}{board}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classTicTacToe_a19ef7693e2f596a3a99dd9246995852d}{board\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}\label{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}} 
+\index{TicTacToe@{TicTacToe}!TicTacToe@{TicTacToe}}
+\index{TicTacToe@{TicTacToe}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{TicTacToe()}{TicTacToe()}}
+{\footnotesize\ttfamily Tic\+Tac\+Toe\+::\+Tic\+Tac\+Toe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTicTacToe_a1bb12625f30efc1e94841e9609417d50}\label{classTicTacToe_a1bb12625f30efc1e94841e9609417d50}} 
+\index{TicTacToe@{TicTacToe}!check\_winner@{check\_winner}}
+\index{check\_winner@{check\_winner}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{check\_winner()}{check\_winner()}}
+{\footnotesize\ttfamily bool Tic\+Tac\+Toe\+::check\+\_\+winner (\begin{DoxyParamCaption}\item[{char}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a063f0ef8a3bd66c65a4112eab9cb3357}\label{classTicTacToe_a063f0ef8a3bd66c65a4112eab9cb3357}} 
+\index{TicTacToe@{TicTacToe}!create\_board@{create\_board}}
+\index{create\_board@{create\_board}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{create\_board()}{create\_board()}}
+{\footnotesize\ttfamily void Tic\+Tac\+Toe\+::create\+\_\+board (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_aae50741d97771d9d5fb9fe0f7a084063}\label{classTicTacToe_aae50741d97771d9d5fb9fe0f7a084063}} 
+\index{TicTacToe@{TicTacToe}!get\_board\_size@{get\_board\_size}}
+\index{get\_board\_size@{get\_board\_size}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{get\_board\_size()}{get\_board\_size()}}
+{\footnotesize\ttfamily size\+\_\+t Tic\+Tac\+Toe\+::get\+\_\+board\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a1a1ead056dc3902fba402702bd888d50}\label{classTicTacToe_a1a1ead056dc3902fba402702bd888d50}} 
+\index{TicTacToe@{TicTacToe}!is\_move\_valid@{is\_move\_valid}}
+\index{is\_move\_valid@{is\_move\_valid}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{is\_move\_valid()}{is\_move\_valid()}}
+{\footnotesize\ttfamily bool Tic\+Tac\+Toe\+::is\+\_\+move\+\_\+valid (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a1c627683f1580e012d32b1d7ec181aa5}\label{classTicTacToe_a1c627683f1580e012d32b1d7ec181aa5}} 
+\index{TicTacToe@{TicTacToe}!make\_move@{make\_move}}
+\index{make\_move@{make\_move}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{make\_move()}{make\_move()}}
+{\footnotesize\ttfamily bool Tic\+Tac\+Toe\+::make\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{char \&}]{player }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a437817a623fd03c384e4328ce5c096ad}\label{classTicTacToe_a437817a623fd03c384e4328ce5c096ad}} 
+\index{TicTacToe@{TicTacToe}!moves\_count@{moves\_count}}
+\index{moves\_count@{moves\_count}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{moves\_count()}{moves\_count()}}
+{\footnotesize\ttfamily int Tic\+Tac\+Toe\+::moves\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a4faeaf48db5689f667b6472186dcedf0}\label{classTicTacToe_a4faeaf48db5689f667b6472186dcedf0}} 
+\index{TicTacToe@{TicTacToe}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily std\+::vector$<$ char $>$ \& Tic\+Tac\+Toe\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTicTacToe_a6cf992789852fccdc82c02f184509e6f}\label{classTicTacToe_a6cf992789852fccdc82c02f184509e6f}} 
+\index{TicTacToe@{TicTacToe}!print\_board@{print\_board}}
+\index{print\_board@{print\_board}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{print\_board()}{print\_board()}}
+{\footnotesize\ttfamily void Tic\+Tac\+Toe\+::print\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTicTacToe_a9dfe2341ae601004a0c660f1365d9336}\label{classTicTacToe_a9dfe2341ae601004a0c660f1365d9336}} 
+\index{TicTacToe@{TicTacToe}!board@{board}}
+\index{board@{board}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$char$>$ $>$ Tic\+Tac\+Toe\+::board\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTicTacToe_a19ef7693e2f596a3a99dd9246995852d}\label{classTicTacToe_a19ef7693e2f596a3a99dd9246995852d}} 
+\index{TicTacToe@{TicTacToe}!board\_size@{board\_size}}
+\index{board\_size@{board\_size}!TicTacToe@{TicTacToe}}
+\doxysubsubsection{\texorpdfstring{board\_size}{board\_size}}
+{\footnotesize\ttfamily size\+\_\+t Tic\+Tac\+Toe\+::board\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TicTacToe_8hpp}{Tic\+Tac\+Toe.\+hpp}}\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\item 
+\mbox{\hyperlink{TicTacToe_8cpp}{Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}
