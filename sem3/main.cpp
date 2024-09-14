@@ -79,10 +79,7 @@ int main() {
 
                 while (true) {
                     pair<int, int> move = type_move(player);
-                    if (move.first == -1 || move.second == -1) {
-                        continue;
-                    }
-                    if (!game.is_move_valid(move.first, move.second)) {
+                    if (!game.is_move_valid(move.first, move.second) || move.first < 0 || move.second < 0) {
                         cout << "Некорректный ход! Попробуйте еще раз." << endl;
                         continue;
                     }
