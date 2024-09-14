@@ -15,6 +15,10 @@ std::vector<char> &TicTacToe::operator[](std::size_t i) {
 // метод для создания поля
 void TicTacToe::create_board(std::size_t size) {
     board_size = size;
+    if (board_size < 2 || board_size > 10) {
+        std::cout << "Неверный размер поля. Укажите размер >2 и <10" << std::endl;
+        return;
+    }
     board.clear();
     for (std::size_t i = 0; i < board_size; i++) {
         board.push_back(std::vector<char>(board_size, '-'));
