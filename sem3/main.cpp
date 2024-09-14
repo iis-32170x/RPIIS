@@ -58,6 +58,12 @@ int main() {
 2. Изменить размер поля (по умолчанию 3)
 Ваш выбор: )";
         cin >> choice;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(32767, '\n'); 
+            cout << "Некорректный ввод! Попробуйте еще раз." << endl;
+            continue;
+        }
         switch (choice) {
             case 0:
             {
