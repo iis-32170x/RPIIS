@@ -5,8 +5,8 @@
 TEST(TicTacToe_test, create_board_test) {
     TicTacToe game1;
     ASSERT_EQ(game1.get_board_size(), 3);
-    for (size_t i = 0; i < game1.get_board_size(); ++i) {
-        for (size_t j = 0; j < game1.get_board_size(); ++j) {
+    for (std::size_t i = 0; i < game1.get_board_size(); ++i) {
+        for (std::size_t j = 0; j < game1.get_board_size(); ++j) {
             ASSERT_EQ(game1[i][j], '-');
         }
     }
@@ -71,8 +71,8 @@ TEST(TicTacToe_test, different_board_size) {
     TicTacToe game9;
     game9.create_board(5);
     ASSERT_EQ(game9.get_board_size(), 5);
-    for (size_t i = 0; i < game9.get_board_size(); ++i) {
-        for (size_t j = 0; j < game9.get_board_size(); ++j) {
+    for (std::size_t i = 0; i < game9.get_board_size(); ++i) {
+        for (std::size_t j = 0; j < game9.get_board_size(); ++j) {
             ASSERT_EQ(game9[i][j], '-');
         }
     }
@@ -116,12 +116,10 @@ TEST(TicTacToe_test, draw_end_test) {
     game12.make_move(2, 0, playero);
     game12.make_move(2, 1, playero);
     game12.make_move(2, 2, playerx);
-    game12.print_board();
     ASSERT_EQ(game12.check_winner(playero), false);
     ASSERT_EQ(game12.check_winner(playerx), false);
     ASSERT_EQ(game12.moves_count(), 9);
 }
-
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
