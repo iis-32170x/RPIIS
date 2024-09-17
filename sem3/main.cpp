@@ -106,8 +106,20 @@ int main() {
                 int board_size;
                 cout << "Введите новый размер поля: ";
                 cin >> board_size;
+                if (cin.fail()) {
+                    cin.clear();
+                    cin.ignore(32767, '\n'); 
+                    cout << "Некорректный ввод! Попробуйте еще раз." << endl;
+                    break;
+                }
+                else if (board_size < 2 || board_size > 10) {
+                    std::cout << "Неверный размер поля. Укажите размер >2 и <10" << std::endl;
+                    break;
+                }
+                else {
                 game.create_board(board_size);
                 break;
+                }
             }
             default:
             {
