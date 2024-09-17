@@ -25,20 +25,11 @@ void print_board(const std::vector<std::vector<char>>& board) {
 
 pair<int, int> type_move(char &player) {
     int row, col;
-    cout << "Игрок " << player << ", введите номер строки: ";
-    cin >> row;
+    cout << "Игрок " << player << ", введите номер строки и столбца и нажмите Enter: ";
+    cin >> row >> col;
     if (cin.fail()) {
         cin.clear();
         cin.ignore(32767, '\n');
-        cout << "Некорректный ввод! Попробуйте еще раз." << endl;
-        return make_pair(-1, -1);
-    }
-    cout << "Игрок " << player << ", введите номер столбца: ";
-    cin >> col;
-    if (cin.fail()) {
-        cin.clear();
-        cin.ignore(32767, '\n');
-        cout << "Некорректный ввод! Попробуйте еще раз." << endl;
         return make_pair(-1, -1);
     }
     row--; col--;
@@ -76,11 +67,11 @@ int main() {
                 // player = rand() % 2 == 0 ? 'X' : 'O';
                 cout << "Игра началась! Сейчас ходит игрок " << player << endl;
                 print_board(game.get_board());
-
                 while (true) {
                     pair<int, int> move = type_move(player);
                     if (!game.is_move_valid(move.first, move.second) || move.first < 0 || move.second < 0) {
                         cout << "Некорректный ход! Попробуйте еще раз." << endl;
+                        print_board(game.get_board());
                         continue;
                     }
                     game.make_move(move.first, move.second, player);
