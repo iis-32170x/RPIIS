@@ -72,8 +72,8 @@ int main() {
             case 1: 
             {
                 game.create_board(game.get_board_size());
-                char player;
-                player = rand() % 2 == 0 ? 'X' : 'O';
+                char player = 'X';
+                // player = rand() % 2 == 0 ? 'X' : 'O';
                 cout << "Игра началась! Сейчас ходит игрок " << player << endl;
                 print_board(game.get_board());
 
