@@ -14,7 +14,7 @@
 ## Выполнение:
 
 ### Задание №1 (*KBE*):
-![2](img/image-2.png)
+![2](img/image.png)
 ### Задание №1 (*Protege*):
 ![3](img/image-3.png)
 ![4](img/image-4.png)
