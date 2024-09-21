@@ -28,17 +28,30 @@ SCs код можно записывать в обычном текстовом 
 
 Причем обращаем ваше **ВНИМАНИЕ**: названия сущностей пишутся с **БОЛЬШОЙ буквы**, а классов с **маленькой**
 
+Также в конце каждого "SCs предложения" нужно ставить две ;;
+
+Вместо пробела используется нижнее подчеркивание '_'
+
 | SCs-код | SCg-код |
 |----------|---------|
-|concept_triangle -> ABC|![image](https://github.com/user-attachments/assets/dabfc3d4-215a-41c7-9b0f-74b296cce497)
-|concept_fruits -> Apple|![image](https://github.com/user-attachments/assets/5c28bafb-9240-47a6-8ad3-832869eb9c7a)|
-|Cat_Pushok <- concept_animal|![image](https://github.com/user-attachments/assets/9f665673-e02f-4de9-ac27-00dc5e40ec34)|
+|concept_triangle -> ABC;;|![image](https://github.com/user-attachments/assets/dabfc3d4-215a-41c7-9b0f-74b296cce497)
+|concept_fruits -> Apple;;|![image](https://github.com/user-attachments/assets/5c28bafb-9240-47a6-8ad3-832869eb9c7a)|
+|Cat_Pushok <- concept_animal;;|![image](https://github.com/user-attachments/assets/9f665673-e02f-4de9-ac27-00dc5e40ec34)|
 
 Придирчивый читатель может заметить, что Apple так же может быть и классом (apple). Но как раз таки написание с большой буквы и определяет, что в данном случае Apple - это сущность 
 
 Стоит заметить, что записи ниже являются равносильными, что вполне логично
 
-|concept_fruits -> Apple|Apple <- concept_fruits|
+|concept_fruits -> Apple;;|Apple <- concept_fruits;;|
 |----------|---------|
 
+### Ролевое и Неролевое отношение
+
+Для записи Ролевого и Неролевого отношения на SCs нужно, чтобы соблюдалась определенная формула:
+```
+node_1    'стрелочка между node_1 и node_2'    'название отношения' : node_2 ;;
+```
+| SCs-код | SCg-код |
+|----------|---------|
+|node_1 => nrel_relation: node_2;;|![image](https://github.com/user-attachments/assets/c7c803e7-f882-46db-a684-ba52a8c91b98)|
 
