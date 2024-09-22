@@ -171,3 +171,9 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 ![image](https://github.com/user-attachments/assets/a880712b-18c8-48c6-a78b-41032aa79283)
 
 ***
+### Элементы без идентификатора (названия)
+
+Под элементами без идентификатора чаще всего подраузмеваются элемент связка и структура. Или любой другой элемент, у которого нет идентификатора
+| Связка | Структура|
+|----------|---------|
+|![image](https://github.com/user-attachments/assets/b329dbe0-bac5-460b-aef7-f4bb41c81614)|![image](https://github.com/user-attachments/assets/85baaee9-9e84-4c68-b5f2-8d0ff96b8acb)|
