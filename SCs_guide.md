@@ -57,11 +57,15 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 Пишем название отношения с приствкой nrel для неролевого и rrel для ролевого. После указанного отношеиня ставиться двоеточие ':'
 
-Пишем название второго узла и ';;' в конце
+Так же в конце названия неролевого отношения ставить звзедочка '*', а в конце ролевого одиночная кавычка **'** 
+
+Пишем название второго узла и ';;' в конце 
+
+
  
 | SCs-код | SCg-код |
 |----------|---------|
-|node_1 => nrel_relation: node_2;;|![image](https://github.com/user-attachments/assets/c7c803e7-f882-46db-a684-ba52a8c91b98)|
+|node_1 => nrel_relation*: node_2;;|![image](https://github.com/user-attachments/assets/c7c803e7-f882-46db-a684-ba52a8c91b98)|
 
 ***
 
@@ -71,13 +75,13 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/8f0888f8-8261-4edd-b94a-e796f78a2c7d)|
+|Group 321703 -> rrel_student': Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/10b67e50-0fe2-41f3-ab75-e68a27aeb1da)|
 
 Все остальные отношения считаются неролевыми
 
 | SCs-код | SCg-код |
 |----------|---------|
-|J.K.Rowling => nrel_author: Harry_Potter;;|![image](https://github.com/user-attachments/assets/0848660b-31ae-4191-8ed9-65db413ba976)|
+|J.K.Rowling => nrel_author*: Harry_Potter;;|![image](https://github.com/user-attachments/assets/0848660b-31ae-4191-8ed9-65db413ba976)|
 
 Примечание: Если в названии узла есть точка, то ниженее подчеркивание '_' использовать не нужно
 
@@ -85,7 +89,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Tom <=> nrel_brother: Mark;;|![image](https://github.com/user-attachments/assets/183dae28-5ee7-4d91-bfd8-7d065804c322)|
+|Tom <=> nrel_brother*: Mark;;|![image](https://github.com/user-attachments/assets/183dae28-5ee7-4d91-bfd8-7d065804c322)|
 
 Пример симметричного отношения, т.к. Том и Марк являются друг для друга братьями
 
@@ -93,8 +97,8 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Mouse => nrell_be_smaller: Elephant;;|![image](https://github.com/user-attachments/assets/81add326-3f9a-40f7-9159-c55d63b743ef)|
-|concept_mouse  => nrell_be_smaller: concept_elephant;;|![image](https://github.com/user-attachments/assets/87c80e6f-dcad-4516-890a-d7cf48b6733d)|
+|Mouse => nrell_be_smaller*: Elephant;;|![image](https://github.com/user-attachments/assets/81add326-3f9a-40f7-9159-c55d63b743ef)|
+|concept_mouse  => nrell_be_smaller*: concept_elephant;;|![image](https://github.com/user-attachments/assets/87c80e6f-dcad-4516-890a-d7cf48b6733d)|
 
 В зависимости от того, какой смысл мы вкладываем в выражение, меняется конструкции SCs представления.
 
@@ -107,7 +111,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 | SCs-код | SCg-код |
 |----------|---------|
 |![image](https://github.com/user-attachments/assets/b7d09073-ab18-44a3-a1e7-bbfb06150159)|![image](https://github.com/user-attachments/assets/83940c55-6dcc-4f47-88e2-690f13c7ff94)|
-|Albert => nrel_has_profession: Dentist;;|Dentist <= nrel_has_profession: Albert;;|
+|Albert => nrel_has_profession*: Dentist;;|Dentist <= nrel_has_profession*: Albert;;|
 
 Данные записи имеют абсолютно одинаковый смысл, что говорит о независимости направления записи (но **внимание** на направление стрелок!)
 
@@ -119,7 +123,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student: Tolik; Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/e01409cd-99ad-4308-9e30-99b3a66a4aa3)|
+|Group 321703 -> rrel_student': Tolik; Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/7875473a-a05a-4eef-8a52-f844c00127a9)|
 
 Т.е. Вася Пупкин и Толик является элементами множества группы 321703 и выполняют в ней роль студентов
 ***
@@ -130,7 +134,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student: rrel_starosta: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/5eb824c9-5786-4143-9112-7ae01aa4623e)|
+|Group 321703 -> rrel_student': rrel_starosta': Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/5eb824c9-5786-4143-9112-7ae01aa4623e)|
 
 Т.е. Вася Пупкин является элементом множества группы 321703 и выполняет роль студента и старосты группы
 
