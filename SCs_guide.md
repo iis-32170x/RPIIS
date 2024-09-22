@@ -130,7 +130,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student: rrel_starosta: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/c957de49-41aa-47fc-a9e4-ba0a9d4163c8)|
+|Group 321703 -> rrel_student: rrel_starosta: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/5eb824c9-5786-4143-9112-7ae01aa4623e)|
 
 Т.е. Вася Пупкин является элементом множества группы 321703 и выполняет роль студента и старосты группы
 
