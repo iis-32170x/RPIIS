@@ -166,11 +166,11 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|ABC <- concept_triangle; => nrel_has_side*: AD;BC;;|![image](https://github.com/user-attachments/assets/eb76f89f-ef06-4e1a-9a10-a8bc1d4fd7e0)|
+|ABC <- concept_triangle; => nrel_has_side*: AB;AC;;|![image](https://github.com/user-attachments/assets/9a91767e-bc58-4e28-9de0-15e21adb77e9)|
 
 | SCs-код | 
 |----------|
-|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AD;BC;;|
+|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AB;AC;;|
 
 
 ***
@@ -221,7 +221,36 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 ***
 
-### Для описания связей с элементом без идентификатора испольнуются скобочки со звездочкой (* *)
+### Для описания связей с элементом без идентификатора испольнуются скобочки со звездочкой '(* *)'
+
+Чтобы использовать эту конструкцию, нужно указать одну свзяь обычным способом, а остальыне связи прописывать внутри скобочек '(* *)'
+
+Причем конструкция должна идти сразу после описанного элемента!
+
+После каждой прописанной связи ставится две точки с запятой ';;'
+
+В конце после скобочек тоже ставится две точки с запятой ';;'
+
+```
+node_1 -> node_2 (* описание остальных связей node_2;;*);;
+```
+
+| SCs-код | SCg-код |
+|----------|---------|
+|![image](https://github.com/user-attachments/assets/7847199f-09b6-49cc-b2e8-011a7987ab75)|![image](https://github.com/user-attachments/assets/00b0d094-c2c7-41a0-8895-40703ae0d862)|
+
+***
+Скобочки со звездочкой '(* *)' можно использовать с любыми узлами
 
 
+| SCs-код | SCg-код |
+|----------|---------|
+|trianle -> ABC (* => nrel_has_side*: AB;AC;; *);;|![image](https://github.com/user-attachments/assets/7ce55409-ed89-42c8-a962-f60ba405372c)|
 
+Сравнение с предыдущей записью
+
+| SCs-код | 
+|----------|
+|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AB;AC;;|
+
+Советуем придерживаться однго стиля для легкости читания вашего SCs файла
