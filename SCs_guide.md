@@ -164,8 +164,17 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 |----------|---------|
 |dadaddad -> llo; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->eeeee|dvs|
 
-|saf|
-|---|
+***
+Можно записывать и в строку, но написание в столбик легче для восприятия
+
+| SCs-код | SCg-код |
+|----------|---------|
+|ABC <- concept_triangle; => nrel_has_side*: AD;BC;;|![image](https://github.com/user-attachments/assets/eb76f89f-ef06-4e1a-9a10-a8bc1d4fd7e0)|
+
+| SCs-код | 
+|----------|
+|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AD;BC;;|
+
 
 ***
 ### Таблички с текстом
