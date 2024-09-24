@@ -33,6 +33,7 @@ pair<int, int> type_move(char &player) {
         return make_pair(-1, -1);
     }
     row--; col--;
+    cin.ignore(32767, '\n');
     return make_pair(row, col);
 }
 
@@ -108,8 +109,8 @@ int main() {
                     break;
                 }
                 else {
-                game.create_board(board_size);
-                break;
+                    game.create_board(board_size);
+                    break;
                 }
             }
             default:
