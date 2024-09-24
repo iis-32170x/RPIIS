@@ -1,0 +1,29 @@
+\doxysection{Tic\+Tac\+Toe.\+hpp}
+\hypertarget{TicTacToe_8hpp_source}{}\label{TicTacToe_8hpp_source}\mbox{\hyperlink{TicTacToe_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TICTACTOE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TICTACTOE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTicTacToe}{TicTacToe}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::vector<std::vector<char>>\ \mbox{\hyperlink{classTicTacToe_a9dfe2341ae601004a0c660f1365d9336}{board}};}
+\DoxyCodeLine{00010\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classTicTacToe_aa5cf601d6094c8b021d81cc4f57363b2}{board\_size}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classTicTacToe_a103fe9a5ae41b5ef756e20594a70cb7a}{TicTacToe}}();}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<char>\ \&\mbox{\hyperlink{classTicTacToe_aa1b8dae3bb4024acb095869d5f562966}{operator[]}}(std::size\_t\ i);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTicTacToe_a4548becba245d6cf23dfdd6f28991718}{create\_board}}(std::size\_t\ size);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::vector<char>>\&\ \mbox{\hyperlink{classTicTacToe_a2ab30022e886a9d970f59049b6b49719}{get\_board}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTicTacToe_a1a1ead056dc3902fba402702bd888d50}{is\_move\_valid}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);\ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTicTacToe_a1bb12625f30efc1e94841e9609417d50}{check\_winner}}(\textcolor{keywordtype}{char}\ player);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTicTacToe_a1c627683f1580e012d32b1d7ec181aa5}{make\_move}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{char}\ \&player);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTicTacToe_a437817a623fd03c384e4328ce5c096ad}{moves\_count}}();}
+\DoxyCodeLine{00021\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classTicTacToe_ab9c324aee03a76e867cddf0d9563b98a}{get\_board\_size}}();}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}
