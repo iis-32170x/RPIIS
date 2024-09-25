@@ -235,7 +235,7 @@ node_1 -> node_2 (* описание остальных связей node_2;;*);
 
 | SCs-код | SCg-код |
 |----------|---------|
-|![image](https://github.com/user-attachments/assets/7847199f-09b6-49cc-b2e8-011a7987ab75)|![image](https://github.com/user-attachments/assets/00b0d094-c2c7-41a0-8895-40703ae0d862)|
+|![image](https://github.com/user-attachments/assets/80672e05-4dcb-4072-84fe-63fe7b5155a4)|![image](https://github.com/user-attachments/assets/00b0d094-c2c7-41a0-8895-40703ae0d862)|
 
 ***
 Скобочки со звездочкой '(* *)' можно использовать с любыми узлами
