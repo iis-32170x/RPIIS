@@ -110,8 +110,8 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|![image](https://github.com/user-attachments/assets/b9117e3d-b673-4485-bc63-4e864f3fbac6)|![image](https://github.com/user-attachments/assets/6a8bcf2b-2ccb-4ac2-911f-693ea4037d62)|
-|Albert => nrel_has_profession*: dentist;;|dentist <= nrel_has_profession*: Albert;;|
+|![image](https://github.com/user-attachments/assets/1e9dec48-d585-4b75-8002-851d3eb4dc03)|![image](https://github.com/user-attachments/assets/135b8a34-8bc0-487f-935a-2996d77268d2)|
+|Albert => nrel_has_profession*: concept_dentist;;|concept_dentist <= nrel_has_profession*: Albert;;|
 
 Данные записи имеют абсолютно одинаковый смысл, что говорит о независимости направления записи (но **внимание** на направление стрелок!)
 
