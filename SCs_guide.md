@@ -57,15 +57,13 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 Пишем название отношения с приствкой nrel для неролевого и rrel для ролевого. После указанного отношеиня ставиться двоеточие ':'
 
-Так же в конце названия неролевого отношения ставить звзедочка '*', а в конце ролевого одиночная кавычка **'** 
-
 Пишем название второго узла и ';;' в конце 
 
 
  
 | SCs-код | SCg-код |
 |----------|---------|
-|node_1 => nrel_relation*: node_2;;|![image](https://github.com/user-attachments/assets/c7c803e7-f882-46db-a684-ba52a8c91b98)|
+|node_1 => nrel_relation: node_2;;|![image](https://github.com/user-attachments/assets/c7c803e7-f882-46db-a684-ba52a8c91b98)|
 
 ***
 
@@ -75,13 +73,13 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student': Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/10b67e50-0fe2-41f3-ab75-e68a27aeb1da)|
+|Group 321703 -> rrel_student: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/10b67e50-0fe2-41f3-ab75-e68a27aeb1da)|
 
 Все остальные отношения считаются неролевыми
 
 | SCs-код | SCg-код |
 |----------|---------|
-|J.K.Rowling => nrel_author*: Harry_Potter;;|![image](https://github.com/user-attachments/assets/0848660b-31ae-4191-8ed9-65db413ba976)|
+|J.K.Rowling => nrel_author: Harry_Potter;;|![image](https://github.com/user-attachments/assets/0848660b-31ae-4191-8ed9-65db413ba976)|
 
 Примечание: Если в названии узла есть точка, то ниженее подчеркивание '_' использовать не нужно
 
@@ -89,7 +87,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Tom <=> nrel_brother*: Mark;;|![image](https://github.com/user-attachments/assets/183dae28-5ee7-4d91-bfd8-7d065804c322)|
+|Tom <=> nrel_brother: Mark;;|![image](https://github.com/user-attachments/assets/183dae28-5ee7-4d91-bfd8-7d065804c322)|
 
 Пример симметричного отношения, т.к. Том и Марк являются друг для друга братьями
 
@@ -97,8 +95,8 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Mouse => nrell_be_smaller*: Elephant;;|![image](https://github.com/user-attachments/assets/81add326-3f9a-40f7-9159-c55d63b743ef)|
-|concept_mouse  => nrell_be_smaller*: concept_elephant;;|![image](https://github.com/user-attachments/assets/87c80e6f-dcad-4516-890a-d7cf48b6733d)|
+|Mouse => nrell_be_smaller: Elephant;;|![image](https://github.com/user-attachments/assets/81add326-3f9a-40f7-9159-c55d63b743ef)|
+|concept_mouse  => nrell_be_smaller: concept_elephant;;|![image](https://github.com/user-attachments/assets/87c80e6f-dcad-4516-890a-d7cf48b6733d)|
 
 В зависимости от того, какой смысл мы вкладываем в выражение, меняется конструкции SCs представления.
 
@@ -111,7 +109,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 | SCs-код | SCg-код |
 |----------|---------|
 |![image](https://github.com/user-attachments/assets/1e9dec48-d585-4b75-8002-851d3eb4dc03)|![image](https://github.com/user-attachments/assets/135b8a34-8bc0-487f-935a-2996d77268d2)|
-|Albert => nrel_has_profession*: concept_dentist;;|concept_dentist <= nrel_has_profession*: Albert;;|
+|Albert => nrel_has_profession: concept_dentist;;|concept_dentist <= nrel_has_profession*: Albert;;|
 
 Данные записи имеют абсолютно одинаковый смысл, что говорит о независимости направления записи (но **внимание** на направление стрелок!)
 
@@ -123,7 +121,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student': Tolik; Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/7875473a-a05a-4eef-8a52-f844c00127a9)|
+|Group 321703 -> rrel_student: Tolik; Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/7875473a-a05a-4eef-8a52-f844c00127a9)|
 
 Т.е. Вася Пупкин и Толик является элементами множества группы 321703 и выполняют в ней роль студентов
 ***
@@ -134,7 +132,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Group 321703 -> rrel_student': rrel_starosta': Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/5eb824c9-5786-4143-9112-7ae01aa4623e)|
+|Group 321703 -> rrel_student: rrel_starosta: Vasia_Pupkin;;|![image](https://github.com/user-attachments/assets/5eb824c9-5786-4143-9112-7ae01aa4623e)|
 
 Т.е. Вася Пупкин является элементом множества группы 321703 и выполняет роль студента и старосты группы
 
@@ -146,7 +144,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|Stacy => nrel_has_boyfriend*: Bob;;<br>Stacy => nrel_has_friend*: Jassica;;|![image](https://github.com/user-attachments/assets/2ce1a594-6406-4818-9b8e-6cb9090ab8b1)|
+|Stacy => nrel_has_boyfriend: Bob;;<br>Stacy => nrel_has_friend: Jassica;;|![image](https://github.com/user-attachments/assets/2ce1a594-6406-4818-9b8e-6cb9090ab8b1)|
 
 Так как Боб и Джессика никак не связаны друг с другом, приходится писать два SCs предложения
 
@@ -154,7 +152,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код |
 |----------|
-|Stacy => nrel_has_boyfriend*: Bob; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => nrel_has_friend*: Jassica;;|
+|Stacy => nrel_has_boyfriend: Bob; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; => nrel_has_friend: Jassica;;|
 
 Смысл в том, что мы опускаем название первого элемента и дальше прописываем все связи, относящиеся к нему
 
@@ -166,11 +164,11 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 
 | SCs-код | SCg-код |
 |----------|---------|
-|ABC <- concept_triangle; => nrel_has_side*: AB;AC;;|![image](https://github.com/user-attachments/assets/9a91767e-bc58-4e28-9de0-15e21adb77e9)|
+|ABC <- concept_triangle; => nrel_has_side: AB;AC;;|![image](https://github.com/user-attachments/assets/9a91767e-bc58-4e28-9de0-15e21adb77e9)|
 
 | SCs-код | 
 |----------|
-|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AB;AC;;|
+|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side: AB;AC;;|
 
 
 ***
@@ -185,7 +183,7 @@ node_1    'стрелочка между node_1 и node_2'    'название 
 ***
 | SCs-код | SCg-код |
 |----------|---------|
-|Action => nrel_1*: [text]|![image](https://github.com/user-attachments/assets/041642eb-8dbb-43c9-8d28-15b22b82260c)| 
+|Action => nrel_1: [text]|![image](https://github.com/user-attachments/assets/041642eb-8dbb-43c9-8d28-15b22b82260c)| 
 
 ***
 #### Больше вопросов возникает с тем, как создать табличку на SCg
@@ -245,12 +243,12 @@ node_1 -> node_2 (* описание остальных связей node_2;;*);
 
 | SCs-код | SCg-код |
 |----------|---------|
-|trianle -> ABC (* => nrel_has_side*: AB;AC;; *);;|![image](https://github.com/user-attachments/assets/7ce55409-ed89-42c8-a962-f60ba405372c)|
+|trianle -> ABC (* => nrel_has_side: AB;AC;; *);;|![image](https://github.com/user-attachments/assets/7ce55409-ed89-42c8-a962-f60ba405372c)|
 
 Сравнение с предыдущей записью
 
 | SCs-код | 
 |----------|
-|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side*: AB;AC;;|
+|ABC <- concept_triangle; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> nrel_has_side: AB;AC;;|
 
 Советуем придерживаться однго стиля для легкости чтения вашего SCs файла
