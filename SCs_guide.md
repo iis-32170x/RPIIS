@@ -245,7 +245,7 @@ node_1 -> node_2 (* описание остальных связей node_2;;*);
 
 | SCs-код | SCg-код |
 |----------|---------|
-|trianle -> ABC (* => nrel_has_side: AB;AC;; *);;|![image](https://github.com/user-attachments/assets/7ce55409-ed89-42c8-a962-f60ba405372c)|
+|triangle -> ABC (* => nrel_has_side: AB;AC;; *);;|![image](https://github.com/user-attachments/assets/7ce55409-ed89-42c8-a962-f60ba405372c)|
 
 Сравнение с предыдущей записью
 
