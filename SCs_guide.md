@@ -424,7 +424,8 @@ subject_domain = [**];;
 
 Для этого нужно в поиске ввести название интересующего вас понятия
 
-![image](https://github.com/user-attachments/assets/f53d9e9d-766e-4a3f-8792-2a186e7dc643)
+![image](https://github.com/user-attachments/assets/2a322902-4927-4823-a154-0f0b2c2e1793)
+
 
 Иногда его бывает непросто найти
 
@@ -432,5 +433,6 @@ subject_domain = [**];;
 
 Но перейдя по нему, можно увидеть его системный идентификатор, который можно использовать в своем scs файле
 
-![image](https://github.com/user-attachments/assets/4f86ccfb-a0d7-436b-86e9-d49bbfeee506)
+![image](https://github.com/user-attachments/assets/dec01f63-82e6-43a1-895b-de88f0df2d49)
+
 
