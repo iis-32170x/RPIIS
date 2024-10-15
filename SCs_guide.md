@@ -376,8 +376,13 @@ concept_triangle отображается как обычный узел, хот
 
 Во-первых, обращаем внимание на идентификаторы. Основные идентификаторы прописаны для Кота Васи, и название узла приняло значение идентификатора. У обоих автоматически сгенерировались системные идентификаторы, которые мы использовали в scs файле:
 
-|![image](https://github.com/user-attachments/assets/1d23e65e-e3e5-48f4-b95f-a16ae044c70d)|![image](https://github.com/user-attachments/assets/87a94df9-aa59-4b47-aefd-57aae2d9827f)|
+| SCg-код | SCn-код |
 |----------|---------|
+|![image](https://github.com/user-attachments/assets/1d23e65e-e3e5-48f4-b95f-a16ae044c70d)|![image](https://github.com/user-attachments/assets/cfd5222f-e8f6-4d95-bf58-a18742795c14)|
+
+| SCg-код | SCn-код |
+|----------|---------|
+|![image](https://github.com/user-attachments/assets/87a94df9-aa59-4b47-aefd-57aae2d9827f)|![image](https://github.com/user-attachments/assets/e822045f-f1d8-4db6-a5b9-43eb61ed0566)|
 
 Во-вторых неролевое отношение не отображается как обычный узел(кружочек) и название узла тоже приняло значение идентификатора:
 
