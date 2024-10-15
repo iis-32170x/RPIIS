@@ -367,3 +367,18 @@ concept_triangle отображается как обычный узел, хот
 |sc_node_class|![image](https://github.com/user-attachments/assets/40c85c9e-1b65-415b-a93e-7be890c94b13)|
 
 [Так же более подробно про это можно посмотреть здесь](https://ostis-ai.github.io/sc-machine/scs/scs/)
+
+Рассмотрим ещё один пример:
+
+| SCs-код | SCg-код |
+|----------|---------|
+|![image](https://github.com/user-attachments/assets/be354d62-e0d0-4c91-8a4f-77d7780a0a24)|![image](https://github.com/user-attachments/assets/cf85de3f-2f61-4311-9669-68b2df30a92a)|
+
+Во-первых, обращаем внимание на идентификаторы. Основные идентификаторы прописаны для Кота Васи, и название узла приняло значение идентификатора. У обоих автоматически сгенерировались системные идентификаторы, которые мы использовали в scs файле:
+
+|![image](https://github.com/user-attachments/assets/1d23e65e-e3e5-48f4-b95f-a16ae044c70d)|![image](https://github.com/user-attachments/assets/87a94df9-aa59-4b47-aefd-57aae2d9827f)|
+|----------|---------|
+
+Во-вторых неролевое отношение не отображается как обычный узел(кружочек) и название узла тоже приняло значение идентификатора:
+
+![image](https://github.com/user-attachments/assets/78d38a55-e9bf-4f32-8f01-61b97100b853)
