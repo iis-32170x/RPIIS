@@ -360,5 +360,10 @@ concept_triangle отображается как обычный узел, хот
 
 | SCs-код | SCg-код |
 |----------|---------|
+|sc_node_tuple|![image](https://github.com/user-attachments/assets/a802481a-892f-4c5d-8b10-e656f9629532)|
+|sc_node_structure|![image](https://github.com/user-attachments/assets/120a7000-e174-4cd2-a474-a2b726e57145)|
+|sc_node_role_relation|![image](https://github.com/user-attachments/assets/7daa5af9-cf9e-42cf-9fb8-4a71ecd6032c)|
+|sc_node_norole_relation|![image](https://github.com/user-attachments/assets/c0a85c9c-532c-49f1-b9f8-88e0274485d8)|
+|sc_node_class|![image](https://github.com/user-attachments/assets/40c85c9e-1b65-415b-a93e-7be890c94b13)|
 
-[Так же про это можно посмотреть здесь](https://ostis-ai.github.io/sc-machine/scs/scs/)
+[Так же более подробно про это можно посмотреть здесь](https://ostis-ai.github.io/sc-machine/scs/scs/)
