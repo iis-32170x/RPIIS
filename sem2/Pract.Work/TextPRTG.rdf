@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#взаимодействуют -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#взаимодействуют">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#возникают_при -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#возникают_при">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#входит_в_состав -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#входит_в_состав">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#выполняет_фунцию -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#выполняет_фунцию"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#гашения_колебаний -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#гашения_колебаний"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#задают -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#задают">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#играет_роль -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#играет_роль"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#между -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#между"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#обеспечивает -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#обеспечивает">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#основными_элементыми_являются -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#основными_элементыми_являются">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#относительно -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#относительно">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#относится_к -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#относится_к">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#передает -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#передает">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#передает_на -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#передает_на">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#перемещает -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#перемещает">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#с -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#с">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#физически_соединяет_с -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#физически_соединяет_с">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>физически_соединяется_с</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#является_совокупностью -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#является_совокупностью"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_сущности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_соединения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_соединения"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_сущности -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_сущности"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Амортизаторы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Амортизаторы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы"/>
+        <untitled-ontology-4:гашения_колебаний rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Боковые_силы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Боковые_силы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы"/>
+        <untitled-ontology-4:передает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Моменты_силы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Взаимодействие -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Взаимодействие">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+        <untitled-ontology-4:относится_к rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Колеса_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Колеса_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Колеса_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_соединения"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+        <untitled-ontology-4:взаимодействуют rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога"/>
+        <untitled-ontology-4:физически_соединяет_с rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Кузов_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Кузов_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+        <untitled-ontology-4:входит_в_состав rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Механизмы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Механизмы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Моменты_силы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Моменты_силы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы"/>
+        <untitled-ontology-4:возникают_при rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Взаимодействие"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Направляющие_элементы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Направляющие_элементы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы"/>
+        <untitled-ontology-4:задают rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Перемещение"/>
+        <untitled-ontology-4:задают rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Связь"/>
+        <untitled-ontology-4:передает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Боковые_силы"/>
+        <untitled-ontology-4:передает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Продольные_силы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Неразреные_мосты -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Неразреные_мосты">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_соединения"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+        <untitled-ontology-4:физически_соединяет_с rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Передача -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Передача">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+        <untitled-ontology-4:передает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Силы"/>
+        <untitled-ontology-4:передает_на rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Перемещение -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Перемещение">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+        <untitled-ontology-4:относительно rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Кузов_автомобиля"/>
+        <untitled-ontology-4:относительно rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Рама_автомобиля"/>
+        <untitled-ontology-4:перемещает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Колеса_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Плавность_хода -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Плавность_хода">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Подвеска_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Подвеска_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+        <untitled-ontology-4:входит_в_состав rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Шасси_автомобиля"/>
+        <untitled-ontology-4:выполняет_фунцию rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Передача"/>
+        <untitled-ontology-4:играет_роль rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#соединительное_звено"/>
+        <untitled-ontology-4:обеспечивает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Перемещение"/>
+        <untitled-ontology-4:обеспечивает rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Плавность_хода"/>
+        <untitled-ontology-4:основными_элементыми_являются rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Амортизаторы"/>
+        <untitled-ontology-4:основными_элементыми_являются rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Направляющие_элементы"/>
+        <untitled-ontology-4:основными_элементыми_являются rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Упругие_элементы"/>
+        <untitled-ontology-4:является_совокупностью rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали"/>
+        <untitled-ontology-4:является_совокупностью rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Механизмы"/>
+        <untitled-ontology-4:является_совокупностью rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Узлы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Продольные_силы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Продольные_силы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Рама_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Рама_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+        <untitled-ontology-4:входит_в_состав rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Связь -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Связь">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Характериситки"/>
+        <untitled-ontology-4:между rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Колеса_автомобиля"/>
+        <untitled-ontology-4:с rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Несущая_система_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Силы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Силы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Физические_силы"/>
+        <untitled-ontology-4:возникают_при rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Взаимодействие"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Узлы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Узлы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Детали"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Упругие_элементы -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Упругие_элементы">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Шасси_автомобиля -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Шасси_автомобиля">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Элементы_автомобиля"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#соединительное_звено -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#соединительное_звено">
+        <untitled-ontology-4:между rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Дорога"/>
+        <untitled-ontology-4:между rdf:resource="http://www.semanticweb.org/lilip/ontologies/2024/4/untitled-ontology-4#Кузов_автомобиля"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment>Вспомогательный Класс</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
