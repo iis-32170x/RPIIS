@@ -1,1 +1,268 @@
+cpp:
+#include "RubikCube.h"
+#include <fstream>
+#include <algorithm>
+#include <random>
+#include <cctype>
 
+void RubikCube::initializeCube() {
+    faces.clear(); 
+    for (int i = 0; i < 6; ++i) {
+        faces.push_back(std::vector<char>(9, colors[i]));
+    }
+}
+
+RubikCube::RubikCube() {
+    initializeCube(); 
+}
+
+void RubikCube::shuffleCube() {
+    std::random_device rd;
+    std::mt19937 g(rd());
+    for (int i = 0; i < 20; ++i) { 
+        int faceIndex = g() % 6;
+        rotateFace(faceIndex);
+    }
+}
+
+void RubikCube::randomizeColors() {
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::vector<char> allColors;
+
+    for (char color : colors) {
+        allColors.insert(allColors.end(), 9, color);
+    }
+    std::shuffle(allColors.begin(), allColors.end(), g);
+
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            faces[i][j] = allColors[i * 9 + j];
+        }
+    }
+}
+
+void RubikCube::loadFromFile(const std::string& filename) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error opening file!" << std::endl;
+        return;
+    }
+
+    for (int i = 0; i < 6; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            if (!(file >> faces[i][j])) {
+                std::cerr << "Error reading file!" << std::endl;
+                return;
+            }
+        }
+    }
+
+    file.close();
+}
+
+void RubikCube::rotateFace(int faceIndex) {
+   
+    std::vector<char> temp = faces[faceIndex];
+    faces[faceIndex][0] = temp[6];
+    faces[faceIndex][1] = temp[3];
+    faces[faceIndex][2] = temp[0];
+    faces[faceIndex][3] = temp[7];
+    faces[faceIndex][4] = temp[4];
+    faces[faceIndex][5] = temp[1];
+    faces[faceIndex][6] = temp[8];
+    faces[faceIndex][7] = temp[5];
+    faces[faceIndex][8] = temp[2];
+
+
+    if (faceIndex == 0) {
+        char tempFront[3] = { faces[1][0], faces[1][1], faces[1][2] };
+        faces[1][0] = faces[4][0];
+        faces[1][1] = faces[4][1];
+        faces[1][2] = faces[4][2];
+        faces[4][0] = faces[3][8];
+        faces[4][1] = faces[3][5];
+        faces[4][2] = faces[3][2];
+        faces[3][8] = faces[2][6];
+        faces[3][5] = faces[2][7];
+        faces[3][2] = faces[2][8];
+        faces[2][6] = tempFront[0];
+        faces[2][7] = tempFront[1];
+        faces[2][8] = tempFront[2];
+    }
+}
+
+void RubikCube::rotateFace(char face) {
+    switch (std::toupper(face)) {
+        case 'U': rotateFace(0); break;
+        case 'D': rotateFace(1); break;
+        case 'L': rotateFace(2); break;
+        case 'R': rotateFace(3); break;
+        case 'F': rotateFace(4); break;
+        case 'B': rotateFace(5); break;
+        default: std::cout << "Invalid command!" << std::endl; break;
+    }
+}
+
+bool RubikCube::isSolved() const {
+    for (const auto& face : faces) {
+        if (!std::all_of(face.begin(), face.end(), [&](char c) { return c == face[0]; })) {
+            return false;
+        }
+    }
+    return true;
+}
+
+void RubikCube::printCube() const {
+    for (int i = 0; i < 6; ++i) {
+        std::cout << "Face " << i << ": ";
+        for (int j = 0; j < 9; ++j) {
+            std::cout << faces[i][j] << ' ';
+        }
+        std::cout << std::endl;
+    }
+}
+
+h:
+#pragma once
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+class RubikCube {
+public:
+    std::vector<std::vector<char>> faces; 
+    const std::vector<char> colors = { 'R', 'G', 'B', 'Y', 'O', 'W' }; 
+
+    RubikCube(); 
+
+    void initializeCube(); 
+    void shuffleCube(); 
+    void randomizeColors(); 
+    void loadFromFile(const std::string& filename); 
+    void rotateFace(int faceIndex); 
+    void rotateFace(char face); 
+    bool isSolved() const; 
+    void printCube() const; 
+    const std::vector<char>& getColors() const {
+        return colors;
+    }
+};
+cppTest:
+#include "RubikCube.h"
+#include <gtest/gtest.h>
+#include <fstream>
+#include <algorithm>
+
+TEST(RubikCubeTest, InitializationTest) {
+    RubikCube cube;
+
+    for (int i = 0; i < 6; ++i) {
+        char color = cube.getColors()[i];
+        for (int j = 0; j < 9; ++j) {
+            EXPECT_EQ(cube.faces[i][j], color);
+        }
+    }
+}
+
+TEST(RubikCubeTest, ShuffleTest) {
+    RubikCube cube;
+    auto initialFaces = cube.faces;
+
+    cube.shuffleCube();
+
+    EXPECT_NE(initialFaces, cube.faces); 
+}
+
+TEST(RubikCubeTest, RandomizeColorsTest) {
+    RubikCube cube;
+    cube.randomizeColors();
+
+    std::vector<int> colorCounts(6, 0);
+    for (const auto& face : cube.faces) {
+        for (char color : face) {
+            auto it = std::find(cube.getColors().begin(), cube.getColors().end(), color);
+            ASSERT_NE(it, cube.getColors().end());
+            ++colorCounts[std::distance(cube.getColors().begin(), it)];
+        }
+    }
+
+    for (int count : colorCounts) {
+        EXPECT_EQ(count, 9);
+    }
+}
+
+TEST(RubikCubeTest, RotateFaceTest) {
+    RubikCube cube;
+    auto initialTop = cube.faces[0];
+
+    cube.rotateFace('U');
+
+    EXPECT_EQ(cube.faces[0][0], initialTop[6]);
+    EXPECT_EQ(cube.faces[0][1], initialTop[3]);
+    EXPECT_EQ(cube.faces[0][2], initialTop[0]);
+    EXPECT_EQ(cube.faces[0][3], initialTop[7]);
+    EXPECT_EQ(cube.faces[0][4], initialTop[4]);
+    EXPECT_EQ(cube.faces[0][5], initialTop[1]);
+    EXPECT_EQ(cube.faces[0][6], initialTop[8]);
+    EXPECT_EQ(cube.faces[0][7], initialTop[5]);
+    EXPECT_EQ(cube.faces[0][8], initialTop[2]);
+}
+
+TEST(RubikCubeTest, IsSolvedTest) {
+    RubikCube cube;
+
+    EXPECT_TRUE(cube.isSolved());
+
+    cube.shuffleCube();
+    EXPECT_FALSE(cube.isSolved());
+}
+
+TEST(RubikCubeTest, LoadFromFileTest) {
+    RubikCube cube;
+
+    std::ofstream file("test_cube.txt");
+    file << "R R R R R R R R R\n";
+    file << "G G G G G G G G G\n";
+    file << "B B B B B B B B B\n";
+    file << "Y Y Y Y Y Y Y Y Y\n";
+    file << "O O O O O O O O O\n";
+    file << "W W W W W W W W W\n";
+    file.close();
+
+    cube.loadFromFile("test_cube.txt");
+
+    EXPECT_EQ(cube.faces[0], std::vector<char>(9, 'R'));
+    EXPECT_EQ(cube.faces[1], std::vector<char>(9, 'G'));
+    EXPECT_EQ(cube.faces[2], std::vector<char>(9, 'B'));
+    EXPECT_EQ(cube.faces[3], std::vector<char>(9, 'Y'));
+    EXPECT_EQ(cube.faces[4], std::vector<char>(9, 'O'));
+    EXPECT_EQ(cube.faces[5], std::vector<char>(9, 'W'));
+}
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv); 
+    return RUN_ALL_TESTS();                
+}
+cmake:
+cmake_minimum_required(VERSION 3.10)
+project(Lab1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+set(GTEST_ROOT "/home/tikhon/Desktop/Libraries/googletest")
+set(CMAKE_PREFIX_PATH ${GTEST_ROOT})
+
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage")
+
+add_executable(my_tests RubikCubeTest.cpp RubikCube.cpp)
+
+target_link_libraries(my_tests ${GTEST_LIBRARIES} pthread)
+
+enable_testing()
+
+add_test(NAME MyTest COMMAND my_tests)
