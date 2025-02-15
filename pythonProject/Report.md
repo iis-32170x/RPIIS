@@ -14,7 +14,7 @@
 
 ### 1. Клонирование репозитория
 ```sh
-git clone https://github.com/iis-32170x/RPIIS/new/%D0%A0%D0%B0%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9D/pythonProject
+git clone https://github.com/iis-32170x/RPIIS/tree/%D0%A0%D0%B0%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9D/pythonProject
 cd your-repository
 ```
 
