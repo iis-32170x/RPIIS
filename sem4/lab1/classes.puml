@@ -1,0 +1,21 @@
+@startuml classes
+set namespaceSeparator none
+class "Doctor" as lab1.src.entities.Doctor {
+  consultation(symptoms: str) -> tuple[str, str]
+}
+class "MedicalRecord" as lab1.src.entities.MedicalRecord {
+  date : datetime
+  drugs : str
+  recommendations : str
+  symptoms : str
+}
+class "User" as lab1.src.entities.User {
+  medical_history : list[MedicalRecord]
+  name : str
+  add_medical_record(record: MedicalRecord) -> None
+}
+class "UserRepository" as lab1.src.repositories.UserRepository {
+  load() -> User
+  save(user: User) -> None
+}
+@enduml

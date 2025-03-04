@@ -1,0 +1,18 @@
+@startuml packages
+set namespaceSeparator none
+package "lab1.src" as lab1.src {
+}
+package "lab1.src.entities" as lab1.src.entities {
+}
+package "lab1.src.menus" as lab1.src.menus {
+}
+package "lab1.src.repositories" as lab1.src.repositories {
+}
+package "lab1.src.utils" as lab1.src.utils {
+}
+lab1.src.menus --> lab1.src.entities
+lab1.src.menus --> lab1.src.repositories
+lab1.src.menus --> lab1.src.utils
+lab1.src.repositories --> lab1.src.entities
+lab1.src.utils --> lab1.src.entities
+@enduml
