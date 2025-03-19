@@ -15,7 +15,7 @@ def load_image(path, size=None):
     return image  # Возвращение изображения
 
 # Загрузка фонового изображения
-bg = load_image("images/BG.jpg", (game_state.SCREEN_WIDTH, game_state.SCREEN_HEIGHT))
+bg = load_image("images/backgrounddetailed5.png", (game_state.SCREEN_WIDTH, game_state.SCREEN_HEIGHT))
 
 # Загрузка изображения игрока
 player_image = load_image("images/player.png", (35, 35))
@@ -44,6 +44,11 @@ lost = lost_image.get_rect(center=(game_state.SCREEN_WIDTH / 2, game_state.SCREE
 win_image = load_image("images/WIN.jpg", (800, 600))
 win = win_image.get_rect(center=(game_state.SCREEN_WIDTH / 2, game_state.SCREEN_HEIGHT / 2))
 
+dead_plant = load_image("images/dead_plant1.png", (30, 30))
+maple_image = load_image("images/tree1.png", (60, 80))
+dry_tree_image = load_image("images/tree3.png", (60, 80))
+aspen_image = load_image("images/tree2.png", (60, 80))
+swamp_image = load_image("images/swamp.png", (80, 30))
 # Загрузка изображений врагов
 enemy_images = []
 for enemy_type in ["enemy1.png", "enemy2.png", "enemy3.png", "enemy4.png", "enemy5.png"]:

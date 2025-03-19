@@ -1,5 +1,7 @@
 import math  # Импорт модуля math для математических операций (например, вычисления углов)
 import pygame  # Импорт библиотеки Pygame для работы с графикой
+from pygame import rect
+
 from files import *  # Импорт всех данных из модуля files (например, player_stat)
 from loading_images import player_image, automat_image, pistol_image, drob_image  # Импорт изображений
 from temporaries import game_state  # Импорт глобального состояния игры
@@ -64,14 +66,49 @@ class Player(pygame.sprite.Sprite):
         Обновление позиции игрока в зависимости от нажатых клавиш.
         """
         keys = pygame.key.get_pressed()  # Получаем состояние всех клавиш
-        if keys[pygame.K_w] or keys[pygame.K_UP]:  # Движение вверх
-            self.rect.y -= self.speed
-        if keys[pygame.K_s] or keys[pygame.K_DOWN]:  # Движение вниз
-            self.rect.y += self.speed
-        if keys[pygame.K_a] or keys[pygame.K_LEFT]:  # Движение влево
-            self.rect.x -= self.speed
-        if keys[pygame.K_d] or keys[pygame.K_RIGHT]:  # Движение вправо
-            self.rect.x += self.speed
+
+        # Движение вверх
+        if keys[pygame.K_w] or keys[pygame.K_UP]:
+            if self.check_col_swamp():
+                new_rect = self.rect.move(0, -self.speed/2)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+            else:
+                new_rect = self.rect.move(0, -self.speed)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+        # Движение вниз
+        if keys[pygame.K_s] or keys[pygame.K_DOWN]:
+            if self.check_col_swamp():
+                new_rect = self.rect.move(0, self.speed/2)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+            else:
+                new_rect = self.rect.move(0, self.speed)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+
+        # Движение влево
+        if keys[pygame.K_a] or keys[pygame.K_LEFT]:
+            if self.check_col_swamp():
+                new_rect = self.rect.move(-self.speed/2, 0)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+            else:
+                new_rect = self.rect.move(-self.speed, 0)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+
+        # Движение вправо
+        if keys[pygame.K_d] or keys[pygame.K_RIGHT]:
+            if self.check_col_swamp():
+                new_rect = self.rect.move(self.speed/2, 0)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
+            else:
+                new_rect = self.rect.move(self.speed, 0)
+                if not self.check_col_plant(new_rect):
+                    self.rect = new_rect
 
         # Ограничение движения в пределах карты
         self.rect.centerx = max(0, min(self.rect.centerx, game_state.MAP_WIDTH))
@@ -145,3 +182,15 @@ class Player(pygame.sprite.Sprite):
         if self.damages >= 1000:  # Если накоплено достаточно урона
             self.damages = 0  # Сбрасываем счётчик
             self.perk_ready = True  # Активируем перк
+
+    def check_col_plant(self, rect) -> bool:
+        for plant in game_state.plants:
+            if rect.collidepoint(plant.rect.center):  # Проверяем столкновение
+                return True
+        return False
+
+    def check_col_swamp(self) -> bool:
+        for swamp in game_state.swamps:
+            if swamp.rect.collidepoint(self.rect.center):
+                return True
+        return False

@@ -2,12 +2,15 @@ import random  # Импорт модуля random для генерации сл
 import pygame  # Импорт библиотеки Pygame для работы с графикой
 from files import *  # Импорт всех данных из модуля files (например, waves)
 from enemy import BasicEnemy  # Импорт класса BasicEnemy для создания врагов
-from loading_images import bg  # Импорт фонового изображения
+from loading_images import bg, dead_plant, maple_image, dry_tree_image, aspen_image, \
+    swamp_image  # Импорт фонового изображения
+from plants import Dry_tree
 from player import Player  # Импорт класса Player для управления игроком
 from sounds import menu_sound, enemy_sound, dead_sound  # Импорт звуков
 from temporaries import game_state  # Импорт глобального состояния игры
 from weapon import Pistol, Rifle, Shotgun  # Импорт классов оружия
-
+from plants import *
+from swap import Swamp
 
 def save_record():
     """
@@ -86,18 +89,19 @@ def game_start():
     game_state.LOST = False
     game_state.RECORD = False
     game_state.INFO = False
-    game_state.wave_num = 0  # Сброс номера волны
-    game_state.player = Player()  # Создание игрока
+    game_state.wave_num = 0  # Сброс номера волны  # Создание игрока
     game_state.all_sprites = pygame.sprite.Group()  # Группа всех спрайтов
     game_state.bullets = pygame.sprite.Group()  # Группа пуль
     game_state.enemies = pygame.sprite.Group()  # Группа врагов
-    game_state.weapons = pygame.sprite.Group()  # Группа оружия
+    game_state.weapons = pygame.sprite.Group()  # Группа оружия  # Добавление пистолета в группу спрайтов
+    start_timer(3000)  # Запуск таймера для спавна врагов
+    game_state.start_game = pygame.time.get_ticks()  # Запись времени начала игры
+    spawn_plants()
+    game_state.player = Player()
     game_state.all_sprites.add(game_state.player)  # Добавление игрока в группу спрайтов
     pistol = Pistol((1200, 900))  # Создание пистолета
     game_state.weapons.add(pistol)  # Добавление пистолета в группу оружия
-    game_state.all_sprites.add(pistol)  # Добавление пистолета в группу спрайтов
-    start_timer(3000)  # Запуск таймера для спавна врагов
-    game_state.start_game = pygame.time.get_ticks()  # Запись времени начала игры
+    game_state.all_sprites.add(pistol)
 
 
 def game_end():
@@ -162,6 +166,9 @@ def check_collides():
 
     # Проверка столкновений пуль с врагами
     for bullet in game_state.bullets:
+        for plant in game_state.plants:
+            if plant.rect.collidepoint(bullet.rect.center):
+                bullet.kill()
         for enemy in game_state.enemies:
             if enemy.rect.collidepoint(bullet.rect.center) and enemy.health > 0:
                 enemy.get_hit(bullet)  # Нанесение урона врагу
@@ -205,3 +212,60 @@ def spawn_enemy():
         ))
         game_state.all_sprites.add(enemy)  # Добавление врага в группу спрайтов
         game_state.enemies.add(enemy)  # Добавление врага в группу врагов
+
+def is_colliding(new_rect, existing_rects):
+    """Проверяет, пересекается ли новый прямоугольник с уже существующими."""
+    for existing_rect in existing_rects:
+        if new_rect.colliderect(existing_rect):
+            return True
+    return False
+
+
+def spawn_plant(plant_class, image, existing_rects, game_state, count=20):
+    """Спавнит растения заданного типа."""
+    for _ in range(count):
+        while True:
+            random_number_x = random.randint(100, game_state.MAP_WIDTH - 100)
+            random_number_y = random.randint(100, game_state.MAP_HEIGHT - 100)
+            temp_rect = image.get_rect(center=(random_number_x, random_number_y))
+
+            if not is_colliding(temp_rect, existing_rects):
+                plant = plant_class(x=random_number_x, y=random_number_y, health=1000, image=image,
+                                    dead_image=dead_plant)
+                game_state.plants.add(plant)
+                game_state.all_sprites.add(plant)
+                existing_rects.append(temp_rect)
+                break
+
+
+def spawn_swamp(image, existing_rects, game_state, count=20):
+    """Спавнит болота."""
+    for _ in range(count):
+        while True:
+            random_number_x = random.randint(100, game_state.MAP_WIDTH - 100)
+            random_number_y = random.randint(100, game_state.MAP_HEIGHT - 100)
+            temp_rect = image.get_rect(center=(random_number_x, random_number_y))
+
+            if not is_colliding(temp_rect, existing_rects):
+                swamp = Swamp(x=random_number_x, y=random_number_y, image=image)
+                game_state.swamps.add(swamp)
+                game_state.all_sprites.add(swamp)
+                existing_rects.append(temp_rect)
+                break
+
+
+def spawn_plants():
+    """Основная функция для спавна всех растений и болот."""
+    existing_rects = []
+
+    # Спавн кленов
+    spawn_plant(Maple, maple_image, existing_rects, game_state)
+
+    # Спавн сухих деревьев
+    spawn_plant(Dry_tree, dry_tree_image, existing_rects, game_state)
+
+    # Спавн осин
+    spawn_plant(Aspen, aspen_image, existing_rects, game_state)
+
+    # Спавн болот
+    spawn_swamp(swamp_image, existing_rects, game_state)

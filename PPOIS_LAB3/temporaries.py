@@ -24,6 +24,8 @@ class GameState:
         self.bullets = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
         self.weapons = pygame.sprite.Group()
+        self.plants = pygame.sprite.Group()
+        self.swamps = pygame.sprite.Group()
         self.weapon = None
         self.wave_num = 0
         self.perk = None

@@ -1,10 +1,13 @@
 import pygame  # Импорт библиотеки Pygame для работы с графикой
+
+from plants import Maple
+
 pygame.init()
-from loading_images import loading_image, menu_image, lost_image, win_image  # Импорт изображений
+from loading_images import loading_image, menu_image, lost_image, win_image # Импорт изображений
 from files import waves  # Импорт данных о волнах
 from fonts import font_lose, font_menu, font_win, font  # Импорт шрифтов
 from perk import Perk  # Импорт класса Perk для специальных способностей
-from sounds import enemy_sound, menu_sound  # Импорт звуков
+from sounds import enemy_sound, menu_sound , dryfir_sound  # Импорт звуков
 from temporaries import game_state  # Импорт глобального состояния игры
 from utils import reload_weapon, spawn_enemy, game_end, stop_timer, start_timer, draw, check_collides, load_record, game_start  # Импорт вспомогательных функций
 
@@ -75,7 +78,11 @@ while running:
 
         # Стрельба
         if pygame.mouse.get_pressed()[0]:  # Если нажата левая кнопка мыши
-            game_state.player.shoot()  # Выстрел из оружия
+            if game_state.player.weapon.reloading:
+                if not dryfir_sound.get_num_channels():
+                    dryfir_sound.play()
+            else:
+                game_state.player.shoot()  # Выстрел из оружия
 
         draw()  # Отрисовка всех объектов
         check_collides()  # Проверка столкновений
@@ -97,6 +104,7 @@ while running:
         clock.tick(60)  # Ограничение FPS до 60
 
     # Экран поражения
+
     elif game_state.LOST:
         game_state.screen.blit(lost_image, (0, 0))  # Отрисовка фонового изображения
         lost_text = font_lose.render(f"THE REAPER GOT YOU", True, (255, 0, 0))  # Текст поражения

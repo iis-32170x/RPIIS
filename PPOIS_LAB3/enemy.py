@@ -88,8 +88,13 @@ class Enemy(pygame.sprite.Sprite):
 
         # Движение врага в направлении игрока
         angle = math.atan2(rel_y, rel_x)
-        self.rect.x += self.speed * math.cos(angle)
-        self.rect.y += self.speed * math.sin(angle)
+        new_rect = self.rect.move(self.speed * math.cos(angle), self.speed * math.sin(angle))
+        if not self.check_col_plant(new_rect):
+            self.rect.x += self.speed*math.cos(angle)
+            self.rect.y += self.speed*math.sin(angle)
+        else:
+            self.rect.x += 2.5
+            self.rect.y += 5
 
     def get_hit(self, bullet):
         """
@@ -114,6 +119,12 @@ class Enemy(pygame.sprite.Sprite):
             self.current = pygame.time.get_ticks()  # Обновление текущего времени
             self.player.health -= self.damage  # Уменьшение здоровья игрока
 
+
+    def check_col_plant(self, rect) -> bool:
+        for plant in game_state.plants:
+            if rect.collidepoint(plant.rect.center):  # Проверяем столкновение
+                return True
+        return False
 
 class BasicEnemy(Enemy):
     """
