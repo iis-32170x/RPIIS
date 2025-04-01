@@ -15,4 +15,4 @@
 
 ***
 
-![изображение](https://github.com/user-attachments/assets/b47acb3e-0252-4fb0-81fd-fab5944de7ee)
+![изображение](https://github.com/user-attachments/assets/ebc64fb1-e02e-48dc-9e07-400e387340ef)
